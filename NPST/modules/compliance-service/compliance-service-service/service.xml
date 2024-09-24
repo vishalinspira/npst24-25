@@ -1,0 +1,3764 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="spring" package-path="compliance.service">
+	<namespace>nps</namespace>
+	
+	<entity local-service="true" name="Compliance_Cert" table="compcert" data-source="extDataSource" remote-service="false" cache-enabled="false" uuid="true">
+		<!-- PK fields -->
+		<column name="compid" db-name="compid" primary="true" type="long"/>
+
+		<!-- Audit details -->
+		<column name="createdBy" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifyBy" type="long"></column>
+		<column name="modifyDate" type="Date"></column>
+		
+		<!-- Workflow status Columns -->
+		<column name="status" type="int"/>
+		<column name="statusByUserId" type="long"/>
+		<column name="statusByUserName" type="String"/>
+		<column name="statusDate" type="Date"/>
+		
+		<!-- Other fields -->
+		<column name="certnumber" db-name="certnumber" type="String" />
+		<column name="compliancedate" db-name="compliancedate" type="Date" />
+		<column name="compfyendingdate" db-name="compfyendingdate" type="Date" />
+		<column name="tbfyendingdate" db-name="tbfyendingdate" type="Date" />
+		<column name="tbpfrdacomp" db-name="tbpfrdacomp" type="String" />
+		<column name="tbpfrdarem" db-name="tbpfrdarem" type="String" />
+		<column name="tbreviewcomp" db-name="tbreviewcomp" type="String" />
+		<column name="tbreviewrem" db-name="tbreviewrem" type="String" />
+		<column name="tbinvestcomp" db-name="tbinvestcomp" type="String" />
+		<column name="tbinvestrem" db-name="tbinvestrem" type="String" />
+		<column name="tbcommcomp" db-name="tbcommcomp" type="String" />
+		<column name="tbcommrem" db-name="tbcommrem" type="String" />
+		<column name="tbsubmitcomp" db-name="tbsubmitcomp" type="String" />
+		<column name="tbsubmitrem" db-name="tbsubmitrem" type="String" />
+		<column name="tbobservecomp" db-name="tbobservecomp" type="String" />
+		<column name="tbobserverem" db-name="tbobserverem" type="String" />
+		<column name="tbsubscribecomp" db-name="tbsubscribecomp" type="String" />
+		<column name="tbsubscriberem" db-name="tbsubscriberem" type="String" /> 
+		<column name="maauditorscomp" db-name="maauditorscomp" type="String" />
+		<column name="maauditorsrem" db-name="maauditorsrem" type="String" />
+		<column name="macompliancecomp" db-name="macompliancecomp" type="String" />
+		<column name="macompliancerem" db-name="macompliancerem" type="String" />
+		<column name="maobservecomp" db-name="maobservecomp" type="String" />
+		<column name="maobserverem" db-name="maobserverem" type="String" /> 
+		<column name="moagreecomp" db-name="moagreecomp" type="String" />
+		<column name="moagreerem" db-name="moagreerem" type="String" />
+		<column name="mofoundcomp" db-name="mofoundcomp" type="String" />
+		<column name="mofoundrem" db-name="mofoundrem" type="String" />
+		<column name="mosegcomp" db-name="mosegcomp" type="String" />
+		<column name="mosegrem" db-name="mosegrem" type="String" />
+		<column name="modilicomp" db-name="modilicomp" type="String" />
+		<column name="modilirem" db-name="modilirem" type="String" />
+		<column name="pacustodycomp" db-name="pacustodycomp" type="String" />
+		<column name="pacustodyrem" db-name="pacustodyrem" type="String" />
+		<column name="paprotectedcomp" db-name="paprotectedcomp" type="String" />
+		<column name="paprotectedrem" db-name="paprotectedrem" type="String" />
+		<column name="pasupervisecomp" db-name="pasupervisecomp" type="String" />
+		<column name="pasuperviserem" db-name="pasuperviserem" type="String" />
+		<column name="paaccountscomp" db-name="paaccountscomp" type="String" />
+		<column name="paaccountsrem" db-name="paaccountsrem" type="String" /> 
+		<column name="ntomaintaincomp" db-name="ntomaintaincomp" type="String" />
+		<column name="ntomaintainrem" db-name="ntomaintainrem" type="String" />
+		<column name="ntoadequatecomp" db-name="ntoadequatecomp" type="String" />
+		<column name="ntoadequaterem" db-name="ntoadequaterem" type="String" />
+		<column name="ntoinformcomp" db-name="ntoinformcomp" type="String" />
+		<column name="ntoinformrem" db-name="ntoinformrem" type="String" />
+		<column name="ntogrievancescomp" db-name="ntogrievancescomp" type="String" />
+		<column name="ntogrievancesrem" db-name="ntogrievancesrem" type="String" />
+		<column name="ntoexitcomp" db-name="ntoexitcomp" type="String" />
+		<column name="ntoexitrem" db-name="ntoexitrem" type="String" /> 
+		<column name="aaannualcomp" db-name="aaannualcomp" type="String" />
+		<column name="aaannualrem" db-name="aaannualrem" type="String" />
+		<column name="aabookscomp" db-name="aabookscomp" type="String" />
+		<column name="aabooksrem" db-name="aabooksrem" type="String" />
+		<column name="aaquarterlycomp" db-name="aaquarterlycomp" type="String" />
+		<column name="aaquarterlyrem" db-name="aaquarterlyrem" type="String" />
+		<column name="aarulescomp" db-name="aarulescomp" type="String" />
+		<column name="aarulesrem" db-name="aarulesrem" type="String" />
+		<column name="compofficername1" db-name="compofficername1" type="String" />
+		<column name="signdate1" db-name="signdate1" type="Date" />
+		<column name="place1" db-name="place1" type="String" />
+		<column name="compofficername2" db-name="compofficername2" type="String" />
+		<column name="signdate2" db-name="signdate2" type="Date" />
+		<column name="place2" db-name="place2" type="String" />
+		
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset"/>
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset"/>
+	</entity>
+	
+	<entity local-service="true" name="ClosingBal" table="closingbalance" data-source="extDataSource" remote-service="false" cache-enabled="false" uuid="true">
+		<!-- PK fields -->
+		<column name="exitid" db-name="exitid" primary="true" type="long"/>
+		
+		<!-- Audit details -->
+		<column name="createdBy" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifyBy" type="long"></column>
+		<column name="modifyDate" type="Date"></column>
+		
+		<!-- Workflow status Columns -->
+		<column name="status" type="int"/>
+		<column name="statusByUserId" type="long"/>
+		<column name="statusByUserName" type="String"/>
+		<column name="statusDate" type="Date"/>
+		
+		
+		<column name="closingdate" db-name="closingdate" type="Date" />
+		<column name="addressline1" db-name="addressLine1" type="String" />
+		<column name="addressline2" db-name="addressLine2" type="String" />
+		<column name="addressline3" db-name="addressLine3" type="String" />
+		<column name="confirmdate" db-name="confirmdate" type="Date" />
+		<column name="accountdetails" db-name="accountdetails" type="String" />
+		<column name="yoursfaithfully" db-name="yoursfaithfully" type="String" />
+		<column name="designation" db-name="designation" type="String" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset"/>
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset"/>
+	</entity>
+	
+	<entity local-service="true" name="PerformanceRep" table="performancereport" data-source="extDataSource" remote-service="false" cache-enabled="false" uuid="true">
+		<!-- PK fields -->
+		<column name="id" db-name="id" primary="true" type="long"/>
+		
+		<!-- Audit details -->
+		<column name="createdBy" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifyBy" type="long"></column>
+		<column name="modifyDate" type="Date"></column>
+		
+		<!-- Workflow status Columns -->
+		<column name="status" type="int"/>
+		<column name="statusByUserId" type="long"/>
+		<column name="statusByUserName" type="String"/>
+		<column name="statusDate" type="Date"/>
+		
+		<!-- Other fields -->
+		<column name="reportdate" db-name="reportdate" type="Date" />
+		<column name="addressline1" db-name="addressline1" type="String" />
+		<column name="addressline2" db-name="addressline2" type="String" />
+		<column name="addressline3" db-name="addressline3" type="String" />
+		<column name="trusteebankname" db-name="trusteebankname" type="String" />
+		<column name="monthendingdate" db-name="monthendingdate" type="Date" />
+		<column name="officername" db-name="officername" type="String" />
+		<column name="submitdate" db-name="submitdate" type="Date" />
+		<column name="place" db-name="place" type="String" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+		
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset"/>
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset"/>
+	</entity>
+	
+	<entity local-service="true" name="QuarterlyAuditor" table="quarterlyauditor" data-source="extDataSource" remote-service="false" cache-enabled="false" uuid="true">
+		<!-- PK fields -->
+		<column name="id" db-name="id" primary="true" type="long"/>
+		
+		<!-- Audit details -->
+		<column name="createdBy" type="long"></column>
+		<column name="createDate" type="Date"></column>
+		<column name="modifyBy" type="long"></column>
+		<column name="modifyDate" type="Date"></column>
+		
+		<!-- Workflow status Columns -->
+		<column name="status" type="int"/>
+		<column name="statusByUserId" type="long"/>
+		<column name="statusByUserName" type="String"/>
+		<column name="statusDate" type="Date"/>
+		
+		<!-- Other fields -->
+		<column name="performantdate" db-name="performantdate" type="Date" />
+		<column name="bankname" db-name="bankname" type="String" />
+		<column name="numberofcases" db-name="numberofcases" type="String" />
+		<column name="amount" db-name="amount" type="String" />
+		<column name="listofamountdate" db-name="listofamountdate" type="Date" />
+		<column name="companyname" db-name="companyname" type="String" />
+		<column name="designation" db-name="designation" type="String" />
+		<column name="regno" db-name="regno" type="String" />
+		<column name="partnercompanyname" db-name="partnercompanyname" type="String" />
+		<column name="partnermemno" db-name="partnermemno" type="String" />
+		<column name="submitdate" db-name="submitdate" type="Date" />
+		<column name="place" db-name="place" type="String" />
+	
+		<!-- References -->
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset"/>
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset"/>
+	</entity>
+	
+	<entity local-service="true" name="ElectronicAccepted" table="mn_all_electronic_accepted" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="file_name" type="String" />
+		<column name="channel" type="String" />
+		<column name="pao_fin" type="String" />
+		<column name="pao_reg_no" type="long" />
+		<column name="trans_id" type="long" />
+		<column name="amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="file_ref_no" type="String" />
+		<column name="record_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="fund_realised_date" type="Date" />
+		<column name="frc_upload_date" type="Date" />
+		<column name="trustee_bank_tat" type="String" />
+		<column name="matching_type" type="String" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="NPSAccepted" table="all_enps_accpeted" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="file_name" type="String" />
+		<column name="channel" type="String" />
+		<column name="pao_fin" type="String" />
+		<column name="pao_reg_no" type="long" />
+		<column name="trans_id" type="long" />
+		<column name="amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="file_ref_no" type="String" />
+		<column name="record_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="fund_realised_date" type="Date" />
+		<column name="frc_upload_date" type="Date" />
+		<column name="trustee_bank_tat" type="String" />
+		<column name="matching_type" type="String" /> 
+		<column name="cra" type="String" />   
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+
+	<entity local-service="true" name="D_REMITAccepted" table="all_dremit_accepted" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="file_name" type="String" />
+		<column name="channel" type="String" />
+		<column name="pao_fin" type="String" />
+		<column name="pao_reg_no" type="long" />
+		<column name="trans_id" type="long" />
+		<column name="amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="file_ref_no" type="String" />
+		<column name="record_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="fund_realised_date" type="Date" />
+		<column name="frc_upload_date" type="Date" />
+		<column name="trustee_bank_tat" type="String" />
+		<column name="matching_type" type="String" />
+		<column name="cra" type="String" />    
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+
+	<entity local-service="true" name="ElectronicRejects" table="mn_all_electronic_reject" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="int"/>
+		<column name="payment_id" type="long" />
+		<column name="ret_ref_no" type="String" />
+		<column name="source_acc_no_nodal" type="String" /> 
+		<column name="source_acc_no_ifsc" type="String" />
+		<column name="payment_receipt_date" type="Date" />
+		<column name="period_" type="String" />
+		<column name="utr_no" type="String" />
+		<column name="mode_" type="String" />
+		<column name="utr_amount" type="double" />
+		<column name="beneficiary_acc_no" type="long" />
+		<column name="nps_virtual_acc_no" type="int" />
+		<column name="nps_acc_name" type="String" />
+		<column name="return_date" type="Date" />
+		<column name="returned_utr" type="String" />
+		<column name="tid" type="long" />
+		<column name="reason_return" type="String" />
+		<column name="additional_comments" type="String" />
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="delay_remarks" type="String" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="ChequeAccepted" table="all_chq_accepted" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="file_name" type="String" />
+		<column name="channel" type="String" />
+		<column name="pao_fin" type="String" />
+		<column name="pao_reg_no" type="long" />
+		<column name="trans_id" type="long" />
+		<column name="amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="file_ref_no" type="String" />
+		<column name="record_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="fund_realised_date" type="Date" />
+		<column name="frc_upload_date" type="Date" />
+		<column name="trustee_bank_tat" type="String" />
+		<column name="matching_type" type="String" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+
+	<entity local-service="true" name="ChequesFailed" table="mn_all_chq_failed_tid_expired" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="transaction_no" type="String" />
+		<column name="sol_id" type="int" />
+		<column name="branch_name" type="String" />
+		<column name="name_" type="String" />
+		<column name="pao_ain" type="int" />
+		<column name="tran_id" type="long" />
+		<column name="total_amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="cheque_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="clearance_date" type="Date" />
+		<column name="credit_acc_no" type="long" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="PAOSubmittingCheques" table="mn_pao_submtting_chq" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pao_id" type="int" />
+		<column name="no_of_transactions" type="int" />
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="address_line1" type="String" />
+		<column name="address_line2" type="String" />
+		<column name="pin" type="int" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="ChequeClearance" table="mn_chq_clearance_tat" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="easypay_tran_id" type="int" />
+		<column name="sol_id" type="int" />
+		<column name="axis_bank_branch" type="String" />
+		<column name="cra_tran_id" type="long" />
+		<column name="beneficiary_name" type="String" />
+		<column name="clearance_amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="chq_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="clearance_date" type="Date" />	
+		<column name="clearance_tat" type="String" />
+		<column name="delay_period_above_5_days" type="int" />
+		<column name="reason" type="String" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="CollectionsTID" table="mn_collection_tid_tobe_enabled" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="transaction_no" type="String" />
+		<column name="sol_id" type="int" />
+		<column name="branch_name" type="String" />
+		<column name="name_" type="String" />
+		<column name="pao_ain" type="int" />
+		<column name="tran_id" type="long" /> 
+		<column name="total_amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="cheque_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="clearance_date" type="Date" />
+		<column name="credit_acc_no" type="long" />
+		<column name="email_id" type="String" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="ConsoCollReport" table="mn_consolidated_collection_rpt" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="file_name" type="String" />
+		<column name="channel" type="String" />
+		<column name="paofin" type="String" />
+		<column name="pao_reg_no" type="long" />
+		<column name="trans_id" type="double" />
+		<column name="amount" type="BigDecimal" />
+		<column name="file_ref_no" type="String" />
+		<column name="record_no" type="int" />
+		<column name="receipt_date" type="Date" />
+		<column name="fund_realised_date" type="Date" />
+		<column name="frc_upload_date" type="Date" />
+		<column name="trustee_bank_tat" type="String" />
+		<column name="matching_type" type="String" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="PAOMistakes" table="mn_pao_repeated_mistakes" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pao_id" type="int" /> <!-- String --> <!-- this col is not in new data dictionary -->
+		<column name="no_of_mistakes" type="int" /> <!-- this col is not in new data dictionary -->
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="address_line1" type="String" />
+		<column name="address_line2" type="String" />
+		<column name="pin" type="int" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="InvalidAcc" table="mn_invalid_transactions_kcra" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="int"/>
+		<column name="payment_id" type="int" />
+		<column name="ret_ref_no" type="String" />
+		<column name="source_acc_no_nodal" type="String" /> 
+		<column name="ifsc_source_no" type="String" />
+		<column name="payment_receipt_date" type="Date" />
+		<column name="period_" type="String" />
+		<column name="original_utr" type="String" />
+		<column name="mode_" type="String" />
+		<column name="utr_amount" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="beneficiary_acc_no" type="int" />
+		<column name="nps_virtual_acc_no" type="int" />
+		<column name="nps_acc_name" type="String" />
+		<column name="return_date" type="Date" />
+		<column name="returned_utr" type="String" />
+		<column name="tid" type="int" />
+		<column name="reason_return" type="String" />
+		<column name="additional_comments" type="String" />
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="return_tat_remarks" type="String" />		
+        <column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="InvalidAccII" table="mn_invalid_transactions_nsdl" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="int"/> <!-- long -->
+		<column name="payment_id" type="int" /> <!-- String -->
+		<column name="ret_ref_no" type="String" />
+		<column name="source_acc_no_nodal" type="int" /> <!-- String -->
+		<column name="ifsc_source_no" type="String" />
+		<column name="payment_receipt_date" type="Date" />
+		<column name="period_" type="String" />
+		<column name="original_utr" type="String" />
+		<column name="mode_" type="String" />
+		<column name="utr_amount" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="beneficiary_acc_no" type="int" /> <!-- String -->
+		<column name="nps_virtual_acc_no" type="int" /> <!-- String -->
+		<column name="nps_acc_name" type="String" />
+		<column name="return_date" type="Date" />
+		<column name="returned_utr" type="String" />
+		<column name="tid" type="int" /> <!-- String -->
+		<column name="reason_return" type="String" />
+		<column name="additional_comments" type="String" />
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="return_tat_remarks" type="String" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="AmtMismatch" table="amount_mismatch" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="long"/>
+		<column name="payment_id" type="String" />
+		<column name="ret_ref_no" type="String" />
+		<column name="source_acc_no_nodal" type="String" /> 
+		<column name="ifsc_source_no" type="String" />
+		<column name="payment_receipt_date" type="Date" />
+		<column name="period_" type="String" />
+		<column name="original_utr" type="String" />
+		<column name="mode_" type="String" />
+		<column name="utr_amount" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="beneficiary_acc_no" type="String" />
+		<column name="nps_virtual_acc_no" type="String" />
+		<column name="nps_acc_name" type="String" />
+		<column name="return_date" type="Date" />
+		<column name="returned_utr" type="String" />
+		<column name="tid" type="String" />
+		<column name="reason_return" type="String" />
+		<column name="additional_comments" type="String" />
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="return_tat_remarks" type="String" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+
+	<entity local-service="true" name="ExpTranId" table="expired_tran_id" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="long"/>
+		<column name="payment_id" type="String" />
+		<column name="ret_ref_no" type="String" />
+		<column name="source_acc_no_nodal" type="String" /> 
+		<column name="ifsc_source_no" type="String" />
+		<column name="payment_receipt_date" type="Date" />
+		<column name="period_" type="String" />
+		<column name="original_utr" type="String" />
+		<column name="mode_" type="String" />
+		<column name="utr_amount" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="beneficiary_acc_no" type="String" />
+		<column name="nps_virtual_acc_no" type="String" />
+		<column name="nps_acc_name" type="String" />
+		<column name="return_date" type="Date" />
+		<column name="returned_utr" type="String" />
+		<column name="tid" type="String" />
+		<column name="reason_return" type="String" />
+		<column name="additional_comments" type="String" />
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="return_tat_remarks" type="String" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="NoTID" table="no_tid_inward_msg" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="long"/>
+		<column name="payment_id" type="String" />
+		<column name="ret_ref_no" type="String" />
+		<column name="source_acc_no_nodal" type="String" /> 
+		<column name="ifsc_source_no" type="String" />
+		<column name="payment_receipt_date" type="Date" />
+		<column name="period_" type="String" />
+		<column name="original_utr" type="String" />
+		<column name="mode_" type="String" />
+		<column name="utr_amount" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="beneficiary_acc_no" type="String" />
+		<column name="nps_virtual_acc_no" type="String" />
+		<column name="nps_acc_name" type="String" />
+		<column name="return_date" type="Date" />
+		<column name="returned_utr" type="String" />
+		<column name="tid" type="String" />
+		<column name="reason_return" type="String" />
+		<column name="additional_comments" type="String" />
+		<column name="pao_name" type="String" />
+		<column name="email_id" type="String" />
+		<column name="return_tat_remarks" type="String" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+
+	<entity local-service="true" name="ChequeReject" table="mn_chq_rejected" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="receipt_date" type="Date" />
+		<column name="rejection_date" type="Date" />
+		<column name="sol_id" type="int" />
+		<column name="name_" type="String" />
+		<column name="pao_ain" type="int" />
+		<column name="tran_id" type="long" />		
+		<column name="chq_no" type="long" />
+		<column name="total_amt" type="BigDecimal" /> <!-- taken as bigdecimal instead of double -->
+		<column name="drawn_on_bank" type="String" />
+		<column name="drawn_on_branch" type="String" />
+		<column name="return_desc" type="String" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="FinalUploadFile" table="final_upload_file" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pensionfund" type="String"/>
+		<column name="inceptiondate" type="String" />
+		<column name="aum" type="String" />
+		<column name="subscribers" type="String" />
+		<column name="nav" type="String" />
+		<column name="return_1year" type="String" />
+		<column name="return_3year" type="String" />
+		<column name="return_5year" type="String" />
+		<column name="return_7year" type="String" />
+		<column name="return_10year" type="String" />
+		<column name="returninception" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="WeeklyAvgBal" table="weekly_average_balance_report" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="nps_acc_number" type="long" />
+		<column name="cust_id" type="long" />
+		<column name="cra" type="String" />
+		<column name="nps_acc_name" type="String" />
+		<column name="average_balance_for_the_week" type="BigDecimal" />
+		<column name="week_date" type="Date" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="Nsdlnav" table="weekly_nav_cra" data-source="extDataSource" remote-service="false" cache-enabled="false">
+  		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="long" />
+		<column name="date_of_latest_nav" type="Date" />
+		<column name="pension_fund_code" type="String" />
+		<column name="pension_fund_name" type="String" />
+		<column name="scheme_code" type="String" />
+		<column name="scheme_name" type="String" />
+		<column name="sector" type="String" />
+		<column name="no_of_subscriber" type="long" />
+		<column name="aum" type="BigDecimal" />
+		<column name="lastest_nav" type="BigDecimal" />
+		<column name="nav_prior_1_year" type="BigDecimal" />
+		<column name="nav_prior_2_year" type="BigDecimal" />
+		<column name="nav_prior_3_year" type="BigDecimal" />
+		<column name="nav_prior_5_year" type="BigDecimal" />
+		<column name="nav_prior_7_year" type="BigDecimal" />
+		<column name="nav_prior_10_year" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>  
+	</entity>
+
+	<entity local-service="true" name="valuationCg" table="weekly_valuation_rep_cg" data-source="extDataSource" remote-service="false" cache-enabled="false">
+  		<column name="id_" primary="true" type="long"/>
+		<column name="client_code" type="String" />
+		<column name="isin" type="String" />
+		<column name="isin_desc" type="String" />
+		<column name="maturity_date" type="Date" />
+		<column name="free_securities_rs" type="long" />
+		<column name="pledge_value_held_rs" type="long" />
+		<column name="securities_in_transit_rs" type="long" />
+		<column name="total_face_value_held_rs" type="long" />
+		<column name="rate" type="BigDecimal" />
+		<column name="value_" type="BigDecimal" />
+		<column name="reportingdate" type="Date" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>  
+	</entity>
+	
+	<entity local-service="true" name="NonEq" table="weekly_repo_noneq_cbv" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="date_" type="Date"/>
+		<column name="fin" type="String" />
+		<column name="scheme" type="String" />
+		<column name="company_name" type="String" />
+		<column name="security_code" type="String" />
+		<column name="isin" type="String" />
+		<column name="secdesc" type="String" />
+		<column name="sec" type="String" />
+		<column name="coupon" type="String" />
+		<column name="faceval" type="BigDecimal" />
+		<column name="custhold" type="long" />
+		<column name="transit" type="long" />
+		<column name="loghold" type="long" />
+		<column name="price" type="BigDecimal" />
+		<column name="source_" type="String" />
+		<column name="value_" type="BigDecimal" />
+		<column name="tradedate" type="Date" />
+		<column name="method_" type="String" />
+		<column name="gross_price" type="BigDecimal" />
+		<column name="accured_interest" type="BigDecimal" />
+		<column name="modified_duration" type="BigDecimal" />
+		<column name="ytm" type="BigDecimal" />
+		<column name="nse_price" type="BigDecimal" />
+		<column name="tenor_in_years" type="BigDecimal" />
+		<column name="value_of_security" type="String" />
+		<column name="issuerclass" type="String" />
+		<column name="coupontype" type="String" />
+		<column name="couponpaymentfrequency" type="int" />
+		<column name="allotmentdate" type="Date" />
+		<column name="firstipdate" type="Date" />
+		<column name="lastipdate" type="Date" />
+		<column name="finalredemptiondate" type="Date" />
+		<column name="redemppremium" type="String" />
+		<column name="rating" type="String" />
+		<column name="illiquiditydiscount" type="String" />
+		<column name="higherrating" type="String" />
+		<column name="ptc_amort_method" type="String" />
+		<column name="coupon_form" type="String" />
+		<column name="compounding_frequency" type="String" />
+		<column name="matrix_type" type="String" />
+		<column name="sector" type="String" />
+		<column name="call_date" type="Date" />
+		<column name="put_date" type="Date" />
+		<column name="settlement_date" type="Date" />
+		<column name="benchmark_date" type="Date" />
+		<column name="conversion_date" type="Date" />
+		<column name="goi_serviced" type="String" />
+		<column name="secured_unsecured" type="String" />
+		<column name="reportingdate" type="Date" />	
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+    <entity local-service="true" name="Sbirequestdata" table="mn_scheme_data" data-source="extDataSource" remote-service="false" cache-enabled="false">
+        <column name="id_" primary="true" type="long"/>
+		<column name="particulars" type="String" />
+		<column name="scheme_cg" type="String" />
+		<column name="scheme_sg" type="String" />
+		<column name="scheme_e_tier_i" type="String" />
+		<column name="scheme_c_tier_i" type="String" />
+		<column name="scheme_g_tier_i" type="String" />
+		<column name="scheme_e_tier_ii" type="String" />
+		<column name="scheme_c_tier_ii" type="String" />
+		<column name="scheme_g_tier_ii" type="String" />
+		<column name="nps_lite" type="String" />
+		<column name="corporate_cg_scheme" type="String" />
+		<column name="apy" type="String" />
+		<column name="scheme_a_tier_i" type="String" />
+		
+		<column name="apy_fund_scheme" type="String" ></column>
+		<column name="tier2_composite" type="String" ></column>
+		
+		<!-- <column name="apy_fund_scheme" type="String" /> -->
+		<column name="scheme_tax_saver_tier_ii" type="String" />
+		<column name="nav_date" type="Date" />
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="pfm" type="String" />
+		<column name="createdate" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>  
+	</entity>
+
+	<entity local-service="true" name="Votingreport" table="mn_iias_vote_matrix" data-source="extDataSource" remote-service="false" cache-enabled="false">
+        <column name="id_" primary="true" type="long"/>
+		<column name="meeting_date" type="Date" />
+		<column name="isin" type="String" />
+		<column name="company_name" type="String" />
+		<column name="meeting_type" type="String" />
+		<column name="resolution_category" type="String" />
+		<column name="resolution_dtls" type="String" />
+		<column name="resolution_type" type="String" />
+		<column name="iias_vote_recommendation" type="String" />
+		<column name="iias_rationale_for_vote_recom" type="String" />
+		<column name="resolution_no" type="BigDecimal" />
+		<column name="ses_res_id" type="String" />
+		<column name="reportingDate" type="Date" />
+		<column name="createdate" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>  
+	</entity>
+	
+	<entity local-service="true" name="MnForm1" table="mn_form_1" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="aum_pfm" type="BigDecimal" />
+		<column name="aum_cra" type="BigDecimal" />
+		<column name="aum_diff" type="BigDecimal" />
+		<column name="units_outstanding_pfm" type="BigDecimal" />
+		<column name="units_outstanding_cra" type="BigDecimal" />
+		<column name="units_outstanding_diff" type="BigDecimal" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="MnForm2" table="mn_form_2" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="particulars" type="String" />
+		<column name="scheme_cg" type="BigDecimal" />
+		<column name="scheme_sg" type="BigDecimal" />
+		<column name="scheme_e_tier_i" type="BigDecimal" />
+		<column name="scheme_c_tier_i" type="BigDecimal" />
+		<column name="scheme_g_tier_i" type="BigDecimal" />
+		<column name="scheme_a_tier_i" type="BigDecimal" />
+		<column name="scheme_e_tier_ii" type="BigDecimal" />
+		<column name="scheme_c_tier_ii" type="BigDecimal" />
+		<column name="scheme_g_tier_ii" type="BigDecimal" />
+		<column name="scheme_tax_saver_tier_ii" type="BigDecimal" />
+		<column name="nps_lite" type="BigDecimal" />
+		<column name="corporate_cg_scheme" type="BigDecimal" />
+		<column name="apy" type="BigDecimal" />
+		
+		<column name="apy_fund_scheme" type="BigDecimal" ></column>
+		<column name="tier2_composite" type="BigDecimal" ></column>
+		
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm3" table="mn_form_3" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="particulars" type="String" />
+		<column name="scheme_cg" type="String" />
+		<column name="scheme_sg" type="String" />
+		<column name="nps_lite" type="String" />
+		<column name="corporate_cg_scheme" type="String" />
+		<column name="apy" type="String" />
+		<column name="scheme_e_tier_i" type="String" />
+		<column name="scheme_c_tier_i" type="String" />
+		<column name="scheme_g_tier_i" type="String" />
+		<column name="scheme_e_tier_ii" type="String" />
+		<column name="scheme_c_tier_ii" type="String" />
+		<column name="scheme_g_tier_ii" type="String" />
+		<column name="scheme_a_tier_i" type="String" />
+		<column name="scheme_tax_saver_tier_ii" type="String" />
+		
+		<column name="apy_fund_scheme" type="String" ></column>
+		<column name="tier2_composite" type="String" ></column>
+		
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm4_AtalPensionYojana" table="mn_form_4_atal_pension_yojana" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm4_CorpCG" table="mn_form_4_corp_cg" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm4_NpsLite" table="mn_form_4_nps_lite" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm4_CG" table="mn_form_4_cg" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm4_SG" table="mn_form_4_sg" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm5_C_I" table="mn_form_5_c_i" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm5_C_II" table="mn_form_5_c_ii" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm6_E_I" table="mn_form_6_e_i" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm6_E_II" table="mn_form_6_e_ii" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm7a_A_T_I" table="mn_form_7a_a_t_i" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm7b_TTS" table="mn_form_7b_tts" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm7_G_I" table="mn_form_7_g_i" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm7_G_II" table="mn_form_7_g_ii" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="code" type="long" />
+		<column name="description_of_securities" type="String" />
+		<column name="amount" type="BigDecimal" />
+		<column name="percentage_of_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm8" table="mn_form_8" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="sl_no" type="int" />
+		<column name="security_name" type="String" />
+		<column name="isin_code" type="String" />
+		<column name="scheme" type="String" />
+		<column name="issuer_name" type="String" />
+		<column name="market_value_reporting_date" type="BigDecimal" /> 
+		<column name="purchase_value" type="BigDecimal" />
+		<column name="date_of_purchase" type="Date" />
+		<column name="rating_at_time_purchase" type="String" />
+		<column name="rating_agency_time_of_purchase" type="String" /> 
+		<column name="rating_date_of_purchase" type="Date" /> 
+		<column name="first_downgraded_rating" type="String" />
+		<column name="date_of_first_downgrade" type="Date" />
+		<column name="rating_agency_downgraded" type="String" />
+		<column name="current_rating" type="String" />
+		<column name="current_rating_agency" type="String" />
+		<column name="current_rating_date" type="Date" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>	
+	<entity local-service="true" name="MnForm8_ii" table="mn_form_8_during_the_month" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="sl_no" type="int" />
+		<column name="security_name" type="String" />
+		<column name="isin_code" type="String" />
+		<column name="scheme" type="String" />
+		<column name="issuer_name" type="String" />
+		<column name="market_value_reporting_date" type="BigDecimal" /> 
+		<column name="purchase_value" type="BigDecimal" />
+		<column name="date_of_purchase" type="Date" />
+		<column name="rating_at_time_purchase" type="String" />
+		<column name="rating_agency_time_of_purchase" type="String" /> 
+		<column name="rating_date_of_purchase" type="Date" /> 
+		<column name="first_downgraded_rating" type="String" />
+		<column name="date_of_first_downgrade" type="Date" />
+		<column name="rating_agency_downgraded" type="String" />
+		<column name="current_rating" type="String" />
+		<column name="current_rating_agency" type="String" />
+		<column name="current_rating_date" type="Date" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	<entity local-service="true" name="MnForm9" table="mn_form_9" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="sl_no" type="int" />
+		<column name="security_name" type="String" />
+		<column name="isin_code" type="String" />
+		<column name="scheme" type="String" />
+		<column name="issuer_name" type="String" />
+		<column name="market_value_reporting_date" type="BigDecimal" /> 
+		<column name="purchase_value" type="BigDecimal" />
+		<column name="date_of_purchase" type="Date" />
+		<column name="face_value" type="BigDecimal" />
+		<column name="npa_since" type="Date" />
+		<column name="recoveries_till_reporting_date" type="BigDecimal" />
+		<column name="book_value_net_recovery_date" type="BigDecimal" />
+		<column name="provision_held_against_book" type="BigDecimal" />
+		<column name="interest_default_till_npa_date" type="BigDecimal" />
+		<column name="intrst_default_after_npa_date" type="BigDecimal" />
+		<column name="interest_default_total" type="BigDecimal" />
+		<column name="provision_held_against_int" type="BigDecimal" />
+		<column name="remarks" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>	
+	
+	<entity local-service="true" name="MnForm10" table="mn_form_10" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="nic_code" type="String" />
+		<column name="nic_industry_desc" type="String" />
+		<column name="permissible_limit_of_industry" type="BigDecimal" />
+		<column name="actual_investments" type="BigDecimal" />
+		<column name="deviation" type="BigDecimal" />
+		<column name="percentage_of_deviation" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>	
+	
+	<entity local-service="true" name="MnForm11" table="mn_form_11_sponsor" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="name_of_group" type="String" />
+		<column name="investee_company" type="String" />
+		<column name="eq_perm_limit_of_paidupcapital" type="BigDecimal" /> 
+		<column name="eq_permissible_limit_of_aum" type="BigDecimal" /> 
+		<column name="eq_actual_investment" type="BigDecimal" />
+		<column name="eq_deviation_percentage" type="String" /> <!-- BigDecimal before -->
+		<column name="debt_limit_of_networth" type="BigDecimal" /> 
+		<column name="debt_limit_of_aum" type="BigDecimal" />
+		<column name="debt_actual_investment" type="BigDecimal" />
+		<column name="debt_deviation_percentage" type="String" />
+		<column name="exposure_exceptions" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm11_NonSponsor" table="mn_form_11_non_sponsor" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="name_of_group" type="String" />
+		<column name="investee_company" type="String" />
+		<column name="eq_perm_limit_of_paidupcapital" type="BigDecimal" /> 
+		<column name="eq_permissible_limit_of_aum" type="BigDecimal" /> 
+		<column name="eq_actual_investment" type="BigDecimal" />
+		<column name="eq_deviation_percentage" type="String" /> <!-- BigDecimal before -->
+		<column name="debt_limit_of_networth" type="BigDecimal" /> 
+		<column name="debt_limit_of_aum" type="BigDecimal" />
+		<column name="debt_actual_investment" type="BigDecimal" />
+		<column name="debt_deviation_percentage" type="String" />
+		<column name="exposure_exceptions" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm12" table="mn_form_12" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="name_of_the_issuer" type="String" />
+		<column name="equity_perm_limit_aum_prcnt" type="String" /> 
+		<column name="equity_perm_limit_aum_amount" type="BigDecimal" /> 
+		<column name="equity_actual_investment" type="BigDecimal" /> 
+		<column name="equity_deviation_percentage" type="String" />
+		<column name="equity_deviation_amount" type="BigDecimal" />
+		<column name="debt_perm_limit_aum_percentage" type="String" /> 
+		<column name="debt_perm_limit_of_aum_amount" type="BigDecimal" /> 
+		<column name="debt_actual_investment" type="BigDecimal" />
+		<column name="debt_deviation_percentage" type="String" />
+		<column name="debt_deviation_amount" type="BigDecimal" />
+		<!-- <column name="exposure_exceptions" type="String" /> -->
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm13" table="mn_form_13" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="scheme_name" type="String" />
+		<column name="tier_i_tier_ii" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="isin" type="String" />
+		<column name="security_name" type="String" />
+		<column name="issuer_name" type="String" />
+		<column name="nic_code" type="BigDecimal" />
+		<column name="industry_classification" type="String" />
+		<column name="security_type" type="String" />
+		<column name="no_of_shares_units" type="BigDecimal" /> 
+		<column name="market_price_per_unit" type="BigDecimal" />
+		<column name="market_value" type="BigDecimal" />
+		<column name="aum" type="BigDecimal" />
+		<column name="percentage_to_nav" type="String" />  
+		<column name="coupon_rate" type="String" />
+		<column name="coupon_payment_freq" type="int" />
+		<column name="purchase_price" type="BigDecimal" />
+		<column name="amount_invested" type="BigDecimal" />
+		<column name="put_date" type="Date" />
+		<column name="call_date" type="Date" />
+		<column name="face_value" type="BigDecimal" /> 
+		<column name="maturity_date" type="Date" /> 
+		<column name="residual_maturity" type="BigDecimal" /> 
+		<column name="modified_duration" type="BigDecimal" />
+		<column name="purchase_ytm" type="String" />
+		<column name="current_ytm" type="String" /> 
+		<column name="nse_closing_price" type="BigDecimal" />
+		<column name="bse_closing_price" type="BigDecimal" />
+		<column name="lowest_rating" type="String" />
+		<column name="lowest_rating_agency" type="String" />
+		<column name="second_lowest_rating" type="String" />
+		<column name="second_lowest_rating_agency" type="String" />
+		<column name="code" type="long" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnForm14" table="mn_form_14" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="tier_i_tier_ii" type="String" />
+		<column name="transaction_type" type="String" />
+		<column name="transaction_date" type="Date" />
+		<column name="isin" type="String" />
+		<column name="security_name" type="String" />
+		<column name="issuer_name" type="String" />
+		<column name="nic_code" type="BigDecimal" /> <!-- String before -->
+		<column name="industry_classification" type="String" />
+		<column name="security_type" type="String" />
+		<column name="no_of_shares" type="BigDecimal" /> 
+		<column name="purchase_or_sale_price" type="BigDecimal" />
+		<column name="amount_purchase_or_sale" type="BigDecimal" />
+		<column name="coupon_rate_percent" type="BigDecimal" />
+		<column name="coupon_frequency" type="int" />
+		<column name="put_date" type="Date" />
+		<column name="call_date" type="Date" />
+		<column name="face_value" type="BigDecimal" />
+		<column name="maturity_date" type="Date" />
+		<column name="residual_maturity_date" type="BigDecimal" />
+		<column name="modified_duration_on_tran_date" type="BigDecimal" />
+		<column name="purchase_ytm" type="String" />
+		<column name="lowest_rating" type="String" />
+		<column name="lowest_rating_agency" type="String" />
+		<column name="second_lowest_rating" type="String" />
+		<column name="second_lowest_rating_agency" type="String" />
+		<column name="code" type="long" />
+		<column name="broker_name" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>	
+	
+	<entity local-service="true" name="VoteMatrix" table="mn_ses_vote_matrix" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="meeting_date" type="Date" />
+		<column name="isin" type="String" />
+		<column name="company_name" type="String" />
+		<column name="meeting_type" type="String" />
+		<column name="resolution_category" type="String" />
+		<column name="resol_dtls" type="String" />
+		<column name="resol_type" type="String" />
+		<column name="lic_vote" type="String" />
+		<column name="lic_rationale_vote_recomm" type="String" />
+		<column name="lic_shares_held" type="long" />
+		<column name="uti_vote" type="String" />
+		<column name="uti_rationale_vote_recomm" type="String" />
+		<column name="uti_shares_held" type="long" />
+		<column name="sbi_vote" type="String" />
+		<column name="sbi_rationale_vote_recomm" type="String" />
+		<column name="sbi_shares_held" type="long" />
+		<column name="hdfc_vote" type="String" />
+		<column name="hdfc_rationale_vote_recomm" type="String" />
+		<column name="hdfc_shares_held" type="long" />
+		<column name="icici_vote" type="String" />
+		<column name="icici_rationale_vote_recomm" type="String" />
+		<column name="icici_shares_held" type="long" />
+		<column name="kotak_vote" type="String" />
+		<column name="kotak_rationale_vote_recomm" type="String" />
+		<column name="kotak_shares_held" type="long" />
+		<column name="birla_vote" type="String" />
+		<column name="birla_rationale_vote_recomm" type="String" />
+		<column name="birla_shares_held" type="long" />
+		
+		<column name="axis_vote" type="String" />
+		<column name="axis_rationale_vote_recomm" type="String" />
+		<column name="axis_shares_held" type="long" />
+		<column name="tata_vote" type="String" />
+		<column name="tata_rationale_vote_recomm" type="String" />
+		<column name="tata_shares_held" type="long" />
+		<column name="max_vote" type="String" />
+		<column name="max_rationale_vote_recomm" type="String" />
+		<column name="max_shares_held" type="long" />
+		<column name="dsp_vote" type="String" />
+		<column name="dsp_rationale_vote_recomm" type="String" />
+		<column name="dsp_shares_held" type="long" />
+		
+		<column name="total_sharehldng_nps_comb" type="BigDecimal" />
+		<column name="prcnt_total_shares_held_comb" type="String" />
+		<column name="majority_vote_pfm_comb" type="String" />
+		<column name="ses_vote_recomm" type="String" />
+		<column name="ses_rationale_vote_recomm" type="String" />
+		<column name="prcnt_tot_shares_held_promoter" type="String" />
+		<column name="votes_polled_promoter" type="String" />
+		<column name="votes_in_favor_promoter" type="String" />
+		<column name="votes_in_against_promoter" type="String" />
+		<column name="prcnt_tot_shares_held_institut" type="String" />
+		<column name="votes_polled_institution" type="String" />
+		<column name="votes_in_favor_insttitution" type="String" />
+		<column name="votes_in_against_institution" type="String" />
+		<column name="prcnt_total_shares_held_retail" type="String" />
+		<column name="votes_polled_retail" type="String" />
+		<column name="votes_in_favor_retail" type="String" />
+		<column name="votes_in_against_retail" type="String" />
+		<column name="votes_polled_voting_outcome" type="String" />
+		<column name="voting_for" type="String" />
+		<column name="voting_against" type="String" />
+		<column name="outcome" type="String" />
+		<column name="ses_report" type="String" />
+		<column name="resolution_no" type="BigDecimal" />
+		<column name="ses_res_id" type="String" />
+		<column name="ses_id" type="String" />
+		<column name="reportingDate" type="Date" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="QuarterlyForm1A" table="qr_comp_form_1a" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="reporting_date" type="Date" />
+		<column name="pension_fund_name" type="String" />
+		<column name="sno" type="BigDecimal" />
+		<column name="type_purchase_or_sale" type="String" />
+		<column name="category_of_investment" type="String" />
+		<column name="isin" type="String" />
+		<column name="name_of_security_or_company" type="String" />
+		<column name="book_value_qtr" type="BigDecimal" />
+		<column name="prcnt_of_portfolio_value_qtr" type="String" />
+		<column name="date_of_purchase_or_sale_qtr" type="Date" />
+		<column name="name_" type="String" />
+		<column name="designation" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+		
+	</entity>
+	
+	<entity local-service="true" name="Quaeterlyfromoneb" table="qr_comp_form_1b" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="reporting_date" type="Date" />
+		<column name="pension_fund_name" type="String" />
+		<column name="scheme_name" type="String" />
+		<column name="sno" type="BigDecimal" />
+		<column name="type_purchase_or_sale" type="String" />
+		<column name="category_of_investment" type="String" />
+		<column name="isin" type="String" />
+		<column name="name_of_security_or_company" type="String" />
+		<column name="book_value_qtr" type="BigDecimal" />
+		<column name="prcnt_of_portfolio_value" type="String" />
+		<column name="date_of_purchase_or_sale_qtr" type="Date" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="Quaeterlyfromtwo" table="qr_comp_form2" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<!-- <column name="pension_fund_code" type="String" /> -->
+		<column name="pension_fund_name" type="String" />
+		<column name="scheme_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="particulars" type="String" />
+		<column name="opbal_book_value" type="BigDecimal" />
+		<column name="opbal_market_value" type="BigDecimal" />
+		<column name="purchase_book_value" type="BigDecimal" />
+		<column name="pur_prcnt_of_total_portfolio" type="String" />
+		<column name="sales_book_value" type="BigDecimal" />
+		<column name="sales_prcnt_of_total_portfolio" type="String" />
+		<column name="adj_book_value" type="BigDecimal" />
+		<column name="adj_market_value" type="BigDecimal" />
+		<column name="closingbal_market_value" type="BigDecimal" />
+		<column name="closingbal_book_value" type="BigDecimal" />
+		<column name="closingbal_prcnt_tot_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="QuaterlyformCashFlow" table="qr_comp_form_cash_flow" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="scheme_name" type="String" />
+		<column name="periodicity_of_submission" type="String" />
+		<column name="statement_as_on" type="Date" />
+		<column name="opening_balance_mv" type="BigDecimal" />
+		<column name="inflow_during_the_qtr" type="BigDecimal" />
+		<column name="increase_decrease_value_of_inv" type="BigDecimal" />
+		<column name="outflow_during_the_qtr" type="BigDecimal" />
+		<column name="total_investible_funds_mv" type="BigDecimal" />
+		<column name="reportUploadLogId" type="long" ></column>
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="Quaeterlyfromthree" table="qr_comp_form3" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_code" type="String" /> 
+		<column name="pension_fund_name" type="String" />
+		<column name="scheme_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="particulars" type="String" />
+		<column name="opening_bal_units" type="BigDecimal" />
+		<column name="opening_bal_amount" type="BigDecimal" />
+		<column name="purchase_units" type="BigDecimal" />
+		<column name="purchase_book_value" type="BigDecimal" />
+		<column name="pur_prcnt_of_total_portfolio" type="String" />
+		<column name="sales_units" type="BigDecimal" />
+		<column name="sales_book_value" type="BigDecimal" />
+		<column name="sales_prcnt_of_total_portfolio" type="String" />
+		<column name="closing_bal_units" type="BigDecimal" />
+		<column name="closing_bal_book_value" type="BigDecimal" />
+		<column name="closing_bal_market_value" type="BigDecimal" />
+		<column name="closingbal_prcnt_tot_portfolio" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="Quaeterlyfromfour" table="qr_comp_form4" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="BigDecimal" />
+		<column name="pension_fund_code" type="String" /> 
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="market_value_as_on_quarter" type="BigDecimal" />
+		<column name="market_value_as_on_prev_qrtr" type="BigDecimal" />
+		<column name="market_val_as_on_2nd_prev_qrtr" type="BigDecimal" />
+		<column name="market_val_as_on_3rd_prev_qrtr" type="BigDecimal" />
+		<column name="_3_year_rolling_cagr" type="BigDecimal" />
+		<column name="annualized_portfolio_ret_yield" type="BigDecimal" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="Quaeterlyfromfive" table="qr_comp_form5" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_code" type="String" /> 
+		<column name="pension_fund_name" type="String" />
+		<column name="reporting_date" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="security_name" type="String" />
+		<column name="instrument_type" type="String" />
+		<column name="interest_rate_prcnt" type="String" />
+		<column name="has_there_been_revision" type="String" />
+		<column name="total_otstndgbook_value" type="BigDecimal" />
+		<column name="default_principal_bookvalue" type="BigDecimal" />
+		<column name="default_interest_bookvalue" type="BigDecimal" />
+		<column name="principal_due_from" type="Date" />
+		<column name="interest_due_from" type="Date" />
+		<column name="deferred_principal" type="BigDecimal" />
+		<column name="deferred_interest " type="BigDecimal" />
+		<column name="rolled_over" type="String" />
+		<column name="has_there_been_prin_waiver" type="BigDecimal" />
+		<column name="board_approval_reference" type="String" />
+		<column name="classification" type="String" />
+		<column name="provision_prcnt" type="String" />
+		<column name="provision_amount" type="BigDecimal" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="Quaeterlyfromoneisin" table="quaeterlyfromoneisin" data-source="extDataSource" remote-service="false" cache-enabled="false">
+        <column name="id_" primary="true" type="long"/>
+		<column name="isin_no" type="int" />
+		<column name="isin_categoryofinvestment" type="String" />
+		<column name="isin_nameofsecurity_company" type="String" />
+		<column name="fisin" type="String" />
+		<column name="isin_bookvalue" type="BigDecimal" />
+		<column name="isin_ofportfoliovalue" type="double" />
+		<column name="isin_dateofpurchase_sale" type="String" />
+		<column name="pfm" type="String" />
+		<column name="createdate" type="Date" />
+		<column name="createdby" type="long" />  
+	</entity>
+
+	<entity local-service="true" name="Quaeterlyfromfivenpa" table="quaeterlyfromfivenpa" data-source="extDataSource" remote-service="false" cache-enabled="false">
+        <column name="id_" primary="true" type="long"/>
+		<column name="srno" type="String" />
+		<column name="nameofnpa" type="String" />
+		<column name="nameofsecurity" type="String" />
+		<column name="dateofpurchase" type="String" />
+		<column name="total_facevalue" type="String" />
+		<column name="total_purchasevalue" type="String" />
+		<column name="value" type="String" />
+		<column name="npasince" type="String" />
+		<column name="bookvalue" type="String" />
+	    <column name="provisionheld" type="String" />
+		<column name="dd_interestpayment" type="String" /> 
+		<column name="stepstakencomments" type="String" />
+		<column name="pfm" type="String" />
+		<column name="createdate" type="Date" />
+	    <column name="createdby" type="long" /> 
+	</entity>
+	
+	<entity local-service="true" name="SESNonUnanimous" table="ses_non_unanimous" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="company_name" type="String" />
+		<column name="meeting_date" type="Date" />
+		<column name="resolution" type="String" />
+		<column name="voted_for" type="String" />
+		<column name="voted_abstain" type="String" />
+		<column name="voted_against" type="String" />
+		<column name="final_vote" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="CustodianAnnex_1a" table="cust_annex_1a" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="custody_date" type="Date" />
+		<column name="pension_name" type="String" />
+		<column name="auc_face_value" type="double" />
+		<column name="auc_market_value" type="double" />
+		<column name="aum" type="double" />
+		<column name="percent_of_aum" type="double" />
+		<column name="asset_not_under_custody" type="double" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="CustodianAnnex_2a" table="cust_annex_2a" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="description" type="String" />
+		<column name="remarks" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity name="InternalAuditReport" data-source="extDataSource" local-service="true" remote-service="false" table="internalauditreport">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="reportname" type="String" ></column>
+		<column name="reportDate" type="Date" ></column>
+		<column name="tablename" type="String" ></column>
+		<column name="sampling" type="String" ></column>
+		<column name="particulars" type="String" ></column>
+		<column name="auditorscomments" type="String" ></column>
+		<column name="status" type="String" ></column>
+		<column name="riskrating" type="String" ></column>
+		<column name="managementresponses" type="String" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="InternalAuditReportI" data-source="extDataSource" local-service="true" remote-service="false" table="internalauditreporti">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="tablename_annexure" type="String" ></column>
+		<column name="bordmeetingdate" type="Date" ></column>
+		<column name="borddate" type="Date" ></column>
+		<column name="committeemeeting" type="Date" ></column>
+		<column name="riskmeeting" type="Date" ></column>
+		<column name="nameofdirectors" type="String" ></column>
+		<column name="designation" type="String" ></column>
+		<column name="attendance" type="String" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="InternalAuditReportII" data-source="extDataSource" local-service="true" remote-service="false" table="internalauditreportii">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="annexuremonthend" type="String" ></column>
+		<column name="monthdatei" type="Date"></column>
+		<column name="monthdateii" type="Date"></column>
+		<column name="monthdateiii" type="Date"></column>
+		<column name="Scheme" type="String" ></column>
+		<column name="Issuer" type="String" ></column>
+		<column name="Classification" type="String" ></column>
+		<column name="marketvalue" type="long" ></column>
+		<column name="maxpermissable" type="long" ></column>
+		<column name="deviation" type="long" ></column>
+		<column name="percentagedeviation" type="long"></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="InternalAuditReportIII" data-source="extDataSource" local-service="true" remote-service="false" table="internalauditreportiii">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="detailsofsubmissionof_monthly" type="String" ></column>
+		<column name="concernedperiod" type="String" ></column>
+		<column name="disclosuredate" type="Date" ></column>
+		<column name="duedatedisclosure" type="Date" ></column>
+		<column name="delay" type="Date" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="InternalAuditReportIV" data-source="extDataSource" local-service="true" remote-service="false" table="internalauditreportiv">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="detailsofaveragebank" type="String" ></column>
+		<column name="quarterdate" type="Date"></column>
+		<column name="schemeiv" type="String" ></column>
+		<column name="july" type="long" ></column>
+		<column name="august" type="long" ></column>
+		<column name="september" type="long" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="InternalAuditReportV" data-source="extDataSource" local-service="true" remote-service="false" table="internalauditreportv">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="statusofnonperforming " type="String" ></column>
+		<column name="assetsdate" type="Date"></column>
+		<column name="nameofcompany" type="String" ></column>
+		<column name="statusasonjun" type="String" ></column>
+		<column name="statusasonsep" type="String" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="AnnexureVA" data-source="extDataSource" local-service="true" remote-service="false" table="annexureva">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="namefbill" type="String" ></column>
+		<column name="noofbill" type="String"></column>
+		<column name="pfs_schemesName " type="String" ></column>
+		<column name="pfs_ascharges" type="String" ></column>
+		<column name="pfs_custodycharges" type="String" ></column>
+		<column name="pfs_ccilcharges" type="String" ></column>
+		<column name="pfs_cbricscharges" type="String" ></column>
+		<column name="pfs_nsdlcharges" type="String" ></column>
+		<column name="pfs_sebicharges" type="String" ></column>
+		<column name="totalcharges" type="String" ></column>
+		<column name="shcil_ascharges" type="String" ></column>
+		<column name="shcil_custodycharges" type="String" ></column>
+		<column name="shcil_ccilcharges" type="String" ></column>
+		<column name="shcil_cbricscharges" type="String" ></column>
+		<column name="shcil_nsdlcharges" type="String" ></column>
+		<column name="shcil_sebicharges" type="String" ></column>
+		<column name="grosspaybleshcil" type="long" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="AnnexureVB" data-source="extDataSource" local-service="true" remote-service="false" table="annexurevb">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="month" type="String"></column>
+		<column name="billrefno" type="String"></column>
+		<column name="amount" type="long"></column>
+	    <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+
+	<entity name="MonthlyReportI" data-source="extDataSource" local-service="true" remote-service="false" table="monthlyreporti">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="entities" type="String"></column>
+		<column name="osmonth" type="String"></column>
+		<column name="npstob" type="String"></column>
+	    <column name="rrduringmonth" type="String"></column>
+	    <column name="rsnpst" type="String"></column>
+        <column name="rrmonth" type="String"></column>
+        <column name="osendofmonth" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+		
+	<entity name="MonthlyReportII" data-source="extDataSource" local-service="true" remote-service="false" table="monthlyreportii">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="sec_entities" type="String"></column>
+		<column name="osendingmonth" type="String"></column>
+		<column name="zerotoseven" type="String"></column>
+	    <column name="fifteen_aug" type="String"></column>
+	    <column name="sixteentothirtyone" type="String"></column>
+        <column name="thirtytwotoninety" type="String"></column>
+        <column name="ninetyonetooneeighty" type="String"></column>
+        <column name="oneeightyonetothreesixtyfive" type="String"></column>
+        <column name="threesixtysixandabove" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+		
+	<entity name="MonthlyReportIII" data-source="extDataSource" local-service="true" remote-service="false" table="monthlyreportiii">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="referrals" type="String"></column>
+		<column name="obnpst" type="String"></column>
+		<column name="escalatedtonpst" type="String"></column>
+		<column name="receivedduring" type="String"></column>
+	    <column name="rassignedbynpst" type="String"></column>
+	    <column name="resolvedduringmonth" type="String"></column>
+        <column name="osattheendofthemonth" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+		
+	<entity name="MonthlyReportIV" data-source="extDataSource" local-service="true" remote-service="false" table="monthlyreportiv">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="referralshandledbycras" type="String"></column>
+		<column name="referralsreceived " type="String"></column>
+		<column name="referralsinnatureof " type="String"></column>
+	    <column name="netgrievances" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="EnquireReceived" data-source="extDataSource" local-service="true" remote-service="false" table="enquirereceived">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="esNo" type="String"></column>
+		<column name="etokennumber" type="String"></column>
+		<column name="pranid" type="String"></column>
+	    <column name="loggingdate" type="String"></column>
+	    <column name="resolutiondate" type="String"></column>
+		<column name="estatus" type="String"></column>
+		<column name="category" type="String"></column>
+	    <column name="raisedagainst" type="String"></column>
+	    <column name="enquirysubcategory" type="String"></column>
+		<column name="edescription" type="String"></column>
+		<column name="eresoluton" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+		
+	<entity name="GrievanceReceived" data-source="extDataSource" local-service="true" remote-service="false" table="grievancereceived">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="gsNo" type="String"></column>
+		<column name="tokennumber" type="String"></column>
+		<column name="raisedbyentity" type="String"></column>
+	    <column name="raisedbyentityid" type="String"></column>
+		<column name="raisedagainstentity" type="String"></column>
+		<column name="raisedagainstentityid" type="String"></column>
+		<column name="grievancetype" type="String"></column>
+	    <column name="grievancecategory" type="String"></column>
+	    <column name="gstatus" type="String"></column>
+		<column name="loggeddate" type="String"></column>
+		<column name="resolveddate" type="String"></column>
+		<column name="grievancesubtype " type="String"></column>
+	    <column name="grievancedescription" type="String"></column>
+	    <column name="gresolution" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity local-service="true" name="CustodianAnnex_4b" table="cust_annex_4b" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		
+		<!-- initial fields -->
+		<column name="file_number" type="String" />
+		<column name="date_1" type="Date" />
+		<column name="custodian_name" type="String" />
+		<column name="address" type="String" />
+		<column name="date_2" type="String" />
+		<!-- <column name="date_3" type="String" /> -->
+		<column name="name_" type="String" />
+		<!-- <column name="date_4" type="String" /> -->
+		
+		<!-- section A fields -->
+		<column name="regulatory_comments_1" type="String" />
+		<column name="regulatory_remarks_1" type="String" />
+		<column name="regulatory_sample_1" type="String" />
+		<column name="regulatory_nps_1" type="String" />
+		
+		<column name="regulatory_comments_2" type="String" />
+		<column name="regulatory_remarks_2" type="String" />
+		<column name="regulatory_sample_2" type="String" />
+		<column name="regulatory_nps_2" type="String" />
+		
+		<column name="regulatory_comments_3" type="String" />
+		<column name="regulatory_remarks_3" type="String" />
+		<column name="regulatory_sample_3" type="String" />
+		<column name="regulatory_nps_3" type="String" />
+		
+		<column name="regulatory_comments_4" type="String" />
+		<column name="regulatory_remarks_4" type="String" />
+		<column name="regulatory_sample_4" type="String" />
+		<column name="regulatory_nps_4" type="String" />
+		
+		<column name="regulatory_comments_5" type="String" />
+		<column name="regulatory_remarks_5" type="String" />
+		<column name="regulatory_sample_5" type="String" />
+		<column name="regulatory_nps_5" type="String" />
+		
+		<column name="regulatory_comments_6" type="String" />
+		<column name="regulatory_remarks_6" type="String" />
+		<column name="regulatory_sample_6" type="String" />
+		<column name="regulatory_nps_6" type="String" />
+		
+		<column name="regulatory_comments_7" type="String" />
+		<column name="regulatory_remarks_7" type="String" />
+		<column name="regulatory_sample_7" type="String" />
+		<column name="regulatory_nps_7" type="String" />
+		
+		<column name="regulatory_comments_8" type="String" />
+		<column name="regulatory_remarks_8" type="String" />
+		<column name="regulatory_sample_8" type="String" />
+		<column name="regulatory_nps_8" type="String" />
+		
+		<column name="regulatory_comments_9" type="String" />
+		<column name="regulatory_remarks_9" type="String" />
+		<column name="regulatory_sample_9" type="String" />
+		<column name="regulatory_nps_9" type="String" />
+		
+		<!-- section B fields -->
+		<column name="operational_comments_1" type="String" />
+		<column name="operational_remarks_1" type="String" />
+		<column name="operational_sample_1" type="String" />
+		<column name="operational_nps_1" type="String" />
+		
+		<column name="operational_comments_2" type="String" />
+		<column name="operational_remarks_2" type="String" />
+		<column name="operational_sample_2" type="String" />
+		<column name="operational_nps_2" type="String" />
+		
+		<column name="operational_comments_3" type="String" />
+		<column name="operational_remarks_3" type="String" />
+		<column name="operational_sample_3" type="String" />
+		<column name="operational_nps_3" type="String" />
+		
+		<column name="operational_comments_4" type="String" />
+		<column name="operational_remarks_4" type="String" />
+		<column name="operational_sample_4" type="String" />
+		<column name="operational_nps_4" type="String" />
+		
+		<column name="operational_comments_5" type="String" />
+		<column name="operational_remarks_5" type="String" />
+		<column name="operational_sample_5" type="String" />
+		<column name="operational_nps_5" type="String" />
+		
+		<column name="operational_comments_6" type="String" />
+		<column name="operational_remarks_6" type="String" />
+		<column name="operational_sample_6" type="String" />
+		<column name="operational_nps_6" type="String" />
+		
+		<column name="operational_comments_7" type="String" />
+		<column name="operational_remarks_7" type="String" />
+		<column name="operational_sample_7" type="String" />
+		<column name="operational_nps_7" type="String" />
+		
+		<column name="operational_comments_8" type="String" />
+		<column name="operational_remarks_8" type="String" />
+		<column name="operational_sample_8" type="String" />
+		<column name="operational_nps_8" type="String" />
+		
+		<column name="operational_comments_9" type="String" />
+		<column name="operational_remarks_9" type="String" />
+		<column name="operational_sample_9" type="String" />
+		<column name="operational_nps_9" type="String" />
+		
+		<column name="operational_comments_10" type="String" />
+		<column name="operational_remarks_10" type="String" />
+		<column name="operational_sample_10" type="String" />
+		<column name="operational_nps_10" type="String" />
+		
+		<column name="operational_comments_11" type="String" />
+		<column name="operational_remarks_11" type="String" />
+		<column name="operational_sample_11" type="String" />
+		<column name="operational_nps_11" type="String" />
+		
+		<column name="operational_comments_12" type="String" />
+		<column name="operational_remarks_12" type="String" />
+		<column name="operational_sample_12" type="String" />
+		<column name="operational_nps_12" type="String" />
+		
+		<column name="operational_comments_13" type="String" />
+		<column name="operational_remarks_13" type="String" />
+		<column name="operational_sample_13" type="String" />
+		<column name="operational_nps_13" type="String" />
+		
+		<column name="operational_comments_14" type="String" />
+		<column name="operational_remarks_14" type="String" />
+		<column name="operational_sample_14" type="String" />
+		<column name="operational_nps_14" type="String" />
+		
+		<column name="operational_comments_15" type="String" />
+		<column name="operational_remarks_15" type="String" />
+		<column name="operational_sample_15" type="String" />
+		<column name="operational_nps_15" type="String" />
+		
+		<column name="operational_comments_16" type="String" />
+		<column name="operational_remarks_16" type="String" />
+		<column name="operational_sample_16" type="String" />
+		<column name="operational_nps_16" type="String" />
+		
+		<column name="operational_comments_17" type="String" />
+		<column name="operational_remarks_17" type="String" />
+		<column name="operational_sample_17" type="String" />
+		<column name="operational_nps_17" type="String" />
+		
+		<column name="operational_comments_18" type="String" />
+		<column name="operational_remarks_18" type="String" />
+		<column name="operational_sample_18" type="String" />
+		<column name="operational_nps_18" type="String" />
+		
+		<column name="operational_comments_19" type="String" />
+		<column name="operational_remarks_19" type="String" />
+		<column name="operational_sample_19" type="String" />
+		<column name="operational_nps_19" type="String" />
+		
+		<!-- section C fields -->
+		<column name="timely_comments_1" type="String" />
+		<column name="timely_remarks_1" type="String" />
+		<column name="timely_sample_1" type="String" />
+		<column name="timely_nps_1" type="String" />
+		
+		<column name="timely_comments_2" type="String" />
+		<column name="timely_remarks_2" type="String" />
+		<column name="timely_sample_2" type="String" />
+		<column name="timely_nps_2" type="String" />
+		
+		<column name="timely_comments_3" type="String" />
+		<column name="timely_remarks_3" type="String" />
+		<column name="timely_sample_3" type="String" />
+		<column name="timely_nps_3" type="String" />
+		
+		<column name="timely_comments_4" type="String" />
+		<column name="timely_remarks_4" type="String" />
+		<column name="timely_sample_4" type="String" />
+		<column name="timely_nps_4" type="String" />
+		
+		<column name="timely_comments_5" type="String" />
+		<column name="timely_remarks_5" type="String" />
+		<column name="timely_sample_5" type="String" />
+		<column name="timely_nps_5" type="String" />
+		
+		<column name="timely_comments_6" type="String" />
+		<column name="timely_remarks_6" type="String" />
+		<column name="timely_sample_6" type="String" />
+		<column name="timely_nps_6" type="String" />
+		
+		<column name="timely_comments_7" type="String" />
+		<column name="timely_remarks_7" type="String" />
+		<column name="timely_sample_7" type="String" />
+		<column name="timely_nps_7" type="String" />
+		
+		<column name="timely_comments_8" type="String" />
+		<column name="timely_remarks_8" type="String" />
+		<column name="timely_sample_8" type="String" />
+		<column name="timely_nps_8" type="String" />
+		
+		<column name="timely_comments_9" type="String" />
+		<column name="timely_remarks_9" type="String" />
+		<column name="timely_sample_9" type="String" />
+		<column name="timely_nps_9" type="String" />
+		
+		<column name="timely_comments_10" type="String" />
+		<column name="timely_remarks_10" type="String" />
+		<column name="timely_sample_10" type="String" />
+		<column name="timely_nps_10" type="String" />
+		
+		<column name="timely_comments_11" type="String" />
+		<column name="timely_remarks_11" type="String" />
+		<column name="timely_sample_11" type="String" />
+		<column name="timely_nps_11" type="String" />
+		
+		<column name="timely_comments_12" type="String" />
+		<column name="timely_remarks_12" type="String" />
+		<column name="timely_sample_12" type="String" />
+		<column name="timely_nps_12" type="String" />
+		
+		<column name="timely_comments_13" type="String" />
+		<column name="timely_remarks_13" type="String" />
+		<column name="timely_sample_13" type="String" />
+		<column name="timely_nps_13" type="String" />
+		
+		<!-- section D fields -->
+		<column name="custodian_comments_1" type="String" />
+		<column name="custodian_remarks_1" type="String" />
+		<column name="custodian_sample_1" type="String" />
+		<column name="custodian_nps_1" type="String" />
+		
+		<column name="custodian_comments_2" type="String" />
+		<column name="custodian_remarks_2" type="String" />
+		<column name="custodian_sample_2" type="String" />
+		<column name="custodian_nps_2" type="String" />
+		
+		<!-- section E fields -->
+		<column name="admin_comments_1" type="String" />
+		<column name="admin_remarks_1" type="String" />
+		<column name="admin_sample_1" type="String" />
+		<column name="admin_nps_1" type="String" />
+		
+		<column name="admin_comments_2" type="String" />
+		<column name="admin_remarks_2" type="String" />
+		<column name="admin_sample_2" type="String" />
+		<column name="admin_nps_2" type="String" />
+		
+		<column name="admin_comments_3" type="String" />
+		<column name="admin_remarks_3" type="String" />
+		<column name="admin_sample_3" type="String" />
+		<column name="admin_nps_3" type="String" />
+		
+		<column name="admin_comments_4" type="String" />
+		<column name="admin_remarks_4" type="String" />
+		<column name="admin_sample_4" type="String" />
+		<column name="admin_nps_4" type="String" />
+		
+		<column name="admin_comments_5" type="String" />
+		<column name="admin_remarks_5" type="String" />
+		<column name="admin_sample_5" type="String" />
+		<column name="admin_nps_5" type="String" />
+		
+		<!-- section F fields -->
+		<column name="infra_comments_1" type="String" />
+		<column name="infra_remarks_1" type="String" />
+		<column name="infra_sample_1" type="String" />
+		<column name="infra_nps_1" type="String" />
+		
+		<column name="infra_comments_2" type="String" />
+		<column name="infra_remarks_2" type="String" />
+		<column name="infra_sample_2" type="String" />
+		<column name="infra_nps_2" type="String" />
+		
+		<column name="infra_comments_3" type="String" />
+		<column name="infra_remarks_3" type="String" />
+		<column name="infra_sample_3" type="String" />
+		<column name="infra_nps_3" type="String" />
+		
+		<column name="infra_comments_4" type="String" />
+		<column name="infra_remarks_4" type="String" />
+		<column name="infra_sample_4" type="String" />
+		<column name="infra_nps_4" type="String" />
+		
+		<column name="infra_comments_5" type="String" />
+		<column name="infra_remarks_5" type="String" />
+		<column name="infra_sample_5" type="String" />
+		<column name="infra_nps_5" type="String" />
+		
+		<column name="infra_comments_6" type="String" />
+		<column name="infra_remarks_6" type="String" />
+		<column name="infra_sample_6" type="String" />
+		<column name="infra_nps_6" type="String" />
+		
+		<column name="infra_comments_7" type="String" />
+		<column name="infra_remarks_7" type="String" />
+		<column name="infra_sample_7" type="String" />
+		<column name="infra_nps_7" type="String" />
+		
+		<column name="infra_comments_8" type="String" />
+		<column name="infra_remarks_8" type="String" />
+		<column name="infra_sample_8" type="String" />
+		<column name="infra_nps_8" type="String" />
+		
+		<column name="infra_comments_9" type="String" />
+		<column name="infra_remarks_9" type="String" />
+		<column name="infra_sample_9" type="String" />
+		<column name="infra_nps_9" type="String" />
+		
+		<column name="infra_comments_10" type="String" />
+		<column name="infra_remarks_10" type="String" />
+		<column name="infra_sample_10" type="String" />
+		<column name="infra_nps_10" type="String" />
+		
+		<column name="infra_comments_11" type="String" />
+		<column name="infra_remarks_11" type="String" />
+		<column name="infra_sample_11" type="String" />
+		<column name="infra_nps_11" type="String" />
+		
+		<column name="infra_comments_12" type="String" />
+		<column name="infra_remarks_12" type="String" />
+		<column name="infra_sample_12" type="String" />
+		<column name="infra_nps_12" type="String" />
+		
+		<!-- section G fields -->
+		<column name="protection_comments_1" type="String" />
+		<column name="protection_remarks_1" type="String" />
+		<column name="protection_sample_1" type="String" />
+		<column name="protection_nps_1" type="String" />
+		
+		<column name="protection_comments_2" type="String" />
+		<column name="protection_remarks_2" type="String" />
+		<column name="protection_sample_2" type="String" />
+		<column name="protection_nps_2" type="String" />
+		
+		<column name="protection_comments_3" type="String" />
+		<column name="protection_remarks_3" type="String" />
+		<column name="protection_sample_3" type="String" />
+		<column name="protection_nps_3" type="String" />
+		
+		<column name="protection_comments_4" type="String" />
+		<column name="protection_remarks_4" type="String" />
+		<column name="protection_sample_4" type="String" />
+		<column name="protection_nps_4" type="String" />
+		
+		<column name="protection_comments_5" type="String" />
+		<column name="protection_remarks_5" type="String" />
+		<column name="protection_sample_5" type="String" />
+		<column name="protection_nps_5" type="String" />
+		
+		<column name="protection_comments_6" type="String" />
+		<column name="protection_remarks_6" type="String" />
+		<column name="protection_sample_6" type="String" />
+		<column name="protection_nps_6" type="String" />
+		
+		<!-- section H fields -->
+		<column name="record_comments_1" type="String" />
+		<column name="record_remarks_1" type="String" />
+		<column name="record_sample_1" type="String" />
+		<column name="record_nps_1" type="String" />
+		
+		<column name="record_comments_2" type="String" />
+		<column name="record_remarks_2" type="String" />
+		<column name="record_sample_2" type="String" />
+		<column name="record_nps_2" type="String" />
+		
+		<column name="record_comments_3" type="String" />
+		<column name="record_remarks_3" type="String" />
+		<column name="record_sample_3" type="String" />
+		<column name="record_nps_3" type="String" />
+		
+		<column name="record_comments_4" type="String" />
+		<column name="record_remarks_4" type="String" />
+		<column name="record_sample_4" type="String" />
+		<column name="record_nps_4" type="String" />
+		
+		<!-- section I fields -->
+		<column name="grievance_comments_1" type="String" />
+		<column name="grievance_remarks_1" type="String" />
+		<column name="grievance_sample_1" type="String" />
+		<column name="grievance_nps_1" type="String" />
+		
+		<column name="grievance_comments_2" type="String" />
+		<column name="grievance_remarks_2" type="String" />
+		<column name="grievance_sample_2" type="String" />
+		<column name="grievance_nps_2" type="String" />
+		
+		<!-- section J fields -->
+		<column name="other_comments_1" type="String" />
+		<column name="other_remarks_1" type="String" />
+		<column name="other_sample_1" type="String" />
+		<column name="other_nps_1" type="String" />
+		
+		<column name="other_comments_2" type="String" />
+		<column name="other_remarks_2" type="String" />
+		<column name="other_sample_2" type="String" />
+		<column name="other_nps_2" type="String" />
+		
+		<!-- section K fields -->
+		<column name="governance_comments_1" type="String" />
+		<column name="governance_remarks_1" type="String" />
+		<column name="governance_sample_1" type="String" />
+		<column name="governance_nps_1" type="String" />
+		
+		<column name="governance_comments_2" type="String" />
+		<column name="governance_remarks_2" type="String" />
+		<column name="governance_sample_2" type="String" />
+		<column name="governance_nps_2" type="String" />
+		
+		<column name="governance_comments_3" type="String" />
+		<column name="governance_remarks_3" type="String" />
+		<column name="governance_sample_3" type="String" />
+		<column name="governance_nps_3" type="String" />
+		
+		<column name="governance_comments_4" type="String" />
+		<column name="governance_remarks_4" type="String" />
+		<column name="governance_sample_4" type="String" />
+		<column name="governance_nps_4" type="String" />
+		
+		<column name="manager" type="String" />
+		
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AnnexureC" table="annex_c" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="subscriber_class" type="String" />
+		<column name="mar_12" type="String" />
+		<column name="mar_20" type="String" />
+		<column name="mar_21" type="String" />
+		<column name="sep_20" type="String" />
+		<column name="sep_21" type="String" />
+		<column name="annual_yoy_mar20_numbers" type="String" />
+		<column name="annual_yoy_mar20_percent" type="String" />
+		<column name="yoy_same_month_numbers" type="String" />
+		<column name="yoy_same_month_percent" type="String" />
+		<column name="growth_over_mar21_numbers" type="String" />
+		<column name="growth_over_mar21_percent" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="Status_SG" table="status_sg" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="state_government" type="String" />
+		<column name="date_of_notification" type="String" />
+		<column name="date_of_adoption" type="String" />
+		<column name="date_of_contract_sign_cra" type="String" />
+		<column name="date_of_contract_sign_nps" type="String" />
+		<column name="reg_status_nodal_office" type="String" />
+		<column name="reg_status_nodal_subscriber" type="String" />
+		<column name="total_number_of_subscribers" type="String" />
+		<column name="contribution_status" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>	
+	
+	<entity local-service="true" name="ElectronicRejSummary" table="mn_electronic_rejects_summary" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="payment_date" type="Date" />
+		<column name="nps_acc_name" type="String" />
+		<column name="count_payment_id" type="int" />
+		<column name="sum_utr_amt" type="BigDecimal" />
+		<column name="report_month" type="Date" />
+		<column name="cra" type="String" />  
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="AgendaI" table="bm_cgms_agenda_initial" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="file_number" type="String" />
+		<column name="b_number" type="String" />
+		<column name="item_number" type="String" />
+		<column name="date_1" type="String" />
+		<column name="date_2" type="String" />
+		<column name="date_3" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaII" table="summary_of_overall_grievances" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entitites" type="String" />
+		<column name="opening_balance" type="String" />
+		<column name="escalated_to_npst" type="String" />
+		<column name="grievances_received" type="String" />
+		<column name="grievances_assigned" type="String" />
+		<column name="grievances_resolved" type="String" />
+		<column name="outstanding_grievances" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaIII" table="scheme_wise_split_up" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="particulars" type="String" />
+		<column name="nps" type="String" />
+		<column name="npslite_and_apy" type="String" />
+		<!-- <column name="total" type="String" /> -->
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaIV" table="comparision_of_overall_summary" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="grievances" type="String" />
+		<column name="q1" type="String" />
+		<column name="q2" type="String" />
+		<column name="q3" type="String" />
+		<column name="q4" type="String" />
+		<column name="q1_1" type="String" />
+		<column name="q2_2" type="String" />
+		<column name="percentage_change" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaV" table="comparision_of_cause_wise" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="category" type="String" />
+		<column name="q1" type="String" />
+		<column name="q2" type="String" />
+		<column name="q3" type="String" />
+		<column name="q4" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaVI" table="cause_wise_no_of_grievances_3b" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="category" type="String" />
+		<column name="q1" type="String" />
+		<column name="q2" type="String" />
+		<column name="q3" type="String" />
+		<column name="q4" type="String" />
+		<column name="q1_1" type="String" />
+		<column name="q2_2" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaVII" table="entity_wise_outstanding" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entity" type="String" />
+		<column name="q1" type="String" />
+		<column name="q2" type="String" />
+		<column name="q3" type="String" />
+		<column name="q4" type="String" />
+		<column name="q1_1" type="String" />
+		<column name="q2_2" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaVIII" table="ageing_of_entity_wise_4a" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entity" type="String" />
+		<column name="ref_at_the_end_of_quarter" type="String" />
+		<column name="_0_7" type="String" />
+		<column name="_8_15" type="String" />
+		<column name="_16_31" type="String" />
+		<column name="_32_90" type="String" />
+		<column name="_91_180" type="String" />
+		<column name="_181_365" type="String" />
+		<column name="_366_and_above" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaIX" table="ageing_of_category_wise_4b" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="category" type="String" />
+		<column name="ref_at_the_end_of_quarter" type="String" />
+		<column name="_0_7" type="String" />
+		<column name="_8_15" type="String" />
+		<column name="_16_31" type="String" />
+		<column name="_32_90" type="String" />
+		<column name="_91_180" type="String" />
+		<column name="_181_365" type="String" />
+		<column name="_366_and_above" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaX" table="ageing_of_entity_wise_4c" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entity" type="String" />
+		<column name="ref_at_the_end_of_quarter" type="String" />
+		<column name="_0_7" type="String" />
+		<column name="_8_15" type="String" />
+		<column name="_16_31" type="String" />
+		<column name="_32_90" type="String" />
+		<column name="_91_180" type="String" />
+		<column name="_181_365" type="String" />
+		<column name="_366_and_above" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaXI" table="ageing_of_category_wise_4d" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="enquiries_category" type="String" />
+		<column name="ref_at_the_end_of_quarter" type="String" />
+		<column name="_0_7" type="String" />
+		<column name="_8_15" type="String" />
+		<column name="_16_31" type="String" />
+		<column name="_32_90" type="String" />
+		<column name="_91_180" type="String" />
+		<column name="_181_365" type="String" />
+		<column name="_366_and_above" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AgendaXII" table="bm_cgms_agenda_lastinfo" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="date_5" type="String" />
+		<column name="number_of_griev_1" type="String" />
+		<column name="number_of_griev_2" type="String" />
+		<column name="number_of_griev_3" type="String" />
+		<column name="number_of_griev_4" type="String" />
+		<column name="number_of_griev_5" type="String" />
+		<column name="number_of_griev_6" type="String" />
+		
+		<column name="grievances_1" type="String" />
+		<column name="grievances_2" type="String" />
+		<column name="grievances_3" type="String" />
+		<column name="grievances_4" type="String" />
+		<column name="grievances_5" type="String" />
+		
+		<column name="grievances_6" type="String" />
+		<column name="grievances_7" type="String" />
+		<column name="grievances_8" type="String" />
+		<column name="grievances_9" type="String" />
+		<column name="grievances_10" type="String" />
+		
+		<column name="grievances_11" type="String" />
+		<column name="grievances_12" type="String" />
+		<column name="grievances_13" type="String" />
+		<column name="grievances_14" type="String" />
+		<column name="grievances_15" type="String" />
+		<column name="grievances_16" type="String" />
+		<column name="grievances_17" type="String" />
+		
+		<column name="grievances_18" type="String" />
+		<column name="grievances_19" type="String" />
+		<column name="grievances_20" type="String" />
+		<column name="grievances_21" type="String" />
+		<column name="grievances_22" type="String" />
+		<column name="grievances_23" type="String" />
+		<column name="grievances_24" type="String" />
+		
+		<column name="grievances_25" type="String" />
+		<column name="grievances_26" type="String" />
+		<column name="grievances_27" type="String" />
+		
+		<column name="grievances_28" type="String" />
+		<column name="grievances_29" type="String" />
+		<column name="grievances_30" type="String" />
+		
+		<column name="activity" type="String" />
+		<column name="grievances_31" type="String" />
+		<column name="grievances_32" type="String" />
+		
+		<column name="pfrda_policy" type="String" />
+		<column name="date_6" type="String" />
+		<column name="date_7" type="Date" />
+		
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity name="InputQuarterlyInterval" data-source="extDataSource" local-service="true" remote-service="false" table="quarterlyinterval">
+		<column type="long" name="id_" primary="true"></column>
+		
+		<column name="formDate" type="Date" ></column>
+		<column name="oneia" type="String" ></column>
+        <column name="oneib" type="String"></column>
+        <column name="oneiia" type="String"></column>
+        <column name="oneiib" type="String"></column>
+        <column name="oneiic" type="String"></column>
+        <column name="oneiid" type="String"></column>
+        <column name="oneiiia" type="String"></column>
+        <column name="oneiiib" type="String"></column>
+        <column name="oneiva" type="String"></column>
+        <column name="onev" type="String"></column>
+     	<column name="twoia" type="String"></column>
+     	<column name="twoib" type="String"></column>
+     	<column name="twoic" type="String"></column>
+     	<column name="twoiione" type="String"></column>
+     	<column name="twoiitwo" type="String"></column>
+     	<column name="twoiithree" type="String"></column>
+     	<column name="twoiifour" type="String"></column>
+     	<column name="twoiifive" type="String"></column>
+     	<column name="twoiisix" type="String"></column>
+     	<column name="twoiiseven" type="String"></column>
+        <column name="threea" type="String"></column>
+        <column name="threeb" type="String"></column>
+        <column name="threec" type="String"></column>
+        <column name="threeci" type="String"></column>
+        <column name="threecii" type="String"></column>
+        <column name="threeciii" type="String"></column>
+        <column name="threeciv" type="String"></column>
+		<column name="foura" type="String" ></column>
+        <column name="fourb" type="String"></column>
+        <column name="fourc" type="String"></column>
+        <column name="fivei" type="String"></column>
+        <column name="fiveii" type="String"></column>
+        <column name="fiveiii" type="String"></column>
+        <column name="fiveiv" type="String"></column>
+        <column name="fiveva" type="String"></column>
+        <column name="fivevb" type="String"></column>
+     	<column name="fivevc" type="String"></column>
+        <column name="fivevia" type="String"></column>
+        <column name="fivevib" type="String"></column>
+        <column name="sixi" type="String"></column>
+        <column name="sixiia" type="String"></column>
+        <column name="sixiib" type="String"></column>
+        <column name="sixiic" type="String"></column>
+        <column name="sevenia" type="String"></column>
+        <column name="sevenib" type="String" ></column>
+        <column name="sevenic" type="String"></column>
+        <column name="sevenid" type="String"></column>
+        <column name="sevenie" type="String"></column>
+        <column name="eightia" type="String"></column>
+        <column name="eightib" type="String"></column>
+        <column name="eightii" type="String"></column>
+        <column name="eightiii" type="String"></column>
+        <column name="eightiv" type="String"></column>
+        <column name="eightv" type="String"></column>
+     	<column name="eightvia" type="String"></column>
+        <column name="eightvib" type="String"></column>
+        <column name="eightviia" type="String"></column>
+        <column name="eightviib" type="String"></column>
+        <column name="eightviii" type="String"></column>
+        <column name="ninea" type="String"></column>
+        <column name="nineb" type="String"></column>
+        <column name="ten" type="String"></column>
+        <column name="elevena" type="String"></column>
+        <column name="elevenb" type="String"></column>
+        <column name="twelve" type="String"></column>
+        <column name="companies" type="String"></column>
+        <column name="date_3" type="String" ></column>
+        <column name="place" type="String" ></column>
+        <column name="signature" type="Date" ></column>
+        <column name="board_a" type="String"></column>
+        <column name="board_b" type="String"></column>
+        <column name="investment_a" type="String"></column>
+        <column name="investment_b" type="String" ></column>
+        <column name="risk_a" type="String" ></column>
+        <column name="risk_b" type="Date" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+        
+	</entity>
+	
+	<entity name="ScrutinyInputQuarterlyInterval" data-source="extDataSource" local-service="true" remote-service="false" table="scrutinyquarterlyinterval">
+		<column type="long" name="id_" primary="true"></column>
+		
+		<column name="formDate" type="Date" ></column>
+		<column name="oneia_rem" type="String" ></column>
+        <column name="oneib_rem" type="String"></column>
+        <column name="oneiia_rem" type="String"></column>
+        <column name="oneiib_rem" type="String"></column>
+        <column name="oneiic_rem" type="String"></column>
+        <column name="oneiid_rem" type="String"></column>
+        <column name="oneiiia_rem" type="String"></column>
+        <column name="oneiiib_rem" type="String"></column>
+        <column name="oneiva_rem" type="String"></column>
+        <column name="onev_rem" type="String"></column>
+     	<column name="twoia_rem" type="String"></column>
+     	<column name="twoib_rem" type="String"></column>
+     	<column name="twoic_rem" type="String"></column>
+     	<column name="twoiione_rem" type="String"></column>
+     	<column name="twoiitwo_rem" type="String"></column>
+     	<column name="twoiithree_rem" type="String"></column>
+     	<column name="twoiifour_rem" type="String"></column>
+     	<column name="twoiifive_rem" type="String"></column>
+     	<column name="twoiisix_rem" type="String"></column>
+     	<column name="twoiiseven_rem" type="String"></column>
+        <column name="threea_rem" type="String"></column>
+        <column name="threeb_rem" type="String"></column>
+        <column name="threec_rem" type="String"></column>
+        <column name="threeci_rem" type="String"></column>
+        <column name="threecii_rem" type="String"></column>
+        <column name="threeciii_rem" type="String"></column>
+        <column name="threeciv_rem" type="String"></column>
+		<column name="foura_rem" type="String" ></column>
+        <column name="fourb_rem" type="String"></column>
+        <column name="fourc_rem" type="String"></column>
+        <column name="fivei_rem" type="String"></column>
+        <column name="fiveii_rem" type="String"></column>
+        <column name="fiveiii_rem" type="String"></column>
+        <column name="fiveiv_rem" type="String"></column>
+        <column name="fiveva_rem" type="String"></column>
+        <column name="fivevb_rem" type="String"></column>
+     	<column name="fivevc_rem" type="String"></column>
+        <column name="fivevia_rem" type="String"></column>
+        <column name="fivevib_rem" type="String"></column>
+        <column name="sixi_rem" type="String"></column>
+        <column name="sixiia_rem" type="String"></column>
+        <column name="sixiib_rem" type="String"></column>
+        <column name="sixiic_rem" type="String"></column>
+        <column name="sevenia_rem" type="String"></column>
+        <column name="sevenib_rem" type="String" ></column>
+        <column name="sevenic_rem" type="String"></column>
+        <column name="sevenid_rem" type="String"></column>
+        <column name="sevenie_rem" type="String"></column>
+        <column name="eightia_rem" type="String"></column>
+        <column name="eightib_rem" type="String"></column>
+        <column name="eightii_rem" type="String"></column>
+        <column name="eightiii_rem" type="String"></column>
+        <column name="eightiv_rem" type="String"></column>
+        <column name="eightv_rem" type="String"></column>
+     	<column name="eightvia_rem" type="String"></column>
+        <column name="eightvib_rem" type="String"></column>
+        <column name="eightviia_rem" type="String"></column>
+        <column name="eightviib_rem" type="String"></column>
+        <column name="eightviii_rem" type="String"></column>
+        <column name="ninea_rem" type="String"></column>
+        <column name="nineb_rem" type="String"></column>
+        <column name="ten_rem" type="String"></column>
+        <column name="elevena_rem" type="String"></column>
+        <column name="elevenb_rem" type="String"></column>
+        <column name="twelve_rem" type="String"></column>
+        
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+        
+	</entity>
+	
+	<entity name="InputQuarterlyIntervalI" data-source="extDataSource" local-service="true" remote-service="false" table="quarterlyintervali">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="Quatertable_name" type="String" ></column>
+		<column name="nameofdirector" type="String" ></column>
+		<column name="dignation" type="String" ></column>
+		<column name="indepent" type="String" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	
+	<entity name="InputQuarterlyIntervalII" data-source="extDataSource" local-service="true" remote-service="false" table="quarterlyintervalii">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="quarter_table_name" type="String" ></column>
+		<column name="description" type="String" ></column>
+		<column name="quarter_end_jun_21" type="String" ></column>
+		<column name="quarter_end_mar_21" type="String" ></column>
+		<column name="quarter_end_dec_20" type="String" ></column>
+		<column name="quarter_end_sep_20" type="String" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	
+	<entity name="InputQuarterlyIntervalIII" data-source="extDataSource" local-service="true" remote-service="false" table="quarterlyintervaliii">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="position_" type="String" ></column>
+		<column name="nameofthepersonnel" type="String" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	
+	<entity name="InputQuarterlyIntervalIV" data-source="extDataSource" local-service="true" remote-service="false" table="quarterlyintervaliv">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="intervaltableName" type="String" ></column>
+		<column name="schemetype" type="String" ></column>
+		<column name="occurrence" type="String" ></column>
+		<column name="submission" type="String" ></column>
+		<column name="dateoficmeeting" type="String" ></column>
+		<column name="boardmeeting" type="String" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="InputQuarterlyIntervalV" data-source="extDataSource" local-service="true" remote-service="false" table="quarterlyintervalv">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="nameofdirector" type="String" ></column>
+		<column name="dignation" type="String" ></column>
+		<column name="indepent" type="String" ></column>
+		<column name="Dateofsubmission" type="Date" ></column>
+		<column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity local-service="true" name="CollectionSummary" table="mn_collection_summary" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="remittance_mode" type="String"/>
+		<column name="auto_match_trans_no" type="long" />
+		<column name="auto_match_amount" type="BigDecimal" />
+		<column name="manual_match_trans_no" type="long" />
+		<column name="manual_match_amount" type="BigDecimal" />
+		<column name="tot_accepted_trans_no" type="long" />
+		<column name="tot_accepted_amount" type="BigDecimal" />
+		<column name="tot_rejected_trans_no" type="long" />
+		<column name="tot_rejected_amount" type="BigDecimal" />
+		<column name="grand_tot_trans_no" type="long" />
+		<column name="grand_tot_amount" type="BigDecimal" />
+		<column name="percentage_rejection" type="double" />
+		<column name="percentage_acceptance" type="String" />
+		<column name="cra" type="String"/>
+		<column name="month" type="Date"/>
+		
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="DelayAfter_930am" table="qr_frc_delay_after_0930am" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="date_of_upload" type="Date" />
+		<column name="file_name" type="String" />
+		<column name="tat_time" type="Date" />
+		<column name="time_stamp" type="Date" />
+		<column name="delay" type="Date" />
+		<column name="auditee_comments" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="DelayExceed_25min" table="qr_payin_delay_exceed_25min" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="date_" type="Date" />
+		<column name="payin_file_timestamp" type="Date" />
+		<column name="fund_transfer_timestamp" type="Date" />
+		<column name="tat_time" type="Date" />
+		<column name="delay" type="Date" />
+		<column name="auditee_comments" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="DelayWithdrawalRemittance" table="qr_delay_withdrawl_remittance" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="std_pran" type="long" />
+		<column name="process_type" type="String" />
+		<column name="name_" type="String" />
+		<column name="net_amt" type="BigDecimal" />
+		<column name="pay_in_date" type="Date" />
+		<column name="execution_date" type="Date" />
+		<column name="no_of_days" type="long" />
+		<column name="auditee_comment" type="String" />
+		<column name="return_reason" type="String" />
+		<column name="cra" type="String" />
+		<column name="return_type" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="ReexecutedWithdrawalReturn" table="qr_reexecuted_withdrawl_return" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="std_pran" type="long" />
+		<column name="process_type" type="String" />
+		<column name="name_" type="String" />
+		<column name="net_amt" type="BigDecimal" />
+		<column name="pay_in_date" type="Date" />
+		<column name="execution_date" type="Date" />
+		<column name="auditee_comment" type="String" />
+		<column name="return_reason" type="String" />
+		<column name="cra" type="String" />
+		<column name="return_type" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="FRCWithdrawalAcc" table="qr_frc_withdrawl_acc" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="std_pran" type="long" />
+		<column name="sub_name" type="String" />
+		<column name="type_" type="String" />
+		<column name="pay_in_date" type="Date" />
+		<column name="execution_date" type="Date" />
+		<column name="net_amt" type="BigDecimal" />
+		<column name="auditees_comment" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="DelayToPFMAcc" table="qr_delay_to_pfm_acc" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="tid" type="long" />
+		<column name="amt" type="BigDecimal" />
+		<column name="funds_receipt_date" type="Date" />
+		<column name="transfer_date" type="Date" />
+		<column name="frc_upload_date" type="Date" />
+		<column name="delay" type="String" />
+		<column name="auditee_comment" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="ReturnOfRejectedFunds" table="qr_return_of_rejected_funds" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="date_of_receipt" type="Date" />
+		<column name="amount" type="BigDecimal" />
+		<column name="nps_acc_name" type="String" />
+		<column name="date_of_return" type="Date" />
+		<column name="return_reason" type="String" />
+		<column name="delay_reason" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="AvgAmt" table="qr_avg_amt" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="month_" type="String" />
+		<column name="nps_acc_no" type="long" />
+		<column name="nps_acc_name" type="String" />
+		<column name="average" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="ReportSubmission" table="qr_rpt_submission" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="month_" type="String" />
+		<column name="name_of_report" type="String" />
+		<column name="mode_" type="String" />
+		<column name="periodicity" type="String" />
+		<column name="_1st_week_remark" type="String" />
+		<column name="_2nd_week_remark" type="String" />
+		<column name="_3rd_week_remark" type="String" />
+		<column name="_4th_week_remark" type="String" />
+		<column name="_5th_week_remark" type="String" />
+		<column name="auditee_comments" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AccountList" table="qr_acc_list" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="nps_acc_no" type="long" />
+		<column name="nps_acc_name" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="ClosingBalUploadDelay" table="qr_closing_bal_upload_delay" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="file_name" type="String" />
+		<column name="uploaded_by" type="String" />
+		<column name="uploaded_date" type="Date" />
+		<column name="uploaded_time" type="Date" />
+		<column name="tat" type="Date" />
+		<column name="delay" type="Date" />
+		<column name="status" type="String" />
+		<column name="cra" type="String" />
+		<column name="auditees_comment" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>	
+	</entity>
+	
+	<entity local-service="true" name="ENPSServChanges" table="qr_enps_serv_charges" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="nps_acc_no" type="long" />
+		<column name="nps_acc_name" type="String" />
+		<column name="tran_date" type="Date" />
+		<column name="debit_trans" type="BigDecimal" />
+		<column name="credit_trans" type="BigDecimal" />
+		<column name="amt" type="BigDecimal" />
+		<column name="auditee_remarks" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>	
+	</entity>
+	
+	<entity local-service="true" name="AnnexureToCar" table="qr_annexure_to_car" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sno" type="long"/>
+		<column name="sum_closing_bal" type="BigDecimal" />
+		<column name="avg_daily_closing_bal" type="BigDecimal" />
+		<column name="annual_fee" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />	
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity name="FormatIA" data-source="extDataSource" local-service="true" remote-service="false" table="formatia">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="formatiasector" type="String"></column>
+		<column name="withdrawaltype" type="String"></column>
+		<column name="pendingbeginningofthemonth" type="String"></column>
+	    <column name="claimsreceivedduringmonth" type="String"></column>
+		<column name="claimssettledduring" type="String"></column>
+		<column name="claimsrejectedduring " type="String"></column>
+		<column name="claimsoutstandingendofmonth" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="FormatAI" data-source="extDataSource" local-service="true" remote-service="false" table="formata">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="formatiaisector" type="String"></column>
+		<column name="formatiawithdrawaltype" type="String"></column>
+		<column name="formatiapendingbeginning" type="String"></column>
+		<column name="formatiaclaimsreceivedduring" type="String"></column>
+		<column name="formatiaclaimsauthorisedduring" type="String"></column>
+		<column name="formatiaclaimsrejectedduring" type="String"></column>
+		<column name="formatiaclaimsoutstanding" type="String"></column>
+		<column name="formataiclaimssettledduring" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	
+	<entity name="FormatAII" data-source="extDataSource" local-service="true" remote-service="false" table="formatiia">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="withdrawalsector" type="String"></column>
+		<column name="format_type" type="String"></column>
+		<column name="zerotothirty" type="String"></column>
+        <column name="thirtyonetoninety" type="String"></column>
+        <column name="formatninetyonetoonetenty" type="String"></column>
+        <column name="formatonetooneeighty" type="String"></column>
+        <column name="morethanthreesixtyfive" type="String"></column>
+        <column name="morethenoneyear" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	
+	
+	<entity name="FormatB" data-source="extDataSource" local-service="true" remote-service="false" table="formatb">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="formatb_sector" type="String"></column>
+		<column name="partialwithdrawal" type="String"></column>
+		<column name="surrenderofNPSbenefits" type="String"></column>
+        <column name="eligiblelumpsumwithdrawal" type="String"></column>
+        <column name="purchaseofannuity" type="String"></column>
+        <column name="allcitizenes" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	
+	<entity name="FormatC" data-source="extDataSource" local-service="true" remote-service="false" table="formatc">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="formatc_sector" type="String"></column>
+		<column name="withdrawalapplications" type="String"></column>
+		<column name="purchaseofannuity" type="String"></column>
+        <column name="paymenttoASPbyCRA" type="String"></column>
+        <column name="premiumtoASPatCRA " type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	
+	<entity name="FormatD" data-source="extDataSource" local-service="true" remote-service="false" table="formatd">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="GrievancestatisticsforCGMS" type="String"></column>
+		<column name="formatnumber" type="String"></column>
+		<column name="Remarksifany" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity name="FormatE" data-source="extDataSource" local-service="true" remote-service="false" table="formate">
+		<column type="long" name="id_" primary="true"></column>
+		<column name="formate_sector" type="String"></column>
+		<column name="quarterasperCRAdatabase" type="String"></column>
+		<column name="lastdateofthequarter" type="String"></column>
+		<column name="actualreportedwithdrawals" type="String"></column>
+		<column name="remarksofCRA" type="String"></column>
+        <column name="createdate" type="Date"></column>
+        <column name="createdby" type="long"></column>
+	</entity>
+	
+	<entity local-service="true" name="MnNonUnanimous" table="mn_non_unanimous_voting" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="s_no" type="int" />
+		<column name="name_of_the_company" type="String" />
+		<column name="meeting_date" type="Date" />
+		<column name="resolution" type="String" />
+		<column name="ses_recommendation" type="String" />
+		<column name="ses_reason_for_recommendation" type="String" />
+		<column name="pfs_voted_for" type="String" />
+		<column name="pfs_voted_abstain" type="String" />
+		<column name="pfs_voted_against" type="String" />
+		<column name="final_vote" type="String" />
+		
+		<column name="isin" type="String" />
+		<column name="ses_id" type="String" />
+		<column name="ses_res_id" type="String" />
+		<column name="resolution_no" type="BigDecimal" />
+  
+		<column name="reportingDate" type="Date" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>	
+	
+	<entity local-service="true" name="MnGrievanceOutstanding" table="mn_grievances_outstanding" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="particulars" type="String" />
+		<column name="year_" type="String" />
+		<column name="apr" type="BigDecimal" />
+		<column name="may" type="BigDecimal" />
+		<column name="jun" type="BigDecimal" />
+		<column name="jul" type="BigDecimal" />
+		<column name="aug" type="BigDecimal" />
+		<column name="sep" type="BigDecimal" />
+		<column name="oct" type="BigDecimal" />
+		<column name="nov" type="BigDecimal" />
+		<column name="dec" type="BigDecimal" />
+		<column name="jan" type="BigDecimal" />
+		<column name="feb" type="BigDecimal" />
+		<column name="mar" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnTotalGrievanceReceived" table="mn_total_grievance_received" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="particulars" type="String" />
+		<column name="year_" type="String" />
+		<column name="apr" type="BigDecimal" />
+		<column name="may" type="BigDecimal" />
+		<column name="jun" type="BigDecimal" />
+		<column name="jul" type="BigDecimal" />
+		<column name="aug" type="BigDecimal" />
+		<column name="sep" type="BigDecimal" />
+		<column name="oct" type="BigDecimal" />
+		<column name="nov" type="BigDecimal" />
+		<column name="dec" type="BigDecimal" />
+		<column name="jan" type="BigDecimal" />
+		<column name="feb" type="BigDecimal" />
+		<column name="mar" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnNpsSchemeMonthAnalysis" table="mn_nps_scheme_month_analysis" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="particulars" type="String" />
+		<column name="year_" type="String" />
+		<column name="apr" type="BigDecimal" />
+		<column name="may" type="BigDecimal" />
+		<column name="jun" type="BigDecimal" />
+		<column name="jul" type="BigDecimal" />
+		<column name="aug" type="BigDecimal" />
+		<column name="sep" type="BigDecimal" />
+		<column name="oct" type="BigDecimal" />
+		<column name="nov" type="BigDecimal" />
+		<column name="dec" type="BigDecimal" />
+		<column name="jan" type="BigDecimal" />
+		<column name="feb" type="BigDecimal" />
+		<column name="mar" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnNpsLiteSchemeMonthAnalysis" table="mn_npslite_scheme_month_analys" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="particulars" type="String" />
+		<column name="year_" type="String" />
+		<column name="apr" type="BigDecimal" />
+		<column name="may" type="BigDecimal" />
+		<column name="jun" type="BigDecimal" />
+		<column name="jul" type="BigDecimal" />
+		<column name="aug" type="BigDecimal" />
+		<column name="sep" type="BigDecimal" />
+		<column name="oct" type="BigDecimal" />
+		<column name="nov" type="BigDecimal" />
+		<column name="dec" type="BigDecimal" />
+		<column name="jan" type="BigDecimal" />
+		<column name="feb" type="BigDecimal" />
+		<column name="mar" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnResolutionSpeed" table="mn_resolution_speed_analysis" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="grievance_month" type="Date" />
+		<column name="total_resolved" type="int" />
+		<column name="within_0_to_7_days" type="int" />
+		<column name="within_7_to_15_days" type="int" />
+		<column name="within_15_to_30_days" type="int" />
+		<column name="within_30_to_60_days" type="int" />
+		<column name="after_60_days" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnEntityWiseAgeing" table="mn_entity_wise_ageing_analysis" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entities" type="String" />
+		<column name="month_" type="Date" />
+		<column name="outstanding_opening_balance" type="int" />
+		<column name="escalated_to_npst" type="int" />
+		<column name="referrals_recv_during_month" type="int" />
+		<column name="reviewed_and_assigned_by_npst" type="int" />
+		<column name="referrals_resol_during_month" type="int" />
+		<column name="outstanding_at_end_of_month" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnEntityWiseOutAnalysis" table="mn_entity_wise_out_analysis" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entities" type="String" />
+		<column name="month_" type="Date" />
+		<column name="outstanding_opening_balance" type="int" />
+		<column name="escalated_to_npst" type="int" />
+		<column name="referrals_recv_during_month" type="int" />
+		<column name="reviewed_and_assigned_by_npst" type="int" />
+		<column name="referrals_resol_during_month" type="int" />
+		<column name="outstanding_at_end_of_month" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="MnNpsEntityWiseAgeing" table="mn_nps_entity_wise_ageing" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entities" type="String" />
+		<column name="month_" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="_0_to_30_days" type="int" />
+		<column name="_31_to_60_days" type="int" />
+		<column name="_61_to_90_days" type="int" />
+		<column name="_91_to_365_days" type="int" />
+		<column name="more_than_365_days" type="int" />
+		<column name="outstanding_at_end_of_month" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnNpsLiteEntityWiseAgeing" table="mn_npslite_entity_wise_ageing" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="entities" type="String" />
+		<column name="month_" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="_0_to_30_days" type="int" />
+		<column name="_31_to_60_days" type="int" />
+		<column name="_61_to_90_days" type="int" />
+		<column name="_91_to_365_days" type="int" />
+		<column name="more_than_365_days" type="int" />
+		<column name="outstanding_at_end_of_month" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="MnNpsCategoryWiseAgeing" table="mn_nps_category_wise_ageing" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="category" type="String" />
+		<column name="month_" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="_0_to_30_days" type="int" />
+		<column name="_31_to_60_days" type="int" />
+		<column name="_61_to_90_days" type="int" />
+		<column name="_91_to_365_days" type="int" />
+		<column name="more_than_365_days" type="int" />
+		<column name="outstanding_at_end_of_month" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnNpsLiteCategoryWiseAgeing" table="mn_npslite_cat_wise_ageing" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="category" type="String" />
+		<column name="month_" type="Date" />
+		<column name="scheme_name" type="String" />
+		<column name="_0_to_30_days" type="int" />
+		<column name="_31_to_60_days" type="int" />
+		<column name="_61_to_90_days" type="int" />
+		<column name="_91_to_365_days" type="int" />
+		<column name="more_than_365_days" type="int" />
+		<column name="outstanding_at_end_of_month" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+	<entity local-service="true" name="MnNpsCategoryWiseGrievance" table="mn_nps_category_wise_grievance" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="category" type="String" />
+		<column name="year_" type="String" />
+		<column name="apr" type="BigDecimal" />
+		<column name="may" type="BigDecimal" />
+		<column name="jun" type="BigDecimal" />
+		<column name="jul" type="BigDecimal" />
+		<column name="aug" type="BigDecimal" />
+		<column name="sep" type="BigDecimal" />
+		<column name="oct" type="BigDecimal" />
+		<column name="nov" type="BigDecimal" />
+		<column name="dec" type="BigDecimal" />
+		<column name="jan" type="BigDecimal" />
+		<column name="feb" type="BigDecimal" />
+		<column name="mar" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnNpsLiteCategoryWiseGrievance" table="mn_npslite_category_wise_griev" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="category" type="String" />
+		<column name="year_" type="String" />
+		<column name="apr" type="BigDecimal" />
+		<column name="may" type="BigDecimal" />
+		<column name="jun" type="BigDecimal" />
+		<column name="jul" type="BigDecimal" />
+		<column name="aug" type="BigDecimal" />
+		<column name="sep" type="BigDecimal" />
+		<column name="oct" type="BigDecimal" />
+		<column name="nov" type="BigDecimal" />
+		<column name="dec" type="BigDecimal" />
+		<column name="jan" type="BigDecimal" />
+		<column name="feb" type="BigDecimal" />
+		<column name="mar" type="BigDecimal" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnReferralsHandledAtNps" table="mn_referral_handled_at_nps" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="referrals" type="String" />
+		<column name="month_" type="Date" />
+		<column name="outstanding_opening_balance" type="int" />
+		<column name="escalated_to_npst" type="int" />
+		<column name="referrals_recv_during_month" type="int" />
+		<column name="reviewed_and_assigned_by_npst" type="int" />
+		<column name="referrals_resol_during_month" type="int" />
+		<column name="outstanding_at_end_of_month" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnAPYGrievance" table="mn_final_intim_apy_grievance" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="sr_no" type="int" />
+		<column name="apy_sp_reg_no" type="String" />
+		<column name="apy_sp_name" type="String" />
+		<column name="token_number" type="String" />
+		<column name="grievance_logging_date" type="Date" />
+		<column name="pran" type="long" />
+		<column name="subscriber_name" type="String" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnAPY" table="mn_final_intim_apy" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="apy_sp_reg_no" type="String" />
+		<column name="apy_sp_name" type="String" />
+		<column name="add_line1" type="String" />
+		<column name="add_line2" type="String" />
+		<column name="add_line3" type="String" />
+		<column name="add_line4" type="String" />
+		<column name="pin_code" type="BigDecimal" />
+		<column name="count_of_grievances_pending" type="int" />
+		<column name="cra" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		<column name="reportUploadLogId" type="long" ></column>
+        
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnNpaDevelopment" table="mn_npa_development" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="companies" type="String" />
+		<column name="date_1" type="String" />
+		<column name="name_of_security" type="String" />
+		<column name="legal_case_details" type="String" />
+		<column name="current_status" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+	</entity>
+	
+	<entity local-service="true" name="AnFinalAnnualVoteCount" table="an_final_annual_vote_count" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="financial_year" type="String" />
+		<column name="quarter" type="Date" />
+		<column name="total_number_of_resolution" type="BigDecimal" />
+		<column name="for_" type="BigDecimal" />
+		<column name="against" type="BigDecimal" />
+		<column name="abstain" type="BigDecimal" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="AnPFVotingRec" table="an_annual_pf_voting_recomm" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="financial_year" type="String" />
+		<column name="quarter" type="Date" />
+		<column name="total_number_of_resolution" type="BigDecimal" />
+		<column name="for_" type="BigDecimal" />
+		<column name="against" type="BigDecimal" />
+		<column name="abstain" type="BigDecimal" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnPFsTDSChallan" table="mn_pfs_tds_challan" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="date_" type="Date" />
+		<column name="challan_serial_no_401" type="BigDecimal" />
+		<column name="income_tax_402" type="BigDecimal" />
+		<column name="interest_403" type="BigDecimal" />
+		<column name="fees_404" type="BigDecimal" />
+		<column name="others_or_penalty_405" type="BigDecimal" />
+		<column name="tax_deposited_or_book_adj_406" type="BigDecimal" />
+		<column name="deposited_by_book_adj_407" type="String" />
+		<column name="bsr_code_408" type="String" />
+		<column name="tax_dep_or_transfer_date_410" type="Date" />
+		<column name="challan_or_ddo_of_form_24g_409" type="String" />
+		<column name="receipt_no_of_form_24g_408" type="String" />
+		<column name="minor_head_of_challan_411" type="BigDecimal" />
+		<column name="cheque_or_dd_no" type="String" />
+		<column name="section_code" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+	
+	<entity local-service="true" name="MnPFsDeducteeDetail" table="mn_pfs_deductee_detail" data-source="extDataSource" remote-service="false" uuid="false" cache-enabled="false">
+		<column name="id_" primary="true" type="long"/>
+		<column name="pension_fund_name" type="String" />
+		<column name="date_" type="Date" />
+		<column name="challan_serial_no" type="BigDecimal" />
+		<column name="section_code" type="String" />
+		<column name="type_of_rent" type="String" />
+		<column name="deductee_identf_no" type="String" />
+		<column name="deductee_code_414" type="BigDecimal" />
+		<column name="pan_of_deductee_415" type="String" />
+		<column name="deductee_refno_invalid_pan_413" type="String" />
+		<column name="name_of_deductee_416" type="String" />
+		<column name="amt_paid_or_credited_date_418" type="Date" />
+		<column name="tax_deducted_date_422" type="Date" />
+		<column name="amt_of_payment_419" type="BigDecimal" />
+		<column name="tax_deduction_rate_423" type="BigDecimal" />
+		<column name="amount_of_tax_deducted" type="BigDecimal" />
+		<column name="total_tax_deposited_421" type="BigDecimal" />
+		<column name="reason_for_non_deduction_424" type="String" />
+		<column name="non_deduct_certno_issue_ao_425" type="String" />
+		<column name="deductee_flat_no" type="BigDecimal" />
+		<column name="deductee_building_name" type="String" />
+		<column name="deductee_street_name" type="String" />
+		<column name="deductee_area" type="String" />
+		<column name="deductee_city_or_town" type="String" />
+		<column name="deductee_pin" type="BigDecimal" />
+		<column name="deductee_state" type="String" />
+		<column name="createdon" type="Date" />
+		<column name="createdby" type="long" />
+		
+		<column name="reportUploadLogId" type="long" ></column>
+
+        <finder name="ReportUploadLogId" return-type="Collection">
+			<finder-column name="reportUploadLogId"/>
+		</finder>
+	</entity>
+
+</service-builder>

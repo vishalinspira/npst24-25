@@ -1,0 +1,30 @@
+dependencies {
+	compileOnly group: "com.liferay", name: "com.liferay.asset.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.comment.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.dynamic.section"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.form.navigator"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.util"
+	compileOnly group: "com.liferay", name: "com.liferay.journal.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.layout.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.site.taglib"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
+	compileOnly group: "javax.portlet", name: "portlet-api"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api"
+	
+	compileOnly 'com.liferay.portal:release.dxp.api'
+	
+	compileOnly group: "jstl", name: "jstl"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+	
+	compile group: "com.liferay", name: "com.liferay.calendar.api"
+	compileOnly project(":modules:nps-email-api")
+	compile project(":modules:nps-common-service")
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	
+	compile project(":modules:DailyAverageService:DailyAverageService-api")
+	
+	implementation group: 'org.springframework', name: 'spring-context-support', version: '3.1.0.RELEASE'
+}

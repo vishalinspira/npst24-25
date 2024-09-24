@@ -1,0 +1,10 @@
+Bundle-Name: nps-erm-api
+Bundle-SymbolicName: com.nps.erm.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.nps.erm.exception,\
+	com.nps.erm.model,\
+	com.nps.erm.service,\
+	com.nps.erm.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../nps-erm-service/service.xml

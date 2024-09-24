@@ -1,0 +1,4 @@
+Bundle-Name: nps-pfm-cra-reportuploadlog
+Bundle-SymbolicName: nps.pfm.cra.reportuploadlog
+Bundle-Version: 1.0.0
+Export-Package: nps.pfm.cra.reportuploadlog.constants

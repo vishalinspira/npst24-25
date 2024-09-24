@@ -1,0 +1,10 @@
+Bundle-Name: nps-cache-schema-api
+Bundle-SymbolicName: nps.cache.schema.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	nps.cache.schema.exception,\
+	nps.cache.schema.model,\
+	nps.cache.schema.service,\
+	nps.cache.schema.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../nps-cache-schema-service/service.xml

@@ -1,0 +1,4 @@
+Bundle-Name: report-status
+Bundle-SymbolicName: com.nps.report.status
+Bundle-Version: 1.0.0
+Export-Package: com.nps.report.status.constants

@@ -1,0 +1,5 @@
+Bundle-Name: Pfm_Internal_Audit_Report_Quarterly
+Bundle-SymbolicName: com.pfm.internal.audit.report.quarterly
+Bundle-Version: 1.0.0
+Export-Package: com.pfm.internal.audit.report.quarterly.constants
+Import-Package: *; version="0";resolution:=optional

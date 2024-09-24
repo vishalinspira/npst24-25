@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.nps.manpower.service.impl.ChangeInEmployeeLocalServiceImpl" id="com.nps.manpower.service.ChangeInEmployeeLocalService" />
+	<bean class="com.nps.manpower.service.impl.ChangeInEmployeeServiceImpl" id="com.nps.manpower.service.ChangeInEmployeeService" />
+	<bean class="com.nps.manpower.service.persistence.impl.ChangeInEmployeePersistenceImpl" id="com.nps.manpower.service.persistence.ChangeInEmployeePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.nps.manpower.service.impl.ChangeShareHoldingLocalServiceImpl" id="com.nps.manpower.service.ChangeShareHoldingLocalService" />
+	<bean class="com.nps.manpower.service.impl.ChangeShareHoldingServiceImpl" id="com.nps.manpower.service.ChangeShareHoldingService" />
+	<bean class="com.nps.manpower.service.persistence.impl.ChangeShareHoldingPersistenceImpl" id="com.nps.manpower.service.persistence.ChangeShareHoldingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.nps.manpower.service.impl.CompositionCommitteeLocalServiceImpl" id="com.nps.manpower.service.CompositionCommitteeLocalService" />
+	<bean class="com.nps.manpower.service.impl.CompositionCommitteeServiceImpl" id="com.nps.manpower.service.CompositionCommitteeService" />
+	<bean class="com.nps.manpower.service.persistence.impl.CompositionCommitteePersistenceImpl" id="com.nps.manpower.service.persistence.CompositionCommitteePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.nps.manpower.service.impl.ManpowerDirectorHoldingLocalServiceImpl" id="com.nps.manpower.service.ManpowerDirectorHoldingLocalService" />
+	<bean class="com.nps.manpower.service.impl.ManpowerDirectorHoldingServiceImpl" id="com.nps.manpower.service.ManpowerDirectorHoldingService" />
+	<bean class="com.nps.manpower.service.persistence.impl.ManpowerDirectorHoldingPersistenceImpl" id="com.nps.manpower.service.persistence.ManpowerDirectorHoldingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.nps.manpower.service.impl.ManpowerEmployeeLocalServiceImpl" id="com.nps.manpower.service.ManpowerEmployeeLocalService" />
+	<bean class="com.nps.manpower.service.impl.ManpowerEmployeeServiceImpl" id="com.nps.manpower.service.ManpowerEmployeeService" />
+	<bean class="com.nps.manpower.service.persistence.impl.ManpowerEmployeePersistenceImpl" id="com.nps.manpower.service.persistence.ManpowerEmployeePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

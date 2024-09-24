@@ -1,0 +1,4 @@
+Bundle-Name: nps-xss-fliter
+Bundle-SymbolicName: com.security.xss.filter
+Bundle-Version: 1.0.0
+Export-Package: com.security.xss.filter.constants

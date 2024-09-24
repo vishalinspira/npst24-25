@@ -1,0 +1,8 @@
+Bundle-Name: erm-web
+Bundle-SymbolicName: com.nps.erm
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.nps.erm.constants,\
+	com.nps.erm.model,\
+	com.nps.erm.util
+Import-Package: *; version="0";resolution:=optional

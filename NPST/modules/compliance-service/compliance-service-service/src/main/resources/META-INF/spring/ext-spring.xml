@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+		<bean  class="com.liferay.portal.dao.jdbc.spring.DataSourceFactoryBean" id="liferayDataSourceFactory" >
+              <property name="propertyPrefix" value="jdbc.ext." />
+       	</bean>
+
+       	<bean class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy" id="liferayDataSource" >
+              <property name="targetDataSource" ref="liferayDataSourceFactory" />
+       	</bean>
+
+       	<alias alias="extDataSource" name="liferayDataSource" />
+
+</beans>

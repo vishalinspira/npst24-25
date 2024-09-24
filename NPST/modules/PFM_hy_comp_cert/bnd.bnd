@@ -1,0 +1,13 @@
+Bundle-Name: PFM_hy_comp_cert
+Bundle-SymbolicName: com.nps.pfm.hy.comp.cert
+Bundle-Version: 1.0.0
+Export-Package: com.nps.pfm.hy.comp.cert.constants
+-metatype: *
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

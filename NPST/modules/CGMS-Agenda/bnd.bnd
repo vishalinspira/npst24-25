@@ -1,0 +1,4 @@
+Bundle-Name: CGMS-Agenda
+Bundle-SymbolicName: CGMS.Agenda
+Bundle-Version: 1.0.0
+Export-Package: CGMS.Agenda.constants

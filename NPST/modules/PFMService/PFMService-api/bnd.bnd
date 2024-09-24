@@ -1,0 +1,10 @@
+Bundle-Name: PFMService-api
+Bundle-SymbolicName: com.daily.pfm.service.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.daily.pfm.service.exception,\
+	com.daily.pfm.service.model,\
+	com.daily.pfm.service.service,\
+	com.daily.pfm.service.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../PFMService-service/service.xml

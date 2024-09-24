@@ -1,0 +1,4 @@
+Bundle-Name: AnnexureTwoB
+Bundle-SymbolicName: com.annexure.twob
+Bundle-Version: 1.0.0
+Export-Package: com.annexure.twob.constants

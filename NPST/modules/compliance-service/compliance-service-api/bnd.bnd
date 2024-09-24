@@ -1,0 +1,10 @@
+Bundle-Name: compliance-service-api
+Bundle-SymbolicName: compliance.service.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	compliance.service.exception,\
+	compliance.service.model,\
+	compliance.service.service,\
+	compliance.service.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../compliance-service-service/service.xml

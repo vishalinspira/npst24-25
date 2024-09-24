@@ -1,0 +1,12 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	
+	compileOnly project(":modules:DailyAverageService:DailyAverageService-api")
+	
+	compile project(":modules:nps-common-service")
+	implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.0.6'
+	implementation group: 'com.itextpdf', name: 'kernel', version: '7.1.13'
+	compileInclude group: 'com.itextpdf', name: 'layout', version: '7.1.4'	
+}

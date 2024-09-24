@@ -1,0 +1,4 @@
+Bundle-Name: Nps_Pfm_Reportlog
+Bundle-SymbolicName: com.Nps_Pfm_Reportlog
+Bundle-Version: 1.0.0
+Export-Package: com.Nps_Pfm_Reportlog.constants

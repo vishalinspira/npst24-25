@@ -1,0 +1,4 @@
+Bundle-Name: testpasswordpolicy
+Bundle-SymbolicName: testpasswordpolicy
+Bundle-Version: 1.0.0
+Export-Package: testpasswordpolicy.constants

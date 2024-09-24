@@ -1,0 +1,4 @@
+Bundle-Name: nps-master-admin-web
+Bundle-SymbolicName: com.nps.master.admin.web
+Bundle-Version: 1.0.0
+Export-Package: com.nps.master.admin.web.constants

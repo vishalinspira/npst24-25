@@ -1,0 +1,13 @@
+Bundle-Name: TrusteeBankQuarterlyAnnexure_11
+Bundle-SymbolicName: TrusteeBankQuarterlyAnnexure_11
+Bundle-Version: 1.0.0
+Export-Package: TrusteeBankQuarterlyAnnexure_11.constants
+-metatype: *
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

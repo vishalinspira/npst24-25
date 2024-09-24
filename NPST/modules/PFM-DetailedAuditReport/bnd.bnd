@@ -1,0 +1,4 @@
+Bundle-Name: PFM-DetailedAuditReport
+Bundle-SymbolicName: com.detailedauditreportform
+Bundle-Version: 1.0.0
+Export-Package: com.detailedauditreportform.constants

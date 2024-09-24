@@ -1,0 +1,13 @@
+.about-nha-content .document-wrap ul li .download-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-nha-content .document-wrap ul li .download-wrap .download-option a.pdf-icon {
+  background-color: #EAEAEA;
+}
+
+.about-nha-content .document-wrap ul li .download-wrap .download-option a.pdf-icon svg {
+  width: 10px;
+  fill: #EF2C2C;
+}

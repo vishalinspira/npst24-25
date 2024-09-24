@@ -1,0 +1,5 @@
+Bundle-Name: Compliance_Report_Custodian
+Bundle-SymbolicName: com.compliance.report.custodian
+Bundle-Version: 1.0.0
+Export-Package: com.compliance.report.custodian.constants
+Import-Package: *; version="0";resolution:=optional

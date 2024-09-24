@@ -1,0 +1,4 @@
+Bundle-Name: nps-cust-am-pfrda-reportuploadlog
+Bundle-SymbolicName: nps.cust.am.pfrda.reportuploadlog
+Bundle-Version: 1.0.0
+Export-Package: nps.cust.am.pfrda.reportuploadlog.constants

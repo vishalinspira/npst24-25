@@ -1,0 +1,5 @@
+Bundle-Name: Quarterly-StewardshipReport
+Bundle-SymbolicName: com.quarterly.stewardship.report
+Bundle-Version: 1.0.0
+Export-Package: com.quarterly.stewardship.report.constants
+Import-Package: *; version="0";resolution:=optional

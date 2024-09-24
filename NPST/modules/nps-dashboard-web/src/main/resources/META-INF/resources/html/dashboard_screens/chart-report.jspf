@@ -1,0 +1,226 @@
+<%@page import="com.nps.dashboard.web.constants.NPSDashboardWebPortletKeys"%>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<portlet:resourceURL id="chartData" var="chartDataURL"></portlet:resourceURL>
+
+<%
+String leftChartTitle = "";
+String rightChartTitle = "";
+
+if(isPFRDA_TB){
+	leftChartTitle = "Pending from NPST";
+	rightChartTitle = "Appproved By PFRDA";
+}
+
+%>
+<div class="row">
+     <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-12">
+         <div class="graph mt-5 graph1" id="chart1">
+             <div class="d-flex align-items-center justify-content-between graph-head">
+             	<select name="chart1Department" class="chart1Department">
+	             	<c:forEach items="${userCompanies }" var="department" varStatus="departmentStatus">
+	             		<option value="${department }">${department }</option>
+	             	</c:forEach>
+             	</select>
+             	<h4><%=leftChartTitle %></h4>
+                 <select name="selectedYearChart1" id='selectedYearChart1'>
+                     <!-- <option value="2022" selected>2022</option> -->
+                     <!-- <option value="2021">2021</option>
+                     <option value="2020">2020</option> -->
+                 </select>
+             </div>  
+             <canvas id="myChart"></canvas>
+             <div class="text-center mt-5 no-data-msg" style="display: none;">
+             	<h5></h5>
+   				<p>No data found</p>
+   			</div>
+         </div>
+     </div>
+     <div class="col-xl-6 col-lg-12 col-md-6 col-sm-12 col-12">
+         <div class="graph mt-5" id="chart2">
+             <div class="d-flex align-items-center justify-content-between graph-head pb-4">
+             	<select name="chart2Department" class="chart2Department">
+	             	<c:forEach items="${userCompanies }" var="department" varStatus="departmentStatus">
+	             		<option value="${department }">${department }</option>
+	             	</c:forEach>
+             	</select>
+             	<h4><%=rightChartTitle %></h4>
+                 <select name="selectedYearChart2" id="selectedYearChart2">
+                    <!--  <option value="2022" selected>2022</option> -->
+                     <!-- <option value="2021">2021</option>
+                     <option value="2020">2020</option> -->
+                 </select>
+             </div>  
+             <canvas id="myChart1"></canvas>
+             <div class="text-center mt-5 no-data-msg" style="display: none;">
+             	<h5></h5>
+   				<p>No data found</p>
+   			</div>
+         </div>
+     </div>
+ </div>
+
+
+<script>
+
+//Year update
+let currentYear= new Date().getFullYear(); 
+let passedYear= currentYear - 1; 
+let ChartOptList = [];
+ChartOptList.push("<option value="+passedYear +">"+passedYear+"</option>");
+ChartOptList.push("<option value="+currentYear+" selected>"+currentYear+"</option>");
+$("#selectedYearChart1").html(ChartOptList);
+$("#selectedYearChart2").html(ChartOptList);
+
+getChart1Details();
+getChart2Details();
+
+$("#selectedYearChart1, .chart1Department").change(function(){
+	console.log("Chart 1");
+	let chartStatus = Chart.getChart("myChart"); 
+	if (chartStatus != undefined) {
+	  chartStatus.destroy();
+	}
+	getChart1Details();	
+});
+
+$("#selectedYearChart2, .chart2Department").change(function(){
+	console.log("Chart 2");
+	let chartStatus = Chart.getChart("myChart1"); 
+	if (chartStatus != undefined) {
+	  chartStatus.destroy();
+	}
+	getChart2Details();	
+});
+
+
+function getChart1Details(){
+	var selectedYearChart1 = $("#selectedYearChart1").val();
+	var department = $(".chart1Department").val();
+	
+	console.log("selectedYearChart1 : ",selectedYearChart1);
+	console.log("department : ",department);
+	$.ajax({
+		url:'${chartDataURL}',
+		dataType: 'json',
+		type: 'post',
+		data: {
+			'<portlet:namespace/>selectedYearChart':selectedYearChart1,
+			'<portlet:namespace/>reportType': "chart1",
+			'<portlet:namespace/>department': department
+		},
+		success: function(data){
+			console.log("Data chart 1 :",data);
+			if(data.chartData.length > 0){
+				plotChart1(data);
+				$("#chart1").find(".no-data-msg").hide();
+				$('#myChart').css("display","block");
+			}else{
+				$('#myChart').css("display","none");
+				$("#chart1").find(".no-data-msg h5").html(data.label);
+				$("#chart1").find(".no-data-msg").show();
+			}
+		}
+	});
+}
+
+function getChart2Details(){
+	var selectedYearChart2 = $("#selectedYearChart2").val();
+	var department = $(".chart2Department").val();
+	
+	console.log("selectedYearChart2 : ",selectedYearChart2);
+	console.log("department : ",department);
+	$.ajax({
+		url:'${chartDataURL}',
+		dataType: 'json',
+		type: 'post',
+		data: {
+			'<portlet:namespace/>selectedYearChart':selectedYearChart2,
+			'<portlet:namespace/>reportType': "chart2",
+			'<portlet:namespace/>department': department
+		},
+		success: function(data){
+			console.log("Data chart 2:",data);
+			if(data.chartData.length > 0){
+				plotChart2(data);
+				$('#myChart1').css("display","block");
+				$("#chart2").find(".no-data-msg").hide();
+			}else{
+				$('#myChart1').css("display","none");
+				$("#chart2").find(".no-data-msg h5").html(data.label);
+				$("#chart2").find(".no-data-msg").show();
+			}
+			
+		}
+	});
+}
+
+function plotChart1(chartData){
+	console.log("chartData : "+chartData);
+	var ctx = document.getElementById('myChart').getContext('2d');
+	chart1 = new Chart(ctx, {
+	    DATA_COUNT: 5,
+	    type: 'line',
+	    data: {
+	    labels:  [
+		    'Jan',
+		    'Feb',
+		    'Mar',
+		    'Apr',
+		    'May',
+		    'Jun',
+		    'Jul',
+		    'Aug',
+		    'Sep',
+		    'Oct',
+		    'Nov',
+		    'Dec',
+		],
+	    datasets: chartData.chartData
+	},
+	    options: {
+	        responsive: true,
+	        plugins: {
+	            legend: {
+	                position: 'bottom',
+	            },
+	            title: {
+	                display: true,
+	                text: chartData.label
+	            }
+	        }
+	    },
+	});
+}
+
+function plotChart2(chartData){
+	var folderNames = ["Daily", "Weekly", "Monthly", "Quarterly", "Periodically", "Half-Yearly", "Annually"];
+	var ctx1 = document.getElementById('myChart1').getContext('2d');
+	chart2 = new Chart(ctx1, {
+	    DATA_COUNT: 5,
+	    type: 'polarArea',
+	    data: {
+	        labels: folderNames,
+	        datasets: [
+	            {
+	                label: 'Dataset 1',
+	                data: chartData.chartData,
+	                backgroundColor: ["#3485D8","#F59225","#F37699", "#06C9E9","#9206e9","#50a510","#a5a010"]
+	            }
+	        ]
+	    },
+	    options: {
+	        responsive: true,
+	        plugins: {
+	            legend: {
+	                position: 'bottom',
+	            },
+	            title: {
+	                display: true,
+	                text: chartData.label
+	            }
+	        }
+	    },
+	});
+}
+
+</script>

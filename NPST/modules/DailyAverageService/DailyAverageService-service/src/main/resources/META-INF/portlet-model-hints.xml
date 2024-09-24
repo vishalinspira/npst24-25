@@ -1,0 +1,3794 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.daily.average.service.model.AccountStatement">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="accountname" type="String" />
+		<field name="statement" type="String" />
+		<field name="adressi" type="String" />
+		<field name="adressii" type="String" />
+		<field name="adressiii" type="String" />
+		<field name="adressiv" type="String" />
+		<field name="adressv" type="String" />
+		<field name="pin" type="long" />
+		<field name="customerno" type="long" />
+		<field name="scheme" type="String" />
+		<field name="curencyinr" type="String" />
+		<field name="statementacno" type="long" />
+		<field name="formdate" type="Date" />
+		<field name="todate" type="Date" />
+		<field name="todebit" type="long" />
+		<field name="tocredit" type="long" />
+		<field name="clbalance" type="long" />
+		<field name="clinitbr" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AccountStatementTransaction">
+		<field name="transid" type="long" />
+		<field name="trandate" type="Date" />
+		<field name="chqno" type="long" />
+		<field name="particulars" type="long" />
+		<field name="debit" type="long" />
+		<field name="credit" type="long" />
+		<field name="balance" type="long" />
+		<field name="initbr" type="long" />
+		<field name="accid" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnextureXa">
+		<field name="id" type="long" />
+		<field name="sno" type="long" />
+		<field name="receipt_date" type="Date" />
+		<field name="from" type="String" />
+		<field name="subject" type="String" />
+		<field name="gist_case" type="String" />
+		<field name="revert_containt" type="String" />
+		<field name="resolve_date" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexureA">
+		<field name="id_" type="long" />
+		<field name="name_of_company" type="String" />
+		<field name="resolution_category" type="String" />
+		<field name="resolution_detail" type="String" />
+		<field name="nps_holding" type="String" />
+		<field name="lic_pf_rationale" type="String" />
+		<field name="uti_pf_rationale" type="String" />
+		<field name="sbi_pf_rationale" type="String" />
+		<field name="hdfc_pf_rationale" type="String" />
+		<field name="icici_pf_rationale" type="String" />
+		<field name="kotak_pf_rationale" type="String" />
+		<field name="birla_pf_rationale" type="String" />
+		<field name="pfm_majority_view" type="String" />
+		<field name="ses_recommendation" type="String" />
+		<field name="ses_rationale" type="String" />
+		<field name="iias_recommendation" type="String" />
+		<field name="iias_rationale" type="String" />
+		<field name="institutional_holding" type="String" />
+		<field name="institutional_majority_vote" type="String" />
+		<field name="promoter_holding" type="String" />
+		<field name="outcome" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.annexureB_CaseSummary">
+		<field name="reportUploadLogId" type="long" />
+		<field name="form" type="String" />
+		<field name="amount" type="int" />
+		<field name="pranNum" type="int" />
+		<field name="pranDate" type="Date" />
+		<field name="oneiia" type="String" />
+		<field name="creditedDate" type="Date" />
+		<field name="tokenNum" type="int" />
+		<field name="one" type="String" />
+		<field name="emailDate" type="Date" />
+		<field name="remittedAmnt" type="int" />
+		<field name="remittedDate" type="Date" />
+		<field name="oneiic" type="String" />
+		<field name="subreq" type="String" />
+		<field name="requestedAmnt" type="int" />
+		<field name="documentDate" type="Date" />
+		<field name="carriedAmnt" type="int" />
+		<field name="casenum1" type="String" />
+		<field name="pranNum1" type="int" />
+		<field name="name1" type="String" />
+		<field name="OneIIay1" type="String" />
+		<field name="trnsctnDate1" type="Date" />
+		<field name="refnoid1" type="String" />
+		<field name="craDate1" type="Date" />
+		<field name="trnsamount1" type="int" />
+		<field name="OneIIcy1" type="String" />
+		<field name="rectType1" type="int" />
+		<field name="reqAmount1" type="int" />
+		<field name="reqMode1" type="String" />
+		<field name="rcvdDate1" type="Date" />
+		<field name="cgmsDate1" type="Date" />
+		<field name="grievTxt1" type="String" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexureFourA">
+		<field name="id_" type="long" />
+		<field name="nps_acc_number" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="date1" type="Date" />
+		<field name="date2" type="Date" />
+		<field name="funds_received_upto_date1" type="BigDecimal" />
+		<field name="funds_received_upto_date2" type="BigDecimal" />
+		<field name="funds_transfer_on_date1" type="BigDecimal" />
+		<field name="funds_transfer_on_date2" type="BigDecimal" />
+		<field name="trustee_bank_outstanding" type="BigDecimal" />
+		<field name="trustee_bank_comments" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Annexureiva">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="pao_reg_no" type="long" />
+		<field name="tran_id" type="long" />
+		<field name="amt" type="BigDecimal" />
+		<field name="file_ref_no" type="String" />
+		<field name="record_no" type="Integer" />
+		<field name="receipt_date" type="Date" />
+		<field name="fund_realised_date" type="Date" />
+		<field name="frc_upload_date" type="Date" />
+		<field name="trust_bank_tat" type="String" />
+		<field name="matching_type" type="String" />
+		<field name="days" type="Integer" />
+		<field name="cra" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Annexureivb">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="payment_id" type="long" />
+		<field name="source_acc_no_nodal" type="long" />
+		<field name="ifsc_source_no" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="utr_no" type="String" />
+		<field name="mode" type="String" />
+		<field name="utr_amount" type="BigDecimal" />
+		<field name="nps_virtual_acc_no" type="Integer" />
+		<field name="nps_acc_number" type="long" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="long" />
+		<field name="return_reason" type="String" />
+		<field name="delay_reason" type="String" />
+		<field name="cra" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Annexureivc">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="std_pran" type="long" />
+		<field name="type" type="String" />
+		<field name="subscriber_name" type="String" />
+		<field name="beneficiary_name" type="String" />
+		<field name="net_amt" type="BigDecimal" />
+		<field name="pay_in_date" type="Date" />
+		<field name="execution_date" type="Date" />
+		<field name="utr_no" type="String" />
+		<field name="initial_status" type="String" />
+		<field name="return_reason" type="String" />
+		<field name="remarks" type="String" />
+		<field name="delay" type="String" />
+		<field name="cra" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Annexureivd">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="std_pran" type="long" />
+		<field name="type" type="String" />
+		<field name="subscriber_name" type="String" />
+		<field name="beneficiary_name" type="String" />
+		<field name="net_amt" type="BigDecimal" />
+		<field name="pay_in_date" type="Date" />
+		<field name="execution_date" type="Date" />
+		<field name="utr_no" type="String" />
+		<field name="initial_status" type="String" />
+		<field name="return_reason" type="String" />
+		<field name="remarks" type="String" />
+		<field name="delay" type="String" />
+		<field name="cra" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexureOneBTableOne">
+		<field name="id_" type="long" />
+		<field name="name_of_pension_fund" type="String" />
+		<field name="auc_as_per_market_valuation" type="String" />
+		<field name="aum" type="String" />
+		<field name="aum_under_coustody" type="String" />
+		<field name="asset_not_under_coustody" type="String" />
+		<field name="as_on_date" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexureOneBTableTwo">
+		<field name="id_" type="long" />
+		<field name="particulars" type="String" />
+		<field name="amount_in_crores" type="String" />
+		<field name="as_on_date" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexureTwoB">
+		<field name="id_" type="long" />
+		<field name="file_number" type="String" />
+		<field name="to_name" type="String" />
+		<field name="to_address" type="String" />
+		<field name="ended_date" type="String" />
+		<field name="by_the_custodian" type="String" />
+		<field name="quarter" type="String" />
+		<field name="remarks_one" type="String" />
+		<field name="nps_trust_observation_one" type="String" />
+		<field name="remarks_two" type="String" />
+		<field name="nps_trust_observation_two" type="String" />
+		<field name="remarks_three" type="String" />
+		<field name="nps_trust_observation_three" type="String" />
+		<field name="remarks_four" type="String" />
+		<field name="nps_trust_observation_four" type="String" />
+		<field name="remarks_five" type="String" />
+		<field name="nps_trust_observation_five" type="String" />
+		<field name="remarks_six" type="String" />
+		<field name="nps_trust_observation_six" type="String" />
+		<field name="remarks_seven" type="String" />
+		<field name="nps_trust_observation_seven" type="String" />
+		<field name="remarks_eight" type="String" />
+		<field name="nps_trust_observation_eight" type="String" />
+		<field name="remarks_nine" type="String" />
+		<field name="nps_trust_observation_nine" type="String" />
+		<field name="remarks_ten" type="String" />
+		<field name="nps_trust_observation_ten" type="String" />
+		<field name="remarks_eleven" type="String" />
+		<field name="nps_trust_observation_eleven" type="String" />
+		<field name="remarks_twelve" type="String" />
+		<field name="nps_trust_observation_twelve" type="String" />
+		<field name="remarks_thirteen" type="String" />
+		<field name="nps_trust_observation_thirteen" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexureXiv">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="branch_code" type="Integer" />
+		<field name="date_of_opening" type="Date" />
+		<field name="branch_name" type="String" />
+		<field name="address" type="String" />
+		<field name="district" type="String" />
+		<field name="state_ut" type="String" />
+		<field name="centre_asper_census2011" type="String" />
+		<field name="whether_relocated" type="String" />
+		<field name="upgraded_relocation" type="String" />
+		<field name="relocation_date" type="Date" />
+		<field name="uniformcode_i" type="Integer" />
+		<field name="uniformcode_ii" type="Integer" />
+		<field name="board_line_no" type="String" />
+		<field name="fax_no" type="String" />
+		<field name="mobile_no" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Annexvarejection">
+		<field name="id" type="long" />
+		<field name="value_date" type="Date" />
+		<field name="trans_date" type="Date" />
+		<field name="payment_id" type="long" />
+		<field name="return_ref" type="String" />
+		<field name="message_type" type="String" />
+		<field name="sender_name" type="String" />
+		<field name="utr_number" type="String" />
+		<field name="sender_ifsc" type="String" />
+		<field name="sender_acc_number" type="long" />
+		<field name="beneficiary_ifsc" type="String" />
+		<field name="beneficiary_acc_number" type="Long" />
+		<field name="credit_acc_number" type="long" />
+		<field name="corporate_code" type="Integer" />
+		<field name="beneficiary_acc_name" type="String" />
+		<field name="sender_info" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="beneficiary_acc_type" type="String" />
+		<field name="payment_status" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="sender_receiver_info" type="String" />
+		<field name="pop_reg_no" type="Integer" />
+		<field name="pop_sp_reg_no" type="Integer" />
+		<field name="filler_ref1" type="String" />
+		<field name="filler_ref2" type="String" />
+		<field name="filler_ref3" type="String" />
+		<field name="filler_ref4" type="String" />
+		<field name="comments" type="String" />
+		<field name="cra_id" type="Integer" />
+		<field name="reason_return" type="String" />
+		<field name="cra" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexVI">
+		<field name="id" type="long" />
+		<field name="date_" type="Date" />
+		<field name="pao_funds_received" type="BigDecimal" />
+		<field name="wrong_credit_return" type="BigDecimal" />
+		<field name="received_cumulative_funds" type="BigDecimal" />
+		<field name="pfm_funds_remitted" type="BigDecimal" />
+		<field name="pfm_cumulative_funds_remitted" type="BigDecimal" />
+		<field name="closing_balance" type="BigDecimal" />
+		<field name="uncleared_funds" type="BigDecimal" />
+		<field name="nps_acc_number" type="long" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexviiaKfintech">
+		<field name="id" type="long" />
+		<field name="virtual_id" type="long" />
+		<field name="request_type" type="String" />
+		<field name="sender_name" type="String" />
+		<field name="pop_reg_no" type="Integer" />
+		<field name="pop_sp_reg_no" type="Integer" />
+		<field name="nps_acc_number" type="long" />
+		<field name="transaction_date" type="Date" />
+		<field name="transaction_amount" type="BigDecimal" />
+		<field name="transaction_ref_num" type="String" />
+		<field name="transaction_sts" type="String" />
+		<field name="filler_ref1" type="String" />
+		<field name="filler_ref2" type="String" />
+		<field name="filler_ref3" type="String" />
+		<field name="filler_ref4" type="String" />
+		<field name="comments" type="String" />
+		<field name="returned_date" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnexviiaNsdl">
+		<field name="id" type="long" />
+		<field name="virtual_id" type="long" />
+		<field name="request_type" type="String" />
+		<field name="sender_name" type="String" />
+		<field name="pop_reg_no" type="Integer" />
+		<field name="pop_sp_reg_no" type="Integer" />
+		<field name="nps_acc_number" type="long" />
+		<field name="transaction_date" type="Date" />
+		<field name="transaction_amount" type="BigDecimal" />
+		<field name="transaction_ref_num" type="String" />
+		<field name="transaction_sts" type="String" />
+		<field name="comments" type="String" />
+		<field name="returned_date" type="Date" />
+		<field name="transactiontype" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.annual_audited_scheme_financials_1">
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="sheet_name" type="String" />
+		<field name="as_on_date" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sl_no" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="String" />
+		<field name="previous_year" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.annual_audited_scheme_financials_2">
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="sheet_name" type="String" />
+		<field name="as_on_date" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="sl_no" type="String" />
+		<field name="particulars" type="String" />
+		<field name="current_year" type="String" />
+		<field name="previous_year" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.annual_audited_scheme_financials_3">
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="sheet_name" type="String" />
+		<field name="as_on_date" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="sl_no" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="String" />
+		<field name="previous_year" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.annual_audited_scheme_financials_4">
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="sheet_name" type="String" />
+		<field name="as_on_date" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="sl_no" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="String" />
+		<field name="previous_year" type="String" />
+		<field name="remark" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnualCompCertificate">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="date_1" type="Date" />
+		<field name="address" type="String" />
+		<field name="eligibilityia" type="String" />
+		<field name="eligibilityib" type="String" />
+		<field name="eligibilityic" type="String" />
+		<field name="eligibilityid" type="String" />
+		<field name="eligibilityie" type="String" />
+		<field name="eligibilityif" type="String" />
+		<field name="eligibilityig" type="String" />
+		<field name="eligibilityih" type="String" />
+		<field name="eligibilityii" type="String" />
+		<field name="eligibilityij" type="String" />
+		<field name="eligibilityik" type="String" />
+		<field name="eligibilityil" type="String" />
+		<field name="eligibilityim" type="String" />
+		<field name="eligibilityin" type="String" />
+		<field name="eligibilityio" type="String" />
+		<field name="eligibilityip" type="String" />
+		<field name="eligibilityiq" type="String" />
+		<field name="eligibilityir" type="String" />
+		<field name="eligibilityis" type="String" />
+		<field name="eligibilityIa_rem" type="String" />
+		<field name="eligibilityIb_rem" type="String" />
+		<field name="eligibilityIc_rem" type="String" />
+		<field name="eligibilityId_rem" type="String" />
+		<field name="eligibilityIe_rem" type="String" />
+		<field name="eligibilityIf_rem" type="String" />
+		<field name="eligibilityIg_rem" type="String" />
+		<field name="eligibilityIh_rem" type="String" />
+		<field name="eligibilityIi_rem" type="String" />
+		<field name="eligibilityIj_rem" type="String" />
+		<field name="eligibilityIk_rem" type="String" />
+		<field name="eligibilityIl_rem" type="String" />
+		<field name="eligibilityIm_rem" type="String" />
+		<field name="eligibilityIn_rem" type="String" />
+		<field name="eligibilityIo_rem" type="String" />
+		<field name="eligibilityIp_rem" type="String" />
+		<field name="eligibilityIq_rem" type="String" />
+		<field name="eligibilityIr_rem" type="String" />
+		<field name="eligibilityIs_rem" type="String" />
+		<field name="booka" type="String" />
+		<field name="bookb" type="String" />
+		<field name="bookc" type="String" />
+		<field name="bookIIa_rem" type="String" />
+		<field name="bookIIb_rem" type="String" />
+		<field name="bookIIc_rem" type="String" />
+		<field name="audita" type="String" />
+		<field name="auditb" type="String" />
+		<field name="auditc" type="String" />
+		<field name="audita_rem" type="String" />
+		<field name="auditb_rem" type="String" />
+		<field name="auditc_rem" type="String" />
+		<field name="stewardshipa" type="String" />
+		<field name="stewardshipb" type="String" />
+		<field name="stewardshipc" type="String" />
+		<field name="stewardshipa_rem" type="String" />
+		<field name="stewardshipb_rem" type="String" />
+		<field name="stewardshipc_rem" type="String" />
+		<field name="othersa" type="String" />
+		<field name="othersb" type="String" />
+		<field name="othersc" type="String" />
+		<field name="othersd" type="String" />
+		<field name="otherse" type="String" />
+		<field name="othersf" type="String" />
+		<field name="othersa_rem" type="String" />
+		<field name="othersb_rem" type="String" />
+		<field name="othersc_rem" type="String" />
+		<field name="othersd_rem" type="String" />
+		<field name="otherse_rem" type="String" />
+		<field name="othersf_rem" type="String" />
+		<field name="meetingdate" type="String" />
+		<field name="emplolyee_name" type="String" />
+		<field name="roles" type="String" />
+		<field name="date_2" type="Date" />
+		<field name="place" type="String" />
+		<field name="annexurei" type="long" />
+		<field name="annexureii" type="long" />
+		<field name="annexureiii" type="long" />
+		<field name="annexureiv" type="long" />
+		<field name="annexurev" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="isSubmitted" type="boolean" />
+	</model>
+	<model name="com.daily.average.service.model.AnnualCompCertificateScrutiny">
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="eligibilityia_rem" type="String" />
+		<field name="eligibilityib_rem" type="String" />
+		<field name="eligibilityic_rem" type="String" />
+		<field name="eligibilityid_rem" type="String" />
+		<field name="eligibilityie_rem" type="String" />
+		<field name="eligibilityif_rem" type="String" />
+		<field name="eligibilityig_rem" type="String" />
+		<field name="eligibilityih_rem" type="String" />
+		<field name="eligibilityii_rem" type="String" />
+		<field name="eligibilityij_rem" type="String" />
+		<field name="eligibilityik_rem" type="String" />
+		<field name="eligibilityil_rem" type="String" />
+		<field name="eligibilityim_rem" type="String" />
+		<field name="eligibilityin_rem" type="String" />
+		<field name="eligibilityio_rem" type="String" />
+		<field name="eligibilityip_rem" type="String" />
+		<field name="eligibilityiq_rem" type="String" />
+		<field name="eligibilityir_rem" type="String" />
+		<field name="eligibilityis_rem" type="String" />
+		<field name="booka_rem" type="String" />
+		<field name="bookb_rem" type="String" />
+		<field name="bookc_rem" type="String" />
+		<field name="audita_rem" type="String" />
+		<field name="auditb_rem" type="String" />
+		<field name="auditc_rem" type="String" />
+		<field name="stewardshipa_rem" type="String" />
+		<field name="stewardshipb_rem" type="String" />
+		<field name="stewardshipc_rem" type="String" />
+		<field name="othersa_rem" type="String" />
+		<field name="othersb_rem" type="String" />
+		<field name="othersc_rem" type="String" />
+		<field name="othersd_rem" type="String" />
+		<field name="otherse_rem" type="String" />
+		<field name="othersf_rem" type="String" />
+		<field name="annexurei_rem" type="String" />
+		<field name="annexureii_rem" type="String" />
+		<field name="annexureiii_rem" type="String" />
+		<field name="annexureiv_rem" type="String" />
+		<field name="annexurev_rem" type="String" />
+		<field name="npsRemark" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnualComplianceReport">
+		<field name="id_" type="long" />
+		<field name="annual_compliance_report_of" type="String" />
+		<field name="details" type="String" />
+		<field name="information_submitted" type="String" />
+		<field name="comments" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnualEvoting">
+		<field name="id" type="long" />
+		<field name="financialyear" type="String" />
+		<field name="quarter" type="String" />
+		<field name="totalnumber" type="String" />
+		<field name="for_" type="String" />
+		<field name="against" type="String" />
+		<field name="abstain" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnualProxyPfmI">
+		<field name="id" type="long" />
+		<field name="sr_no" type="BigDecimal" />
+		<field name="pension_fund_name" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="total_number_of_resolution" type="BigDecimal" />
+		<field name="for_" type="BigDecimal" />
+		<field name="against" type="BigDecimal" />
+		<field name="abstained" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnualProxyPfmII">
+		<field name="id" type="long" />
+		<field name="sr_no" type="BigDecimal" />
+		<field name="pension_fund_name" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="total_number_of_resolution" type="BigDecimal" />
+		<field name="for_" type="BigDecimal" />
+		<field name="against" type="BigDecimal" />
+		<field name="abstained" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AnnualProxyPfmIII">
+		<field name="id" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="meeting_date" type="Date" />
+		<field name="company_name" type="String" />
+		<field name="type_of_meeting" type="String" />
+		<field name="proposal_by_shareholder" type="String" />
+		<field name="resolution_description" type="String" />
+		<field name="investee_company_recomm" type="String" />
+		<field name="pf_voting_recomm" type="String" />
+		<field name="pf_rationale_for_voting_recomm" type="String" />
+		<field name="final_vote" type="String" />
+		<field name="isin" type="String" />
+		<field name="ses_resid" type="BigDecimal" />
+		<field name="quarter_ended_date" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.AuditorCertificate">
+		<field name="uuid" type="String" />
+		<field name="auditid" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="amount" type="String" />
+		<field name="compname" type="String" />
+		<field name="characc" type="String" />
+		<field name="regno" type="String" />
+		<field name="compartner" type="String" />
+		<field name="memberno" type="String" />
+		<field name="date" type="String" />
+		<field name="place" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.BenchSchemeReturns">
+		<field name="id_" type="long" />
+		<field name="returns" type="String" />
+		<field name="base_date" type="Date" />
+		<field name="cg" type="String" />
+		<field name="sg" type="String" />
+		<field name="ccg" type="String" />
+		<field name="lite" type="String" />
+		<field name="apy" type="String" />
+		<field name="e" type="String" />
+		<field name="c" type="String" />
+		<field name="g" type="String" />
+		<field name="e2" type="String" />
+		<field name="c2" type="String" />
+		<field name="g2" type="String" />
+		<field name="tax_saver" type="String" />
+		<field name="return_as_on_date" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.BenchSchemeReturnsMonthly">
+		<field name="id_" type="long" />
+		<field name="returns" type="String" />
+		<field name="return_as_on_date" type="Date" />
+		<field name="base_date" type="Date" />
+		<field name="cg" type="String" />
+		<field name="sg" type="String" />
+		<field name="ccg" type="String" />
+		<field name="lite" type="String" />
+		<field name="apy" type="String" />
+		<field name="e" type="String" />
+		<field name="c" type="String" />
+		<field name="g" type="String" />
+		<field name="e2" type="String" />
+		<field name="c2" type="String" />
+		<field name="g2" type="String" />
+		<field name="tax_saver" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.BenchSchemeReturnsSince">
+		<field name="id_" type="long" />
+		<field name="returns_since" type="String" />
+		<field name="return_as_on_date" type="Date" />
+		<field name="cg" type="String" />
+		<field name="sg" type="String" />
+		<field name="ccg" type="String" />
+		<field name="lite" type="String" />
+		<field name="apy" type="String" />
+		<field name="e" type="String" />
+		<field name="c" type="String" />
+		<field name="g" type="String" />
+		<field name="e2" type="String" />
+		<field name="c2" type="String" />
+		<field name="g2" type="String" />
+		<field name="tax_saver" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.BenchSchemeReturnsSinceMonthly">
+		<field name="id_" type="long" />
+		<field name="returns_since" type="Date" />
+		<field name="return_as_on_date" type="Date" />
+		<field name="cg" type="String" />
+		<field name="sg" type="String" />
+		<field name="ccg" type="String" />
+		<field name="lite" type="String" />
+		<field name="apy" type="String" />
+		<field name="e" type="String" />
+		<field name="c" type="String" />
+		<field name="g" type="String" />
+		<field name="e2" type="String" />
+		<field name="c2" type="String" />
+		<field name="g2" type="String" />
+		<field name="tax_saver" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.CategarywiseOne">
+		<field name="id_" type="long" />
+		<field name="scheme_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="grievance_category" type="String" />
+		<field name="griev_outstanding_at_month_end" type="Integer" />
+		<field name="zero_seven" type="Integer" />
+		<field name="eight_fifteen" type="Integer" />
+		<field name="sixteen_thirtyone" type="Integer" />
+		<field name="thirtytwo_ninety" type="Integer" />
+		<field name="ninetyone_oneeighty" type="Integer" />
+		<field name="oneeighttwo_threesixtyfive" type="Integer" />
+		<field name="morethan_threesixtysix" type="Integer" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="cra" type="String" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.CategarywiseTwo">
+		<field name="id_" type="long" />
+		<field name="scheme_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="grievance_category" type="String" />
+		<field name="griev_outstanding_at_month_end" type="Integer" />
+		<field name="zero_seven" type="Integer" />
+		<field name="eight_fifteen" type="Integer" />
+		<field name="sixteen_thirtyone" type="Integer" />
+		<field name="thirtytwo_ninety" type="Integer" />
+		<field name="ninetyone_oneeighty" type="Integer" />
+		<field name="oneeighttwo_threesixtyfive" type="Integer" />
+		<field name="morethan_threesixtysix" type="Integer" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="cra" type="String" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.CollateralDetails">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="String" />
+		<field name="date_" type="Date" />
+		<field name="ccil_collateral" type="String" />
+		<field name="gsec" type="BigDecimal" />
+		<field name="treps" type="BigDecimal" />
+		<field name="reporting_date" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="pension_fund_name" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.CraEnps">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="srno" type="Integer" />
+		<field name="pran" type="long" />
+		<field name="subName" type="String" />
+		<field name="claimentName" type="String" />
+		<field name="authClaimDate" type="Date" />
+		<field name="claimDispatchDate" type="Date" />
+		<field name="trackId" type="String" />
+		<field name="receiptAuthFormDate" type="Date" />
+		<field name="claimProcessDate" type="Date" />
+		<field name="tat" type="int" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+	</model>
+	<model name="com.daily.average.service.model.CustAnnualAuditReport">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="audit_pdf_fileentry_id" type="long" />
+		<field name="cust_report_details" type="String" />
+		<field name="name" type="String" />
+		<field name="designation" type="String" />
+		<field name="date_" type="String" />
+		<field name="place" type="String" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.CustAnnualReportscrutiny">
+		<field name="scrutinyid" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="cust_report_remarks" type="String" />
+		<field name="audit_pdf_file_remarks" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.CustIAR">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="iar_file_id" type="long" />
+		<field name="date_1" type="Date" />
+		<field name="date_2 " type="Date" />
+		<field name="iar_details" type="String" />
+		<field name="name_" type="String" />
+		<field name="designation" type="String" />
+		<field name="date_3" type="String" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.CustIARScrutiny">
+		<field name="scrutinyid" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="iar_file_rem" type="String" />
+		<field name="nps_trust_comments" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.CustodianCompForm">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="formdate" type="Date" />
+		<field name="remarks_i_i" type="String" />
+		<field name="remarks_i_ii" type="String" />
+		<field name="remarks_ii" type="String" />
+		<field name="remarks_iii" type="String" />
+		<field name="remarks_iv" type="String" />
+		<field name="remarks_v" type="String" />
+		<field name="remarks_vi" type="String" />
+		<field name="remarks_vii" type="String" />
+		<field name="remarks_viii" type="String" />
+		<field name="remarks_ix" type="String" />
+		<field name="remarks_x" type="String" />
+		<field name="remarks_xi" type="String" />
+		<field name="remarks_xii" type="String" />
+		<field name="remarks_xiii" type="String" />
+		<field name="month" type="String" />
+		<field name="signature" type="String" />
+		<field name="employeeName" type="String" />
+		<field name="designation" type="String" />
+		<field name="date_3" type="String" />
+		<field name="place" type="String" />
+		<field name="qcfile_id" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.CustodianCompFormScrutiny">
+		<field name="uuid" type="String" />
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="observe_i_i" type="String" />
+		<field name="observe_i_ii" type="String" />
+		<field name="observe_ii" type="String" />
+		<field name="observe_iii" type="String" />
+		<field name="observe_iv" type="String" />
+		<field name="observe_v" type="String" />
+		<field name="observe_vi" type="String" />
+		<field name="observe_vii" type="String" />
+		<field name="observe_viii" type="String" />
+		<field name="observe_ix" type="String" />
+		<field name="observe_x" type="String" />
+		<field name="observe_xi" type="String" />
+		<field name="observe_xii" type="String" />
+		<field name="observe_xiii" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.DailyAverage">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="cust_id" type="long" />
+		<field name="nps_acc_number" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="tran_date" type="Date" />
+		<field name="tran_id" type="String" />
+		<field name="part_tran_sno_psrl" type="Integer" />
+		<field name="chq_no" type="long" />
+		<field name="chq_date" type="Date" />
+		<field name="debit_trans" type="Double" />
+		<field name="credit_trans" type="Double" />
+		<field name="running_bal" type="Double" />
+		<field name="trans_particulars" type="String" />
+		<field name="trans_remarks" type="String" />
+		<field name="sol_id" type="Integer" />
+		<field name="counter_party_acc_number" type="long" />
+		<field name="CreateDate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.DAR">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="from_" type="Date" />
+		<field name="to_" type="Date" />
+		<field name="dar_file_1_id" type="long" />
+		<field name="dar_file_2_id" type="long" />
+		<field name="dar_file_3_id" type="long" />
+		<field name="dar_file_4_id" type="long" />
+		<field name="dar_file_5_id" type="long" />
+		<field name="dar_details" type="String" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.DARScrutiny">
+		<field name="scrutinyid" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="dar_file_rem_1" type="String" />
+		<field name="dar_file_rem_2" type="String" />
+		<field name="management_comments" type="String" />
+		<field name="dar_file_rem_3" type="String" />
+		<field name="dar_file_rem_4" type="String" />
+		<field name="dar_file_rem_5" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.EscGrievancesNpst">
+		<field name="id" type="long" />
+		<field name="sr_no" type="String" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="String" />
+		<field name="subscriber_name" type="String" />
+		<field name="entity_name" type="String" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pr_aO_name" type="String" />
+		<field name="ministry_name" type="String" />
+		<field name="pao_type " type="String" />
+		<field name="sector" type="String" />
+		<field name="earlier_state" type="String" />
+		<field name="resolution_date" type="String" />
+		<field name="assign_date" type="String" />
+		<field name="standard_date" type="String" />
+		<field name="tat" type="String" />
+		<field name="bucket" type="String" />
+		<field name="escalation_date" type="String" />
+		<field name="first_follow" type="String" />
+		<field name="eecond_follow" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.EVotingSummaryPfm">
+		<field name="id" type="long" />
+		<field name="meeting_date" type="Date" />
+		<field name="company_name" type="String" />
+		<field name="type_of_meetings" type="String" />
+		<field name="resolution_by_shareholder" type="String" />
+		<field name="resolution_description" type="String" />
+		<field name="investee_company_recomm" type="String" />
+		<field name="pf_rationale_recomm" type="String" />
+		<field name="final_vote" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="pf_voting_recomm" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="isin" type="String" />
+		<field name="ses_resid" type="BigDecimal" />
+		<field name="quarter_ended_date" type="Date" />
+	</model>
+	<model name="com.daily.average.service.model.Excelaccount">
+		<field name="id" type="long" />
+		<field name="cust_id" type="long" />
+		<field name="nps_acc_number" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="opening_bal" type="BigDecimal" />
+		<field name="total_credit" type="BigDecimal" />
+		<field name="total_debit" type="BigDecimal" />
+		<field name="closing_bal" type="BigDecimal" />
+		<field name="tran_date" type="Date" />
+		<field name="CreateDate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceFinalIntimPao">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="prao_reg_no" type="String" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="token_number" type="String" />
+		<field name="grievance_logging_date" type="Date" />
+		<field name="pran" type="long" />
+		<field name="subscriber_name" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceFinalIntimreglite">
+		<field name="id_" type="long" />
+		<field name="prao_reg_no" type="String" />
+		<field name="prao_name" type="String" />
+		<field name="prao_add_line1" type="String" />
+		<field name="prao_add_line2" type="String" />
+		<field name="prao_add_line3" type="String" />
+		<field name="prao_add_line4" type="String" />
+		<field name="prao_pin_code" type="int" />
+		<field name="count_of_prao_grievanc_pending" type="Integer" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="add_line1" type="String" />
+		<field name="add_line2" type="String" />
+		<field name="add_line3" type="String" />
+		<field name="add_line4" type="String" />
+		<field name="pin_code" type="int" />
+		<field name="count_of_pao_grievanc_pending" type="Integer" />
+		<field name="sector" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Grievanceshandler">
+		<field name="id_" type="long" />
+		<field name="formNumber" type="long" />
+		<field name="fileNumber" type="String" />
+		<field name="name" type="String" />
+		<field name="address" type="String" />
+		<field name="npsTrustMonthOf" type="String" />
+		<field name="referrals" type="String" />
+		<field name="openingBalance" type="String" />
+		<field name="escalatedToNpst" type="String" />
+		<field name="receivedDuringTheMonth" type="String" />
+		<field name="reviewed" type="String" />
+		<field name="resolvedDuringTheMonth" type="String" />
+		<field name="outstandingEoM" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceTopFivechowise">
+		<field name="id_" type="long" />
+		<field name="cho_wise_pending" type="String" />
+		<field name="date" type="Date" />
+		<field name="outstanding_end_of_month" type="Integer" />
+		<field name="_0_to_7_days" type="Integer" />
+		<field name="_8_to_15_days" type="Integer" />
+		<field name="_16_to_31_days" type="Integer" />
+		<field name="_32_to_90_days" type="Integer" />
+		<field name="_91_to_180_days" type="Integer" />
+		<field name="_181_to_365_days" type="Integer" />
+		<field name="more_than_366_days" type="Integer" />
+		<field name="category" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceTopFiveDetails">
+		<field name="id_" type="long" />
+		<field name="sr_No" type="Integer" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="String" />
+		<field name="date" type="Date" />
+		<field name="status" type="String" />
+		<field name="grievance_logging_date" type="Date" />
+		<field name="raised_by" type="String" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="pr_ao_reg_no" type="String" />
+		<field name="pr_ao_name" type="String" />
+		<field name="ministry_name" type="String" />
+		<field name="sector" type="String" />
+		<field name="sector_Type" type="String" />
+		<field name="state_name" type="String" />
+		<field name="broad_category" type="String" />
+		<field name="grievance_text" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceTopFiveEntitiesMonth">
+		<field name="id_" type="long" />
+		<field name="pendingWise" type="String" />
+		<field name="grievanceOutstanding" type="String" />
+		<field name="ageGroupOne" type="String" />
+		<field name="ageGroupTwo" type="String" />
+		<field name="ageGroupThree" type="String" />
+		<field name="ageGroupFour" type="String" />
+		<field name="ageGroupFive" type="String" />
+		<field name="ageGroupSix" type="String" />
+		<field name="ageGroupSeven" type="String" />
+		<field name="wiseType" type="String" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceTopFiveMinistrywise">
+		<field name="id_" type="long" />
+		<field name="name_of_the_ministry" type="String" />
+		<field name="date" type="Date" />
+		<field name="outstanding_end_of_month" type="Integer" />
+		<field name="_0_to_7_days" type="Integer" />
+		<field name="_8_to_15_days" type="Integer" />
+		<field name="_16_to_31_days" type="Integer" />
+		<field name="_32_to_90_days" type="Integer" />
+		<field name="_91_to_180_days" type="Integer" />
+		<field name="_181_to_365_days" type="Integer" />
+		<field name="more_than_366_days" type="Integer" />
+		<field name="category" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceTopFivepopwise">
+		<field name="id_" type="long" />
+		<field name="pop_wise_pending" type="String" />
+		<field name="date" type="Date" />
+		<field name="outstanding_end_of_month" type="Integer" />
+		<field name="_0_to_7_days" type="Integer" />
+		<field name="_8_to_15_days" type="Integer" />
+		<field name="_16_to_31_days" type="Integer" />
+		<field name="_32_to_90_days" type="Integer" />
+		<field name="_91_to_180_days" type="Integer" />
+		<field name="_181_to_365_days" type="Integer" />
+		<field name="more_than_366_days" type="Integer" />
+		<field name="category" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievanceTopFivestatewise">
+		<field name="id_" type="long" />
+		<field name="state_wise_pending" type="String" />
+		<field name="date" type="Date" />
+		<field name="outstanding_end_of_month" type="Integer" />
+		<field name="_0_to_7_days" type="Integer" />
+		<field name="_8_to_15_days" type="Integer" />
+		<field name="_16_to_31_days" type="Integer" />
+		<field name="_32_to_90_days" type="Integer" />
+		<field name="_91_to_180_days" type="Integer" />
+		<field name="_181_to_365_days" type="Integer" />
+		<field name="more_than_366_days" type="Integer" />
+		<field name="category" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievPendingOne">
+		<field name="id" type="long" />
+		<field name="sr_no" type="String" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="String" />
+		<field name="subscriber_name" type="String" />
+		<field name="statusi" type="String" />
+		<field name="assign_date" type="String" />
+		<field name="date_considered" type="String" />
+		<field name="aging" type="String" />
+		<field name="bucket" type="String" />
+		<field name="reisedby" type="String" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="pr_ao_no" type="String" />
+		<field name="pr_ao_name" type="String" />
+		<field name="sectori" type="String" />
+		<field name="type_" type="String" />
+		<field name="ministry_name" type="String" />
+		<field name="state_name " type="String" />
+		<field name="category" type="String" />
+		<field name="text_" type="String" />
+		<field name="follow_i" type="String" />
+		<field name="follow_ii" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrievPendingTwo">
+		<field name="id" type="long" />
+		<field name="sr_no" type="String" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="String" />
+		<field name="subscriber_name" type="String" />
+		<field name="statusi" type="String" />
+		<field name="assign_date" type="String" />
+		<field name="date_considered" type="String" />
+		<field name="aging" type="String" />
+		<field name="bucket" type="String" />
+		<field name="reisedby" type="String" />
+		<field name="nlao_reg_no" type="String" />
+		<field name="nlao_name" type="String" />
+		<field name="nloo_no" type="String" />
+		<field name="nloo_name" type="String" />
+		<field name="sectori" type="String" />
+		<field name="category" type="String" />
+		<field name="text_" type="String" />
+		<field name="follow_i" type="String" />
+		<field name="follow_ii" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrowthDataOne">
+		<field name="id" type="long" />
+		<field name="pensionfund" type="String" />
+		<field name="scheme_cg" type="float" />
+		<field name="scheme_sg" type="float" />
+		<field name="scheme_ei" type="float" />
+		<field name="scheme_ci" type="float" />
+		<field name="scheme_gi" type="float" />
+		<field name="scheme_ai" type="float" />
+		<field name="scheme_eii" type="float" />
+		<field name="scheme_cii" type="float" />
+		<field name="scheme_gii" type="float" />
+		<field name="scheme_ttsii" type="float" />
+		<field name="scheme_type" type="float" />
+		<field name="scheme_nps" type="float" />
+		<field name="scheme_api" type="float" />
+		<field name="scheme_crop" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.GrowthDataTwo">
+		<field name="id" type="long" />
+		<field name="srno" type="long" />
+		<field name="pfm" type="String" />
+		<field name="twelve_thirteen" type="float" />
+		<field name="thirteen_fourteen" type="float" />
+		<field name="fourteen_fifteen" type="float" />
+		<field name="fifteen_sixteen" type="float" />
+		<field name="sixteen_seventeen" type="float" />
+		<field name="seventeen_eighteen" type="float" />
+		<field name="eighteen_nineteen" type="float" />
+		<field name="nineteen_twenty" type="float" />
+		<field name="twenty_twentyone" type="float" />
+		<field name="oct_twenty" type="float" />
+		<field name="oct_twentyone" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.HDFCInternal_Audit_Report">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="date_" type="Date" />
+		<field name="period_from" type="String" />
+		<field name="period_to" type="String" />
+		<field name="companies" type="String" />
+		<field name="certificate_pdf_file_id" type="long" />
+		<field name="auditor_pdf_file_id" type="long" />
+		<field name="intrnlAdtRprt_pdf_file_id" type="long" />
+		<field name="extrctBrdMinAprvng_pdf_file_id" type="long" />
+		<field name="iarcircular_excel_file_id" type="long" />
+		<field name="hdfc_audit_report_contex" type="String" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.HDFCInternal_Audit_Report_Scrutiny">
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="management_comments" type="String" />
+		<field name="certificate_pdf_file_remarks" type="String" />
+		<field name="auditor_pdf_file_remarks" type="String" />
+		<field name="iarcircular_pdf_file_remarks" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.InputQuarterlyInterval">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="formDate" type="Date" />
+		<field name="oneia" type="String" />
+		<field name="oneib" type="String" />
+		<field name="oneiia" type="String" />
+		<field name="oneiib" type="String" />
+		<field name="oneiic" type="String" />
+		<field name="oneiid" type="String" />
+		<field name="oneiiia" type="String" />
+		<field name="oneiiib" type="String" />
+		<field name="oneiva" type="String" />
+		<field name="onev" type="String" />
+		<field name="twoia" type="String" />
+		<field name="twoib" type="String" />
+		<field name="twoic" type="String" />
+		<field name="twoiione" type="String" />
+		<field name="twoiitwo" type="String" />
+		<field name="twoiithree" type="String" />
+		<field name="twoiifour" type="String" />
+		<field name="twoiifive" type="String" />
+		<field name="twoiisix" type="String" />
+		<field name="twoiiseven" type="String" />
+		<field name="threea" type="String" />
+		<field name="threeb" type="String" />
+		<field name="threec" type="String" />
+		<field name="threeci" type="String" />
+		<field name="threecii" type="String" />
+		<field name="threeciii" type="String" />
+		<field name="threeciv" type="String" />
+		<field name="foura" type="String" />
+		<field name="fourb" type="String" />
+		<field name="fourc" type="String" />
+		<field name="fivei" type="String" />
+		<field name="fiveii" type="String" />
+		<field name="fiveiii" type="String" />
+		<field name="fiveiv" type="String" />
+		<field name="fiveva" type="String" />
+		<field name="fivevb" type="String" />
+		<field name="fivevc" type="String" />
+		<field name="fivevia" type="String" />
+		<field name="fivevib" type="String" />
+		<field name="sixi" type="String" />
+		<field name="sixiia" type="String" />
+		<field name="sixiib" type="String" />
+		<field name="sixiic" type="String" />
+		<field name="sevenia" type="String" />
+		<field name="sevenib" type="String" />
+		<field name="sevenic" type="String" />
+		<field name="sevenid" type="String" />
+		<field name="sevenie" type="String" />
+		<field name="eightia" type="String" />
+		<field name="eightib" type="String" />
+		<field name="eightii" type="String" />
+		<field name="eightiii" type="String" />
+		<field name="eightiv" type="String" />
+		<field name="eightv" type="String" />
+		<field name="eightvia" type="String" />
+		<field name="eightvib" type="String" />
+		<field name="eightviia" type="String" />
+		<field name="eightviib" type="String" />
+		<field name="eightviii" type="String" />
+		<field name="eightix" type="String" />
+		<field name="eightx" type="String" />
+		<field name="ninea" type="String" />
+		<field name="nineb" type="String" />
+		<field name="ten" type="String" />
+		<field name="elevena" type="String" />
+		<field name="elevenb" type="String" />
+		<field name="twelve" type="String" />
+		<field name="oneia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneiia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneiib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneiic_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneiid_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneiiia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneiiib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="oneiva_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="onev_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoic_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoiione_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoiitwo_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoiithree_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoiifour_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoiifive_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoiisix_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twoiiseven_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="threea_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="threeb_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="threec_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="threeci_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="threecii_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="threeciii_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="threeciv_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="foura_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fourb_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fourc_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fivei_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fiveii_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fiveiii_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fiveiv_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fiveva_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fivevb_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fivevc_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fivevia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="fivevib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sixi_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sixiia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sixiib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sixiic_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sevenia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sevenib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sevenic_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sevenid_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="sevenie_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightii_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightiii_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightiv_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightv_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightvia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightvib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightviia_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightviib_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightviii_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="eightix_remark" type="String" />
+		<field name="eightx_remark" type="String" />
+		<field name="ninea_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="nineb_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="ten_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="elevena_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="elevenb_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="twelve_remark" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="annex_i_rem" type="String" />
+		<field name="board_a_rem" type="String" />
+		<field name="board_b_rem" type="String" />
+		<field name="investment_a_rem" type="String" />
+		<field name="investment_b_rem" type="String" />
+		<field name="risk_a_rem" type="String" />
+		<field name="risk_b_rem" type="String" />
+		<field name="annex_ii_rem" type="String" />
+		<field name="annex_iii_rem" type="String" />
+		<field name="annex_iv_rem" type="String" />
+		<field name="annex_comp_certificate_rem" type="String" />
+		<field name="notedate" type="String" />
+		<field name="companies" type="String" />
+		<field name="date_3" type="String" />
+		<field name="place" type="String" />
+		<field name="ceoname" type="String" />
+		<field name="ceonameii" type="String" />
+		<field name="annex_i" type="long" />
+		<field name="board_a" type="long" />
+		<field name="board_b" type="long" />
+		<field name="investment_a" type="long" />
+		<field name="investment_b" type="long" />
+		<field name="risk_a" type="long" />
+		<field name="risk_b" type="long" />
+		<field name="annex_ii" type="long" />
+		<field name="annex_iii" type="long" />
+		<field name="annex_iv" type="long" />
+		<field name="annex_comp_certificate" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="isAmRejected" type="int" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="isSubmitted" type="boolean" />
+	</model>
+	<model name="com.daily.average.service.model.IntermediaryList">
+		<field name="id" type="long" />
+		<field name="intermediarytype" type="long" />
+		<field name="intermediaryname" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.InternalAuditReport">
+		<field name="id_" type="long" />
+		<field name="observations_i_a" type="String" />
+		<field name="management_i_a" type="String" />
+		<field name="observations_i_b" type="String" />
+		<field name="management_i_b" type="String" />
+		<field name="observations_i_c" type="String" />
+		<field name="management_i_c" type="String" />
+		<field name="observations_i_d" type="String" />
+		<field name="management_i_d" type="String" />
+		<field name="observations_ii_a" type="String" />
+		<field name="management_ii_a" type="String" />
+		<field name="observations_ii_b" type="String" />
+		<field name="management_ii_b" type="String" />
+		<field name="observations_ii_c" type="String" />
+		<field name="management_ii_c" type="String" />
+		<field name="observations_ii_d" type="String" />
+		<field name="management_ii_d" type="String" />
+		<field name="observations_iii_a" type="String" />
+		<field name="management_iii_a" type="String" />
+		<field name="observations_iii_b" type="String" />
+		<field name="management_iii_b" type="String" />
+		<field name="observations_iii_c" type="String" />
+		<field name="management_iii_c" type="String" />
+		<field name="observations_iii_d" type="String" />
+		<field name="management_iii_d" type="String" />
+		<field name="observations_iii_e" type="String" />
+		<field name="management_iii_e" type="String" />
+		<field name="observations_iii_f" type="String" />
+		<field name="management_iii_f" type="String" />
+		<field name="observations_iii_g" type="String" />
+		<field name="management_iii_g" type="String" />
+		<field name="observations_iii_h" type="String" />
+		<field name="management_iii_h" type="String" />
+		<field name="observations_iii_i" type="String" />
+		<field name="management_iii_i" type="String" />
+		<field name="observations_iv_a" type="String" />
+		<field name="management_iv_a" type="String" />
+		<field name="observations_iv_b" type="String" />
+		<field name="management_iv_b" type="String" />
+		<field name="observations_iv_c" type="String" />
+		<field name="management_iv_c" type="String" />
+		<field name="observations_iv_d" type="String" />
+		<field name="management_iv_d" type="String" />
+		<field name="observations_v_a" type="String" />
+		<field name="management_v_a" type="String" />
+		<field name="observations_v_b" type="String" />
+		<field name="management_v_b" type="String" />
+		<field name="observations_v_c" type="String" />
+		<field name="management_v_c" type="String" />
+		<field name="observations_v_d" type="String" />
+		<field name="management_v_d" type="String" />
+		<field name="observations_vi_a" type="String" />
+		<field name="management_vi_a" type="String" />
+		<field name="observations_vi_b" type="String" />
+		<field name="management_vi_b" type="String" />
+		<field name="observations_vi_c" type="String" />
+		<field name="management_vi_c" type="String" />
+		<field name="observations_vi_d" type="String" />
+		<field name="management_vi_d" type="String" />
+		<field name="observations_vi_e" type="String" />
+		<field name="management_vi_e" type="String" />
+		<field name="observations_vii_a" type="String" />
+		<field name="management_vii_a" type="String" />
+		<field name="observations_vii_b" type="String" />
+		<field name="management_vii_b" type="String" />
+		<field name="observations_vii_c" type="String" />
+		<field name="management_vii_c" type="String" />
+		<field name="observations_vii_d" type="String" />
+		<field name="management_vii_d" type="String" />
+		<field name="observations_vii_e" type="String" />
+		<field name="management_vii_e" type="String" />
+		<field name="observations_vii_f" type="String" />
+		<field name="management_vii_f" type="String" />
+		<field name="observations_vii_g" type="String" />
+		<field name="management_vii_g" type="String" />
+		<field name="observations_viii_a" type="String" />
+		<field name="management_viii_a" type="String" />
+		<field name="observations_ix_a" type="String" />
+		<field name="management_ix_a" type="String" />
+		<field name="observations_ix_b" type="String" />
+		<field name="management_ix_b" type="String" />
+		<field name="observations_ix_c" type="String" />
+		<field name="management_ix_c" type="String" />
+		<field name="observations_ix_d" type="String" />
+		<field name="management_ix_d" type="String" />
+		<field name="observations_x_a" type="String" />
+		<field name="management_x_a" type="String" />
+		<field name="observations_x_b" type="String" />
+		<field name="management_x_b" type="String" />
+		<field name="observations_x_c" type="String" />
+		<field name="management_x_c" type="String" />
+		<field name="observations_x_d" type="String" />
+		<field name="management_x_d" type="String" />
+		<field name="observations_x_e" type="String" />
+		<field name="management_x_e" type="String" />
+		<field name="observations_x_f" type="String" />
+		<field name="management_x_f" type="String" />
+		<field name="observations_x_g" type="String" />
+		<field name="management_x_g" type="String" />
+		<field name="observations_xi_a" type="String" />
+		<field name="management_xi_a" type="String" />
+		<field name="observations_xi_b" type="String" />
+		<field name="management_xi_b" type="String" />
+		<field name="observations_xi_c" type="String" />
+		<field name="management_xi_c" type="String" />
+		<field name="observations_xi_d" type="String" />
+		<field name="management_xi_d" type="String" />
+		<field name="observations_xii_a" type="String" />
+		<field name="management_xii_a" type="String" />
+		<field name="observations_xii_b" type="String" />
+		<field name="management_xii_b" type="String" />
+		<field name="observations_xii_c" type="String" />
+		<field name="management_xii_c" type="String" />
+		<field name="observations_xii_d" type="String" />
+		<field name="management_xii_d" type="String" />
+		<field name="observations_xii_e" type="String" />
+		<field name="management_xii_e" type="String" />
+		<field name="observations_xiii_a" type="String" />
+		<field name="management_xiii_a" type="String" />
+		<field name="observations_xiii_b" type="String" />
+		<field name="management_xiii_b" type="String" />
+		<field name="observations_xiii_c" type="String" />
+		<field name="management_xiii_c" type="String" />
+		<field name="observations_xiii_d" type="String" />
+		<field name="management_xiii_d" type="String" />
+		<field name="observation_xiv__a" type="String" />
+		<field name="management_xiv_a" type="String" />
+		<field name="observations_xiv_b" type="String" />
+		<field name="management_xiv_b" type="String" />
+		<field name="observations_xiv_c" type="String" />
+		<field name="management_xiv_c" type="String" />
+		<field name="observations_xiv_d" type="String" />
+		<field name="management_xiv_d" type="String" />
+		<field name="observations_xiv_e" type="String" />
+		<field name="management_xiv_e" type="String" />
+		<field name="observations_xiv_f" type="String" />
+		<field name="management_xiv_f" type="String" />
+		<field name="observations_xiv_g" type="String" />
+		<field name="management_xiv_g" type="String" />
+		<field name="observations_xv_a" type="String" />
+		<field name="management_xv_a" type="String" />
+		<field name="observations_xv_b" type="String" />
+		<field name="management_xv_b" type="String" />
+		<field name="observations_xv_c" type="String" />
+		<field name="management_xv_c" type="String" />
+		<field name="observations_xvi_a" type="String" />
+		<field name="management_xvi_a" type="String" />
+		<field name="observations_xvi_b" type="String" />
+		<field name="management_xvi_b" type="String" />
+		<field name="observations_xvii_a" type="String" />
+		<field name="management_xvii_a" type="String" />
+		<field name="observations_xvii_b" type="String" />
+		<field name="management_xvii_b" type="String" />
+		<field name="observations_xvii_c" type="String" />
+		<field name="management_xvii_c" type="String" />
+		<field name="observations_xvii_d" type="String" />
+		<field name="management_xvii_d" type="String" />
+		<field name="observations_xviii_a" type="String" />
+		<field name="management_xviii_a" type="String" />
+		<field name="observations_xviii_b" type="String" />
+		<field name="management_xviii_b" type="String" />
+		<field name="observations_xviii_c" type="String" />
+		<field name="management_xviii_c" type="String" />
+		<field name="observations_xviii_d" type="String" />
+		<field name="management_xviii_d" type="String" />
+		<field name="observations_xix_a" type="String" />
+		<field name="management_xix_a" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MajorityVotePfm">
+		<field name="id" type="long" />
+		<field name="company_name" type="String" />
+		<field name="resolution_sr_no" type="long" />
+		<field name="meeting_date" type="Date" />
+		<field name="meeting_type" type="String" />
+		<field name="mgmt_proposal" type="String" />
+		<field name="proposal_description" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="mgmt_recommendation" type="String" />
+		<field name="vote" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ManagementFee">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="month" type="String" />
+		<field name="date_" type="Date" />
+		<field name="total_aum" type="BigDecimal" />
+		<field name="total_management_fees" type="BigDecimal" />
+		<field name="mutual_funds_except_liquid_mf" type="BigDecimal" />
+		<field name="exchange_traded_funds" type="BigDecimal" />
+		<field name="index_funds" type="BigDecimal" />
+		<field name="aum_excl_investments" type="BigDecimal" />
+		<field name="mgmt_fees_percentage" type="BigDecimal" />
+		<field name="gst" type="BigDecimal" />
+		<field name="total_mgmt_fees" type="BigDecimal" />
+		<field name="management_rate" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ManagementRate">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="pfm_aum" type="BigDecimal" />
+		<field name="management_rate" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ManagementSummary">
+		<field name="id_" type="long" />
+		<field name="month" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="management_fee" type="BigDecimal" />
+		<field name="gst" type="BigDecimal" />
+		<field name="total_management_fee" type="BigDecimal" />
+		<field name="tds" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Manpowerform_i">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="mp_iReportFileId" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.Manpowerform_ii">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="mp_iiReportFileId" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.MnAssetNotUnderCustody">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="String" />
+		<field name="date_" type="Date" />
+		<field name="details_of_various_items" type="String" />
+		<field name="market_value" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="pension_fund_name" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.MnAucSummary">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="int" />
+		<field name="date_" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="auc_fv_debt_and_pur_price_eq" type="BigDecimal" />
+		<field name="auc_as_per_market_valuation" type="BigDecimal" />
+		<field name="aum" type="BigDecimal" />
+		<field name="prcnt_of_aum_under_custody" type="BigDecimal" />
+		<field name="asset_not_under_custody" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnCompCertificate">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="date_1" type="Date" />
+		<field name="purchase_of_securities" type="String" />
+		<field name="Purchase_of_sec_rem_1_1_2" type="String" />
+		<field name="detailed_investment" type="String" />
+		<field name="Purchase_of_sec_rem_1_2a_2" type="String" />
+		<field name="investments_approved" type="String" />
+		<field name="Purchase_of_sec_rem_1_2b_2" type="String" />
+		<field name="decision_of_investment" type="String" />
+		<field name="Purchase_of_sec_rem_1_2c_2" type="String" />
+		<field name="investments_non_dematerialized" type="String" />
+		<field name="Purchase_of_sec_rem_1_2d_2" type="String" />
+		<field name="all_investments_from_funds" type="String" />
+		<field name="Purchase_of_sec_rem_1_2e_2" type="String" />
+		<field name="delivery_of_securities_purch" type="String" />
+		<field name="Purchase_of_sec_rem_1_3_2" type="String" />
+		<field name="investment_done_in_ipo" type="String" />
+		<field name="Purchase_of_secu_rem_1_4_2" type="String" />
+		<field name="scheme_investments" type="String" />
+		<field name="Securities_held_2_1_2" type="String" />
+		<field name="stop_loss_trigger" type="String" />
+		<field name="Securities_held_2_2a_2" type="String" />
+		<field name="decision_approved_by_committee" type="String" />
+		<field name="Securities_held_2_2b_2" type="String" />
+		<field name="decision_properly_documented" type="String" />
+		<field name="Securities_held_2_2c_2" type="String" />
+		<field name="inter_scheme_transfer" type="String" />
+		<field name="Securities_held_2_3_2" type="String" />
+		<field name="investment_held_in_equity" type="String" />
+		<field name="Securities_held_2_4_2" type="String" />
+		<field name="investment_in_equity_shares" type="String" />
+		<field name="Securities_held_2_5_2" type="String" />
+		<field name="disinvestments_approved" type="String" />
+		<field name="Sale_of_securities_3_1a_2" type="String" />
+		<field name="decision_of_disinvestment" type="String" />
+		<field name="Sale_of_securities_3_1b_2" type="String" />
+		<field name="delivery_of_securities_sale" type="String" />
+		<field name="Sale_of_securities_3_2_2" type="String" />
+		<field name="all_investment_charges" type="String" />
+		<field name="Reports_and_Disclosure_4_1a_2" type="String" />
+		<field name="pfm_adhered" type="String" />
+		<field name="Reports_and_Disclosure_4_1b_2" type="String" />
+		<field name="records_of_the_audit_of_nav" type="String" />
+		<field name="Reports_and_Disclosure_4_1c_2" type="String" />
+		<field name="scheme_wise_nav_uploaded" type="String" />
+		<field name="Reports_and_Disclosure_4_1d_2" type="String" />
+		<field name="scheme_wise_nav_submitted" type="String" />
+		<field name="Reports_and_Disclosure_4_1e_2" type="String" />
+		<field name="monthly_reports_submitted" type="String" />
+		<field name="Reports_and_Disclosure_4_2a_2" type="String" />
+		<field name="scrip_wise_details" type="String" />
+		<field name="Reports_and_Disclosure_4_2b_2" type="String" />
+		<field name="date_2" type="String" />
+		<field name="company_name" type="String" />
+		<field name="emplolyee_name" type="String" />
+		<field name="roles" type="String" />
+		<field name="date_3" type="Date" />
+		<field name="place" type="String" />
+		<field name="isAmRejected" type="int" />
+		<field name="annexure_a_i" type="long" />
+		<field name="annexure_a_ii" type="long" />
+		<field name="annexure_b" type="long" />
+		<field name="annexure_c" type="long" />
+		<field name="annexure_d" type="long" />
+		<field name="annexure_e" type="long" />
+		<field name="annexure_f" type="long" />
+		<field name="annexure_g" type="long" />
+		<field name="annexure_h" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="isSubmitted" type="boolean" />
+	</model>
+	<model name="com.daily.average.service.model.MnCompCertificateScrutiny">
+		<field name="scrutinyid" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="purchase_of_securities_rem" type="String" />
+		<field name="detailed_investment_rem" type="String" />
+		<field name="investments_approved_rem" type="String" />
+		<field name="decision_of_investment_rem" type="String" />
+		<field name="invest_non_dematerialized_rem" type="String" />
+		<field name="all_investments_from_funds_rem" type="String" />
+		<field name="delivery_of_security_purch_rem" type="String" />
+		<field name="investment_done_in_ipo_rem" type="String" />
+		<field name="scheme_investments_rem" type="String" />
+		<field name="stop_loss_trigger_rem" type="String" />
+		<field name="decision_appr_by_committee_rem" type="String" />
+		<field name="decision_prop_documented_rem" type="String" />
+		<field name="inter_scheme_transfer_rem" type="String" />
+		<field name="investment_held_in_equity_rem" type="String" />
+		<field name="invest_in_equity_shares_rem" type="String" />
+		<field name="disinvestments_approved_rem" type="String" />
+		<field name="decision_of_disinvestment_rem" type="String" />
+		<field name="delivery_of_security_sale_rem" type="String" />
+		<field name="all_investment_charges_rem" type="String" />
+		<field name="pfm_adhered_rem" type="String" />
+		<field name="records_of_audit_of_nav_rem" type="String" />
+		<field name="scheme_wise_nav_uploaded_rem" type="String" />
+		<field name="scheme_wise_nav_submitted_rem" type="String" />
+		<field name="monthly_reports_submitted_rem" type="String" />
+		<field name="scrip_wise_details_rem" type="String" />
+		<field name="npsRemark" type="String" />
+		<field name="annexure_a_i_rem" type="String" />
+		<field name="annexure_a_ii_rem" type="String" />
+		<field name="annexure_b_rem" type="String" />
+		<field name="annexure_c_rem" type="String" />
+		<field name="annexure_d_rem" type="String" />
+		<field name="annexure_e_rem" type="String" />
+		<field name="annexure_f_rem" type="String" />
+		<field name="annexure_g_rem" type="String" />
+		<field name="annexure_h_rem" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnCustTdsChallanDetail">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="date" type="Date" />
+		<field name="challan_serial_no_401" type="BigDecimal" />
+		<field name="income_tax_402" type="BigDecimal" />
+		<field name="interest_403" type="BigDecimal" />
+		<field name="fees_404" type="BigDecimal" />
+		<field name="others_or_penalty_405" type="BigDecimal" />
+		<field name="tax_deposited_or_book_adj_406" type="BigDecimal" />
+		<field name="deposited_by_book_adj_407" type="String" />
+		<field name="bsr_code_408" type="String" />
+		<field name="tax_dep_or_transfer_dt_410" type="Date" />
+		<field name="challan_or_ddo_of_form_24g_409" type="String" />
+		<field name="receipt_no_of_form_24g_408" type="String" />
+		<field name="minor_head_of_challan_411" type="BigDecimal" />
+		<field name="cheque_or_dd_no" type="String" />
+		<field name="section_code" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnCustTdsNonsalary">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="date" type="Date" />
+		<field name="challan_serial_no" type="BigDecimal" />
+		<field name="section_code" type="String" />
+		<field name="type_of_rent" type="String" />
+		<field name="deductee_identf_no" type="String" />
+		<field name="deductee_code_414" type="BigDecimal" />
+		<field name="pan_of_deductee_415" type="String" />
+		<field name="deductee_refno_invalid_pan_413" type="String" />
+		<field name="name_of_deductee_416" type="String" />
+		<field name="amt_paid_or_credited_date_418" type="Date" />
+		<field name="tax_deducted_date_422" type="Date" />
+		<field name="amt_of_payment_419" type="BigDecimal" />
+		<field name="tax_deduction_rate_423" type="BigDecimal" />
+		<field name="amount_of_tax_deducted" type="BigDecimal" />
+		<field name="total_tax_deposited_421" type="BigDecimal" />
+		<field name="reason_for_non_deduction_424" type="String" />
+		<field name="non_deduct_certno_issue_ao_425" type="String" />
+		<field name="deductee_flat_no" type="BigDecimal" />
+		<field name="deductee_building_name" type="String" />
+		<field name="deductee_street_name" type="String" />
+		<field name="deductee_area" type="String" />
+		<field name="deductee_city_or_town" type="String" />
+		<field name="deductee_pin" type="BigDecimal" />
+		<field name="deductee_state" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnGrievWthdrwlAgingAnalysis">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="date_" type="Date" />
+		<field name="cra" type="String" />
+		<field name="withdrawal_sector" type="String" />
+		<field name="zero_to_therty_days" type="BigDecimal" />
+		<field name="thertyone_to_ninty_days" type="BigDecimal" />
+		<field name="more_than_oneeighty_days" type="BigDecimal" />
+		<field name="total" type="BigDecimal" />
+		<field name="ninetyone_to_oneeighty_days" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnNpaDevelopment">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="companies" type="String" />
+		<field name="date_1" type="String" />
+		<field name="tabledetails" type="String" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.MnNpsFinalSummary">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="int" />
+		<field name="date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="auc_fv_debt_and_pur_price_eq" type="BigDecimal" />
+		<field name="auc_as_per_market_valuation" type="BigDecimal" />
+		<field name="aum" type="BigDecimal" />
+		<field name="prcnt_of_aum_under_custody" type="BigDecimal" />
+		<field name="asset_not_under_custody" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnReportWthdrwlAgingAnalys">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="cra" type="String" />
+		<field name="withdrawal_sector" type="String" />
+		<field name="type_" type="String" />
+		<field name="zero_to_therty_days" type="BigDecimal" />
+		<field name="thertyone_to_ninty_days" type="BigDecimal" />
+		<field name="nintyone_to_onetwenty_days" type="BigDecimal" />
+		<field name="onetwentyone_to_oneeighty_days" type="BigDecimal" />
+		<field name="oneeighty_to_three65_days" type="BigDecimal" />
+		<field name="more_than_one_year" type="BigDecimal" />
+		<field name="wthdrwl_outstand_ated_of_month" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnSpecialProvisionOnWthdrwl">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="cra" type="String" />
+		<field name="sector" type="String" />
+		<field name="partial_withdrawal_app_submit" type="BigDecimal" />
+		<field name="gsec_subs_exercise_family_pnsn" type="BigDecimal" />
+		<field name="subscriber_defered_lumpsum_amt" type="BigDecimal" />
+		<field name="subscriber_who_defered_annuity" type="BigDecimal" />
+		<field name="subs_optd_for_nps_post_superan" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnStatusOfWidrawalReported">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="cra" type="String" />
+		<field name="sector" type="String" />
+		<field name="withdrawal_type" type="String" />
+		<field name="wthdrwl_pending_at_bg_of_month" type="BigDecimal" />
+		<field name="wthdrwl_received_during_month" type="BigDecimal" />
+		<field name="wthdrwl_settled_during_month" type="BigDecimal" />
+		<field name="wthdrwl_rejected_during_month" type="BigDecimal" />
+		<field name="wthdrwl_outstand_aten_of_month" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnSubsAnnuityPurchase">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="cra" type="String" />
+		<field name="sector" type="String" />
+		<field name="subs_submitted_wthdrwl_appl" type="BigDecimal" />
+		<field name="subs_opted_for_anuity_purchas" type="BigDecimal" />
+		<field name="asp_purchased_annuity_by_cra" type="BigDecimal" />
+		<field name="asp_wthdrwl_prem_paymnt_at_cra" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.MnWidrawalRelatedSubsGriev">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="cra" type="String" />
+		<field name="grievance_statistics_for_cgms" type="String" />
+		<field name="grievances_count" type="BigDecimal" />
+		<field name="remarks" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.NonUnanimousReportTableOne">
+		<field name="id_" type="long" />
+		<field name="name_of_the_pfm" type="String" />
+		<field name="no_of_resolutions" type="Long" />
+		<field name="voted_for" type="Long" />
+		<field name="abstained" type="Long" />
+		<field name="voted_against" type="Long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.NonUnanimousReportTableTwo">
+		<field name="id_" type="long" />
+		<field name="name_of_the_company" type="String" />
+		<field name="meeting_date" type="Date" />
+		<field name="resolution" type="String" />
+		<field name="ses_recommendation" type="String" />
+		<field name="ses_reason" type="String" />
+		<field name="pfs_voted_for" type="String" />
+		<field name="pfs_voted_abstain" type="String" />
+		<field name="pfs_voted_against" type="String" />
+		<field name="final_vote" type="String" />
+		<field name="pfs_reason" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ObservationOnInternal">
+		<field name="id_" type="long" />
+		<field name="filenoi" type="String" />
+		<field name="datei" type="String" />
+		<field name="namei" type="String" />
+		<field name="adressi" type="String" />
+		<field name="subject" type="String" />
+		<field name="dateii" type="String" />
+		<field name="dateiii" type="String" />
+		<field name="observations_i_a" type="String" />
+		<field name="management_i_a" type="String" />
+		<field name="remarks_i_a" type="String" />
+		<field name="observations_i_b" type="String" />
+		<field name="management_i_b" type="String" />
+		<field name="remarks_i_b" type="String" />
+		<field name="observations_i_c" type="String" />
+		<field name="management_i_c" type="String" />
+		<field name="remarks_i_c" type="String" />
+		<field name="observations_i_d" type="String" />
+		<field name="management_i_d" type="String" />
+		<field name="remarks_i_d" type="String" />
+		<field name="observations_ii_a" type="String" />
+		<field name="management_ii_a" type="String" />
+		<field name="remarks_ii_a" type="String" />
+		<field name="observations_ii_b" type="String" />
+		<field name="management_ii_b" type="String" />
+		<field name="remarks_ii_b" type="String" />
+		<field name="observations_ii_c" type="String" />
+		<field name="management_ii_c" type="String" />
+		<field name="remarks_ii_c" type="String" />
+		<field name="observations_ii_d" type="String" />
+		<field name="management_ii_d" type="String" />
+		<field name="remarks_ii_d" type="String" />
+		<field name="observations_iii_a" type="String" />
+		<field name="management_iii_a" type="String" />
+		<field name="remarks_iii_a" type="String" />
+		<field name="observations_iii_b" type="String" />
+		<field name="management_iii_b" type="String" />
+		<field name="remarks_iii_b" type="String" />
+		<field name="observations_iii_c" type="String" />
+		<field name="management_iii_c" type="String" />
+		<field name="remarks_iii_c" type="String" />
+		<field name="observations_iii_d" type="String" />
+		<field name="management_iii_d" type="String" />
+		<field name="remarks_iii_d" type="String" />
+		<field name="observations_iii_e" type="String" />
+		<field name="management_iii_e" type="String" />
+		<field name="remarks_iii_e" type="String" />
+		<field name="observations_iii_f" type="String" />
+		<field name="management_iii_f" type="String" />
+		<field name="remarks_iii_f" type="String" />
+		<field name="observations_iii_g" type="String" />
+		<field name="management_iii_g" type="String" />
+		<field name="remarks_iii_g" type="String" />
+		<field name="observations_iii_h" type="String" />
+		<field name="management_iii_h" type="String" />
+		<field name="remarks_iii_h" type="String" />
+		<field name="observations_iii_i" type="String" />
+		<field name="management_iii_i" type="String" />
+		<field name="remarks_iii_i" type="String" />
+		<field name="observations_iv_a" type="String" />
+		<field name="management_iv_a" type="String" />
+		<field name="remarks_iv_a" type="String" />
+		<field name="observations_iv_b" type="String" />
+		<field name="management_iv_b" type="String" />
+		<field name="remarks_iv_b" type="String" />
+		<field name="observations_iv_c" type="String" />
+		<field name="management_iv_c" type="String" />
+		<field name="remarks_iv_c" type="String" />
+		<field name="observations_iv_d" type="String" />
+		<field name="management_iv_d" type="String" />
+		<field name="remarks_iv_d" type="String" />
+		<field name="observations_v_a" type="String" />
+		<field name="management_v_a" type="String" />
+		<field name="remarks_v_a" type="String" />
+		<field name="observations_v_b" type="String" />
+		<field name="management_v_b" type="String" />
+		<field name="remarks_v_b" type="String" />
+		<field name="observations_v_c" type="String" />
+		<field name="management_v_c" type="String" />
+		<field name="remarks_v_c" type="String" />
+		<field name="observations_v_d" type="String" />
+		<field name="management_v_d" type="String" />
+		<field name="remarks_v_d" type="String" />
+		<field name="observations_vi_a" type="String" />
+		<field name="management_vi_a" type="String" />
+		<field name="remarks_vi_a" type="String" />
+		<field name="observations_vi_b" type="String" />
+		<field name="management_vi_b" type="String" />
+		<field name="remarks_vi_b" type="String" />
+		<field name="observations_vi_c" type="String" />
+		<field name="management_vi_c" type="String" />
+		<field name="remarks_vi_c" type="String" />
+		<field name="observations_vi_d" type="String" />
+		<field name="management_vi_d" type="String" />
+		<field name="remarks_vi_d" type="String" />
+		<field name="observations_vi_e" type="String" />
+		<field name="management_vi_e" type="String" />
+		<field name="remarks_vi_e" type="String" />
+		<field name="observations_vii_a" type="String" />
+		<field name="management_vii_a" type="String" />
+		<field name="remarks_vii_a" type="String" />
+		<field name="observations_vii_b" type="String" />
+		<field name="management_vii_b" type="String" />
+		<field name="remarks_vii_b" type="String" />
+		<field name="observations_vii_c" type="String" />
+		<field name="management_vii_c" type="String" />
+		<field name="remarks_vii_c" type="String" />
+		<field name="observations_vii_d" type="String" />
+		<field name="management_vii_d" type="String" />
+		<field name="remarks_vii_d" type="String" />
+		<field name="observations_vii_e" type="String" />
+		<field name="management_vii_e" type="String" />
+		<field name="remarks_vii_e" type="String" />
+		<field name="observations_vii_f" type="String" />
+		<field name="management_vii_f" type="String" />
+		<field name="remarks_vii_f" type="String" />
+		<field name="observations_vii_g" type="String" />
+		<field name="management_vii_g" type="String" />
+		<field name="remarks_vii_g" type="String" />
+		<field name="observations_viii_a" type="String" />
+		<field name="management_viii_a" type="String" />
+		<field name="remarks_viii_a" type="String" />
+		<field name="observations_ix_a" type="String" />
+		<field name="management_ix_a" type="String" />
+		<field name="remarks_ix_a" type="String" />
+		<field name="observations_ix_b" type="String" />
+		<field name="management_ix_b" type="String" />
+		<field name="remarks_ix_b" type="String" />
+		<field name="observations_ix_c" type="String" />
+		<field name="management_ix_c" type="String" />
+		<field name="remarks_ix_c" type="String" />
+		<field name="observations_ix_d" type="String" />
+		<field name="management_ix_d" type="String" />
+		<field name="remarks_ix_d" type="String" />
+		<field name="observations_x_a" type="String" />
+		<field name="management_x_a" type="String" />
+		<field name="remarks_x_a" type="String" />
+		<field name="observations_x_b" type="String" />
+		<field name="management_x_b" type="String" />
+		<field name="remarks_x_b" type="String" />
+		<field name="observations_x_c" type="String" />
+		<field name="management_x_c" type="String" />
+		<field name="remarks_x_c" type="String" />
+		<field name="observations_x_d" type="String" />
+		<field name="management_x_d" type="String" />
+		<field name="remarks_x_d" type="String" />
+		<field name="observations_x_e" type="String" />
+		<field name="management_x_e" type="String" />
+		<field name="remarks_x_e" type="String" />
+		<field name="observations_x_f" type="String" />
+		<field name="management_x_f" type="String" />
+		<field name="remarks_x_f" type="String" />
+		<field name="observations_x_g" type="String" />
+		<field name="management_x_g" type="String" />
+		<field name="remarks_x_g" type="String" />
+		<field name="observations_xi_a" type="String" />
+		<field name="management_xi_a" type="String" />
+		<field name="remarks_xi_a" type="String" />
+		<field name="observations_xi_b" type="String" />
+		<field name="management_xi_b" type="String" />
+		<field name="remarks_xi_b" type="String" />
+		<field name="observations_xi_c" type="String" />
+		<field name="management_xi_c" type="String" />
+		<field name="remarks_xi_c" type="String" />
+		<field name="observations_xi_d" type="String" />
+		<field name="management_xi_d" type="String" />
+		<field name="remarks_xi_d" type="String" />
+		<field name="observations_xii_a" type="String" />
+		<field name="management_xii_a" type="String" />
+		<field name="remarks_xii_a" type="String" />
+		<field name="observations_xii_b" type="String" />
+		<field name="management_xii_b" type="String" />
+		<field name="remarks_xii_b" type="String" />
+		<field name="observations_xii_c" type="String" />
+		<field name="management_xii_c" type="String" />
+		<field name="remarks_xii_c" type="String" />
+		<field name="observations_xii_d" type="String" />
+		<field name="management_xii_d" type="String" />
+		<field name="remarks_xii_d" type="String" />
+		<field name="observations_xii_e" type="String" />
+		<field name="management_xii_e" type="String" />
+		<field name="remarks_xii_e" type="String" />
+		<field name="observations_xiii_a" type="String" />
+		<field name="management_xiii_a" type="String" />
+		<field name="remarks_xiii_a" type="String" />
+		<field name="observations_xiii_b" type="String" />
+		<field name="management_xiii_b" type="String" />
+		<field name="remarks_xiii_b" type="String" />
+		<field name="observations_xiii_c" type="String" />
+		<field name="management_xiii_c" type="String" />
+		<field name="remarks_xiii_c" type="String" />
+		<field name="observations_xiii_d" type="String" />
+		<field name="management_xiii_d" type="String" />
+		<field name="remarks_xiii_d" type="String" />
+		<field name="observation_xiv__a" type="String" />
+		<field name="management_xiv_a" type="String" />
+		<field name="remarks_xiv_a" type="String" />
+		<field name="observations_xiv_b" type="String" />
+		<field name="management_xiv_b" type="String" />
+		<field name="remarks_xiv_b" type="String" />
+		<field name="observations_xiv_c" type="String" />
+		<field name="management_xiv_c" type="String" />
+		<field name="remarks_xiv_c" type="String" />
+		<field name="observations_xiv_d" type="String" />
+		<field name="management_xiv_d" type="String" />
+		<field name="remarks_xiv_d" type="String" />
+		<field name="observations_xiv_e" type="String" />
+		<field name="management_xiv_e" type="String" />
+		<field name="remarks_xiv_e" type="String" />
+		<field name="observations_xiv_f" type="String" />
+		<field name="management_xiv_f" type="String" />
+		<field name="remarks_xiv_f" type="String" />
+		<field name="observations_xiv_g" type="String" />
+		<field name="management_xiv_g" type="String" />
+		<field name="remarks_xiv_g" type="String" />
+		<field name="observations_xv_a" type="String" />
+		<field name="management_xv_a" type="String" />
+		<field name="remarks_xv_a" type="String" />
+		<field name="observations_xv_b" type="String" />
+		<field name="management_xv_b" type="String" />
+		<field name="remarks_xv_b" type="String" />
+		<field name="observations_xv_c" type="String" />
+		<field name="management_xv_c" type="String" />
+		<field name="remarks_xv_c" type="String" />
+		<field name="observations_xvi_a" type="String" />
+		<field name="management_xvi_a" type="String" />
+		<field name="remarks_xvi_a" type="String" />
+		<field name="observations_xvi_b" type="String" />
+		<field name="management_xvi_b" type="String" />
+		<field name="remarks_xvi_b" type="String" />
+		<field name="observations_xvii_a" type="String" />
+		<field name="management_xvii_a" type="String" />
+		<field name="remarks_xvii_a" type="String" />
+		<field name="observations_xvii_b" type="String" />
+		<field name="management_xvii_b" type="String" />
+		<field name="remarks_xvii_b" type="String" />
+		<field name="observations_xvii_c" type="String" />
+		<field name="management_xvii_c" type="String" />
+		<field name="remarks_xvii_c" type="String" />
+		<field name="observations_xvii_d" type="String" />
+		<field name="management_xvii_d" type="String" />
+		<field name="remarks_xvii_d" type="String" />
+		<field name="observations_xviii_a" type="String" />
+		<field name="management_xviii_a" type="String" />
+		<field name="remarks_xviii_a" type="String" />
+		<field name="observations_xviii_b" type="String" />
+		<field name="management_xviii_b" type="String" />
+		<field name="remarks_xviii_b" type="String" />
+		<field name="observations_xviii_c" type="String" />
+		<field name="management_xviii_c" type="String" />
+		<field name="remarks_xviii_c" type="String" />
+		<field name="observations_xviii_d" type="String" />
+		<field name="management_xviii_d" type="String" />
+		<field name="remarks_xviii_d" type="String" />
+		<field name="observations_xix_a" type="String" />
+		<field name="management_xix_a" type="String" />
+		<field name="remarks_xix_a" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.PFM_executive_summary">
+		<field name="executiveSummaryId" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="boardDescription" type="String" />
+		<field name="auditorobservation" type="String" />
+		<field name="riskrating" type="String" />
+		<field name="managementResponse" type="String" />
+		<field name="npstComment" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+	</model>
+	<model name="com.daily.average.service.model.PFM_hy_comp_cert">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="year" type="String" />
+		<field name="hycc_details" type="String" />
+		<field name="date1" type="Date" />
+		<field name="date2" type="Date" />
+		<field name="date3" type="Date" />
+		<field name="hycc_place" type="String" />
+		<field name="hyccfile" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="isSubmitted" type="boolean" />
+	</model>
+	<model name="com.daily.average.service.model.Pfm_Qr_Internal_Audit_Report">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="maker_comment_details" type="String" />
+		<field name="isAmRejected" type="int" />
+		<field name="annex_comp_certificate" type="long" />
+		<field name="extracts_board_pdf" type="long" />
+		<field name="annex_comp_certificate_i" type="long" />
+		<field name="annex_comp_certificate_ii" type="long" />
+		<field name="annex_comp_certificate_iii" type="long" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.Qr_Report">
+		<field name="id" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="as_on_date" type="Date" />
+		<field name="asset_class" type="String" />
+		<field name="asset_sub_class" type="String" />
+		<field name="cg" type="BigDecimal" />
+		<field name="percentage_cg" type="String" />
+		<field name="sg" type="BigDecimal" />
+		<field name="percentage_sg" type="String" />
+		<field name="e_i" type="BigDecimal" />
+		<field name="percentage_e_i" type="String" />
+		<field name="c_i" type="BigDecimal" />
+		<field name="percentage_c_i" type="String" />
+		<field name="g_i" type="BigDecimal" />
+		<field name="percentage_g_i" type="String" />
+		<field name="e_ii" type="BigDecimal" />
+		<field name="percentage_e_ii" type="String" />
+		<field name="c_ii" type="BigDecimal" />
+		<field name="percentage_c_ii" type="String" />
+		<field name="g_ii" type="BigDecimal" />
+		<field name="percentage_g_ii" type="String" />
+		<field name="nps_lite" type="BigDecimal" />
+		<field name="percentage_nps_lite" type="String" />
+		<field name="cor_cg" type="BigDecimal" />
+		<field name="percentage_cor_cg" type="String" />
+		<field name="apy_fund_scheme" type="BigDecimal" />
+		<field name="percentage_apy_fund_scheme" type="String" />
+		<field name="tier2_composite" type="BigDecimal" />
+		<field name="percentage_tier2_composite" type="String" />
+		<field name="apy" type="BigDecimal" />
+		<field name="percentage_apy" type="String" />
+		<field name="a_i" type="BigDecimal" />
+		<field name="percentage_a_i" type="String" />
+		<field name="scheme_nps_tts_ii" type="BigDecimal" />
+		<field name="percentage_scheme_nps_tts_ii" type="String" />
+		<field name="total_aum" type="BigDecimal" />
+		<field name="percentage" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.QrAnnexureFourCustodian">
+		<field name="id_" type="long" />
+		<field name="scheme_name" type="String" />
+		<field name="transaction_charges_dem_trades" type="BigDecimal" />
+		<field name="custody_charges_dema_holdings" type="BigDecimal" />
+		<field name="nsccl_ccil_charges" type="BigDecimal" />
+		<field name="sebi_charges" type="BigDecimal" />
+		<field name="gross_bill_as_per_pf" type="BigDecimal" />
+		<field name="bill_value_excluding_gst" type="BigDecimal" />
+		<field name="cgst" type="BigDecimal" />
+		<field name="sgst" type="BigDecimal" />
+		<field name="bill_value_including_gst" type="BigDecimal" />
+		<field name="month_" type="Date" />
+		<field name="account_number" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.QrCustodianBills">
+		<field name="id_" type="long" />
+		<field name="scheme_name" type="String" />
+		<field name="transaction_charges_dem_trades" type="BigDecimal" />
+		<field name="custody_charges_dema_holdings" type="BigDecimal" />
+		<field name="nsccl_ccil_charges" type="BigDecimal" />
+		<field name="sebi_charges" type="BigDecimal" />
+		<field name="gross_bill_as_per_pf" type="BigDecimal" />
+		<field name="bill_value_excluding_gst" type="BigDecimal" />
+		<field name="cgst" type="BigDecimal" />
+		<field name="sgst" type="BigDecimal" />
+		<field name="bill_value_including_gst" type="BigDecimal" />
+		<field name="month" type="Date" />
+		<field name="account_number" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.QrFinalVoteCount">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="financial_year" type="String" />
+		<field name="quarter" type="Date" />
+		<field name="total_number_of_resolution" type="BigDecimal" />
+		<field name="for_" type="BigDecimal" />
+		<field name="against" type="BigDecimal" />
+		<field name="abstain" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.QrPfVotingRecommCount">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="financial_year" type="String" />
+		<field name="quarter" type="Date" />
+		<field name="total_number_of_resolution" type="BigDecimal" />
+		<field name="for_" type="BigDecimal" />
+		<field name="against" type="BigDecimal" />
+		<field name="abstain" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.QtrStewardshipReport">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="date_1" type="String" />
+		<field name="conflict_of_interest" type="String" />
+		<field name="monitoring_situation " type="String" />
+		<field name="resolutions_voted" type="String" />
+		<field name="adversealert" type="String" />
+		<field name="insInvestorSituation " type="String" />
+		<field name="resolutionsVoted1" type="String" />
+		<field name="date_2" type="String" />
+		<field name="employee_name" type="String" />
+		<field name="place" type="String" />
+		<field name="roles" type="String" />
+		<field name="annexure_a" type="long" />
+		<field name="annexure_b_i" type="long" />
+		<field name="annexure_b_ii" type="long" />
+		<field name="annexure_c" type="long" />
+		<field name="conflict_rem1" type="String" />
+		<field name="monitoring_rem1" type="String" />
+		<field name="resolutions_rem1" type="String" />
+		<field name="resolutionsVoted1_rem1" type="String" />
+		<field name="adversealert_rem1" type="String" />
+		<field name="insInvestorSituation_rem1" type="String" />
+		<field name="annexureA_rem" type="String" />
+		<field name="annexureB_I_rem" type="String" />
+		<field name="annexureB_II_rem" type="String" />
+		<field name="annexureC_rem" type="String" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.QtrStewardshipReportScrutiny">
+		<field name="scrutinyid" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version_" type="double" />
+		<field name="userid" type="long" />
+		<field name="conflict_of_interest_rem" type="String" />
+		<field name="monitoring_situation_rem" type="String" />
+		<field name="resolutions_voted_rem" type="String" />
+		<field name="resolutionsVoted1_rem" type="String" />
+		<field name="adversealert_rem" type="String" />
+		<field name="insInvestorSituation_rem" type="String" />
+		<field name="annexure_a" type="String" />
+		<field name="annexure_b_i" type="String" />
+		<field name="annexure_b_ii" type="String" />
+		<field name="annexure_c" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.QuarterEnded">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="OneIa" type="String" />
+		<field name="OneIb" type="String" />
+		<field name="OneIIa" type="String" />
+		<field name="OneIIb" type="String" />
+		<field name="OneIIc" type="String" />
+		<field name="OneIId" type="String" />
+		<field name="OneIIIa" type="String" />
+		<field name="OneIIIb" type="String" />
+		<field name="OneIVa" type="String" />
+		<field name="OneV" type="String" />
+		<field name="TwoIa" type="String" />
+		<field name="TwoIb" type="String" />
+		<field name="TwoIc" type="String" />
+		<field name="TwoII" type="String" />
+		<field name="ThreeA" type="String" />
+		<field name="ThreeB" type="String" />
+		<field name="ThreeC" type="String" />
+		<field name="ThreeCi" type="String" />
+		<field name="ThreeCii" type="String" />
+		<field name="ThreeCiii" type="String" />
+		<field name="ThreeCiv" type="String" />
+		<field name="FourA" type="String" />
+		<field name="FourB" type="String" />
+		<field name="FourC" type="String" />
+		<field name="FiveI" type="String" />
+		<field name="FiveII" type="String" />
+		<field name="FiveIII" type="String" />
+		<field name="FiveIV" type="String" />
+		<field name="FiveVa" type="String" />
+		<field name="FiveVb" type="String" />
+		<field name="FiveVc" type="String" />
+		<field name="FiveVIa" type="String" />
+		<field name="FiveVIb" type="String" />
+		<field name="SixI" type="String" />
+		<field name="SixIIa" type="String" />
+		<field name="SixIIb" type="String" />
+		<field name="SevenIa" type="String" />
+		<field name="SevenIb" type="String" />
+		<field name="SevenIc" type="String" />
+		<field name="SevenId" type="String" />
+		<field name="SevenIe" type="String" />
+		<field name="EightIa" type="String" />
+		<field name="EightIb" type="String" />
+		<field name="EightII" type="String" />
+		<field name="EightIII" type="String" />
+		<field name="EightIV" type="String" />
+		<field name="EightV" type="String" />
+		<field name="EightVIa" type="String" />
+		<field name="EightVIb" type="String" />
+		<field name="EightVIIa" type="String" />
+		<field name="EightVIIb" type="String" />
+		<field name="EightVIII" type="String" />
+		<field name="NineA" type="String" />
+		<field name="NineB" type="String" />
+		<field name="Ten" type="String" />
+		<field name="ElevenA" type="String" />
+		<field name="ElevenB" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.Rejectionandreturn">
+		<field name="id" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="payment_id" type="long" />
+		<field name="ret_ref_no" type="String" />
+		<field name="source_acc_no_nodal" type="String" />
+		<field name="Source_Acc_No_IFSC" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="period" type="String" />
+		<field name="utr_no" type="String" />
+		<field name="mode_" type="String" />
+		<field name="utr_amount" type="BigDecimal" />
+		<field name="Beneficiary_Acc_No" type="long" />
+		<field name="nps_virtual_acc_no" type="Integer" />
+		<field name="nps_acc_name" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="long" />
+		<field name="reason_return" type="String" />
+		<field name="additional_comments" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="address_line1" type="String" />
+		<field name="address_line2" type="String" />
+		<field name="pincode" type="Integer" />
+		<field name="phone_no1" type="long" />
+		<field name="phone_no2" type="long" />
+		<field name="sender_receiver_info" type="String" />
+		<field name="return_tat" type="Integer" />
+		<field name="delay_remakrs" type="String" />
+		<field name="outward_srno" type="String" />
+		<field name="courier_consignment_no" type="String" />
+		<field name="cra" type="String" />
+		<field name="CreateDate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ReportDebit">
+		<field name="id" type="long" />
+		<field name="fin" type="String" />
+		<field name="scheme" type="String" />
+		<field name="company_name" type="String" />
+		<field name="security_code" type="String" />
+		<field name="isin" type="String" />
+		<field name="secdesc" type="String" />
+		<field name="sec" type="String" />
+		<field name="coupon" type="String" />
+		<field name="faceval" type="long" />
+		<field name="custhold" type="BigDecimal" />
+		<field name="transit" type="BigDecimal" />
+		<field name="loghold" type="BigDecimal" />
+		<field name="bse_rate" type="BigDecimal" />
+		<field name="bse_value" type="BigDecimal" />
+		<field name="nse_rate" type="BigDecimal" />
+		<field name="nse_value" type="BigDecimal" />
+		<field name="reportingdate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ReportEquity">
+		<field name="id" type="long" />
+		<field name="fin" type="String" />
+		<field name="scheme" type="String" />
+		<field name="company_name" type="String" />
+		<field name="security_code" type="String" />
+		<field name="isin" type="String" />
+		<field name="secdesc" type="String" />
+		<field name="sec" type="String" />
+		<field name="coupon" type="String" />
+		<field name="faceval" type="long" />
+		<field name="custhold" type="BigDecimal" />
+		<field name="transit" type="BigDecimal" />
+		<field name="loghold" type="BigDecimal" />
+		<field name="bse_rate" type="BigDecimal" />
+		<field name="bse_value" type="BigDecimal" />
+		<field name="nse_rate" type="BigDecimal" />
+		<field name="nse_value" type="BigDecimal" />
+		<field name="reportingdate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ReportMaster">
+		<field name="reportMasterId" type="long" />
+		<field name="reportType" type="String" />
+		<field name="reportName" type="String" />
+		<field name="uploaderRole" type="String" />
+		<field name="dueDate" type="String" />
+		<field name="cra" type="String" />
+		<field name="department" type="String" />
+		<field name="intermediarytype" type="long" />
+		<field name="pfrdaReport" type="int" />
+	</model>
+	<model name="com.daily.average.service.model.ReportStatusLog">
+		<field name="reportStatusLogId" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="status" type="int" />
+		<field name="isApproved" type="int" />
+		<field name="clazzName" type="String" />
+		<field name="userName" type="String" />
+		<field name="taskId" type="String" />
+		<field name="fileUrl" type="String" />
+		<field name="remarks" type="String" />
+		<field name="intermediaryname" type="String" />
+		<field name="intermediaryid" type="long" />
+		<field name="status_" type="String" />
+		<field name="submitedToNPST" type="int" />
+		<field name="reportType" type="String" />
+		<field name="reportName" type="String" />
+		<field name="uploaderRole" type="String" />
+		<field name="cra" type="String" />
+		<field name="department" type="String" />
+		<field name="intermediarytype" type="String" />
+		<field name="pfrdaReport" type="int" />
+		<field name="workflowInstanceId" type="long" />
+		<field name="assignedTo" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadFileLog">
+		<field name="reportUploadFileLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="fileEntryId" type="long" />
+		<field name="signature" type="String" />
+		<field name="fileList" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLog">
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded_i" type="Integer" />
+		<field name="intermediaryname" type="String" />
+		<field name="intermediaryid" type="long" />
+		<field name="status_" type="String" />
+		<field name="submitedToNPST" type="Integer" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogCRA">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogCRAAM">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogCustAMPFRDA">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogCustodian">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogGrievAMPFRDA">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogGrievances">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogMaker">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogNPST">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogPFM">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogPFMAM">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogPFMAMPFRDA">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogPFMCRA">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogPFMCustodian">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ReportUploadLogSupervisor">
+		<field name="uuid" type="String" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="reportMasterId" type="long" />
+		<field name="reportDate" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="uploaded" type="boolean" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+		<field name="statusKey" type="String" />
+	</model>
+	<model name="com.daily.average.service.model.ScrutinyInputQuarterlyInterval">
+		<field name="id_" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="oneia_rem" type="String" />
+		<field name="oneib_rem" type="String" />
+		<field name="oneiia_rem" type="String" />
+		<field name="oneiib_rem" type="String" />
+		<field name="oneiic_rem" type="String" />
+		<field name="oneiid_rem" type="String" />
+		<field name="oneiiia_rem" type="String" />
+		<field name="oneiiib_rem" type="String" />
+		<field name="oneiva_rem" type="String" />
+		<field name="onev_rem" type="String" />
+		<field name="twoia_rem" type="String" />
+		<field name="twoib_rem" type="String" />
+		<field name="twoic_rem" type="String" />
+		<field name="twoiione_rem" type="String" />
+		<field name="twoiitwo_rem" type="String" />
+		<field name="twoiithree_rem" type="String" />
+		<field name="twoiifour_rem" type="String" />
+		<field name="twoiifive_rem" type="String" />
+		<field name="twoiisix_rem" type="String" />
+		<field name="twoiiseven_rem" type="String" />
+		<field name="threea_rem" type="String" />
+		<field name="threeb_rem" type="String" />
+		<field name="threec_rem" type="String" />
+		<field name="threeci_rem" type="String" />
+		<field name="threecii_rem" type="String" />
+		<field name="threeciii_rem" type="String" />
+		<field name="threeciv_rem" type="String" />
+		<field name="foura_rem" type="String" />
+		<field name="fourb_rem" type="String" />
+		<field name="fourc_rem" type="String" />
+		<field name="fivei_rem" type="String" />
+		<field name="fiveii_rem" type="String" />
+		<field name="fiveiii_rem" type="String" />
+		<field name="fiveiv_rem" type="String" />
+		<field name="fiveva_rem" type="String" />
+		<field name="fivevb_rem" type="String" />
+		<field name="fivevc_rem" type="String" />
+		<field name="fivevia_rem" type="String" />
+		<field name="fivevib_rem" type="String" />
+		<field name="sixi_rem" type="String" />
+		<field name="sixiia_rem" type="String" />
+		<field name="sixiib_rem" type="String" />
+		<field name="sixiic_rem" type="String" />
+		<field name="sevenia_rem" type="String" />
+		<field name="sevenib_rem" type="String" />
+		<field name="sevenic_rem" type="String" />
+		<field name="sevenid_rem" type="String" />
+		<field name="sevenie_rem" type="String" />
+		<field name="eightia_rem" type="String" />
+		<field name="eightib_rem" type="String" />
+		<field name="eightii_rem" type="String" />
+		<field name="eightiii_rem" type="String" />
+		<field name="eightiv_rem" type="String" />
+		<field name="eightv_rem" type="String" />
+		<field name="eightvia_rem" type="String" />
+		<field name="eightvib_rem" type="String" />
+		<field name="eightviia_rem" type="String" />
+		<field name="eightviib_rem" type="String" />
+		<field name="eightviii_rem" type="String" />
+		<field name="eightix_rem" type="String" />
+		<field name="eightx_rem" type="String" />
+		<field name="ninea_rem" type="String" />
+		<field name="nineb_rem" type="String" />
+		<field name="ten_rem" type="String" />
+		<field name="elevena_rem" type="String" />
+		<field name="elevenb_rem" type="String" />
+		<field name="twelve_rem" type="String" />
+		<field name="annex_i_rem" type="String" />
+		<field name="board_a_rem" type="String" />
+		<field name="board_b_rem" type="String" />
+		<field name="investment_a_rem" type="String" />
+		<field name="investment_b_rem" type="String" />
+		<field name="risk_a_rem" type="String" />
+		<field name="risk_b_rem" type="String" />
+		<field name="annex_ii_rem" type="String" />
+		<field name="annex_iii_rem" type="String" />
+		<field name="annex_iv_rem" type="String" />
+		<field name="annex_comp_certificate_rem" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.SrlForm">
+		<field name="id" type="long" />
+		<field name="one" type="String" />
+		<field name="time_1" type="Date" />
+		<field name="remarks_1" type="String" />
+		<field name="two" type="String" />
+		<field name="time_2" type="Date" />
+		<field name="remarks_2" type="String" />
+		<field name="three" type="String" />
+		<field name="time_3" type="Date" />
+		<field name="remarks_3" type="String" />
+		<field name="four" type="String" />
+		<field name="time_4" type="Date" />
+		<field name="remarks_4" type="String" />
+		<field name="five" type="String" />
+		<field name="time_5" type="Date" />
+		<field name="remarks_5" type="String" />
+		<field name="six" type="String" />
+		<field name="time_6" type="Date" />
+		<field name="remarks_6" type="String" />
+		<field name="seven" type="String" />
+		<field name="time_7" type="Date" />
+		<field name="remarks_7" type="String" />
+		<field name="eight" type="String" />
+		<field name="time_8" type="Date" />
+		<field name="remarks_8" type="String" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.StatusDays">
+		<field name="id_" type="long" />
+		<field name="sector" type="String" />
+		<field name="grievances_escalated_to_pfrda" type="Integer" />
+		<field name="grievances_resolved_in_45_days" type="Integer" />
+		<field name="grievance_pending_post_45_days" type="Integer" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.StatusDaysOne">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="token_number" type="String" />
+		<field name="pran_id_created_by" type="long" />
+		<field name="current_dates" type="Date" />
+		<field name="status" type="String" />
+		<field name="grievance_logging_date" type="Date" />
+		<field name="raised_by" type="String" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="pr_ao_reg_no" type="String" />
+		<field name="pr_ao_name" type="String" />
+		<field name="sector" type="String" />
+		<field name="sector_type" type="String" />
+		<field name="ministry_name" type="String" />
+		<field name="state_name " type="String" />
+		<field name="broad_category" type="String" />
+		<field name="grievance_text" type="String" />
+		<field name="followup_action_1" type="Date" />
+		<field name="followup_action_2" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.StatusDaysTwo">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="token_number" type="String" />
+		<field name="pran_id_created_by" type="long" />
+		<field name="current_dates" type="Date" />
+		<field name="status" type="String" />
+		<field name="grievance_logging_date" type="Date" />
+		<field name="raised_by" type="String" />
+		<field name="nlao_reg_no" type="String" />
+		<field name="nlao_name" type="String" />
+		<field name="nloo_reg_no" type="String" />
+		<field name="nloo_name" type="String" />
+		<field name="sector" type="String" />
+		<field name="broad_category" type="String" />
+		<field name="grievance_text" type="String" />
+		<field name="followup_action_1" type="Date" />
+		<field name="followup_action_2" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.TaggedbyNPSOne">
+		<field name="id" type="long" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="String" />
+		<field name="statusi" type="String" />
+		<field name="logging_date" type="String" />
+		<field name="reisedby" type="String" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="pr_ao_no" type="String" />
+		<field name="pr_ao_name" type="String" />
+		<field name="ministry_name" type="String" />
+		<field name="sectori" type="String" />
+		<field name="state_name " type="String" />
+		<field name="category" type="String" />
+		<field name="text_" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.TaggedbyNPSTwo">
+		<field name="id" type="long" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="String" />
+		<field name="statusi" type="String" />
+		<field name="logging_date" type="String" />
+		<field name="reisedby" type="String" />
+		<field name="nlao_reg_no" type="String" />
+		<field name="nlao_name" type="String" />
+		<field name="nloo_no" type="String" />
+		<field name="nloo_name" type="String" />
+		<field name="sectori" type="String" />
+		<field name="category" type="String" />
+		<field name="text_" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.ValuationRepoTb">
+		<field name="id" type="long" />
+		<field name="client_code" type="String" />
+		<field name="isin" type="String" />
+		<field name="isin_desc" type="String" />
+		<field name="maturity_date" type="Date" />
+		<field name="free_securities_rs" type="long" />
+		<field name="pledge_value_held_rs" type="long" />
+		<field name="securities_in_transit_rs" type="long" />
+		<field name="total_face_value_held_rs" type="long" />
+		<field name="rate" type="BigDecimal" />
+		<field name="value" type="BigDecimal" />
+		<field name="reportingdate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.valuationRepSg">
+		<field name="id_" type="long" />
+		<field name="client_code" type="String" />
+		<field name="isin" type="String" />
+		<field name="isin_desc" type="String" />
+		<field name="maturity_date" type="Date" />
+		<field name="free_securities_rs" type="long" />
+		<field name="pledge_value_held_rs" type="long" />
+		<field name="securities_in_transit_rs" type="long" />
+		<field name="total_face_value_held_rs" type="long" />
+		<field name="rate" type="BigDecimal" />
+		<field name="value_" type="BigDecimal" />
+		<field name="reportingdate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.VMatrix">
+		<field name="id_" type="long" />
+		<field name="meeting_date" type="Date" />
+		<field name="isin" type="String" />
+		<field name="company_name" type="String" />
+		<field name="meeting_type" type="String" />
+		<field name="resolution_category" type="String" />
+		<field name="resolution_dtls" type="String" />
+		<field name="resolution_type" type="String" />
+		<field name="lic_vote" type="String" />
+		<field name="lic_rationale_vote_recomm" type="String" />
+		<field name="lic_shares_held" type="BigDecimal" />
+		<field name="uti_vote" type="String" />
+		<field name="uti_rationale_vote_recomm" type="String" />
+		<field name="uti_shares_held" type="BigDecimal" />
+		<field name="sbi_vote" type="String" />
+		<field name="sbi_rationale_vote_recomm" type="String" />
+		<field name="sbi_shares_held" type="BigDecimal" />
+		<field name="hdfc_vote" type="String" />
+		<field name="hdfc_rationale_vote_recomm" type="String" />
+		<field name="hdfc_shares_held" type="BigDecimal" />
+		<field name="icici_vote" type="String" />
+		<field name="icici_rationale_vote_recomm" type="String" />
+		<field name="icici_shares_held" type="BigDecimal" />
+		<field name="kotak_vote" type="String" />
+		<field name="kotak_rationale_vote_recomm" type="String" />
+		<field name="kotak_shares_held" type="BigDecimal" />
+		<field name="birla_vote" type="String" />
+		<field name="birla_rationale_vote_recomm" type="String" />
+		<field name="birla_shares_held" type="BigDecimal" />
+		<field name="axis_vote" type="String" />
+		<field name="axis_rationale_vote_recomm" type="String" />
+		<field name="axis_shares_held" type="long" />
+		<field name="tata_vote" type="String" />
+		<field name="tata_rationale_vote_recomm" type="String" />
+		<field name="tata_shares_held" type="long" />
+		<field name="max_vote" type="String" />
+		<field name="max_rationale_vote_recomm" type="String" />
+		<field name="max_shares_held" type="long" />
+		<field name="dsp_vote" type="String" />
+		<field name="dsp_rationale_vote_recomm" type="String" />
+		<field name="dsp_shares_held" type="long" />
+		<field name="total_shareholding_nps_comb" type="BigDecimal" />
+		<field name="prcnt_total_shares_held_comb" type="BigDecimal" />
+		<field name="majority_vote_pfm_combined" type="String" />
+		<field name="ses_vote_recomm" type="String" />
+		<field name="ses_rationale_vote_recomm" type="String" />
+		<field name="pr_of_total_shares_held_prom" type="BigDecimal" />
+		<field name="votes_polled_promoter" type="BigDecimal" />
+		<field name="votes_in_favor_promoter" type="BigDecimal" />
+		<field name="votes_in_against_promoter" type="BigDecimal" />
+		<field name="prcnt_total_shares_held_inst" type="BigDecimal" />
+		<field name="votes_polled_inst" type="BigDecimal" />
+		<field name="votes_in_favor_inst" type="BigDecimal" />
+		<field name="votes_in_against_inst" type="BigDecimal" />
+		<field name="prcnt_total_shares_held_retail" type="BigDecimal" />
+		<field name="votes_polled_retail" type="BigDecimal" />
+		<field name="votes_in_favor_retail" type="BigDecimal" />
+		<field name="votes_in_against_retail" type="BigDecimal" />
+		<field name="votes_polled" type="BigDecimal" />
+		<field name="for_" type="BigDecimal" />
+		<field name="against" type="BigDecimal" />
+		<field name="outcome" type="String" />
+		<field name="ses_report" type="String" />
+		<field name="reportingDate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.VoteMatrixPfm">
+		<field name="id_" type="long" />
+		<field name="meeting_date" type="String" />
+		<field name="isin" type="String" />
+		<field name="company_name" type="String" />
+		<field name="meeting_type" type="String" />
+		<field name="resolution_category" type="String" />
+		<field name="resolution_dtls" type="String" />
+		<field name="resolution_type" type="String" />
+		<field name="lic_vote" type="String" />
+		<field name="lic_rationale_vote_recomm" type="String" />
+		<field name="lic_shares_held" type="String" />
+		<field name="uti_vote" type="String" />
+		<field name="uti_rationale_vote_recomm" type="String" />
+		<field name="uti_shares_held" type="String" />
+		<field name="sbi_vote" type="String" />
+		<field name="sbi_rationale_vote_recomm" type="String" />
+		<field name="sbi_shares_held" type="String" />
+		<field name="hdfc_vote" type="String" />
+		<field name="hdfc_rationale_vote_recomm" type="String" />
+		<field name="hdfc_shares_held" type="String" />
+		<field name="icici_vote" type="String" />
+		<field name="icici_rationale_vote_recomm" type="String" />
+		<field name="icici_shares_held" type="String" />
+		<field name="kotak_vote" type="String" />
+		<field name="kotak_rationale_vote_recomm" type="String" />
+		<field name="kotak_shares_held" type="String" />
+		<field name="birla_vote" type="String" />
+		<field name="birla_rationale_vote_recomm" type="String" />
+		<field name="birla_shares_held" type="String" />
+		<field name="total_shareholding_nps_comb" type="String" />
+		<field name="per_of_total_shares_held_comb" type="String" />
+		<field name="majority_vote_pfm_combined" type="String" />
+		<field name="ses_vote_recomm" type="String" />
+		<field name="ses_rationale_vote_recomm" type="String" />
+		<field name="per_of_total_shares_held_prom" type="String" />
+		<field name="votes_polled_promoter" type="String" />
+		<field name="votes_in_favor_promoter" type="String" />
+		<field name="votes_in_against_promoter" type="String" />
+		<field name="per_of_total_shares_held_inst" type="String" />
+		<field name="votes_polled_inst" type="String" />
+		<field name="votes_in_favor_inst" type="String" />
+		<field name="votes_in_against_inst" type="String" />
+		<field name="per_of_total_shares_held_ret" type="String" />
+		<field name="votes_polled_retail" type="String" />
+		<field name="votes_in_favor_retail" type="String" />
+		<field name="votes_in_against_retail" type="String" />
+		<field name="votes_polled" type="String" />
+		<field name="for_" type="String" />
+		<field name="against" type="String" />
+		<field name="outcome" type="String" />
+		<field name="ses_report" type="String" />
+		<field name="iias_vote_recomm" type="String" />
+		<field name="iias_rationale_vote_recomm" type="String" />
+		<field name="divergence_pf_vs_ses" type="String" />
+		<field name="divergence_pf_vs_iias" type="String" />
+		<field name="divergence_ses_vs_iias" type="String" />
+		<field name="div_pfm_vs_both_proxy_adv" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.VotingReportConsolidated">
+		<field name="id_" type="long" />
+		<field name="sno" type="String" />
+		<field name="company_name" type="String" />
+		<field name="isin" type="String" />
+		<field name="meeting_date" type="Date" />
+		<field name="majority_vote" type="String" />
+		<field name="no_of_resolution" type="BigDecimal" />
+		<field name="lic_pf_for" type="BigDecimal" />
+		<field name="lic_pf_abstain" type="BigDecimal" />
+		<field name="lic_pf_against" type="BigDecimal" />
+		<field name="uti_pf_for" type="BigDecimal" />
+		<field name="uti_pf_abstain" type="BigDecimal" />
+		<field name="uti_pf_against" type="BigDecimal" />
+		<field name="sbi_pf_for" type="BigDecimal" />
+		<field name="sbi_pf_abstain" type="BigDecimal" />
+		<field name="sbi_pf_against" type="BigDecimal" />
+		<field name="hdfc_pf_for" type="BigDecimal" />
+		<field name="hdfc_pf_abstain" type="BigDecimal" />
+		<field name="hdfc_pf_against" type="BigDecimal" />
+		<field name="icici_pf_for" type="BigDecimal" />
+		<field name="icici_pf_abstain" type="BigDecimal" />
+		<field name="icici_pf_against" type="BigDecimal" />
+		<field name="kotak_pf_for" type="BigDecimal" />
+		<field name="kotak_pf_abstain" type="BigDecimal" />
+		<field name="kotak_pf_against" type="BigDecimal" />
+		<field name="birla_pf_for" type="BigDecimal" />
+		<field name="birla_pf_abstain" type="BigDecimal" />
+		<field name="birla_pf_against" type="BigDecimal" />
+		<field name="axis_pf_for" type="BigDecimal" />
+		<field name="axis_pf_abstain" type="BigDecimal" />
+		<field name="axis_pf_against" type="BigDecimal" />
+		<field name="tata_pf_for" type="BigDecimal" />
+		<field name="tata_pf_abstain" type="BigDecimal" />
+		<field name="tata_pf_against" type="BigDecimal" />
+		<field name="max_pf_for" type="BigDecimal" />
+		<field name="max_pf_abstain" type="BigDecimal" />
+		<field name="max_pf_against" type="BigDecimal" />
+		<field name="dsp_pf_for" type="BigDecimal" />
+		<field name="dsp_pf_abstain" type="BigDecimal" />
+		<field name="dsp_pf_against" type="BigDecimal" />
+		<field name="ses_id" type="BigDecimal" />
+		<field name="ses_resid" type="BigDecimal" />
+		<field name="reportingDate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.VotingReportNoOfResolution">
+		<field name="id_" type="long" />
+		<field name="sno" type="BigDecimal" />
+		<field name="company_name" type="String" />
+		<field name="Meeting_Date" type="Date" />
+		<field name="Resolutions" type="String" />
+		<field name="Resolution_Details" type="String" />
+		<field name="ses_id" type="BigDecimal" />
+		<field name="ses_resid" type="BigDecimal" />
+		<field name="reportingDate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.VotingReportSes">
+		<field name="id_" type="long" />
+		<field name="company_name" type="String" />
+		<field name="isin" type="String" />
+		<field name="meet_date" type="Date" />
+		<field name="meeting_type" type="String" />
+		<field name="evoting_platform" type="String" />
+		<field name="resolution_sr_no" type="BigDecimal" />
+		<field name="resolution_type" type="String" />
+		<field name="resolution_dtls" type="String" />
+		<field name="ses_recomm" type="String" />
+		<field name="rationale" type="String" />
+		<field name="lic_pf" type="String" />
+		<field name="uti_pf" type="String" />
+		<field name="sbi_pf" type="String" />
+		<field name="hdfc_pf" type="String" />
+		<field name="icici_pf" type="String" />
+		<field name="kotak_pf" type="String" />
+		<field name="birla_pf" type="String" />
+		<field name="axis_pf" type="String" />
+		<field name="tata_pf" type="String" />
+		<field name="max_pf" type="String" />
+		<field name="dsp_pf" type="String" />
+		<field name="majority_vote" type="String" />
+		<field name="reportingDate" type="Date" />
+		<field name="ses_id" type="BigDecimal" />
+		<field name="ses_resid" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.WebsiteJune">
+		<field name="id" type="long" />
+		<field name="date_" type="Date" />
+		<field name="nps_sector" type="String" />
+		<field name="no_of_subscribers" type="Long" />
+		<field name="total_contribution_m_and_b" type="BigDecimal" />
+		<field name="aum" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.average.service.model.Weekly">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="long" />
+		<field name="date_of_latest_nav" type="Date" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_code" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="sector" type="String" />
+		<field name="no_of_subscribers" type="long" />
+		<field name="aum" type="BigDecimal" />
+		<field name="latest_nav" type="BigDecimal" />
+		<field name="prior_one_year_nav" type="BigDecimal" />
+		<field name="prior_three_year_nav" type="BigDecimal" />
+		<field name="prior_five_year_nav" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+</model-hints>

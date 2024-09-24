@@ -1,0 +1,4 @@
+Bundle-Name: Cra_Nps_Trust
+Bundle-SymbolicName: com.cra.nps.trust
+Bundle-Version: 1.0.0
+Export-Package: com.cra.nps.trust.constants

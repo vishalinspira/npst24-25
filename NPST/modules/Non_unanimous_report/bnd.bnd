@@ -1,0 +1,4 @@
+Bundle-Name: Non_unanimous_report
+Bundle-SymbolicName: com.unanimous.report
+Bundle-Version: 1.0.0
+Export-Package: com.unanimous.report.constants

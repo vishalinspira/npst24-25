@@ -1,0 +1,4 @@
+Bundle-Name: Annexure11ConcurrentAuditorscertificate
+Bundle-SymbolicName: com.annexure.eleven.auditors.certificate
+Bundle-Version: 1.0.0
+Export-Package: com.annexure.eleven.auditors.certificate.constants

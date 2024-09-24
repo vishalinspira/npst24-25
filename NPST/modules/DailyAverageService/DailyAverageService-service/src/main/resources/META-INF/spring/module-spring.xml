@@ -1,0 +1,556 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.daily.average.service.service.impl.AccountStatementLocalServiceImpl" id="com.daily.average.service.service.AccountStatementLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AccountStatementPersistenceImpl" id="com.daily.average.service.service.persistence.AccountStatementPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AccountStatementTransactionLocalServiceImpl" id="com.daily.average.service.service.AccountStatementTransactionLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AccountStatementTransactionPersistenceImpl" id="com.daily.average.service.service.persistence.AccountStatementTransactionPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnextureXaLocalServiceImpl" id="com.daily.average.service.service.AnnextureXaLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnextureXaPersistenceImpl" id="com.daily.average.service.service.persistence.AnnextureXaPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureALocalServiceImpl" id="com.daily.average.service.service.AnnexureALocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureAPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.annexureB_CaseSummaryLocalServiceImpl" id="com.daily.average.service.service.annexureB_CaseSummaryLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.annexureB_CaseSummaryPersistenceImpl" id="com.daily.average.service.service.persistence.annexureB_CaseSummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureFourALocalServiceImpl" id="com.daily.average.service.service.AnnexureFourALocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureFourAPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureFourAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureivaLocalServiceImpl" id="com.daily.average.service.service.AnnexureivaLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureivaPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureivaPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureivbLocalServiceImpl" id="com.daily.average.service.service.AnnexureivbLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureivbPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureivbPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureivcLocalServiceImpl" id="com.daily.average.service.service.AnnexureivcLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureivcPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureivcPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureivdLocalServiceImpl" id="com.daily.average.service.service.AnnexureivdLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureivdPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureivdPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureOneBTableOneLocalServiceImpl" id="com.daily.average.service.service.AnnexureOneBTableOneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureOneBTableOnePersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureOneBTableOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureOneBTableTwoLocalServiceImpl" id="com.daily.average.service.service.AnnexureOneBTableTwoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureOneBTableTwoPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureOneBTableTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureTwoBLocalServiceImpl" id="com.daily.average.service.service.AnnexureTwoBLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureTwoBPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureTwoBPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexureXivLocalServiceImpl" id="com.daily.average.service.service.AnnexureXivLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexureXivPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexureXivPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexvarejectionLocalServiceImpl" id="com.daily.average.service.service.AnnexvarejectionLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexvarejectionPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexvarejectionPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexVILocalServiceImpl" id="com.daily.average.service.service.AnnexVILocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexVIPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexVIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexviiaKfintechLocalServiceImpl" id="com.daily.average.service.service.AnnexviiaKfintechLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexviiaKfintechPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexviiaKfintechPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnexviiaNsdlLocalServiceImpl" id="com.daily.average.service.service.AnnexviiaNsdlLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnexviiaNsdlPersistenceImpl" id="com.daily.average.service.service.persistence.AnnexviiaNsdlPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.annual_audited_scheme_financials_1LocalServiceImpl" id="com.daily.average.service.service.annual_audited_scheme_financials_1LocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.annual_audited_scheme_financials_1PersistenceImpl" id="com.daily.average.service.service.persistence.annual_audited_scheme_financials_1Persistence" />
+	<bean class="com.daily.average.service.service.impl.annual_audited_scheme_financials_2LocalServiceImpl" id="com.daily.average.service.service.annual_audited_scheme_financials_2LocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.annual_audited_scheme_financials_2PersistenceImpl" id="com.daily.average.service.service.persistence.annual_audited_scheme_financials_2Persistence" />
+	<bean class="com.daily.average.service.service.impl.annual_audited_scheme_financials_3LocalServiceImpl" id="com.daily.average.service.service.annual_audited_scheme_financials_3LocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.annual_audited_scheme_financials_3PersistenceImpl" id="com.daily.average.service.service.persistence.annual_audited_scheme_financials_3Persistence" />
+	<bean class="com.daily.average.service.service.impl.annual_audited_scheme_financials_4LocalServiceImpl" id="com.daily.average.service.service.annual_audited_scheme_financials_4LocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.annual_audited_scheme_financials_4PersistenceImpl" id="com.daily.average.service.service.persistence.annual_audited_scheme_financials_4Persistence" />
+	<bean class="com.daily.average.service.service.impl.AnnualCompCertificateLocalServiceImpl" id="com.daily.average.service.service.AnnualCompCertificateLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnualCompCertificatePersistenceImpl" id="com.daily.average.service.service.persistence.AnnualCompCertificatePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnualCompCertificateScrutinyLocalServiceImpl" id="com.daily.average.service.service.AnnualCompCertificateScrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnualCompCertificateScrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.AnnualCompCertificateScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnualComplianceReportLocalServiceImpl" id="com.daily.average.service.service.AnnualComplianceReportLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnualComplianceReportPersistenceImpl" id="com.daily.average.service.service.persistence.AnnualComplianceReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnualEvotingLocalServiceImpl" id="com.daily.average.service.service.AnnualEvotingLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnualEvotingPersistenceImpl" id="com.daily.average.service.service.persistence.AnnualEvotingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnualProxyPfmILocalServiceImpl" id="com.daily.average.service.service.AnnualProxyPfmILocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnualProxyPfmIPersistenceImpl" id="com.daily.average.service.service.persistence.AnnualProxyPfmIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnualProxyPfmIILocalServiceImpl" id="com.daily.average.service.service.AnnualProxyPfmIILocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnualProxyPfmIIPersistenceImpl" id="com.daily.average.service.service.persistence.AnnualProxyPfmIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AnnualProxyPfmIIILocalServiceImpl" id="com.daily.average.service.service.AnnualProxyPfmIIILocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AnnualProxyPfmIIIPersistenceImpl" id="com.daily.average.service.service.persistence.AnnualProxyPfmIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.AuditorCertificateLocalServiceImpl" id="com.daily.average.service.service.AuditorCertificateLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.AuditorCertificatePersistenceImpl" id="com.daily.average.service.service.persistence.AuditorCertificatePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.BenchSchemeReturnsLocalServiceImpl" id="com.daily.average.service.service.BenchSchemeReturnsLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.BenchSchemeReturnsPersistenceImpl" id="com.daily.average.service.service.persistence.BenchSchemeReturnsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.BenchSchemeReturnsMonthlyLocalServiceImpl" id="com.daily.average.service.service.BenchSchemeReturnsMonthlyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.BenchSchemeReturnsMonthlyPersistenceImpl" id="com.daily.average.service.service.persistence.BenchSchemeReturnsMonthlyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.BenchSchemeReturnsSinceLocalServiceImpl" id="com.daily.average.service.service.BenchSchemeReturnsSinceLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.BenchSchemeReturnsSincePersistenceImpl" id="com.daily.average.service.service.persistence.BenchSchemeReturnsSincePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.BenchSchemeReturnsSinceMonthlyLocalServiceImpl" id="com.daily.average.service.service.BenchSchemeReturnsSinceMonthlyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.BenchSchemeReturnsSinceMonthlyPersistenceImpl" id="com.daily.average.service.service.persistence.BenchSchemeReturnsSinceMonthlyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CategarywiseOneLocalServiceImpl" id="com.daily.average.service.service.CategarywiseOneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CategarywiseOnePersistenceImpl" id="com.daily.average.service.service.persistence.CategarywiseOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CategarywiseTwoLocalServiceImpl" id="com.daily.average.service.service.CategarywiseTwoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CategarywiseTwoPersistenceImpl" id="com.daily.average.service.service.persistence.CategarywiseTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CollateralDetailsLocalServiceImpl" id="com.daily.average.service.service.CollateralDetailsLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CollateralDetailsPersistenceImpl" id="com.daily.average.service.service.persistence.CollateralDetailsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CraEnpsLocalServiceImpl" id="com.daily.average.service.service.CraEnpsLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CraEnpsPersistenceImpl" id="com.daily.average.service.service.persistence.CraEnpsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CustAnnualAuditReportLocalServiceImpl" id="com.daily.average.service.service.CustAnnualAuditReportLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CustAnnualAuditReportPersistenceImpl" id="com.daily.average.service.service.persistence.CustAnnualAuditReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CustAnnualReportscrutinyLocalServiceImpl" id="com.daily.average.service.service.CustAnnualReportscrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CustAnnualReportscrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.CustAnnualReportscrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CustIARLocalServiceImpl" id="com.daily.average.service.service.CustIARLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CustIARPersistenceImpl" id="com.daily.average.service.service.persistence.CustIARPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CustIARScrutinyLocalServiceImpl" id="com.daily.average.service.service.CustIARScrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CustIARScrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.CustIARScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CustodianCompFormLocalServiceImpl" id="com.daily.average.service.service.CustodianCompFormLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CustodianCompFormPersistenceImpl" id="com.daily.average.service.service.persistence.CustodianCompFormPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.CustodianCompFormScrutinyLocalServiceImpl" id="com.daily.average.service.service.CustodianCompFormScrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.CustodianCompFormScrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.CustodianCompFormScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.DailyAverageLocalServiceImpl" id="com.daily.average.service.service.DailyAverageLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.DailyAveragePersistenceImpl" id="com.daily.average.service.service.persistence.DailyAveragePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.DARLocalServiceImpl" id="com.daily.average.service.service.DARLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.DARPersistenceImpl" id="com.daily.average.service.service.persistence.DARPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.DARScrutinyLocalServiceImpl" id="com.daily.average.service.service.DARScrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.DARScrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.DARScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.EscGrievancesNpstLocalServiceImpl" id="com.daily.average.service.service.EscGrievancesNpstLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.EscGrievancesNpstPersistenceImpl" id="com.daily.average.service.service.persistence.EscGrievancesNpstPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.EVotingSummaryPfmLocalServiceImpl" id="com.daily.average.service.service.EVotingSummaryPfmLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.EVotingSummaryPfmPersistenceImpl" id="com.daily.average.service.service.persistence.EVotingSummaryPfmPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ExcelaccountLocalServiceImpl" id="com.daily.average.service.service.ExcelaccountLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ExcelaccountPersistenceImpl" id="com.daily.average.service.service.persistence.ExcelaccountPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceFinalIntimPaoLocalServiceImpl" id="com.daily.average.service.service.GrievanceFinalIntimPaoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceFinalIntimPaoPersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceFinalIntimPaoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceFinalIntimregliteLocalServiceImpl" id="com.daily.average.service.service.GrievanceFinalIntimregliteLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceFinalIntimreglitePersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceFinalIntimreglitePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceshandlerLocalServiceImpl" id="com.daily.average.service.service.GrievanceshandlerLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceshandlerPersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceshandlerPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceTopFivechowiseLocalServiceImpl" id="com.daily.average.service.service.GrievanceTopFivechowiseLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceTopFivechowisePersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceTopFivechowisePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceTopFiveDetailsLocalServiceImpl" id="com.daily.average.service.service.GrievanceTopFiveDetailsLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceTopFiveDetailsPersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceTopFiveDetailsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceTopFiveEntitiesMonthLocalServiceImpl" id="com.daily.average.service.service.GrievanceTopFiveEntitiesMonthLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceTopFiveEntitiesMonthPersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceTopFiveEntitiesMonthPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceTopFiveMinistrywiseLocalServiceImpl" id="com.daily.average.service.service.GrievanceTopFiveMinistrywiseLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceTopFiveMinistrywisePersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceTopFiveMinistrywisePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceTopFivepopwiseLocalServiceImpl" id="com.daily.average.service.service.GrievanceTopFivepopwiseLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceTopFivepopwisePersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceTopFivepopwisePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievanceTopFivestatewiseLocalServiceImpl" id="com.daily.average.service.service.GrievanceTopFivestatewiseLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievanceTopFivestatewisePersistenceImpl" id="com.daily.average.service.service.persistence.GrievanceTopFivestatewisePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievPendingOneLocalServiceImpl" id="com.daily.average.service.service.GrievPendingOneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievPendingOnePersistenceImpl" id="com.daily.average.service.service.persistence.GrievPendingOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrievPendingTwoLocalServiceImpl" id="com.daily.average.service.service.GrievPendingTwoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrievPendingTwoPersistenceImpl" id="com.daily.average.service.service.persistence.GrievPendingTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrowthDataOneLocalServiceImpl" id="com.daily.average.service.service.GrowthDataOneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrowthDataOnePersistenceImpl" id="com.daily.average.service.service.persistence.GrowthDataOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.GrowthDataTwoLocalServiceImpl" id="com.daily.average.service.service.GrowthDataTwoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.GrowthDataTwoPersistenceImpl" id="com.daily.average.service.service.persistence.GrowthDataTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.HDFCInternal_Audit_ReportLocalServiceImpl" id="com.daily.average.service.service.HDFCInternal_Audit_ReportLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.HDFCInternal_Audit_ReportPersistenceImpl" id="com.daily.average.service.service.persistence.HDFCInternal_Audit_ReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.HDFCInternal_Audit_Report_ScrutinyLocalServiceImpl" id="com.daily.average.service.service.HDFCInternal_Audit_Report_ScrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.HDFCInternal_Audit_Report_ScrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.HDFCInternal_Audit_Report_ScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.InputQuarterlyIntervalLocalServiceImpl" id="com.daily.average.service.service.InputQuarterlyIntervalLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.InputQuarterlyIntervalPersistenceImpl" id="com.daily.average.service.service.persistence.InputQuarterlyIntervalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.IntermediaryListLocalServiceImpl" id="com.daily.average.service.service.IntermediaryListLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.IntermediaryListPersistenceImpl" id="com.daily.average.service.service.persistence.IntermediaryListPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.InternalAuditReportLocalServiceImpl" id="com.daily.average.service.service.InternalAuditReportLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.InternalAuditReportPersistenceImpl" id="com.daily.average.service.service.persistence.InternalAuditReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MajorityVotePfmLocalServiceImpl" id="com.daily.average.service.service.MajorityVotePfmLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MajorityVotePfmPersistenceImpl" id="com.daily.average.service.service.persistence.MajorityVotePfmPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ManagementFeeLocalServiceImpl" id="com.daily.average.service.service.ManagementFeeLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ManagementFeePersistenceImpl" id="com.daily.average.service.service.persistence.ManagementFeePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ManagementRateLocalServiceImpl" id="com.daily.average.service.service.ManagementRateLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ManagementRatePersistenceImpl" id="com.daily.average.service.service.persistence.ManagementRatePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ManagementSummaryLocalServiceImpl" id="com.daily.average.service.service.ManagementSummaryLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ManagementSummaryPersistenceImpl" id="com.daily.average.service.service.persistence.ManagementSummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.Manpowerform_iLocalServiceImpl" id="com.daily.average.service.service.Manpowerform_iLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.Manpowerform_iPersistenceImpl" id="com.daily.average.service.service.persistence.Manpowerform_iPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.Manpowerform_iiLocalServiceImpl" id="com.daily.average.service.service.Manpowerform_iiLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.Manpowerform_iiPersistenceImpl" id="com.daily.average.service.service.persistence.Manpowerform_iiPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnAssetNotUnderCustodyLocalServiceImpl" id="com.daily.average.service.service.MnAssetNotUnderCustodyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnAssetNotUnderCustodyPersistenceImpl" id="com.daily.average.service.service.persistence.MnAssetNotUnderCustodyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnAucSummaryLocalServiceImpl" id="com.daily.average.service.service.MnAucSummaryLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnAucSummaryPersistenceImpl" id="com.daily.average.service.service.persistence.MnAucSummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnCompCertificateLocalServiceImpl" id="com.daily.average.service.service.MnCompCertificateLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnCompCertificatePersistenceImpl" id="com.daily.average.service.service.persistence.MnCompCertificatePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnCompCertificateScrutinyLocalServiceImpl" id="com.daily.average.service.service.MnCompCertificateScrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnCompCertificateScrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.MnCompCertificateScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnCustTdsChallanDetailLocalServiceImpl" id="com.daily.average.service.service.MnCustTdsChallanDetailLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnCustTdsChallanDetailPersistenceImpl" id="com.daily.average.service.service.persistence.MnCustTdsChallanDetailPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnCustTdsNonsalaryLocalServiceImpl" id="com.daily.average.service.service.MnCustTdsNonsalaryLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnCustTdsNonsalaryPersistenceImpl" id="com.daily.average.service.service.persistence.MnCustTdsNonsalaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnGrievWthdrwlAgingAnalysisLocalServiceImpl" id="com.daily.average.service.service.MnGrievWthdrwlAgingAnalysisLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnGrievWthdrwlAgingAnalysisPersistenceImpl" id="com.daily.average.service.service.persistence.MnGrievWthdrwlAgingAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnNpaDevelopmentLocalServiceImpl" id="com.daily.average.service.service.MnNpaDevelopmentLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnNpaDevelopmentPersistenceImpl" id="com.daily.average.service.service.persistence.MnNpaDevelopmentPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnNpsFinalSummaryLocalServiceImpl" id="com.daily.average.service.service.MnNpsFinalSummaryLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnNpsFinalSummaryPersistenceImpl" id="com.daily.average.service.service.persistence.MnNpsFinalSummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnReportWthdrwlAgingAnalysLocalServiceImpl" id="com.daily.average.service.service.MnReportWthdrwlAgingAnalysLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnReportWthdrwlAgingAnalysPersistenceImpl" id="com.daily.average.service.service.persistence.MnReportWthdrwlAgingAnalysPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnSpecialProvisionOnWthdrwlLocalServiceImpl" id="com.daily.average.service.service.MnSpecialProvisionOnWthdrwlLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnSpecialProvisionOnWthdrwlPersistenceImpl" id="com.daily.average.service.service.persistence.MnSpecialProvisionOnWthdrwlPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnStatusOfWidrawalReportedLocalServiceImpl" id="com.daily.average.service.service.MnStatusOfWidrawalReportedLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnStatusOfWidrawalReportedPersistenceImpl" id="com.daily.average.service.service.persistence.MnStatusOfWidrawalReportedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnSubsAnnuityPurchaseLocalServiceImpl" id="com.daily.average.service.service.MnSubsAnnuityPurchaseLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnSubsAnnuityPurchasePersistenceImpl" id="com.daily.average.service.service.persistence.MnSubsAnnuityPurchasePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.MnWidrawalRelatedSubsGrievLocalServiceImpl" id="com.daily.average.service.service.MnWidrawalRelatedSubsGrievLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.MnWidrawalRelatedSubsGrievPersistenceImpl" id="com.daily.average.service.service.persistence.MnWidrawalRelatedSubsGrievPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.NonUnanimousReportTableOneLocalServiceImpl" id="com.daily.average.service.service.NonUnanimousReportTableOneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.NonUnanimousReportTableOnePersistenceImpl" id="com.daily.average.service.service.persistence.NonUnanimousReportTableOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.NonUnanimousReportTableTwoLocalServiceImpl" id="com.daily.average.service.service.NonUnanimousReportTableTwoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.NonUnanimousReportTableTwoPersistenceImpl" id="com.daily.average.service.service.persistence.NonUnanimousReportTableTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ObservationOnInternalLocalServiceImpl" id="com.daily.average.service.service.ObservationOnInternalLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ObservationOnInternalPersistenceImpl" id="com.daily.average.service.service.persistence.ObservationOnInternalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.PFM_executive_summaryLocalServiceImpl" id="com.daily.average.service.service.PFM_executive_summaryLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.PFM_executive_summaryPersistenceImpl" id="com.daily.average.service.service.persistence.PFM_executive_summaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.PFM_hy_comp_certLocalServiceImpl" id="com.daily.average.service.service.PFM_hy_comp_certLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.PFM_hy_comp_certPersistenceImpl" id="com.daily.average.service.service.persistence.PFM_hy_comp_certPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.Pfm_Qr_Internal_Audit_ReportLocalServiceImpl" id="com.daily.average.service.service.Pfm_Qr_Internal_Audit_ReportLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.Pfm_Qr_Internal_Audit_ReportPersistenceImpl" id="com.daily.average.service.service.persistence.Pfm_Qr_Internal_Audit_ReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.Qr_ReportLocalServiceImpl" id="com.daily.average.service.service.Qr_ReportLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.Qr_ReportPersistenceImpl" id="com.daily.average.service.service.persistence.Qr_ReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.QrAnnexureFourCustodianLocalServiceImpl" id="com.daily.average.service.service.QrAnnexureFourCustodianLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.QrAnnexureFourCustodianPersistenceImpl" id="com.daily.average.service.service.persistence.QrAnnexureFourCustodianPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.QrCustodianBillsLocalServiceImpl" id="com.daily.average.service.service.QrCustodianBillsLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.QrCustodianBillsPersistenceImpl" id="com.daily.average.service.service.persistence.QrCustodianBillsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.QrFinalVoteCountLocalServiceImpl" id="com.daily.average.service.service.QrFinalVoteCountLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.QrFinalVoteCountPersistenceImpl" id="com.daily.average.service.service.persistence.QrFinalVoteCountPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.QrPfVotingRecommCountLocalServiceImpl" id="com.daily.average.service.service.QrPfVotingRecommCountLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.QrPfVotingRecommCountPersistenceImpl" id="com.daily.average.service.service.persistence.QrPfVotingRecommCountPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.QtrStewardshipReportLocalServiceImpl" id="com.daily.average.service.service.QtrStewardshipReportLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.QtrStewardshipReportPersistenceImpl" id="com.daily.average.service.service.persistence.QtrStewardshipReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.QtrStewardshipReportScrutinyLocalServiceImpl" id="com.daily.average.service.service.QtrStewardshipReportScrutinyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.QtrStewardshipReportScrutinyPersistenceImpl" id="com.daily.average.service.service.persistence.QtrStewardshipReportScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.QuarterEndedLocalServiceImpl" id="com.daily.average.service.service.QuarterEndedLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.QuarterEndedPersistenceImpl" id="com.daily.average.service.service.persistence.QuarterEndedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.RejectionandreturnLocalServiceImpl" id="com.daily.average.service.service.RejectionandreturnLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.RejectionandreturnPersistenceImpl" id="com.daily.average.service.service.persistence.RejectionandreturnPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportDebitLocalServiceImpl" id="com.daily.average.service.service.ReportDebitLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportDebitPersistenceImpl" id="com.daily.average.service.service.persistence.ReportDebitPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportEquityLocalServiceImpl" id="com.daily.average.service.service.ReportEquityLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportEquityPersistenceImpl" id="com.daily.average.service.service.persistence.ReportEquityPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportMasterLocalServiceImpl" id="com.daily.average.service.service.ReportMasterLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportMasterPersistenceImpl" id="com.daily.average.service.service.persistence.ReportMasterPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportStatusLogLocalServiceImpl" id="com.daily.average.service.service.ReportStatusLogLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportStatusLogPersistenceImpl" id="com.daily.average.service.service.persistence.ReportStatusLogPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadFileLogLocalServiceImpl" id="com.daily.average.service.service.ReportUploadFileLogLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadFileLogPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadFileLogPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogCRALocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogCRALocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogCRAPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogCRAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogCRAAMLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogCRAAMLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogCRAAMPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogCRAAMPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogCustAMPFRDALocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogCustAMPFRDALocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogCustAMPFRDAPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogCustAMPFRDAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogCustodianLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogCustodianLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogCustodianPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogCustodianPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogGrievAMPFRDALocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogGrievAMPFRDALocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogGrievAMPFRDAPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogGrievAMPFRDAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogGrievancesLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogGrievancesLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogGrievancesPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogGrievancesPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogMakerLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogMakerLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogMakerPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogMakerPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogNPSTLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogNPSTLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogNPSTPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogNPSTPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogPFMLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogPFMLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogPFMPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogPFMPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogPFMAMLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogPFMAMLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogPFMAMPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogPFMAMPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogPFMAMPFRDALocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogPFMAMPFRDALocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogPFMAMPFRDAPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogPFMAMPFRDAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogPFMCRALocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogPFMCRALocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogPFMCRAPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogPFMCRAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogPFMCustodianLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogPFMCustodianLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogPFMCustodianPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogPFMCustodianPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ReportUploadLogSupervisorLocalServiceImpl" id="com.daily.average.service.service.ReportUploadLogSupervisorLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ReportUploadLogSupervisorPersistenceImpl" id="com.daily.average.service.service.persistence.ReportUploadLogSupervisorPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ScrutinyInputQuarterlyIntervalLocalServiceImpl" id="com.daily.average.service.service.ScrutinyInputQuarterlyIntervalLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ScrutinyInputQuarterlyIntervalPersistenceImpl" id="com.daily.average.service.service.persistence.ScrutinyInputQuarterlyIntervalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.SrlFormLocalServiceImpl" id="com.daily.average.service.service.SrlFormLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.SrlFormPersistenceImpl" id="com.daily.average.service.service.persistence.SrlFormPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.StatusDaysLocalServiceImpl" id="com.daily.average.service.service.StatusDaysLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.StatusDaysPersistenceImpl" id="com.daily.average.service.service.persistence.StatusDaysPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.StatusDaysOneLocalServiceImpl" id="com.daily.average.service.service.StatusDaysOneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.StatusDaysOnePersistenceImpl" id="com.daily.average.service.service.persistence.StatusDaysOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.StatusDaysTwoLocalServiceImpl" id="com.daily.average.service.service.StatusDaysTwoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.StatusDaysTwoPersistenceImpl" id="com.daily.average.service.service.persistence.StatusDaysTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.TaggedbyNPSOneLocalServiceImpl" id="com.daily.average.service.service.TaggedbyNPSOneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.TaggedbyNPSOnePersistenceImpl" id="com.daily.average.service.service.persistence.TaggedbyNPSOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.TaggedbyNPSTwoLocalServiceImpl" id="com.daily.average.service.service.TaggedbyNPSTwoLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.TaggedbyNPSTwoPersistenceImpl" id="com.daily.average.service.service.persistence.TaggedbyNPSTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.ValuationRepoTbLocalServiceImpl" id="com.daily.average.service.service.ValuationRepoTbLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.ValuationRepoTbPersistenceImpl" id="com.daily.average.service.service.persistence.ValuationRepoTbPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.valuationRepSgLocalServiceImpl" id="com.daily.average.service.service.valuationRepSgLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.valuationRepSgPersistenceImpl" id="com.daily.average.service.service.persistence.valuationRepSgPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.VMatrixLocalServiceImpl" id="com.daily.average.service.service.VMatrixLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.VMatrixPersistenceImpl" id="com.daily.average.service.service.persistence.VMatrixPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.VoteMatrixPfmLocalServiceImpl" id="com.daily.average.service.service.VoteMatrixPfmLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.VoteMatrixPfmPersistenceImpl" id="com.daily.average.service.service.persistence.VoteMatrixPfmPersistence" />
+	<bean class="com.daily.average.service.service.impl.VotingReportConsolidatedLocalServiceImpl" id="com.daily.average.service.service.VotingReportConsolidatedLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.VotingReportConsolidatedPersistenceImpl" id="com.daily.average.service.service.persistence.VotingReportConsolidatedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.VotingReportNoOfResolutionLocalServiceImpl" id="com.daily.average.service.service.VotingReportNoOfResolutionLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.VotingReportNoOfResolutionPersistenceImpl" id="com.daily.average.service.service.persistence.VotingReportNoOfResolutionPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.VotingReportSesLocalServiceImpl" id="com.daily.average.service.service.VotingReportSesLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.VotingReportSesPersistenceImpl" id="com.daily.average.service.service.persistence.VotingReportSesPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.WebsiteJuneLocalServiceImpl" id="com.daily.average.service.service.WebsiteJuneLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.WebsiteJunePersistenceImpl" id="com.daily.average.service.service.persistence.WebsiteJunePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.average.service.service.impl.WeeklyLocalServiceImpl" id="com.daily.average.service.service.WeeklyLocalService" />
+	<bean class="com.daily.average.service.service.persistence.impl.WeeklyPersistenceImpl" id="com.daily.average.service.service.persistence.WeeklyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

@@ -1,0 +1,12 @@
+Bundle-Name: Annexure17-ChangeInInterestOfDirector
+Bundle-SymbolicName: Annexure17.ChangeInInterestOfDirector
+Bundle-Version: 1.0.0
+Export-Package: Annexure17.ChangeInInterestOfDirector.constants
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

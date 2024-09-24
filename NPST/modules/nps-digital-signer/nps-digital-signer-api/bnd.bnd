@@ -1,0 +1,6 @@
+Bundle-Name: nps-digital-signer-api
+Bundle-SymbolicName: nps.digital.signer.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	nps.digital.signer.api.api, \
+	nps.digital.signer.api.model

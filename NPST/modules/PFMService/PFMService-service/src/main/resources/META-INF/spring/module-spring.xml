@@ -1,0 +1,442 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.daily.pfm.service.service.impl.ACSummeryXLocalServiceImpl" id="com.daily.pfm.service.service.ACSummeryXLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ACSummeryXPersistenceImpl" id="com.daily.pfm.service.service.persistence.ACSummeryXPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.AnnexTenaLocalServiceImpl" id="com.daily.pfm.service.service.AnnexTenaLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.AnnexTenaPersistenceImpl" id="com.daily.pfm.service.service.persistence.AnnexTenaPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.AnnexTenaILocalServiceImpl" id="com.daily.pfm.service.service.AnnexTenaILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.AnnexTenaIPersistenceImpl" id="com.daily.pfm.service.service.persistence.AnnexTenaIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.AnnexTenaIILocalServiceImpl" id="com.daily.pfm.service.service.AnnexTenaIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.AnnexTenaIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.AnnexTenaIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.AnnexTenaIIILocalServiceImpl" id="com.daily.pfm.service.service.AnnexTenaIIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.AnnexTenaIIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.AnnexTenaIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.AnnexTenaIVLocalServiceImpl" id="com.daily.pfm.service.service.AnnexTenaIVLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.AnnexTenaIVPersistenceImpl" id="com.daily.pfm.service.service.persistence.AnnexTenaIVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.AnnexTenaSummeryLocalServiceImpl" id="com.daily.pfm.service.service.AnnexTenaSummeryLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.AnnexTenaSummeryPersistenceImpl" id="com.daily.pfm.service.service.persistence.AnnexTenaSummeryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.Asp_reportLocalServiceImpl" id="com.daily.pfm.service.service.Asp_reportLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.Asp_reportPersistenceImpl" id="com.daily.pfm.service.service.persistence.Asp_reportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.BalanceSheetLocalServiceImpl" id="com.daily.pfm.service.service.BalanceSheetLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.BalanceSheetPersistenceImpl" id="com.daily.pfm.service.service.persistence.BalanceSheetPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.CashFlowLocalServiceImpl" id="com.daily.pfm.service.service.CashFlowLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.CashFlowPersistenceImpl" id="com.daily.pfm.service.service.persistence.CashFlowPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.CombinedIncomeStatementLocalServiceImpl" id="com.daily.pfm.service.service.CombinedIncomeStatementLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.CombinedIncomeStatementPersistenceImpl" id="com.daily.pfm.service.service.persistence.CombinedIncomeStatementPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ComplianceCertificateMonthLocalServiceImpl" id="com.daily.pfm.service.service.ComplianceCertificateMonthLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ComplianceCertificateMonthPersistenceImpl" id="com.daily.pfm.service.service.persistence.ComplianceCertificateMonthPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ComplianceCertificateMonthILocalServiceImpl" id="com.daily.pfm.service.service.ComplianceCertificateMonthILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ComplianceCertificateMonthIPersistenceImpl" id="com.daily.pfm.service.service.persistence.ComplianceCertificateMonthIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ComplianceCertificateMonthIILocalServiceImpl" id="com.daily.pfm.service.service.ComplianceCertificateMonthIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ComplianceCertificateMonthIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.ComplianceCertificateMonthIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ComplianceCertificateMonthIIILocalServiceImpl" id="com.daily.pfm.service.service.ComplianceCertificateMonthIIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ComplianceCertificateMonthIIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.ComplianceCertificateMonthIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ConsolidatedBalanceSheetLocalServiceImpl" id="com.daily.pfm.service.service.ConsolidatedBalanceSheetLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ConsolidatedBalanceSheetPersistenceImpl" id="com.daily.pfm.service.service.persistence.ConsolidatedBalanceSheetPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.CraEnpsdataLocalServiceImpl" id="com.daily.pfm.service.service.CraEnpsdataLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.CraEnpsdataPersistenceImpl" id="com.daily.pfm.service.service.persistence.CraEnpsdataPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.Form3RepByDirAndKPLocalServiceImpl" id="com.daily.pfm.service.service.Form3RepByDirAndKPLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.Form3RepByDirAndKPPersistenceImpl" id="com.daily.pfm.service.service.persistence.Form3RepByDirAndKPPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.Form3ReportByDirAndKpLocalServiceImpl" id="com.daily.pfm.service.service.Form3ReportByDirAndKpLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.Form3ReportByDirAndKpPersistenceImpl" id="com.daily.pfm.service.service.persistence.Form3ReportByDirAndKpPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.FurtherProcessFiveLocalServiceImpl" id="com.daily.pfm.service.service.FurtherProcessFiveLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.FurtherProcessFivePersistenceImpl" id="com.daily.pfm.service.service.persistence.FurtherProcessFivePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.FurtherProcessFourLocalServiceImpl" id="com.daily.pfm.service.service.FurtherProcessFourLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.FurtherProcessFourPersistenceImpl" id="com.daily.pfm.service.service.persistence.FurtherProcessFourPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.FurtherProcessOneLocalServiceImpl" id="com.daily.pfm.service.service.FurtherProcessOneLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.FurtherProcessOnePersistenceImpl" id="com.daily.pfm.service.service.persistence.FurtherProcessOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.FurtherProcessSixLocalServiceImpl" id="com.daily.pfm.service.service.FurtherProcessSixLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.FurtherProcessSixPersistenceImpl" id="com.daily.pfm.service.service.persistence.FurtherProcessSixPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.FurtherProcessThreeLocalServiceImpl" id="com.daily.pfm.service.service.FurtherProcessThreeLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.FurtherProcessThreePersistenceImpl" id="com.daily.pfm.service.service.persistence.FurtherProcessThreePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.FurtherProcessTwoLocalServiceImpl" id="com.daily.pfm.service.service.FurtherProcessTwoLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.FurtherProcessTwoPersistenceImpl" id="com.daily.pfm.service.service.persistence.FurtherProcessTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrievPendingOneLocalServiceImpl" id="com.daily.pfm.service.service.GrievPendingOneLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrievPendingOnePersistenceImpl" id="com.daily.pfm.service.service.persistence.GrievPendingOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrievPendingSummaryLocalServiceImpl" id="com.daily.pfm.service.service.GrievPendingSummaryLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrievPendingSummaryPersistenceImpl" id="com.daily.pfm.service.service.persistence.GrievPendingSummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrievPendingTwoLocalServiceImpl" id="com.daily.pfm.service.service.GrievPendingTwoLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrievPendingTwoPersistenceImpl" id="com.daily.pfm.service.service.persistence.GrievPendingTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrowthDataFiveLocalServiceImpl" id="com.daily.pfm.service.service.GrowthDataFiveLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrowthDataFivePersistenceImpl" id="com.daily.pfm.service.service.persistence.GrowthDataFivePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrowthDataFourLocalServiceImpl" id="com.daily.pfm.service.service.GrowthDataFourLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrowthDataFourPersistenceImpl" id="com.daily.pfm.service.service.persistence.GrowthDataFourPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrowthDataOneLocalServiceImpl" id="com.daily.pfm.service.service.GrowthDataOneLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrowthDataOnePersistenceImpl" id="com.daily.pfm.service.service.persistence.GrowthDataOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrowthDataThreeLocalServiceImpl" id="com.daily.pfm.service.service.GrowthDataThreeLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrowthDataThreePersistenceImpl" id="com.daily.pfm.service.service.persistence.GrowthDataThreePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.GrowthDataTwoLocalServiceImpl" id="com.daily.pfm.service.service.GrowthDataTwoLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.GrowthDataTwoPersistenceImpl" id="com.daily.pfm.service.service.persistence.GrowthDataTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.IncomeStatementLocalServiceImpl" id="com.daily.pfm.service.service.IncomeStatementLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.IncomeStatementPersistenceImpl" id="com.daily.pfm.service.service.persistence.IncomeStatementPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.IntrstOfDirecInOtherCompLocalServiceImpl" id="com.daily.pfm.service.service.IntrstOfDirecInOtherCompLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.IntrstOfDirecInOtherCompPersistenceImpl" id="com.daily.pfm.service.service.persistence.IntrstOfDirecInOtherCompPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.IntrstOfDirectorsOfPfLocalServiceImpl" id="com.daily.pfm.service.service.IntrstOfDirectorsOfPfLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.IntrstOfDirectorsOfPfPersistenceImpl" id="com.daily.pfm.service.service.persistence.IntrstOfDirectorsOfPfPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.KeyStatisticsLocalServiceImpl" id="com.daily.pfm.service.service.KeyStatisticsLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.KeyStatisticsPersistenceImpl" id="com.daily.pfm.service.service.persistence.KeyStatisticsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowerformLocalServiceImpl" id="com.daily.pfm.service.service.manpowerformLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowerformPersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowerformPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec1LocalServiceImpl" id="com.daily.pfm.service.service.manpowersec1LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec1PersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec1Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec2LocalServiceImpl" id="com.daily.pfm.service.service.manpowersec2LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec2PersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec2Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec2aLocalServiceImpl" id="com.daily.pfm.service.service.manpowersec2aLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec2aPersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec2aPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec2bLocalServiceImpl" id="com.daily.pfm.service.service.manpowersec2bLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec2bPersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec2bPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec3LocalServiceImpl" id="com.daily.pfm.service.service.manpowersec3LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec3PersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec3Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec4LocalServiceImpl" id="com.daily.pfm.service.service.manpowersec4LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec4PersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec4Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec5LocalServiceImpl" id="com.daily.pfm.service.service.manpowersec5LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec5PersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec5Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec5aLocalServiceImpl" id="com.daily.pfm.service.service.manpowersec5aLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec5aPersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec5aPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.manpowersec5bLocalServiceImpl" id="com.daily.pfm.service.service.manpowersec5bLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.manpowersec5bPersistenceImpl" id="com.daily.pfm.service.service.persistence.manpowersec5bPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NoteOfBalanceSheetLocalServiceImpl" id="com.daily.pfm.service.service.NoteOfBalanceSheetLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NoteOfBalanceSheetPersistenceImpl" id="com.daily.pfm.service.service.persistence.NoteOfBalanceSheetPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NoteOfCombinedBalanceSheetLocalServiceImpl" id="com.daily.pfm.service.service.NoteOfCombinedBalanceSheetLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NoteOfCombinedBalanceSheetPersistenceImpl" id="com.daily.pfm.service.service.persistence.NoteOfCombinedBalanceSheetPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsIILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsIIILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsIIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsIIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsIVLocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsIVLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsIVPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsIVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsIXLocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsIXLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsIXPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsIXPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsVLocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsVLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsVPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsVILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsVILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsVIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsVIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsVIILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsVIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsVIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsVIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsVIIILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsVIIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsVIIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsVIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsXLocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsXLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsXPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsXPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsXILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsXILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsXIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsXIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpaDevelopmentsXIILocalServiceImpl" id="com.daily.pfm.service.service.NpaDevelopmentsXIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpaDevelopmentsXIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpaDevelopmentsXIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpfNpaProgressLocalServiceImpl" id="com.daily.pfm.service.service.NpfNpaProgressLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpfNpaProgressPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpfNpaProgressPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpfNpaProgressIILocalServiceImpl" id="com.daily.pfm.service.service.NpfNpaProgressIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpfNpaProgressIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpfNpaProgressIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpfNpaProgressIIILocalServiceImpl" id="com.daily.pfm.service.service.NpfNpaProgressIIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpfNpaProgressIIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpfNpaProgressIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmEightLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmEightLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmEightPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmEightPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmElevenLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmElevenLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmElevenPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmElevenPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmFiveLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmFiveLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmFivePersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmFivePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmFourLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmFourLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmFourPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmFourPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmNineLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmNineLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmNinePersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmNinePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmOneLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmOneLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmOnePersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmOnePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmSevenLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmSevenLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmSevenPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmSevenPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmSixLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmSixLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmSixPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmSixPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmsummaryLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmsummaryLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmsummaryPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmsummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmTenLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmTenLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmTenPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmTenPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmThreeLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmThreeLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmThreePersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmThreePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmTwelveLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmTwelveLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmTwelvePersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmTwelvePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.NpsTrustFeePfmTwoLocalServiceImpl" id="com.daily.pfm.service.service.NpsTrustFeePfmTwoLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.NpsTrustFeePfmTwoPersistenceImpl" id="com.daily.pfm.service.service.persistence.NpsTrustFeePfmTwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.OverallStatusOfStateGovtLocalServiceImpl" id="com.daily.pfm.service.service.OverallStatusOfStateGovtLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.OverallStatusOfStateGovtPersistenceImpl" id="com.daily.pfm.service.service.persistence.OverallStatusOfStateGovtPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.OverallStatusSectorWiseLocalServiceImpl" id="com.daily.pfm.service.service.OverallStatusSectorWiseLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.OverallStatusSectorWisePersistenceImpl" id="com.daily.pfm.service.service.persistence.OverallStatusSectorWisePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.PFM_hy_comp_cert_ScrutinyLocalServiceImpl" id="com.daily.pfm.service.service.PFM_hy_comp_cert_ScrutinyLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.PFM_hy_comp_cert_ScrutinyPersistenceImpl" id="com.daily.pfm.service.service.persistence.PFM_hy_comp_cert_ScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.Pfm_Qr_IARScrutinyLocalServiceImpl" id="com.daily.pfm.service.service.Pfm_Qr_IARScrutinyLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.Pfm_Qr_IARScrutinyPersistenceImpl" id="com.daily.pfm.service.service.persistence.Pfm_Qr_IARScrutinyPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrAnnuityRequestLocalServiceImpl" id="com.daily.pfm.service.service.QrAnnuityRequestLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrAnnuityRequestPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrAnnuityRequestPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrAnnuityRequestAgeingLocalServiceImpl" id="com.daily.pfm.service.service.QrAnnuityRequestAgeingLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrAnnuityRequestAgeingPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrAnnuityRequestAgeingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrCauseWiseAgeingAnalysisLocalServiceImpl" id="com.daily.pfm.service.service.QrCauseWiseAgeingAnalysisLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrCauseWiseAgeingAnalysisPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrCauseWiseAgeingAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrCauseWisePatternAnalysisLocalServiceImpl" id="com.daily.pfm.service.service.QrCauseWisePatternAnalysisLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrCauseWisePatternAnalysisPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrCauseWisePatternAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrExercisedExitOptionLocalServiceImpl" id="com.daily.pfm.service.service.QrExercisedExitOptionLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrExercisedExitOptionPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrExercisedExitOptionPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrExitAndWithdrawalLocalServiceImpl" id="com.daily.pfm.service.service.QrExitAndWithdrawalLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrExitAndWithdrawalPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrExitAndWithdrawalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrGapAnalysisLocalServiceImpl" id="com.daily.pfm.service.service.QrGapAnalysisLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrGapAnalysisPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrGapAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrSectoralAnalysisLocalServiceImpl" id="com.daily.pfm.service.service.QrSectoralAnalysisLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrSectoralAnalysisPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrSectoralAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QrSectorWiseAgeingAnalysisLocalServiceImpl" id="com.daily.pfm.service.service.QrSectorWiseAgeingAnalysisLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QrSectorWiseAgeingAnalysisPersistenceImpl" id="com.daily.pfm.service.service.persistence.QrSectorWiseAgeingAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QtrNonUnanimousLocalServiceImpl" id="com.daily.pfm.service.service.QtrNonUnanimousLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QtrNonUnanimousPersistenceImpl" id="com.daily.pfm.service.service.persistence.QtrNonUnanimousPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QuarterlySubCompFormsLocalServiceImpl" id="com.daily.pfm.service.service.QuarterlySubCompFormsLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QuarterlySubCompFormsPersistenceImpl" id="com.daily.pfm.service.service.persistence.QuarterlySubCompFormsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QuarterlySubCompForms_2LocalServiceImpl" id="com.daily.pfm.service.service.QuarterlySubCompForms_2LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QuarterlySubCompForms_2PersistenceImpl" id="com.daily.pfm.service.service.persistence.QuarterlySubCompForms_2Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QuarterlySubCompForms_3LocalServiceImpl" id="com.daily.pfm.service.service.QuarterlySubCompForms_3LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QuarterlySubCompForms_3PersistenceImpl" id="com.daily.pfm.service.service.persistence.QuarterlySubCompForms_3Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QuarterlySubCompForms_4LocalServiceImpl" id="com.daily.pfm.service.service.QuarterlySubCompForms_4LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QuarterlySubCompForms_4PersistenceImpl" id="com.daily.pfm.service.service.persistence.QuarterlySubCompForms_4Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QuarterlySubCompForms_5LocalServiceImpl" id="com.daily.pfm.service.service.QuarterlySubCompForms_5LocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QuarterlySubCompForms_5PersistenceImpl" id="com.daily.pfm.service.service.persistence.QuarterlySubCompForms_5Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.QuarterlySubForm1ALocalServiceImpl" id="com.daily.pfm.service.service.QuarterlySubForm1ALocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.QuarterlySubForm1APersistenceImpl" id="com.daily.pfm.service.service.persistence.QuarterlySubForm1APersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ReportILocalServiceImpl" id="com.daily.pfm.service.service.ReportILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ReportIPersistenceImpl" id="com.daily.pfm.service.service.persistence.ReportIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ReportIILocalServiceImpl" id="com.daily.pfm.service.service.ReportIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ReportIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.ReportIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ReportIIILocalServiceImpl" id="com.daily.pfm.service.service.ReportIIILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ReportIIIPersistenceImpl" id="com.daily.pfm.service.service.persistence.ReportIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ReportIVaLocalServiceImpl" id="com.daily.pfm.service.service.ReportIVaLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ReportIVaPersistenceImpl" id="com.daily.pfm.service.service.persistence.ReportIVaPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ReportVLocalServiceImpl" id="com.daily.pfm.service.service.ReportVLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ReportVPersistenceImpl" id="com.daily.pfm.service.service.persistence.ReportVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.ReportVILocalServiceImpl" id="com.daily.pfm.service.service.ReportVILocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.ReportVIPersistenceImpl" id="com.daily.pfm.service.service.persistence.ReportVIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.StatusOfAtalPensionSchemeLocalServiceImpl" id="com.daily.pfm.service.service.StatusOfAtalPensionSchemeLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.StatusOfAtalPensionSchemePersistenceImpl" id="com.daily.pfm.service.service.persistence.StatusOfAtalPensionSchemePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.StatusOfCentralGovernmentLocalServiceImpl" id="com.daily.pfm.service.service.StatusOfCentralGovernmentLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.StatusOfCentralGovernmentPersistenceImpl" id="com.daily.pfm.service.service.persistence.StatusOfCentralGovernmentPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.StatusOfCorporateSectorLocalServiceImpl" id="com.daily.pfm.service.service.StatusOfCorporateSectorLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.StatusOfCorporateSectorPersistenceImpl" id="com.daily.pfm.service.service.persistence.StatusOfCorporateSectorPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.StatusOfIndividualSubscriberLocalServiceImpl" id="com.daily.pfm.service.service.StatusOfIndividualSubscriberLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.StatusOfIndividualSubscriberPersistenceImpl" id="com.daily.pfm.service.service.persistence.StatusOfIndividualSubscriberPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.daily.pfm.service.service.impl.StatusOfNPSLiteLocalServiceImpl" id="com.daily.pfm.service.service.StatusOfNPSLiteLocalService" />
+	<bean class="com.daily.pfm.service.service.persistence.impl.StatusOfNPSLitePersistenceImpl" id="com.daily.pfm.service.service.persistence.StatusOfNPSLitePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

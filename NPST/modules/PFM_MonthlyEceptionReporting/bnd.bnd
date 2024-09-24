@@ -1,0 +1,4 @@
+Bundle-Name: PFM_MonthlyEceptionReporting
+Bundle-SymbolicName: com.PFM.Monthly.EceptionReporting
+Bundle-Version: 1.0.0
+Export-Package: com.PFM.Monthly.EceptionReporting.constants

@@ -1,0 +1,12 @@
+Bundle-Name: nps-digital-signer-service
+Bundle-SymbolicName: nps.digital.signer.service
+Bundle-Version: 1.0.0
+Export-Package: \
+	nps.digital.signer.model.impl
+Import-Package: \
+	!org.apache.log.*,\
+	!android.*,\
+	!javax.annotation.meta.*,\
+	!org.conscrypt.*,\
+	\
+	*

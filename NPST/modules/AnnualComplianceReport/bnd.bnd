@@ -1,0 +1,4 @@
+Bundle-Name: AnnualComplianceReport
+Bundle-SymbolicName: com.annual.compliance.report
+Bundle-Version: 1.0.0
+Export-Package: com.annual.compliance.report.constants

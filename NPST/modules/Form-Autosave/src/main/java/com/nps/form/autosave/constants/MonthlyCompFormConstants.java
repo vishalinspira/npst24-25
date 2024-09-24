@@ -1,0 +1,64 @@
+package com.nps.form.autosave.constants;
+
+public class MonthlyCompFormConstants {
+	public static final  String REPORT_UPLOAD_LOG_ID="reportUploadLogId";
+	public static final String DATE_1="date_1";
+	public static final String PURCHASE_OF_SECURITIES ="purchase_of_securities";
+	public static final String PURCHASE_OF_SEC_REM_1_1_2 ="Purchase_of_sec_rem_1_1_2";
+	public static final String PURCHASE_OF_SEC_REM_1_2A_2 ="Purchase_of_sec_rem_1_2a_2";
+	public static final String PURCHASE_OF_SEC_REM_1_2B_2 ="Purchase_of_sec_rem_1_2b_2";
+	public static final String PURCHASE_OF_SEC_REM_1_2C_2 ="Purchase_of_sec_rem_1_2c_2";
+	public static final String PURCHASE_OF_SEC_REM_1_2D_2 ="Purchase_of_sec_rem_1_2d_2";
+	public static final String PURCHASE_OF_SEC_REM_1_2E_2 ="Purchase_of_sec_rem_1_2e_2";
+	public static final String PURCHASE_OF_SEC_REM_1_3_2 ="Purchase_of_sec_rem_1_3_2";
+	public static final String PURCHASE_OF_SEC_REM_1_4_2 ="Purchase_of_secu_rem_1_4_2";
+	
+	public static final String DETAILED_INVESTMENT ="detailed_investment";
+	public static final String DECISION_OF_INVESTMENT ="decision_of_investment";
+	public static final String ALL_INVESTMENTS_FROM_FUNDS ="all_investments_from_funds";
+	public static final String DELIVERY_OF_SECURITIES_PURCH ="delivery_of_securities_purch";
+	public static final String INVESTMENT_DONE_IN_IPO ="investment_done_in_ipo";
+	public static final String INVESTMENTS_NON_DEMATERIALIZED ="investments_non_dematerialized";
+	public static final String INVESTMENTS_APPROVED ="investments_approved";
+	public static final String SCHEME_INVESTMENTS ="scheme_investments";
+	public static final String  SECURITIES_HELD_2_1_2="Securities_held_2_1_2";
+	public static final String STOP_LOSS_TRIGGER ="stop_loss_trigger";
+	public static final String SECURITIES_HELD_2_2A_2 ="Securities_held_2_2a_2";
+	public static final String DECISION_APPROVED_BY_COMMITTEE ="decision_approved_by_committee";
+	public static final String SECURITIES_HELD_2_2B_2 ="Securities_held_2_2b_2";
+	public static final String DECISION_PROPERLY_DOCUMENTED ="decision_properly_documented";
+	public static final String  SECURITIES_HELD_2_2C_2="Securities_held_2_2c_2";
+	public static final String INTER_SCHEME_TRANSFER ="inter_scheme_transfer";
+	public static final String SECURITIES_HELD_2_3_2 ="Securities_held_2_3_2";
+	public static final String INVESTMENT_HELD_IN_EQUITY ="investment_held_in_equity";
+	public static final String SECURITIES_HELD_2_4_2 ="Securities_held_2_4_2";
+	public static final String INVESTMENT_IN_EQUITY_SHARES ="investment_in_equity_shares";
+	public static final String SECURITIES_HELD_2_5_2 ="Securities_held_2_5_2";
+	public static final String DISINVESTMENTS_APPROVED ="disinvestments_approved";
+	public static final String SALE_OF_SECURITIES_3_1A_2 ="Sale_of_securities_3_1a_2";
+	public static final String DECISION_OF_DISINVESTMENT ="decision_of_disinvestment";
+	public static final String SALE_OF_SECURITIES_3_1B_2 ="Sale_of_securities_3_1b_2";
+	public static final String DELIVERY_OF_SECURITIES_SALE ="delivery_of_securities_sale";
+	public static final String SALE_OF_SECURITIES_3_2_2 ="Sale_of_securities_3_2_2";
+	public static final String ALL_INVESTMENT_CHARGES ="all_investment_charges";
+	public static final String REPORTS_AND_DISCLOSURE_4_1A_2 ="Reports_and_Disclosure_4_1a_2";
+	public static final String PFM_ADHERED ="pfm_adhered";
+	public static final String REPORTS_AND_DISCLOSURE_4_1B_2 ="Reports_and_Disclosure_4_1b_2";
+	public static final String RECORDS_OF_THE_AUDIT_OF_NAV ="records_of_the_audit_of_nav";
+	public static final String REPORTS_AND_DISCLOSURE_4_1C_2 ="Reports_and_Disclosure_4_1c_2";
+	public static final String SCHEME_WISE_NAV_UPLOADED ="scheme_wise_nav_uploaded";
+	public static final String REPORTS_AND_DISCLOSURE_4_1D_2 ="Reports_and_Disclosure_4_1d_2";
+	public static final String SCHEME_WISE_NAV_SUBMITTED ="scheme_wise_nav_submitted";
+	public static final String REPORTS_AND_DISCLOSURE_4_1E_2 ="Reports_and_Disclosure_4_1e_2";
+	public static final String MONTHLY_REPORTS_SUBMITTED ="monthly_reports_submitted";
+	public static final String REPORTS_AND_DISCLOSURE_4_2A_2 ="Reports_and_Disclosure_4_2a_2";
+	public static final String SCRIP_WISE_DETAILS ="scrip_wise_details";
+	public static final String REPORTS_AND_DISCLOSURE_4_2B_2 ="Reports_and_Disclosure_4_2b_2";
+	public static final String DATE_2 ="date_2";
+	public static final String COMPANY_NAME ="company_name";
+	public static final String EMPLOYEE_NAME ="emplolyee_name";
+	public static final String ROLES ="roles";
+	public static final String DATE_3 ="date_3";
+	public static final String PLACE ="place";
+
+}

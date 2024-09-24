@@ -1,0 +1,10 @@
+Bundle-Name: DailyAverageService-api
+Bundle-SymbolicName: com.daily.average.service.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.daily.average.service.exception,\
+	com.daily.average.service.model,\
+	com.daily.average.service.service,\
+	com.daily.average.service.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../DailyAverageService-service/service.xml

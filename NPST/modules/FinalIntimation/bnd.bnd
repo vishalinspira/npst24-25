@@ -1,0 +1,4 @@
+Bundle-Name: FinalIntimation
+Bundle-SymbolicName: com.finalintimation
+Bundle-Version: 1.0.0
+Export-Package: com.finalintimation.constants

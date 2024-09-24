@@ -1,0 +1,3027 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="compliance.service.model.AccountList">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="nps_acc_no" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaI">
+		<field name="id_" type="long" />
+		<field name="file_number" type="String" />
+		<field name="b_number" type="String" />
+		<field name="item_number" type="String" />
+		<field name="date_1" type="String" />
+		<field name="date_2" type="String" />
+		<field name="date_3" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaII">
+		<field name="id_" type="long" />
+		<field name="entitites" type="String" />
+		<field name="opening_balance" type="String" />
+		<field name="escalated_to_npst" type="String" />
+		<field name="grievances_received" type="String" />
+		<field name="grievances_assigned" type="String" />
+		<field name="grievances_resolved" type="String" />
+		<field name="outstanding_grievances" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaIII">
+		<field name="id_" type="long" />
+		<field name="particulars" type="String" />
+		<field name="nps" type="String" />
+		<field name="npslite_and_apy" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaIV">
+		<field name="id_" type="long" />
+		<field name="grievances" type="String" />
+		<field name="q1" type="String" />
+		<field name="q2" type="String" />
+		<field name="q3" type="String" />
+		<field name="q4" type="String" />
+		<field name="q1_1" type="String" />
+		<field name="q2_2" type="String" />
+		<field name="percentage_change" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaIX">
+		<field name="id_" type="long" />
+		<field name="category" type="String" />
+		<field name="ref_at_the_end_of_quarter" type="String" />
+		<field name="_0_7" type="String" />
+		<field name="_8_15" type="String" />
+		<field name="_16_31" type="String" />
+		<field name="_32_90" type="String" />
+		<field name="_91_180" type="String" />
+		<field name="_181_365" type="String" />
+		<field name="_366_and_above" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaV">
+		<field name="id_" type="long" />
+		<field name="category" type="String" />
+		<field name="q1" type="String" />
+		<field name="q2" type="String" />
+		<field name="q3" type="String" />
+		<field name="q4" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaVI">
+		<field name="id_" type="long" />
+		<field name="category" type="String" />
+		<field name="q1" type="String" />
+		<field name="q2" type="String" />
+		<field name="q3" type="String" />
+		<field name="q4" type="String" />
+		<field name="q1_1" type="String" />
+		<field name="q2_2" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaVII">
+		<field name="id_" type="long" />
+		<field name="entity" type="String" />
+		<field name="q1" type="String" />
+		<field name="q2" type="String" />
+		<field name="q3" type="String" />
+		<field name="q4" type="String" />
+		<field name="q1_1" type="String" />
+		<field name="q2_2" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaVIII">
+		<field name="id_" type="long" />
+		<field name="entity" type="String" />
+		<field name="ref_at_the_end_of_quarter" type="String" />
+		<field name="_0_7" type="String" />
+		<field name="_8_15" type="String" />
+		<field name="_16_31" type="String" />
+		<field name="_32_90" type="String" />
+		<field name="_91_180" type="String" />
+		<field name="_181_365" type="String" />
+		<field name="_366_and_above" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaX">
+		<field name="id_" type="long" />
+		<field name="entity" type="String" />
+		<field name="ref_at_the_end_of_quarter" type="String" />
+		<field name="_0_7" type="String" />
+		<field name="_8_15" type="String" />
+		<field name="_16_31" type="String" />
+		<field name="_32_90" type="String" />
+		<field name="_91_180" type="String" />
+		<field name="_181_365" type="String" />
+		<field name="_366_and_above" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaXI">
+		<field name="id_" type="long" />
+		<field name="enquiries_category" type="String" />
+		<field name="ref_at_the_end_of_quarter" type="String" />
+		<field name="_0_7" type="String" />
+		<field name="_8_15" type="String" />
+		<field name="_16_31" type="String" />
+		<field name="_32_90" type="String" />
+		<field name="_91_180" type="String" />
+		<field name="_181_365" type="String" />
+		<field name="_366_and_above" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AgendaXII">
+		<field name="id_" type="long" />
+		<field name="date_5" type="String" />
+		<field name="number_of_griev_1" type="String" />
+		<field name="number_of_griev_2" type="String" />
+		<field name="number_of_griev_3" type="String" />
+		<field name="number_of_griev_4" type="String" />
+		<field name="number_of_griev_5" type="String" />
+		<field name="number_of_griev_6" type="String" />
+		<field name="grievances_1" type="String" />
+		<field name="grievances_2" type="String" />
+		<field name="grievances_3" type="String" />
+		<field name="grievances_4" type="String" />
+		<field name="grievances_5" type="String" />
+		<field name="grievances_6" type="String" />
+		<field name="grievances_7" type="String" />
+		<field name="grievances_8" type="String" />
+		<field name="grievances_9" type="String" />
+		<field name="grievances_10" type="String" />
+		<field name="grievances_11" type="String" />
+		<field name="grievances_12" type="String" />
+		<field name="grievances_13" type="String" />
+		<field name="grievances_14" type="String" />
+		<field name="grievances_15" type="String" />
+		<field name="grievances_16" type="String" />
+		<field name="grievances_17" type="String" />
+		<field name="grievances_18" type="String" />
+		<field name="grievances_19" type="String" />
+		<field name="grievances_20" type="String" />
+		<field name="grievances_21" type="String" />
+		<field name="grievances_22" type="String" />
+		<field name="grievances_23" type="String" />
+		<field name="grievances_24" type="String" />
+		<field name="grievances_25" type="String" />
+		<field name="grievances_26" type="String" />
+		<field name="grievances_27" type="String" />
+		<field name="grievances_28" type="String" />
+		<field name="grievances_29" type="String" />
+		<field name="grievances_30" type="String" />
+		<field name="activity" type="String" />
+		<field name="grievances_31" type="String" />
+		<field name="grievances_32" type="String" />
+		<field name="pfrda_policy" type="String" />
+		<field name="date_6" type="String" />
+		<field name="date_7" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AmtMismatch">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="long" />
+		<field name="payment_id" type="String" />
+		<field name="ret_ref_no" type="String" />
+		<field name="source_acc_no_nodal" type="String" />
+		<field name="ifsc_source_no" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="period_" type="String" />
+		<field name="original_utr" type="String" />
+		<field name="mode_" type="String" />
+		<field name="utr_amount" type="BigDecimal" />
+		<field name="beneficiary_acc_no" type="String" />
+		<field name="nps_virtual_acc_no" type="String" />
+		<field name="nps_acc_name" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="String" />
+		<field name="reason_return" type="String" />
+		<field name="additional_comments" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="return_tat_remarks" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AnFinalAnnualVoteCount">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="financial_year" type="String" />
+		<field name="quarter" type="Date" />
+		<field name="total_number_of_resolution" type="BigDecimal" />
+		<field name="for_" type="BigDecimal" />
+		<field name="against" type="BigDecimal" />
+		<field name="abstain" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.AnnexureC">
+		<field name="id_" type="long" />
+		<field name="subscriber_class" type="String" />
+		<field name="mar_12" type="String" />
+		<field name="mar_20" type="String" />
+		<field name="mar_21" type="String" />
+		<field name="sep_20" type="String" />
+		<field name="sep_21" type="String" />
+		<field name="annual_yoy_mar20_numbers" type="String" />
+		<field name="annual_yoy_mar20_percent" type="String" />
+		<field name="yoy_same_month_numbers" type="String" />
+		<field name="yoy_same_month_percent" type="String" />
+		<field name="growth_over_mar21_numbers" type="String" />
+		<field name="growth_over_mar21_percent" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AnnexureToCar">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="sum_closing_bal" type="BigDecimal" />
+		<field name="avg_daily_closing_bal" type="BigDecimal" />
+		<field name="annual_fee" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.AnnexureVA">
+		<field name="id_" type="long" />
+		<field name="namefbill" type="String" />
+		<field name="noofbill" type="String" />
+		<field name="pfs_schemesName " type="String" />
+		<field name="pfs_ascharges" type="String" />
+		<field name="pfs_custodycharges" type="String" />
+		<field name="pfs_ccilcharges" type="String" />
+		<field name="pfs_cbricscharges" type="String" />
+		<field name="pfs_nsdlcharges" type="String" />
+		<field name="pfs_sebicharges" type="String" />
+		<field name="totalcharges" type="String" />
+		<field name="shcil_ascharges" type="String" />
+		<field name="shcil_custodycharges" type="String" />
+		<field name="shcil_ccilcharges" type="String" />
+		<field name="shcil_cbricscharges" type="String" />
+		<field name="shcil_nsdlcharges" type="String" />
+		<field name="shcil_sebicharges" type="String" />
+		<field name="grosspaybleshcil" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AnnexureVB">
+		<field name="id_" type="long" />
+		<field name="month" type="String" />
+		<field name="billrefno" type="String" />
+		<field name="amount" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.AnPFVotingRec">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="financial_year" type="String" />
+		<field name="quarter" type="Date" />
+		<field name="total_number_of_resolution" type="BigDecimal" />
+		<field name="for_" type="BigDecimal" />
+		<field name="against" type="BigDecimal" />
+		<field name="abstain" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.AvgAmt">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="month_" type="String" />
+		<field name="nps_acc_no" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="average" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ChequeAccepted">
+		<field name="id_" type="long" />
+		<field name="file_name" type="String" />
+		<field name="channel" type="String" />
+		<field name="pao_fin" type="String" />
+		<field name="pao_reg_no" type="long" />
+		<field name="trans_id" type="long" />
+		<field name="amt" type="BigDecimal" />
+		<field name="file_ref_no" type="String" />
+		<field name="record_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="fund_realised_date" type="Date" />
+		<field name="frc_upload_date" type="Date" />
+		<field name="trustee_bank_tat" type="String" />
+		<field name="matching_type" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.ChequeClearance">
+		<field name="id_" type="long" />
+		<field name="easypay_tran_id" type="int" />
+		<field name="sol_id" type="int" />
+		<field name="axis_bank_branch" type="String" />
+		<field name="cra_tran_id" type="long" />
+		<field name="beneficiary_name" type="String" />
+		<field name="clearance_amt" type="BigDecimal" />
+		<field name="chq_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="clearance_date" type="Date" />
+		<field name="clearance_tat" type="String" />
+		<field name="delay_period_above_5_days" type="int" />
+		<field name="reason" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ChequeReject">
+		<field name="id_" type="long" />
+		<field name="receipt_date" type="Date" />
+		<field name="rejection_date" type="Date" />
+		<field name="sol_id" type="int" />
+		<field name="name_" type="String" />
+		<field name="pao_ain" type="int" />
+		<field name="tran_id" type="long" />
+		<field name="chq_no" type="long" />
+		<field name="total_amt" type="BigDecimal" />
+		<field name="drawn_on_bank" type="String" />
+		<field name="drawn_on_branch" type="String" />
+		<field name="return_desc" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ChequesFailed">
+		<field name="id_" type="long" />
+		<field name="transaction_no" type="String" />
+		<field name="sol_id" type="int" />
+		<field name="branch_name" type="String" />
+		<field name="name_" type="String" />
+		<field name="pao_ain" type="int" />
+		<field name="tran_id" type="long" />
+		<field name="total_amt" type="BigDecimal" />
+		<field name="cheque_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="clearance_date" type="Date" />
+		<field name="credit_acc_no" type="long" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ClosingBal">
+		<field name="uuid" type="String" />
+		<field name="exitid" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="closingdate" type="Date" />
+		<field name="addressline1" type="String" />
+		<field name="addressline2" type="String" />
+		<field name="addressline3" type="String" />
+		<field name="confirmdate" type="Date" />
+		<field name="accountdetails" type="String" />
+		<field name="yoursfaithfully" type="String" />
+		<field name="designation" type="String" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ClosingBalUploadDelay">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="file_name" type="String" />
+		<field name="uploaded_by" type="String" />
+		<field name="uploaded_date" type="Date" />
+		<field name="uploaded_time" type="Date" />
+		<field name="tat" type="Date" />
+		<field name="delay" type="Date" />
+		<field name="status" type="String" />
+		<field name="cra" type="String" />
+		<field name="auditees_comment" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.CollectionsTID">
+		<field name="id_" type="long" />
+		<field name="transaction_no" type="String" />
+		<field name="sol_id" type="int" />
+		<field name="branch_name" type="String" />
+		<field name="name_" type="String" />
+		<field name="pao_ain" type="int" />
+		<field name="tran_id" type="long" />
+		<field name="total_amt" type="BigDecimal" />
+		<field name="cheque_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="clearance_date" type="Date" />
+		<field name="credit_acc_no" type="long" />
+		<field name="email_id" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.CollectionSummary">
+		<field name="id_" type="long" />
+		<field name="remittance_mode" type="String" />
+		<field name="auto_match_trans_no" type="long" />
+		<field name="auto_match_amount" type="BigDecimal" />
+		<field name="manual_match_trans_no" type="long" />
+		<field name="manual_match_amount" type="BigDecimal" />
+		<field name="tot_accepted_trans_no" type="long" />
+		<field name="tot_accepted_amount" type="BigDecimal" />
+		<field name="tot_rejected_trans_no" type="long" />
+		<field name="tot_rejected_amount" type="BigDecimal" />
+		<field name="grand_tot_trans_no" type="long" />
+		<field name="grand_tot_amount" type="BigDecimal" />
+		<field name="percentage_rejection" type="double" />
+		<field name="percentage_acceptance" type="String" />
+		<field name="cra" type="String" />
+		<field name="month" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Compliance_Cert">
+		<field name="uuid" type="String" />
+		<field name="compid" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="certnumber" type="String" />
+		<field name="compliancedate" type="Date" />
+		<field name="compfyendingdate" type="Date" />
+		<field name="tbfyendingdate" type="Date" />
+		<field name="tbpfrdacomp" type="String" />
+		<field name="tbpfrdarem" type="String" />
+		<field name="tbreviewcomp" type="String" />
+		<field name="tbreviewrem" type="String" />
+		<field name="tbinvestcomp" type="String" />
+		<field name="tbinvestrem" type="String" />
+		<field name="tbcommcomp" type="String" />
+		<field name="tbcommrem" type="String" />
+		<field name="tbsubmitcomp" type="String" />
+		<field name="tbsubmitrem" type="String" />
+		<field name="tbobservecomp" type="String" />
+		<field name="tbobserverem" type="String" />
+		<field name="tbsubscribecomp" type="String" />
+		<field name="tbsubscriberem" type="String" />
+		<field name="maauditorscomp" type="String" />
+		<field name="maauditorsrem" type="String" />
+		<field name="macompliancecomp" type="String" />
+		<field name="macompliancerem" type="String" />
+		<field name="maobservecomp" type="String" />
+		<field name="maobserverem" type="String" />
+		<field name="moagreecomp" type="String" />
+		<field name="moagreerem" type="String" />
+		<field name="mofoundcomp" type="String" />
+		<field name="mofoundrem" type="String" />
+		<field name="mosegcomp" type="String" />
+		<field name="mosegrem" type="String" />
+		<field name="modilicomp" type="String" />
+		<field name="modilirem" type="String" />
+		<field name="pacustodycomp" type="String" />
+		<field name="pacustodyrem" type="String" />
+		<field name="paprotectedcomp" type="String" />
+		<field name="paprotectedrem" type="String" />
+		<field name="pasupervisecomp" type="String" />
+		<field name="pasuperviserem" type="String" />
+		<field name="paaccountscomp" type="String" />
+		<field name="paaccountsrem" type="String" />
+		<field name="ntomaintaincomp" type="String" />
+		<field name="ntomaintainrem" type="String" />
+		<field name="ntoadequatecomp" type="String" />
+		<field name="ntoadequaterem" type="String" />
+		<field name="ntoinformcomp" type="String" />
+		<field name="ntoinformrem" type="String" />
+		<field name="ntogrievancescomp" type="String" />
+		<field name="ntogrievancesrem" type="String" />
+		<field name="ntoexitcomp" type="String" />
+		<field name="ntoexitrem" type="String" />
+		<field name="aaannualcomp" type="String" />
+		<field name="aaannualrem" type="String" />
+		<field name="aabookscomp" type="String" />
+		<field name="aabooksrem" type="String" />
+		<field name="aaquarterlycomp" type="String" />
+		<field name="aaquarterlyrem" type="String" />
+		<field name="aarulescomp" type="String" />
+		<field name="aarulesrem" type="String" />
+		<field name="compofficername1" type="String" />
+		<field name="signdate1" type="Date" />
+		<field name="place1" type="String" />
+		<field name="compofficername2" type="String" />
+		<field name="signdate2" type="Date" />
+		<field name="place2" type="String" />
+	</model>
+	<model name="compliance.service.model.ConsoCollReport">
+		<field name="id_" type="long" />
+		<field name="file_name" type="String" />
+		<field name="channel" type="String" />
+		<field name="paofin" type="String" />
+		<field name="pao_reg_no" type="long" />
+		<field name="trans_id" type="double" />
+		<field name="amount" type="BigDecimal" />
+		<field name="file_ref_no" type="String" />
+		<field name="record_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="fund_realised_date" type="Date" />
+		<field name="frc_upload_date" type="Date" />
+		<field name="trustee_bank_tat" type="String" />
+		<field name="matching_type" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.CustodianAnnex_1a">
+		<field name="id_" type="long" />
+		<field name="custody_date" type="Date" />
+		<field name="pension_name" type="String" />
+		<field name="auc_face_value" type="double" />
+		<field name="auc_market_value" type="double" />
+		<field name="aum" type="double" />
+		<field name="percent_of_aum" type="double" />
+		<field name="asset_not_under_custody" type="double" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.CustodianAnnex_2a">
+		<field name="id_" type="long" />
+		<field name="description" type="String" />
+		<field name="remarks" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.CustodianAnnex_4b">
+		<field name="id_" type="long" />
+		<field name="file_number" type="String" />
+		<field name="date_1" type="Date" />
+		<field name="custodian_name" type="String" />
+		<field name="address" type="String" />
+		<field name="date_2" type="String" />
+		<field name="name_" type="String" />
+		<field name="regulatory_comments_1" type="String" />
+		<field name="regulatory_remarks_1" type="String" />
+		<field name="regulatory_sample_1" type="String" />
+		<field name="regulatory_nps_1" type="String" />
+		<field name="regulatory_comments_2" type="String" />
+		<field name="regulatory_remarks_2" type="String" />
+		<field name="regulatory_sample_2" type="String" />
+		<field name="regulatory_nps_2" type="String" />
+		<field name="regulatory_comments_3" type="String" />
+		<field name="regulatory_remarks_3" type="String" />
+		<field name="regulatory_sample_3" type="String" />
+		<field name="regulatory_nps_3" type="String" />
+		<field name="regulatory_comments_4" type="String" />
+		<field name="regulatory_remarks_4" type="String" />
+		<field name="regulatory_sample_4" type="String" />
+		<field name="regulatory_nps_4" type="String" />
+		<field name="regulatory_comments_5" type="String" />
+		<field name="regulatory_remarks_5" type="String" />
+		<field name="regulatory_sample_5" type="String" />
+		<field name="regulatory_nps_5" type="String" />
+		<field name="regulatory_comments_6" type="String" />
+		<field name="regulatory_remarks_6" type="String" />
+		<field name="regulatory_sample_6" type="String" />
+		<field name="regulatory_nps_6" type="String" />
+		<field name="regulatory_comments_7" type="String" />
+		<field name="regulatory_remarks_7" type="String" />
+		<field name="regulatory_sample_7" type="String" />
+		<field name="regulatory_nps_7" type="String" />
+		<field name="regulatory_comments_8" type="String" />
+		<field name="regulatory_remarks_8" type="String" />
+		<field name="regulatory_sample_8" type="String" />
+		<field name="regulatory_nps_8" type="String" />
+		<field name="regulatory_comments_9" type="String" />
+		<field name="regulatory_remarks_9" type="String" />
+		<field name="regulatory_sample_9" type="String" />
+		<field name="regulatory_nps_9" type="String" />
+		<field name="operational_comments_1" type="String" />
+		<field name="operational_remarks_1" type="String" />
+		<field name="operational_sample_1" type="String" />
+		<field name="operational_nps_1" type="String" />
+		<field name="operational_comments_2" type="String" />
+		<field name="operational_remarks_2" type="String" />
+		<field name="operational_sample_2" type="String" />
+		<field name="operational_nps_2" type="String" />
+		<field name="operational_comments_3" type="String" />
+		<field name="operational_remarks_3" type="String" />
+		<field name="operational_sample_3" type="String" />
+		<field name="operational_nps_3" type="String" />
+		<field name="operational_comments_4" type="String" />
+		<field name="operational_remarks_4" type="String" />
+		<field name="operational_sample_4" type="String" />
+		<field name="operational_nps_4" type="String" />
+		<field name="operational_comments_5" type="String" />
+		<field name="operational_remarks_5" type="String" />
+		<field name="operational_sample_5" type="String" />
+		<field name="operational_nps_5" type="String" />
+		<field name="operational_comments_6" type="String" />
+		<field name="operational_remarks_6" type="String" />
+		<field name="operational_sample_6" type="String" />
+		<field name="operational_nps_6" type="String" />
+		<field name="operational_comments_7" type="String" />
+		<field name="operational_remarks_7" type="String" />
+		<field name="operational_sample_7" type="String" />
+		<field name="operational_nps_7" type="String" />
+		<field name="operational_comments_8" type="String" />
+		<field name="operational_remarks_8" type="String" />
+		<field name="operational_sample_8" type="String" />
+		<field name="operational_nps_8" type="String" />
+		<field name="operational_comments_9" type="String" />
+		<field name="operational_remarks_9" type="String" />
+		<field name="operational_sample_9" type="String" />
+		<field name="operational_nps_9" type="String" />
+		<field name="operational_comments_10" type="String" />
+		<field name="operational_remarks_10" type="String" />
+		<field name="operational_sample_10" type="String" />
+		<field name="operational_nps_10" type="String" />
+		<field name="operational_comments_11" type="String" />
+		<field name="operational_remarks_11" type="String" />
+		<field name="operational_sample_11" type="String" />
+		<field name="operational_nps_11" type="String" />
+		<field name="operational_comments_12" type="String" />
+		<field name="operational_remarks_12" type="String" />
+		<field name="operational_sample_12" type="String" />
+		<field name="operational_nps_12" type="String" />
+		<field name="operational_comments_13" type="String" />
+		<field name="operational_remarks_13" type="String" />
+		<field name="operational_sample_13" type="String" />
+		<field name="operational_nps_13" type="String" />
+		<field name="operational_comments_14" type="String" />
+		<field name="operational_remarks_14" type="String" />
+		<field name="operational_sample_14" type="String" />
+		<field name="operational_nps_14" type="String" />
+		<field name="operational_comments_15" type="String" />
+		<field name="operational_remarks_15" type="String" />
+		<field name="operational_sample_15" type="String" />
+		<field name="operational_nps_15" type="String" />
+		<field name="operational_comments_16" type="String" />
+		<field name="operational_remarks_16" type="String" />
+		<field name="operational_sample_16" type="String" />
+		<field name="operational_nps_16" type="String" />
+		<field name="operational_comments_17" type="String" />
+		<field name="operational_remarks_17" type="String" />
+		<field name="operational_sample_17" type="String" />
+		<field name="operational_nps_17" type="String" />
+		<field name="operational_comments_18" type="String" />
+		<field name="operational_remarks_18" type="String" />
+		<field name="operational_sample_18" type="String" />
+		<field name="operational_nps_18" type="String" />
+		<field name="operational_comments_19" type="String" />
+		<field name="operational_remarks_19" type="String" />
+		<field name="operational_sample_19" type="String" />
+		<field name="operational_nps_19" type="String" />
+		<field name="timely_comments_1" type="String" />
+		<field name="timely_remarks_1" type="String" />
+		<field name="timely_sample_1" type="String" />
+		<field name="timely_nps_1" type="String" />
+		<field name="timely_comments_2" type="String" />
+		<field name="timely_remarks_2" type="String" />
+		<field name="timely_sample_2" type="String" />
+		<field name="timely_nps_2" type="String" />
+		<field name="timely_comments_3" type="String" />
+		<field name="timely_remarks_3" type="String" />
+		<field name="timely_sample_3" type="String" />
+		<field name="timely_nps_3" type="String" />
+		<field name="timely_comments_4" type="String" />
+		<field name="timely_remarks_4" type="String" />
+		<field name="timely_sample_4" type="String" />
+		<field name="timely_nps_4" type="String" />
+		<field name="timely_comments_5" type="String" />
+		<field name="timely_remarks_5" type="String" />
+		<field name="timely_sample_5" type="String" />
+		<field name="timely_nps_5" type="String" />
+		<field name="timely_comments_6" type="String" />
+		<field name="timely_remarks_6" type="String" />
+		<field name="timely_sample_6" type="String" />
+		<field name="timely_nps_6" type="String" />
+		<field name="timely_comments_7" type="String" />
+		<field name="timely_remarks_7" type="String" />
+		<field name="timely_sample_7" type="String" />
+		<field name="timely_nps_7" type="String" />
+		<field name="timely_comments_8" type="String" />
+		<field name="timely_remarks_8" type="String" />
+		<field name="timely_sample_8" type="String" />
+		<field name="timely_nps_8" type="String" />
+		<field name="timely_comments_9" type="String" />
+		<field name="timely_remarks_9" type="String" />
+		<field name="timely_sample_9" type="String" />
+		<field name="timely_nps_9" type="String" />
+		<field name="timely_comments_10" type="String" />
+		<field name="timely_remarks_10" type="String" />
+		<field name="timely_sample_10" type="String" />
+		<field name="timely_nps_10" type="String" />
+		<field name="timely_comments_11" type="String" />
+		<field name="timely_remarks_11" type="String" />
+		<field name="timely_sample_11" type="String" />
+		<field name="timely_nps_11" type="String" />
+		<field name="timely_comments_12" type="String" />
+		<field name="timely_remarks_12" type="String" />
+		<field name="timely_sample_12" type="String" />
+		<field name="timely_nps_12" type="String" />
+		<field name="timely_comments_13" type="String" />
+		<field name="timely_remarks_13" type="String" />
+		<field name="timely_sample_13" type="String" />
+		<field name="timely_nps_13" type="String" />
+		<field name="custodian_comments_1" type="String" />
+		<field name="custodian_remarks_1" type="String" />
+		<field name="custodian_sample_1" type="String" />
+		<field name="custodian_nps_1" type="String" />
+		<field name="custodian_comments_2" type="String" />
+		<field name="custodian_remarks_2" type="String" />
+		<field name="custodian_sample_2" type="String" />
+		<field name="custodian_nps_2" type="String" />
+		<field name="admin_comments_1" type="String" />
+		<field name="admin_remarks_1" type="String" />
+		<field name="admin_sample_1" type="String" />
+		<field name="admin_nps_1" type="String" />
+		<field name="admin_comments_2" type="String" />
+		<field name="admin_remarks_2" type="String" />
+		<field name="admin_sample_2" type="String" />
+		<field name="admin_nps_2" type="String" />
+		<field name="admin_comments_3" type="String" />
+		<field name="admin_remarks_3" type="String" />
+		<field name="admin_sample_3" type="String" />
+		<field name="admin_nps_3" type="String" />
+		<field name="admin_comments_4" type="String" />
+		<field name="admin_remarks_4" type="String" />
+		<field name="admin_sample_4" type="String" />
+		<field name="admin_nps_4" type="String" />
+		<field name="admin_comments_5" type="String" />
+		<field name="admin_remarks_5" type="String" />
+		<field name="admin_sample_5" type="String" />
+		<field name="admin_nps_5" type="String" />
+		<field name="infra_comments_1" type="String" />
+		<field name="infra_remarks_1" type="String" />
+		<field name="infra_sample_1" type="String" />
+		<field name="infra_nps_1" type="String" />
+		<field name="infra_comments_2" type="String" />
+		<field name="infra_remarks_2" type="String" />
+		<field name="infra_sample_2" type="String" />
+		<field name="infra_nps_2" type="String" />
+		<field name="infra_comments_3" type="String" />
+		<field name="infra_remarks_3" type="String" />
+		<field name="infra_sample_3" type="String" />
+		<field name="infra_nps_3" type="String" />
+		<field name="infra_comments_4" type="String" />
+		<field name="infra_remarks_4" type="String" />
+		<field name="infra_sample_4" type="String" />
+		<field name="infra_nps_4" type="String" />
+		<field name="infra_comments_5" type="String" />
+		<field name="infra_remarks_5" type="String" />
+		<field name="infra_sample_5" type="String" />
+		<field name="infra_nps_5" type="String" />
+		<field name="infra_comments_6" type="String" />
+		<field name="infra_remarks_6" type="String" />
+		<field name="infra_sample_6" type="String" />
+		<field name="infra_nps_6" type="String" />
+		<field name="infra_comments_7" type="String" />
+		<field name="infra_remarks_7" type="String" />
+		<field name="infra_sample_7" type="String" />
+		<field name="infra_nps_7" type="String" />
+		<field name="infra_comments_8" type="String" />
+		<field name="infra_remarks_8" type="String" />
+		<field name="infra_sample_8" type="String" />
+		<field name="infra_nps_8" type="String" />
+		<field name="infra_comments_9" type="String" />
+		<field name="infra_remarks_9" type="String" />
+		<field name="infra_sample_9" type="String" />
+		<field name="infra_nps_9" type="String" />
+		<field name="infra_comments_10" type="String" />
+		<field name="infra_remarks_10" type="String" />
+		<field name="infra_sample_10" type="String" />
+		<field name="infra_nps_10" type="String" />
+		<field name="infra_comments_11" type="String" />
+		<field name="infra_remarks_11" type="String" />
+		<field name="infra_sample_11" type="String" />
+		<field name="infra_nps_11" type="String" />
+		<field name="infra_comments_12" type="String" />
+		<field name="infra_remarks_12" type="String" />
+		<field name="infra_sample_12" type="String" />
+		<field name="infra_nps_12" type="String" />
+		<field name="protection_comments_1" type="String" />
+		<field name="protection_remarks_1" type="String" />
+		<field name="protection_sample_1" type="String" />
+		<field name="protection_nps_1" type="String" />
+		<field name="protection_comments_2" type="String" />
+		<field name="protection_remarks_2" type="String" />
+		<field name="protection_sample_2" type="String" />
+		<field name="protection_nps_2" type="String" />
+		<field name="protection_comments_3" type="String" />
+		<field name="protection_remarks_3" type="String" />
+		<field name="protection_sample_3" type="String" />
+		<field name="protection_nps_3" type="String" />
+		<field name="protection_comments_4" type="String" />
+		<field name="protection_remarks_4" type="String" />
+		<field name="protection_sample_4" type="String" />
+		<field name="protection_nps_4" type="String" />
+		<field name="protection_comments_5" type="String" />
+		<field name="protection_remarks_5" type="String" />
+		<field name="protection_sample_5" type="String" />
+		<field name="protection_nps_5" type="String" />
+		<field name="protection_comments_6" type="String" />
+		<field name="protection_remarks_6" type="String" />
+		<field name="protection_sample_6" type="String" />
+		<field name="protection_nps_6" type="String" />
+		<field name="record_comments_1" type="String" />
+		<field name="record_remarks_1" type="String" />
+		<field name="record_sample_1" type="String" />
+		<field name="record_nps_1" type="String" />
+		<field name="record_comments_2" type="String" />
+		<field name="record_remarks_2" type="String" />
+		<field name="record_sample_2" type="String" />
+		<field name="record_nps_2" type="String" />
+		<field name="record_comments_3" type="String" />
+		<field name="record_remarks_3" type="String" />
+		<field name="record_sample_3" type="String" />
+		<field name="record_nps_3" type="String" />
+		<field name="record_comments_4" type="String" />
+		<field name="record_remarks_4" type="String" />
+		<field name="record_sample_4" type="String" />
+		<field name="record_nps_4" type="String" />
+		<field name="grievance_comments_1" type="String" />
+		<field name="grievance_remarks_1" type="String" />
+		<field name="grievance_sample_1" type="String" />
+		<field name="grievance_nps_1" type="String" />
+		<field name="grievance_comments_2" type="String" />
+		<field name="grievance_remarks_2" type="String" />
+		<field name="grievance_sample_2" type="String" />
+		<field name="grievance_nps_2" type="String" />
+		<field name="other_comments_1" type="String" />
+		<field name="other_remarks_1" type="String" />
+		<field name="other_sample_1" type="String" />
+		<field name="other_nps_1" type="String" />
+		<field name="other_comments_2" type="String" />
+		<field name="other_remarks_2" type="String" />
+		<field name="other_sample_2" type="String" />
+		<field name="other_nps_2" type="String" />
+		<field name="governance_comments_1" type="String" />
+		<field name="governance_remarks_1" type="String" />
+		<field name="governance_sample_1" type="String" />
+		<field name="governance_nps_1" type="String" />
+		<field name="governance_comments_2" type="String" />
+		<field name="governance_remarks_2" type="String" />
+		<field name="governance_sample_2" type="String" />
+		<field name="governance_nps_2" type="String" />
+		<field name="governance_comments_3" type="String" />
+		<field name="governance_remarks_3" type="String" />
+		<field name="governance_sample_3" type="String" />
+		<field name="governance_nps_3" type="String" />
+		<field name="governance_comments_4" type="String" />
+		<field name="governance_remarks_4" type="String" />
+		<field name="governance_sample_4" type="String" />
+		<field name="governance_nps_4" type="String" />
+		<field name="manager" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.D_REMITAccepted">
+		<field name="id_" type="long" />
+		<field name="file_name" type="String" />
+		<field name="channel" type="String" />
+		<field name="pao_fin" type="String" />
+		<field name="pao_reg_no" type="long" />
+		<field name="trans_id" type="long" />
+		<field name="amt" type="BigDecimal" />
+		<field name="file_ref_no" type="String" />
+		<field name="record_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="fund_realised_date" type="Date" />
+		<field name="frc_upload_date" type="Date" />
+		<field name="trustee_bank_tat" type="String" />
+		<field name="matching_type" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.DelayAfter_930am">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="date_of_upload" type="Date" />
+		<field name="file_name" type="String" />
+		<field name="tat_time" type="Date" />
+		<field name="time_stamp" type="Date" />
+		<field name="delay" type="Date" />
+		<field name="auditee_comments" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.DelayExceed_25min">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="date_" type="Date" />
+		<field name="payin_file_timestamp" type="Date" />
+		<field name="fund_transfer_timestamp" type="Date" />
+		<field name="tat_time" type="Date" />
+		<field name="delay" type="Date" />
+		<field name="auditee_comments" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.DelayToPFMAcc">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="tid" type="long" />
+		<field name="amt" type="BigDecimal" />
+		<field name="funds_receipt_date" type="Date" />
+		<field name="transfer_date" type="Date" />
+		<field name="frc_upload_date" type="Date" />
+		<field name="delay" type="String" />
+		<field name="auditee_comment" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.DelayWithdrawalRemittance">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="std_pran" type="long" />
+		<field name="process_type" type="String" />
+		<field name="name_" type="String" />
+		<field name="net_amt" type="BigDecimal" />
+		<field name="pay_in_date" type="Date" />
+		<field name="execution_date" type="Date" />
+		<field name="no_of_days" type="long" />
+		<field name="auditee_comment" type="String" />
+		<field name="return_reason" type="String" />
+		<field name="cra" type="String" />
+		<field name="return_type" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ElectronicAccepted">
+		<field name="id_" type="long" />
+		<field name="file_name" type="String" />
+		<field name="channel" type="String" />
+		<field name="pao_fin" type="String" />
+		<field name="pao_reg_no" type="long" />
+		<field name="trans_id" type="long" />
+		<field name="amt" type="BigDecimal" />
+		<field name="file_ref_no" type="String" />
+		<field name="record_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="fund_realised_date" type="Date" />
+		<field name="frc_upload_date" type="Date" />
+		<field name="trustee_bank_tat" type="String" />
+		<field name="matching_type" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ElectronicRejects">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="int" />
+		<field name="payment_id" type="long" />
+		<field name="ret_ref_no" type="String" />
+		<field name="source_acc_no_nodal" type="String" />
+		<field name="source_acc_no_ifsc" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="period_" type="String" />
+		<field name="utr_no" type="String" />
+		<field name="mode_" type="String" />
+		<field name="utr_amount" type="double" />
+		<field name="beneficiary_acc_no" type="long" />
+		<field name="nps_virtual_acc_no" type="int" />
+		<field name="nps_acc_name" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="long" />
+		<field name="reason_return" type="String" />
+		<field name="additional_comments" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="delay_remarks" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ElectronicRejSummary">
+		<field name="id_" type="long" />
+		<field name="payment_date" type="Date" />
+		<field name="nps_acc_name" type="String" />
+		<field name="count_payment_id" type="int" />
+		<field name="sum_utr_amt" type="BigDecimal" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ENPSServChanges">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="nps_acc_no" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="tran_date" type="Date" />
+		<field name="debit_trans" type="BigDecimal" />
+		<field name="credit_trans" type="BigDecimal" />
+		<field name="amt" type="BigDecimal" />
+		<field name="auditee_remarks" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.EnquireReceived">
+		<field name="id_" type="long" />
+		<field name="esNo" type="String" />
+		<field name="etokennumber" type="String" />
+		<field name="pranid" type="String" />
+		<field name="loggingdate" type="String" />
+		<field name="resolutiondate" type="String" />
+		<field name="estatus" type="String" />
+		<field name="category" type="String" />
+		<field name="raisedagainst" type="String" />
+		<field name="enquirysubcategory" type="String" />
+		<field name="edescription" type="String" />
+		<field name="eresoluton" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.ExpTranId">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="long" />
+		<field name="payment_id" type="String" />
+		<field name="ret_ref_no" type="String" />
+		<field name="source_acc_no_nodal" type="String" />
+		<field name="ifsc_source_no" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="period_" type="String" />
+		<field name="original_utr" type="String" />
+		<field name="mode_" type="String" />
+		<field name="utr_amount" type="BigDecimal" />
+		<field name="beneficiary_acc_no" type="String" />
+		<field name="nps_virtual_acc_no" type="String" />
+		<field name="nps_acc_name" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="String" />
+		<field name="reason_return" type="String" />
+		<field name="additional_comments" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="return_tat_remarks" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FinalUploadFile">
+		<field name="id_" type="long" />
+		<field name="pensionfund" type="String" />
+		<field name="inceptiondate" type="String" />
+		<field name="aum" type="String" />
+		<field name="subscribers" type="String" />
+		<field name="nav" type="String" />
+		<field name="return_1year" type="String" />
+		<field name="return_3year" type="String" />
+		<field name="return_5year" type="String" />
+		<field name="return_7year" type="String" />
+		<field name="return_10year" type="String" />
+		<field name="returninception" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FormatAI">
+		<field name="id_" type="long" />
+		<field name="formatiaisector" type="String" />
+		<field name="formatiawithdrawaltype" type="String" />
+		<field name="formatiapendingbeginning" type="String" />
+		<field name="formatiaclaimsreceivedduring" type="String" />
+		<field name="formatiaclaimsauthorisedduring" type="String" />
+		<field name="formatiaclaimsrejectedduring" type="String" />
+		<field name="formatiaclaimsoutstanding" type="String" />
+		<field name="formataiclaimssettledduring" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FormatAII">
+		<field name="id_" type="long" />
+		<field name="withdrawalsector" type="String" />
+		<field name="format_type" type="String" />
+		<field name="zerotothirty" type="String" />
+		<field name="thirtyonetoninety" type="String" />
+		<field name="formatninetyonetoonetenty" type="String" />
+		<field name="formatonetooneeighty" type="String" />
+		<field name="morethanthreesixtyfive" type="String" />
+		<field name="morethenoneyear" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FormatB">
+		<field name="id_" type="long" />
+		<field name="formatb_sector" type="String" />
+		<field name="partialwithdrawal" type="String" />
+		<field name="surrenderofNPSbenefits" type="String" />
+		<field name="eligiblelumpsumwithdrawal" type="String" />
+		<field name="purchaseofannuity" type="String" />
+		<field name="allcitizenes" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FormatC">
+		<field name="id_" type="long" />
+		<field name="formatc_sector" type="String" />
+		<field name="withdrawalapplications" type="String" />
+		<field name="purchaseofannuity" type="String" />
+		<field name="paymenttoASPbyCRA" type="String" />
+		<field name="premiumtoASPatCRA " type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FormatD">
+		<field name="id_" type="long" />
+		<field name="GrievancestatisticsforCGMS" type="String" />
+		<field name="formatnumber" type="String" />
+		<field name="Remarksifany" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FormatE">
+		<field name="id_" type="long" />
+		<field name="formate_sector" type="String" />
+		<field name="quarterasperCRAdatabase" type="String" />
+		<field name="lastdateofthequarter" type="String" />
+		<field name="actualreportedwithdrawals" type="String" />
+		<field name="remarksofCRA" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FormatIA">
+		<field name="id_" type="long" />
+		<field name="formatiasector" type="String" />
+		<field name="withdrawaltype" type="String" />
+		<field name="pendingbeginningofthemonth" type="String" />
+		<field name="claimsreceivedduringmonth" type="String" />
+		<field name="claimssettledduring" type="String" />
+		<field name="claimsrejectedduring " type="String" />
+		<field name="claimsoutstandingendofmonth" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.FRCWithdrawalAcc">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="std_pran" type="long" />
+		<field name="sub_name" type="String" />
+		<field name="type_" type="String" />
+		<field name="pay_in_date" type="Date" />
+		<field name="execution_date" type="Date" />
+		<field name="net_amt" type="BigDecimal" />
+		<field name="auditees_comment" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.GrievanceReceived">
+		<field name="id_" type="long" />
+		<field name="gsNo" type="String" />
+		<field name="tokennumber" type="String" />
+		<field name="raisedbyentity" type="String" />
+		<field name="raisedbyentityid" type="String" />
+		<field name="raisedagainstentity" type="String" />
+		<field name="raisedagainstentityid" type="String" />
+		<field name="grievancetype" type="String" />
+		<field name="grievancecategory" type="String" />
+		<field name="gstatus" type="String" />
+		<field name="loggeddate" type="String" />
+		<field name="resolveddate" type="String" />
+		<field name="grievancesubtype " type="String" />
+		<field name="grievancedescription" type="String" />
+		<field name="gresolution" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InputQuarterlyInterval">
+		<field name="id_" type="long" />
+		<field name="formDate" type="Date" />
+		<field name="oneia" type="String" />
+		<field name="oneib" type="String" />
+		<field name="oneiia" type="String" />
+		<field name="oneiib" type="String" />
+		<field name="oneiic" type="String" />
+		<field name="oneiid" type="String" />
+		<field name="oneiiia" type="String" />
+		<field name="oneiiib" type="String" />
+		<field name="oneiva" type="String" />
+		<field name="onev" type="String" />
+		<field name="twoia" type="String" />
+		<field name="twoib" type="String" />
+		<field name="twoic" type="String" />
+		<field name="twoiione" type="String" />
+		<field name="twoiitwo" type="String" />
+		<field name="twoiithree" type="String" />
+		<field name="twoiifour" type="String" />
+		<field name="twoiifive" type="String" />
+		<field name="twoiisix" type="String" />
+		<field name="twoiiseven" type="String" />
+		<field name="threea" type="String" />
+		<field name="threeb" type="String" />
+		<field name="threec" type="String" />
+		<field name="threeci" type="String" />
+		<field name="threecii" type="String" />
+		<field name="threeciii" type="String" />
+		<field name="threeciv" type="String" />
+		<field name="foura" type="String" />
+		<field name="fourb" type="String" />
+		<field name="fourc" type="String" />
+		<field name="fivei" type="String" />
+		<field name="fiveii" type="String" />
+		<field name="fiveiii" type="String" />
+		<field name="fiveiv" type="String" />
+		<field name="fiveva" type="String" />
+		<field name="fivevb" type="String" />
+		<field name="fivevc" type="String" />
+		<field name="fivevia" type="String" />
+		<field name="fivevib" type="String" />
+		<field name="sixi" type="String" />
+		<field name="sixiia" type="String" />
+		<field name="sixiib" type="String" />
+		<field name="sixiic" type="String" />
+		<field name="sevenia" type="String" />
+		<field name="sevenib" type="String" />
+		<field name="sevenic" type="String" />
+		<field name="sevenid" type="String" />
+		<field name="sevenie" type="String" />
+		<field name="eightia" type="String" />
+		<field name="eightib" type="String" />
+		<field name="eightii" type="String" />
+		<field name="eightiii" type="String" />
+		<field name="eightiv" type="String" />
+		<field name="eightv" type="String" />
+		<field name="eightvia" type="String" />
+		<field name="eightvib" type="String" />
+		<field name="eightviia" type="String" />
+		<field name="eightviib" type="String" />
+		<field name="eightviii" type="String" />
+		<field name="ninea" type="String" />
+		<field name="nineb" type="String" />
+		<field name="ten" type="String" />
+		<field name="elevena" type="String" />
+		<field name="elevenb" type="String" />
+		<field name="twelve" type="String" />
+		<field name="companies" type="String" />
+		<field name="date_3" type="String" />
+		<field name="place" type="String" />
+		<field name="signature" type="Date" />
+		<field name="board_a" type="String" />
+		<field name="board_b" type="String" />
+		<field name="investment_a" type="String" />
+		<field name="investment_b" type="String" />
+		<field name="risk_a" type="String" />
+		<field name="risk_b" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InputQuarterlyIntervalI">
+		<field name="id_" type="long" />
+		<field name="Quatertable_name" type="String" />
+		<field name="nameofdirector" type="String" />
+		<field name="dignation" type="String" />
+		<field name="indepent" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InputQuarterlyIntervalII">
+		<field name="id_" type="long" />
+		<field name="quarter_table_name" type="String" />
+		<field name="description" type="String" />
+		<field name="quarter_end_jun_21" type="String" />
+		<field name="quarter_end_mar_21" type="String" />
+		<field name="quarter_end_dec_20" type="String" />
+		<field name="quarter_end_sep_20" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InputQuarterlyIntervalIII">
+		<field name="id_" type="long" />
+		<field name="position_" type="String" />
+		<field name="nameofthepersonnel" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InputQuarterlyIntervalIV">
+		<field name="id_" type="long" />
+		<field name="intervaltableName" type="String" />
+		<field name="schemetype" type="String" />
+		<field name="occurrence" type="String" />
+		<field name="submission" type="String" />
+		<field name="dateoficmeeting" type="String" />
+		<field name="boardmeeting" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InputQuarterlyIntervalV">
+		<field name="id_" type="long" />
+		<field name="nameofdirector" type="String" />
+		<field name="dignation" type="String" />
+		<field name="indepent" type="String" />
+		<field name="Dateofsubmission" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InternalAuditReport">
+		<field name="id_" type="long" />
+		<field name="reportname" type="String" />
+		<field name="reportDate" type="Date" />
+		<field name="tablename" type="String" />
+		<field name="sampling" type="String" />
+		<field name="particulars" type="String" />
+		<field name="auditorscomments" type="String" />
+		<field name="status" type="String" />
+		<field name="riskrating" type="String" />
+		<field name="managementresponses" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InternalAuditReportI">
+		<field name="id_" type="long" />
+		<field name="tablename_annexure" type="String" />
+		<field name="bordmeetingdate" type="Date" />
+		<field name="borddate" type="Date" />
+		<field name="committeemeeting" type="Date" />
+		<field name="riskmeeting" type="Date" />
+		<field name="nameofdirectors" type="String" />
+		<field name="designation" type="String" />
+		<field name="attendance" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InternalAuditReportII">
+		<field name="id_" type="long" />
+		<field name="annexuremonthend" type="String" />
+		<field name="monthdatei" type="Date" />
+		<field name="monthdateii" type="Date" />
+		<field name="monthdateiii" type="Date" />
+		<field name="Scheme" type="String" />
+		<field name="Issuer" type="String" />
+		<field name="Classification" type="String" />
+		<field name="marketvalue" type="long" />
+		<field name="maxpermissable" type="long" />
+		<field name="deviation" type="long" />
+		<field name="percentagedeviation" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InternalAuditReportIII">
+		<field name="id_" type="long" />
+		<field name="detailsofsubmissionof_monthly" type="String" />
+		<field name="concernedperiod" type="String" />
+		<field name="disclosuredate" type="Date" />
+		<field name="duedatedisclosure" type="Date" />
+		<field name="delay" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InternalAuditReportIV">
+		<field name="id_" type="long" />
+		<field name="detailsofaveragebank" type="String" />
+		<field name="quarterdate" type="Date" />
+		<field name="schemeiv" type="String" />
+		<field name="july" type="long" />
+		<field name="august" type="long" />
+		<field name="september" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InternalAuditReportV">
+		<field name="id_" type="long" />
+		<field name="statusofnonperforming " type="String" />
+		<field name="assetsdate" type="Date" />
+		<field name="nameofcompany" type="String" />
+		<field name="statusasonjun" type="String" />
+		<field name="statusasonsep" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.InvalidAcc">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="int" />
+		<field name="payment_id" type="int" />
+		<field name="ret_ref_no" type="String" />
+		<field name="source_acc_no_nodal" type="String" />
+		<field name="ifsc_source_no" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="period_" type="String" />
+		<field name="original_utr" type="String" />
+		<field name="mode_" type="String" />
+		<field name="utr_amount" type="BigDecimal" />
+		<field name="beneficiary_acc_no" type="int" />
+		<field name="nps_virtual_acc_no" type="int" />
+		<field name="nps_acc_name" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="int" />
+		<field name="reason_return" type="String" />
+		<field name="additional_comments" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="return_tat_remarks" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.InvalidAccII">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="int" />
+		<field name="payment_id" type="int" />
+		<field name="ret_ref_no" type="String" />
+		<field name="source_acc_no_nodal" type="int" />
+		<field name="ifsc_source_no" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="period_" type="String" />
+		<field name="original_utr" type="String" />
+		<field name="mode_" type="String" />
+		<field name="utr_amount" type="BigDecimal" />
+		<field name="beneficiary_acc_no" type="int" />
+		<field name="nps_virtual_acc_no" type="int" />
+		<field name="nps_acc_name" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="int" />
+		<field name="reason_return" type="String" />
+		<field name="additional_comments" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="return_tat_remarks" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnAPY">
+		<field name="id_" type="long" />
+		<field name="apy_sp_reg_no" type="String" />
+		<field name="apy_sp_name" type="String" />
+		<field name="add_line1" type="String" />
+		<field name="add_line2" type="String" />
+		<field name="add_line3" type="String" />
+		<field name="add_line4" type="String" />
+		<field name="pin_code" type="BigDecimal" />
+		<field name="count_of_grievances_pending" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnAPYGrievance">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="int" />
+		<field name="apy_sp_reg_no" type="String" />
+		<field name="apy_sp_name" type="String" />
+		<field name="token_number" type="String" />
+		<field name="grievance_logging_date" type="Date" />
+		<field name="pran" type="long" />
+		<field name="subscriber_name" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnEntityWiseAgeing">
+		<field name="id_" type="long" />
+		<field name="entities" type="String" />
+		<field name="month_" type="Date" />
+		<field name="outstanding_opening_balance" type="int" />
+		<field name="escalated_to_npst" type="int" />
+		<field name="referrals_recv_during_month" type="int" />
+		<field name="reviewed_and_assigned_by_npst" type="int" />
+		<field name="referrals_resol_during_month" type="int" />
+		<field name="outstanding_at_end_of_month" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnEntityWiseOutAnalysis">
+		<field name="id_" type="long" />
+		<field name="entities" type="String" />
+		<field name="month_" type="Date" />
+		<field name="outstanding_opening_balance" type="int" />
+		<field name="escalated_to_npst" type="int" />
+		<field name="referrals_recv_during_month" type="int" />
+		<field name="reviewed_and_assigned_by_npst" type="int" />
+		<field name="referrals_resol_during_month" type="int" />
+		<field name="outstanding_at_end_of_month" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm1">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="aum_pfm" type="BigDecimal" />
+		<field name="aum_cra" type="BigDecimal" />
+		<field name="aum_diff" type="BigDecimal" />
+		<field name="units_outstanding_pfm" type="BigDecimal" />
+		<field name="units_outstanding_cra" type="BigDecimal" />
+		<field name="units_outstanding_diff" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm10">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="nic_code" type="String" />
+		<field name="nic_industry_desc" type="String" />
+		<field name="permissible_limit_of_industry" type="BigDecimal" />
+		<field name="actual_investments" type="BigDecimal" />
+		<field name="deviation" type="BigDecimal" />
+		<field name="percentage_of_deviation" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm11">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="name_of_group" type="String" />
+		<field name="investee_company" type="String" />
+		<field name="eq_perm_limit_of_paidupcapital" type="BigDecimal" />
+		<field name="eq_permissible_limit_of_aum" type="BigDecimal" />
+		<field name="eq_actual_investment" type="BigDecimal" />
+		<field name="eq_deviation_percentage" type="String" />
+		<field name="debt_limit_of_networth" type="BigDecimal" />
+		<field name="debt_limit_of_aum" type="BigDecimal" />
+		<field name="debt_actual_investment" type="BigDecimal" />
+		<field name="debt_deviation_percentage" type="String" />
+		<field name="exposure_exceptions" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm11_NonSponsor">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="name_of_group" type="String" />
+		<field name="investee_company" type="String" />
+		<field name="eq_perm_limit_of_paidupcapital" type="BigDecimal" />
+		<field name="eq_permissible_limit_of_aum" type="BigDecimal" />
+		<field name="eq_actual_investment" type="BigDecimal" />
+		<field name="eq_deviation_percentage" type="String" />
+		<field name="debt_limit_of_networth" type="BigDecimal" />
+		<field name="debt_limit_of_aum" type="BigDecimal" />
+		<field name="debt_actual_investment" type="BigDecimal" />
+		<field name="debt_deviation_percentage" type="String" />
+		<field name="exposure_exceptions" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm12">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="name_of_the_issuer" type="String" />
+		<field name="equity_perm_limit_aum_prcnt" type="String" />
+		<field name="equity_perm_limit_aum_amount" type="BigDecimal" />
+		<field name="equity_actual_investment" type="BigDecimal" />
+		<field name="equity_deviation_percentage" type="String" />
+		<field name="equity_deviation_amount" type="BigDecimal" />
+		<field name="debt_perm_limit_aum_percentage" type="String" />
+		<field name="debt_perm_limit_of_aum_amount" type="BigDecimal" />
+		<field name="debt_actual_investment" type="BigDecimal" />
+		<field name="debt_deviation_percentage" type="String" />
+		<field name="debt_deviation_amount" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm13">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="tier_i_tier_ii" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="isin" type="String" />
+		<field name="security_name" type="String" />
+		<field name="issuer_name" type="String" />
+		<field name="nic_code" type="BigDecimal" />
+		<field name="industry_classification" type="String" />
+		<field name="security_type" type="String" />
+		<field name="no_of_shares_units" type="BigDecimal" />
+		<field name="market_price_per_unit" type="BigDecimal" />
+		<field name="market_value" type="BigDecimal" />
+		<field name="aum" type="BigDecimal" />
+		<field name="percentage_to_nav" type="String" />
+		<field name="coupon_rate" type="String" />
+		<field name="coupon_payment_freq" type="int" />
+		<field name="purchase_price" type="BigDecimal" />
+		<field name="amount_invested" type="BigDecimal" />
+		<field name="put_date" type="Date" />
+		<field name="call_date" type="Date" />
+		<field name="face_value" type="BigDecimal" />
+		<field name="maturity_date" type="Date" />
+		<field name="residual_maturity" type="BigDecimal" />
+		<field name="modified_duration" type="BigDecimal" />
+		<field name="purchase_ytm" type="String" />
+		<field name="current_ytm" type="String" />
+		<field name="nse_closing_price" type="BigDecimal" />
+		<field name="bse_closing_price" type="BigDecimal" />
+		<field name="lowest_rating" type="String" />
+		<field name="lowest_rating_agency" type="String" />
+		<field name="second_lowest_rating" type="String" />
+		<field name="second_lowest_rating_agency" type="String" />
+		<field name="code" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm14">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="tier_i_tier_ii" type="String" />
+		<field name="transaction_type" type="String" />
+		<field name="transaction_date" type="Date" />
+		<field name="isin" type="String" />
+		<field name="security_name" type="String" />
+		<field name="issuer_name" type="String" />
+		<field name="nic_code" type="BigDecimal" />
+		<field name="industry_classification" type="String" />
+		<field name="security_type" type="String" />
+		<field name="no_of_shares" type="BigDecimal" />
+		<field name="purchase_or_sale_price" type="BigDecimal" />
+		<field name="amount_purchase_or_sale" type="BigDecimal" />
+		<field name="coupon_rate_percent" type="BigDecimal" />
+		<field name="coupon_frequency" type="int" />
+		<field name="put_date" type="Date" />
+		<field name="call_date" type="Date" />
+		<field name="face_value" type="BigDecimal" />
+		<field name="maturity_date" type="Date" />
+		<field name="residual_maturity_date" type="BigDecimal" />
+		<field name="modified_duration_on_tran_date" type="BigDecimal" />
+		<field name="purchase_ytm" type="String" />
+		<field name="lowest_rating" type="String" />
+		<field name="lowest_rating_agency" type="String" />
+		<field name="second_lowest_rating" type="String" />
+		<field name="second_lowest_rating_agency" type="String" />
+		<field name="code" type="long" />
+		<field name="broker_name" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm2">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="particulars" type="String" />
+		<field name="scheme_cg" type="BigDecimal" />
+		<field name="scheme_sg" type="BigDecimal" />
+		<field name="scheme_e_tier_i" type="BigDecimal" />
+		<field name="scheme_c_tier_i" type="BigDecimal" />
+		<field name="scheme_g_tier_i" type="BigDecimal" />
+		<field name="scheme_a_tier_i" type="BigDecimal" />
+		<field name="scheme_e_tier_ii" type="BigDecimal" />
+		<field name="scheme_c_tier_ii" type="BigDecimal" />
+		<field name="scheme_g_tier_ii" type="BigDecimal" />
+		<field name="scheme_tax_saver_tier_ii" type="BigDecimal" />
+		<field name="nps_lite" type="BigDecimal" />
+		<field name="corporate_cg_scheme" type="BigDecimal" />
+		<field name="apy" type="BigDecimal" />
+		<field name="apy_fund_scheme" type="BigDecimal" />
+		<field name="tier2_composite" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm3">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="particulars" type="String" />
+		<field name="scheme_cg" type="String" />
+		<field name="scheme_sg" type="String" />
+		<field name="nps_lite" type="String" />
+		<field name="corporate_cg_scheme" type="String" />
+		<field name="apy" type="String" />
+		<field name="scheme_e_tier_i" type="String" />
+		<field name="scheme_c_tier_i" type="String" />
+		<field name="scheme_g_tier_i" type="String" />
+		<field name="scheme_e_tier_ii" type="String" />
+		<field name="scheme_c_tier_ii" type="String" />
+		<field name="scheme_g_tier_ii" type="String" />
+		<field name="scheme_a_tier_i" type="String" />
+		<field name="scheme_tax_saver_tier_ii" type="String" />
+		<field name="apy_fund_scheme" type="String" />
+		<field name="tier2_composite" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm4_AtalPensionYojana">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm4_CG">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm4_CorpCG">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm4_NpsLite">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm4_SG">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm5_C_I">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm5_C_II">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm6_E_I">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm6_E_II">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm7_G_I">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm7_G_II">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm7a_A_T_I">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm7b_TTS">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="code" type="long" />
+		<field name="description_of_securities" type="String" />
+		<field name="amount" type="BigDecimal" />
+		<field name="percentage_of_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm8">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="sl_no" type="int" />
+		<field name="security_name" type="String" />
+		<field name="isin_code" type="String" />
+		<field name="scheme" type="String" />
+		<field name="issuer_name" type="String" />
+		<field name="market_value_reporting_date" type="BigDecimal" />
+		<field name="purchase_value" type="BigDecimal" />
+		<field name="date_of_purchase" type="Date" />
+		<field name="rating_at_time_purchase" type="String" />
+		<field name="rating_agency_time_of_purchase" type="String" />
+		<field name="rating_date_of_purchase" type="Date" />
+		<field name="first_downgraded_rating" type="String" />
+		<field name="date_of_first_downgrade" type="Date" />
+		<field name="rating_agency_downgraded" type="String" />
+		<field name="current_rating" type="String" />
+		<field name="current_rating_agency" type="String" />
+		<field name="current_rating_date" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm8_ii">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="sl_no" type="int" />
+		<field name="security_name" type="String" />
+		<field name="isin_code" type="String" />
+		<field name="scheme" type="String" />
+		<field name="issuer_name" type="String" />
+		<field name="market_value_reporting_date" type="BigDecimal" />
+		<field name="purchase_value" type="BigDecimal" />
+		<field name="date_of_purchase" type="Date" />
+		<field name="rating_at_time_purchase" type="String" />
+		<field name="rating_agency_time_of_purchase" type="String" />
+		<field name="rating_date_of_purchase" type="Date" />
+		<field name="first_downgraded_rating" type="String" />
+		<field name="date_of_first_downgrade" type="Date" />
+		<field name="rating_agency_downgraded" type="String" />
+		<field name="current_rating" type="String" />
+		<field name="current_rating_agency" type="String" />
+		<field name="current_rating_date" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnForm9">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="sl_no" type="int" />
+		<field name="security_name" type="String" />
+		<field name="isin_code" type="String" />
+		<field name="scheme" type="String" />
+		<field name="issuer_name" type="String" />
+		<field name="market_value_reporting_date" type="BigDecimal" />
+		<field name="purchase_value" type="BigDecimal" />
+		<field name="date_of_purchase" type="Date" />
+		<field name="face_value" type="BigDecimal" />
+		<field name="npa_since" type="Date" />
+		<field name="recoveries_till_reporting_date" type="BigDecimal" />
+		<field name="book_value_net_recovery_date" type="BigDecimal" />
+		<field name="provision_held_against_book" type="BigDecimal" />
+		<field name="interest_default_till_npa_date" type="BigDecimal" />
+		<field name="intrst_default_after_npa_date" type="BigDecimal" />
+		<field name="interest_default_total" type="BigDecimal" />
+		<field name="provision_held_against_int" type="BigDecimal" />
+		<field name="remarks" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnGrievanceOutstanding">
+		<field name="id_" type="long" />
+		<field name="particulars" type="String" />
+		<field name="year_" type="String" />
+		<field name="apr" type="BigDecimal" />
+		<field name="may" type="BigDecimal" />
+		<field name="jun" type="BigDecimal" />
+		<field name="jul" type="BigDecimal" />
+		<field name="aug" type="BigDecimal" />
+		<field name="sep" type="BigDecimal" />
+		<field name="oct" type="BigDecimal" />
+		<field name="nov" type="BigDecimal" />
+		<field name="dec" type="BigDecimal" />
+		<field name="jan" type="BigDecimal" />
+		<field name="feb" type="BigDecimal" />
+		<field name="mar" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNonUnanimous">
+		<field name="id_" type="long" />
+		<field name="s_no" type="int" />
+		<field name="name_of_the_company" type="String" />
+		<field name="meeting_date" type="Date" />
+		<field name="resolution" type="String" />
+		<field name="ses_recommendation" type="String" />
+		<field name="ses_reason_for_recommendation" type="String" />
+		<field name="pfs_voted_for" type="String" />
+		<field name="pfs_voted_abstain" type="String" />
+		<field name="pfs_voted_against" type="String" />
+		<field name="final_vote" type="String" />
+		<field name="isin" type="String" />
+		<field name="ses_id" type="String" />
+		<field name="ses_res_id" type="String" />
+		<field name="resolution_no" type="BigDecimal" />
+		<field name="reportingDate" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpaDevelopment">
+		<field name="id_" type="long" />
+		<field name="companies" type="String" />
+		<field name="date_1" type="String" />
+		<field name="name_of_security" type="String" />
+		<field name="legal_case_details" type="String" />
+		<field name="current_status" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsCategoryWiseAgeing">
+		<field name="id_" type="long" />
+		<field name="category" type="String" />
+		<field name="month_" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="_0_to_30_days" type="int" />
+		<field name="_31_to_60_days" type="int" />
+		<field name="_61_to_90_days" type="int" />
+		<field name="_91_to_365_days" type="int" />
+		<field name="more_than_365_days" type="int" />
+		<field name="outstanding_at_end_of_month" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsCategoryWiseGrievance">
+		<field name="id_" type="long" />
+		<field name="category" type="String" />
+		<field name="year_" type="String" />
+		<field name="apr" type="BigDecimal" />
+		<field name="may" type="BigDecimal" />
+		<field name="jun" type="BigDecimal" />
+		<field name="jul" type="BigDecimal" />
+		<field name="aug" type="BigDecimal" />
+		<field name="sep" type="BigDecimal" />
+		<field name="oct" type="BigDecimal" />
+		<field name="nov" type="BigDecimal" />
+		<field name="dec" type="BigDecimal" />
+		<field name="jan" type="BigDecimal" />
+		<field name="feb" type="BigDecimal" />
+		<field name="mar" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsEntityWiseAgeing">
+		<field name="id_" type="long" />
+		<field name="entities" type="String" />
+		<field name="month_" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="_0_to_30_days" type="int" />
+		<field name="_31_to_60_days" type="int" />
+		<field name="_61_to_90_days" type="int" />
+		<field name="_91_to_365_days" type="int" />
+		<field name="more_than_365_days" type="int" />
+		<field name="outstanding_at_end_of_month" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsLiteCategoryWiseAgeing">
+		<field name="id_" type="long" />
+		<field name="category" type="String" />
+		<field name="month_" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="_0_to_30_days" type="int" />
+		<field name="_31_to_60_days" type="int" />
+		<field name="_61_to_90_days" type="int" />
+		<field name="_91_to_365_days" type="int" />
+		<field name="more_than_365_days" type="int" />
+		<field name="outstanding_at_end_of_month" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsLiteCategoryWiseGrievance">
+		<field name="id_" type="long" />
+		<field name="category" type="String" />
+		<field name="year_" type="String" />
+		<field name="apr" type="BigDecimal" />
+		<field name="may" type="BigDecimal" />
+		<field name="jun" type="BigDecimal" />
+		<field name="jul" type="BigDecimal" />
+		<field name="aug" type="BigDecimal" />
+		<field name="sep" type="BigDecimal" />
+		<field name="oct" type="BigDecimal" />
+		<field name="nov" type="BigDecimal" />
+		<field name="dec" type="BigDecimal" />
+		<field name="jan" type="BigDecimal" />
+		<field name="feb" type="BigDecimal" />
+		<field name="mar" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsLiteEntityWiseAgeing">
+		<field name="id_" type="long" />
+		<field name="entities" type="String" />
+		<field name="month_" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="_0_to_30_days" type="int" />
+		<field name="_31_to_60_days" type="int" />
+		<field name="_61_to_90_days" type="int" />
+		<field name="_91_to_365_days" type="int" />
+		<field name="more_than_365_days" type="int" />
+		<field name="outstanding_at_end_of_month" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsLiteSchemeMonthAnalysis">
+		<field name="id_" type="long" />
+		<field name="particulars" type="String" />
+		<field name="year_" type="String" />
+		<field name="apr" type="BigDecimal" />
+		<field name="may" type="BigDecimal" />
+		<field name="jun" type="BigDecimal" />
+		<field name="jul" type="BigDecimal" />
+		<field name="aug" type="BigDecimal" />
+		<field name="sep" type="BigDecimal" />
+		<field name="oct" type="BigDecimal" />
+		<field name="nov" type="BigDecimal" />
+		<field name="dec" type="BigDecimal" />
+		<field name="jan" type="BigDecimal" />
+		<field name="feb" type="BigDecimal" />
+		<field name="mar" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnNpsSchemeMonthAnalysis">
+		<field name="id_" type="long" />
+		<field name="particulars" type="String" />
+		<field name="year_" type="String" />
+		<field name="apr" type="BigDecimal" />
+		<field name="may" type="BigDecimal" />
+		<field name="jun" type="BigDecimal" />
+		<field name="jul" type="BigDecimal" />
+		<field name="aug" type="BigDecimal" />
+		<field name="sep" type="BigDecimal" />
+		<field name="oct" type="BigDecimal" />
+		<field name="nov" type="BigDecimal" />
+		<field name="dec" type="BigDecimal" />
+		<field name="jan" type="BigDecimal" />
+		<field name="feb" type="BigDecimal" />
+		<field name="mar" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnPFsDeducteeDetail">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="challan_serial_no" type="BigDecimal" />
+		<field name="section_code" type="String" />
+		<field name="type_of_rent" type="String" />
+		<field name="deductee_identf_no" type="String" />
+		<field name="deductee_code_414" type="BigDecimal" />
+		<field name="pan_of_deductee_415" type="String" />
+		<field name="deductee_refno_invalid_pan_413" type="String" />
+		<field name="name_of_deductee_416" type="String" />
+		<field name="amt_paid_or_credited_date_418" type="Date" />
+		<field name="tax_deducted_date_422" type="Date" />
+		<field name="amt_of_payment_419" type="BigDecimal" />
+		<field name="tax_deduction_rate_423" type="BigDecimal" />
+		<field name="amount_of_tax_deducted" type="BigDecimal" />
+		<field name="total_tax_deposited_421" type="BigDecimal" />
+		<field name="reason_for_non_deduction_424" type="String" />
+		<field name="non_deduct_certno_issue_ao_425" type="String" />
+		<field name="deductee_flat_no" type="BigDecimal" />
+		<field name="deductee_building_name" type="String" />
+		<field name="deductee_street_name" type="String" />
+		<field name="deductee_area" type="String" />
+		<field name="deductee_city_or_town" type="String" />
+		<field name="deductee_pin" type="BigDecimal" />
+		<field name="deductee_state" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnPFsTDSChallan">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="challan_serial_no_401" type="BigDecimal" />
+		<field name="income_tax_402" type="BigDecimal" />
+		<field name="interest_403" type="BigDecimal" />
+		<field name="fees_404" type="BigDecimal" />
+		<field name="others_or_penalty_405" type="BigDecimal" />
+		<field name="tax_deposited_or_book_adj_406" type="BigDecimal" />
+		<field name="deposited_by_book_adj_407" type="String" />
+		<field name="bsr_code_408" type="String" />
+		<field name="tax_dep_or_transfer_date_410" type="Date" />
+		<field name="challan_or_ddo_of_form_24g_409" type="String" />
+		<field name="receipt_no_of_form_24g_408" type="String" />
+		<field name="minor_head_of_challan_411" type="BigDecimal" />
+		<field name="cheque_or_dd_no" type="String" />
+		<field name="section_code" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnReferralsHandledAtNps">
+		<field name="id_" type="long" />
+		<field name="referrals" type="String" />
+		<field name="month_" type="Date" />
+		<field name="outstanding_opening_balance" type="int" />
+		<field name="escalated_to_npst" type="int" />
+		<field name="referrals_recv_during_month" type="int" />
+		<field name="reviewed_and_assigned_by_npst" type="int" />
+		<field name="referrals_resol_during_month" type="int" />
+		<field name="outstanding_at_end_of_month" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnResolutionSpeed">
+		<field name="id_" type="long" />
+		<field name="grievance_month" type="Date" />
+		<field name="total_resolved" type="int" />
+		<field name="within_0_to_7_days" type="int" />
+		<field name="within_7_to_15_days" type="int" />
+		<field name="within_15_to_30_days" type="int" />
+		<field name="within_30_to_60_days" type="int" />
+		<field name="after_60_days" type="int" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MnTotalGrievanceReceived">
+		<field name="id_" type="long" />
+		<field name="particulars" type="String" />
+		<field name="year_" type="String" />
+		<field name="apr" type="BigDecimal" />
+		<field name="may" type="BigDecimal" />
+		<field name="jun" type="BigDecimal" />
+		<field name="jul" type="BigDecimal" />
+		<field name="aug" type="BigDecimal" />
+		<field name="sep" type="BigDecimal" />
+		<field name="oct" type="BigDecimal" />
+		<field name="nov" type="BigDecimal" />
+		<field name="dec" type="BigDecimal" />
+		<field name="jan" type="BigDecimal" />
+		<field name="feb" type="BigDecimal" />
+		<field name="mar" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.MonthlyReportI">
+		<field name="id_" type="long" />
+		<field name="entities" type="String" />
+		<field name="osmonth" type="String" />
+		<field name="npstob" type="String" />
+		<field name="rrduringmonth" type="String" />
+		<field name="rsnpst" type="String" />
+		<field name="rrmonth" type="String" />
+		<field name="osendofmonth" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.MonthlyReportII">
+		<field name="id_" type="long" />
+		<field name="sec_entities" type="String" />
+		<field name="osendingmonth" type="String" />
+		<field name="zerotoseven" type="String" />
+		<field name="fifteen_aug" type="String" />
+		<field name="sixteentothirtyone" type="String" />
+		<field name="thirtytwotoninety" type="String" />
+		<field name="ninetyonetooneeighty" type="String" />
+		<field name="oneeightyonetothreesixtyfive" type="String" />
+		<field name="threesixtysixandabove" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.MonthlyReportIII">
+		<field name="id_" type="long" />
+		<field name="referrals" type="String" />
+		<field name="obnpst" type="String" />
+		<field name="escalatedtonpst" type="String" />
+		<field name="receivedduring" type="String" />
+		<field name="rassignedbynpst" type="String" />
+		<field name="resolvedduringmonth" type="String" />
+		<field name="osattheendofthemonth" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.MonthlyReportIV">
+		<field name="id_" type="long" />
+		<field name="referralshandledbycras" type="String" />
+		<field name="referralsreceived " type="String" />
+		<field name="referralsinnatureof " type="String" />
+		<field name="netgrievances" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.NonEq">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="fin" type="String" />
+		<field name="scheme" type="String" />
+		<field name="company_name" type="String" />
+		<field name="security_code" type="String" />
+		<field name="isin" type="String" />
+		<field name="secdesc" type="String" />
+		<field name="sec" type="String" />
+		<field name="coupon" type="String" />
+		<field name="faceval" type="BigDecimal" />
+		<field name="custhold" type="long" />
+		<field name="transit" type="long" />
+		<field name="loghold" type="long" />
+		<field name="price" type="BigDecimal" />
+		<field name="source_" type="String" />
+		<field name="value_" type="BigDecimal" />
+		<field name="tradedate" type="Date" />
+		<field name="method_" type="String" />
+		<field name="gross_price" type="BigDecimal" />
+		<field name="accured_interest" type="BigDecimal" />
+		<field name="modified_duration" type="BigDecimal" />
+		<field name="ytm" type="BigDecimal" />
+		<field name="nse_price" type="BigDecimal" />
+		<field name="tenor_in_years" type="BigDecimal" />
+		<field name="value_of_security" type="String" />
+		<field name="issuerclass" type="String" />
+		<field name="coupontype" type="String" />
+		<field name="couponpaymentfrequency" type="int" />
+		<field name="allotmentdate" type="Date" />
+		<field name="firstipdate" type="Date" />
+		<field name="lastipdate" type="Date" />
+		<field name="finalredemptiondate" type="Date" />
+		<field name="redemppremium" type="String" />
+		<field name="rating" type="String" />
+		<field name="illiquiditydiscount" type="String" />
+		<field name="higherrating" type="String" />
+		<field name="ptc_amort_method" type="String" />
+		<field name="coupon_form" type="String" />
+		<field name="compounding_frequency" type="String" />
+		<field name="matrix_type" type="String" />
+		<field name="sector" type="String" />
+		<field name="call_date" type="Date" />
+		<field name="put_date" type="Date" />
+		<field name="settlement_date" type="Date" />
+		<field name="benchmark_date" type="Date" />
+		<field name="conversion_date" type="Date" />
+		<field name="goi_serviced" type="String" />
+		<field name="secured_unsecured" type="String" />
+		<field name="reportingdate" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.NoTID">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="long" />
+		<field name="payment_id" type="String" />
+		<field name="ret_ref_no" type="String" />
+		<field name="source_acc_no_nodal" type="String" />
+		<field name="ifsc_source_no" type="String" />
+		<field name="payment_receipt_date" type="Date" />
+		<field name="period_" type="String" />
+		<field name="original_utr" type="String" />
+		<field name="mode_" type="String" />
+		<field name="utr_amount" type="BigDecimal" />
+		<field name="beneficiary_acc_no" type="String" />
+		<field name="nps_virtual_acc_no" type="String" />
+		<field name="nps_acc_name" type="String" />
+		<field name="return_date" type="Date" />
+		<field name="returned_utr" type="String" />
+		<field name="tid" type="String" />
+		<field name="reason_return" type="String" />
+		<field name="additional_comments" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="return_tat_remarks" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.NPSAccepted">
+		<field name="id_" type="long" />
+		<field name="file_name" type="String" />
+		<field name="channel" type="String" />
+		<field name="pao_fin" type="String" />
+		<field name="pao_reg_no" type="long" />
+		<field name="trans_id" type="long" />
+		<field name="amt" type="BigDecimal" />
+		<field name="file_ref_no" type="String" />
+		<field name="record_no" type="int" />
+		<field name="receipt_date" type="Date" />
+		<field name="fund_realised_date" type="Date" />
+		<field name="frc_upload_date" type="Date" />
+		<field name="trustee_bank_tat" type="String" />
+		<field name="matching_type" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.Nsdlnav">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="long" />
+		<field name="date_of_latest_nav" type="Date" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_code" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="sector" type="String" />
+		<field name="no_of_subscriber" type="long" />
+		<field name="aum" type="BigDecimal" />
+		<field name="lastest_nav" type="BigDecimal" />
+		<field name="nav_prior_1_year" type="BigDecimal" />
+		<field name="nav_prior_2_year" type="BigDecimal" />
+		<field name="nav_prior_3_year" type="BigDecimal" />
+		<field name="nav_prior_5_year" type="BigDecimal" />
+		<field name="nav_prior_7_year" type="BigDecimal" />
+		<field name="nav_prior_10_year" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.PAOMistakes">
+		<field name="id_" type="long" />
+		<field name="pao_id" type="int" />
+		<field name="no_of_mistakes" type="int" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="address_line1" type="String" />
+		<field name="address_line2" type="String" />
+		<field name="pin" type="int" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.PAOSubmittingCheques">
+		<field name="id_" type="long" />
+		<field name="pao_id" type="int" />
+		<field name="no_of_transactions" type="int" />
+		<field name="pao_name" type="String" />
+		<field name="email_id" type="String" />
+		<field name="address_line1" type="String" />
+		<field name="address_line2" type="String" />
+		<field name="pin" type="int" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.PerformanceRep">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="reportdate" type="Date" />
+		<field name="addressline1" type="String" />
+		<field name="addressline2" type="String" />
+		<field name="addressline3" type="String" />
+		<field name="trusteebankname" type="String" />
+		<field name="monthendingdate" type="Date" />
+		<field name="officername" type="String" />
+		<field name="submitdate" type="Date" />
+		<field name="place" type="String" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Quaeterlyfromfive">
+		<field name="id_" type="long" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="security_name" type="String" />
+		<field name="instrument_type" type="String" />
+		<field name="interest_rate_prcnt" type="String" />
+		<field name="has_there_been_revision" type="String" />
+		<field name="total_otstndgbook_value" type="BigDecimal" />
+		<field name="default_principal_bookvalue" type="BigDecimal" />
+		<field name="default_interest_bookvalue" type="BigDecimal" />
+		<field name="principal_due_from" type="Date" />
+		<field name="interest_due_from" type="Date" />
+		<field name="deferred_principal" type="BigDecimal" />
+		<field name="deferred_interest " type="BigDecimal" />
+		<field name="rolled_over" type="String" />
+		<field name="has_there_been_prin_waiver" type="BigDecimal" />
+		<field name="board_approval_reference" type="String" />
+		<field name="classification" type="String" />
+		<field name="provision_prcnt" type="String" />
+		<field name="provision_amount" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Quaeterlyfromfivenpa">
+		<field name="id_" type="long" />
+		<field name="srno" type="String" />
+		<field name="nameofnpa" type="String" />
+		<field name="nameofsecurity" type="String" />
+		<field name="dateofpurchase" type="String" />
+		<field name="total_facevalue" type="String" />
+		<field name="total_purchasevalue" type="String" />
+		<field name="value" type="String" />
+		<field name="npasince" type="String" />
+		<field name="bookvalue" type="String" />
+		<field name="provisionheld" type="String" />
+		<field name="dd_interestpayment" type="String" />
+		<field name="stepstakencomments" type="String" />
+		<field name="pfm" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.Quaeterlyfromfour">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="BigDecimal" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="market_value_as_on_quarter" type="BigDecimal" />
+		<field name="market_value_as_on_prev_qrtr" type="BigDecimal" />
+		<field name="market_val_as_on_2nd_prev_qrtr" type="BigDecimal" />
+		<field name="market_val_as_on_3rd_prev_qrtr" type="BigDecimal" />
+		<field name="_3_year_rolling_cagr" type="BigDecimal" />
+		<field name="annualized_portfolio_ret_yield" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Quaeterlyfromoneb">
+		<field name="id_" type="long" />
+		<field name="reporting_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="sno" type="BigDecimal" />
+		<field name="type_purchase_or_sale" type="String" />
+		<field name="category_of_investment" type="String" />
+		<field name="isin" type="String" />
+		<field name="name_of_security_or_company" type="String" />
+		<field name="book_value_qtr" type="BigDecimal" />
+		<field name="prcnt_of_portfolio_value" type="String" />
+		<field name="date_of_purchase_or_sale_qtr" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Quaeterlyfromoneisin">
+		<field name="id_" type="long" />
+		<field name="isin_no" type="int" />
+		<field name="isin_categoryofinvestment" type="String" />
+		<field name="isin_nameofsecurity_company" type="String" />
+		<field name="fisin" type="String" />
+		<field name="isin_bookvalue" type="BigDecimal" />
+		<field name="isin_ofportfoliovalue" type="double" />
+		<field name="isin_dateofpurchase_sale" type="String" />
+		<field name="pfm" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.Quaeterlyfromthree">
+		<field name="id_" type="long" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="particulars" type="String" />
+		<field name="opening_bal_units" type="BigDecimal" />
+		<field name="opening_bal_amount" type="BigDecimal" />
+		<field name="purchase_units" type="BigDecimal" />
+		<field name="purchase_book_value" type="BigDecimal" />
+		<field name="pur_prcnt_of_total_portfolio" type="String" />
+		<field name="sales_units" type="BigDecimal" />
+		<field name="sales_book_value" type="BigDecimal" />
+		<field name="sales_prcnt_of_total_portfolio" type="String" />
+		<field name="closing_bal_units" type="BigDecimal" />
+		<field name="closing_bal_book_value" type="BigDecimal" />
+		<field name="closing_bal_market_value" type="BigDecimal" />
+		<field name="closingbal_prcnt_tot_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Quaeterlyfromtwo">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="particulars" type="String" />
+		<field name="opbal_book_value" type="BigDecimal" />
+		<field name="opbal_market_value" type="BigDecimal" />
+		<field name="purchase_book_value" type="BigDecimal" />
+		<field name="pur_prcnt_of_total_portfolio" type="String" />
+		<field name="sales_book_value" type="BigDecimal" />
+		<field name="sales_prcnt_of_total_portfolio" type="String" />
+		<field name="adj_book_value" type="BigDecimal" />
+		<field name="adj_market_value" type="BigDecimal" />
+		<field name="closingbal_market_value" type="BigDecimal" />
+		<field name="closingbal_book_value" type="BigDecimal" />
+		<field name="closingbal_prcnt_tot_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.QuarterlyAuditor">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createDate" type="Date" />
+		<field name="modifyBy" type="long" />
+		<field name="modifyDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="performantdate" type="Date" />
+		<field name="bankname" type="String" />
+		<field name="numberofcases" type="String" />
+		<field name="amount" type="String" />
+		<field name="listofamountdate" type="Date" />
+		<field name="companyname" type="String" />
+		<field name="designation" type="String" />
+		<field name="regno" type="String" />
+		<field name="partnercompanyname" type="String" />
+		<field name="partnermemno" type="String" />
+		<field name="submitdate" type="Date" />
+		<field name="place" type="String" />
+	</model>
+	<model name="compliance.service.model.QuarterlyForm1A">
+		<field name="id_" type="long" />
+		<field name="reporting_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="BigDecimal" />
+		<field name="type_purchase_or_sale" type="String" />
+		<field name="category_of_investment" type="String" />
+		<field name="isin" type="String" />
+		<field name="name_of_security_or_company" type="String" />
+		<field name="book_value_qtr" type="BigDecimal" />
+		<field name="prcnt_of_portfolio_value_qtr" type="String" />
+		<field name="date_of_purchase_or_sale_qtr" type="Date" />
+		<field name="name_" type="String" />
+		<field name="designation" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.QuaterlyformCashFlow">
+		<field name="id_" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="periodicity_of_submission" type="String" />
+		<field name="statement_as_on" type="Date" />
+		<field name="opening_balance_mv" type="BigDecimal" />
+		<field name="inflow_during_the_qtr" type="BigDecimal" />
+		<field name="increase_decrease_value_of_inv" type="BigDecimal" />
+		<field name="outflow_during_the_qtr" type="BigDecimal" />
+		<field name="total_investible_funds_mv" type="BigDecimal" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.ReexecutedWithdrawalReturn">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="std_pran" type="long" />
+		<field name="process_type" type="String" />
+		<field name="name_" type="String" />
+		<field name="net_amt" type="BigDecimal" />
+		<field name="pay_in_date" type="Date" />
+		<field name="execution_date" type="Date" />
+		<field name="auditee_comment" type="String" />
+		<field name="return_reason" type="String" />
+		<field name="cra" type="String" />
+		<field name="return_type" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ReportSubmission">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="month_" type="String" />
+		<field name="name_of_report" type="String" />
+		<field name="mode_" type="String" />
+		<field name="periodicity" type="String" />
+		<field name="_1st_week_remark" type="String" />
+		<field name="_2nd_week_remark" type="String" />
+		<field name="_3rd_week_remark" type="String" />
+		<field name="_4th_week_remark" type="String" />
+		<field name="_5th_week_remark" type="String" />
+		<field name="auditee_comments" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.ReturnOfRejectedFunds">
+		<field name="id_" type="long" />
+		<field name="sno" type="long" />
+		<field name="date_of_receipt" type="Date" />
+		<field name="amount" type="BigDecimal" />
+		<field name="nps_acc_name" type="String" />
+		<field name="date_of_return" type="Date" />
+		<field name="return_reason" type="String" />
+		<field name="delay_reason" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Sbirequestdata">
+		<field name="id_" type="long" />
+		<field name="particulars" type="String" />
+		<field name="scheme_cg" type="String" />
+		<field name="scheme_sg" type="String" />
+		<field name="scheme_e_tier_i" type="String" />
+		<field name="scheme_c_tier_i" type="String" />
+		<field name="scheme_g_tier_i" type="String" />
+		<field name="scheme_e_tier_ii" type="String" />
+		<field name="scheme_c_tier_ii" type="String" />
+		<field name="scheme_g_tier_ii" type="String" />
+		<field name="nps_lite" type="String" />
+		<field name="corporate_cg_scheme" type="String" />
+		<field name="apy" type="String" />
+		<field name="scheme_a_tier_i" type="String" />
+		<field name="apy_fund_scheme" type="String" />
+		<field name="tier2_composite" type="String" />
+		<field name="scheme_tax_saver_tier_ii" type="String" />
+		<field name="nav_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="pfm" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.ScrutinyInputQuarterlyInterval">
+		<field name="id_" type="long" />
+		<field name="formDate" type="Date" />
+		<field name="oneia_rem" type="String" />
+		<field name="oneib_rem" type="String" />
+		<field name="oneiia_rem" type="String" />
+		<field name="oneiib_rem" type="String" />
+		<field name="oneiic_rem" type="String" />
+		<field name="oneiid_rem" type="String" />
+		<field name="oneiiia_rem" type="String" />
+		<field name="oneiiib_rem" type="String" />
+		<field name="oneiva_rem" type="String" />
+		<field name="onev_rem" type="String" />
+		<field name="twoia_rem" type="String" />
+		<field name="twoib_rem" type="String" />
+		<field name="twoic_rem" type="String" />
+		<field name="twoiione_rem" type="String" />
+		<field name="twoiitwo_rem" type="String" />
+		<field name="twoiithree_rem" type="String" />
+		<field name="twoiifour_rem" type="String" />
+		<field name="twoiifive_rem" type="String" />
+		<field name="twoiisix_rem" type="String" />
+		<field name="twoiiseven_rem" type="String" />
+		<field name="threea_rem" type="String" />
+		<field name="threeb_rem" type="String" />
+		<field name="threec_rem" type="String" />
+		<field name="threeci_rem" type="String" />
+		<field name="threecii_rem" type="String" />
+		<field name="threeciii_rem" type="String" />
+		<field name="threeciv_rem" type="String" />
+		<field name="foura_rem" type="String" />
+		<field name="fourb_rem" type="String" />
+		<field name="fourc_rem" type="String" />
+		<field name="fivei_rem" type="String" />
+		<field name="fiveii_rem" type="String" />
+		<field name="fiveiii_rem" type="String" />
+		<field name="fiveiv_rem" type="String" />
+		<field name="fiveva_rem" type="String" />
+		<field name="fivevb_rem" type="String" />
+		<field name="fivevc_rem" type="String" />
+		<field name="fivevia_rem" type="String" />
+		<field name="fivevib_rem" type="String" />
+		<field name="sixi_rem" type="String" />
+		<field name="sixiia_rem" type="String" />
+		<field name="sixiib_rem" type="String" />
+		<field name="sixiic_rem" type="String" />
+		<field name="sevenia_rem" type="String" />
+		<field name="sevenib_rem" type="String" />
+		<field name="sevenic_rem" type="String" />
+		<field name="sevenid_rem" type="String" />
+		<field name="sevenie_rem" type="String" />
+		<field name="eightia_rem" type="String" />
+		<field name="eightib_rem" type="String" />
+		<field name="eightii_rem" type="String" />
+		<field name="eightiii_rem" type="String" />
+		<field name="eightiv_rem" type="String" />
+		<field name="eightv_rem" type="String" />
+		<field name="eightvia_rem" type="String" />
+		<field name="eightvib_rem" type="String" />
+		<field name="eightviia_rem" type="String" />
+		<field name="eightviib_rem" type="String" />
+		<field name="eightviii_rem" type="String" />
+		<field name="ninea_rem" type="String" />
+		<field name="nineb_rem" type="String" />
+		<field name="ten_rem" type="String" />
+		<field name="elevena_rem" type="String" />
+		<field name="elevenb_rem" type="String" />
+		<field name="twelve_rem" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.SESNonUnanimous">
+		<field name="id_" type="long" />
+		<field name="company_name" type="String" />
+		<field name="meeting_date" type="Date" />
+		<field name="resolution" type="String" />
+		<field name="voted_for" type="String" />
+		<field name="voted_abstain" type="String" />
+		<field name="voted_against" type="String" />
+		<field name="final_vote" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.Status_SG">
+		<field name="id_" type="long" />
+		<field name="state_government" type="String" />
+		<field name="date_of_notification" type="String" />
+		<field name="date_of_adoption" type="String" />
+		<field name="date_of_contract_sign_cra" type="String" />
+		<field name="date_of_contract_sign_nps" type="String" />
+		<field name="reg_status_nodal_office" type="String" />
+		<field name="reg_status_nodal_subscriber" type="String" />
+		<field name="total_number_of_subscribers" type="String" />
+		<field name="contribution_status" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="compliance.service.model.valuationCg">
+		<field name="id_" type="long" />
+		<field name="client_code" type="String" />
+		<field name="isin" type="String" />
+		<field name="isin_desc" type="String" />
+		<field name="maturity_date" type="Date" />
+		<field name="free_securities_rs" type="long" />
+		<field name="pledge_value_held_rs" type="long" />
+		<field name="securities_in_transit_rs" type="long" />
+		<field name="total_face_value_held_rs" type="long" />
+		<field name="rate" type="BigDecimal" />
+		<field name="value_" type="BigDecimal" />
+		<field name="reportingdate" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.VoteMatrix">
+		<field name="id_" type="long" />
+		<field name="meeting_date" type="Date" />
+		<field name="isin" type="String" />
+		<field name="company_name" type="String" />
+		<field name="meeting_type" type="String" />
+		<field name="resolution_category" type="String" />
+		<field name="resol_dtls" type="String" />
+		<field name="resol_type" type="String" />
+		<field name="lic_vote" type="String" />
+		<field name="lic_rationale_vote_recomm" type="String" />
+		<field name="lic_shares_held" type="long" />
+		<field name="uti_vote" type="String" />
+		<field name="uti_rationale_vote_recomm" type="String" />
+		<field name="uti_shares_held" type="long" />
+		<field name="sbi_vote" type="String" />
+		<field name="sbi_rationale_vote_recomm" type="String" />
+		<field name="sbi_shares_held" type="long" />
+		<field name="hdfc_vote" type="String" />
+		<field name="hdfc_rationale_vote_recomm" type="String" />
+		<field name="hdfc_shares_held" type="long" />
+		<field name="icici_vote" type="String" />
+		<field name="icici_rationale_vote_recomm" type="String" />
+		<field name="icici_shares_held" type="long" />
+		<field name="kotak_vote" type="String" />
+		<field name="kotak_rationale_vote_recomm" type="String" />
+		<field name="kotak_shares_held" type="long" />
+		<field name="birla_vote" type="String" />
+		<field name="birla_rationale_vote_recomm" type="String" />
+		<field name="birla_shares_held" type="long" />
+		<field name="axis_vote" type="String" />
+		<field name="axis_rationale_vote_recomm" type="String" />
+		<field name="axis_shares_held" type="long" />
+		<field name="tata_vote" type="String" />
+		<field name="tata_rationale_vote_recomm" type="String" />
+		<field name="tata_shares_held" type="long" />
+		<field name="max_vote" type="String" />
+		<field name="max_rationale_vote_recomm" type="String" />
+		<field name="max_shares_held" type="long" />
+		<field name="dsp_vote" type="String" />
+		<field name="dsp_rationale_vote_recomm" type="String" />
+		<field name="dsp_shares_held" type="long" />
+		<field name="total_sharehldng_nps_comb" type="BigDecimal" />
+		<field name="prcnt_total_shares_held_comb" type="String" />
+		<field name="majority_vote_pfm_comb" type="String" />
+		<field name="ses_vote_recomm" type="String" />
+		<field name="ses_rationale_vote_recomm" type="String" />
+		<field name="prcnt_tot_shares_held_promoter" type="String" />
+		<field name="votes_polled_promoter" type="String" />
+		<field name="votes_in_favor_promoter" type="String" />
+		<field name="votes_in_against_promoter" type="String" />
+		<field name="prcnt_tot_shares_held_institut" type="String" />
+		<field name="votes_polled_institution" type="String" />
+		<field name="votes_in_favor_insttitution" type="String" />
+		<field name="votes_in_against_institution" type="String" />
+		<field name="prcnt_total_shares_held_retail" type="String" />
+		<field name="votes_polled_retail" type="String" />
+		<field name="votes_in_favor_retail" type="String" />
+		<field name="votes_in_against_retail" type="String" />
+		<field name="votes_polled_voting_outcome" type="String" />
+		<field name="voting_for" type="String" />
+		<field name="voting_against" type="String" />
+		<field name="outcome" type="String" />
+		<field name="ses_report" type="String" />
+		<field name="resolution_no" type="BigDecimal" />
+		<field name="ses_res_id" type="String" />
+		<field name="ses_id" type="String" />
+		<field name="reportingDate" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.Votingreport">
+		<field name="id_" type="long" />
+		<field name="meeting_date" type="Date" />
+		<field name="isin" type="String" />
+		<field name="company_name" type="String" />
+		<field name="meeting_type" type="String" />
+		<field name="resolution_category" type="String" />
+		<field name="resolution_dtls" type="String" />
+		<field name="resolution_type" type="String" />
+		<field name="iias_vote_recommendation" type="String" />
+		<field name="iias_rationale_for_vote_recom" type="String" />
+		<field name="resolution_no" type="BigDecimal" />
+		<field name="ses_res_id" type="String" />
+		<field name="reportingDate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="compliance.service.model.WeeklyAvgBal">
+		<field name="id_" type="long" />
+		<field name="nps_acc_number" type="long" />
+		<field name="cust_id" type="long" />
+		<field name="cra" type="String" />
+		<field name="nps_acc_name" type="String" />
+		<field name="average_balance_for_the_week" type="BigDecimal" />
+		<field name="week_date" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+</model-hints>

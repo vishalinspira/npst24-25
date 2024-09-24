@@ -1,0 +1,4 @@
+Bundle-Name: nps-pfm-custodian-reportuploadlog
+Bundle-SymbolicName: nps.pfm.custodian.reportuploadlog
+Bundle-Version: 1.0.0
+Export-Package: nps.pfm.custodian.reportuploadlog.constants

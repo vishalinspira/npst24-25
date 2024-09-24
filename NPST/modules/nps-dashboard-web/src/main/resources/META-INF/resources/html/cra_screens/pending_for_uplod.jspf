@@ -1,0 +1,202 @@
+<div class="nps-page-main pending-table mt-md-0 mt-sm-3 mt-3">
+    <div class="row">
+         <div class="col-12">
+            <div class="text-right">
+                <p  class="back_btn"><a class="backbtn" id="backbtn" href=""><i class="fas fa-arrow-left text-white pr-3"></i>Back</a></p>
+            </div>
+         </div>
+      </div>
+      
+   <div class="nps-pending-table">
+       <div class="mydataTable">
+            <ul class="nav nav-tabs border-0 mb-3 nps-report-main">
+                <li class="nav-item">
+                    <a data-bs-toggle="tab" class='nav-link p-0 active' href="#pills-monthly"> Monthly</a>
+                </li>
+                <% if(!department.equalsIgnoreCase("Grievances")){ %>
+	                <li class="nav-item">
+	                    <a data-bs-toggle="tab" class="nav-link p-0" href="#pills-quarterly"> Quarterly</a>
+	                </li>
+                <%} %>
+                <% if(department.equalsIgnoreCase("Custodian")){ %>
+	              <li class="nav-item">
+                    <a data-bs-toggle="tab" class="nav-link p-0" href="#pills-annually"> Annually</a>
+                  </li>
+                <%} %>
+            </ul>
+                            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class='tab-pane active py-3' id="pills-monthly">
+                	<table id="pills_monthly_table" cellspacing="0" width="100%" class="display dataTable no-footer dtr-inline"></table>
+                </div>
+                <% if(!department.equalsIgnoreCase("Grievances")){ %>
+	                <div class="tab-pane fade py-3" id="pills-quarterly">
+	                	<table id="pills_quarterly_table" cellspacing="0" width="100%" class="display dataTable no-footer dtr-inline"></table>
+	                </div>
+                <%} %>
+                
+                 <% if(department.equalsIgnoreCase("Custodian")){ %>
+	                <div class="tab-pane fade py-3" id="pills-annually">
+	                	<table id="pills_annually_table" cellspacing="0" width="100%" class="display dataTable no-footer dtr-inline"></table>
+	                </div>
+                 <%} %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+	const intermediaryArray = <%=intermediaryArray%>;
+	var dataTables = [];
+	let urlObject = new URL('${checkReportsMVCResourceCommandURL}');
+    urlObject.searchParams.delete('_com_nps_dashboard_web_NPSDashboardWebPortlet_mvcPath');
+    
+    var hash = window.location.hash;
+    let cururl = $("a.backbtn").attr("href");
+	$("a.backbtn").attr("href",cururl+hash);
+	
+	$.ajax({
+	  	type: "get",	
+		url: urlObject,
+		dataType: 'json',
+		success: function(jsonObject) {
+			console.log(">>>> ",jsonObject);
+			$("#backbtn").attr("href", "/web/guest/dashboard#sdd"+jsonObject["Department"]);
+			$.fn.dataTable.moment('DD-MM-YYYY hh:mm A');
+			createReportsMasterTable(jsonObject["Monthly"], "pills_monthly_table", "Monthly", 0);
+			<% if(!department.equalsIgnoreCase("Grievances")){ %>
+				createReportsMasterTable(jsonObject["Quarterly"], "pills_quarterly_table", "Quarterly", 1);
+			<%} %>
+			<% if(department.equalsIgnoreCase("Custodian")){ %>
+				createReportsMasterTable(jsonObject["Annually"], "pills_annually_table", "Annually", 2);
+			 <%} %>
+		}
+	});
+
+
+function createReportsMasterTable(jsonArray, tableId, reportType, index) {
+	var table = $("#"+tableId).DataTable({
+		searching : true,
+		pagination : "bootstrap",
+		filter : true,
+		data : jsonArray,
+		destroy : true,
+		lengthMenu : [ 5, 10, 25 ],
+		pageLength : 10,
+		order: [[3, 'asc']],
+		language: {
+	            sLengthMenu: " _MENU_",
+	            "info": "Showing  _START_  to  _END_  of  _TOTAL_  entries",
+	            oPaginate: {
+	                sNext: 'NEXT',
+	                sPrevious: 'PREV'
+	            }
+	     },
+		"dom": '<"top"f>rt<"bottom"<"left"li>p><"clear">',
+		"columns" : [
+			{
+				data : "reportName",
+				name : "reportName",
+				title: "Report Name"
+			},
+			{
+				data : "toBeUploadedBy",
+				name : "toBeUploadedBy",
+				title: "To be Uploaded by"
+			},
+			{
+				data : "intermediaryName",
+				name : "intermediaryName",
+				title: "Intermediary Name"
+			},
+			{
+				data : "dueDate",
+				name : "dueDate",
+				title: "Due Date"
+			}
+		],
+		initComplete: function () {
+			 var divHtml = $('<div class="col-sm-3 text-left form-group"></div>');
+			 /*var select = $('<select class="intermediaryList form-control" data-index='+index+'><option value="All">All</option></select>').appendTo(divHtml); */
+			
+			$("#"+tableId+"_filter").addClass("row");
+			$("#"+tableId+"_filter").find("label").addClass("col-sm-9 text-right");
+			divHtml.prependTo($("#"+tableId+"_filter"));
+
+			/* for(var i=0; i<intermediaryArray.length; i++){
+				select.append('<option value="' + intermediaryArray[i].name + '">' + intermediaryArray[i].name + '</option>');
+			} */
+		}
+	});
+	
+	dataTables.push(table);
+}
+
+var intermediary = "All";
+var srindex;
+$(document).on('change',".intermediaryList",function(){
+	intermediary = $(this).val();
+	var index = $(this).attr('data-index');
+	console.log("intermediary name : ",intermediary);
+	console.log("index : ",index);
+	var selectedTable = dataTables[index];
+	$.fn.dataTable.ext.search.push(
+	        function( settings, data, dataIndex ) {
+	        	if(intermediary === "All"){
+	        		return true;
+	        	}
+	            return data[2]===intermediary
+	                ? true
+	                : false
+	        }     
+	    );
+	selectedTable.draw();
+    $.fn.dataTable.ext.search.pop();
+});
+
+$(document).on('click',".sorting",function(){
+	console.log(" sorting intermediary : "+intermediary);
+	var selectedTable = dataTables[srindex];
+	$.fn.dataTable.ext.search.push(
+	        function( settings, data, dataIndex ) {
+	        	if(intermediary === "All"){
+	        		return true;
+	        	}
+	            return data[1]===intermediary
+	                ? true
+	                : false
+	        }     
+	    );
+	selectedTable.draw();
+    $.fn.dataTable.ext.search.pop();
+});
+
+$(document).on('keyup','input[type=search]',function(){
+	console.log(" search keyword intermediary : "+intermediary);
+	if(!(intermediary === "All")){
+	//console.log("intermediary name : ",intermediary);
+	//console.log("index : ",srindex);
+	var selectedTable = dataTables[srindex];
+	$.fn.dataTable.ext.search.push(
+	        function( settings, data, dataIndex ) {
+	        	if(intermediary === "All"){
+	        		return true;
+	        	}
+	            return data[1]===intermediary
+	                ? true
+	                : false
+	        }     
+	    );
+	selectedTable.draw();
+    $.fn.dataTable.ext.search.pop();
+    console.log("custom search method called");
+   // alert("The text has been changed.");
+	}
+  });
+
+$(".nav-link").click(function(){
+	var hrefVal = $(this).attr("href");
+	$(hrefVal).find(".intermediaryList").val(intermediary);
+	$(hrefVal).find(".intermediaryList").trigger('change');
+});
+</script>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="nps.cache.schema.model.ReportStatus">
+		<field name="uuid" type="String" />
+		<field name="rscId" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="data_" type="String" />
+	</model>
+</model-hints>

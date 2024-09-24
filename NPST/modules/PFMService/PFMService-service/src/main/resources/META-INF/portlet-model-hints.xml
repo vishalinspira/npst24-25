@@ -1,0 +1,1407 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.daily.pfm.service.model.ACSummeryX">
+		<field name="id" type="long" />
+		<field name="instruction_date" type="Date" />
+		<field name="pran_pao" type="long" />
+		<field name="subscriber_name" type="String" />
+		<field name="payee_name" type="String" />
+		<field name="payee_bank_ifsc" type="String" />
+		<field name="payee_bank_acc_no" type="String" />
+		<field name="net_amt" type="BigDecimal" />
+		<field name="pay_in_date" type="Date" />
+		<field name="execution_date" type="Date" />
+		<field name="utr_no" type="String" />
+		<field name="status" type="String" />
+		<field name="return_reason" type="String" />
+		<field name="standard_reason" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.AnnexTena">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="particulars" type="String" />
+		<field name="amt" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.AnnexTenaI">
+		<field name="id" type="long" />
+		<field name="particulars" type="String" />
+		<field name="no_of_remittances" type="BigDecimal" />
+		<field name="amt" type="BigDecimal" />
+		<field name="month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.AnnexTenaII">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="reasons" type="String" />
+		<field name="no_of_remittances" type="BigDecimal" />
+		<field name="month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.AnnexTenaIII">
+		<field name="id" type="long" />
+		<field name="period" type="String" />
+		<field name="no_of_remittances" type="BigDecimal" />
+		<field name="amt" type="BigDecimal" />
+		<field name="month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.AnnexTenaIV">
+		<field name="id" type="long" />
+		<field name="period" type="String" />
+		<field name="no_of_remittances" type="BigDecimal" />
+		<field name="amt" type="BigDecimal" />
+		<field name="month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.AnnexTenaSummery">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="particulars" type="String" />
+		<field name="amt" type="BigDecimal" />
+		<field name="month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.Asp_report">
+		<field name="id_" type="long" />
+		<field name="section" type="String" />
+		<field name="particulars" type="String" />
+		<field name="value" type="String" />
+		<field name="entity_name" type="String" />
+		<field name="month_" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.BalanceSheet">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="BigDecimal" />
+		<field name="previous_tear" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.CashFlow">
+		<field name="id_" type="long" />
+		<field name="pension_fund_manager_name_code" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="periodicity_of_submission" type="String" />
+		<field name="statement_as_on" type="Date" />
+		<field name="opening_balance_market_value" type="BigDecimal" />
+		<field name="inflow_during_the_quarter" type="BigDecimal" />
+		<field name="inc_dec_val_of_inv_net" type="BigDecimal" />
+		<field name="outflow_during_the_quarter" type="BigDecimal" />
+		<field name="total_investible_fund_mkt_val" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.CombinedIncomeStatement">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="BigDecimal" />
+		<field name="previous_tear" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ComplianceCertificateMonth">
+		<field name="id_" type="long" />
+		<field name="rslno" type="String" />
+		<field name="adressi" type="String" />
+		<field name="adressii" type="String" />
+		<field name="adressiii" type="String" />
+		<field name="adressiv" type="String" />
+		<field name="pfm" type="String" />
+		<field name="rgno" type="String" />
+		<field name="ione" type="String" />
+		<field name="ioner" type="String" />
+		<field name="itwo" type="String" />
+		<field name="itwor" type="String" />
+		<field name="ithree" type="String" />
+		<field name="ifour" type="String" />
+		<field name="ifourr" type="String" />
+		<field name="ifive" type="String" />
+		<field name="ifiver" type="String" />
+		<field name="isix" type="String" />
+		<field name="isixr" type="String" />
+		<field name="iione" type="String" />
+		<field name="iioner" type="String" />
+		<field name="iitwo" type="String" />
+		<field name="iitwor" type="String" />
+		<field name="iiione" type="String" />
+		<field name="iiioner" type="String" />
+		<field name="ivone" type="String" />
+		<field name="ivoner" type="String" />
+		<field name="vone" type="String" />
+		<field name="voner" type="String" />
+		<field name="vtwo" type="String" />
+		<field name="vtwor" type="String" />
+		<field name="tarikh" type="String" />
+		<field name="namei" type="String" />
+		<field name="place" type="String" />
+		<field name="nameii" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ComplianceCertificateMonthI">
+		<field name="id_" type="long" />
+		<field name="nonSponsorgroup" type="String" />
+		<field name="dateii" type="String" />
+		<field name="schemes" type="String" />
+		<field name="limit" type="String" />
+		<field name="exposer" type="String" />
+		<field name="remarks" type="String" />
+		<field name="compliancecertificatemonthid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ComplianceCertificateMonthII">
+		<field name="id_" type="long" />
+		<field name="schemei" type="String" />
+		<field name="limiti" type="String" />
+		<field name="exposeri" type="String" />
+		<field name="compliancecertificatemonthid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ComplianceCertificateMonthIII">
+		<field name="id_" type="long" />
+		<field name="portfolio" type="String" />
+		<field name="isin" type="String" />
+		<field name="description" type="String" />
+		<field name="rupee" type="String" />
+		<field name="compliancecertificatemonthid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ConsolidatedBalanceSheet">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="BigDecimal" />
+		<field name="previous_tear" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.CraEnpsdata">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="pran" type="String" />
+		<field name="name_of_subscriber" type="String" />
+		<field name="name_of_claimant" type="String" />
+		<field name="date_of_authorisation_of_claim" type="Date" />
+		<field name="date_of_dispatch_of_claim_form" type="Date" />
+		<field name="tracking_id" type="String" />
+		<field name="date_of_receipt_of_authorised" type="Date" />
+		<field name="date_of_claim_processing" type="Date" />
+		<field name="tat" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.Form3RepByDirAndKP">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="BigDecimal" />
+		<field name="type_purchase_or_sale" type="String" />
+		<field name="name_of_security" type="String" />
+		<field name="isin" type="String" />
+		<field name="name_of_issuer_or_company" type="String" />
+		<field name="transaction_cost" type="BigDecimal" />
+		<field name="date_of_transaction" type="Date" />
+		<field name="name_" type="String" />
+		<field name="designation" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.Form3ReportByDirAndKp">
+		<field name="id_" type="long" />
+		<field name="date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="BigDecimal" />
+		<field name="type_purchase_or_sale" type="String" />
+		<field name="name_of_security" type="String" />
+		<field name="isin" type="String" />
+		<field name="name_of_issuer_or_company" type="String" />
+		<field name="transaction_cost" type="BigDecimal" />
+		<field name="date_of_transaction" type="Date" />
+		<field name="name" type="String" />
+		<field name="designation" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.FurtherProcessFive">
+		<field name="id" type="long" />
+		<field name="s_no" type="String" />
+		<field name="state_uts" type="String" />
+		<field name="npsmar_xxi" type="String" />
+		<field name="npssep_xxi" type="String" />
+		<field name="corporatemar_xxi" type="String" />
+		<field name="corporatesep_xxi" type="String" />
+		<field name="litemar_xxi" type="String" />
+		<field name="litesep_xxi" type="String" />
+		<field name="apymar_xxi" type="String" />
+		<field name="apysep_xxi" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.FurtherProcessFour">
+		<field name="id" type="long" />
+		<field name="pfm" type="String" />
+		<field name="npsmar_xx" type="String" />
+		<field name="npsmar_xxi" type="String" />
+		<field name="npssep_xxi" type="String" />
+		<field name="corporatemar_xx" type="String" />
+		<field name="corporatemar_xxi" type="String" />
+		<field name="corporatesep_xxi" type="String" />
+		<field name="noofmar_xx" type="String" />
+		<field name="noofmar_xxi" type="String" />
+		<field name="noofsep_xxi" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.FurtherProcessOne">
+		<field name="id" type="long" />
+		<field name="schemes" type="String" />
+		<field name="mar_xi" type="String" />
+		<field name="mar_xx" type="String" />
+		<field name="mar_xxi" type="String" />
+		<field name="sep_xxi" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.FurtherProcessSix">
+		<field name="id" type="long" />
+		<field name="s_no" type="String" />
+		<field name="state_name" type="String" />
+		<field name="npsmar_xxi" type="String" />
+		<field name="npssep_xxi" type="String" />
+		<field name="corporatemar_xxi" type="String" />
+		<field name="corporatesep_xxi" type="String" />
+		<field name="litemar_xxi" type="String" />
+		<field name="litesep_xxi" type="String" />
+		<field name="apymar_xxi" type="String" />
+		<field name="apysep_xxi" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.FurtherProcessThree">
+		<field name="id" type="long" />
+		<field name="s_no" type="String" />
+		<field name="schemes" type="String" />
+		<field name="equitymar_xxi" type="String" />
+		<field name="equitysep_xxi" type="String" />
+		<field name="corporatemar_xxi" type="String" />
+		<field name="corporatesep_xxi" type="String" />
+		<field name="governmentmar_xxi" type="String" />
+		<field name="governmentsep_xxi" type="String" />
+		<field name="fundmar_xxi" type="String" />
+		<field name="fundsep_xxi" type="String" />
+		<field name="othermar_xxi" type="String" />
+		<field name="othersep_xxi" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.FurtherProcessTwo">
+		<field name="id" type="long" />
+		<field name="subscriber_class" type="String" />
+		<field name="mar_xi" type="String" />
+		<field name="mar_xx" type="String" />
+		<field name="mar_xxi" type="String" />
+		<field name="sep_xxi" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrievPendingOne">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="int" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="long" />
+		<field name="subscriber_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="status" type="String" />
+		<field name="grievance_logging_date" type="Date" />
+		<field name="date_considered_for_ageing" type="Date" />
+		<field name="ageing" type="int" />
+		<field name="bucket" type="String" />
+		<field name="raised_by" type="String" />
+		<field name="pao_reg_no" type="String" />
+		<field name="pao_name" type="String" />
+		<field name="pr_ao_reg_no" type="String" />
+		<field name="pr_ao_name" type="String" />
+		<field name="sector" type="String" />
+		<field name="sector_type" type="String" />
+		<field name="ministry_name" type="String" />
+		<field name="state_name" type="String" />
+		<field name="broad_category" type="String" />
+		<field name="grievance_text" type="String" />
+		<field name="followup_action_i" type="Date" />
+		<field name="followup_action_ii" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrievPendingSummary">
+		<field name="id_" type="long" />
+		<field name="sector_type" type="String" />
+		<field name="name_of_ministry_central_gov" type="String" />
+		<field name="date_" type="Date" />
+		<field name="reported_referrals" type="Integer" />
+		<field name="sixty_oneeighty" type="Integer" />
+		<field name="oneeighty_threesixtyfive" type="Integer" />
+		<field name="morethan_threesixtyfive" type="Integer" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrievPendingTwo">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="token_number" type="String" />
+		<field name="pran" type="long" />
+		<field name="subscriber_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="status" type="String" />
+		<field name="grievance_logging_date" type="Date" />
+		<field name="date_considered_for_ageing" type="Date" />
+		<field name="ageing" type="Integer" />
+		<field name="bucket" type="String" />
+		<field name="raised_by" type="String" />
+		<field name="nlao_reg_no" type="BigDecimal" />
+		<field name="nlao_name" type="String" />
+		<field name="nloo_reg_no" type="String" />
+		<field name="nloo_name" type="String" />
+		<field name="sector" type="String" />
+		<field name="broad_category" type="String" />
+		<field name="grievance_text" type="String" />
+		<field name="followup_action_i" type="Date" />
+		<field name="followup_action_ii" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrowthDataFive">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="reporting_date" type="Date" />
+		<field name="sector" type="String" />
+		<field name="month" type="String" />
+		<field name="year" type="Long" />
+		<field name="aum_in_cr" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrowthDataFour">
+		<field name="id" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="reporting_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="month" type="String" />
+		<field name="year" type="Long" />
+		<field name="aum_in_cr" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrowthDataOne">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="reporting_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="month" type="String" />
+		<field name="year" type="Long" />
+		<field name="aum_in_cr" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrowthDataThree">
+		<field name="id" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="month" type="String" />
+		<field name="year" type="Long" />
+		<field name="aum_in_cr" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.GrowthDataTwo">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="reporting_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="month" type="String" />
+		<field name="year" type="Long" />
+		<field name="aum_in_cr" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.IncomeStatement">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="BigDecimal" />
+		<field name="previous_tear" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.IntrstOfDirecInOtherComp">
+		<field name="id_" type="long" />
+		<field name="nameCompanyFirmAssociation" type="String" />
+		<field name="natureInterestConcernInterest" type="String" />
+		<field name="shareholding" type="String" />
+		<field name="dateOnInterestOrConcernArose" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.IntrstOfDirectorsOfPf">
+		<field name="id_" type="long" />
+		<field name="nameOfDirector" type="String" />
+		<field name="dateSubmissionFormMbDirector" type="Date" />
+		<field name="fileEntryId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.KeyStatistics">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="BigDecimal" />
+		<field name="previous_tear" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowerform">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="mpReportFileId" type="long" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="workflowContext" type="String" />
+		<field name="remarks" type="String" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec1">
+		<field name="manpowersec1Id" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="destination" type="String" />
+		<field name="name" type="String" />
+		<field name="dateOfAppoinment" type="Date" />
+		<field name="contactNo" type="long" />
+		<field name="email" type="String" />
+		<field name="highestQualification" type="String" />
+		<field name="totalProfExp" type="long" />
+		<field name="deputation" type="String" />
+		<field name="linkedinId" type="long" />
+		<field name="position" type="String" />
+		<field name="dateOfBoardMeetngApprove" type="Date" />
+		<field name="biodata" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec2">
+		<field name="manpowersec2Id" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="iccstatus" type="String" />
+		<field name="rmccstatus" type="String" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec2a">
+		<field name="manpowersec2aId" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="designation" type="String" />
+		<field name="name" type="String" />
+		<field name="chairperson_member" type="String" />
+		<field name="dateofappointmentinthecommitte" type="Date" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec2b">
+		<field name="manpowersec2bId" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="designation" type="String" />
+		<field name="name" type="String" />
+		<field name="chairperson_member" type="String" />
+		<field name="dateofappointmentinthecommitte" type="Date" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec3">
+		<field name="manpowersec3Id" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="name" type="String" />
+		<field name="typeofdirector" type="String" />
+		<field name="chairperson_member" type="String" />
+		<field name="Independent_nonindependent" type="String" />
+		<field name="directoridentificationnumber" type="String" />
+		<field name="dateofappointment" type="Date" />
+		<field name="highestqualification" type="String" />
+		<field name="totalprofessionalexperience" type="long" />
+		<field name="resume_biodata" type="long" />
+		<field name="formMBP1ofthedirector" type="String" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec4">
+		<field name="manpowersec4Id" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="namesofthecompanies" type="String" />
+		<field name="natureofinterest" type="String" />
+		<field name="shareholding" type="String" />
+		<field name="dateoninterestorconcernarose" type="Date" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec5">
+		<field name="manpowersec5Id" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="iccstatusi" type="String" />
+		<field name="rmccstatusi" type="String" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec5a">
+		<field name="manpowersec5aId" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="designation" type="String" />
+		<field name="name" type="String" />
+		<field name="chairperson_member" type="String" />
+		<field name="dateofappointmentinthecommitte" type="Date" />
+	</model>
+	<model name="com.daily.pfm.service.model.manpowersec5b">
+		<field name="manpowersec5bId" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="designation" type="String" />
+		<field name="name" type="String" />
+		<field name="chairperson_member" type="String" />
+		<field name="dateofappointmentinthecommitte" type="Date" />
+	</model>
+	<model name="com.daily.pfm.service.model.NoteOfBalanceSheet">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="BigDecimal" />
+		<field name="previous_tear" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NoteOfCombinedBalanceSheet">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="String" />
+		<field name="particulars" type="String" />
+		<field name="schedule" type="String" />
+		<field name="current_year" type="BigDecimal" />
+		<field name="previous_tear" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsI">
+		<field name="id_" type="long" />
+		<field name="nameofcompanyi" type="String" />
+		<field name="facevaluei" type="String" />
+		<field name="purchasevaluei" type="String" />
+		<field name="provisionheldi" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsII">
+		<field name="id_" type="long" />
+		<field name="nameofsecurityii" type="String" />
+		<field name="legalcaseii" type="String" />
+		<field name="currentstatusii" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsIII">
+		<field name="id_" type="long" />
+		<field name="nameofcompanyiii" type="String" />
+		<field name="facevalueiii" type="String" />
+		<field name="purchasevalueiii" type="String" />
+		<field name="bookvalueiii" type="String" />
+		<field name="provisionheldiii" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsIV">
+		<field name="id_" type="long" />
+		<field name="nameofsecurityiv" type="String" />
+		<field name="legalcaseiv" type="String" />
+		<field name="currentstatusiv" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsIX">
+		<field name="id_" type="long" />
+		<field name="nameofcompanyix" type="String" />
+		<field name="facevalueix" type="String" />
+		<field name="purchasevalueix" type="String" />
+		<field name="provisionheldix" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsV">
+		<field name="id_" type="long" />
+		<field name="nameofcompanyv" type="String" />
+		<field name="bookvaluev" type="String" />
+		<field name="provisionheldv" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsVI">
+		<field name="id_" type="long" />
+		<field name="namevi" type="String" />
+		<field name="exposurevi" type="String" />
+		<field name="originalratingvi" type="String" />
+		<field name="currentratingvi" type="String" />
+		<field name="statusvi" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsVII">
+		<field name="id_" type="long" />
+		<field name="nameofcompanyvii" type="String" />
+		<field name="facevaluevii" type="String" />
+		<field name="purchasevaluevii" type="String" />
+		<field name="provisionheldprinciplevii" type="String" />
+		<field name="provisionheldinterestvii" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsVIII">
+		<field name="id_" type="long" />
+		<field name="nameofsecurityviii" type="String" />
+		<field name="legalcaseviii" type="String" />
+		<field name="currentstatusviii" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsX">
+		<field name="id_" type="long" />
+		<field name="nameofsecurityx" type="String" />
+		<field name="legalcasex" type="String" />
+		<field name="currentstatusx" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsXI">
+		<field name="id_" type="long" />
+		<field name="nameofcompanyxi" type="String" />
+		<field name="facevaluexi" type="String" />
+		<field name="purchasevaluexi" type="String" />
+		<field name="provisionheldxi" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpaDevelopmentsXII">
+		<field name="id_" type="long" />
+		<field name="nameofsecurityxii" type="String" />
+		<field name="legalcasexii" type="String" />
+		<field name="currentstatusxii" type="String" />
+		<field name="npadevelopmentsiid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpfNpaProgress">
+		<field name="id_" type="long" />
+		<field name="pensionfundname" type="String" />
+		<field name="npadate" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpfNpaProgressII">
+		<field name="id_" type="long" />
+		<field name="nameofcompany" type="String" />
+		<field name="bookvalue" type="Double" />
+		<field name="provisionheld" type="Double" />
+		<field name="pfmnpaprogressid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpfNpaProgressIII">
+		<field name="id_" type="long" />
+		<field name="name" type="String" />
+		<field name="expovalue" type="Double" />
+		<field name="originalrating" type="String" />
+		<field name="currentrating" type="String" />
+		<field name="status" type="String" />
+		<field name="pfmnpaprogressid" type="long" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmEight">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmEleven">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmFive">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmFour">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmNine">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmOne">
+		<field name="id" type="long" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="date_" type="Date" />
+		<field name="total_aum" type="BigDecimal" />
+		<field name="nps_trust_fees" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmSeven">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmSix">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmsummary">
+		<field name="id" type="long" />
+		<field name="mounth" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="nps_trust_fee" type="BigDecimal" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmTen">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmThree">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmTwelve">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.NpsTrustFeePfmTwo">
+		<field name="id" type="long" />
+		<field name="datene" type="Date" />
+		<field name="totalaum" type="float" />
+		<field name="npstrustfee" type="float" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.OverallStatusOfStateGovt">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="state_govt" type="String" />
+		<field name="date_of_notification" type="Date" />
+		<field name="date_of_adoption" type="Date" />
+		<field name="total_no_of_subscriber" type="Integer" />
+		<field name="no_of_non_ira_subscribers" type="Integer" />
+		<field name="reg_during_this_week" type="BigDecimal" />
+		<field name="total_contribution" type="BigDecimal" />
+		<field name="contribution_m_b" type="BigDecimal" />
+		<field name="change_contrib_m_b_during_week" type="BigDecimal" />
+		<field name="aum" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.OverallStatusSectorWise">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="sector" type="String" />
+		<field name="number_of_subscriber" type="Integer" />
+		<field name="subscriber_reg_during_week" type="Integer" />
+		<field name="contributionm_and_b" type="BigDecimal" />
+		<field name="change_in_contrib_during_week" type="BigDecimal" />
+		<field name="pending_for_m_and_b" type="BigDecimal" />
+		<field name="total" type="BigDecimal" />
+		<field name="net_amount_invested" type="BigDecimal" />
+		<field name="total_assets_under_mgmt" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.PFM_hy_comp_cert_Scrutiny">
+		<field name="scrutinyid" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="nps_comments" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.Pfm_Qr_IARScrutiny">
+		<field name="scrutinyid" type="long" />
+		<field name="reportUploadLogId" type="long" />
+		<field name="username" type="String" />
+		<field name="version" type="double" />
+		<field name="userid" type="long" />
+		<field name="annex_comp_certificate_rem" type="String" />
+		<field name="annex_comp_certificate_rem_i" type="String" />
+		<field name="annex_comp_certificate_rem_ii" type="String" />
+		<field name="annex_comp_certificate_rem_iii" type="String" />
+		<field name="extracts_board_pdf_rem" type="String" />
+		<field name="nps_comments" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrAnnuityRequest">
+		<field name="id_" type="long" />
+		<field name="cra" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="annuity_request_category" type="String" />
+		<field name="cg" type="BigDecimal" />
+		<field name="sg" type="BigDecimal" />
+		<field name="corporate" type="BigDecimal" />
+		<field name="uos" type="BigDecimal" />
+		<field name="nps_lite" type="BigDecimal" />
+		<field name="total" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrAnnuityRequestAgeing">
+		<field name="id_" type="long" />
+		<field name="cra" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="requests_cause" type="String" />
+		<field name="less_than_1_month" type="BigDecimal" />
+		<field name="between_1_3_months" type="BigDecimal" />
+		<field name="between_3_4_months" type="BigDecimal" />
+		<field name="between_4_6_months" type="BigDecimal" />
+		<field name="between_6_12_months" type="BigDecimal" />
+		<field name="more_than_a_year" type="BigDecimal" />
+		<field name="total" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrCauseWiseAgeingAnalysis">
+		<field name="id_" type="long" />
+		<field name="cra" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="cause_wise_requests" type="String" />
+		<field name="less_than_1_month" type="BigDecimal" />
+		<field name="between_1_3_months" type="BigDecimal" />
+		<field name="between_3_4_months" type="BigDecimal" />
+		<field name="between_4_6_months" type="BigDecimal" />
+		<field name="between_6_12_months" type="BigDecimal" />
+		<field name="more_than_a_year" type="BigDecimal" />
+		<field name="total" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrCauseWisePatternAnalysis">
+		<field name="id_" type="long" />
+		<field name="cra" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="particulars" type="String" />
+		<field name="present_quarter_death" type="BigDecimal" />
+		<field name="present_quarter_premature" type="BigDecimal" />
+		<field name="present_quarter_superannuation" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrExercisedExitOption">
+		<field name="id_" type="long" />
+		<field name="cra" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="sector" type="String" />
+		<field name="partial_withdrawal_req_prcd" type="BigDecimal" />
+		<field name="gsec_subs_exercised_family_pn" type="BigDecimal" />
+		<field name="subscriber_deferred_lumpsum" type="BigDecimal" />
+		<field name="subscriber_who_deferred_anuty" type="BigDecimal" />
+		<field name="voluntarily_continued_sub" type="BigDecimal" />
+		<field name="auto_continued_subscriber" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrExitAndWithdrawal">
+		<field name="id_" type="long" />
+		<field name="fiscal_year" type="String" />
+		<field name="cra" type="String" />
+		<field name="exits_and_withdrawals_during" type="String" />
+		<field name="quarter" type="String" />
+		<field name="values" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrGapAnalysis">
+		<field name="id_" type="long" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="parameters" type="String" />
+		<field name="cra" type="String" />
+		<field name="no_of_subscribers" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrSectoralAnalysis">
+		<field name="id_" type="long" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="cra" type="String" />
+		<field name="sectoral_analysis" type="String" />
+		<field name="central_government" type="BigDecimal" />
+		<field name="state_government" type="BigDecimal" />
+		<field name="corporate" type="BigDecimal" />
+		<field name="uos" type="BigDecimal" />
+		<field name="nps_lite" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QrSectorWiseAgeingAnalysis">
+		<field name="id_" type="long" />
+		<field name="cra" type="String" />
+		<field name="year" type="String" />
+		<field name="quarter" type="String" />
+		<field name="sector" type="String" />
+		<field name="less_than_1_month" type="BigDecimal" />
+		<field name="between_1_3_months" type="BigDecimal" />
+		<field name="between_3_4_months" type="BigDecimal" />
+		<field name="between_4_6_months" type="BigDecimal" />
+		<field name="between_6_12_months" type="BigDecimal" />
+		<field name="more_than_a_year" type="BigDecimal" />
+		<field name="total" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QtrNonUnanimous">
+		<field name="id_" type="long" />
+		<field name="sno" type="BigDecimal" />
+		<field name="name_of_company" type="String" />
+		<field name="meeting_date" type="Date" />
+		<field name="resolution" type="String" />
+		<field name="ses_recomm" type="String" />
+		<field name="ses_reason_for_recomm" type="String" />
+		<field name="pf_voted_for" type="String" />
+		<field name="pf_voted_abstain" type="String" />
+		<field name="pf_voted_against" type="String" />
+		<field name="final_vote" type="String" />
+		<field name="rationale_of_pfms" type="String" />
+		<field name="reportingDate" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QuarterlySubCompForms">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="sno" type="BigDecimal" />
+		<field name="type_purchase_or_sale" type="String" />
+		<field name="category_of_investment" type="String" />
+		<field name="isin" type="String" />
+		<field name="name_of_security_or_company" type="String" />
+		<field name="book_value_qtr" type="BigDecimal" />
+		<field name="prcnt_of_portfolio_value_qtr" type="String" />
+		<field name="date_of_purchase_or_sale_qtr" type="Date" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QuarterlySubCompForms_2">
+		<field name="id_" type="long" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="particulars" type="String" />
+		<field name="opbal_book_value" type="BigDecimal" />
+		<field name="opbal_market_value" type="BigDecimal" />
+		<field name="purchase_book_value" type="BigDecimal" />
+		<field name="pur_prcnt_of_total_portfolio" type="String" />
+		<field name="sales_book_value" type="BigDecimal" />
+		<field name="sales_prcnt_of_total_portfolio" type="String" />
+		<field name="adj_book_value" type="BigDecimal" />
+		<field name="adj_market_value" type="BigDecimal" />
+		<field name="adj_Prcnt_of_Total_Portfolio" type="String" />
+		<field name="closingbal_market_value" type="BigDecimal" />
+		<field name="closingbal_prcnt_tot_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QuarterlySubCompForms_3">
+		<field name="id_" type="long" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="scheme_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="particulars" type="String" />
+		<field name="opening_bal_units" type="BigDecimal" />
+		<field name="opening_bal_amount" type="BigDecimal" />
+		<field name="purchase_units" type="BigDecimal" />
+		<field name="purchase_book_value" type="BigDecimal" />
+		<field name="pur_prcnt_of_total_portfolio" type="String" />
+		<field name="sales_units" type="BigDecimal" />
+		<field name="sales_book_value" type="BigDecimal" />
+		<field name="sales_prcnt_of_total_portfolio" type="String" />
+		<field name="closing_bal_units" type="BigDecimal" />
+		<field name="closing_bal_book_value" type="BigDecimal" />
+		<field name="closing_bal_market_value" type="BigDecimal" />
+		<field name="closingbal_prcnt_tot_portfolio" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QuarterlySubCompForms_4">
+		<field name="id_" type="long" />
+		<field name="sr_no" type="BigDecimal" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="market_value_as_on_quarter" type="BigDecimal" />
+		<field name="market_value_as_on_prev_qrtr" type="BigDecimal" />
+		<field name="market_val_as_on_2nd_prev_qrtr" type="BigDecimal" />
+		<field name="market_val_as_on_3rd_prev_qrtr" type="BigDecimal" />
+		<field name="_3_year_rolling_cagr" type="String" />
+		<field name="annualized_portfolio_ret_yield" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QuarterlySubCompForms_5">
+		<field name="id_" type="long" />
+		<field name="pension_fund_code" type="String" />
+		<field name="pension_fund_name" type="String" />
+		<field name="reporting_date" type="Date" />
+		<field name="scheme_name" type="String" />
+		<field name="security_name" type="String" />
+		<field name="instrument_type" type="String" />
+		<field name="interest_rate_prcnt" type="String" />
+		<field name="has_there_been_revision" type="String" />
+		<field name="total_otstndgbook_value" type="BigDecimal" />
+		<field name="default_principal_bookvalue" type="BigDecimal" />
+		<field name="default_interest_bookvalue" type="BigDecimal" />
+		<field name="principal_due_from" type="Date" />
+		<field name="interest_due_from" type="Date" />
+		<field name="deferred_principal" type="BigDecimal" />
+		<field name="deferred_interest " type="BigDecimal" />
+		<field name="rolled_over" type="String" />
+		<field name="principal_waiver_amt" type="BigDecimal" />
+		<field name="prin_waiver_board_apprv_ref" type="String" />
+		<field name="classification" type="String" />
+		<field name="provision_prcnt" type="String" />
+		<field name="provision_amount" type="BigDecimal" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.QuarterlySubForm1A">
+		<field name="id_" type="long" />
+		<field name="date_" type="Date" />
+		<field name="pension_fund_name" type="String" />
+		<field name="sno" type="BigDecimal" />
+		<field name="type_purchase_or_sale" type="String" />
+		<field name="category_of_investment" type="String" />
+		<field name="isin" type="String" />
+		<field name="name_of_security_or_company" type="String" />
+		<field name="book_value_qtr" type="BigDecimal" />
+		<field name="prcnt_of_portfolio_value_qtr" type="String" />
+		<field name="date_of_purchase_or_sale_qtr" type="Date" />
+		<field name="name_" type="String" />
+		<field name="designation" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ReportI">
+		<field name="id" type="long" />
+		<field name="no_of_accepted_tran" type="Integer" />
+		<field name="no_of_rejected_tran" type="Integer" />
+		<field name="total_transactions" type="Integer" />
+		<field name="rejection_prcnt" type="String" />
+		<field name="cra" type="String" />
+		<field name="month" type="Date" />
+		<field name="report_month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ReportII">
+		<field name="id" type="long" />
+		<field name="sr_no" type="Integer" />
+		<field name="nps_acc_number" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="avg_bal_week1" type="BigDecimal" />
+		<field name="avg_bal_week2" type="BigDecimal" />
+		<field name="avg_bal_week3" type="BigDecimal" />
+		<field name="avg_bal_week4" type="BigDecimal" />
+		<field name="avg_bal_week5" type="BigDecimal" />
+		<field name="avg_bal_week6" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ReportIII">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="nps_acc_number" type="long" />
+		<field name="nps_acc_name" type="String" />
+		<field name="total_debit" type="BigDecimal" />
+		<field name="total_credit" type="BigDecimal" />
+		<field name="closing_bal" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ReportIVa">
+		<field name="id" type="long" />
+		<field name="remittence_cat" type="String" />
+		<field name="timelines" type="String" />
+		<field name="no_of_instances" type="Integer" />
+		<field name="amt_transferred" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ReportV">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="nps_acc_name" type="String" />
+		<field name="amt_involved" type="BigDecimal" />
+		<field name="delay_days" type="Integer" />
+		<field name="comp_paid" type="BigDecimal" />
+		<field name="remarks" type="String" />
+		<field name="cra" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.ReportVI">
+		<field name="id" type="long" />
+		<field name="sno" type="Integer" />
+		<field name="griev_raised_entity" type="Integer" />
+		<field name="token_no" type="Integer" />
+		<field name="griev_logged_date" type="Date" />
+		<field name="resolution_timestamp" type="Date" />
+		<field name="griev_particulars" type="String" />
+		<field name="griev_closure_tat" type="Integer" />
+		<field name="solution_provided" type="String" />
+		<field name="tb_remarks" type="String" />
+		<field name="report_month" type="Date" />
+		<field name="cra" type="String" />
+		<field name="createdate" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.StatusOfAtalPensionScheme">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="tot_no_of_banks_reg_under_apy" type="Integer" />
+		<field name="total_num_of_subs_reg" type="Integer" />
+		<field name="total_contribution_amount" type="BigDecimal" />
+		<field name="contrib_amt_matched_booked" type="BigDecimal" />
+		<field name="amt_pend_matching_booking" type="BigDecimal" />
+		<field name="total_aum" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.StatusOfCentralGovernment">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="accounting_formation" type="String" />
+		<field name="change_subs_during_past_week" type="Integer" />
+		<field name="total_no_of_subscribers" type="Integer" />
+		<field name="no_of_non_ira_compliant_subs" type="Integer" />
+		<field name="non_ira_subs_flagged_in_system" type="Integer" />
+		<field name="contribution_amt_for_scfs_m_b" type="BigDecimal" />
+		<field name="contrib_amt_for_scfs_pend_m_b" type="BigDecimal" />
+		<field name="aum" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.StatusOfCorporateSector">
+		<field name="id_" type="long" />
+		<field name="tot_no_of_sub_reg_corp_sector" type="Integer" />
+		<field name="total_contrib_scf_uploaded" type="BigDecimal" />
+		<field name="contrib_amt_matched_booked" type="BigDecimal" />
+		<field name="tot_amt_pend_matching_booking" type="BigDecimal" />
+		<field name="total_aum" type="BigDecimal" />
+		<field name="no_of_corp_contrib_remitted" type="Integer" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.StatusOfIndividualSubscriber">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="total_no_of_reg_pops_in_cra" type="Integer" />
+		<field name="tot_no_of_reg_pop_sps_in_cra" type="Integer" />
+		<field name="total_no_of_subs" type="Integer" />
+		<field name="tot_no_of_active_account_subs" type="Integer" />
+		<field name="total_amt_of_subs_contrib_m_b" type="BigDecimal" />
+		<field name="total_aum" type="BigDecimal" />
+		<field name="tieri_tierii" type="String" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+	<model name="com.daily.pfm.service.model.StatusOfNPSLite">
+		<field name="id_" type="long" />
+		<field name="as_on_date" type="Date" />
+		<field name="total_number_of_aggregators" type="Integer" />
+		<field name="total_no_of_subscribers_reg" type="Integer" />
+		<field name="total_contribution_amount" type="BigDecimal" />
+		<field name="contrib_amt_matched_booked" type="BigDecimal" />
+		<field name="amt_pend_matching_booking" type="BigDecimal" />
+		<field name="total_aum" type="BigDecimal" />
+		<field name="cra" type="String" />
+		<field name="createdon" type="Date" />
+		<field name="createdby" type="long" />
+		<field name="reportUploadLogId" type="long" />
+	</model>
+</model-hints>

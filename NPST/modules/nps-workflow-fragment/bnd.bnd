@@ -1,0 +1,5 @@
+Bundle-Name: nps-workflow-fragment
+Bundle-SymbolicName: nps.workflow.fragment
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.portal.workflow.task.web;bundle-version="4.0.35"
+Portal-Bundle-Version: 7.3.10

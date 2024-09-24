@@ -1,0 +1,17 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly project(":modules:nps-email-api")
+	
+	compileInclude group: 'org.apache.poi', name: 'poi', version: '4.1.2'
+	compileInclude group: 'org.apache.poi', name: 'poi-ooxml', version: '4.1.2'
+	compileInclude group: 'org.apache.poi', name: 'poi-ooxml-schemas', version: '4.1.2'
+	compileInclude group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '3.1.0'
+	
+	compileInclude group: "org.apache.httpcomponents", name: "httpclient", version: "4.5.9"
+    compileInclude group: "org.apache.httpcomponents", name: "httpcore", version: "4.4.11"
+    compileInclude group: "commons-codec", name: "commons-codec", version: "1.12"
+    compileInclude group: "avalon-framework", name: "avalon-framework-api", transitive: false, version: "4.3"
+	compile project(":modules:DailyAverageService:DailyAverageService-api")
+	compile group: 'javax.mail', name: 'mail', version: '1.4'
+	compile project(":modules:nps-common-service")
+}

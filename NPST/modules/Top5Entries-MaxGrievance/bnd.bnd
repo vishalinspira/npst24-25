@@ -1,0 +1,4 @@
+Bundle-Name: Top5Entries-MaxGrievance
+Bundle-SymbolicName: com.top5entriesmaxgrievance
+Bundle-Version: 1.0.0
+Export-Package: com.top5entriesmaxgrievance.constants

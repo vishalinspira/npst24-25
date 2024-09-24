@@ -1,0 +1,4 @@
+Bundle-Name: AnnexureOneB
+Bundle-SymbolicName: com.annexure.oneb
+Bundle-Version: 1.0.0
+Export-Package: com.annexure.oneb.constants

@@ -1,0 +1,4 @@
+Bundle-Name: Form-Autosave
+Bundle-SymbolicName: com.nps.form.autosave
+Bundle-Version: 1.0.0
+Export-Package: com.nps.form.autosave.constants

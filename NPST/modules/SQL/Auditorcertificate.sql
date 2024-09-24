@@ -1,0 +1,21 @@
+CREATE TABLE public.auditorcertificate (
+    auditid integer DEFAULT nextval('public.auditorcertificate_auditid_seq'::regclass) NOT NULL,
+    name character varying(100),
+    amount character varying(100),
+    compname character varying(100),
+    characc character varying(100),
+    regno character varying(100),
+    compartner character varying(100),
+    memberno character varying(100),
+    date_ character varying(100),
+    place character varying(100),
+    uuid_ character varying(75),
+    createdby bigint,
+    createdate timestamp without time zone,
+    modifyby bigint,
+    modifydate timestamp without time zone,
+    status integer,
+    statusbyuserid bigint,
+    statusbyusername character varying(75),
+    statusdate timestamp without time zone
+);

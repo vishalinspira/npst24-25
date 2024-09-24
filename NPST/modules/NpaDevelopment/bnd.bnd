@@ -1,0 +1,5 @@
+Bundle-Name: NpaDevelopment
+Bundle-SymbolicName: com.npa.development
+Bundle-Version: 1.0.0
+Export-Package: com.npa.development.constants
+Import-Package: *; version="0";resolution:=optional

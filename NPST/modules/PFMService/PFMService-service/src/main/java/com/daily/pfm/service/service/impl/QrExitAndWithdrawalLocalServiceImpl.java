@@ -1,0 +1,43 @@
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+
+package com.daily.pfm.service.service.impl;
+
+import com.daily.pfm.service.model.QrExitAndWithdrawal;
+import com.daily.pfm.service.service.base.QrExitAndWithdrawalLocalServiceBaseImpl;
+
+import java.util.Iterator;
+import java.util.List;
+
+/**
+ * @author Brian Wing Shun Chan
+ */
+public class QrExitAndWithdrawalLocalServiceImpl
+	extends QrExitAndWithdrawalLocalServiceBaseImpl {
+	
+	public void addQrExitAndWithdrawal(List<QrExitAndWithdrawal> qreaw) {
+		for(Iterator iterator = qreaw.iterator();iterator.hasNext();) {
+			QrExitAndWithdrawal qreawithdrawal =(QrExitAndWithdrawal) iterator.next();
+			qrExitAndWithdrawalLocalService.addQrExitAndWithdrawal(qreawithdrawal);
+		}
+	}
+	
+	public void deleteQrExitAndWithdrawalByReportUploadLogId(Long reportUploadLogId) {
+		List<QrExitAndWithdrawal> deleteRepLog =  qrExitAndWithdrawalPersistence.findByReportUploadLogId(reportUploadLogId);
+		for(QrExitAndWithdrawal deleteReportLogs : deleteRepLog) {
+			qrExitAndWithdrawalLocalService.deleteQrExitAndWithdrawal(deleteReportLogs);
+		}
+	}
+
+}

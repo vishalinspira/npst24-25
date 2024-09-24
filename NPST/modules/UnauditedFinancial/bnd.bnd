@@ -1,0 +1,4 @@
+Bundle-Name: UnauditedFinancial
+Bundle-SymbolicName: com.unaudited.financial
+Bundle-Version: 1.0.0
+Export-Package: com.unaudited.financial.constants

@@ -1,0 +1,594 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="compliance.service.service.impl.AccountListLocalServiceImpl" id="compliance.service.service.AccountListLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AccountListPersistenceImpl" id="compliance.service.service.persistence.AccountListPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaILocalServiceImpl" id="compliance.service.service.AgendaILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaIPersistenceImpl" id="compliance.service.service.persistence.AgendaIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaIILocalServiceImpl" id="compliance.service.service.AgendaIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaIIPersistenceImpl" id="compliance.service.service.persistence.AgendaIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaIIILocalServiceImpl" id="compliance.service.service.AgendaIIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaIIIPersistenceImpl" id="compliance.service.service.persistence.AgendaIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaIVLocalServiceImpl" id="compliance.service.service.AgendaIVLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaIVPersistenceImpl" id="compliance.service.service.persistence.AgendaIVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaIXLocalServiceImpl" id="compliance.service.service.AgendaIXLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaIXPersistenceImpl" id="compliance.service.service.persistence.AgendaIXPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaVLocalServiceImpl" id="compliance.service.service.AgendaVLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaVPersistenceImpl" id="compliance.service.service.persistence.AgendaVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaVILocalServiceImpl" id="compliance.service.service.AgendaVILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaVIPersistenceImpl" id="compliance.service.service.persistence.AgendaVIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaVIILocalServiceImpl" id="compliance.service.service.AgendaVIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaVIIPersistenceImpl" id="compliance.service.service.persistence.AgendaVIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaVIIILocalServiceImpl" id="compliance.service.service.AgendaVIIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaVIIIPersistenceImpl" id="compliance.service.service.persistence.AgendaVIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaXLocalServiceImpl" id="compliance.service.service.AgendaXLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaXPersistenceImpl" id="compliance.service.service.persistence.AgendaXPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaXILocalServiceImpl" id="compliance.service.service.AgendaXILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaXIPersistenceImpl" id="compliance.service.service.persistence.AgendaXIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AgendaXIILocalServiceImpl" id="compliance.service.service.AgendaXIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.AgendaXIIPersistenceImpl" id="compliance.service.service.persistence.AgendaXIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AmtMismatchLocalServiceImpl" id="compliance.service.service.AmtMismatchLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AmtMismatchPersistenceImpl" id="compliance.service.service.persistence.AmtMismatchPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AnFinalAnnualVoteCountLocalServiceImpl" id="compliance.service.service.AnFinalAnnualVoteCountLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AnFinalAnnualVoteCountPersistenceImpl" id="compliance.service.service.persistence.AnFinalAnnualVoteCountPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AnnexureCLocalServiceImpl" id="compliance.service.service.AnnexureCLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AnnexureCPersistenceImpl" id="compliance.service.service.persistence.AnnexureCPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AnnexureToCarLocalServiceImpl" id="compliance.service.service.AnnexureToCarLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AnnexureToCarPersistenceImpl" id="compliance.service.service.persistence.AnnexureToCarPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AnnexureVALocalServiceImpl" id="compliance.service.service.AnnexureVALocalService" />
+	<bean class="compliance.service.service.persistence.impl.AnnexureVAPersistenceImpl" id="compliance.service.service.persistence.AnnexureVAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AnnexureVBLocalServiceImpl" id="compliance.service.service.AnnexureVBLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AnnexureVBPersistenceImpl" id="compliance.service.service.persistence.AnnexureVBPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AnPFVotingRecLocalServiceImpl" id="compliance.service.service.AnPFVotingRecLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AnPFVotingRecPersistenceImpl" id="compliance.service.service.persistence.AnPFVotingRecPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.AvgAmtLocalServiceImpl" id="compliance.service.service.AvgAmtLocalService" />
+	<bean class="compliance.service.service.persistence.impl.AvgAmtPersistenceImpl" id="compliance.service.service.persistence.AvgAmtPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ChequeAcceptedLocalServiceImpl" id="compliance.service.service.ChequeAcceptedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ChequeAcceptedPersistenceImpl" id="compliance.service.service.persistence.ChequeAcceptedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ChequeClearanceLocalServiceImpl" id="compliance.service.service.ChequeClearanceLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ChequeClearancePersistenceImpl" id="compliance.service.service.persistence.ChequeClearancePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ChequeRejectLocalServiceImpl" id="compliance.service.service.ChequeRejectLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ChequeRejectPersistenceImpl" id="compliance.service.service.persistence.ChequeRejectPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ChequesFailedLocalServiceImpl" id="compliance.service.service.ChequesFailedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ChequesFailedPersistenceImpl" id="compliance.service.service.persistence.ChequesFailedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ClosingBalLocalServiceImpl" id="compliance.service.service.ClosingBalLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ClosingBalPersistenceImpl" id="compliance.service.service.persistence.ClosingBalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ClosingBalUploadDelayLocalServiceImpl" id="compliance.service.service.ClosingBalUploadDelayLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ClosingBalUploadDelayPersistenceImpl" id="compliance.service.service.persistence.ClosingBalUploadDelayPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.CollectionsTIDLocalServiceImpl" id="compliance.service.service.CollectionsTIDLocalService" />
+	<bean class="compliance.service.service.persistence.impl.CollectionsTIDPersistenceImpl" id="compliance.service.service.persistence.CollectionsTIDPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.CollectionSummaryLocalServiceImpl" id="compliance.service.service.CollectionSummaryLocalService" />
+	<bean class="compliance.service.service.persistence.impl.CollectionSummaryPersistenceImpl" id="compliance.service.service.persistence.CollectionSummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.Compliance_CertLocalServiceImpl" id="compliance.service.service.Compliance_CertLocalService" />
+	<bean class="compliance.service.service.persistence.impl.Compliance_CertPersistenceImpl" id="compliance.service.service.persistence.Compliance_CertPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ConsoCollReportLocalServiceImpl" id="compliance.service.service.ConsoCollReportLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ConsoCollReportPersistenceImpl" id="compliance.service.service.persistence.ConsoCollReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.CustodianAnnex_1aLocalServiceImpl" id="compliance.service.service.CustodianAnnex_1aLocalService" />
+	<bean class="compliance.service.service.persistence.impl.CustodianAnnex_1aPersistenceImpl" id="compliance.service.service.persistence.CustodianAnnex_1aPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.CustodianAnnex_2aLocalServiceImpl" id="compliance.service.service.CustodianAnnex_2aLocalService" />
+	<bean class="compliance.service.service.persistence.impl.CustodianAnnex_2aPersistenceImpl" id="compliance.service.service.persistence.CustodianAnnex_2aPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.CustodianAnnex_4bLocalServiceImpl" id="compliance.service.service.CustodianAnnex_4bLocalService" />
+	<bean class="compliance.service.service.persistence.impl.CustodianAnnex_4bPersistenceImpl" id="compliance.service.service.persistence.CustodianAnnex_4bPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.D_REMITAcceptedLocalServiceImpl" id="compliance.service.service.D_REMITAcceptedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.D_REMITAcceptedPersistenceImpl" id="compliance.service.service.persistence.D_REMITAcceptedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.DelayAfter_930amLocalServiceImpl" id="compliance.service.service.DelayAfter_930amLocalService" />
+	<bean class="compliance.service.service.persistence.impl.DelayAfter_930amPersistenceImpl" id="compliance.service.service.persistence.DelayAfter_930amPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.DelayExceed_25minLocalServiceImpl" id="compliance.service.service.DelayExceed_25minLocalService" />
+	<bean class="compliance.service.service.persistence.impl.DelayExceed_25minPersistenceImpl" id="compliance.service.service.persistence.DelayExceed_25minPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.DelayToPFMAccLocalServiceImpl" id="compliance.service.service.DelayToPFMAccLocalService" />
+	<bean class="compliance.service.service.persistence.impl.DelayToPFMAccPersistenceImpl" id="compliance.service.service.persistence.DelayToPFMAccPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.DelayWithdrawalRemittanceLocalServiceImpl" id="compliance.service.service.DelayWithdrawalRemittanceLocalService" />
+	<bean class="compliance.service.service.persistence.impl.DelayWithdrawalRemittancePersistenceImpl" id="compliance.service.service.persistence.DelayWithdrawalRemittancePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ElectronicAcceptedLocalServiceImpl" id="compliance.service.service.ElectronicAcceptedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ElectronicAcceptedPersistenceImpl" id="compliance.service.service.persistence.ElectronicAcceptedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ElectronicRejectsLocalServiceImpl" id="compliance.service.service.ElectronicRejectsLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ElectronicRejectsPersistenceImpl" id="compliance.service.service.persistence.ElectronicRejectsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ElectronicRejSummaryLocalServiceImpl" id="compliance.service.service.ElectronicRejSummaryLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ElectronicRejSummaryPersistenceImpl" id="compliance.service.service.persistence.ElectronicRejSummaryPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ENPSServChangesLocalServiceImpl" id="compliance.service.service.ENPSServChangesLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ENPSServChangesPersistenceImpl" id="compliance.service.service.persistence.ENPSServChangesPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.EnquireReceivedLocalServiceImpl" id="compliance.service.service.EnquireReceivedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.EnquireReceivedPersistenceImpl" id="compliance.service.service.persistence.EnquireReceivedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ExpTranIdLocalServiceImpl" id="compliance.service.service.ExpTranIdLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ExpTranIdPersistenceImpl" id="compliance.service.service.persistence.ExpTranIdPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FinalUploadFileLocalServiceImpl" id="compliance.service.service.FinalUploadFileLocalService" />
+	<bean class="compliance.service.service.persistence.impl.FinalUploadFilePersistenceImpl" id="compliance.service.service.persistence.FinalUploadFilePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FormatAILocalServiceImpl" id="compliance.service.service.FormatAILocalService" />
+	<bean class="compliance.service.service.persistence.impl.FormatAIPersistenceImpl" id="compliance.service.service.persistence.FormatAIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FormatAIILocalServiceImpl" id="compliance.service.service.FormatAIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.FormatAIIPersistenceImpl" id="compliance.service.service.persistence.FormatAIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FormatBLocalServiceImpl" id="compliance.service.service.FormatBLocalService" />
+	<bean class="compliance.service.service.persistence.impl.FormatBPersistenceImpl" id="compliance.service.service.persistence.FormatBPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FormatCLocalServiceImpl" id="compliance.service.service.FormatCLocalService" />
+	<bean class="compliance.service.service.persistence.impl.FormatCPersistenceImpl" id="compliance.service.service.persistence.FormatCPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FormatDLocalServiceImpl" id="compliance.service.service.FormatDLocalService" />
+	<bean class="compliance.service.service.persistence.impl.FormatDPersistenceImpl" id="compliance.service.service.persistence.FormatDPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FormatELocalServiceImpl" id="compliance.service.service.FormatELocalService" />
+	<bean class="compliance.service.service.persistence.impl.FormatEPersistenceImpl" id="compliance.service.service.persistence.FormatEPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FormatIALocalServiceImpl" id="compliance.service.service.FormatIALocalService" />
+	<bean class="compliance.service.service.persistence.impl.FormatIAPersistenceImpl" id="compliance.service.service.persistence.FormatIAPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.FRCWithdrawalAccLocalServiceImpl" id="compliance.service.service.FRCWithdrawalAccLocalService" />
+	<bean class="compliance.service.service.persistence.impl.FRCWithdrawalAccPersistenceImpl" id="compliance.service.service.persistence.FRCWithdrawalAccPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.GrievanceReceivedLocalServiceImpl" id="compliance.service.service.GrievanceReceivedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.GrievanceReceivedPersistenceImpl" id="compliance.service.service.persistence.GrievanceReceivedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InputQuarterlyIntervalLocalServiceImpl" id="compliance.service.service.InputQuarterlyIntervalLocalService" />
+	<bean class="compliance.service.service.persistence.impl.InputQuarterlyIntervalPersistenceImpl" id="compliance.service.service.persistence.InputQuarterlyIntervalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InputQuarterlyIntervalILocalServiceImpl" id="compliance.service.service.InputQuarterlyIntervalILocalService" />
+	<bean class="compliance.service.service.persistence.impl.InputQuarterlyIntervalIPersistenceImpl" id="compliance.service.service.persistence.InputQuarterlyIntervalIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InputQuarterlyIntervalIILocalServiceImpl" id="compliance.service.service.InputQuarterlyIntervalIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.InputQuarterlyIntervalIIPersistenceImpl" id="compliance.service.service.persistence.InputQuarterlyIntervalIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InputQuarterlyIntervalIIILocalServiceImpl" id="compliance.service.service.InputQuarterlyIntervalIIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.InputQuarterlyIntervalIIIPersistenceImpl" id="compliance.service.service.persistence.InputQuarterlyIntervalIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InputQuarterlyIntervalIVLocalServiceImpl" id="compliance.service.service.InputQuarterlyIntervalIVLocalService" />
+	<bean class="compliance.service.service.persistence.impl.InputQuarterlyIntervalIVPersistenceImpl" id="compliance.service.service.persistence.InputQuarterlyIntervalIVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InputQuarterlyIntervalVLocalServiceImpl" id="compliance.service.service.InputQuarterlyIntervalVLocalService" />
+	<bean class="compliance.service.service.persistence.impl.InputQuarterlyIntervalVPersistenceImpl" id="compliance.service.service.persistence.InputQuarterlyIntervalVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InternalAuditReportLocalServiceImpl" id="compliance.service.service.InternalAuditReportLocalService" />
+	<bean class="compliance.service.service.persistence.impl.InternalAuditReportPersistenceImpl" id="compliance.service.service.persistence.InternalAuditReportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InternalAuditReportILocalServiceImpl" id="compliance.service.service.InternalAuditReportILocalService" />
+	<bean class="compliance.service.service.persistence.impl.InternalAuditReportIPersistenceImpl" id="compliance.service.service.persistence.InternalAuditReportIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InternalAuditReportIILocalServiceImpl" id="compliance.service.service.InternalAuditReportIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.InternalAuditReportIIPersistenceImpl" id="compliance.service.service.persistence.InternalAuditReportIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InternalAuditReportIIILocalServiceImpl" id="compliance.service.service.InternalAuditReportIIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.InternalAuditReportIIIPersistenceImpl" id="compliance.service.service.persistence.InternalAuditReportIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InternalAuditReportIVLocalServiceImpl" id="compliance.service.service.InternalAuditReportIVLocalService" />
+	<bean class="compliance.service.service.persistence.impl.InternalAuditReportIVPersistenceImpl" id="compliance.service.service.persistence.InternalAuditReportIVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InternalAuditReportVLocalServiceImpl" id="compliance.service.service.InternalAuditReportVLocalService" />
+	<bean class="compliance.service.service.persistence.impl.InternalAuditReportVPersistenceImpl" id="compliance.service.service.persistence.InternalAuditReportVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InvalidAccLocalServiceImpl" id="compliance.service.service.InvalidAccLocalService" />
+	<bean class="compliance.service.service.persistence.impl.InvalidAccPersistenceImpl" id="compliance.service.service.persistence.InvalidAccPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.InvalidAccIILocalServiceImpl" id="compliance.service.service.InvalidAccIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.InvalidAccIIPersistenceImpl" id="compliance.service.service.persistence.InvalidAccIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnAPYLocalServiceImpl" id="compliance.service.service.MnAPYLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnAPYPersistenceImpl" id="compliance.service.service.persistence.MnAPYPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnAPYGrievanceLocalServiceImpl" id="compliance.service.service.MnAPYGrievanceLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnAPYGrievancePersistenceImpl" id="compliance.service.service.persistence.MnAPYGrievancePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnEntityWiseAgeingLocalServiceImpl" id="compliance.service.service.MnEntityWiseAgeingLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnEntityWiseAgeingPersistenceImpl" id="compliance.service.service.persistence.MnEntityWiseAgeingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnEntityWiseOutAnalysisLocalServiceImpl" id="compliance.service.service.MnEntityWiseOutAnalysisLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnEntityWiseOutAnalysisPersistenceImpl" id="compliance.service.service.persistence.MnEntityWiseOutAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm1LocalServiceImpl" id="compliance.service.service.MnForm1LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm1PersistenceImpl" id="compliance.service.service.persistence.MnForm1Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm10LocalServiceImpl" id="compliance.service.service.MnForm10LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm10PersistenceImpl" id="compliance.service.service.persistence.MnForm10Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm11LocalServiceImpl" id="compliance.service.service.MnForm11LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm11PersistenceImpl" id="compliance.service.service.persistence.MnForm11Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm11_NonSponsorLocalServiceImpl" id="compliance.service.service.MnForm11_NonSponsorLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm11_NonSponsorPersistenceImpl" id="compliance.service.service.persistence.MnForm11_NonSponsorPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm12LocalServiceImpl" id="compliance.service.service.MnForm12LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm12PersistenceImpl" id="compliance.service.service.persistence.MnForm12Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm13LocalServiceImpl" id="compliance.service.service.MnForm13LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm13PersistenceImpl" id="compliance.service.service.persistence.MnForm13Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm14LocalServiceImpl" id="compliance.service.service.MnForm14LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm14PersistenceImpl" id="compliance.service.service.persistence.MnForm14Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm2LocalServiceImpl" id="compliance.service.service.MnForm2LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm2PersistenceImpl" id="compliance.service.service.persistence.MnForm2Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm3LocalServiceImpl" id="compliance.service.service.MnForm3LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm3PersistenceImpl" id="compliance.service.service.persistence.MnForm3Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm4_AtalPensionYojanaLocalServiceImpl" id="compliance.service.service.MnForm4_AtalPensionYojanaLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm4_AtalPensionYojanaPersistenceImpl" id="compliance.service.service.persistence.MnForm4_AtalPensionYojanaPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm4_CGLocalServiceImpl" id="compliance.service.service.MnForm4_CGLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm4_CGPersistenceImpl" id="compliance.service.service.persistence.MnForm4_CGPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm4_CorpCGLocalServiceImpl" id="compliance.service.service.MnForm4_CorpCGLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm4_CorpCGPersistenceImpl" id="compliance.service.service.persistence.MnForm4_CorpCGPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm4_NpsLiteLocalServiceImpl" id="compliance.service.service.MnForm4_NpsLiteLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm4_NpsLitePersistenceImpl" id="compliance.service.service.persistence.MnForm4_NpsLitePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm4_SGLocalServiceImpl" id="compliance.service.service.MnForm4_SGLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm4_SGPersistenceImpl" id="compliance.service.service.persistence.MnForm4_SGPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm5_C_ILocalServiceImpl" id="compliance.service.service.MnForm5_C_ILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm5_C_IPersistenceImpl" id="compliance.service.service.persistence.MnForm5_C_IPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm5_C_IILocalServiceImpl" id="compliance.service.service.MnForm5_C_IILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm5_C_IIPersistenceImpl" id="compliance.service.service.persistence.MnForm5_C_IIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm6_E_ILocalServiceImpl" id="compliance.service.service.MnForm6_E_ILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm6_E_IPersistenceImpl" id="compliance.service.service.persistence.MnForm6_E_IPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm6_E_IILocalServiceImpl" id="compliance.service.service.MnForm6_E_IILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm6_E_IIPersistenceImpl" id="compliance.service.service.persistence.MnForm6_E_IIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm7_G_ILocalServiceImpl" id="compliance.service.service.MnForm7_G_ILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm7_G_IPersistenceImpl" id="compliance.service.service.persistence.MnForm7_G_IPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm7_G_IILocalServiceImpl" id="compliance.service.service.MnForm7_G_IILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm7_G_IIPersistenceImpl" id="compliance.service.service.persistence.MnForm7_G_IIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm7a_A_T_ILocalServiceImpl" id="compliance.service.service.MnForm7a_A_T_ILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm7a_A_T_IPersistenceImpl" id="compliance.service.service.persistence.MnForm7a_A_T_IPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm7b_TTSLocalServiceImpl" id="compliance.service.service.MnForm7b_TTSLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm7b_TTSPersistenceImpl" id="compliance.service.service.persistence.MnForm7b_TTSPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm8LocalServiceImpl" id="compliance.service.service.MnForm8LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm8PersistenceImpl" id="compliance.service.service.persistence.MnForm8Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm8_iiLocalServiceImpl" id="compliance.service.service.MnForm8_iiLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm8_iiPersistenceImpl" id="compliance.service.service.persistence.MnForm8_iiPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnForm9LocalServiceImpl" id="compliance.service.service.MnForm9LocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnForm9PersistenceImpl" id="compliance.service.service.persistence.MnForm9Persistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnGrievanceOutstandingLocalServiceImpl" id="compliance.service.service.MnGrievanceOutstandingLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnGrievanceOutstandingPersistenceImpl" id="compliance.service.service.persistence.MnGrievanceOutstandingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNonUnanimousLocalServiceImpl" id="compliance.service.service.MnNonUnanimousLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNonUnanimousPersistenceImpl" id="compliance.service.service.persistence.MnNonUnanimousPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpaDevelopmentLocalServiceImpl" id="compliance.service.service.MnNpaDevelopmentLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpaDevelopmentPersistenceImpl" id="compliance.service.service.persistence.MnNpaDevelopmentPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsCategoryWiseAgeingLocalServiceImpl" id="compliance.service.service.MnNpsCategoryWiseAgeingLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsCategoryWiseAgeingPersistenceImpl" id="compliance.service.service.persistence.MnNpsCategoryWiseAgeingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsCategoryWiseGrievanceLocalServiceImpl" id="compliance.service.service.MnNpsCategoryWiseGrievanceLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsCategoryWiseGrievancePersistenceImpl" id="compliance.service.service.persistence.MnNpsCategoryWiseGrievancePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsEntityWiseAgeingLocalServiceImpl" id="compliance.service.service.MnNpsEntityWiseAgeingLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsEntityWiseAgeingPersistenceImpl" id="compliance.service.service.persistence.MnNpsEntityWiseAgeingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsLiteCategoryWiseAgeingLocalServiceImpl" id="compliance.service.service.MnNpsLiteCategoryWiseAgeingLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsLiteCategoryWiseAgeingPersistenceImpl" id="compliance.service.service.persistence.MnNpsLiteCategoryWiseAgeingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsLiteCategoryWiseGrievanceLocalServiceImpl" id="compliance.service.service.MnNpsLiteCategoryWiseGrievanceLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsLiteCategoryWiseGrievancePersistenceImpl" id="compliance.service.service.persistence.MnNpsLiteCategoryWiseGrievancePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsLiteEntityWiseAgeingLocalServiceImpl" id="compliance.service.service.MnNpsLiteEntityWiseAgeingLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsLiteEntityWiseAgeingPersistenceImpl" id="compliance.service.service.persistence.MnNpsLiteEntityWiseAgeingPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsLiteSchemeMonthAnalysisLocalServiceImpl" id="compliance.service.service.MnNpsLiteSchemeMonthAnalysisLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsLiteSchemeMonthAnalysisPersistenceImpl" id="compliance.service.service.persistence.MnNpsLiteSchemeMonthAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnNpsSchemeMonthAnalysisLocalServiceImpl" id="compliance.service.service.MnNpsSchemeMonthAnalysisLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnNpsSchemeMonthAnalysisPersistenceImpl" id="compliance.service.service.persistence.MnNpsSchemeMonthAnalysisPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnPFsDeducteeDetailLocalServiceImpl" id="compliance.service.service.MnPFsDeducteeDetailLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnPFsDeducteeDetailPersistenceImpl" id="compliance.service.service.persistence.MnPFsDeducteeDetailPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnPFsTDSChallanLocalServiceImpl" id="compliance.service.service.MnPFsTDSChallanLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnPFsTDSChallanPersistenceImpl" id="compliance.service.service.persistence.MnPFsTDSChallanPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnReferralsHandledAtNpsLocalServiceImpl" id="compliance.service.service.MnReferralsHandledAtNpsLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnReferralsHandledAtNpsPersistenceImpl" id="compliance.service.service.persistence.MnReferralsHandledAtNpsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnResolutionSpeedLocalServiceImpl" id="compliance.service.service.MnResolutionSpeedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnResolutionSpeedPersistenceImpl" id="compliance.service.service.persistence.MnResolutionSpeedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MnTotalGrievanceReceivedLocalServiceImpl" id="compliance.service.service.MnTotalGrievanceReceivedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MnTotalGrievanceReceivedPersistenceImpl" id="compliance.service.service.persistence.MnTotalGrievanceReceivedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MonthlyReportILocalServiceImpl" id="compliance.service.service.MonthlyReportILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MonthlyReportIPersistenceImpl" id="compliance.service.service.persistence.MonthlyReportIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MonthlyReportIILocalServiceImpl" id="compliance.service.service.MonthlyReportIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MonthlyReportIIPersistenceImpl" id="compliance.service.service.persistence.MonthlyReportIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MonthlyReportIIILocalServiceImpl" id="compliance.service.service.MonthlyReportIIILocalService" />
+	<bean class="compliance.service.service.persistence.impl.MonthlyReportIIIPersistenceImpl" id="compliance.service.service.persistence.MonthlyReportIIIPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.MonthlyReportIVLocalServiceImpl" id="compliance.service.service.MonthlyReportIVLocalService" />
+	<bean class="compliance.service.service.persistence.impl.MonthlyReportIVPersistenceImpl" id="compliance.service.service.persistence.MonthlyReportIVPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.NonEqLocalServiceImpl" id="compliance.service.service.NonEqLocalService" />
+	<bean class="compliance.service.service.persistence.impl.NonEqPersistenceImpl" id="compliance.service.service.persistence.NonEqPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.NoTIDLocalServiceImpl" id="compliance.service.service.NoTIDLocalService" />
+	<bean class="compliance.service.service.persistence.impl.NoTIDPersistenceImpl" id="compliance.service.service.persistence.NoTIDPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.NPSAcceptedLocalServiceImpl" id="compliance.service.service.NPSAcceptedLocalService" />
+	<bean class="compliance.service.service.persistence.impl.NPSAcceptedPersistenceImpl" id="compliance.service.service.persistence.NPSAcceptedPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.NsdlnavLocalServiceImpl" id="compliance.service.service.NsdlnavLocalService" />
+	<bean class="compliance.service.service.persistence.impl.NsdlnavPersistenceImpl" id="compliance.service.service.persistence.NsdlnavPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.PAOMistakesLocalServiceImpl" id="compliance.service.service.PAOMistakesLocalService" />
+	<bean class="compliance.service.service.persistence.impl.PAOMistakesPersistenceImpl" id="compliance.service.service.persistence.PAOMistakesPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.PAOSubmittingChequesLocalServiceImpl" id="compliance.service.service.PAOSubmittingChequesLocalService" />
+	<bean class="compliance.service.service.persistence.impl.PAOSubmittingChequesPersistenceImpl" id="compliance.service.service.persistence.PAOSubmittingChequesPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.PerformanceRepLocalServiceImpl" id="compliance.service.service.PerformanceRepLocalService" />
+	<bean class="compliance.service.service.persistence.impl.PerformanceRepPersistenceImpl" id="compliance.service.service.persistence.PerformanceRepPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaeterlyfromfiveLocalServiceImpl" id="compliance.service.service.QuaeterlyfromfiveLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaeterlyfromfivePersistenceImpl" id="compliance.service.service.persistence.QuaeterlyfromfivePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaeterlyfromfivenpaLocalServiceImpl" id="compliance.service.service.QuaeterlyfromfivenpaLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaeterlyfromfivenpaPersistenceImpl" id="compliance.service.service.persistence.QuaeterlyfromfivenpaPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaeterlyfromfourLocalServiceImpl" id="compliance.service.service.QuaeterlyfromfourLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaeterlyfromfourPersistenceImpl" id="compliance.service.service.persistence.QuaeterlyfromfourPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaeterlyfromonebLocalServiceImpl" id="compliance.service.service.QuaeterlyfromonebLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaeterlyfromonebPersistenceImpl" id="compliance.service.service.persistence.QuaeterlyfromonebPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaeterlyfromoneisinLocalServiceImpl" id="compliance.service.service.QuaeterlyfromoneisinLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaeterlyfromoneisinPersistenceImpl" id="compliance.service.service.persistence.QuaeterlyfromoneisinPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaeterlyfromthreeLocalServiceImpl" id="compliance.service.service.QuaeterlyfromthreeLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaeterlyfromthreePersistenceImpl" id="compliance.service.service.persistence.QuaeterlyfromthreePersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaeterlyfromtwoLocalServiceImpl" id="compliance.service.service.QuaeterlyfromtwoLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaeterlyfromtwoPersistenceImpl" id="compliance.service.service.persistence.QuaeterlyfromtwoPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuarterlyAuditorLocalServiceImpl" id="compliance.service.service.QuarterlyAuditorLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuarterlyAuditorPersistenceImpl" id="compliance.service.service.persistence.QuarterlyAuditorPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuarterlyForm1ALocalServiceImpl" id="compliance.service.service.QuarterlyForm1ALocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuarterlyForm1APersistenceImpl" id="compliance.service.service.persistence.QuarterlyForm1APersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.QuaterlyformCashFlowLocalServiceImpl" id="compliance.service.service.QuaterlyformCashFlowLocalService" />
+	<bean class="compliance.service.service.persistence.impl.QuaterlyformCashFlowPersistenceImpl" id="compliance.service.service.persistence.QuaterlyformCashFlowPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ReexecutedWithdrawalReturnLocalServiceImpl" id="compliance.service.service.ReexecutedWithdrawalReturnLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ReexecutedWithdrawalReturnPersistenceImpl" id="compliance.service.service.persistence.ReexecutedWithdrawalReturnPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ReportSubmissionLocalServiceImpl" id="compliance.service.service.ReportSubmissionLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ReportSubmissionPersistenceImpl" id="compliance.service.service.persistence.ReportSubmissionPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ReturnOfRejectedFundsLocalServiceImpl" id="compliance.service.service.ReturnOfRejectedFundsLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ReturnOfRejectedFundsPersistenceImpl" id="compliance.service.service.persistence.ReturnOfRejectedFundsPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.SbirequestdataLocalServiceImpl" id="compliance.service.service.SbirequestdataLocalService" />
+	<bean class="compliance.service.service.persistence.impl.SbirequestdataPersistenceImpl" id="compliance.service.service.persistence.SbirequestdataPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.ScrutinyInputQuarterlyIntervalLocalServiceImpl" id="compliance.service.service.ScrutinyInputQuarterlyIntervalLocalService" />
+	<bean class="compliance.service.service.persistence.impl.ScrutinyInputQuarterlyIntervalPersistenceImpl" id="compliance.service.service.persistence.ScrutinyInputQuarterlyIntervalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.SESNonUnanimousLocalServiceImpl" id="compliance.service.service.SESNonUnanimousLocalService" />
+	<bean class="compliance.service.service.persistence.impl.SESNonUnanimousPersistenceImpl" id="compliance.service.service.persistence.SESNonUnanimousPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.Status_SGLocalServiceImpl" id="compliance.service.service.Status_SGLocalService" />
+	<bean class="compliance.service.service.persistence.impl.Status_SGPersistenceImpl" id="compliance.service.service.persistence.Status_SGPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.valuationCgLocalServiceImpl" id="compliance.service.service.valuationCgLocalService" />
+	<bean class="compliance.service.service.persistence.impl.valuationCgPersistenceImpl" id="compliance.service.service.persistence.valuationCgPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.VoteMatrixLocalServiceImpl" id="compliance.service.service.VoteMatrixLocalService" />
+	<bean class="compliance.service.service.persistence.impl.VoteMatrixPersistenceImpl" id="compliance.service.service.persistence.VoteMatrixPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.VotingreportLocalServiceImpl" id="compliance.service.service.VotingreportLocalService" />
+	<bean class="compliance.service.service.persistence.impl.VotingreportPersistenceImpl" id="compliance.service.service.persistence.VotingreportPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="compliance.service.service.impl.WeeklyAvgBalLocalServiceImpl" id="compliance.service.service.WeeklyAvgBalLocalService" />
+	<bean class="compliance.service.service.persistence.impl.WeeklyAvgBalPersistenceImpl" id="compliance.service.service.persistence.WeeklyAvgBalPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

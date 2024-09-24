@@ -1,0 +1,12 @@
+Bundle-Name: Annexure18-BioData
+Bundle-SymbolicName: Annexure18.BioData
+Bundle-Version: 1.0.0
+Export-Package: Annexure18.BioData.constants
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

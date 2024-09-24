@@ -1,0 +1,25 @@
+.AnnexureXiv {
+}.card_blocks {
+    .page_title img {
+        width: 60px !important;
+        vertical-align: middle !important;
+    }
+    .table th {
+        font-weight: 500;
+        font-size: 14px;
+    }
+    label {
+        .error {
+            color: #ff0000;
+            font-size: 12px;
+        }
+    }
+}
+.form_block {
+    background-color: #fff;
+    box-shadow: 1px 7px 10px #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}

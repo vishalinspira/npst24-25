@@ -1,0 +1,1 @@
+create index IX_FEFF1ACB on cache_reportstatus (uuid_[$COLUMN_LENGTH:75$]);

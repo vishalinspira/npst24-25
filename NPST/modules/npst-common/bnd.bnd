@@ -1,0 +1,7 @@
+Bundle-Name: npst-common
+Bundle-SymbolicName: npst.common
+Bundle-Version: 1.0.0
+Export-Package: \
+	npst.common.api,\
+	npst.common.constant,\
+	npst.common.util

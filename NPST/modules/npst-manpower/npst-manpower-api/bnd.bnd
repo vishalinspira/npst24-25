@@ -1,0 +1,10 @@
+Bundle-Name: npst-manpower-api
+Bundle-SymbolicName: com.nps.manpower.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.nps.manpower.exception,\
+	com.nps.manpower.model,\
+	com.nps.manpower.service,\
+	com.nps.manpower.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../npst-manpower-service/service.xml

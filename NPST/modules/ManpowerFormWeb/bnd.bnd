@@ -1,0 +1,4 @@
+Bundle-Name: ManpowerFormWeb
+Bundle-SymbolicName: com.nps.manpower
+Bundle-Version: 1.0.0
+Export-Package: com.nps.manpower.constants

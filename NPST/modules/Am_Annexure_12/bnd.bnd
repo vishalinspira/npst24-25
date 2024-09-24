@@ -1,0 +1,4 @@
+Bundle-Name: Am_Annexure_12
+Bundle-SymbolicName: com.am_annexure_12
+Bundle-Version: 1.0.0
+Export-Package: com.am_annexure_12.constants

@@ -1,0 +1,30 @@
+package Vote_Matrix.portlet;
+
+import Vote_Matrix.constants.Vote_MatrixPortletKeys;
+
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
+
+import javax.portlet.Portlet;
+
+import org.osgi.service.component.annotations.Component;
+
+/**
+ * @author peerv
+ */
+@Component(
+	immediate = true,
+	property = {
+		"com.liferay.portlet.display-category=category.sample",
+		"com.liferay.portlet.header-portlet-css=/css/main.css",
+		"com.liferay.portlet.instanceable=true",
+		"javax.portlet.display-name=Vote_Matrix",
+		"javax.portlet.init-param.template-path=/",
+		"javax.portlet.init-param.view-template=/view.jsp",
+		"javax.portlet.name=" + Vote_MatrixPortletKeys.VOTE_MATRIX,
+		"javax.portlet.resource-bundle=content.Language",
+		"javax.portlet.security-role-ref=power-user,user"
+	},
+	service = Portlet.class
+)
+public class Vote_MatrixPortlet extends MVCPortlet {
+}

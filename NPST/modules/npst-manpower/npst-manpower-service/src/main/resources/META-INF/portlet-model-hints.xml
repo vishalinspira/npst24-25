@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.nps.manpower.model.ChangeInEmployee">
+		<field name="uuid" type="String" />
+		<field name="changeInEmployeeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="manpowerEmployeeId" type="long" />
+		<field name="designation" type="String" />
+		<field name="name" type="String" />
+		<field name="appointmentDate" type="Date" />
+		<field name="contactNo" type="String" />
+		<field name="email" type="String" />
+		<field name="qualification" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="experience" type="String" />
+		<field name="deputation" type="String" />
+		<field name="linkedinId" type="String" />
+		<field name="approvingAppointmentDate" type="Date" />
+		<field name="biodataFileId" type="long" />
+		<field name="committeeMembershipType" type="int" />
+		<field name="din" type="String" />
+		<field name="directorType" type="String" />
+		<field name="membershipType" type="String" />
+		<field name="dependency" type="String" />
+		<field name="formMbp" type="long" />
+		<field name="status" type="int" />
+		<field name="isDirector" type="int" />
+		<field name="resignationDate" type="Date" />
+		<field name="previousEmployeeId" type="long" />
+	</model>
+	<model name="com.nps.manpower.model.ChangeShareHolding">
+		<field name="uuid" type="String" />
+		<field name="changeShareHoldingId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="companyName" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="concern" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="shareHolding" type="String" />
+		<field name="concernDate" type="Date" />
+		<field name="manpowerEmployeeId" type="long" />
+		<field name="status" type="int" />
+		<field name="din" type="String" />
+	</model>
+	<model name="com.nps.manpower.model.CompositionCommittee">
+		<field name="uuid" type="String" />
+		<field name="compositionCommitteeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="committeeDesignation" type="String" />
+		<field name="membershipType" type="String" />
+		<field name="committeeMemberShipType" type="long" />
+		<field name="committeeAppointmentDate" type="Date" />
+		<field name="name" type="String" />
+		<field name="email" type="String" />
+		<field name="manpowerEmployeeId" type="long" />
+		<field name="status" type="int" />
+		<field name="din" type="String" />
+	</model>
+	<model name="com.nps.manpower.model.ManpowerDirectorHolding">
+		<field name="uuid" type="String" />
+		<field name="manpowerDirectorHoldingId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="companyName" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="concern" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="shareHolding" type="String" />
+		<field name="concernDate" type="Date" />
+		<field name="manpowerEmployeeId" type="long" />
+		<field name="status" type="int" />
+		<field name="din" type="String" />
+	</model>
+	<model name="com.nps.manpower.model.ManpowerEmployee">
+		<field name="uuid" type="String" />
+		<field name="manpowerEmployeeId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="designation" type="String" />
+		<field name="name" type="String" />
+		<field name="appointmentDate" type="Date" />
+		<field name="contactNo" type="String" />
+		<field name="email" type="String" />
+		<field name="qualification" type="String">
+			<hint name="max-length">200</hint>
+		</field>
+		<field name="experience" type="String" />
+		<field name="deputation" type="String" />
+		<field name="linkedinId" type="String" />
+		<field name="approvingAppointmentDate" type="Date" />
+		<field name="biodataFileId" type="long" />
+		<field name="committeeMembershipType" type="int" />
+		<field name="din" type="String" />
+		<field name="directorType" type="String" />
+		<field name="membershipType" type="String" />
+		<field name="dependency" type="String" />
+		<field name="pfmName" type="String" />
+		<field name="formMbp" type="long" />
+		<field name="status" type="int" />
+		<field name="isDirector" type="int" />
+		<field name="resignationDate" type="Date" />
+		<field name="previousEmployeeId" type="long" />
+	</model>
+</model-hints>

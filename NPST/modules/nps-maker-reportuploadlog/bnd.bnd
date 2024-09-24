@@ -1,0 +1,4 @@
+Bundle-Name: nps-maker-reportuploadlog
+Bundle-SymbolicName: com.nps.reportuploadlog
+Bundle-Version: 1.0.0
+Export-Package: com.nps.reportuploadlog.constants

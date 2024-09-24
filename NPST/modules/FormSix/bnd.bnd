@@ -1,0 +1,4 @@
+Bundle-Name: FormSix
+Bundle-SymbolicName: com.nps.form.six
+Bundle-Version: 1.0.0
+Export-Package: com.nps.form.six.constants

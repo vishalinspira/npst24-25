@@ -1,0 +1,19 @@
+dependencies {
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	
+	compile project(":modules:DailyAverageService:DailyAverageService-api")
+	compile project(":modules:DailyAverageService:DailyAverageService-service")
+	
+	compileOnly project(":modules:nps-email-api")
+	compileOnly project(":modules:nps-email-service")
+	compile group: "biz.aQute.bnd", name: "biz.aQute.bndlib", version: "3.2.0"
+	
+	compileInclude group: 'org.apache.pdfbox', name: 'pdfbox', version: '2.0.24'
+	compileInclude group: 'org.apache.pdfbox', name: 'fontbox', version: '2.0.24'
+	compileInclude group: 'org.apache.avalon.framework', name: 'avalon-framework-impl', version: '4.3.1'
+	compileInclude group: 'com.github.dhorions', name: 'boxable', version: '1.6'
+	
+	
+}

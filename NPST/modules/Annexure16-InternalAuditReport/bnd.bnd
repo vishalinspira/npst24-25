@@ -1,0 +1,12 @@
+Bundle-Name: Annexure16-InternalAuditReport
+Bundle-SymbolicName: Annexure16.InternalAuditReport
+Bundle-Version: 1.0.0
+Export-Package: Annexure16.InternalAuditReport.constants
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

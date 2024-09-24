@@ -1,0 +1,4 @@
+Bundle-Name: SES-NonUnanimousVoting
+Bundle-SymbolicName: SES.NonUnanimousVoting
+Bundle-Version: 1.0.0
+Export-Package: SES.NonUnanimousVoting.constants

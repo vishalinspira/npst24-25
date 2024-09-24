@@ -1,0 +1,4 @@
+Bundle-Name: nps-npst-reportuploadlog
+Bundle-SymbolicName: com.npst.log
+Bundle-Version: 1.0.0
+Export-Package: com.npst.log.constants

@@ -1,0 +1,4 @@
+Bundle-Name: Status-of-Grievances
+Bundle-SymbolicName: Status.of.Grievances
+Bundle-Version: 1.0.0
+Export-Package: Status.of.Grievances.constants

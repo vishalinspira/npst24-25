@@ -1,0 +1,6 @@
+Bundle-Name: nps-email-api
+Bundle-SymbolicName: nps.email.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	nps.email.api.api,\
+	nps.email.api.props

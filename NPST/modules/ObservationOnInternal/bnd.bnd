@@ -1,0 +1,13 @@
+Bundle-Name: ObservationOnInternal
+Bundle-SymbolicName: com.observationon.internal
+Bundle-Version: 1.0.0
+Export-Package: com.observationon.internal.constants
+-metatype: *
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

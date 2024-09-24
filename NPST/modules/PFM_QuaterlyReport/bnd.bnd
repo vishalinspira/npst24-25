@@ -1,0 +1,4 @@
+Bundle-Name: PFM_QuaterlyReport
+Bundle-SymbolicName: com.pfm.quaterly.Report
+Bundle-Version: 1.0.0
+Export-Package: com.pfm.quaterly.Report.constants

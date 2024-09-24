@@ -1,0 +1,18 @@
+<%@page import="com.liferay.journal.model.JournalArticleDisplay"%>
+<%@page import="com.liferay.journal.service.JournalArticleLocalServiceUtil"%>
+<%@page import="com.liferay.journal.model.JournalArticle"%>
+<%
+String content = "";
+try{ 
+String articleName = "cra-supervisor-tabs";
+JournalArticle journalArticle = JournalArticleLocalServiceUtil.getArticleByUrlTitle(themeDisplay.getScopeGroupId(), articleName);
+String articleId = journalArticle.getArticleId();
+JournalArticleDisplay articleDisplay = JournalArticleLocalServiceUtil.getArticleDisplay(themeDisplay.getScopeGroupId(),articleId, "","",themeDisplay);
+content = articleDisplay.getContent();
+} catch (Exception e){
+content = "Sorry, there is no web content with this title";
+}
+
+%>
+
+<%= content %>

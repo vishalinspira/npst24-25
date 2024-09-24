@@ -1,0 +1,4 @@
+Bundle-Name: ManpowerForm1
+Bundle-SymbolicName: ManpowerForm1
+Bundle-Version: 1.0.0
+Export-Package: ManpowerForm1.constants

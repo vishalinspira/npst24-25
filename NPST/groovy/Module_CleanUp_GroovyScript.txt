@@ -1,0 +1,174 @@
+import java.util.List;
+import com.daily.average.service.model.ReportUploadLog;
+import com.daily.average.service.service.ReportUploadLogLocalServiceUtil;
+
+import com.daily.average.service.service.ReportUploadFileLogLocalServiceUtil;
+import com.daily.average.service.model.ReportUploadFileLog;
+
+import com.daily.average.service.model.AnnualCompCertificate;
+import com.daily.average.service.model.CustAnnualAuditReport;
+import com.daily.average.service.model.CustIAR;
+import com.daily.average.service.model.CustodianCompForm;
+import com.daily.average.service.model.HDFCInternal_Audit_Report;
+import com.daily.average.service.model.InputQuarterlyInterval;
+import com.daily.average.service.model.Manpowerform_i;
+import com.daily.average.service.model.Manpowerform_ii;
+import com.daily.average.service.model.MnCompCertificate;
+import com.daily.average.service.model.MnNpaDevelopment;
+import com.daily.average.service.model.QtrStewardshipReport;
+import com.daily.average.service.model.ReportMaster;
+import com.daily.average.service.model.ReportUploadLogCRA;
+import com.daily.average.service.model.ReportUploadLogCustAMPFRDA;
+import com.daily.average.service.model.ReportUploadLogCustodian;
+import com.daily.average.service.model.ReportUploadLogGrievAMPFRDA;
+import com.daily.average.service.model.ReportUploadLogGrievances;
+import com.daily.average.service.model.ReportUploadLogMaker;
+import com.daily.average.service.model.ReportUploadLogNPST;
+import com.daily.average.service.model.ReportUploadLogPFM;
+import com.daily.average.service.model.ReportUploadLogPFMAM;
+import com.daily.average.service.model.ReportUploadLogPFMAMPFRDA;
+import com.daily.average.service.model.ReportUploadLogPFMCRA;
+import com.daily.average.service.model.ReportUploadLogPFMCustodian;
+import com.daily.average.service.model.ReportUploadLogSupervisor;
+
+
+listFiles(1, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(2, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(3, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(4, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(5, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(6, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(7, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(8, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(9, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(10, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(11, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(12, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(13, "com.daily.average.service.model.ReportUploadLogSupervisor;");
+listFiles(14, "com.daily.average.service.model.ReportUploadLogSupervisor;");
+listFiles(15, "com.daily.average.service.model.ReportUploadLogSupervisor;");
+listFiles(16, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(17, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(18, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(19, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(20, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(21, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(22, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(23, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(24, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(25, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(26, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(27, "com.daily.average.service.model.ReportUploadLogSupervisor");
+listFiles(28, "com.daily.average.service.model.ReportUploadLogSupervisor");
+listFiles(29, "com.daily.average.service.model.ReportUploadLogSupervisor");
+listFiles(30, "com.daily.average.service.model.ReportUploadLogSupervisor");
+listFiles(31, "com.daily.average.service.model.ReportUploadLogSupervisor");
+listFiles(32, "com.daily.average.service.model.ReportUploadLogSupervisor");
+listFiles(33, "com.daily.average.service.model.ReportUploadLogSupervisor");
+listFiles(34, "com.daily.average.service.model.ReportUploadLogNPST");
+listFiles(35, "com.daily.average.service.model.ReportUploadLogNPST");
+listFiles(36, "com.daily.average.service.model.ReportUploadLogNPST");
+listFiles(37, "com.daily.average.service.model.ReportUploadLogNPST");
+listFiles(38, "com.daily.average.service.model.ReportUploadLogNPST");
+listFiles(39, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(40, "com.daily.average.service.model.ReportUploadLogPFMCRA");
+listFiles(41, "com.daily.average.service.model.ReportUploadLogPFMCRA");
+listFiles(42, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(43, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(49, "com.daily.average.service.model.ReportUploadLogPFMCRA");
+listFiles(50, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(55, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(56, "com.daily.average.service.model.InputQuarterlyInterval");
+listFiles(57, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(58, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(60, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(61, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(62, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(63, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(64, "com.daily.average.service.model.MnNpaDevelopment");
+listFiles(65, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(66, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(67, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(59, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(47, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(51, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(52, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(53, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(54, "com.daily.average.service.model.MnCompCertificate");
+listFiles(44, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(45, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(68, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(69, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(73, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(74, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(75, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(76, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(77, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(78, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(80, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(81, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(85, "com.daily.average.service.model.CustIAR");
+listFiles(86, "com.daily.average.service.model.ReportUploadLogCustodian");
+listFiles(87, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(90, "com.daily.average.service.model.ReportUploadLogCustodian");
+listFiles(96, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(97, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(98, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(99, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(100, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(109, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(114, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(115, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(116, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(117, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(119, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(121, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(120, "com.daily.average.service.model.ReportUploadLogPFMCRA");
+listFiles(48, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(112, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(122, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(107, "com.daily.average.service.model.ReportUploadLogCRA");
+listFiles(88, "com.daily.average.service.model.CustAnnualAuditReport");
+listFiles(111, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(124, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(125, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(126, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(127, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(128, "com.daily.average.service.model.ReportUploadLogMaker");
+listFiles(129, "com.daily.average.service.model.ReportUploadLogSupervisor;");
+listFiles(103, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(104, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(102, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(101, "com.daily.average.service.model.ReportUploadLogGrievances");
+listFiles(123, "com.daily.average.service.model.ReportUploadLogCRA");
+listFiles(82, "com.daily.average.service.model.ReportUploadLogCustodian");
+listFiles(89, "com.daily.average.service.model.ReportUploadLogCustodian");
+listFiles(105, "com.daily.average.service.model.ReportUploadLogCRA");
+listFiles(106, "com.daily.average.service.model.ReportUploadLogCRA");
+listFiles(84, "com.daily.average.service.model.ReportUploadLogCustodian");
+listFiles(83, "com.daily.average.service.model.ReportUploadLogPFMCustodian");
+listFiles(70, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(71, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(72, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(113, "com.daily.average.service.model.HDFCInternal_Audit_Report");
+listFiles(79, "com.daily.average.service.model.AnnualCompCertificate");
+listFiles(118, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(110, "com.daily.average.service.model.ReportUploadLogPFM");
+listFiles(46, "com.daily.average.service.model.ReportUploadLogPFMAM");
+listFiles(131, "com.daily.average.service.model.ReportUploadLogMaker");
+
+
+
+
+def listFiles(reportMasterId, model) {
+List<ReportUploadLog> ReportUploadLogs = ReportUploadLogLocalServiceUtil.findByReportMasterIdAndUploaded(reportMasterId, true);
+						for (ReportUploadLog reportUploadLog: ReportUploadLogs) {
+							com.liferay.portal.kernel.service.WorkflowInstanceLinkLocalServiceUtil.deleteWorkflowInstanceLinks(20097, 20121, model, reportUploadLog.getReportUploadLogId());
+							
+						List<ReportUploadFileLog> reportUploadLogList = ReportUploadFileLogLocalServiceUtil.findByReportUploadLogId(reportUploadLog.getReportUploadLogId());
+							for(ReportUploadFileLog rfl:reportUploadLogList){
+								ReportUploadFileLogLocalServiceUtil.deleteReportUploadFileLog(rfl);
+							}
+							
+						}
+}

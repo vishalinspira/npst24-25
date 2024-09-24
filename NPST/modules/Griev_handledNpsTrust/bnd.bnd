@@ -1,0 +1,4 @@
+Bundle-Name: Griev_handledNpsTrust
+Bundle-SymbolicName: com.Griev.handled.Nps.Trust
+Bundle-Version: 1.0.0
+Export-Package: com.Griev.handled.Nps.Trust.constants

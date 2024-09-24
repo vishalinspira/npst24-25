@@ -1,0 +1,13 @@
+Bundle-Name: ComplianceForm
+Bundle-SymbolicName: ComplianceForm
+Bundle-Version: 1.0.0
+Export-Package: ComplianceForm.constants
+-metatype: *
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

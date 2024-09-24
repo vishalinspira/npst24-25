@@ -1,0 +1,13 @@
+Bundle-Name: CRA-Enps
+Bundle-SymbolicName: com.cra.enps
+Bundle-Version: 1.0.0
+Export-Package: com.cra.enps.constants
+-metatype: *
+Import-Package:\
+	!org.apache.log.*,\
+    !org.apache.*,\
+	!org.apache.pdfbox.*,\
+	!org.apache.avalon.framework.*,\
+	!org.bouncycastle.*,\
+	!org.slf4j.impl,\
+*

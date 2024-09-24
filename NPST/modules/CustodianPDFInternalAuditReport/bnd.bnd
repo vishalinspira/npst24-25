@@ -1,0 +1,4 @@
+Bundle-Name: CustodianPDFInternalAuditReport
+Bundle-SymbolicName: com.custodianinternalauditreport
+Bundle-Version: 1.0.0
+Export-Package: com.custodianinternalauditreport.constants

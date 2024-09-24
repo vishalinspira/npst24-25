@@ -1,0 +1,4 @@
+Bundle-Name: Form3-ReportByDirectorAndKP
+Bundle-SymbolicName: com.report.director.kp
+Bundle-Version: 1.0.0
+Export-Package: com.report.director.kp.constants

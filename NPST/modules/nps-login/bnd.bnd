@@ -1,0 +1,5 @@
+Bundle-Name: nps-login
+Bundle-SymbolicName: nps.login
+Bundle-Version: 1.0.0
+Fragment-Host: com.liferay.login.web;bundle-version="5.0.35"
+Portal-Bundle-Version: 7.3.10

@@ -1,0 +1,12 @@
+dependencies {
+	compile project(":modules:nps-erm:nps-erm-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+	compileOnly group: "com.liferay", name: "com.liferay.portal.spring.extender.api", version: "4.0.0"
+}
+
+buildService {
+	apiDir = "../nps-erm-api/src/main/java"
+}
+
+group = "com.nps.erm"

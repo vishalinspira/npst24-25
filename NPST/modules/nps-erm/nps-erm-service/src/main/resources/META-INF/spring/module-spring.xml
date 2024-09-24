@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.nps.erm.service.impl.ErmBatchInformationLocalServiceImpl" id="com.nps.erm.service.ErmBatchInformationLocalService" />
+	<bean class="com.nps.erm.service.impl.ErmBatchInformationServiceImpl" id="com.nps.erm.service.ErmBatchInformationService" />
+	<bean class="com.nps.erm.service.persistence.impl.ErmBatchInformationPersistenceImpl" id="com.nps.erm.service.persistence.ErmBatchInformationPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+	<bean class="com.nps.erm.service.impl.ErmInformationLocalServiceImpl" id="com.nps.erm.service.ErmInformationLocalService" />
+	<bean class="com.nps.erm.service.impl.ErmInformationServiceImpl" id="com.nps.erm.service.ErmInformationService" />
+	<bean class="com.nps.erm.service.persistence.impl.ErmInformationPersistenceImpl" id="com.nps.erm.service.persistence.ErmInformationPersistence">
+		<property name="dataSource" ref="extDataSource" />
+	</bean>
+</beans>

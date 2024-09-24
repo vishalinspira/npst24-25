@@ -1,0 +1,4 @@
+Bundle-Name: Letters_Nps_Grievances
+Bundle-SymbolicName: com.letters.nps.grievances
+Bundle-Version: 1.0.0
+Export-Package: com.letters.nps.grievances.constants

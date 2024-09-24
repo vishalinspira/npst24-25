@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.nps.erm.model.ErmBatchInformation">
+		<field name="uuid" type="String" />
+		<field name="ermBatchInformationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="batchNo" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="ermInformationIds" type="String">
+			<hint name="max-length">1000</hint>
+		</field>
+		<field name="batchGroupId" type="long" />
+		<field name="batchType" type="String" />
+		<field name="batchTimePeriodFrom" type="Date" />
+		<field name="batchTimePeriodTo" type="Date" />
+		<field name="cutOffDate" type="Date" />
+		<field name="submissionDate" type="Date" />
+		<field name="remark" type="String" />
+		<field name="stipulatedTime" type="String" />
+		<field name="previousBatchId" type="long" />
+		<field name="PfmName" type="String" />
+	</model>
+	<model name="com.nps.erm.model.ErmInformation">
+		<field name="uuid" type="String" />
+		<field name="ermInformationId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="batchType" type="String" />
+		<field name="transactedAmount" type="long" />
+		<field name="pran" type="String" />
+		<field name="transactionDate" type="Date" />
+		<field name="transactionMode" type="String" />
+		<field name="transactionSettlementDate" type="Date" />
+		<field name="tokenNo" type="String" />
+		<field name="rectificationRequestMode" type="String" />
+		<field name="rectificationDate" type="Date" />
+		<field name="remittedAmount" type="long" />
+		<field name="remittedDate" type="Date" />
+		<field name="tierType" type="String" />
+		<field name="transactionType" type="String" />
+		<field name="transferAmount" type="long" />
+		<field name="transferAmount1" type="String" />
+		<field name="transferAmount2" type="String" />
+		<field name="documentationsDate" type="Date" />
+		<field name="rectificationAmount" type="long" />
+		<field name="caseNo" type="String" />
+		<field name="subscriberName" type="String" />
+		<field name="enpsOrderId" type="String" />
+		<field name="rectificationType" type="String" />
+		<field name="rectificationRequestDate" type="Date" />
+		<field name="grievanceReceivedDate" type="Date" />
+		<field name="grievanceText" type="String" />
+		<field name="stipulated" type="String" />
+		<field name="submissionStipulatedTime" type="String" />
+		<field name="remark" type="String" />
+		<field name="recommendation" type="String" />
+		<field name="process" type="String" />
+		<field name="npstRemark" type="String" />
+		<field name="noNpstRemark" type="String" />
+		<field name="pfmName" type="String" />
+		<field name="batchNo" type="String" />
+		<field name="batchStatus" type="int" />
+		<field name="isForwardToNpst" type="int" />
+		<field name="ermStatus" type="String" />
+		<field name="npsDecisionDate" type="Date" />
+		<field name="fwdnpstDate" type="Date" />
+		<field name="bankName" type="String" />
+		<field name="bankStatmentName" type="String" />
+		<field name="txnDate" type="Date" />
+		<field name="selfRectifiedDate" type="Date" />
+		<field name="subscriberSector" type="String" />
+		<field name="selfDeclarationFileId" type="long" />
+		<field name="accountStatementFileId" type="long" />
+		<field name="transactionsStatementFileId" type="long" />
+		<field name="documentNameFileId" type="long" />
+	</model>
+</model-hints>

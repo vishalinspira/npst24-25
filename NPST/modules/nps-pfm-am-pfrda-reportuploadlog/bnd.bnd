@@ -1,0 +1,4 @@
+Bundle-Name: nps-pfm-am-pfrda-reportuploadlog
+Bundle-SymbolicName: nps.pfm.am.pfrda.reportuploadlog
+Bundle-Version: 1.0.0
+Export-Package: nps.pfm.am.pfrda.reportuploadlog.constants

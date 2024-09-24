@@ -1,0 +1,4 @@
+Bundle-Name: PFM-InternalAuditReports
+Bundle-SymbolicName: com.internalauditreports
+Bundle-Version: 1.0.0
+Export-Package: com.internalauditreports.constants

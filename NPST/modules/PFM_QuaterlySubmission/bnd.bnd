@@ -1,0 +1,4 @@
+Bundle-Name: PFM_QuaterlySubmission
+Bundle-SymbolicName: com.pfm.quaterly.submission
+Bundle-Version: 1.0.0
+Export-Package: com.pfm.quaterly.submission.constants

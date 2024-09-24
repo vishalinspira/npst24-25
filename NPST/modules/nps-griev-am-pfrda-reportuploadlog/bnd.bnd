@@ -1,0 +1,4 @@
+Bundle-Name: nps-griev-am-pfrda-reportuploadlog
+Bundle-SymbolicName: nps.griev.am.pfrda.reportuploadlog
+Bundle-Version: 1.0.0
+Export-Package: nps.griev.am.pfrda.reportuploadlog.constants

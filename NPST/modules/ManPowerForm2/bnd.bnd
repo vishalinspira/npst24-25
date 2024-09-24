@@ -1,0 +1,4 @@
+Bundle-Name: ManPowerForm2
+Bundle-SymbolicName: com.nps.manPower
+Bundle-Version: 1.0.0
+Export-Package: com.nps.manPower.constants

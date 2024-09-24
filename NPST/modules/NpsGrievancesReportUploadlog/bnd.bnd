@@ -1,0 +1,4 @@
+Bundle-Name: NpsGrievancesReportUploadlog
+Bundle-SymbolicName: com.npsGrievances.reportUploadlog
+Bundle-Version: 1.0.0
+Export-Package: com.npsGrievances.reportUploadlog.constants

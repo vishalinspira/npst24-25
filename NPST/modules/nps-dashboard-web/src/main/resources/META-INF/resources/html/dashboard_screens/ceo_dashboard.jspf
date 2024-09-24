@@ -1,0 +1,416 @@
+<%@page import="com.nps.dashboard.web.constants.NPSDashboardWebPortletKeys"%>
+<portlet:resourceURL id="<%=NPSDashboardWebPortletKeys.TRUSTEE_BANK_REPORT_BY_REPORT_TYPE%>" var="getTrusteeBankReportByReportTypeURL"/>
+<portlet:resourceURL id="<%=NPSDashboardWebPortletKeys.CEO_CHART_REPORTS_COMMAND%>" var="getCeoChartReportURl"/>
+
+<div class="dashboard_block mx-4">
+	<div class="row mb-5">		 
+		<div class="col-md-6">					 				
+			<div class="card shadow py-4 text-center position-relative border-0 w-100">
+				 <figure class="highcharts-figure">
+					<div id="departmentLevel"></div> 
+				</figure>
+			</div>	
+			
+		</div> 
+		
+		<div class="col-md-6">
+			<div class="card shadow py-4 text-center position-relative border-0 w-100">
+					<figure class="highcharts-figure">
+						<div id="pfrda-reports"></div> 
+					</figure>
+			</div>
+		</div>
+		<div class="col-md-12">
+			<div class="card shadow py-4  position-relative border-0 w-100">
+				<div class="text-right pr-3"><select name="departments" class="departments">
+					<c:forEach items="${userCompanies }" var="department" varStatus="departmentStatus">
+	             		<option value="${department }">${department }</option>
+	             	</c:forEach>
+				</select></div>
+				<figure class="highcharts-figure">
+					<div id="trusteeBank"></div> 
+				</figure>
+				<div class="p-4 hide table-section">
+					<table id="trusteeBankTable" class="table table-bordered"><thead></thead><tbody></tbody></table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<style>
+#trusteeBankTable_wrapper .bottom{
+	margin-bottom: 10px;
+}
+
+#trusteeBankTable_wrapper {
+	overflow-x: scroll;
+    overflow-y: hidden;
+}
+</style>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script>
+//var departmentGraphdata = ${departmentGraphData};
+//var trusteeBankChartData = ${trusteeBankChartData};
+
+$(".departments").change(function(){
+	var selectedDepartment = $(this).val();
+	console.log("Selected departmanetr :: "+selectedDepartment);
+	$(".table-section").removeClass("show").addClass("hide");
+	departmentwiseChart();
+});
+
+departmentLevelChart();
+departmentwiseChart();
+pfrdaReport();
+
+function departmentLevelChart(){
+	$.ajax({
+		url:"${getCeoChartReportURl}",
+		dataType:"json",
+		type:"post",
+		data: {
+			"<portlet:namespace/>chartType":"Pie",
+			"<portlet:namespace/>reportType":"Department level"
+		},
+		success: function(departmentGraphdata){
+			Highcharts.chart('departmentLevel', {
+				  chart: {
+				    type: 'pie',
+				    options3d: {
+				      enabled: true,
+				      alpha: 45,
+				      beta: 0
+				    }
+				  },
+				  title: {
+				    text: 'Department Level Reports'
+				  }, 
+
+				  accessibility: {     
+				    point: {
+				      valueSuffix: ''
+				    }
+				  },
+
+				  plotOptions: {
+				    pie: {
+				      allowPointSelect: true,
+				      cursor: 'pointer',
+				      depth: 35,
+				      dataLabels: {
+				        enabled: true,
+				        format: '{point.name}'
+				      },
+					  showInLegend: true
+				    }
+				  },
+
+				  tooltip: {
+				    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+				    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> of total<br/>'
+				  },
+
+				  series: [{name:"Departments",colorByPoint:true,data: departmentGraphdata.data}],
+				  drilldown: {
+					  breadcrumbs: {
+				            buttonTheme: {
+				                fill: '#f7f7f7',
+				                padding: 8,
+				                stroke: '#cccccc',
+				                'stroke-width': 1
+				            },
+				            floating: true,
+				            position: {
+				                align: 'right'
+				            },
+				            showFullPath: false,
+				            format: '< Back'
+				        },
+				    	series: departmentGraphdata.drilldown
+				  }
+				});
+		}
+	});
+}
+
+///////////////Trusteebank Chart//////////////////
+function departmentwiseChart(){
+	var departmentName = $(".departments").val();
+	let deptDataChart = {};
+	deptDataChart.drilldownData = [];
+	
+	$.ajax({
+		url:"${getCeoChartReportURl}",
+		dataType:"json",
+		type:"post",
+		data: {
+			"<portlet:namespace/>chartType":"Bar",
+			"<portlet:namespace/>reportType":"Department level",
+			"<portlet:namespace/>department":departmentName,
+			"<portlet:namespace/>dd":true
+		},
+		success: function(data){
+			deptDataChart.drilldownData = data.drilldownData;
+			generateDeptChart(data, departmentName, deptDataChart);
+		}
+	});
+	$.ajax({
+		url:"${getCeoChartReportURl}",
+		dataType:"json",
+		type:"post",
+		data: {
+			"<portlet:namespace/>chartType":"Bar",
+			"<portlet:namespace/>reportType":"Department level",
+			"<portlet:namespace/>department":departmentName,
+			"<portlet:namespace/>dd":false
+		},
+		success: function(trusteeBankChartData){
+			generateDeptChart(trusteeBankChartData, departmentName, deptDataChart);
+		}
+	});
+}
+
+function generateDeptChart(trusteeBankChartData, departmentName, deptDataChart){
+	var reportTypes = ["Daily", "Weekly", "Monthly", "Periodically", "Half-Yearly", "Quarterly", "Annually"];
+	var reportStatus = "";
+	$(document).on('click','.highcharts-drilldown-axis-label',function(e){
+		reportStatus =$(this).text();
+	});
+	console.log("Report Types : ",reportTypes);
+	var hchart= Highcharts.chart('trusteeBank', {
+		colors: ['#2f7ed8','#910000','#8bbc21'],
+	  chart: {
+	    type: 'column',
+	    events: {
+	    	drillup: function(event){
+	    		//reportStatus = "";
+      		  	$(".table-section").removeClass("show").addClass("hide");
+	    	}
+	    }
+	  },
+	  title: {
+	    align: 'center',
+	    text: departmentName + ' Reports'
+	  },
+	  accessibility: {
+	    announceNewData: {
+	      enabled: true
+	    }
+	  },
+	  xAxis: {
+	    type: 'category'
+	  },
+	  yAxis: {
+	    title: {
+	      text: 'Report Status'
+	    }
+
+	  },
+	  legend: {
+	    enabled: true
+	  },
+	  plotOptions: {
+	    series: {
+	      borderWidth: 0,
+	      dataLabels: {
+	        enabled: true,
+	        format: '{point.y}'
+	      },
+	      events: {
+	          click: function(event) {
+	        	  console.log("testing ", event);
+	        	  console.log("Type :: ",event.point.type);
+	        	  console.log("name :: ",event.point.name);
+	        	  console.log("Containd :: ",(jQuery.inArray(event.point.name, reportTypes)));
+	        	  console.log("reportStatus :: ",reportStatus);
+	        	  
+	        	  
+	        	  if(jQuery.inArray(event.point.name, reportTypes) > -1){
+	        		  console.log("Containd ");
+	        		  $.ajax({
+	        			  	type: "post",	
+	        				url: '${getTrusteeBankReportByReportTypeURL}',
+	        				dataType: 'json',
+	        				data: {
+	        					'<portlet:namespace/>reportType': event.point.name,
+	        					'<portlet:namespace/>reportStatus': reportStatus,
+	        					"<portlet:namespace/>department":departmentName
+	        				},
+	        				success: function(data) {
+	        					console.log("data : ",data);
+	        					$.fn.dataTable.moment('DD-MM-YYYY hh:mm A');
+	        					$(".table-section").removeClass("hide").addClass("show");
+	        					$('#trusteeBankTable').DataTable({
+	        						searching : false,
+	        						pagination : "bootstrap",
+	        						filter : true,
+	        						data : data,
+	        						destroy : true,
+	        						lengthMenu : [ 5, 10, 25 ],
+	        						pageLength : 10,
+	        						order: [[1, 'desc']],
+	        						language: {
+	        					            sLengthMenu: " _MENU_",
+	        					            "info": "Showing  _START_  to  _END_  of  _TOTAL_  entries",
+	        					            oPaginate: {
+	        					                sNext: 'NEXT',
+	        					                sPrevious: 'PREV'
+	        					            }
+	        					     },
+	        						"dom": '<"top"f>rt<"bottom"<"left"li>p><"clear">',
+	        						"columns" : [
+	        							{
+	        								data : "reportName",
+	        								name : "reportName",
+	        								title: "Report Name",
+	        								render: function(data, type, meta){
+	        									if(meta.url === ""){
+	        										return meta.reportName;
+	        									}else{
+	        										return '<a target="_blank" href="'+meta.url+'">'+meta.reportName+'</a>';
+	        									}
+	        								}
+	        							},
+	        							{
+	        								data : "dueDate",
+	        								name : "dueDate",
+	        								title: "Due Date"
+	        							}
+	        						]					
+	        					});
+	        				}
+	        			});
+	        	  }else{
+	        		  reportStatus = event.point.name;
+	        	  }
+	          }
+	        }
+	    }
+	  },
+	  tooltip: {
+	    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+	    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> of total<br/>'
+	  },
+
+	  series: [
+	    {
+	      name: "Reports",
+	      colorByPoint: true,
+	      data: trusteeBankChartData.seriesData
+	    }
+	  ],
+	  drilldown: {
+		 breadcrumbs: {
+            buttonTheme: {
+                fill: '#f7f7f7',
+                padding: 8,
+                stroke: '#cccccc',
+                'stroke-width': 1
+            },
+            floating: true,
+            position: {
+                align: 'right'
+            },
+            showFullPath: false,
+            format: '< Back'
+        },
+	    plotOptions: {
+	        series: {
+	            cursor: 'pointer',
+	            point: {
+	                events: {
+	                    click: function () {
+	                        alert('Category: ' + this.category + ', value: ' + this.y);
+	                    }
+	                }
+	            }
+	        }
+	    },
+	    series: deptDataChart.drilldownData
+	  }
+	});
+}
+
+	
+	
+//////////// PFRDA Report /////////////////////
+function pfrdaReport(){
+	$.ajax({
+		url:"${getCeoChartReportURl}",
+		dataType:"json",
+		type:"post",
+		data: {
+			"<portlet:namespace/>chartType":"Pie",
+			"<portlet:namespace/>reportType":"PFRDA level"
+		},
+		success: function(pfrdaReportData){
+			Highcharts.chart('pfrda-reports', {
+				  chart: {
+				    type: 'pie',
+				    options3d: {
+				      enabled: true,
+				      alpha: 45,
+				      beta: 0
+				    }
+				  },
+				  title: {
+				    text: 'PFRDA Reports'
+				  }, 
+
+				  accessibility: {     
+				    point: {
+				      valueSuffix: ''
+				    }
+				  },
+
+				  plotOptions: {
+				    pie: {
+				      allowPointSelect: true,
+				      cursor: 'pointer',
+				      depth: 35,
+				      dataLabels: {
+				        enabled: true,
+				        format: '{point.name}'
+				      },
+					  showInLegend: true
+				    }
+				  },
+
+				  tooltip: {
+				    headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+				    pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> of total<br/>'
+				  },
+
+				  series: [{name:"PFRDA Reports",colorByPoint:true,data: pfrdaReportData.data}],
+				  drilldown: {
+					  breadcrumbs: {
+				            buttonTheme: {
+				                fill: '#f7f7f7',
+				                padding: 8,
+				                stroke: '#cccccc',
+				                'stroke-width': 1
+				            },
+				            floating: true,
+				            position: {
+				                align: 'right'
+				            },
+				            showFullPath: false,
+				            format: '< Back'
+				        },
+				    series: pfrdaReportData.drilldown
+				  }
+			});
+		}
+	});
+}
+	
+</script>

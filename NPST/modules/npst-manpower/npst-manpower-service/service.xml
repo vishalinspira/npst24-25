@@ -1,0 +1,419 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<!-- <service-builder dependency-injector="ds" package-path="com.nps.manpower"> -->
+<service-builder dependency-injector="spring" package-path="com.nps.manpower">
+	<namespace>npst</namespace>
+	<entity local-service="true" name="ManpowerEmployee" remote-service="true" uuid="true" data-source="extDataSource">
+
+		<!-- PK fields -->
+
+		<column name="manpowerEmployeeId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="designation" type="String" />
+		<column name="name" type="String" />
+		<column name="appointmentDate" type="Date" />
+		<column name="contactNo" type="String" />
+		<column name="email" type="String" />
+		<column name="qualification" type="String" />
+		<column name="experience" type="String" />
+		<column name="deputation" type="String" />
+		<column name="linkedinId" type="String" />
+		<column name="approvingAppointmentDate" type="Date" />
+		<column name="biodataFileId" type="long" />
+		<column name="committeeMembershipType" type="int" />
+		<column name="din" type="String" />
+		<column name="directorType" type="String" />
+		<column name="membershipType" type="String" />
+		<column name="dependency" type="String" />
+		<column name="pfmName" type="String" />
+		<column name="formMbp" type="long" />
+		<column name="status" type="int" />
+		<column name="isDirector" type="int" />
+		<column name="resignationDate" type="Date" />
+		<column name="previousEmployeeId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+		
+		<finder name="IsDirectorAndPfmName" return-type="Collection">
+			<finder-column name="isDirector" />
+			<finder-column name="pfmName" />
+		</finder>
+		<finder name="IsDirectorAndPfmNameAndStatus" return-type="Collection">
+			<finder-column name="isDirector" />
+			<finder-column name="pfmName" />
+			<finder-column name="status" />
+		</finder>
+		
+		<finder name="StatusAndDesignationAndCommitteeMembershipType" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="designation"/>
+			<finder-column name="committeeMembershipType" />
+		</finder> 
+		
+		<finder name="Designation" return-type="Collection">
+			<finder-column name="designation"/>
+		</finder> 
+		<finder name="DesignationAndPFM" return-type="Collection">
+			<finder-column name="designation"/>
+			<finder-column name="pfmName" />
+		</finder> 
+		<finder name="DependencyAndPFM" return-type="Collection">
+			<finder-column name="dependency"/>
+			<finder-column name="pfmName" />
+		</finder> 
+		
+		<finder name="StatusAndDesignation" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="designation"/>
+		</finder>
+		<finder name="IsDirector" return-type="Collection">
+			<finder-column name="isDirector" />
+		</finder>
+		<finder name="IsDirectorAndStatus" return-type="Collection">
+			<finder-column name="isDirector" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="IsDirectorAndStatusAndMembershipType" return-type="Collection">
+			<finder-column name="isDirector" />
+			<finder-column name="status" />
+			<finder-column name="membershipType" />
+		</finder>
+		<finder name="StatusAndMembershipType" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="membershipType" />
+		</finder>
+		
+		<finder name="StatusAndCommitteeMembershipType" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="committeeMembershipType" />
+		</finder>
+		<finder name="CommitteeMembershipType" return-type="Collection">
+			<finder-column name="committeeMembershipType" />
+		</finder>
+		
+		
+		<finder name="PfmNameAndCommitteeMembershipType" return-type="Collection">
+			<finder-column name="committeeMembershipType" />
+			<finder-column name="pfmName" />
+		</finder>
+		
+		<finder name="PfmaNameAndStatusAndCommitteeMembershipType" return-type="Collection">
+			<finder-column name="status" />
+			<finder-column name="committeeMembershipType" />
+			<finder-column name="pfmName" />
+		</finder>
+		
+		<finder name="Email" return-type="Collection">
+			<finder-column name="email" />
+		</finder>
+
+		
+		<finder name="DIN" return-type="Collection">
+			<finder-column name="din" />
+		</finder>
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+		<entity local-service="true" name="CompositionCommittee" remote-service="true" uuid="true" data-source="extDataSource">
+
+		<!-- PK fields -->
+
+		<column name="compositionCommitteeId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="committeeDesignation" type="String" />
+		<column name="membershipType" type="String" />
+		<column name="committeeMemberShipType" type="long" />
+		<column name="committeeAppointmentDate" type="Date" />
+		
+		<column name="name" type="String" />
+		<column name="email" type="String" />
+		<column name="manpowerEmployeeId" type="long" />
+		<column name="status" type="int" />
+		<column name="din" type="String" />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="ManpowerEmployeeId" return-type="Collection">
+			<finder-column name="manpowerEmployeeId" />
+		</finder>
+		<finder name="DIN" return-type="Collection">
+			<finder-column name="din" />
+		</finder>
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+		<finder name="CommitteeDesignation" return-type="Collection">
+			<finder-column name="committeeDesignation" />
+		</finder>
+		
+		<finder name="ManpowerIdAndCommitteeDesignation" return-type="Collection">
+			<finder-column name="manpowerEmployeeId" />
+			<finder-column name="committeeDesignation" />
+		</finder>
+		<finder name="ManpowerIdAndStatus" return-type="Collection">
+			<finder-column name="manpowerEmployeeId" />
+			<finder-column name="status" />
+		</finder>
+		
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	
+	
+	
+		<entity local-service="true" name="ManpowerDirectorHolding" remote-service="true" uuid="true" data-source="extDataSource">
+
+		<!-- PK fields -->
+
+		<column name="manpowerDirectorHoldingId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="companyName" type="String" />
+		<column name="concern" type="String" />
+		<column name="shareHolding" type="String" />
+		
+		<column name="concernDate" type="Date" />
+		<column name="manpowerEmployeeId" type="long" />
+		<column name="status" type="int" />
+		<column name="din" type="String" />
+		
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="ManpowerIdAndStatus" return-type="Collection">
+			<finder-column name="manpowerEmployeeId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	
+	<entity local-service="true" name="ChangeInEmployee" remote-service="true" uuid="true" data-source="extDataSource">
+
+		<!-- PK fields -->
+
+		
+		<column name="changeInEmployeeId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="manpowerEmployeeId" type="long" />
+		<column name="designation" type="String" />
+		<column name="name" type="String" />
+		<column name="appointmentDate" type="Date" />
+		<column name="contactNo" type="String" />
+		<column name="email" type="String" />
+		<column name="qualification" type="String" />
+		<column name="experience" type="String" />
+		<column name="deputation" type="String" />
+		<column name="linkedinId" type="String" />
+		<column name="approvingAppointmentDate" type="Date" />
+		<column name="biodataFileId" type="long" />
+		<column name="committeeMembershipType" type="int" />
+		<column name="din" type="String" />
+		<column name="directorType" type="String" />
+		<column name="membershipType" type="String" />
+		<column name="dependency" type="String" />
+		<column name="formMbp" type="long" />
+		<column name="status" type="int" />
+		<column name="isDirector" type="int" />
+		<column name="resignationDate" type="Date" />
+		<column name="previousEmployeeId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+		
+		<finder name="DesignationAndCommitteeTypeAndEmployeeId" return-type="Collection">
+			<finder-column name="designation"/>
+			<finder-column name="manpowerEmployeeId"/>
+			
+			<finder-column name="committeeMembershipType" />
+		</finder> 
+		<finder name="DesignationAndEmployeeId" return-type="Collection">
+			<finder-column name="designation"/>
+			<finder-column name="manpowerEmployeeId"/>
+		</finder>
+		<finder name="IsDirectorAndEmployeeId" return-type="Collection">
+			<finder-column name="isDirector" />
+			<finder-column name="manpowerEmployeeId"/>
+		</finder>
+		<finder name="IsDirectorAndMembershipTypeAndEmployeeId" return-type="Collection">
+			<finder-column name="isDirector" />
+			<finder-column name="membershipType" />
+			<finder-column name="manpowerEmployeeId"/>
+		</finder>
+		<finder name="MembershipTypeAndEmployeeId" return-type="Collection">
+			<finder-column name="membershipType" />
+			<finder-column name="manpowerEmployeeId"/>
+		</finder>
+		
+		<finder name="CommitteeTypeAndEmployeeId" return-type="Collection">
+			<finder-column name="committeeMembershipType" />
+			<finder-column name="manpowerEmployeeId"/>
+		</finder>
+		
+		<finder name="Email" return-type="Collection">
+			<finder-column name="email" />
+		</finder>
+
+		
+		<finder name="DIN" return-type="Collection">
+			<finder-column name="din" />
+		</finder>
+		<finder name="EmployeeId" return-type="Collection">
+			<finder-column name="manpowerEmployeeId"/>
+		</finder>
+		
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	<entity local-service="true" name="ChangeShareHolding" remote-service="true" uuid="true" data-source="extDataSource"> 
+
+		<!-- PK fields -->
+
+		<column name="changeShareHoldingId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<!-- Other fields -->
+		<column name="companyName" type="String" />
+		<column name="concern" type="String" />
+		<column name="shareHolding" type="String" />
+		
+		<column name="concernDate" type="Date" />
+		<column name="manpowerEmployeeId" type="long" />
+		<column name="status" type="int" />
+		<column name="din" type="String" />
+		
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="ManpowerIdAndStatus" return-type="Collection">
+			<finder-column name="manpowerEmployeeId" />
+			<finder-column name="status" />
+		</finder>
+		<finder name="ManpowerId" return-type="Collection">
+			<finder-column name="manpowerEmployeeId" />
+		</finder>
+		<finder name="Status" return-type="Collection">
+			<finder-column name="status" />
+		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+
+	
+	
+</service-builder>

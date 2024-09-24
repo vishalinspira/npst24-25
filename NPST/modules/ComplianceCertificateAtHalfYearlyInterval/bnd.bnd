@@ -1,0 +1,4 @@
+Bundle-Name: ComplianceCertificateAtHalfYearlyInterval
+Bundle-SymbolicName: com.compcert.halfyearly
+Bundle-Version: 1.0.0
+Export-Package: com.compcert.halfyearly.constants

@@ -1,0 +1,4 @@
+Bundle-Name: AnnualAuditReport
+Bundle-SymbolicName: com.annualauditreport
+Bundle-Version: 1.0.0
+Export-Package: com.annualauditreport.constants

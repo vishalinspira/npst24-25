@@ -1,0 +1,4 @@
+Bundle-Name: Yearly-ExceptionReporting
+Bundle-SymbolicName: com.yearly.exceptionreporting
+Bundle-Version: 1.0.0
+Export-Package: com.yearly.exceptionreporting.constants

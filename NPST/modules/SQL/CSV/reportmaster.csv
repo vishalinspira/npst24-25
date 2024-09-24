@@ -1,0 +1,16 @@
+1,Annexure 1 Account Statement daily,0 0 13 * * ?
+2,Annexure 3 daily average balance report,0 0 13 * * ?
+3,Annexure 5 Rejection & Return MIS (Electronic),0 0 13 * * ?
+4,Annexure 5a Rejection & Return MIS (Dremit),0 0 13 * * ?
+5,Annexure 4 weekly average balance report,0 0 0 * * TUE
+6,Annexure 4a weekly outstanding with Trustee Bank,0 0 0 * * TUE
+7,Annexure 6 Consolidated Collection Report,0 0 0 * * TUE
+8,Annexure 7 MIS Collection Rejection (monthly),0 0 0 10 * ?
+9,Annexure 7a MIS Collection Rejection D-remit,0 0 0 10 * ?
+10,Annexure 10 Summarized data of Performance Report,0 0 0 10 * ?
+11,Annexure 10a Withdrawal MIS,0 0 0 10 * ?
+12,Annexure 10b Email Complaint Tracker,0 0 0 10 * ?
+13,Annexure 14 List of Branches,0 0 0 1 * ?
+14,Annexure 12 Statutory Auditor Certificate,0 0 0 15 5 ?
+15,Annexure 13 Compliance certificate,0 0 0 15 5 ?
+16,Customized report for the submission,0 0 18 * * ?

@@ -1,0 +1,4 @@
+Bundle-Name: Custodian-InternalAuditReport
+Bundle-SymbolicName: com.custodian.iar
+Bundle-Version: 1.0.0
+Export-Package: com.custodian.iar.constants

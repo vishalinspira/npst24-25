@@ -1,0 +1,4 @@
+Bundle-Name: reportUploadLog
+Bundle-SymbolicName: reportUploadLog
+Bundle-Version: 1.0.0
+Export-Package: reportUploadLog.constants

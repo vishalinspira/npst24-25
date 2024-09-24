@@ -1,0 +1,4 @@
+Bundle-Name: HDFC-Internal-audit-report-PFM
+Bundle-SymbolicName: com.internal.audit.report.pfm
+Bundle-Version: 1.0.0
+Export-Package: com.internal.audit.report.pfm.constants

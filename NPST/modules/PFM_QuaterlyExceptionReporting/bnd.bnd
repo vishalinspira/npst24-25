@@ -1,0 +1,4 @@
+Bundle-Name: PFM_QuaterlyExceptionReporting
+Bundle-SymbolicName: com.pfm.quaterly.Exception.Reporting
+Bundle-Version: 1.0.0
+Export-Package: com.pfm.quaterly.Exception.Reporting.constants

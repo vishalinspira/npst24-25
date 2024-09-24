@@ -1,0 +1,5 @@
+Bundle-Name: nps-dsc-rest
+Bundle-SymbolicName: com.nps.dsc.rest
+Bundle-Version: 1.0.0
+Liferay-Configuration-Path: /configuration
+Include-Resource: configuration=src/main/resources/configuration

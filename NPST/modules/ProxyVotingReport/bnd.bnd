@@ -1,0 +1,4 @@
+Bundle-Name: ProxyVotingReport
+Bundle-SymbolicName: com.proxyvotingreport
+Bundle-Version: 1.0.0
+Export-Package: com.proxyvotingreport.constants

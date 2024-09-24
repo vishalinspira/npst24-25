@@ -1,0 +1,41 @@
+DROP TABLE IF EXISTS "mn_form_14";
+DROP SEQUENCE IF EXISTS mn_form_14_id__seq1;
+CREATE SEQUENCE mn_form_14_id__seq1 INCREMENT 1 MINVALUE 1 MAXVALUE 9223372036854775807 START 1 CACHE 1;
+
+CREATE TABLE public.mn_form_14 (
+    id_ bigint NOT NULL,
+    pension_fund_name character varying,
+	reporting_date date,
+    scheme_name character varying,
+    tier_i_tier_ii character varying,
+    transaction_type character varying,
+    transaction_date date,
+    isin character varying,
+    security_name character varying,
+	issuer_name character varying,
+    nic_code numeric,
+    industry_classification character varying,
+    security_type character varying,
+    no_of_shares numeric(20,4),
+    purchase_or_sale_price numeric(20,4),
+    amount_purchase_or_sale numeric(20,2),
+	coupon_rate_percent numeric,
+	coupon_frequency int,
+	put_date date,
+	call_date date,
+	face_value numeric(20,2),
+    maturity_date date,
+	residual_maturity_date numeric(15,2),
+	modified_duration_on_tran_date numeric(15,2),
+	purchase_ytm character varying,
+	lowest_rating character varying,
+	lowest_rating_agency character varying,
+	second_lowest_rating character varying,
+	second_lowest_rating_agency character varying,
+	code_ bigint,
+	broker_name character varying,
+    createdon date,
+    createdby bigint,
+    reportuploadlogid bigint,
+    CONSTRAINT mn_form_14_pkey PRIMARY KEY (id_)
+) WITH (oids = false);

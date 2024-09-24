@@ -1,0 +1,36 @@
+dependencies {
+	compileOnly group: "com.liferay", name: "com.liferay.asset.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.comment.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.dynamic.section"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.form.navigator"
+	compileOnly group: "com.liferay", name: "com.liferay.frontend.taglib.util"
+	compileOnly group: "com.liferay", name: "com.liferay.journal.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.layout.taglib"
+	compileOnly group: "com.liferay", name: "com.liferay.site.taglib"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.portal.kernel"
+	compileOnly group: "com.liferay.portal", name: "com.liferay.util.taglib"
+	compileOnly group: "javax.portlet", name: "portlet-api"
+	compileOnly group: "javax.servlet", name: "javax.servlet-api"
+	compileOnly group: "jstl", name: "jstl"
+	compileOnly group: "org.osgi", name: "org.osgi.service.component.annotations"
+
+	cssBuilder group: "com.liferay", name: "com.liferay.css.builder", version: "3.0.2"
+	
+	compileOnly 'com.liferay.portal:release.dxp.api'
+	
+	compile project(":modules:DailyAverageService:DailyAverageService-api")
+	compile project(":modules:PFMService:PFMService-api")
+	
+	implementation group: 'org.springframework', name: 'spring-context-support', version: '3.1.0.RELEASE'
+	// https://mvnrepository.com/artifact/commons-io/commons-io
+implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+	implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.0.6'
+	implementation group: 'com.itextpdf', name: 'kernel', version: '7.1.13'
+	compileInclude group: 'com.itextpdf', name: 'layout', version: '7.1.4'
+	
+	compileOnly project(":modules:nps-email-api")
+	compile project(":modules:nps-common-service")
+
+	compile project(":modules:nps-cache-schema:nps-cache-schema-api")
+}

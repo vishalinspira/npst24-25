@@ -1,0 +1,4 @@
+Bundle-Name: PFM_MonthlyAUMAndReturnData
+Bundle-SymbolicName: com.nps.pfm.monthly.ard
+Bundle-Version: 1.0.0
+Export-Package: com.nps.pfm.monthly.ard.constants

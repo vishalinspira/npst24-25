@@ -1,0 +1,4 @@
+Bundle-Name: DetailedAuditReport
+Bundle-SymbolicName: com.detailedauditreport
+Bundle-Version: 1.0.0
+Export-Package: com.detailedauditreport.constants

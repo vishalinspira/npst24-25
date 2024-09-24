@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:PFMService:PFMService-api")
+	compileOnly group: "com.liferay", name: "com.liferay.portal.spring.extender.api", version: "4.0.0" 
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../PFMService-api/src/main/java"
+}
+
+group = "com.daily.pfm.service"

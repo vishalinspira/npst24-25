@@ -1,0 +1,6 @@
+Bundle-Name: Compliance_certificate_at_quarterly_interval
+Bundle-SymbolicName: Compliance_certificate_at_quarterly_interval
+Bundle-Version: 1.0.0
+Export-Package: Compliance_certificate_at_quarterly_interval.constants
+
+Import-Package: *; version="0";resolution:=optional

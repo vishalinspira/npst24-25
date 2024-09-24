@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<!-- <service-builder dependency-injector="spring" package-path="com.nps.erm"> -->
+<service-builder dependency-injector="spring" package-path="com.nps.erm">
+	<namespace>nps</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="ErmInformation" remote-service="true" uuid="true" data-source="extDataSource">
+
+		<!-- PK fields -->
+
+		<column name="ermInformationId" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<column name="status" type="int" />
+ 		<column name="statusByUserId" type="long" />
+ 		<column name="statusByUserName" type="String" />
+ 		<column name="statusDate" type="Date" />
+
+		<!-- Other fields -->
+
+		<column name="batchType" type="String" />
+		<column name="transactedAmount" type="long" />
+		<column name="pran" type="String" />
+		<column name="transactionDate" type="Date" />
+		<column name="transactionMode" type="String" />
+		<column name="transactionSettlementDate" type="Date" />
+		<column name="tokenNo" type="String" />
+		<column name="rectificationRequestMode" type="String" />
+		<column name="rectificationDate" type="Date" />
+		<column name="remittedAmount" type="long" />
+		<column name="remittedDate" type="Date" />
+		<column name="tierType" type="String" />
+		<column name="transactionType" type="String" />
+		<column name="transferAmount" type="long" />
+		<column name="transferAmount1" type="String" />
+		<column name="transferAmount2" type="String" />
+		<column name="documentationsDate" type="Date" />
+		<column name="rectificationAmount" type="long" />
+		<column name="caseNo" type="String" />
+		<column name="subscriberName" type="String" />
+		<column name="enpsOrderId" type="String" />
+		<column name="rectificationType" type="String" />
+		<column name="rectificationRequestDate" type="Date" />
+		<column name="grievanceReceivedDate" type="Date" />
+		<column name="grievanceText" type="String" />
+		<column name="stipulated" type="String" />
+		<column name="submissionStipulatedTime" type="String" />
+		<column name="remark" type="String" />
+		<column name="recommendation" type="String" />
+		<column name="process" type="String" />
+		<column name="npstRemark" type="String" />
+		<column name="noNpstRemark" type="String" />
+		<column name="pfmName" type="String" />
+		<column name="batchNo" type="String" />
+		<column name="batchStatus" type="int" />
+		<column name="isForwardToNpst" type="int" />
+		<column name="ermStatus" type="String" />
+		
+		<column name="npsDecisionDate" type="Date" />
+		<column name="fwdnpstDate" type="Date" />
+		<column name="bankName" type="String" />
+		<column name="bankStatmentName" type="String" />
+		<column name="txnDate" type="Date" />
+		<column name="selfRectifiedDate" type="Date" />
+		<column name="subscriberSector" type="String" />
+		
+		
+		
+		
+		<column name="selfDeclarationFileId" type="long" />
+		<column name="accountStatementFileId" type="long" />
+		<column name="transactionsStatementFileId" type="long" />
+		<column name="documentNameFileId" type="long" />
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+		<finder name="batchNoAndBatchStatus" return-type="Collection">
+ 			<finder-column name="batchNo"></finder-column>
+ 			<finder-column name="batchStatus"></finder-column>
+ 		</finder>
+ 		
+		<finder name="batchNo" return-type="Collection">
+ 			<finder-column name="batchNo"></finder-column>
+ 		</finder>
+ 		
+ 		<finder name="pfmName" return-type="Collection">
+ 			<finder-column name="pfmName"></finder-column>
+ 		</finder>
+		
+		<finder name="statusAndPran" return-type="Collection">
+ 			<finder-column name="groupId"></finder-column>
+ 			<finder-column name="status"></finder-column>
+ 			<finder-column name="pran"></finder-column>
+ 		</finder>
+ 		<finder name="pran" return-type="Collection">
+ 			<finder-column name="groupId"></finder-column>
+ 			<finder-column name="pran"></finder-column>
+ 		</finder>
+ 		<finder name="statusAndBatchType" return-type="Collection">
+ 			<finder-column name="groupId"></finder-column>
+ 			<finder-column name="status"></finder-column>
+ 			<finder-column name="batchType"></finder-column>
+ 		</finder>
+		<finder name="userId" return-type="Collection">
+ 			<finder-column name="userId"></finder-column>
+ 		</finder>
+		
+		<finder name="status" return-type="Collection">
+ 			<finder-column name="groupId"></finder-column>
+ 			<finder-column name="status"></finder-column>
+ 		</finder>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+	</entity>
+	
+	
+		<entity local-service="true" name="ErmBatchInformation" remote-service="true" uuid="true" data-source="extDataSource">
+
+		<!-- PK fields -->
+
+		<column name="ermBatchInformationId" primary="true" type="long" id-type="increment"/>
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+		<column name="batchNo" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Other fields -->
+
+		<column name="ermInformationIds" type="String" />
+		<column name="batchGroupId" type="long" />
+		<column name="batchType" type="String" />
+		<column name="batchTimePeriodFrom" type="Date" />
+		<column name="batchTimePeriodTo" type="Date" />
+		<column name="cutOffDate" type="Date" />
+		<column name="submissionDate" type="Date" />
+		<column name="remark" type="String" />
+		<column name="stipulatedTime" type="String" />
+		<column name="previousBatchId" type="long" />
+		<column name="PfmName" type="String" />
+		
+		
+		
+<!-- 		<column name="batchNumber" type="String" /> -->
+
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="modifiedDate" />
+		</order>
+
+		
+		<!-- <finder name="batchNumber" return-type="Collection">
+ 			<finder-column name="batchNumber"></finder-column>
+ 		</finder> -->
+ 		<finder name="batchType" return-type="Collection">
+ 			<finder-column name="batchType"></finder-column>
+ 		</finder>
+		
+		<finder name="ermBatchByBatchNo" return-type="ErmBatchInformation">
+			<finder-column name="batchNo"/>
+		</finder>
+		
+		<!-- <finder name="batchTypeAndbatchNumber" return-type="Collection">
+ 			<finder-column name="batchType"></finder-column>
+ 			<finder-column name="batchNumber"></finder-column>
+ 		</finder> -->
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+		<!-- <reference entity="WorkflowInstanceLink" package-path="com.liferay.portal" /> -->
+	</entity>
+	
+</service-builder>

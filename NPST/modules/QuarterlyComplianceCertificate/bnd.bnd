@@ -1,0 +1,4 @@
+Bundle-Name: QuarterlyComplianceCertificate
+Bundle-SymbolicName: com.quarterlycompliancecertificate
+Bundle-Version: 1.0.0
+Export-Package: com.quarterlycompliancecertificate.constants
