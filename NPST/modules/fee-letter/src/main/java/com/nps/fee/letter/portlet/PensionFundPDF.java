@@ -19,6 +19,7 @@ import com.liferay.portal.kernel.json.JSONArray;
 import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.Validator;
 import com.nps.fee.letter.constants.PFMConstants;
 
 import java.io.File;
@@ -226,19 +227,19 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			    	for (int col = 0; col < 5; col++) {
 			        	if(col==0) {
 			        		if(row==jsonArray.length()-1) {
-			        		table1.addCell(new Cell().add(new Paragraph("Total")));
+			        		table1.addCell(new Cell().add(new Paragraph("Total"))).setBold();
 			        		}else {
-			        			table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER));
+			        			table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER)).setBold();
 			        		}
 			        	}else if(col==1) {
 			        		log.info("imf::: "+jsonObject.getString("imf"));
-			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT));
+			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 			        	}else if(col==2) {
-			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT));
+			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 			        	}else if(col==3) {
-			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT));
+			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 			        	}else if(col==4) {
-			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT));
+			        		table1.addCell(new Cell().add(new Paragraph(Validator.isNull(jsonObject.getString("trustfee"))?"-":jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 			        	}
 
 			        }
@@ -275,19 +276,19 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 				    	for (int col = 0; col < 5; col++) {
 				        	if(col==0) {
 				        		if(row==jsonArray.length()-1) {
-				        		table2.addCell(new Cell().add(new Paragraph("Total")).setTextAlignment(TextAlignment.CENTER));
+				        		table2.addCell(new Cell().add(new Paragraph("Total")).setTextAlignment(TextAlignment.CENTER)).setBold();
 				        		}else {
-				        			table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER));
+				        			table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER)).setBold();
 				        		}
 				        	}else if(col==1) {
 				        		log.info("imf::: "+jsonObject.getString("imf"));
-				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT));
+				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 				        	}else if(col==2) {
-				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT));
+				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 				        	}else if(col==3) {
-				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT));
+				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 				        	}else if(col==4) {
-				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT));
+				        		table2.addCell(new Cell().add(new Paragraph(Validator.isNull(jsonObject.getString("trustfee"))?"-":jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
 				        	}
 
 				        }

@@ -283,6 +283,334 @@ public class ReportUploadLogLocalServiceImpl
 	}
 	
 	
+	
+/**
+ * 
+ * @param classPK
+ * @param entryClassName
+ * @param assignedTo
+ * @param isCompleted
+ * @param forwaredToNpst
+ * @param companyId
+ * @param groupId
+ */
+	public void updateReportStatus(long classPK,String entryClassName,String assignedTo,boolean isCompleted,int forwaredToNpst,long companyId,long groupId){
+
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
+		try {
+			WorkflowInstanceLink workflowInstanceLink=  WorkflowInstanceLinkLocalServiceUtil.getWorkflowInstanceLink(companyId, groupId, entryClassName, classPK);
+
+			try {
+					ReportUploadLogPFM reportUploadLogPfm = null;
+					ReportUploadLogPFMAM reportUploadLogPfmAm = null;
+					ReportUploadLogPFMCRA reportUploadLogPfmCra = null;
+					InputQuarterlyInterval inputQuarterlyInterval = null;
+					MnCompCertificate mnCompCertificate  = null;
+					AnnualCompCertificate annualCompCertificate  = null;
+					QtrStewardshipReport qtrStewardshipReport  =null;
+					MnNpaDevelopment mnNpaDevelopment  = null;
+					ReportUploadLogPFMAMPFRDA reportUploadLogPFMAMPFRDA = null;
+					DAR dar = null;
+					Pfm_Qr_Internal_Audit_Report pfm_Qr_Internal_Audit_Report =null;
+					PFM_hy_comp_cert pfm_hy_comp_cert =null;
+	
+					ReportUploadLogCustodian reportUploadLogCustodian = null;
+					ReportUploadLogPFMCustodian reportUploadLogPFMCustodian = null;
+					CustodianCompForm custodianCompForm = null;
+					CustAnnualAuditReport custAnnualAuditReport = null;
+					ReportUploadLogCustAMPFRDA reportUploadLogCustAMPFRDA = null;
+					CustIAR custIAR = null;
+
+					ReportUploadLogCRA reportUploadLogCra = null;
+					ReportUploadLogGrievances reportUploadLogGrievances = null;
+					ReportUploadLogGrievAMPFRDA reportUploadLogGrievAMPFRDA = null;
+					
+					ReportUploadLogMaker reportUploadLogMaker = null;
+					ReportUploadLogSupervisor reportUploadLogSupervisor = null;
+					ReportUploadLogNPST reportUploadLogNpst = null;
+					ReportMaster reportMaster = null;
+					DLFileEntry dlFileEntry = null;
+					Date reportUploadDate=null;
+					int status=-1;
+					String clazzName="";
+		
+					ReportUploadLog reportUploadLog = null;
+					try {
+						reportUploadLog = reportUploadLogLocalService.fetchReportUploadLog(classPK);
+						reportMaster=reportMasterLocalService.getReportMaster(reportUploadLog.getReportMasterId());
+					} catch (Exception e) {
+						_log.info("Exception in getting reportUploadLog::: "+ classPK+"   --   " + e.getMessage());
+					}
+					
+					if(entryClassName.equalsIgnoreCase(ReportUploadLogMaker.class.getName())) {
+						reportUploadLogMaker  = reportUploadLogMakerLocalService.getReportUploadLogMaker(classPK);
+						if(reportUploadLogMaker != null && reportUploadLogMaker.getFileEntryId()!=0) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogMaker.getFileEntryId());
+							reportUploadDate=reportUploadLogMaker.getCreateDate();
+							status=reportUploadLogMaker.getStatus();
+							clazzName=ReportUploadLogMaker.class.getName();
+						}
+					}
+					
+					if(entryClassName.equalsIgnoreCase(ReportUploadLogSupervisor.class.getName())) {
+						reportUploadLogSupervisor  = reportUploadLogSupervisorLocalService.getReportUploadLogSupervisor(classPK);
+						if(reportUploadLogSupervisor != null && reportUploadLogSupervisor.getFileEntryId()!=0) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogSupervisor.getFileEntryId());
+							reportUploadDate=reportUploadLogSupervisor.getCreateDate();
+							status=reportUploadLogSupervisor.getStatus();
+							clazzName=ReportUploadLogSupervisor.class.getName();
+						}
+					}
+					if(entryClassName.equalsIgnoreCase(ReportUploadLogNPST.class.getName())) {
+						reportUploadLogNpst  = reportUploadLogNPSTLocalService.getReportUploadLogNPST(classPK);
+						if(reportUploadLogNpst != null && reportUploadLogNpst.getFileEntryId()!=0) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogNpst.getFileEntryId());
+							reportUploadDate=reportUploadLogNpst.getCreateDate();
+							status=reportUploadLogNpst.getStatus();
+							clazzName=ReportUploadLogNPST.class.getName();
+						}
+					}
+					
+					
+						if(entryClassName.equalsIgnoreCase(ReportUploadLogCRA.class.getName())) {
+							reportUploadLogCra  = reportUploadLogCraLocalService.getReportUploadLogCRA(classPK);
+							if(reportUploadLogCra != null && reportUploadLogCra.getFileEntryId()!=0) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogCra.getFileEntryId());
+								reportUploadDate=reportUploadLogCra.getCreateDate();
+								status=reportUploadLogCra.getStatus();
+								clazzName=ReportUploadLogCRA.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(ReportUploadLogGrievances.class.getName())) {
+							reportUploadLogGrievances  = reportUploadLogGrievancesLocalService.getReportUploadLogGrievances(classPK);
+							if(reportUploadLogGrievances != null && reportUploadLogGrievances.getFileEntryId()!=0) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogGrievances.getFileEntryId());
+								reportUploadDate=reportUploadLogGrievances.getCreateDate();
+								status=reportUploadLogGrievances.getStatus();
+								clazzName=ReportUploadLogGrievances.class.getName();
+							}
+						}
+					/* Report Upload By Griev-AM-PFRDA */
+					if(entryClassName.equalsIgnoreCase(ReportUploadLogGrievAMPFRDA.class.getName())) {
+							_log.info("entryClassName::::" + entryClassName);
+							reportUploadLogGrievAMPFRDA =reportUploadLogGrievAMPFRDALocalService.getReportUploadLogGrievAMPFRDA(classPK);
+							if(reportUploadLogGrievAMPFRDA != null && reportUploadLogGrievAMPFRDA.getFileEntryId()!=0) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogGrievAMPFRDA.getFileEntryId());
+								reportUploadDate=reportUploadLogGrievAMPFRDA.getCreateDate();
+								status=reportUploadLogGrievAMPFRDA.getStatus();
+								clazzName=ReportUploadLogGrievAMPFRDA.class.getName();
+							}
+						}
+					
+					if(entryClassName.equalsIgnoreCase(ReportUploadLogPFMCustodian.class.getName())) {
+						reportUploadLogPFMCustodian  = reportUploadLogPFMCustodianLocalService.getReportUploadLogPFMCustodian(classPK);
+						if(reportUploadLogPFMCustodian != null && reportUploadLogPFMCustodian.getFileEntryId()!=0) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogPFMCustodian.getFileEntryId());
+							reportUploadDate=reportUploadLogPFMCustodian.getCreateDate();
+							status=reportUploadLogPFMCustodian.getStatus();
+							clazzName=ReportUploadLogPFMCustodian.class.getName();
+						}
+					}
+				
+					if(entryClassName.equalsIgnoreCase(ReportUploadLogCustodian.class.getName())) {
+						reportUploadLogCustodian  = reportUploadLogCustodianLocalService.getReportUploadLogCustodian(classPK);
+						if(reportUploadLogCustodian != null && reportUploadLogCustodian.getFileEntryId()!=0) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogCustodian.getFileEntryId());
+							reportUploadDate=reportUploadLogCustodian.getCreateDate();
+							status=reportUploadLogCustodian.getStatus();
+							clazzName=ReportUploadLogCustodian.class.getName();
+						}
+					}
+					if(entryClassName.equalsIgnoreCase(CustodianCompForm.class.getName())) {
+						custodianCompForm  = custodianCompFormLocalService.getCustodianCompForm(classPK);
+						if(custodianCompForm != null) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(custodianCompForm.getQcfile_id());
+							reportUploadDate=dlFileEntry.getCreateDate();
+							status=custodianCompForm.getStatus();
+							clazzName=CustodianCompForm.class.getName();
+						}
+					}
+					if(entryClassName.equalsIgnoreCase(CustAnnualAuditReport.class.getName())) {
+						custAnnualAuditReport  = custAnnualAuditReportLocalService.getCustAnnualAuditReport(classPK);
+						if(custAnnualAuditReport != null) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(custAnnualAuditReport.getAudit_pdf_fileentry_id());
+							reportUploadDate=dlFileEntry.getCreateDate();
+							status=custAnnualAuditReport.getStatus();
+							clazzName=CustAnnualAuditReport.class.getName();
+						}
+					}
+					if(entryClassName.equalsIgnoreCase(CustIAR.class.getName())) {
+						custIAR = custIARLocalService.getCustIAR(classPK);
+						if(custIAR != null) {
+							dlFileEntry = dlFileEntryLocalService.fetchDLFileEntry(custIAR.getIar_file_id());
+							reportUploadDate=dlFileEntry.getCreateDate();
+							status=custIAR.getStatus();
+							clazzName=CustIAR.class.getName();
+						}
+					}
+					
+					/* Report Upload By Cust-AM-PFRDA */
+					if(entryClassName.equalsIgnoreCase(ReportUploadLogCustAMPFRDA.class.getName())) {
+						reportUploadLogCustAMPFRDA =reportUploadLogCustAMPFRDALocalService.getReportUploadLogCustAMPFRDA(classPK);
+						if(reportUploadLogCustAMPFRDA != null ) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogCustAMPFRDA.getFileEntryId());
+							reportUploadDate=reportUploadLogCustAMPFRDA.getCreateDate();
+							status=reportUploadLogCustAMPFRDA.getStatus();
+							clazzName=ReportUploadLogCustAMPFRDA.class.getName();
+						}
+					}
+					
+					if( entryClassName.equalsIgnoreCase(ReportUploadLogPFMCustodian.class.getName())) {
+						reportUploadLogPFMCustodian  = reportUploadLogPFMCustodianLocalService.getReportUploadLogPFMCustodian(classPK);
+						if(reportUploadLogPFMCustodian != null && reportUploadLogPFMCustodian.getFileEntryId()!=0) {
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogPFMCustodian.getFileEntryId());
+							reportUploadDate=reportUploadLogPFMCustodian.getCreateDate();
+							status=reportUploadLogPFMCustodian.getStatus();
+							clazzName=ReportUploadLogPFMCustodian.class.getName();
+						}
+					}
+					
+						if(entryClassName.equalsIgnoreCase(ReportUploadLogPFM.class.getName())) {
+							reportUploadLogPfm  = reportUploadLogPfmLocalService.getReportUploadLogPFM(classPK);
+							if(reportUploadLogPfm != null && reportUploadLogPfm.getFileEntryId()!=0) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogPfm.getFileEntryId());
+								reportUploadDate=reportUploadLogPfm.getCreateDate();
+								status=reportUploadLogPfm.getStatus();
+								clazzName=ReportUploadLogPFM.class.getName();
+							}
+						}
+						//LOG.info("After PFM check ");
+						if(entryClassName.equalsIgnoreCase(ReportUploadLogPFMAM.class.getName())) {
+							reportUploadLogPfmAm  = reportUploadLogPfmAmLocalService.getReportUploadLogPFMAM(classPK);
+							if(reportUploadLogPfmAm != null && reportUploadLogPfmAm.getFileEntryId()!=0) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogPfmAm.getFileEntryId());
+								reportUploadDate=reportUploadLogPfmAm.getCreateDate();
+								status=reportUploadLogPfmAm.getStatus();
+								clazzName=ReportUploadLogPFMAM.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(ReportUploadLogPFMCRA.class.getName())) {
+							reportUploadLogPfmCra  = reportUploadLogPfmCraLocalService.getReportUploadLogPFMCRA(classPK);
+							if(reportUploadLogPfmCra != null && reportUploadLogPfmCra.getFileEntryId()!=0) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogPfmCra.getFileEntryId());
+								reportUploadDate=reportUploadLogPfmCra.getCreateDate();
+								status=reportUploadLogPfmCra.getStatus();
+								clazzName=ReportUploadLogPFMCRA.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(InputQuarterlyInterval.class.getName())) {
+							inputQuarterlyInterval = inputQuarterlyIntervalLocalService.getInputQuarterlyInterval(classPK);
+							if(inputQuarterlyInterval != null) {
+								dlFileEntry = dlFileEntryLocalService.fetchDLFileEntry(inputQuarterlyInterval.getFileEntryId());
+								reportUploadDate=inputQuarterlyInterval.getCreatedate();
+								status=inputQuarterlyInterval.getStatus();
+								clazzName=InputQuarterlyInterval.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(MnCompCertificate.class.getName())) {
+							mnCompCertificate = mnCompCertificateLocalService.getMnCompCertificate(classPK);
+							if(mnCompCertificate != null) {
+								dlFileEntry = dlFileEntryLocalService.fetchDLFileEntry(mnCompCertificate.getFileEntryId());
+								reportUploadDate=mnCompCertificate.getCreatedon();
+								status=mnCompCertificate.getStatus();
+								clazzName=MnCompCertificate.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(AnnualCompCertificate.class.getName())) {
+							annualCompCertificate = annualCompCertificateLocalService.getAnnualCompCertificate(classPK);
+							if(annualCompCertificate!= null) {
+								dlFileEntry = dlFileEntryLocalService.fetchDLFileEntry(annualCompCertificate.getFileEntryId());
+								reportUploadDate=annualCompCertificate.getCreatedate();
+								status=annualCompCertificate.getStatus();
+								clazzName=AnnualCompCertificate.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(QtrStewardshipReport.class.getName())) {
+							qtrStewardshipReport = qtrStewardshipReportLocalService.getQtrStewardshipReport(classPK);
+							if(qtrStewardshipReport!= null) {
+								//dlFileEntry = dlFileEntryLocalService.fetchDLFileEntry(qtrStewardshipReport.getAnnexure_c());
+								dlFileEntry = dlFileEntryLocalService.fetchDLFileEntry(qtrStewardshipReport.getFileEntryId());
+								reportUploadDate=qtrStewardshipReport.getCreatedon();
+								status=qtrStewardshipReport.getStatus();
+								clazzName=QtrStewardshipReport.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(MnNpaDevelopment.class.getName())) {
+							mnNpaDevelopment  = mnNpaDevelopmentLocalService.getMnNpaDevelopment(classPK);
+							if(mnNpaDevelopment!= null) {
+								dlFileEntry = dlFileEntryLocalService.fetchDLFileEntry(mnNpaDevelopment.getFileEntryId());
+								reportUploadDate=mnNpaDevelopment.getCreatedon();
+								status=mnNpaDevelopment.getStatus();
+								clazzName=MnNpaDevelopment.class.getName();
+							}
+						}
+						
+						/* Report Upload By PFM-AM-PFRDA */
+						if(entryClassName.equalsIgnoreCase(ReportUploadLogPFMAMPFRDA.class.getName())) {
+							_log.info("entryClassName :: "+entryClassName+" Application Id : "+classPK);
+							reportUploadLogPFMAMPFRDA =reportUploadLogPFMAMPFRDALocalService.getReportUploadLogPFMAMPFRDA(classPK);
+							if(reportUploadLogPFMAMPFRDA != null ) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(reportUploadLogPFMAMPFRDA.getFileEntryId());
+								reportUploadDate=reportUploadLogPFMAMPFRDA.getCreateDate();
+								status=reportUploadLogPFMAMPFRDA.getStatus();
+								clazzName=ReportUploadLogPFMAMPFRDA.class.getName();
+							}
+						}
+						
+						/* Detail audit report */
+						if(entryClassName.equalsIgnoreCase(DAR.class.getName())) {
+						    dar = darLocalService.fetchDAR(classPK);
+							if(Validator.isNotNull(dar)) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(dar.getFileEntryId());
+								reportUploadDate=dar.getCreatedon();
+								status=dar.getStatus();
+								clazzName=DAR.class.getName();
+							}
+						}
+
+						if(entryClassName.equalsIgnoreCase(Pfm_Qr_Internal_Audit_Report.class.getName())) {
+							pfm_Qr_Internal_Audit_Report = pfm_Qr_Internal_Audit_ReportLocalService.fetchPfm_Qr_Internal_Audit_Report(classPK);
+							if(Validator.isNotNull(pfm_Qr_Internal_Audit_Report)) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(pfm_Qr_Internal_Audit_Report.getFileEntryId());
+								reportUploadDate=pfm_Qr_Internal_Audit_Report.getCreatedon();
+								status=pfm_Qr_Internal_Audit_Report.getStatus();
+								clazzName=Pfm_Qr_Internal_Audit_Report.class.getName();
+							}
+						}
+						
+						/* PFM Quaterly Internal audit report */
+						if(entryClassName.equalsIgnoreCase(PFM_hy_comp_cert.class.getName())) {
+							pfm_hy_comp_cert = pfm_hy_comp_certLocalService.fetchPFM_hy_comp_cert(classPK);
+							if(Validator.isNotNull(pfm_hy_comp_cert)) {
+								dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(pfm_hy_comp_cert.getFileEntryId());
+								reportUploadDate=pfm_hy_comp_cert.getCreatedon();
+								status=pfm_hy_comp_cert.getStatus();
+								clazzName=PFM_hy_comp_cert.class.getName();
+							}
+						}
+					
+						if(Validator.isNotNull(reportMaster)) {
+							 getReportSummeryObject( reportUploadLog,reportMaster, dlFileEntry, dateFormat.format(reportUploadDate), status,"comment", 
+									 workflowInstanceLink.getWorkflowInstanceId(), assignedTo,  reportUploadLog.getStatus_(),0,isCompleted,forwaredToNpst,clazzName);
+						}
+			}catch (Exception e) {
+				_log.error("Exception on fetching log reports : "+e.getMessage());
+			}
+		} catch (Exception e) {
+			_log.error("workflow exception : "+e.getMessage());
+		}
+		}
+	
+	
+	
+	
 	/**
 	 * 
 	 * @param classPK
