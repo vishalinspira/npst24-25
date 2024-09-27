@@ -48,7 +48,7 @@ public class AnnualAuditReport implements MVCResourceCommand {
 	public boolean serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws PortletException {
 		
-		_log.info("Serve Resource method");
+		_log.info("Serve    Resource method");
 		
 		ThemeDisplay themeDisplay = (ThemeDisplay) resourceRequest.getAttribute(WebKeys.THEME_DISPLAY);
 		JSONObject resultJsonObject = fileUpload(themeDisplay, resourceRequest);
