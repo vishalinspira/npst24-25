@@ -87,7 +87,7 @@ Set<String> pfmTypes= NpstCommonUtil.getUserType(user.getCompanyId(), NpstRoleCo
 	                            </div>
 	                            <div class="nps-input-box col-4">
 	                            <label style="color:black;" for="receivedDate">Received Date</label>
-	                             <input style="color:black; background-color: #E9F3FA;" type="date" class="receivedDate" id="receivedDate" name="<portlet:namespace/>receivedDate"  />  
+	                             <input style="color:black; background-color: #E9F3FA;" type="text" class="receivedDate" id="receivedDate" name="<portlet:namespace/>receivedDate"  />  
 	                            <label id="error-receivedDate" class="error-message text-danger"></label>
 	                            </div>
 	                            <div class="nps-input-box col-4">
@@ -164,10 +164,10 @@ Set<String> pfmTypes= NpstCommonUtil.getUserType(user.getCompanyId(), NpstRoleCo
 		    	    $("#error-month").html("This field is required.");
 		    	    return false;
 		    	}
-		    	if ($('#receivedDate').val() == "" || $('#receivedDate').val()==null || $('#receivedDate').val()=="undefined") {
+		    	/* if ($('#receivedDate').val() == "" || $('#receivedDate').val()==null || $('#receivedDate').val()=="undefined") {
 		    	    $("#error-letterDate").html("This field is required.");
 		    	    return false;
-		    	}
+		    	} */
 		    	if ($('#letterDate').val() == "" || $('#letterDate').val()==null || $('#letterDate').val()=="undefined") {
 		    	    $("#error-receivedDate").html("This field is required.");
 		    	    return false;

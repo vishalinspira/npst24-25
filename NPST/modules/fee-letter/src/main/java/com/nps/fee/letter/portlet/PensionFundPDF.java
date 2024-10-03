@@ -46,7 +46,7 @@ public class PensionFundPDF {
 	}
 	
 
-public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date letterDate,Date receivedDate,String  month,String signeturies) throws IOException {
+public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date letterDate,String receivedDate,String  month,String signeturies) throws IOException {
 
 		File file=null;
 		try  {  
@@ -157,7 +157,7 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			    Paragraph para2 = new Paragraph(text8);
 			    Text text9 = new Text("Subject: Approval of Investment Management Fees and NPS Trust Fee for the month of  "+month+" \n\n").setBold().setUnderline();
 			    para2.add(text9);
-			    Text text10 = new Text("1. This is with reference to letters submitted on DCMS portal on "+getDateString(receivedDate)+" seeking approval for your claim of Investment Management Fees and NPST fees for the mentioned period.\r\n \n");
+			    Text text10 = new Text("1. This is with reference to letters submitted on DCMS portal on "+receivedDate+" seeking approval for your claim of Investment Management Fees and NPST fees for the mentioned period.\r\n \n");
 			    para2.add(text10);
 			    
 			    Text text11 = new Text("2. The Competent Authority has accorded approval for the payment of Investment Management Fees to the Pension Fund and NPS Trust fee/ charges to the  NPS Trust from the schemes managed by the Pension Fund, for the period as under:- \n ");
@@ -168,14 +168,14 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			    Text text12 = new Text("(Amount in Rs.)").setBold();
 			    Paragraph para3 = new Paragraph(text12);
 			    para3.setTextAlignment(TextAlignment.RIGHT);
-			    para3.setMarginLeft(20);
-			    para3.setMarginRight(20);
+			   // para3.setMarginLeft(10);
+			   // para3.setMarginRight(10);
 			    doc.add(para3);
 			    
-			    Table table1 = new Table(new float[] {4f, 2f, 2f,2f,2f}, true)
+			    Table table1 = new Table(new float[] {5f, 2.5f, 2.5f,2.5f,2.5f}, true)
 		                .setWidth(UnitValue.createPercentValue(100));
-			    table1.setMarginLeft(20);
-			    table1.setMarginRight(20);
+			   // table1.setMarginLeft(10);
+			   // table1.setMarginRight(10);
 			    
 			    Cell cell1 = new Cell(2, 1)
 			            .add(new Paragraph("Scheme Name")).setTextAlignment(TextAlignment.CENTER).setBold();
@@ -200,11 +200,10 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			   
 			    
 			    
-			    
-			    Table table2 = new Table(new float[] {4f, 2f, 2f,2f,2f}, true)
+			    Table table2 = new Table(new float[] {5f, 2.5f, 2.5f,2.5f,2.5f}, true)
 		                .setWidth(UnitValue.createPercentValue(100));
-			    table2.setMarginLeft(20);
-			    table2.setMarginRight(20);
+			  //  table2.setMarginLeft(10);
+			   // table2.setMarginRight(10);
 			    Cell cell21 = new Cell(2, 1)
 			            .add(new Paragraph("Scheme Name")).setTextAlignment(TextAlignment.CENTER).setBold();
 			    table2.addCell(cell21); 
@@ -220,8 +219,10 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 		        }
 			    log.info("before loop");
 			    boolean isNewtable=false;
+			    int tbale1row=0;
 			    for (int row = 1; row < jsonArray.length(); row++) {
 			    	try {
+			    		tbale1row=tbale1row+1;
 			    	JSONObject jsonObject=jsonArray.getJSONObject(row);
 			       if(row<8) {
 			    	for (int col = 0; col < 5; col++) {
@@ -229,17 +230,17 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			        		if(row==jsonArray.length()-1) {
 			        		table1.addCell(new Cell().add(new Paragraph("Total"))).setBold();
 			        		}else {
-			        			table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER)).setBold();
+			        			table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER));
 			        		}
 			        	}else if(col==1) {
 			        		log.info("imf::: "+jsonObject.getString("imf"));
-			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT));
 			        	}else if(col==2) {
-			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT));
 			        	}else if(col==3) {
-			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+			        		table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT));
 			        	}else if(col==4) {
-			        		table1.addCell(new Cell().add(new Paragraph(Validator.isNull(jsonObject.getString("trustfee"))?"-":jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+			        		table1.addCell(new Cell().add(new Paragraph(Validator.isNull(jsonObject.getString("trustfee"))?"-":jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT));
 			        	}
 
 			        }
@@ -253,8 +254,11 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			        }
 			    try {
 	            	for (int col = 0; col < 5; col++) {
-		            //    Cell cell = table1.getCell(numRows, col);
-		               // cell.setBold();
+	            		if(!isNewtable) {
+            		    Cell cell = table1.getCell(tbale1row, col);
+	 		                cell.setBold();		
+	            		}
+		            
 		                Cell cellHeader = table1.getCell(0, col);
 		                cellHeader.setBold();
 		            }
@@ -270,25 +274,27 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 					    doc.add(para02);
 					    
 			    	doc.add(table2);
+			    	int tbale2row=0;
 				    for (int row = 8; row < jsonArray.length(); row++) {
 				    	try {
+				    		tbale2row=tbale2row+1;
 				    	JSONObject jsonObject=jsonArray.getJSONObject(row);
 				    	for (int col = 0; col < 5; col++) {
 				        	if(col==0) {
 				        		if(row==jsonArray.length()-1) {
 				        		table2.addCell(new Cell().add(new Paragraph("Total")).setTextAlignment(TextAlignment.CENTER)).setBold();
 				        		}else {
-				        			table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER)).setBold();
+				        			table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER));
 				        		}
 				        	}else if(col==1) {
 				        		log.info("imf::: "+jsonObject.getString("imf"));
-				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("imf"))).setTextAlignment(TextAlignment.RIGHT));
 				        	}else if(col==2) {
-				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("gst"))).setTextAlignment(TextAlignment.RIGHT));
 				        	}else if(col==3) {
-				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+				        		table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("total"))).setTextAlignment(TextAlignment.RIGHT));
 				        	}else if(col==4) {
-				        		table2.addCell(new Cell().add(new Paragraph(Validator.isNull(jsonObject.getString("trustfee"))?"-":jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT)).setBold();
+				        		table2.addCell(new Cell().add(new Paragraph(Validator.isNull(jsonObject.getString("trustfee"))?"-":jsonObject.getString("trustfee"))).setTextAlignment(TextAlignment.RIGHT));
 				        	}
 
 				        }
@@ -299,8 +305,8 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 				        }
 				    try {
 		            	for (int col = 0; col < 5; col++) {
-			              //  Cell cell = table1.getCell(numRows, col);
-			               // cell.setBold();
+			               // Cell cell = table2.getCell(tbale2row, col);
+			                //cell.setBold();
 			                Cell cellHeader = table2.getCell(0, col);
 			                cellHeader.setBold();
 			            }

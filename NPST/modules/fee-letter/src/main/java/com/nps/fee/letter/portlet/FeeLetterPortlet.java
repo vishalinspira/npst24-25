@@ -78,7 +78,8 @@ public class FeeLetterPortlet extends MVCPortlet {
 		//String fileName = uploadPortletRequest.getFileName("feeletter");
 		String pfmName=ParamUtil.getString(resourceRequest, "pfmName");
 		File file = uploadPortletRequest.getFile("feeletter");
-		Date receivedDate=ParamUtil.getDate(resourceRequest,"receivedDate",dateFormat);
+		String receivedDate=ParamUtil.getString(resourceRequest,"receivedDate");
+		//Date receivedDate=ParamUtil.getDate(resourceRequest,"receivedDate",dateFormat);
 		String month=ParamUtil.getString(resourceRequest,"month");
 
 		String signeturies=ParamUtil.getString(resourceRequest,"signeturies");
