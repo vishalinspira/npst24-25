@@ -228,7 +228,7 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			    	for (int col = 0; col < 5; col++) {
 			        	if(col==0) {
 			        		if(row==jsonArray.length()-1) {
-			        		table1.addCell(new Cell().add(new Paragraph("Total"))).setBold();
+			        		table1.addCell(new Cell().add(new Paragraph("Total"))).setTextAlignment(TextAlignment.CENTER);
 			        		}else {
 			        			table1.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER));
 			        		}
@@ -282,7 +282,7 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 				    	for (int col = 0; col < 5; col++) {
 				        	if(col==0) {
 				        		if(row==jsonArray.length()-1) {
-				        		table2.addCell(new Cell().add(new Paragraph("Total")).setTextAlignment(TextAlignment.CENTER)).setBold();
+				        		table2.addCell(new Cell().add(new Paragraph("Total")).setTextAlignment(TextAlignment.CENTER));
 				        		}else {
 				        			table2.addCell(new Cell().add(new Paragraph(jsonObject.getString("schemeName"))).setTextAlignment(TextAlignment.CENTER));
 				        		}
