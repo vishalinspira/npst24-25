@@ -141,7 +141,8 @@ public class FeeLetterPortlet extends MVCPortlet {
 										jsonObject.put("schemeName",val );	
 									}
 									else if (i == 2 && isSamePFM) {
-										jsonObject.put("imf", val);
+										jsonObject.put("imf", formatNumberInIndianStyle(val));
+										//formatNumberWithComma(val);
 									}
 									else if (i == 3 && isSamePFM) {
 										jsonObject.put("gst",val );
@@ -179,6 +180,76 @@ public class FeeLetterPortlet extends MVCPortlet {
 			LOG.error(e);
 		}
 }
+	public static String formatNumberInIndianStyle(String num) {
+        // Convert the number to string
+		
+      //  String numStr = number.replaceAll(",", "");
+		String numStr = "123456789";
+        LOG.info("numStr "+numStr);
+        StringBuilder result = new StringBuilder();
+
+        // Get the length of the number string
+        int len = numStr.length();
+
+        // Handle the first group of three digits
+        if (len > 3) {
+            result.append(numStr.substring(0, len - 3)).append(",");
+            numStr = numStr.substring(len - 3);
+            len = numStr.length();
+        }
+
+        // Add last three digits
+        result.append(numStr);
+
+        // Add commas for every two digits
+        for (int i = len; i > 2; i -= 2) {
+            if (i - 2 > 0) {
+                result.insert(result.length() - (len - i), ",");
+            }
+        }
+        LOG.info("result "+result.toString());
+        return result.toString();
+    }
+	private static String formatNumberWithComma(String number) {
+		LOG.info("number "+number);
+        StringBuilder result = new StringBuilder();
+        String str[]=number.split(".");
+        String decValue="";
+      /*  try {
+        decValue=str[1];
+        }catch (Exception e) {
+// TODO: handle exception
+}*/
+   //    String numberStr=str[0].replaceAll(",", "");
+        String numberStr=number;
+        int len = numberStr.length();
+
+        // Add last three digits
+        if (len > 3) {
+            result.append(numberStr.substring(len - 3));
+            result.append(",");
+        }
+
+        // Add remaining digits in pairs
+        for (int i = len - 3; i > 0; i -= 2) {
+            result.insert(0, numberStr.substring(i - 2, i) + ",");
+        }
+
+        // Add the first two digits if there are any left
+        if (len % 2 != 0) {
+            result.insert(0, numberStr.charAt(0) + ",");
+        }
+
+        // Remove any trailing comma
+        if (result.charAt(result.length() - 1) == ',') {
+            result.deleteCharAt(result.length() - 1);
+        }
+        result=result.append(".").append(decValue);
+        LOG.info("result "+ result.toString());
+        return result.toString();
+    }
+		
+	
 	private FileEntry uploadFile(File file,ThemeDisplay themeDisplay,ServiceContext serviceContext){
 		Date date=new Date();
 		FileEntry fileEntry =null;

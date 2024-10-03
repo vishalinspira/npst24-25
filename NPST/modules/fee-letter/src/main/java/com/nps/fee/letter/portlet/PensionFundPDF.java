@@ -219,7 +219,7 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 		        }
 			    log.info("before loop");
 			    boolean isNewtable=false;
-			    int tbale1row=0;
+			    int tbale1row=1;
 			    for (int row = 1; row < jsonArray.length(); row++) {
 			    	try {
 			    		tbale1row=tbale1row+1;
@@ -253,14 +253,16 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 					}
 			        }
 			    try {
+			    
 	            	for (int col = 0; col < 5; col++) {
 	            		if(!isNewtable) {
+	            			log.info("tbale1row "+tbale1row);
             		    Cell cell = table1.getCell(tbale1row, col);
 	 		                cell.setBold();		
 	            		}
 		            
-		                Cell cellHeader = table1.getCell(0, col);
-		                cellHeader.setBold();
+		               // Cell cellHeader = table1.getCell(0, col);
+		                //cellHeader.setBold();
 		            }
 	            }catch (Exception e) {
 					log.error(e);
@@ -274,7 +276,7 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 					    doc.add(para02);
 					    
 			    	doc.add(table2);
-			    	int tbale2row=0;
+			    	int tbale2row=1;
 				    for (int row = 8; row < jsonArray.length(); row++) {
 				    	try {
 				    		tbale2row=tbale2row+1;
@@ -305,10 +307,10 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 				        }
 				    try {
 		            	for (int col = 0; col < 5; col++) {
-			               // Cell cell = table2.getCell(tbale2row, col);
-			                //cell.setBold();
-			                Cell cellHeader = table2.getCell(0, col);
-			                cellHeader.setBold();
+			                Cell cell = table2.getCell(tbale2row, col);
+			                cell.setBold();
+			             //   Cell cellHeader = table2.getCell(0, col);
+			               // cellHeader.setBold();
 			            }
 		            }catch (Exception e) {
 						log.error(e.getMessage());
