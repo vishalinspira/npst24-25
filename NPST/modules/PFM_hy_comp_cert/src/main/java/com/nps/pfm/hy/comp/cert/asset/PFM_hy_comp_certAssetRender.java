@@ -12,6 +12,9 @@ import com.daily.average.service.service.ReportUploadLogLocalService;
 import com.daily.pfm.service.model.PFM_hy_comp_cert_Scrutiny;
 import com.daily.pfm.service.service.PFM_hy_comp_cert_ScrutinyLocalServiceUtil;
 import com.liferay.asset.kernel.model.BaseJSPAssetRenderer;
+import com.liferay.document.library.kernel.model.DLFileEntry;
+import com.liferay.document.library.kernel.service.DLFileEntryLocalServiceUtil;
+import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.service.UserLocalService;
@@ -157,6 +160,7 @@ public class PFM_hy_comp_certAssetRender extends BaseJSPAssetRenderer<PFM_hy_com
 				boolean isSelfAsignee=WorkFlowTaskUtil.isSelfAsignee(themeDisplay.getCompanyId(), themeDisplay.getUserId(), workflowTask.getWorkflowInstanceId());
 				httpServletRequest.setAttribute("isSelfAsignee", isSelfAsignee);
 				httpServletRequest.setAttribute("isAssignable", isAssignable);
+				httpServletRequest.setAttribute("annexUrl",getDocumentURL(pfm_hy_comp_cert.getHyccfile()) );
 		} catch(Exception e) {
 			_log.error(e);
 		}
@@ -181,6 +185,24 @@ public class PFM_hy_comp_certAssetRender extends BaseJSPAssetRenderer<PFM_hy_com
 		return "/asset/scrutiny.jsp";
 	}
 	
+	public static String getDocumentURL(long documentId) {
+		 String documentURL = StringPool.BLANK;
+		    if(Validator.isNotNull(documentId)) {
+		    	long fileEntryId = documentId;
+		    	DLFileEntry dlFileEntry = null;
+		    	try {
+		    		dlFileEntry = DLFileEntryLocalServiceUtil.getDLFileEntry(fileEntryId);
+				} catch (Exception e) {
+					_log.error("Exception in getting dlFileEntry::" + e.getMessage());
+				}
+		    	if(Validator.isNotNull(dlFileEntry)) {
+		    		documentURL = "/documents/"+dlFileEntry.getRepositoryId()+"/"+dlFileEntry.getFolderId()+"/"+dlFileEntry.getTitle();
+		    	}
+		    }
+		    return documentURL;
+		}
+	
+	
 	@Reference
 	UserLocalService userLocalService;
 	
@@ -195,6 +217,6 @@ public class PFM_hy_comp_certAssetRender extends BaseJSPAssetRenderer<PFM_hy_com
 	
 	
 	
-	Log _log = LogFactoryUtil.getLog(PFM_hy_comp_certAssetRender.class);
+	private static Log _log = LogFactoryUtil.getLog(PFM_hy_comp_certAssetRender.class);
 
 }

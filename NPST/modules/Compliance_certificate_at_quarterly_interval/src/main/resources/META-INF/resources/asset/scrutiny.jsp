@@ -84,7 +84,7 @@ JSONObject signature = JSONFactoryUtil.createJSONObject();
 	<div class="custom-modal-ui hide"  id="success-modal">
 		<div class="modal-head-ui">
 			<h2 class="modal-title-ui">Report Message</h2>
-			<a class="modal-close-ui x-mark" href="#0">&times;</a>
+			<a class="modal-close-ui x-mark" href="#">&times;</a>
 			<div class="modal-content-ui text-center">
 				<i class="" id="icon"></i>
 				<span id="output"></span>
@@ -1526,7 +1526,7 @@ JSONObject signature = JSONFactoryUtil.createJSONObject();
                            <div class="col-md-2">
                               <% if (isNonNPSUser) { %>
                              <div class="form-check form-check-inline">
-                                 <input class="" type="radio" id="FourBy" name='fourb' value="Yes"  <%=(inputQuarterlyInterval.getOneiiia()).equals("Yes")?"checked":"" %>>
+                                 <input class="" type="radio" id="FourBy" name='fourb' value="Yes"  <%=(inputQuarterlyInterval.getFourb()).equals("Yes")?"checked":"" %>>
                                  <label class="form-check-label" for="FourBy">&nbsp; Yes</label> 
                               </div>
                               <div class="form-check form-check-inline">
@@ -3580,7 +3580,12 @@ JSONObject signature = JSONFactoryUtil.createJSONObject();
                       <%-- <%if(!((isPfmSupervisor && (inputQuarterlyInterval.getIsAmRejected()==1)) || (isNonNPSUser && isDocSigned && (inputQuarterlyInterval.getIsAmRejected()!=1)))){ %> --%>
                       
                     <%--  <%if(!(isPfmSupervisor && (inputQuarterlyInterval.getIsAmRejected()==1))){ %> --%>
-     				 <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable || isSelfAsignee)){ %> 
+     				
+     				<%--  <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable || isSelfAsignee)){ %> --%> 
+     				
+     				 <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable)){ %>
+     				 
+     				 
      				<div class="row">
                      <div class="col-md-12">
                         <div class="text-center">

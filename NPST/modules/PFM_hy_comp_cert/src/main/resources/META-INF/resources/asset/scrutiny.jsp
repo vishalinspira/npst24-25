@@ -170,6 +170,16 @@ List<ReportUploadFileLog> reportUploadFileLogs = new ArrayList<ReportUploadFileL
                         <input type="text" class="rounded border-0 p-1 ml-3" id="year" name='year' value="<%=pfm_hy_comp_cert.getYear()%>" readonly>
                     </div>
 				  </div>
+				  
+				  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <div class="nps-input-box mt-0">
+                         <label class="pl-3">Half Yearly Compliance Certificate</label> <br>
+                         <a target="_blank" class="rounded border-0 p-1 ml-3" href="${empty annexUrl ? "javascript:void(0);" : annexUrl}" >download file</a><br>
+                        
+                    </div>
+				  </div>
+				  
+				  
                </div>
                <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-12 col-12">
@@ -460,7 +470,10 @@ List<ReportUploadFileLog> reportUploadFileLogs = new ArrayList<ReportUploadFileL
 				                 <%} %>
                
               <div class="row" id="sub">
-              <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable || isSelfAsignee)){ %> 
+             <%--  <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable || isSelfAsignee)){ %>  --%>
+             
+              <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable)){ %> 
+              
                   <div class="col-md-12">
                      <div class="text-center">
                         <input type="button" class="common-btn d-inline-block text-light border-0 mt-3" id="btn-submit" value="Submit">

@@ -1721,7 +1721,7 @@ if(Validator.isNull(scrutinyInputQuarterlyInterval)){
 		                    </div>
                         </div>
                         <hr/>
-                        <h5>5. Internal Auditors</h5>
+                        <h5>6. Internal Auditors</h5>
                         <hr/>
                         <div class="row">
                            <div class="col-md-1">

@@ -4,6 +4,7 @@ import com.daily.average.service.model.AnnualCompCertificate;
 import com.daily.average.service.model.DAR;
 import com.daily.average.service.model.InputQuarterlyInterval;
 import com.daily.average.service.model.MnCompCertificate;
+import com.daily.average.service.model.PFM_hy_comp_cert;
 import com.daily.average.service.model.QtrStewardshipReport;
 import com.daily.average.service.model.ReportMaster;
 import com.daily.average.service.model.ReportUploadFileLog;
@@ -19,6 +20,7 @@ import com.daily.average.service.service.AnnualCompCertificateLocalServiceUtil;
 import com.daily.average.service.service.DARLocalServiceUtil;
 import com.daily.average.service.service.InputQuarterlyIntervalLocalServiceUtil;
 import com.daily.average.service.service.MnCompCertificateLocalServiceUtil;
+import com.daily.average.service.service.PFM_hy_comp_certLocalServiceUtil;
 import com.daily.average.service.service.QtrStewardshipReportLocalServiceUtil;
 import com.daily.average.service.service.ReportMasterLocalService;
 import com.daily.average.service.service.ReportUploadFileLogLocalService;
@@ -231,6 +233,7 @@ public class ReportSummaryMVCRenderCommand implements MVCRenderCommand {
 						ReportUploadLogMaker reportUploadLogMaker = null;
 						ReportUploadLogCRA reportUploadLogCRA = null;
 						InputQuarterlyInterval inputQuarterlyInterval = null;
+						PFM_hy_comp_cert pfm_hy_comp_cert=null;
 						if(entryClassName.equalsIgnoreCase(ReportUploadLogPFM.class.getName())) {
 							urlArray = PreviewFileURLUtil.getPreviewMultiFileURL2(themeDisplay, reportUploadFileLogs);
 							try {
@@ -507,6 +510,30 @@ public class ReportSummaryMVCRenderCommand implements MVCRenderCommand {
 							}
 							if(Validator.isNotNull(dar)) {
 								makerComment = dar.getRemarks();
+							}
+						}
+						else if(entryClassName.equalsIgnoreCase(PFM_hy_comp_cert.class.getName())) {
+							try {
+								JSONArray fileList = JSONFactoryUtil.createJSONArray();
+								pfm_hy_comp_cert  = PFM_hy_comp_certLocalServiceUtil.getPFM_hy_comp_cert(applicationId);
+								JSONObject annex = JSONFactoryUtil.createJSONObject();
+								annex.put("fileEntryId", pfm_hy_comp_cert.getHyccfile());
+								annex.put("downloadURL", getDocumentURL(pfm_hy_comp_cert.getHyccfile(),renderRequest));
+								fileList.put(annex);
+								
+								
+								
+								JSONObject pdfFile = JSONFactoryUtil.createJSONObject();
+								pdfFile.put("fileEntryId", pfm_hy_comp_cert.getFileEntryId());
+								pdfFile.put("downloadURL", getDocumentURL(pfm_hy_comp_cert.getFileEntryId(),renderRequest));
+								fileList.put(pdfFile);
+								urlArray = JSONFactoryUtil.createJSONArray(); 
+								urlArray.put(JSONFactoryUtil.createJSONObject().put("fileList", fileList).put("version", 1));
+							} catch (PortalException e) {
+								LOG.error("Exception in getting reportUploadLogPfm::" + e.getMessage());
+							}
+							if(Validator.isNotNull(pfm_hy_comp_cert)) {
+								makerComment = pfm_hy_comp_cert.getRemarks();
 							}
 						}
 						else if (entryClassName.equalsIgnoreCase(QtrStewardshipReport.class.getName())) {

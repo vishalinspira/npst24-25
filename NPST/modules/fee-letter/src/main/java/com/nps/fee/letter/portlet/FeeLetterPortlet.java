@@ -145,13 +145,13 @@ public class FeeLetterPortlet extends MVCPortlet {
 										//formatNumberWithComma(val);
 									}
 									else if (i == 3 && isSamePFM) {
-										jsonObject.put("gst",val );
+										jsonObject.put("gst",formatNumberInIndianStyle(val) );
 									} 
 									else if (i == 4 && isSamePFM) {
-										jsonObject.put("total",val );
+										jsonObject.put("total",formatNumberInIndianStyle(val) );
 									}
 									else if (i == 5 && isSamePFM) {
-										jsonObject.put("trustfee", val);
+										jsonObject.put("trustfee", formatNumberInIndianStyle(val));
 									}
 							}
 						}
@@ -180,17 +180,25 @@ public class FeeLetterPortlet extends MVCPortlet {
 			LOG.error(e);
 		}
 }
-	public static String formatNumberInIndianStyle(String num) {
-        // Convert the number to string
-		
-      //  String numStr = number.replaceAll(",", "");
-		String numStr = "123456789";
-        LOG.info("numStr "+numStr);
+    public static String formatNumberInIndianStyle(String numStr) {
+    	if(numStr==null || numStr=="" || numStr.equalsIgnoreCase("")) {
+    		return numStr;
+    	}
         StringBuilder result = new StringBuilder();
-
-        // Get the length of the number string
+       numStr= numStr.replaceAll(",", "");
+       LOG.info(numStr);
+       String nums[]=numStr.split("\\.");
+       LOG.info(nums.length);
+       String decValue="";
+       numStr=nums[0];
+       try {
+			decValue="."+nums[1];		
+				}catch (Exception e) {
+					// TODO: handle exception
+				}
         int len = numStr.length();
-
+         int length = numStr.length();
+         LOG.info("len first: "+len);
         // Handle the first group of three digits
         if (len > 3) {
             result.append(numStr.substring(0, len - 3)).append(",");
@@ -202,52 +210,22 @@ public class FeeLetterPortlet extends MVCPortlet {
         result.append(numStr);
 
         // Add commas for every two digits
-        for (int i = len; i > 2; i -= 2) {
-            if (i - 2 > 0) {
-                result.insert(result.length() - (len - i), ",");
+        LOG.info("len: "+len +" result : "+result.toString());
+        for (int i = length-len; i > 1; i -= 2) {
+            if (i - 1 > 0) {
+                 result.insert(i-2, ",");
             }
         }
-        LOG.info("result "+result.toString());
-        return result.toString();
+        String finalResult=result.toString()+decValue;
+        if(finalResult.charAt(0)==',') {
+        	return finalResult.replaceFirst(",", "");
+        }else {
+        	return finalResult;
+        }
+        
     }
-	private static String formatNumberWithComma(String number) {
-		LOG.info("number "+number);
-        StringBuilder result = new StringBuilder();
-        String str[]=number.split(".");
-        String decValue="";
-      /*  try {
-        decValue=str[1];
-        }catch (Exception e) {
-// TODO: handle exception
-}*/
-   //    String numberStr=str[0].replaceAll(",", "");
-        String numberStr=number;
-        int len = numberStr.length();
+    
 
-        // Add last three digits
-        if (len > 3) {
-            result.append(numberStr.substring(len - 3));
-            result.append(",");
-        }
-
-        // Add remaining digits in pairs
-        for (int i = len - 3; i > 0; i -= 2) {
-            result.insert(0, numberStr.substring(i - 2, i) + ",");
-        }
-
-        // Add the first two digits if there are any left
-        if (len % 2 != 0) {
-            result.insert(0, numberStr.charAt(0) + ",");
-        }
-
-        // Remove any trailing comma
-        if (result.charAt(result.length() - 1) == ',') {
-            result.deleteCharAt(result.length() - 1);
-        }
-        result=result.append(".").append(decValue);
-        LOG.info("result "+ result.toString());
-        return result.toString();
-    }
 		
 	
 	private FileEntry uploadFile(File file,ThemeDisplay themeDisplay,ServiceContext serviceContext){

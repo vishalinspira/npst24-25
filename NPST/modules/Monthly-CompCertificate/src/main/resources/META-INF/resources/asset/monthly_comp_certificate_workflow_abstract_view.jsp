@@ -1439,7 +1439,10 @@
         		</div><!-- row one end --> --%>
         		
         		<div class="row text-center">
-        		 <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable || isSelfAsignee)){ %> 
+        		<%--  <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable || isSelfAsignee)){ %> --%> 
+			        
+			         <%if(!(isPfmSupervisor && isDocSigned) && (isAssignable)){ %>
+			         
 			        <div class="col-md-12">
 			        	<button type="submit" class="common-btn d-inline-block text-light border-0 mt-3"  id="btn-submit">Submit</button>
 			        	<a class="button" id="pop-up-trigger"  href="#success-modal"></a>

@@ -358,8 +358,8 @@ pfmName.addEventListener('change', function handleChange(event) {
 	   if(manpowerEmployeeId>0){
 		   var resignationDate=$("#<portlet:namespace/>resignationDate").val();
 		    console.log(resignationDate);
-		    <%-- window.location.href="<%=deleteManpowerEmployeeURL%>&<portlet:namespace /><%=ManpowerEmployeeFieldName.MANPOWER_EMPLOYEE_ID%>="+ manpowerEmployeeId+"&<portlet:namespace /><%=ManpowerEmployeeFieldName.RESIGNATION_DATE%>="+resignationDate;
-		    document.getElementById("modalOne").style.display = "none"; --%>
+		    window.location.href="<%=deleteManpowerEmployeeURL%>&<portlet:namespace /><%=ManpowerEmployeeFieldName.MANPOWER_EMPLOYEE_ID%>="+ manpowerEmployeeId+"&<portlet:namespace /><%=ManpowerEmployeeFieldName.RESIGNATION_DATE%>="+resignationDate;
+		    document.getElementById("modalOne").style.display = "none";
 	   }
 	   
    }

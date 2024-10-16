@@ -113,7 +113,7 @@ public class ReportsMigrationScheduler extends BaseMessageListener {
 	private static final Log LOG = LogFactoryUtil.getLog(ReportsMigrationScheduler.class);
 
 	//private static final String DEFAULT_CRON_EXPRESSION = "0 */10 * * * ?";
-	private static final String DEFAULT_CRON_EXPRESSION = "0 */2 * * * ?";
+	private static final String DEFAULT_CRON_EXPRESSION = "0 */5 * * * ?";
 
 	private TriggerFactory _triggerFactory;
 
