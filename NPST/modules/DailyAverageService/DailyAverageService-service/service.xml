@@ -404,8 +404,8 @@
         <column name="whether_relocated" type="String"></column>
         <column name="upgraded_relocation" type="String"></column>
 		<column name="relocation_date" type="Date" ></column>
-        <column name="uniformcode_i" type="Integer"></column>
-        <column name="uniformcode_ii" type="Integer"></column>
+        <column name="uniformcode_i" type="String"></column>
+        <column name="uniformcode_ii" type="String"></column>
      	<column name="board_line_no" type="String"></column>
         <column name="fax_no" type="String"></column>
         <column name="mobile_no" type="long"></column>
@@ -3310,7 +3310,7 @@
 		<column name="Meeting_Date" type="Date"/>
 		<column name="Resolutions" type="String"/>
 		<column name="Resolution_Details" type="String"/>
-		
+		<column name="isin" type="String"/>	
 		<column name="ses_id" type="BigDecimal"/>
 		<column name="ses_resid" type="BigDecimal"/>
 		<column name="reportingDate" type="Date" />
