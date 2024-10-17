@@ -290,8 +290,8 @@
 		<field name="whether_relocated" type="String" />
 		<field name="upgraded_relocation" type="String" />
 		<field name="relocation_date" type="Date" />
-		<field name="uniformcode_i" type="Integer" />
-		<field name="uniformcode_ii" type="Integer" />
+		<field name="uniformcode_i" type="String" />
+		<field name="uniformcode_ii" type="String" />
 		<field name="board_line_no" type="String" />
 		<field name="fax_no" type="String" />
 		<field name="mobile_no" type="long" />
@@ -3722,6 +3722,7 @@
 		<field name="Meeting_Date" type="Date" />
 		<field name="Resolutions" type="String" />
 		<field name="Resolution_Details" type="String" />
+		<field name="isin" type="String" />
 		<field name="ses_id" type="BigDecimal" />
 		<field name="ses_resid" type="BigDecimal" />
 		<field name="reportingDate" type="Date" />
