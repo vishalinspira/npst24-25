@@ -72,7 +72,7 @@
 
 			
 			<footer id="footer" role="contentinfo">		 
-				<p>&#169; 2023 - National Pension System Trust. All rights reserved.</p>                 
+				<p>&#169; 2022 - National Pension System Trust. All rights reserved.</p>                 
 			</footer>  
 		</div>
 	</div> 
