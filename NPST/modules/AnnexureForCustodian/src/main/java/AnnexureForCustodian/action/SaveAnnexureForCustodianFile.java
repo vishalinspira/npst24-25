@@ -322,11 +322,11 @@ public class SaveAnnexureForCustodianFile implements MVCResourceCommand{
 					qafc.setCustody_charges_dema_holdings((BigDecimal) decimalFormat.parse(row.getCell(2).toString().trim() == "" ? "0" : row.getCell(2).toString().trim()));
 					qafc.setNsccl_ccil_charges((BigDecimal) decimalFormat.parse(row.getCell(3).toString().trim() == "" ? "0" : row.getCell(3).toString().trim()));
 					qafc.setSebi_charges((BigDecimal) decimalFormat.parse(row.getCell(4).toString().trim() == "" ? "0" : row.getCell(4).toString().trim()));
-					qafc.setGross_bill_as_per_pf((BigDecimal) decimalFormat.parse(String.valueOf(row.getCell(5).getNumericCellValue())));
-					qafc.setBill_value_excluding_gst((BigDecimal) decimalFormat.parse(row.getCell(6).toString().trim() == "" ? "0" : row.getCell(6).toString().trim()));
-					qafc.setCgst((BigDecimal) decimalFormat.parse(row.getCell(7).toString().trim() == "" ? "0" : row.getCell(7).toString().trim()));
-					qafc.setSgst((BigDecimal) decimalFormat.parse(row.getCell(8).toString().trim() == "" ? "0" : row.getCell(8).toString().trim()));
-					qafc.setBill_value_including_gst((BigDecimal) decimalFormat.parse(row.getCell(9).toString().trim() == "" ? "0" : row.getCell(9).toString().trim()));
+					//qafc.setGross_bill_as_per_pf((BigDecimal) decimalFormat.parse(String.valueOf(row.getCell(5).getNumericCellValue())));
+					qafc.setBill_value_excluding_gst((BigDecimal) decimalFormat.parse(row.getCell(5).toString().trim() == "" ? "0" : row.getCell(6).toString().trim()));
+					qafc.setCgst((BigDecimal) decimalFormat.parse(row.getCell(7).toString().trim() == "" ? "0" : row.getCell(6).toString().trim()));
+					qafc.setSgst((BigDecimal) decimalFormat.parse(row.getCell(8).toString().trim() == "" ? "0" : row.getCell(7).toString().trim()));
+					qafc.setBill_value_including_gst((BigDecimal) decimalFormat.parse(row.getCell(8).toString().trim() == "" ? "0" : row.getCell(9).toString().trim()));
 				} catch (Exception e) {
 					_log.info("error parsing long"+e);
 					resultJsonObject.put("status", false);
@@ -334,7 +334,7 @@ public class SaveAnnexureForCustodianFile implements MVCResourceCommand{
 					return resultJsonObject;
 				}
 				try {
-					qafc.setMonth(row.getCell(10).getDateCellValue());
+					qafc.setMonth(row.getCell(9).getDateCellValue());
 				} catch (Exception e) {
 					_log.info("error parsing long"+e);
 					resultJsonObject.put("status", false);
@@ -342,7 +342,7 @@ public class SaveAnnexureForCustodianFile implements MVCResourceCommand{
 					return resultJsonObject;
 				}
 				try {
-					qafc.setAccount_number((BigDecimal) decimalFormat.parse(row.getCell(11).toString().trim() == "" ? "0" : row.getCell(11).toString().trim()));
+					qafc.setAccount_number((BigDecimal) decimalFormat.parse(row.getCell(10).toString().trim() == "" ? "0" : row.getCell(10).toString().trim()));
 				} catch (Exception e) {
 					_log.info("error parsing long"+e);
 					resultJsonObject.put("status", false);

@@ -127,7 +127,7 @@ private static Log _log = LogFactoryUtil.getLog(Form1.class);
 									}
 								} 
 								
-								else if (i == 5) {
+							/*	else if (i == 5) {
 									try {
 										BigDecimal bg = CommonParser.parseBigDecimal(val);//(isValid==true) ? BigDecimal.ZERO : (BigDecimal) decimalFormat.parse(val);
 										form1.setGross_bill_as_per_pf(bg.stripTrailingZeros());
@@ -138,7 +138,8 @@ private static Log _log = LogFactoryUtil.getLog(Form1.class);
 										return resultJsonObject;
 									}
 								}
-								else if (i == 6) {
+								*/
+								else if (i == 5) {
 									try {
 										BigDecimal bg = CommonParser.parseBigDecimal(val);// (isValid==true) ? BigDecimal.ZERO : (BigDecimal) decimalFormat.parse(val);
 										form1.setBill_value_excluding_gst(bg.stripTrailingZeros());
@@ -149,7 +150,7 @@ private static Log _log = LogFactoryUtil.getLog(Form1.class);
 										return resultJsonObject;
 									}
 								}
-								else if (i == 7) {
+								else if (i == 6) {
 									try {
 										BigDecimal bg = CommonParser.parseBigDecimal(val);//(isValid==true) ? BigDecimal.ZERO : (BigDecimal) decimalFormat.parse(val);
 										form1.setCgst(bg.stripTrailingZeros());
@@ -160,7 +161,7 @@ private static Log _log = LogFactoryUtil.getLog(Form1.class);
 										return resultJsonObject;
 									}
 								} 
-								else if (i == 8) {
+								else if (i == 7) {
 									try {
 										BigDecimal bg = CommonParser.parseBigDecimal(val);// (isValid==true) ? BigDecimal.ZERO : (BigDecimal) decimalFormat.parse(val);
 										form1.setSgst(bg.stripTrailingZeros());
@@ -171,7 +172,7 @@ private static Log _log = LogFactoryUtil.getLog(Form1.class);
 										return resultJsonObject;
 									}
 								} 
-								else if (i == 9) {
+								else if (i == 8) {
 									try {
 										BigDecimal bg = CommonParser.parseBigDecimal(val);// (isValid==true) ? BigDecimal.ZERO : (BigDecimal) decimalFormat.parse(val);
 										form1.setBill_value_including_gst(bg.stripTrailingZeros());
@@ -182,7 +183,7 @@ private static Log _log = LogFactoryUtil.getLog(Form1.class);
 										return resultJsonObject;
 									}
 								} 
-								else if (i == 10) {
+								else if (i == 9) {
 									try {
 										Date date_1 = cell.getDateCellValue();// new SimpleDateFormat("dd-MM-yyyy").parse(val);
 										form1.setMonth_(date_1);
@@ -193,7 +194,7 @@ private static Log _log = LogFactoryUtil.getLog(Form1.class);
 										return resultJsonObject;
 									}
 								} 
-								else if (i == 11) {
+								else if (i == 10) {
 									BigDecimal bg =CommonParser.parseBigDecimal(val);//(BigDecimal) decimalFormat.parse(val);
 									form1.setAccount_number(bg.stripTrailingZeros());
 								} 
