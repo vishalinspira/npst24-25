@@ -68,7 +68,7 @@ public class SaveCompliance_Report_Custodian implements MVCResourceCommand {
 		Date formDate = ParamUtil.getDate(resourceRequest, "formDate", dateFormat);
 		String remarks_i_i = ParamUtil.getString(resourceRequest, "remarks_i_i");
 		//String observe_i_i = ParamUtil.getString(resourceRequest, "observe_i_i");
-		String remarks_i_ii = ParamUtil.getString(resourceRequest, "remarks_i_ii");
+		//String remarks_i_ii = ParamUtil.getString(resourceRequest, "remarks_i_ii");
 		//String observe_i_ii = ParamUtil.getString(resourceRequest, "observe_i_ii");
 		String remarks_ii = ParamUtil.getString(resourceRequest, "remarks_ii");
 		//String observe_ii = ParamUtil.getString(resourceRequest, "observe_ii");
@@ -94,8 +94,15 @@ public class SaveCompliance_Report_Custodian implements MVCResourceCommand {
 		//String observe_xii = ParamUtil.getString(resourceRequest, "observe_xii");
 		String remarks_xiii = ParamUtil.getString(resourceRequest, "remarks_xiii");
 		//String observe_xiii = ParamUtil.getString(resourceRequest, "observe_xiii");
+		String remarks_xiv = ParamUtil.getString(resourceRequest, "remarks_xiv");
+		String remarks_xv = ParamUtil.getString(resourceRequest, "remarks_xv");
+		String remarks_xvi = ParamUtil.getString(resourceRequest, "remarks_xvi");
+		String remarks_xvii = ParamUtil.getString(resourceRequest, "remarks_xvii");
+		String remarks_xviii = ParamUtil.getString(resourceRequest, "remarks_xviii");
+		
 		String month = ParamUtil.getString(resourceRequest, "month");
 		String signature = ParamUtil.getString(resourceRequest, "signature");
+		
 		String employeeName = ParamUtil.getString(resourceRequest, "employeeName");
 		String designation = ParamUtil.getString(resourceRequest, "designation");
 		String date_3 = ParamUtil.getString(resourceRequest, "date_3");
@@ -125,8 +132,8 @@ public class SaveCompliance_Report_Custodian implements MVCResourceCommand {
 		String formDate1=month1+"/"+year;
 		
 		_log.info("reportdate"+reportDate);
-		File file=ComplianceReportCustodianPdfUtil.ComplianceReportCustodianPDF(reportUploadLogId,dateFormat.format(reportDate), formDate1,remarks_i_i,remarks_i_ii,remarks_ii,
-				remarks_iii,remarks_iv,remarks_v,remarks_vi,remarks_vii,remarks_viii,remarks_ix,remarks_x,remarks_xi,remarks_xii,remarks_xiii,month,signature,employeeName,
+		File file=ComplianceReportCustodianPdfUtil.ComplianceReportCustodianPDF(reportUploadLogId,dateFormat.format(reportDate), formDate1,remarks_i_i,remarks_ii,
+				remarks_iii,remarks_iv,remarks_v,remarks_vi,remarks_vii,remarks_viii,remarks_ix,remarks_x,remarks_xi,remarks_xii,remarks_xiii,remarks_xiv,remarks_xv,remarks_xvi,remarks_xvii,remarks_xviii,month,signature,employeeName,
 				designation,date_3,place);
 	
 		
@@ -153,11 +160,11 @@ public class SaveCompliance_Report_Custodian implements MVCResourceCommand {
 				_log.info("is not null");
 				reupload = true;
 			}
-		*/	
-			CustodianCompFormLocalServiceUtil.addCustodianCompForm(formDate,remarks_i_i, remarks_i_ii, remarks_ii, remarks_iii, 
+		*/	_log.info("line 162");
+			CustodianCompFormLocalServiceUtil.addCustodianCompForm(formDate,remarks_i_i, remarks_ii, remarks_iii, 
 					remarks_iv, remarks_v, remarks_vi, remarks_vii, remarks_viii, remarks_ix, remarks_x, remarks_xi, 
-					remarks_xii, remarks_xiii, month, signature, employeeName, designation, date_3, place, reportUploadLogId, qcfile_id);
-			
+					remarks_xii, remarks_xiii,remarks_xiv,remarks_xv,remarks_xvi,remarks_xvii,remarks_xviii, month, signature, employeeName, designation, date_3, place, reportUploadLogId, qcfile_id);
+			_log.info("line 166");
 			if(custodianCompForm != null && reupload) {
 				_log.info("custodianCompForm if "+custodianCompForm);
 				CustodianCompFormLocalServiceUtil.updateReportUploadLog(new Date(), createdBy, pdf_file_fileEntryId, true, reportUploadLogId,
@@ -167,7 +174,9 @@ public class SaveCompliance_Report_Custodian implements MVCResourceCommand {
 				CustodianCompFormLocalServiceUtil.updateReportUploadLog(new Date(), createdBy, pdf_file_fileEntryId, true, reportUploadLogId,
 						WorkflowConstants.STATUS_PENDING, createdBy, statusByUserName, new Date(), serviceContext, "", true);
 			}
-			}} catch (Exception e) {
+			_log.info("line 176");
+			}_log.info("line 177");
+			} catch (Exception e) {
 			isError = true;
 			_log.error(e.getMessage(),e);
 		}

@@ -33,6 +33,7 @@ public class Compliance_Report_Custodian_Scrutiny  implements MVCResourceCommand
 	public boolean serveResource(ResourceRequest resourceRequest, ResourceResponse resourceResponse)
 			throws PortletException {
 		
+		_log.info("Scrutiny method call");
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 		resultJsonObject.put("status", true);
 		
@@ -47,7 +48,7 @@ public class Compliance_Report_Custodian_Scrutiny  implements MVCResourceCommand
 			//String remarks_i_i = ParamUtil.getString(resourceRequest, "remarks_i_i");
 			String observe_i_i = ParamUtil.getString(resourceRequest, "observe_i_i");
 			//String remarks_i_ii = ParamUtil.getString(resourceRequest, "remarks_i_ii");
-			String observe_i_ii = ParamUtil.getString(resourceRequest, "observe_i_ii");
+		//	String observe_i_ii = ParamUtil.getString(resourceRequest, "observe_i_ii");
 			//String remarks_ii = ParamUtil.getString(resourceRequest, "remarks_ii");
 			String observe_ii = ParamUtil.getString(resourceRequest, "observe_ii");
 			//String remarks_iii = ParamUtil.getString(resourceRequest, "remarks_iii");
@@ -72,6 +73,11 @@ public class Compliance_Report_Custodian_Scrutiny  implements MVCResourceCommand
 			String observe_xii = ParamUtil.getString(resourceRequest, "observe_xii");
 			//String remarks_xiii = ParamUtil.getString(resourceRequest, "remarks_xiii");
 			String observe_xiii = ParamUtil.getString(resourceRequest, "observe_xiii");
+			String observe_xiv = ParamUtil.getString(resourceRequest, "observe_xiv");
+			String observe_xv = ParamUtil.getString(resourceRequest, "observe_xv");
+			String observe_xvi = ParamUtil.getString(resourceRequest, "observe_xvi");
+			String observe_xvii = ParamUtil.getString(resourceRequest, "observe_xvii");
+			String observe_xviii = ParamUtil.getString(resourceRequest, "observe_xviii");
 			//String month = ParamUtil.getString(resourceRequest, "month");
 			//String signature = ParamUtil.getString(resourceRequest, "signature");
 			//String employeeName = ParamUtil.getString(resourceRequest, "employeeName");
@@ -83,9 +89,9 @@ public class Compliance_Report_Custodian_Scrutiny  implements MVCResourceCommand
 			//Date reportDate =ParamUtil.getDate(resourceRequest,"reportDate",dateFormat);
 			Long createdBy = themeDisplay.getUserId();
 			
-			CustodianCompFormScrutinyLocalServiceUtil.addCustodianCompFormScrutiny(reportUploadLogId, observe_i_i, observe_i_ii, observe_ii,
+			CustodianCompFormScrutinyLocalServiceUtil.addCustodianCompFormScrutiny(reportUploadLogId, observe_i_i, observe_ii,
 					observe_iii, observe_iv, observe_v, observe_vi, observe_vii, observe_viii, observe_ix, observe_x, observe_xi, observe_xii, 
-					observe_xiii);
+					observe_xiii,observe_xiv,observe_xv,observe_xvi,observe_xvii,observe_xviii);
 			
 			try {
 				PrintWriter writer = resourceResponse.getWriter();

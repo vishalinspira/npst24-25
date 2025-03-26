@@ -149,17 +149,31 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <div class="row">
                                  <div class="col-md-9">
                                    <p class=" mb-0">To,</p>
+                                   <p class=" mb-0">The Chief Executive Officer</p>
                                    <p class=" mb-0">National Pension System Trust,</p>
-								   <p class="mb-0">Tower B, B-302, Third Floor,</p>
-								   <p class=" mb-0">World Trade Center,</p>
-                                   <p class="mb-0">Nauroji Nagar,</p>
-                                   <p class="mb-0">New Delhi-110029</p>
+								   <p class="mb-0">B-302, Third Floor,</p>
+								   <p class=" mb-0">Tower B, World Trade Center,</p>
+                                   <p class="mb-0">Nauroji Nagar, New Delhi-110029</p>
                                  </div>
                               </div>
                               <br>
                            </div>
                         </div>
                         <hr />
+                        
+                         <div class="row">
+                        	
+                           <div class="col-md-11">
+ 
+                              <p>Dear Sir/Madam,</p>
+                              <br>
+                                 <p>In my/our opinion and to the best of my/our information and according to the examinations carried out by me/us and explanations furnished to me/us, I/We certify the following in respect of the quarter mentioned above.</p>
+                             
+                           </div>
+                         </div>
+                         <br> 
+                         <hr/>
+                         
                         <div class="row">
                            <div class="col-md-1">
                               <h5>Sr.NO</h5>
@@ -180,7 +194,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>1.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Whether custodian received clear funds from PFs on T+0 basis before entering deals.</p>
+                              <p>Whether the custodian is compliant with the eligibility criteria as stipulated in the Regulation 8 of the PFRDA (Custodian of Securities) Regulations, 2015 and subsequent amendments thereof.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_i_i"  name="remarks_i_i"  <%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_i_i():"" %></textarea>
@@ -194,7 +208,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                            </div>
                         </div>
                         <hr/>
-                        <div class="row">
+                    <%--      <div class="row">
                            <div class="col-md-1">
                               <p></p>
                            </div>
@@ -207,17 +221,18 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                          <%--   <div class="col-md-2 hide">
                               <textarea class="form-control" id="prev_remarks_i_ii"  name="prev_remarks_i_ii" readonly><%=obj.get("prev_remarks_i_ii") == null ? "" : obj.get("prev_remarks_i_ii") %></textarea>
                            </div>
-                        --%>   <div class="col-md-3">
+                        --%>  <%--    <div class="col-md-3">
                               <textarea class="form-control" id="observe_i_ii"  name="observe_i_ii" readonly><%=custodianCompFormScrutiny.getObserve_i_ii() %></textarea>
                            </div>
                         </div>
                         <hr/>
+                        --%>
                         <div class="row">
                            <div class="col-md-1">
                               <p>2.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of cases where deal was not settled by custodian on settlement date and the reasons thereof.</p>
+                              <p>Whether custodian has requisite authorisation/ POA from Pension Funds.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_ii"  name="remarks_ii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_ii():"" %></textarea>
@@ -235,7 +250,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>3.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of cases where DIP/DIS was not provided by the PF.</p>
+                              <p>Whether upon receipt of instructions and clear funds from the Pension Funds for purchase of securities, the custodian has made the payment and settled the transaction as per the standard settlement process. Please provide details of the deals settled otherwise.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_iii"  name="remarks_iii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_iii():"" %></textarea>
@@ -253,7 +268,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>4.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of the cases where the Custodian holding and PF as scheme holding differs.</p>
+                              <p>Whether the custodian has received deal instructions from the Pension Funds as per the agreed procedure? Please provide details of deal instructions received otherwise.</p>
                            </div>
                             <div class="col-md-3">
                               <textarea class="form-control" id="remarks_iv"  name="remarks_iv" <%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_iv():"" %></textarea>
@@ -271,7 +286,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>5.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of the cases where the custodian holding differs from NSDL/CSDL/RBI.</p>
+                              <p>Whether the custodian has ensured that the individual holdings of securities in the pension scheme accounts are daily reconciled with the depository holdings and Constituents' Subsidiary General Ledger (CGSL) account. Please provide, details of deviations, if any.</p>
                            </div>
                             <div class="col-md-3">
                               <textarea class="form-control" id="remarks_v"  name="remarks_v"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_v():"" %></textarea>
@@ -289,7 +304,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>6.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of grievances/ complaints received from the PFs and time taken for their redressal.</p>
+                              <p>Whether the custodian has kept the securities held under NPS Trust segregated from the other securities of the custodian/ other clients</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_vi"  name="remarks_vi"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_vi():"" %></textarea>
@@ -307,10 +322,10 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>7.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of cases where corporate actions was late informed to PFs and the reasons thereof.</p>
+                              <p>Whether the custodian has encumbered, pledged, hypothecated or marked any charge or lien on the securities held under NPS, except pursuant to instructions from the Pension Funds and in accordance to guidelines issued by the Authority</p>
                            </div>
                            <div class="col-md-3">
-                              <textarea class="form-control" id="remarks_vii"  name="remarks_vii"><%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_vii():"" %></textarea>
+                              <textarea class="form-control" id="remarks_vii"  name="remarks_vii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_vii():"" %></textarea>
                            </div>
                        <%--    <div class="col-md-2 hide">
                               <textarea class="form-control" id="prev_remarks_vii"  name="prev_remarks_vii" readonly><%=obj.get("prev_remarks_vii") == null ? "" : obj.get("prev_remarks_vii") %></textarea>
@@ -325,7 +340,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>8.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Whether custodian has requisites authorization/PoA from PFs.</p>
+                              <p>Whether the custodian of securities has informed the issuer of securities in a timely manner, the exemption from income tax available to NPS Trust. Please provide details of TDS deducted, if any, on interest/coupon received.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_viii"  name="remarks_viii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_viii():"" %></textarea>
@@ -343,7 +358,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>9.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of securities which are encumbered, pledged, hypothecated or any charge or lien marked.</p>
+                              <p>Whether the custodian has, as per entitlements/ instructions from Pension Funds collected, received and deposited in the designated NPS account sale proceeds, interest, redemption value, and other corporate actions due on the holdings in respect of the securities under NPS as per the agreed timeline. Please provide details of deviations, if any.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_ix"  name="remarks_ix"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_ix():"" %></textarea>
@@ -361,7 +376,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>10.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Delay in receipt of the interest/redemption value/bonus/corporate actions in respect of the securities belonging to PFs.</p>
+                              <p>Whether the custodian has timely informed to the Pension Funds regarding the interest, redemption and other corporate actions due on their respective holdings in respect of the securities under NPS. Please provide details of delay in intimation, if any.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_x"  name="remarks_x"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_x():"" %></textarea>
@@ -379,7 +394,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>11.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of TDS deducted on interest/coupon received.</p>
+                              <p>Whether the custodian has furnished to the Pension Funds, scheme-wise holding and  transaction wise details of all purchases and sales of securities relating to the pension scheme accounts at frequencies and timeline as agreed upon </p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_xi"  name="remarks_xi" <%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xi():"" %></textarea>
@@ -397,7 +412,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>12.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of assignment or delegation of its function related to NPS.</p>
+                              <p>Whether the custodian has assigned or delegated its duties/function under NPS to any third party. If yes, please provide details.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_xii"  name="remarks_xii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xii():"" %></textarea>
@@ -415,7 +430,7 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                               <p>13.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Securities held by PFs not forming a part of F&O segment.</p>
+                              <p>Whether there are securities (equity) held by Pension Funds not forming part of Top 200 stocks published by NPS Trust</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_xiii"  name="remarks_xiii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xiii():"" %></textarea>
@@ -425,6 +440,100 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                            </div>
                          --%>   <div class="col-md-3">
                               <textarea class="form-control" id="observe_xiii"  name="observe_xiii" readonly><%=custodianCompFormScrutiny.getObserve_xiii() %></textarea >
+                           </div>
+                        </div>
+                        <hr/>
+                        
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>14.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether any grievances/ complaints have been received from the Pension Funds. If yes, please provide details of such grievances/complaints and time taken for their redressal.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xiv"  name="remarks_xiv"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xiv():"" %></textarea>
+                           </div>
+                        <%--   <div class="col-md-2 hide">
+                              <textarea class="form-control" id="prev_remarks_xiii"  name="prev_remarks_xiii" readonly><%=obj.get("prev_remarks_xiii") == null ? "" : obj.get("prev_remarks_xiii") %></textarea>
+                           </div>
+                         --%>   <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xiv"  name="observe_xiv" readonly><%=custodianCompFormScrutiny.getObserve_xiv() %></textarea >
+                           </div>
+                        </div>
+                        <hr/>
+                        
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>15.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the invoice raised by the custodian to the Pension Funds for the services rendered by it for the invoicing period is in terms of Regulation 16 of the PFRDA (Custodian of securities) Regulations, 2015 and subsequent amendments thereof and terms of appointment.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xv"  name="remarks_xv"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xv():"" %></textarea>
+                           </div>
+                        <%--   <div class="col-md-2 hide">
+                              <textarea class="form-control" id="prev_remarks_xiii"  name="prev_remarks_xiii" readonly><%=obj.get("prev_remarks_xiii") == null ? "" : obj.get("prev_remarks_xiii") %></textarea>
+                           </div>
+                         --%>   <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xv"  name="observe_xv" readonly><%=custodianCompFormScrutiny.getObserve_xv() %></textarea >
+                           </div>
+                        </div>
+                        <hr/>
+                        
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>16.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the custodian has complied with the Code of Conduct as specified in the PFRDA (Custodian of securities) Regulations, 2015 and subsequent amendments thereof.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xvi"  name="remarks_xvi"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xvi():"" %></textarea>
+                           </div>
+                        <%--   <div class="col-md-2 hide">
+                              <textarea class="form-control" id="prev_remarks_xiii"  name="prev_remarks_xiii" readonly><%=obj.get("prev_remarks_xiii") == null ? "" : obj.get("prev_remarks_xiii") %></textarea>
+                           </div>
+                         --%>   <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xvi"  name="observe_xvi" readonly><%=custodianCompFormScrutiny.getObserve_xvi() %></textarea >
+                           </div>
+                        </div>
+                        <hr/>
+                        
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>17.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the custodian has adhered to the voting policy, cyber security policy and policy on adoption of cloud services issued by the Authority</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xvii"  name="remarks_xvii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xvii():"" %></textarea>
+                           </div>
+                        <%--   <div class="col-md-2 hide">
+                              <textarea class="form-control" id="prev_remarks_xiii"  name="prev_remarks_xiii" readonly><%=obj.get("prev_remarks_xiii") == null ? "" : obj.get("prev_remarks_xiii") %></textarea>
+                           </div>
+                         --%>   <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xvii"  name="observe_xvii" readonly><%=custodianCompFormScrutiny.getObserve_xvii() %></textarea >
+                           </div>
+                        </div>
+                        <hr/>
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>18.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the custodian has taken all measures necessary for prevention of fraud and has developed and implemented a fraud prevention and mitigation policy in accordance with Regulation 19(19) of PFRDA (Custodian of Securities) Regulations, 2015 and subsequent amendments thereof and guidelines issued by the Authority.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xviii"  name="remarks_xviii"<%=isNonNPSUser ? "": "disabled" %>><%= (Validator.isNotNull(custodianCompForm))? custodianCompForm.getRemarks_xviii():"" %></textarea>
+                           </div>
+                        <%--   <div class="col-md-2 hide">
+                              <textarea class="form-control" id="prev_remarks_xiii"  name="prev_remarks_xiii" readonly><%=obj.get("prev_remarks_xiii") == null ? "" : obj.get("prev_remarks_xiii") %></textarea>
+                           </div>
+                         --%>   <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xviii"  name="observe_xviii" readonly><%=custodianCompFormScrutiny.getObserve_xviii() %></textarea >
                            </div>
                         </div>
                         <hr/>
@@ -450,7 +559,8 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                                  <!-- <p>2.  This Compliance Certificate(s) shall be put up to the Board on 
                                  	<input class="" type="date" id="month" name='month'>and the 
                                  </p> -->
-                                 <p>2.This Compliance Certificate(s)n shall be put up to the Board at its ensuing Board Meeting and the remarks related thereto, if any, would be forwarded to NPS Trust subsequently.
+                                 <p>2.This Compliance Certificate(s) shall be put up to the Board on <input class="" type="date" id="month" name='month'>
+                                 and the remarks related thereto would be forwarded to NPS Trust on subsequently. 
                                  </p>
                               </div>
                            </div >
@@ -466,13 +576,14 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
                            </div>
                            <div class="col-md-11">
                               <div class="form-group">
-                                 <p>remarks related thereto would be forwarded to NPS Trust on subsequently.</p>
+                                 <p>Certified that the Information given, herein are correct and complete to the best of my/our knowledge and belief. </p>
                               </div>
                            </div>
                          </div> 
                         <hr/>
                         <br>
-		               <div class="row">
+                        
+		                <div class="row">
 		                  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
 		                     <%-- <input type="text" class="employeeName border-0 p-2 w-100" id="employeeName" name="employeeName"> --%>
 		                     <div class="nps-input-box mt-0">
@@ -484,18 +595,43 @@ JSONObject obj = Validator.isNotNull(sd.pre_populate_maker_data(request)) ? sd.p
 		               <br>
 		               <div class="row">
 		                  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-		                  	 <label for="roles">Designation</label><br>
+		                  <div class="nps-input-box mt-0">
+		                  	 <label for="roles">Designation:</label><br>
 		                  	 <input type="text" class="designation" id="designation" name="designation">
 		                    <!--  <select class="w-100" name="designation" id="designation">
 		                     	<option value="">Select</option>
 		                        <option value="Chief Executive Officer">Chief Executive Officer  </option>
 		                     </select> -->
+		                     </div>
+		                 </div>
+		               </div>
+                       <br>
+                       
+                      
+                    <!--     <div class="row">
+		                  <div class="col-md-6">
+		                     
+		                        <label>Signature  </label>
+		                  </div>      
+		                   <div class="col-md-6">     
+		                        <label>Signature </label>
+		                    
 		                  </div>
 		               </div>
-		               
-				                   
-				                   
 		               <br>
+		               
+		                <div class="row">
+		                  <div class="col-md-6">
+		                     
+		                        <label>Compliance Officer  </label>
+		                  </div>      
+		                   <div class="col-md-6">     
+		                        <label>Chief Executive Officer/Authorized signatory </label>
+		                    
+		                  </div>
+		               </div>
+		               <br>
+                     -->   
 		               <div class="row">
 		                  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
 		                     <div class="nps-input-box mt-0">
@@ -689,9 +825,7 @@ $(document).ready(function() {
 			remarks_i_i: {
 		      required: true
 		    },
-		    remarks_i_ii: {
-			      required: true
-			},
+		   
 			remarks_ii: {
 				required: true
 			},
@@ -728,16 +862,32 @@ $(document).ready(function() {
 			remarks_xiii: {
 				required: true
 			},
-			/* month: {
+			remarks_xiv: {
 				required: true
-			}, */
-			employeeName: {
+			},
+			remarks_xv: {
+				required: true
+			},
+			remarks_xvi: {
+				required: true
+			},
+			remarks_xvii: {
+				required: true
+			},
+			remarks_xviii: {
+				required: true
+			},
+			 month: {
+				required: true
+			}, 
+		<%--	employeeName: {
 				required: true,
 				lettersonly: true
 			},
 			designation:{
 				required: true
 			},
+			--%>
 			date_3: {
 				required: true
 			},

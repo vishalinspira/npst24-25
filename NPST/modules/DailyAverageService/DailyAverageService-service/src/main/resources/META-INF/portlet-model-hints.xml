@@ -923,6 +923,11 @@
 		<field name="remarks_xi" type="String" />
 		<field name="remarks_xii" type="String" />
 		<field name="remarks_xiii" type="String" />
+		<field name="remarks_xiv" type="String" />
+		<field name="remarks_xv" type="String" />
+		<field name="remarks_xvi" type="String" />
+		<field name="remarks_xvii" type="String" />
+		<field name="remarks_xviii" type="String" />
 		<field name="month" type="String" />
 		<field name="signature" type="String" />
 		<field name="employeeName" type="String" />
@@ -962,6 +967,11 @@
 		<field name="observe_xi" type="String" />
 		<field name="observe_xii" type="String" />
 		<field name="observe_xiii" type="String" />
+		<field name="observe_xiv" type="String" />
+		<field name="observe_xv" type="String" />
+		<field name="observe_xvi" type="String" />
+		<field name="observe_xvii" type="String" />
+		<field name="observe_xviii" type="String" />
 		<field name="createdate" type="Date" />
 		<field name="createdby" type="long" />
 	</model>

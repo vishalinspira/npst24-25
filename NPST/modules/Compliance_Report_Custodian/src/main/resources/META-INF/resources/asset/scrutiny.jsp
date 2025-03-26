@@ -66,6 +66,8 @@ reportUploadFileLogs = (List<ReportUploadFileLog>) request.getAttribute("reportU
 
 boolean isCustodianSupervisor = RoleServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), NPSTRoleConstants.CUSTODIAN_SUPERVISOR, false);
 boolean isDocSigned = false;
+boolean isAssignable = Validator.isNotNull(request.getAttribute("isAssignable")) ? (boolean) request.getAttribute("isAssignable") : false;
+boolean isSelfAsignee = Validator.isNotNull(request.getAttribute("isSelfAsignee")) ? (boolean) request.getAttribute("isSelfAsignee") : false;
 JSONArray urlArray = PreviewFileURLUtil.getPreviewFileURL(themeDisplay, reportUploadFileLogs);
 String fileEntryId = "0";
 JSONObject signature = JSONFactoryUtil.createJSONObject();
@@ -149,18 +151,32 @@ for(int i=0; i<urlArray.length();i++){
                               <br>		
                               <div class="row">
                                  <div class="col-md-9">
-                                    <p class=" mb-0">To,</p>
+                                   <p class=" mb-0">To,</p>
+                                   <p class=" mb-0">The Chief Executive Officer</p>
                                    <p class=" mb-0">National Pension System Trust,</p>
-								   <p class="mb-0">Tower B, B-302, Third Floor,</p>
-								   <p class=" mb-0">World Trade Center,</p>
-                                   <p class="mb-0">Nauroji Nagar,</p>
-                                   <p class="mb-0">New Delhi-110029</p>
+								   <p class="mb-0">B-302, Third Floor,</p>
+								   <p class=" mb-0">Tower B, World Trade Center,</p>
+                                   <p class="mb-0">Nauroji Nagar, New Delhi-110029</p>
                                  </div>
                               </div>
                               <br>
                            </div>
                         </div>
                         <hr />
+                        
+                         <div class="row">
+                        	
+                           <div class="col-md-11">
+ 
+                              <p>Dear Sir/Madam,</p>
+                              <br>
+                                 <p>In my/our opinion and to the best of my/our information and according to the examinations carried out by me/us and explanations furnished to me/us, I/We certify the following in respect of the quarter mentioned above.</p>
+                             
+                           </div>
+                         </div> 
+                         <br> 
+                         <hr/>
+                         
                         <div class="row">
                            <div class="col-md-1">
                               <h5>Sr.NO</h5>
@@ -181,7 +197,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>1.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Whether custodian received clear funds from PFs on T+0 basis before entering deals.</p>
+                              <p>Whether the custodian is compliant with the eligibility criteria as stipulated in the Regulation 8 of the PFRDA (Custodian of Securities) Regulations, 2015 and subsequent amendments thereof.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_i_i" readonly><%= custodianCompForm.getRemarks_i_i() %></textarea>
@@ -191,7 +207,7 @@ for(int i=0; i<urlArray.length();i++){
                            </div>
                         </div>
                         <hr/>
-                        <div class="row">
+                 <%--        <div class="row">
                            <div class="col-md-1">
                               <p></p>
                            </div>
@@ -206,12 +222,13 @@ for(int i=0; i<urlArray.length();i++){
                            </div>
                         </div>
                         <hr/>
+                        --%>
                         <div class="row">
                            <div class="col-md-1">
                               <p>2.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of cases where deal was not settled by custodian on settlement date and the reasons thereof.</p>
+                              <p>Whether custodian has requisite authorisation/ POA from Pension Funds.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_ii"  readonly><%= custodianCompForm.getRemarks_ii() %></textarea>
@@ -226,7 +243,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>3.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of cases where DIP/DIS was not provided by the PF.</p>
+                              <p>Whether upon receipt of instructions and clear funds from the Pension Funds for purchase of securities, the custodian has made the payment and settled the transaction as per the standard settlement process. Please provide details of the deals settled otherwise.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_iii" readonly><%= custodianCompForm.getRemarks_iii() %></textarea>
@@ -241,7 +258,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>4.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of the cases where the Custodian holding and PF’s scheme holding differs.</p>
+                              <p>Whether the custodian has received deal instructions from the Pension Funds as per the agreed procedure? Please provide details of deal instructions received otherwise.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_iv"  readonly><%= custodianCompForm.getRemarks_iv() %></textarea>
@@ -256,7 +273,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>5.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of the cases where the custodian holding differs from NSDL/CSDL/RBI.</p>
+                              <p>Whether the custodian has ensured that the individual holdings of securities in the pension scheme accounts are daily reconciled with the depository holdings and Constituents' Subsidiary General Ledger (CGSL) account. Please provide, details of deviations, if any.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_v"  readonly><%= custodianCompForm.getRemarks_v() %></textarea>
@@ -271,7 +288,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>6.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of grievances/ complaints received from the PFs and time taken for their redressal.</p>
+                              <p>Whether the custodian has kept the securities held under NPS Trust segregated from the other securities of the custodian/ other clients</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_vi"  readonly><%= custodianCompForm.getRemarks_vi() %></textarea>
@@ -286,7 +303,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>7.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Number of cases where corporate actions was late informed to PFs and the reasons thereof.</p>
+                              <p>Whether the custodian has encumbered, pledged, hypothecated or marked any charge or lien on the securities held under NPS, except pursuant to instructions from the Pension Funds and in accordance to guidelines issued by the Authority</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_vii"  readonly><%= custodianCompForm.getRemarks_vii() %></textarea>
@@ -301,7 +318,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>8.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Whether custodian has requisites authorization/PoA from PFs.</p>
+                              <p>Whether the custodian of securities has informed the issuer of securities in a timely manner, the exemption from income tax available to NPS Trust. Please provide details of TDS deducted, if any, on interest/coupon received.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_viii"  readonly><%= custodianCompForm.getRemarks_viii() %></textarea>
@@ -316,7 +333,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>9.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of securities which are encumbered, pledged, hypothecated or any charge or lien marked.</p>
+                              <p>Whether the custodian has, as per entitlements/ instructions from Pension Funds collected, received and deposited in the designated NPS account sale proceeds, interest, redemption value, and other corporate actions due on the holdings in respect of the securities under NPS as per the agreed timeline. Please provide details of deviations, if any.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_ix"  readonly><%= custodianCompForm.getRemarks_ix() %></textarea>
@@ -331,7 +348,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>10.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Delay in receipt of the interest/redemption value/bonus/corporate actions in respect of the securities belonging to PFs.</p>
+                              <p>Whether the custodian has timely informed to the Pension Funds regarding the interest, redemption and other corporate actions due on their respective holdings in respect of the securities under NPS. Please provide details of delay in intimation, if any.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_x"  readonly><%= custodianCompForm.getRemarks_x() %></textarea>
@@ -346,7 +363,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>11.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of TDS deducted on interest/coupon received.</p>
+                              <p>Whether the custodian has furnished to the Pension Funds, scheme-wise holding and transaction wise details of all purchases and sales of securities relating to the pension scheme accounts at frequencies and timeline as agreed upon </p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_xi"  readonly><%= custodianCompForm.getRemarks_xi() %></textarea>
@@ -361,7 +378,7 @@ for(int i=0; i<urlArray.length();i++){
                               <p>12.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Details of assignment or delegation of its function related to NPS.</p>
+                              <p>Whether the custodian has assigned or delegated its duties/function under NPS to any third party. If yes, please provide details.</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_xii"  readonly><%= custodianCompForm.getRemarks_xii() %></textarea>
@@ -376,13 +393,88 @@ for(int i=0; i<urlArray.length();i++){
                               <p>13.</p>
                            </div>
                            <div class="col-md-5">
-                              <p>Securities held by PFs not forming a part of F&O segment.</p>
+                              <p>Whether there are securities (equity) held by Pension Funds not forming part of Top 200 stocks published by NPS Trust</p>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="remarks_xiii"  readonly><%= custodianCompForm.getRemarks_xiii() %></textarea>
                            </div>
                            <div class="col-md-3">
                               <textarea class="form-control" id="observe_xiii"  name="observe_xiii" <%=isNonNPSUser ? "disabled": "" %>><%=custodianCompFormScrutiny.getObserve_xiii()%></textarea>
+                           </div>
+                        </div>
+                        <hr/>
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>14.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether any grievances/ complaints have been received from the Pension Funds. If yes, please provide details of such grievances/complaints and time taken for their redressal.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xiv"  readonly><%= custodianCompForm.getRemarks_xiv() %></textarea>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xiv"  name="observe_xiv" <%=isNonNPSUser ? "disabled": "" %>><%=custodianCompFormScrutiny.getObserve_xiv()%></textarea>
+                           </div>
+                        </div>
+                        <hr/>
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>15.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the invoice raised by the custodian to the Pension Funds for the services rendered by it for the invoicing period is in terms of Regulation 16 of the PFRDA (Custodian of securities) Regulations, 2015 and subsequent amendments thereof and terms of appointment.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xv"  readonly><%= custodianCompForm.getRemarks_xv() %></textarea>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xv"  name="observe_xv" <%=isNonNPSUser ? "disabled": "" %>><%=custodianCompFormScrutiny.getObserve_xv()%></textarea>
+                           </div>
+                        </div>
+                        <hr/>
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>16.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the custodian has complied with the Code of Conduct as specified in the PFRDA (Custodian of securities) Regulations, 2015 and subsequent amendments thereof.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xvi"  readonly><%= custodianCompForm.getRemarks_xvi() %></textarea>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xvi"  name="observe_xvi" <%=isNonNPSUser ? "disabled": "" %>><%=custodianCompFormScrutiny.getObserve_xvi()%></textarea>
+                           </div>
+                        </div>
+                        <hr/>
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>17.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the custodian has adhered to the voting policy, cyber security policy and policy on adoption of cloud services issued by the Authority</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xvii"  readonly><%= custodianCompForm.getRemarks_xvii() %></textarea>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xvii"  name="observe_xvii" <%=isNonNPSUser ? "disabled": "" %>><%=custodianCompFormScrutiny.getObserve_xvii()%></textarea>
+                           </div>
+                        </div>
+                        <hr/>
+                         <div class="row">
+                           <div class="col-md-1">
+                              <p>18.</p>
+                           </div>
+                           <div class="col-md-5">
+                              <p>Whether the custodian has taken all measures necessary for prevention of fraud and has developed and implemented a fraud prevention and mitigation policy in accordance with Regulation 19(19) of PFRDA (Custodian of Securities) Regulations, 2015 and subsequent amendments thereof and guidelines issued by the Authority.</p>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="remarks_xviii"  readonly><%= custodianCompForm.getRemarks_xviii() %></textarea>
+                           </div>
+                           <div class="col-md-3">
+                              <textarea class="form-control" id="observe_xviii"  name="observe_xviii" <%=isNonNPSUser ? "disabled": "" %>><%=custodianCompFormScrutiny.getObserve_xviii()%></textarea>
                            </div>
                         </div>
                         <hr/>
@@ -403,19 +495,19 @@ for(int i=0; i<urlArray.length();i++){
                               <div class="form-group">
                               </div>
                            </div>
-                           <div class="col-md-6">
+                           <div class="col-md-11">
                               <div class="form-group">
                                  <%-- <p>2.  This Compliance Certificate(s) shall be put up to the Board on 
                                  	<input class="" type="text" id="month" value="<%= custodianCompForm.getMonth() %>" readonly >and the 
                                  </p> --%>
-                                 <p>2.This Compliance Certificate(s)n shall be put up to the Board at its ensuing Board Meeting and the remarks related thereto, if any, would be forwarded to NPS Trust subsequently.
+                                 <p>2.This Compliance Certificate(s) shall be put up to the Board on <%= custodianCompForm.getMonth()%> and the remarks related thereto would be forwarded to NPS Trust on subsequently. 
                                  </p>
                               </div>
                            </div >
-                           <div class="col-md-5">
+                         <!--  <div class="col-md-5">
                               <div class="form-group">
                               </div>
-                           </div>
+                           </div>  --> 
                          </div>
                          <div class="row">
                          	<div class="col-md-1">
@@ -424,15 +516,16 @@ for(int i=0; i<urlArray.length();i++){
                            </div>
                            <div class="col-md-11">
                               <div class="form-group">
-                                 <p>remarks related thereto would be forwarded to NPS Trust on subsequently.</p>
+                                 <p>Certified that the Information given, herein are correct and complete to the best of my/our knowledge and belief. </p>
                               </div>
                            </div>
                          </div> 
                         <hr/>
                         <br>
-		               <div class="row">
+                        
+		                <div class="row">
 		                  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-		                     <%-- <input type="text" class="employeeName border-0 p-2 w-100" id="employeeName" name="<portlet:namespace />employeeName"> --%>
+		                     <%-- <input type="text" class="employeeName border-0 p-2 w-100" id="employeeName" name="<portlet:namespace />employeeName">  --%>
 		                     <div class="nps-input-box mt-0">
 		                        <label>Name: </label>
 		                        <input type="text" class="employeeName" id="employeeName" value="<%= custodianCompForm.getEmployeeName() %>" readonly >
@@ -442,11 +535,39 @@ for(int i=0; i<urlArray.length();i++){
 		               <br>
 		               <div class="row">
 		                  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+		                   <div class="nps-input-box mt-0">
 		                  	 <label for="roles">Designation</label><br>
-		                     	<label class="form-check-label">&nbsp; <%= custodianCompForm.getDesignation() %></label>
+		                     <!-- <label class="form-check-label">&nbsp;  custodianCompForm.getDesignation() </label> -->	
+		                     <input type="text" class="designation" id="designation" value="<%= custodianCompForm.getDesignation() %>" readonly >
+		                  </div>
 		                  </div>
 		               </div>
 		               <br>
+		               
+		               <%--   <div class="row">
+		                  <div class="col-md-6">
+		                     
+		                        <label>Signature  </label>
+		                  </div>      
+		                   <div class="col-md-6">     
+		                        <label>Signature </label>
+		                    
+		                  </div>
+		               </div>
+		               <br>
+		               
+		                <div class="row">
+		                  <div class="col-md-6">
+		                     
+		                        <label>Compliance Officer  </label>
+		                  </div>      
+		                   <div class="col-md-6">     
+		                        <label>Chief Executive Officer/Authorized signatory </label>
+		                    
+		                  </div>
+		               </div>
+		               <br>
+		                --%>
 		               <div class="row">
 		                  <div class="col-lg-6 col-md-6 col-sm-12 col-12">
 		                     <div class="nps-input-box mt-0">
@@ -465,6 +586,8 @@ for(int i=0; i<urlArray.length();i++){
 		                  </div>
 		               </div>
 		               <br>
+		               
+		               <%if((isAssignable)|| (isSelfAsignee)){ %>
                       <div class="row text-center">
 		                  <div class="col-md-12">
 		                     <%-- <input type="submit" class="common-btn d-inline-block text-light border-0 mt-3" id="btn-submit" <%=isNonNPSUser ? "disabled": "" %> value="Submit"> --%>
@@ -472,6 +595,7 @@ for(int i=0; i<urlArray.length();i++){
 		                     <a class="button" id="pop-up-trigger"  href="#success-modal"></a>
 		                  </div>
 		               </div>
+		                <%} %>
                   </div>
                </form>
             </div>
@@ -578,6 +702,7 @@ var SDWebServerUrl = "https://dsc.npstrust.net";
 var SDWebServerAuthTokenByUserPortalUrl = "/o/dsc/getAuthToken";
 var sdWebServerUrl = "https://dsc.npstrust.net";
 var sdWebServerAuthTokenByUserPortalUrl = "/o/dsc/getAuthToken";
+let signature = <%= signature.toString() %>;
 
 <% if(!isDocSigned){ %>
 	$("a[id='<portlet:namespace/>Forward to NPSTtaskChangeStatusLink']").bind("click", false);
@@ -585,8 +710,14 @@ var sdWebServerAuthTokenByUserPortalUrl = "/o/dsc/getAuthToken";
 	let sigsub = signature.SelCertSubject.substring(signature.SelCertSubject.indexOf("CN="));
 	$("h6.signedmsg").append(" by "+sigsub.split(",")[0].split("=")[1]); 
 	$("a[id='<portlet:namespace/>Forward to NPSTtaskChangeStatusLink']").unbind("click");
-<% } %>
+<% } %> 
 $(function(){
+	$("textarea").each(function () {
+		this.setAttribute("style", "height:" + (this.scrollHeight) + "px;overflow-y:hidden;");
+	}).on("input", function () {
+		this.style.height = 0;
+		this.style.height = (this.scrollHeight) + "px";
+	});
 	console.log("doc load");
 	$(document).on('click', '#signFile', function(event) {
 		//e.preventDefault();
@@ -601,7 +732,7 @@ $(function(){
 			fd.append("fileEntryId", "<%=fileEntryId%>");
 			fd.append("sDHubConnectionIdFromBrowser", sdHubConnectionId);
 			fd.append("certificateFromBrowser", encodeURIComponent(CertInfo.Cert));
-			if(CertInfo.eMail === themeDisplay.getUserEmailAddress()){
+			if(CertInfo.eMail.toUpperCase() === themeDisplay.getUserEmailAddress().toUpperCase()){
 				$.ajax({
 		            url: '/o/dsc/signPDF',  
 		            type: 'POST',
@@ -644,7 +775,9 @@ $(document).ready(function() {
 	$(function(){
 
 			$('#btn-submit').on('click', function(e){ 
+				
 				e.preventDefault();
+				console.log("Javascript starts");
 				//default
 				if($("#success-modal").hasClass("hide")){
 					$("#success-modal").removeClass("hide");

@@ -34,14 +34,15 @@ public class CustodianCompFormScrutinyLocalServiceImpl
 		return custodianCompFormScrutinyPersistence.fetchByReportUploadLogId(reportUploadLogId);
 	}
 	
-	public CustodianCompFormScrutiny addCustodianCompFormScrutiny(long reportUploadLogId, String observe_i_i, String Observe_i_ii, String Observe_ii, String Observe_iii, String Observe_iv,
-			String Observe_v, String Observe_vi, String Observe_vii, String Observe_viii, String Observe_ix, String Observe_x, String Observe_xi, String Observe_xii, String Observe_xiii) {
+	public CustodianCompFormScrutiny addCustodianCompFormScrutiny(long reportUploadLogId, String observe_i_i, String Observe_ii, String Observe_iii, String Observe_iv,
+			String Observe_v, String Observe_vi, String Observe_vii, String Observe_viii, String Observe_ix, String Observe_x, String Observe_xi, String Observe_xii, String Observe_xiii,
+			String Observe_xiv,String Observe_xv,String Observe_xvi,String Observe_xvii,String Observe_xviii) {
 		
 		CustodianCompFormScrutiny custodianCompFormScrutiny = custodianCompFormScrutinyPersistence.create(CounterLocalServiceUtil.increment(CustodianCompFormScrutiny.class.getName()));
 		
 		custodianCompFormScrutiny.setReportUploadLogId(reportUploadLogId);
 		custodianCompFormScrutiny.setObserve_i_i(observe_i_i);
-		custodianCompFormScrutiny.setObserve_i_ii(Observe_i_ii);
+		//custodianCompFormScrutiny.setObserve_i_ii(Observe_i_ii);
 		custodianCompFormScrutiny.setObserve_ii(Observe_ii);
 		custodianCompFormScrutiny.setObserve_iii(Observe_iii);
 		custodianCompFormScrutiny.setObserve_iv(Observe_iv);
@@ -54,6 +55,11 @@ public class CustodianCompFormScrutinyLocalServiceImpl
 		custodianCompFormScrutiny.setObserve_xi(Observe_xi);
 		custodianCompFormScrutiny.setObserve_xii(Observe_xii);
 		custodianCompFormScrutiny.setObserve_xiii(Observe_xiii);
+		custodianCompFormScrutiny.setObserve_xiv(Observe_xiv);
+		custodianCompFormScrutiny.setObserve_xv(Observe_xv);
+		custodianCompFormScrutiny.setObserve_xvi(Observe_xvi);
+		custodianCompFormScrutiny.setObserve_xvii(Observe_xvii);
+		custodianCompFormScrutiny.setObserve_xviii(Observe_xviii);
 		
 		return custodianCompFormScrutinyPersistence.update(custodianCompFormScrutiny);
 	}

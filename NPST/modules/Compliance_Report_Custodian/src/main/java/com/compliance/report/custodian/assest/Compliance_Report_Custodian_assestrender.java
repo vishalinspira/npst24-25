@@ -2,6 +2,7 @@ package com.compliance.report.custodian.assest;
 
 import com.compliance.report.custodian.util.ComplianceReportCustodianUtil;
 import com.daily.average.service.model.CustodianCompForm;
+import com.daily.average.service.model.MnCompCertificate;
 import com.daily.average.service.model.ReportMaster;
 import com.daily.average.service.model.ReportUploadFileLog;
 import com.daily.average.service.service.ReportMasterLocalService;
@@ -17,6 +18,7 @@ import com.liferay.portal.kernel.theme.ThemeDisplay;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
+import com.liferay.portal.kernel.workflow.WorkflowTask;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -29,6 +31,8 @@ import javax.portlet.PortletResponse;
 import javax.servlet.http.HttpServletRequest;
 
 import org.osgi.service.component.annotations.Reference;
+
+import nps.common.service.util.WorkFlowTaskUtil;
 
 public class Compliance_Report_Custodian_assestrender extends BaseJSPAssetRenderer<CustodianCompForm> {
 	
@@ -116,6 +120,16 @@ public class Compliance_Report_Custodian_assestrender extends BaseJSPAssetRender
 				try {
 					ReportMaster reportMaster = ReportMasterLocalServiceUtil.getReportMaster(custodianCompForm.getReportMasterId());
 					reportName = reportMaster.getReportName() + (Validator.isNotNull(reportMaster.getCra()) ? " - " + reportMaster.getCra() : "");
+					
+					WorkflowTask workflowTask= WorkFlowTaskUtil.getWorkFlowtask(CustodianCompForm.class.getName(), custodianCompForm.getReportUploadLogId(), themeDisplay.getCompanyId(), themeDisplay.getScopeGroupId(), themeDisplay.getUserId());
+					boolean isAssignable= WorkFlowTaskUtil.isAssignable(themeDisplay.getCompanyId(), themeDisplay.getUserId(), workflowTask.getWorkflowTaskId());
+					boolean isSelfAsignee=WorkFlowTaskUtil.isSelfAsignee(themeDisplay.getCompanyId(), themeDisplay.getUserId(), workflowTask.getWorkflowInstanceId());
+					httpServletRequest.setAttribute("isSelfAsignee", isSelfAsignee);
+					httpServletRequest.setAttribute("isAssignable", isAssignable);
+					_log.info("isAssignable "+isAssignable);
+					_log.info("isSelfAsignee"+ isSelfAsignee);
+					
+					
 				} catch (Exception e) {
 					_log.error("Exception on getting report file name : "+e.getMessage());
 				}
