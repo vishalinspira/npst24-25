@@ -96,7 +96,7 @@
 </style>
 
 <script type="text/javascript">
-  
+var url='<%=misResourceURL %>';
   $(document).ready(function() {
 	  toastr.options = {
 			  "debug": false,
@@ -137,7 +137,7 @@
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${misResourceURL}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

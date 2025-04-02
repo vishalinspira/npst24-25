@@ -21,6 +21,7 @@ import com.liferay.portal.kernel.util.PortalUtil;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.unaudited.financial.constants.unauditedfinancialPortletKeys;
+import com.unaudited.financial.portlet.ValidateFileName;
 
 import java.io.File;
 import java.io.IOException;
@@ -82,13 +83,21 @@ public class SaveUnauditedFinancial implements MVCResourceCommand{
 		
 
 		Long fileEntryId = 0l;
+		String fileName = uploadPortletRequest.getFileName("unaditedfinancial");
+		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		fileEntryId = uploadFILETOFOLDER(themeDisplay, resourceRequest);
 		
 		String remarks = ParamUtil.getString(uploadPortletRequest, "remarks");
 		updateReportLog ( userId, fileEntryId, true, reportUploadLogId,  WorkflowConstants.STATUS_PENDING, statusByUserName, serviceContext,remarks);
 		
-		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		
 		resultJsonObject.put("status", true);
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 		return resultJsonObject;
 	}
 	

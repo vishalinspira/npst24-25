@@ -126,7 +126,7 @@
 
 
 <script>
-
+var url='<%= uploadReportsResourceCommandURL%>';
 $(document).ready(function() {
 	console.log("welocme to Grivannces::::::::::::::::::");
 	  toastr.options = {
@@ -168,7 +168,7 @@ $(document).ready(function() {
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${uploadReportsResourceCommandURL}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

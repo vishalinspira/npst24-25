@@ -77,6 +77,7 @@ import CRA_Quaterly_data.Util.QrExitAndWithdrawal_1;
 import CRA_Quaterly_data.Util.QrGapAnalysis_9;
 import CRA_Quaterly_data.Util.QrSectorWiseAgeingAnalysis_4;
 import CRA_Quaterly_data.Util.QrSectoralAnalysis_2;
+import CRA_Quaterly_data.Util.ValidateFileName;
 import CRA_Quaterly_data.constants.CRA_Quaterly_dataPortletKeys;
 import nps.common.service.util.CommonParser;
 import nps.email.api.api.ExcelValidationAn10Api;
@@ -185,6 +186,7 @@ public class CRA_Quaterly_data_MVCResources implements MVCResourceCommand{
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 		//resultJsonObject.put("status",true);
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -332,6 +334,11 @@ public class CRA_Quaterly_data_MVCResources implements MVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

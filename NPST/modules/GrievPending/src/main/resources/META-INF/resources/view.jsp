@@ -135,6 +135,7 @@
 			</div>
 		 
 		<script type="text/javascript">
+		var url='<%=savegrievpendingURL %>';
 		$(document).ready(function() {
 			toastr.options = {
 					  "debug": false,
@@ -169,7 +170,7 @@
 		        $("#error-grievpendingFile").html("");
 		        $.ajax({
 		        	
-		            url: '<%=savegrievpendingURL %>',  
+		            url: url,  
 		            type: 'POST',
 		            data: fd,
 		            success:function(data){

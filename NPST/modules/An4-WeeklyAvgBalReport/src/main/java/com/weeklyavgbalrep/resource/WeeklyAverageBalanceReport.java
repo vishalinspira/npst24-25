@@ -59,6 +59,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.osgi.service.component.annotations.Component;
 
 import An4.WeeklyAvgBalReport.constants.An4WeeklyAvgBalReportPortletKeys;
+import An4.WeeklyAvgBalReport.portlet.ValidateFileName;
 import compliance.service.model.WeeklyAvgBal;
 import compliance.service.service.WeeklyAvgBalLocalServiceUtil;
 import nps.common.service.util.CommonParser;
@@ -119,7 +120,7 @@ public class WeeklyAverageBalanceReport implements MVCResourceCommand {
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 		JSONArray errorArray = JSONFactoryUtil.createJSONArray();
 		XSSFWorkbook workbook = null;
-		
+		if(ValidateFileName.isValidfile(fileName)) {
 		DecimalFormatSymbols symbols = new DecimalFormatSymbols();
 		symbols.setGroupingSeparator(',');
 		symbols.setDecimalSeparator('.');
@@ -327,6 +328,11 @@ public class WeeklyAverageBalanceReport implements MVCResourceCommand {
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 			return resultJsonObject;
 		}
 	

@@ -5,6 +5,7 @@ import com.daily.average.service.service.ReportUploadLogGrievancesLocalServiceUt
 import com.intimation.apy.constants.FinalIntimationAPYPortletKeys;
 import com.intimation.apy.util.Apy;
 import com.intimation.apy.util.ApyGrievance;
+import com.intimation.apy.util.ValidateFileName;
 import com.liferay.document.library.kernel.model.DLFileEntry;
 import com.liferay.document.library.kernel.model.DLFolderConstants;
 import com.liferay.document.library.kernel.service.DLAppServiceUtil;
@@ -130,6 +131,7 @@ public class InitimationAPY implements MVCResourceCommand {
 		List<MnAPY> apyList = new ArrayList<MnAPY>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -236,6 +238,11 @@ public class InitimationAPY implements MVCResourceCommand {
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

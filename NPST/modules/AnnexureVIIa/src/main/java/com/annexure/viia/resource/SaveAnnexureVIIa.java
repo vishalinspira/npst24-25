@@ -4,6 +4,7 @@ package com.annexure.viia.resource;
 import com.annexure.viia.constants.AnnexureVIIaPortletKeys;
 import com.annexure.viia.util.ParseSheetOne;
 import com.annexure.viia.util.ParseSheetTwo;
+import com.annexure.viia.util.ValidateFileName;
 import com.daily.average.service.model.AnnexviiaKfintech;
 import com.daily.average.service.model.AnnexviiaNsdl;
 import com.daily.average.service.service.AnnexviiaKfintechLocalServiceUtil;
@@ -97,6 +98,7 @@ public class SaveAnnexureVIIa implements MVCResourceCommand{
 		String title = fileName;
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 			if(resultJsonObject.getBoolean("status")) {
 				
@@ -190,6 +192,11 @@ public class SaveAnnexureVIIa implements MVCResourceCommand{
 					}
 				}
 			}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 		return resultJsonObject;
 	}
 	@SuppressWarnings("deprecation")

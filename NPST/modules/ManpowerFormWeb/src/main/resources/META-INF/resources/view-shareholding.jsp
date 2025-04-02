@@ -1,4 +1,5 @@
 
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
 <%@page import="npst.common.util.NpstCommonUtil"%>
 <%@page import="com.nps.manpower.util.ManpowerUtil"%>
 <%@page import="com.nps.manpower.constants.ManpowerDirectorHoldingFieldName"%>
@@ -14,7 +15,7 @@
 <%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%@page import="com.nps.manpower.constants.ManpowerEmployeeFieldLabel"%>
 <%@ include file="/init.jsp" %>
- <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery-1.8.2.min.js"></script>
+ <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery-3.6.0.min.js"></script>
  <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery.dataTables.min.js"></script>
 <link href="<%=request.getContextPath()%>/css/jquery.dataTables.css" type="text/css"  rel="stylesheet">
 <portlet:renderURL var="addShareHoldingURL" windowState="<%=LiferayWindowState.NORMAL.toString()%>">
@@ -61,9 +62,9 @@
 					for(ManpowerDirectorHolding manpowerDirectorHolding:manpowerDirectorHoldings){ %>
 					<tr>
 						<td><%=count++ %></td>
-						<td class="tbdata"><%=manpowerDirectorHolding.getCompanyName() %></td>
-						<td class="tbdata"><%=manpowerDirectorHolding.getConcern() %></td>
-						<td class="tbdata"><%=manpowerDirectorHolding.getShareHolding() %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirectorHolding.getCompanyName()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirectorHolding.getConcern()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirectorHolding.getShareHolding()) %></td>
 						<td class="tbdata"><%=NpstCommonUtil.getDateString(manpowerDirectorHolding.getConcernDate()) %></td>
 						<%if(hasPermission){ %>
 						<td class="tbdata">

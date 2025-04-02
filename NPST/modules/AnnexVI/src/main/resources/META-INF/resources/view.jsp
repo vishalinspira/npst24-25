@@ -235,6 +235,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 	</div>
 </div> --%>
 <script type="text/javascript">
+var url='<%= annexviURL%>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -311,7 +312,7 @@ $(function(){
         $(".animaion").show();
         $("#error-annexviFile").html("");
         $.ajax({
-            url: '<%=annexviURL %>',  
+            url: url,  
             type: 'POST',
             data: fd,
             success:function(data){

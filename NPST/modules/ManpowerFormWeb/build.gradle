@@ -5,7 +5,7 @@ dependencies {
 //compile project(":modules:nps-manpower:nps-manpower-api")
 //compile project(":modules:nps-manpower:nps-manpower-service")
 compileOnly project(":modules:npst-manpower:npst-manpower-api")
-//compileOnly project(":modules:npst-manpower:npst-manpower-service")
+compileOnly project(":modules:npst-manpower:npst-manpower-service")
 compileOnly project(":modules:npst-common")
 compileOnly project(":modules:nps-common-service")
 	compileOnly project(":modules:nps-email-api")

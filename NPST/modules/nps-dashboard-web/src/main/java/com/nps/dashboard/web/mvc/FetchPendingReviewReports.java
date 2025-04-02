@@ -80,6 +80,7 @@ import com.liferay.portal.kernel.portlet.PortletURLFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCResourceCommand;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.OrderByComparatorFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -714,7 +715,7 @@ public class FetchPendingReviewReports  extends BaseMVCResourceCommand {
 						}
 						
 						if(dlFileEntry!=null) {
-							jsonObject.put("fileName", dlFileEntry.getFileName());
+							jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
 							jsonObject.put("createDate", dateFormat.format(dlFileEntry.getCreateDate()));
 							jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 							jsonObject.put("status", WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase());
@@ -744,9 +745,9 @@ public class FetchPendingReviewReports  extends BaseMVCResourceCommand {
 						
 						jsonObject.put("moduleName", reportName);
 						jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-						jsonObject.put("remarks", comment);
+						jsonObject.put("remarks", HtmlUtil.escape(comment));
 						
-						jsonObject.put("intermediaryName", intermediaryName);
+						jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 						jsonObject.put("assignedTo", currentlyAssignedUserName.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 						jsonObject.put("dueDate", dueDate);
 						

@@ -91,6 +91,7 @@ public class SaveEvotingSummaryPfm implements MVCResourceCommand{
 
 		String mimeType = uploadPortletRequest.getContentType("evotingsummaryFile");
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		//if(mimeType.equalsIgnoreCase("application/vnd.openxmlformats-") || mimeType.equalsIgnoreCase("officedocument.spreadsheetml.sheet")) {
 			String title = fileName;
 			String sheetName="Quarterly Evoting";
@@ -338,6 +339,11 @@ public class SaveEvotingSummaryPfm implements MVCResourceCommand{
 		}*/
 			}
 	}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 		return resultJsonObject;
 	}
 	

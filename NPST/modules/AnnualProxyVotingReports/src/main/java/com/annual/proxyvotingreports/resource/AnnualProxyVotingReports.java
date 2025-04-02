@@ -2,6 +2,7 @@ package com.annual.proxyvotingreports.resource;
 
 import com.annual.proxyvotingreports.constants.AnnualProxyVotingReportsPortletKeys;
 import com.annual.proxyvotingreports.util.ParseAnnualProxyPfmIII;
+import com.annual.proxyvotingreports.util.ValidateFileName;
 import com.annual.proxyvotingreports.util.ValidateSheetName;
 import com.daily.average.service.model.AnnualProxyPfmIII;
 import com.daily.average.service.service.AnnualProxyPfmIIILocalServiceUtil;
@@ -101,7 +102,11 @@ public class AnnualProxyVotingReports implements MVCResourceCommand {
 		long reportUploadLogId=ParamUtil.getLong(resourceRequest, "reportUploadLogId");
 		_log.info("reportUploadLogId: "+reportUploadLogId);
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-			
+		List<String> fileNames=new ArrayList<String>();
+		fileNames.add(uploadPortletRequest.getFileName("annualProxyReportExcelFile"));
+		fileNames.add(uploadPortletRequest.getFileName("annualProxyReportPDFFile"));	
+		
+		if(ValidateFileName.validatefileNames(fileNames)) {
 		resultJsonObject = parseExcel(themeDisplay, resourceRequest);
 		
 		if(resultJsonObject.getBoolean("status")) {
@@ -132,6 +137,11 @@ public class AnnualProxyVotingReports implements MVCResourceCommand {
 				 _log.error(e);
 			}
 			resultJsonObject.put("status", true);
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

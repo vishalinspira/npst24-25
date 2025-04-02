@@ -96,7 +96,8 @@ public class SaveAnnualComplianceReport implements MVCResourceCommand{
 				String commentsFour = ParamUtil.getString(resourceRequest, "commentsFour"+String.valueOf(i));
 				
 				try {
-					AnnualComplianceReportLocalServiceUtil.addAnnualComplianceReport("HDFC Pension Management Company Limited", detailsFour, information_submittedFour, commentsFour, new Date(), themeDisplay.getUserId());
+					//AnnualComplianceReportLocalServiceUtil.addAnnualComplianceReport("HDFC Pension Management Company Limited", detailsFour, information_submittedFour, commentsFour, new Date(), themeDisplay.getUserId());
+					AnnualComplianceReportLocalServiceUtil.addAnnualComplianceReport("HDFC Pension Fund Management Limited", detailsFour, information_submittedFour, commentsFour, new Date(), themeDisplay.getUserId());
 				} catch (Exception e) {
 					isError = true;
 					_log.error("Exception in Annual Compliance Report HDFC add method : "+e.getMessage());

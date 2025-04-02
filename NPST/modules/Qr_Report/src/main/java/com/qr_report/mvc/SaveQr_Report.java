@@ -100,7 +100,7 @@ public class SaveQr_Report implements MVCResourceCommand{
 		String sheetName="Quarterly_report";
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 		
-		
+		if(ValidateFileName.isValidfile(fileName)) {
 		Qr_ReportLocalServiceUtil.deleteQr_ReportByReportUploadLogId(reportUploadLogId);
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
@@ -554,6 +554,11 @@ public class SaveQr_Report implements MVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

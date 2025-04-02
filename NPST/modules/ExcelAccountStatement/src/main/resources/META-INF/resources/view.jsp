@@ -190,6 +190,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 	</div>
 </div> --%>
 <script type="text/javascript">
+var url='<%=saveexcelAccountURL %>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -265,7 +266,7 @@ $(function(){
         $(".animaion").show();
         $("#error-excelAccountFile").html("");
         $.ajax({
-            url: '<%=saveexcelAccountURL %>',  
+            url: url,  
             type: 'POST',
             data: fd,
             success:function(data){

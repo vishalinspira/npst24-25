@@ -135,8 +135,8 @@ public class ParseSheetOne {
 						cellError.setCellValue(errorObj.getString("msg"));
 						isexcelhaserror = true;
 					} else if (rowCount > 1) {
-						JSONObject statusDaysJsonObject = JSONFactoryUtil.createJSONObject(statusdays.toString());
-						statusdaysJsonArray.put(statusDaysJsonObject);
+						//JSONObject statusDaysJsonObject = JSONFactoryUtil.createJSONObject(statusdays.toString());
+						//statusdaysJsonArray.put(statusDaysJsonObject);
 						statusdayss.add(statusdays);
 					}
 					rowCount++;

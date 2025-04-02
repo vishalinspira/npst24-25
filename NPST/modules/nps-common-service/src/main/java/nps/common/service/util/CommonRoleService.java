@@ -58,13 +58,15 @@ public class CommonRoleService {
 		}else if(pfmName.equalsIgnoreCase("Kotak")) {
 			companyName = "Kotak Mahindra Pension Fund Limited";
 		}else if(pfmName.equalsIgnoreCase("ABS")) {
-			companyName = "Aditya Birla Sun Life Pension Management Limited";
+			//companyName = "Aditya Birla Sun Life Pension Management Limited";
+			companyName ="Aditya Birla Sun Life Pension Fund Management Limited";
 		}else if(pfmName.equalsIgnoreCase("HDFC")) {
-			companyName = "HDFC Pension Management Company Limited";
+			companyName = "HDFC Pension Fund Management Limited";
 		}else if(pfmName.equalsIgnoreCase("ICICI")) {
 			companyName = "ICICI Prudential Pension Funds Management Company Limited";
 		}else if(pfmName.equalsIgnoreCase("TATA")) {
-			companyName = "Tata Pension Management Ltd";
+			//companyName = "Tata Pension Management Ltd";
+			companyName = "Tata Pension Fund Management Private Limited";
 		}else if(pfmName.equalsIgnoreCase("MLP")) {
 			companyName = "Max Life Pension Fund Management Ltd";
 		}else if(pfmName.equalsIgnoreCase("APF")) {
@@ -90,15 +92,17 @@ public class CommonRoleService {
 			companies = "Kotak Mahindra Pension Fund Limited";
 		}
 		else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "ABS", false)){
-			companies = "Aditya Birla Sun Life Pension Management Limited";
+			//companies = "Aditya Birla Sun Life Pension Management Limited";
+			companies = "Aditya Birla Sun Life Pension Fund Management Limited";
 		}
 		else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "HDFC", false)){
-			companies = "HDFC Pension Management Company Limited";
+			companies = "HDFC Pension Fund Management Limited";
 		}
 		else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "ICICI", false)){
 			companies = "ICICI Prudential Pension Funds Management Company Limited";
 		}else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "TATA", false)){
-			companies = "Tata Pension Management Ltd";
+//			companies = "Tata Pension Management Ltd";
+			companies = "Tata Pension Fund Management Private Limited";
 		}else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "MLP", false)){
 			companies = "Max Life Pension Fund Management Ltd";
 		}else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "APF", false)){

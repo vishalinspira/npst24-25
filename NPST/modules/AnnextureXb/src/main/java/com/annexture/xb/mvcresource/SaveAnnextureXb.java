@@ -111,7 +111,7 @@ public class SaveAnnextureXb implements MVCResourceCommand{
 		String title = fileName;
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-		
+		if(ValidateFileName.isValidfile(fileName)) {
 		AnnextureXaLocalServiceUtil.deleteAnnextureXaByReportUploadLogId(reportUploadLogId);
 		
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
@@ -311,6 +311,11 @@ public class SaveAnnextureXb implements MVCResourceCommand{
 					resultJsonObject.put("status", false);
 				}
 			}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 			return resultJsonObject;
 		}
 	/*public String pdfTable(List<AnnextureXa> annextureXas, ThemeDisplay themeDisplay, ResourceRequest resourceRequest) throws IOException {

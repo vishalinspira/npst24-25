@@ -40,6 +40,7 @@ import com.monthly.mis.report.util.NpsSchemeMonthAnalysis;
 import com.monthly.mis.report.util.ReferralsHandledAtNps;
 import com.monthly.mis.report.util.ResolutionSpeed;
 import com.monthly.mis.report.util.TotalGrievanceReceived;
+import com.monthly.mis.report.util.ValidateFileName;
 import com.monthly.mis.report.util.ValidateSheetName;
 
 import java.io.File;
@@ -212,6 +213,7 @@ public class MonthlyMISReport implements MVCResourceCommand {
 		List<MnReferralsHandledAtNps> referralsHandledAtNpsList = new ArrayList<MnReferralsHandledAtNps>();
 
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -368,6 +370,11 @@ public class MonthlyMISReport implements MVCResourceCommand {
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

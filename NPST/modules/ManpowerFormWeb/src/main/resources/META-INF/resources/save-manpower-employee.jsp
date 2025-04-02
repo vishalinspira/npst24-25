@@ -1,4 +1,5 @@
 
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
 <%@page import="com.liferay.petra.string.StringPool"%>
 <%@page import="npst.common.constant.NpstCommonConstant"%>
 <%@page import="java.text.SimpleDateFormat"%>
@@ -71,7 +72,7 @@ try{
 						</aui:select>
                         </div>
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                        <aui:input label="<%=ManpowerEmployeeFieldLabel.NAME %>" type="text" name="<%=ManpowerEmployeeFieldName.NAME %>" placeholder="" value="<%=manpowerEmployee.getName() %>" required="true"> 
+                        <aui:input label="<%=ManpowerEmployeeFieldLabel.NAME %>" type="text" name="<%=ManpowerEmployeeFieldName.NAME %>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getName()) %>" required="true"> 
                     <aui:validator name="required"/> 
                         </aui:input>
                      
@@ -87,19 +88,19 @@ try{
                          <div class="row">
                          <div class="col-md-4 col-lg-4 col-sm-4">
                         
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.CONTACT_NO %>" name="<%=ManpowerEmployeeFieldName.CONTACT_NO %>" placeholder="" value="<%=manpowerEmployee.getContactNo() %>" required="true">
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.CONTACT_NO %>" name="<%=ManpowerEmployeeFieldName.CONTACT_NO %>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getContactNo()) %>" required="true">
                          <aui:validator name="number"/>
                       
                         <aui:validator errorMessage="Please enter 10 digits mobile number" name="rangeLength">[10,10]</aui:validator>
                         </aui:input>
                         </div>
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.EMAIL %>" name="<%=ManpowerEmployeeFieldName.EMAIL %>" placeholder="" value="<%=manpowerEmployee.getEmail() %>" required="true">
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.EMAIL %>" name="<%=ManpowerEmployeeFieldName.EMAIL %>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getEmail()) %>" required="true">
                         <aui:validator name="email"/>
                         </aui:input> 
                         </div>
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.QUALIFICATION %>" name="<%=ManpowerEmployeeFieldName.QUALIFICATION %>" placeholder="" value="<%=manpowerEmployee.getQualification() %>" required="true">
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.QUALIFICATION %>" name="<%=ManpowerEmployeeFieldName.QUALIFICATION %>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getQualification()) %>" required="true">
                           <aui:validator name="required"/>
                         </aui:input>
                         
@@ -140,10 +141,10 @@ try{
                  
                        </div>
                          <div class="col-md-4 col-lg-4 col-sm-4">                        
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.DEPUTATION %>" name="<%=ManpowerEmployeeFieldName.DEPUTATION %>" placeholder="" value="<%=manpowerEmployee.getDeputation() %>" required="true"/>
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.DEPUTATION %>" name="<%=ManpowerEmployeeFieldName.DEPUTATION %>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getDeputation()) %>" required="true"/>
                         </div>
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.LINKEDINID %>" name="<%=ManpowerEmployeeFieldName.LINKEDINID %>" placeholder="" value="<%=manpowerEmployee.getLinkedinId() %>"/>
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.LINKEDINID %>" name="<%=ManpowerEmployeeFieldName.LINKEDINID %>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getLinkedinId()) %>"/>
                         </div>
                         
                         </div>

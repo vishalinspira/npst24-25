@@ -3,6 +3,7 @@ package com.categary.wise.againg.resource;
 import com.categary.wise.againg.constants.categarywiseagaingPortletKeys;
 import com.categary.wise.againg.util.ParseCategaryWiseAgaingOne;
 import com.categary.wise.againg.util.ParseCategaryWiseAgaingTwo;
+import com.categary.wise.againg.util.ValidateFileName;
 import com.daily.average.service.model.CategarywiseOne;
 import com.daily.average.service.model.CategarywiseTwo;
 import com.daily.average.service.service.CategarywiseOneLocalServiceUtil;
@@ -102,7 +103,7 @@ public class SaveCategaryWiseAgaing implements MVCResourceCommand{
 		String title = fileName;
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-		
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 			DecimalFormatSymbols symbols = new DecimalFormatSymbols();
@@ -226,6 +227,11 @@ public class SaveCategaryWiseAgaing implements MVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

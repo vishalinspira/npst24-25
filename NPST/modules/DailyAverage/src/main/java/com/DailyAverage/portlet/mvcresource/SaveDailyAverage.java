@@ -2,6 +2,7 @@ package com.DailyAverage.portlet.mvcresource;
 
 import com.DailyAverage.constants.DailyAveragePortletKeys;
 import com.DailyAverage.model.DailyAverageXMLModel;
+import com.DailyAverage.portlet.ValidateFileName;
 import com.daily.average.service.model.DailyAverage;
 import com.daily.average.service.service.DailyAverageLocalServiceUtil;
 import com.daily.average.service.service.ReportUploadLogLocalServiceUtil;
@@ -120,6 +121,7 @@ public class SaveDailyAverage extends BaseMVCResourceCommand{
 		NPSNumber.setCellValue("NPSNumber");
 		XSSFCell NPSAcName = xxx.createCell(4);
 		NPSAcName.setCellValue("NPSAcName");*/
+		if(ValidateFileName.isValidfile(fileName)) {
 		DailyAverageLocalServiceUtil.deleteDailyAverageByReportUploadLogId(reportUploadLogId);
 		
 		resultJsonObject = excelValidationApi.validateExcelFile(resourceRequest, "dailyAverageFile");
@@ -407,6 +409,11 @@ public class SaveDailyAverage extends BaseMVCResourceCommand{
 				resultJsonObject.put("msg", CommonParser.fileExceptionMsg+sheetName);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 

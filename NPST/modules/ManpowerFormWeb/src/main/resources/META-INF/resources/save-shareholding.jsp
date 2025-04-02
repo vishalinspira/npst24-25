@@ -1,4 +1,5 @@
- <%@page import="java.util.Map.Entry"%>
+ <%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
+<%@page import="java.util.Map.Entry"%>
 <%@page import="com.nps.manpower.constants.DropdownValues"%>
 <%@page import="java.util.Map"%>
 <%@page import="com.nps.manpower.service.ManpowerDirectorHoldingLocalServiceUtil"%>
@@ -49,17 +50,17 @@ try{
                          <div class="row">
                         <div class="col-md-6 col-lg-6 col-sm-6">
                         
-                        <aui:input type="text" label="<%=ManpowerDirectorHoldingFieldLabel.COMPANY_NAME%>" name="<%=ManpowerDirectorHoldingFieldName.COMPANY_NAME%>" placeholder="" value="<%=manpowerDirectorHolding.getCompanyName() %>" required="true"/>
+                        <aui:input type="text" label="<%=ManpowerDirectorHoldingFieldLabel.COMPANY_NAME%>" name="<%=ManpowerDirectorHoldingFieldName.COMPANY_NAME%>" placeholder="" value="<%=HtmlUtil.escape(manpowerDirectorHolding.getCompanyName()) %>" required="true"/>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
                         
-                        <aui:input type="text" label="<%=ManpowerDirectorHoldingFieldLabel.CONCERN%>" name="<%=ManpowerDirectorHoldingFieldName.CONCERN%>" placeholder="" value="<%=manpowerDirectorHolding.getConcern() %>"  required="true"/>
+                        <aui:input type="text" label="<%=ManpowerDirectorHoldingFieldLabel.CONCERN%>" name="<%=ManpowerDirectorHoldingFieldName.CONCERN%>" placeholder="" value="<%=HtmlUtil.escape(manpowerDirectorHolding.getConcern()) %>"  required="true"/>
                         </div>
                         </div>
                          <div class="row">
                         <div class="col-md-6 col-lg-6 col-sm-6">
                         
-                        <aui:input type="text"  label="<%=ManpowerDirectorHoldingFieldLabel.SHARE_HOLDING%>" name="<%=ManpowerDirectorHoldingFieldName.SHARE_HOLDING%>" placeholder="" value="<%=manpowerDirectorHolding.getShareHolding() %>" required="true"/>
+                        <aui:input type="text"  label="<%=ManpowerDirectorHoldingFieldLabel.SHARE_HOLDING%>" name="<%=ManpowerDirectorHoldingFieldName.SHARE_HOLDING%>" placeholder="" value="<%=HtmlUtil.escape(manpowerDirectorHolding.getShareHolding()) %>" required="true"/>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
                         

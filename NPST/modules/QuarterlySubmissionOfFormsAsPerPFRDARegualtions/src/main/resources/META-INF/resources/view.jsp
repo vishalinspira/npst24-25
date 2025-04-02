@@ -167,7 +167,7 @@
 </style>
 
 <script type="text/javascript">
-  
+var url='<%=saveQuarterlySubmissionPFRDA %>';
   $(document).ready(function() {
 	  /* toastr.options = {
 			  "debug": false,
@@ -375,7 +375,7 @@
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${saveQuarterlySubmissionPFRDA}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

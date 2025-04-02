@@ -2835,7 +2835,7 @@ if(Validator.isNull(scrutinyInputQuarterlyInterval)){
 		                     <select class="w-100" name='companies' id="companies">
 		                     	<option value="">Select</option>
 		                        <option value="Aditya Birla Sun Life Pension Management Limited">Aditya Birla Sun Life Pension Management Limited </option>
-		                        <option value="HDFC Pension Management Company Limited">HDFC Pension Management Company Limited </option>
+		                        <option value="HDFC Pension Fund Management Limited">HDFC Pension Management Company Limited </option>
 		                        <option value="ICICI Prudential Pension Funds Management Company Limited">ICICI Prudential Pension Funds Management Company Limited </option>
 		                        <option value="Kotak Mahindra Pension Fund Limited">Kotak Mahindra Pension Fund Limited </option>
 		                        <option value="LIC Pension Fund Limited">LIC Pension Fund Limited </option>
@@ -2892,7 +2892,7 @@ if(Validator.isNull(scrutinyInputQuarterlyInterval)){
 		                     <!-- <select class="w-100" name='companies' id="companies">
 		                     	<option value="">Select</option>
 		                        <option value="Aditya Birla Sun Life Pension Management Limited">Aditya Birla Sun Life Pension Management Limited </option>
-		                        <option value="HDFC Pension Management Company Limited">HDFC Pension Management Company Limited </option>
+		                        <option value="HDFC Pension Fund Management Limited">HDFC Pension Management Company Limited </option>
 		                        <option value="ICICI Prudential Pension Funds Management Company Limited">ICICI Prudential Pension Funds Management Company Limited </option>
 		                        <option value="Kotak Mahindra Pension Fund Limited">Kotak Mahindra Pension Fund Limited </option>
 		                        <option value="LIC Pension Fund Limited">LIC Pension Fund Limited </option>

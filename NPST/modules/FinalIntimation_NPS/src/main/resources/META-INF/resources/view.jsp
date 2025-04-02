@@ -99,6 +99,7 @@
 </div>
 
 <script type="text/javascript">
+var url='<%=finalIntimationNPSURL %>';
 $(document).ready(function() {
 	console.log("welcome to :::::::::::::::::::::");
 	toastr.options = {
@@ -177,7 +178,7 @@ $(function(){
         $("#error-finalIntimationnps").html("");
         $.ajax({
         	
-            url: '${finalIntimationNPSURL}',
+            url: url,
             type: 'POST',
             data: fd,
             success:function(data){

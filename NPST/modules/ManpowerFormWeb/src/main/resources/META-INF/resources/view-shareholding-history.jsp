@@ -1,4 +1,5 @@
 
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
 <%@page import="npst.common.util.NpstCommonUtil"%>
 <%@page import="com.nps.manpower.util.ManpowerUtil"%>
 <%@page import="com.nps.manpower.model.ChangeShareHolding"%>
@@ -16,7 +17,7 @@
 <%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%@page import="com.nps.manpower.constants.ManpowerEmployeeFieldLabel"%>
  <%@ include file="/init.jsp" %> 
-  <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery-1.8.2.min.js"></script>
+  <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery-3.6.0.min.js"></script>
  <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery.dataTables.min.js"></script>
 <link href="<%=request.getContextPath()%>/css/jquery.dataTables.css" type="text/css"  rel="stylesheet">
 <!-- <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css" />
@@ -51,9 +52,9 @@
 					for(ChangeShareHolding changeShareHolding:changeShareHoldings){ %>
 					<tr>
 						<td><%=count++ %></td>
-						<td class="tbdata"><%=changeShareHolding.getCompanyName() %></td>
-						<td class="tbdata"><%=changeShareHolding.getConcern() %></td>
-						<td class="tbdata"><%=changeShareHolding.getShareHolding() %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeShareHolding.getCompanyName()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeShareHolding.getConcern()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeShareHolding.getShareHolding()) %></td>
 						<td class="tbdata"><%=NpstCommonUtil.getDateString(changeShareHolding.getConcernDate())%></td>
 					</tr>
 					<%} %>

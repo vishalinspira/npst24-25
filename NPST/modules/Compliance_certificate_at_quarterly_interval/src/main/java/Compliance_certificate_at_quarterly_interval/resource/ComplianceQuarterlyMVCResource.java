@@ -427,7 +427,7 @@ public class ComplianceQuarterlyMVCResource implements MVCResourceCommand{
 		}catch (Exception e) {
 			_log.error("error while uploading file:  "+e.getMessage());
 		}
-		return repositoryId;
+		return 0;
 			
 
 		

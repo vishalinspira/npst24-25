@@ -241,8 +241,8 @@ public class SaveAnnexureXiv implements MVCResourceCommand{
 								} 
 								else if (i == 11) {
 									try {
-										Integer uniformcode_i=Integer.parseInt(val);
-										annexurexiv.setUniformcode_i(uniformcode_i);
+										//Integer uniformcode_i=Integer.parseInt(val);
+										annexurexiv.setUniformcode_i(val);
 									} catch (Exception e) {
 										_log.info("error parsing integer"+val);
 										resultJsonObject.put("status", false);
@@ -252,8 +252,8 @@ public class SaveAnnexureXiv implements MVCResourceCommand{
 								}
 								else if (i == 12) {
 									try {
-										Integer uniformcode_ii=Integer.parseInt(val);
-										annexurexiv.setUniformcode_ii(uniformcode_ii);
+										//Integer uniformcode_ii=Integer.parseInt(val);
+										annexurexiv.setUniformcode_ii(val);
 									} catch (Exception e) {
 										_log.info("error parsing integer"+val);
 										resultJsonObject.put("status", false);

@@ -7,6 +7,8 @@ import com.liferay.document.library.kernel.service.DLAppServiceUtil;
 import com.liferay.document.library.util.DLURLHelperUtil;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.json.JSONFactoryUtil;
+import com.liferay.portal.kernel.json.JSONObject;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
@@ -82,8 +84,25 @@ public class PerformanceRepResource implements MVCResourceCommand {
 			throws PortletException {
 
 		_log.info("Serve Resource method");
+		UploadPortletRequest uploadPortletRequest = PortalUtil.getUploadPortletRequest(resourceRequest);
+		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		resultJsonObject.put("status", true);
+		resultJsonObject.put("msg","");
 		
-		performanceRepInfo(resourceRequest, resourceResponse);
+				if(ValidateFileName.isValidfile(uploadPortletRequest.getFileName("perfromanceRepFile"))) {
+					performanceRepInfo(resourceRequest, resourceResponse);	
+				}else {
+					resultJsonObject.put("status", false);
+					resultJsonObject.put("msg","Please upload files with a valid filename.");
+				}
+		try {
+			PrintWriter writer = resourceResponse.getWriter();
+			writer.write(resultJsonObject.toString());
+		} catch (IOException e) {
+			 _log.error(e);
+		}
+		
+		
 		
 		return false;
 	}

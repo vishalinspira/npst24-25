@@ -59,7 +59,7 @@ public class NpsEmailServiceImpl implements NpsEmailApi {
 				mailMessage.setHTMLFormat(true);
 				//comment for UAT testing
 				MailServiceUtil.sendEmail(mailMessage);
-				_log.info("Mail sent to user at ::=> " + to);
+				_log.info("Mail sent to user at ::=> " + to +"    body:  "+body);
 				//_log.info("Mail sent to bcc at ::=> noreply@npstrust.net");
 
 			} catch (AddressException e1) {
@@ -97,7 +97,7 @@ public class NpsEmailServiceImpl implements NpsEmailApi {
 	
 	@Override
 	public void sendRejectEmail(long companyId, String role_name, String status, String reportName,long reportUploadlogId) {
-		
+		String emailRoleName=role_name;
 		_log.info("companyId " + companyId + " role_name " + role_name+" status " + status + " reportName " + reportName);
 		//_log.info("status " + status + " reportName " + reportName);
 		 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -150,7 +150,7 @@ public class NpsEmailServiceImpl implements NpsEmailApi {
 				}
 			}
 			
-			List<String> emailList = getEmail(companyId, role_name);
+			List<String> emailList = getEmail(companyId, emailRoleName);
 			for (Iterator<String> iterator = emailList.iterator(); iterator.hasNext();) {
 				
 				String email = (String) iterator.next();
@@ -202,7 +202,9 @@ public class NpsEmailServiceImpl implements NpsEmailApi {
 			List<User> list_of_users = UserLocalServiceUtil.getRoleUsers(role.getRoleId());
 			list_of_users=list_of_users.stream().filter(user->user.isActive()).map(user->user).collect(Collectors.toList());
 			for(User lr_user : list_of_users) {
+				if(lr_user.isActive() && !lr_user.getEmailAddress().trim().equalsIgnoreCase("dept-it@npstrust.org.in")) {
 				emailList.add(lr_user.getEmailAddress().trim());
+				}
 				//sendOTP(lr_user.getEmailAddress().trim());
 			}
 			

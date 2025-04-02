@@ -112,6 +112,7 @@
 }
 </style>
 <script type="text/javascript">
+var url='<%= SchemeFinancialsResourceURL%>';
 $(document).ready(function() {
 	/* toastr.options = {
 			  "debug": false,
@@ -202,7 +203,7 @@ $(function(){
         $("#error-consolidatedFinancialandkeystatsFile").html("");
         $("#error-financialReportDocFile").html("");
         $.ajax({
-            url: '${SchemeFinancialsResourceURL}', 
+            url: url, 
             type: 'POST',
             data: fd,
             success:function(data){

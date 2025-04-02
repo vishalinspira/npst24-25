@@ -96,6 +96,7 @@
 </style>
 
 <script type="text/javascript">
+var url='<%=apyLetterResourceURL %>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -129,7 +130,7 @@ $(function(){
         $(".animaion").show();
         $("#error-apyLetterFile").html("");
         $.ajax({
-            url: '${apyLetterResourceURL}', 
+            url: url, 
             type: 'POST',
             data: fd,
             success:function(data){

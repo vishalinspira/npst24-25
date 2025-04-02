@@ -464,7 +464,7 @@
 		<field name="grand_tot_trans_no" type="long" />
 		<field name="grand_tot_amount" type="BigDecimal" />
 		<field name="percentage_rejection" type="double" />
-		<field name="percentage_acceptance" type="String" />
+		<field name="percentage_acceptance" type="double" />
 		<field name="cra" type="String" />
 		<field name="month" type="Date" />
 		<field name="createdon" type="Date" />
@@ -2493,6 +2493,8 @@
 		<field name="id_" type="long" />
 		<field name="pao_id" type="int" />
 		<field name="no_of_mistakes" type="int" />
+		<field name="row_labels" type="int" />
+		<field name="count_nps_virtual_account_no" type="int" />
 		<field name="pao_name" type="String" />
 		<field name="email_id" type="String" />
 		<field name="address_line1" type="String" />

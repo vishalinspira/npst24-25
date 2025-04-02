@@ -210,8 +210,8 @@ public class ParseSheetThree {
 						cellError.setCellValue(errorObj.getString("msg"));
 						isexcelhaserror = true;
 					} else if (rowCount > 1) {
-						JSONObject statusDaysTwoJsonObject = JSONFactoryUtil.createJSONObject(statusDaysTwo.toString());
-						statusDaysTwoJsonArray.put(statusDaysTwoJsonObject);
+						//JSONObject statusDaysTwoJsonObject = JSONFactoryUtil.createJSONObject(statusDaysTwo.toString());
+						//statusDaysTwoJsonArray.put(statusDaysTwoJsonObject);
 						statusdaystwos.add(statusDaysTwo);
 						
 					}

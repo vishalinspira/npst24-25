@@ -26,6 +26,7 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCResourceCommand;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.kernel.workflow.WorkflowLog;
@@ -202,7 +203,7 @@ public class FetchPFMApprovedFormsMVCResource extends BaseMVCResourceCommand {
 				DLFileEntry dlFileEntry  =  DLFileEntryLocalServiceUtil.fetchDLFileEntry(reportUploadFileLogs.get(reportUploadFileLogs.size()-1).getFileEntryId());
 				if(dlFileEntry!=null) {
 					jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
-					jsonObject.put("userName", dlFileEntry.getUserName());
+					jsonObject.put("userName", HtmlUtil.escape(dlFileEntry.getUserName()));
 					jsonObject.put("createDate", dateFormat.format(dlFileEntry.getCreateDate()));
 				}else {
 					jsonObject.put("createDate","");
@@ -213,7 +214,7 @@ public class FetchPFMApprovedFormsMVCResource extends BaseMVCResourceCommand {
 				log.info("Exception in getting reportUploadLog:::" + e.getMessage());
 			}
 			jsonObject.put("dueDate", dateFormat.format(reportUploadLog.getReportDate()));
-			jsonObject.put("fileName", reportMaster.getReportName());
+			jsonObject.put("fileName", HtmlUtil.escape(reportMaster.getReportName()));
 			jsonObject.put("reportUploadLogId",reportUploadlogId);
 			jsonObject.put("reportMasterId", reportMaster.getReportMasterId());
 			jsonObject.put("status", "Approved");
@@ -227,10 +228,10 @@ public class FetchPFMApprovedFormsMVCResource extends BaseMVCResourceCommand {
 				mediaryName=intrmedName;
 			}
 
-			jsonObject.put("intermediaryName", mediaryName);
+			jsonObject.put("intermediaryName", HtmlUtil.escape(mediaryName));
 			//jsonObject.put("intermediaryName", reportUploadLog.getIntermediaryname());
 			
-			jsonObject.put("remarks", remark);
+			jsonObject.put("remarks", HtmlUtil.escape(remark));
 		}else {
 			return null;
 		}

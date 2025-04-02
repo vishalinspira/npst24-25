@@ -46,7 +46,7 @@ public class PensionFundPDF {
 	}
 	
 
-public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date letterDate,String receivedDate,String  month,String signeturies) throws IOException {
+public static File generateFeeLetter(String pfmName,JSONArray jsonArray,String letterDate,String receivedDate,String  month,String signeturies) throws IOException {
 
 		File file=null;
 		try  {  
@@ -61,10 +61,10 @@ public static File generateFeeLetter(String pfmName,JSONArray jsonArray,Date let
 			    doc.setRightMargin(60);
 			    doc.setLeftMargin(60);
 			    
-			    Text text01 = new Text("\n \n \n \n \n ");
+			    Text text01 = new Text("\n \n \n \n \n \n \n \n");
 			    Paragraph para01 = new Paragraph(text01);
 			    doc.add(para01);
-			    Text text1 = new Text("F. No: NPST-20/19/11/1/2024-PENSION FUND                                                                Date:"+getDateString(letterDate)).setBold();
+			    Text text1 = new Text("F. No: NPST-20/19/11/1/2024-PENSION FUND                                                                Date:"+letterDate).setBold();
 			    text1.setBold();
 			    Paragraph para1 = new Paragraph(text1).setTextAlignment(TextAlignment.LEFT);
 	            doc.add(para1);

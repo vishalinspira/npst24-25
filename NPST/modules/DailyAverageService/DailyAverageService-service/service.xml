@@ -578,7 +578,7 @@
     
     <entity name="ReportDebit" data-source="extDataSource" local-service="true" remote-service="false" table="weekly_repo_debt">
     	<column type="long" name="id" primary="true"></column>
-    	<!-- <column name="date" type="Date" ></column> -->
+    	 <column name="date" type="Date" ></column> 
         <column name="fin" type="String"></column>
      	<column name="scheme" type="String"></column>
      	<column name="company_name" type="String" ></column>
@@ -607,7 +607,7 @@
     
     <entity name="ReportEquity" data-source="extDataSource" local-service="true" remote-service="false" table="weekly_repo_eq">
     	<column type="long" name="id" primary="true"></column>
-    	<!-- <column name="date" type="Date" ></column> -->
+    	<column name="date" type="Date" ></column> 
         <column name="fin" type="String"></column>
      	<column name="scheme" type="String"></column>
      	<column name="company_name" type="String" ></column>
@@ -4142,6 +4142,12 @@
 		<column name="remarks_xi" type="String"/>
 		<column name="remarks_xii" type="String"/>
 		<column name="remarks_xiii" type="String"/>
+		<column name="remarks_xiv" type="String"/>
+		<column name="remarks_xv" type="String"/>
+		<column name="remarks_xvi" type="String"/>
+		<column name="remarks_xvii" type="String"/>
+		<column name="remarks_xviii" type="String"/>
+		
 		<column name="month" type="String"/>
 		<column name="signature" type="String"/>
 		<column name="employeeName" type="String"/>
@@ -4192,7 +4198,11 @@
 		<column name="observe_xi" type="String"/>
 		<column name="observe_xii" type="String"/>
 		<column name="observe_xiii" type="String"/>
-		
+		<column name="observe_xiv" type="String"/>
+		<column name="observe_xv" type="String"/>
+		<column name="observe_xvi" type="String"/>
+		<column name="observe_xvii" type="String"/>
+		<column name="observe_xviii" type="String"/>
 		
 		<!-- Audit details -->
 		<column name="createdate" type="Date" />

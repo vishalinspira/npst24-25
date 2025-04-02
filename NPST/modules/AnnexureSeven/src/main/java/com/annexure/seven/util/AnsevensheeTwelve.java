@@ -276,8 +276,9 @@ public static JSONObject saveSheetTwelve(File file, XSSFWorkbook workbook, long 
 										} 
 										else if (i == 3) {
 											try {
-												Integer iValue = Integer.parseInt(val);
-												invalidAcc.setSource_acc_no_nodal(iValue);
+//												Integer iValue = Integer.parseInt(val);
+//												invalidAcc.setSource_acc_no_nodal(iValue);
+												invalidAcc.setSource_acc_no_nodal(val);
 											} catch (Exception e) {
 												_log.info("error parsing int"+val);
 												resultJsonObject.put("status", false);

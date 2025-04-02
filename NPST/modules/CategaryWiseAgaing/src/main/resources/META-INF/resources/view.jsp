@@ -96,6 +96,7 @@
 		
 
 		<script type="text/javascript">
+		var url='<%=savecategarywieURL %>';
 		$(document).ready(function() {
 			toastr.options = {
 					  "debug": false,
@@ -129,7 +130,7 @@
 		        $(".animaion").show();
 		        $("#error-categarywieFile").html("");
 		        $.ajax({
-		            url: '<%=savecategarywieURL %>',  
+		            url: url,  
 		            type: 'POST',
 		            data: fd,
 		            success:function(data){

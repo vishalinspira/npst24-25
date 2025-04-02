@@ -141,6 +141,7 @@ public class CraNsdlNavData implements MVCResourceCommand{
 				JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 				JSONArray errorArray = JSONFactoryUtil.createJSONArray();
 				XSSFWorkbook workbook = null;
+				if(ValidateFileName.isValidfile(fileName)) {
 				if(validateSheetName(file)) {
 				NsdlnavLocalServiceUtil.deleteNsdlnavByReportUploadLogId(reportUploadLogId);
 				
@@ -445,6 +446,11 @@ public class CraNsdlNavData implements MVCResourceCommand{
 			resultJsonObject.put("msg",  "Sheet name is incorrect.");
 			return resultJsonObject;
 		}
+				}else {
+					resultJsonObject.put("status", false);
+					resultJsonObject.put("msg","Please upload files with a valid filename.");
+					return resultJsonObject;
+				}
 					return resultJsonObject;
 				}
 				

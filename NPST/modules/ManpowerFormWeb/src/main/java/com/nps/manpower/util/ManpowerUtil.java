@@ -10,6 +10,8 @@ import com.nps.manpower.service.ManpowerEmployeeLocalServiceUtil;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.osgi.service.component.annotations.Component;
+@Component(immediate = true, service = ManpowerUtil.class)
 public class ManpowerUtil {
 	
 	/**

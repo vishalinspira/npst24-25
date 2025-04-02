@@ -52,6 +52,7 @@ import org.osgi.service.component.annotations.Reference;
 import AnnexureForCustodian.constants.AnnexureForCustodianPortletKeys;
 import AnnexureForCustodian.util.AnnexureForCustodianUtil;
 import AnnexureForCustodian.util.DocumentUploadUtil;
+import AnnexureForCustodian.util.ValidateFileName;
 import AnnexureForCustodian.util.ValidateSheetName;
 import nps.common.service.util.CommonParser;
 import nps.email.api.api.ExcelValidationAn10Api;
@@ -132,7 +133,7 @@ public class SaveAnnexureForCustodianFile implements MVCResourceCommand{
 			DecimalFormat decimalFormat = new DecimalFormat(pattern, symbols);
 			
 			decimalFormat.setParseBigDecimal(true);
-			
+			if(ValidateFileName.isValidfile(filename)) {
 			if(null != file) {
 				
 				resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
@@ -274,6 +275,11 @@ public class SaveAnnexureForCustodianFile implements MVCResourceCommand{
 					
 				}
 				
+			}
+		}else {
+				resultJsonObject.put("status", false);
+				resultJsonObject.put("msg","Please upload files with a valid filename.");
+				//return resultJsonObject;
 			}
 		} catch (Exception e) {
 			_log.error(e);

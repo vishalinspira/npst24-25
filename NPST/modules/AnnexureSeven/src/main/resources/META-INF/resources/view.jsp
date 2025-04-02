@@ -214,6 +214,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 
 
 <script type="text/javascript">
+var url='<%=AnnexureSevenFileURL %>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -295,7 +296,7 @@ $(function(){
             processData: false,
             contentType: false,
             cache: false,
-            url: '${AnnexureSevenFileURL}',
+            url: url,
             data: fd,
             success:function(data){
             	$(".content").show();

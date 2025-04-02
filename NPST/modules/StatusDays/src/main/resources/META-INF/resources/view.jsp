@@ -136,6 +136,7 @@
 		 
 		 
 		<script type="text/javascript">
+		var url='<%= savestatusdaysURL%>';
 		$(document).ready(function() {
 			toastr.options = {
 					  "debug": false,
@@ -169,7 +170,7 @@
 		        $(".animaion").show();
 		        $("#error-statusdaysFile").html("");
 		        $.ajax({
-		            url: '<%=savestatusdaysURL %>',  
+		            url: url,  
 		            type: 'POST',
 		            data: fd,
 		            success:function(data){

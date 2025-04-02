@@ -28,13 +28,14 @@ public class EncryptionRestControllerApplication  extends Application {
 		return Collections.<Object>singleton(this);
 	}
 	
-	@GET
-	@Produces("text/plain")
-	public String working() {
-		LOG.info("working");
-		return encryptionServiceApi.getPK();
-		//return prik;
-	}
+	/*
+	 * commented for VAPT
+	 * 
+	 * @GET
+	 * 
+	 * @Produces("text/plain") public String working() { LOG.info("working"); return
+	 * encryptionServiceApi.getPK(); //return prik; }
+	 */
 	
 	@GET
 	@Path("/morning/{companyId}/{emailAddress}")

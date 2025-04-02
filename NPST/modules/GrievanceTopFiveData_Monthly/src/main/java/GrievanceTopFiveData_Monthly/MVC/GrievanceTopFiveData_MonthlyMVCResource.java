@@ -69,6 +69,7 @@ import GrievanceTopFiveData_Monthly.util.Grievancedetails;
 import GrievanceTopFiveData_Monthly.util.Grievanceministry;
 import GrievanceTopFiveData_Monthly.util.Grievancepop;
 import GrievanceTopFiveData_Monthly.util.Grievancestate;
+import GrievanceTopFiveData_Monthly.util.ValidateFileName;
 import nps.common.service.util.CommonParser;
 import nps.email.api.api.ExcelValidationAn10Api;
 
@@ -164,6 +165,7 @@ public class GrievanceTopFiveData_MonthlyMVCResource implements MVCResourceComma
 		
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		//resultJsonObject.put("status", true);
 		if(resultJsonObject.getBoolean("status")) {
@@ -287,6 +289,11 @@ public class GrievanceTopFiveData_MonthlyMVCResource implements MVCResourceComma
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

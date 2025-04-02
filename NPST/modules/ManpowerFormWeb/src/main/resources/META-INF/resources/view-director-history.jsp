@@ -1,4 +1,5 @@
 
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
 <%@page import="npst.common.util.NpstCommonUtil"%>
 <%@page import="com.nps.manpower.service.ChangeInEmployeeLocalServiceUtil"%>
 <%@page import="com.nps.manpower.model.ChangeInEmployee"%>
@@ -12,7 +13,7 @@
 <%@page import="com.liferay.portal.kernel.portlet.LiferayWindowState"%>
 <%@page import="com.nps.manpower.constants.ManpowerEmployeeFieldLabel"%>
 <%@ include file="/init.jsp" %>
- <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery-1.8.2.min.js"></script>
+ <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery-3.6.0.min.js"></script>
  <script type="text/javascript"  charset="utf8" src="<%=request.getContextPath()%>/js/jquery.dataTables.min.js"></script>
 <link href="<%=request.getContextPath()%>/css/jquery.dataTables.css" type="text/css"  rel="stylesheet">
  <%
@@ -57,13 +58,13 @@
 						%>
 					<tr>
 						<td><%=count++ %></td>
-						<td class="tbdata"><%=changeInEmployee.getName() %></td>
-						<td class="tbdata"><%=changeInEmployee.getDirectorType() %></td>
-						<td class="tbdata"><%=changeInEmployee.getMembershipType() %></td>
-						<td class="tbdata"><%=changeInEmployee.getDependency() %></td>
-						<td class="tbdata"><%=changeInEmployee.getDin() %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeInEmployee.getName()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeInEmployee.getDirectorType()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeInEmployee.getMembershipType()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeInEmployee.getDependency()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeInEmployee.getDin()) %></td>
 						<td class="tbdata"><%=NpstCommonUtil.getDateString(changeInEmployee.getAppointmentDate()) %></td>
-						<td class="tbdata"><%=changeInEmployee.getQualification() %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(changeInEmployee.getQualification()) %></td>
 						<td class="tbdata"><%=ManpowerUtil.experienceFormat(changeInEmployee.getExperience()) %></td>
 						<%-- <td class="tbdata"><button class="btn btn-primary" onClick='addCompositionCommittee("<%=changeInEmployee.getManpowerEmployeeId() %>")'>CC</button></td> --%>
 						<td class="tbdata"><a href="<%=formMvpFileUrl%>">Download</a></td>

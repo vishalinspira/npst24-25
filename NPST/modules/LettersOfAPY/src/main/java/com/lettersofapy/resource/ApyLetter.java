@@ -90,7 +90,9 @@ public class ApyLetter implements MVCResourceCommand {
 		String title = fileName;
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-	
+		resultJsonObject.put("status", true);
+		resultJsonObject.put("msg", "");
+		if(ValidateFileName.isValidfile(fileName)) {
 			Long fileEntryId = 0l;
 			fileEntryId = uploadFILETOFOLDER(themeDisplay, resourceRequest);
 			try {
@@ -100,7 +102,12 @@ public class ApyLetter implements MVCResourceCommand {
 			} catch (Exception e) {
 				 _log.error(e);
 			}
-			resultJsonObject.put("status", true);
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
+			
 		return resultJsonObject;
 	}
 	

@@ -226,6 +226,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 		</div>
 	</div> --%>
 <script type="text/javascript">
+var url='<%= saverejectionReturnURL%>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -298,7 +299,7 @@ $(function(){
         $(".animaion").show();
         $("#error-rejectionReturnFile").html("");
         $.ajax({
-            url: '<%=saverejectionReturnURL %>',  
+            url: url,  
             type: 'POST',
             data: fd,
             success:function(data){

@@ -167,7 +167,7 @@
 </style>
 
 <script type="text/javascript">
-  
+var url='<%=craResourceURL %>';
   $(document).ready(function() {
 	  toastr.options = {
 			  "debug": false,
@@ -208,7 +208,7 @@
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${craResourceURL}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

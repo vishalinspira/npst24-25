@@ -1,4 +1,5 @@
 
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
 <%@page import="com.nps.manpower.constants.ManpowerHeaderConstant"%>
 <%@page import="com.liferay.portal.kernel.model.User"%>
 <%@page import="java.util.Map.Entry"%>
@@ -117,7 +118,7 @@
 						%>
 					<tr>
 						<td><%=count++ %></td>
-						<td class="tbdata"><%=manpowerEmployee.getName() %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerEmployee.getName()) %></td>
 						<%-- <td class="tbdata"><%=manpowerEmployee.getQualification() %></td>
 						<td class="tbdata"><%=ManpowerUtil.experienceFormat(manpowerEmployee.getExperience()) %></td> --%>
 						

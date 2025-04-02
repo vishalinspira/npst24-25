@@ -18,6 +18,7 @@ import com.growth.data.util.GrowthdataSheetFour;
 import com.growth.data.util.GrowthdataSheetOne;
 import com.growth.data.util.GrowthdataSheetThree;
 import com.growth.data.util.GrowthdataSheetTwo;
+import com.growth.data.util.ValidateFileName;
 import com.liferay.document.library.kernel.model.DLFileEntry;
 import com.liferay.document.library.kernel.model.DLFolderConstants;
 import com.liferay.document.library.kernel.service.DLAppServiceUtil;
@@ -128,7 +129,7 @@ public class SaveGrowthDataNsdl implements MVCResourceCommand{
 		
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-		
+		if(ValidateFileName.isValidfile(fileName)) {
 		JSONArray errorArray = JSONFactoryUtil.createJSONArray();
 		XSSFWorkbook workbook = null;
 		
@@ -260,6 +261,11 @@ public class SaveGrowthDataNsdl implements MVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

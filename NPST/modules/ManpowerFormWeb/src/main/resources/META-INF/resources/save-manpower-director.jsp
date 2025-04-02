@@ -1,3 +1,4 @@
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
 <%@page import="com.liferay.petra.string.StringPool"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Map.Entry"%>
@@ -56,14 +57,14 @@ try{
                         
                         <div class="row">
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                        <aui:input label="<%=ManpowerEmployeeFieldLabel.NAME%>" type="text" name="<%=ManpowerEmployeeFieldName.NAME%>" placeholder="" value="<%=manpowerEmployee.getName()%>" required="true">
+                        <aui:input label="<%=ManpowerEmployeeFieldLabel.NAME%>" type="text" name="<%=ManpowerEmployeeFieldName.NAME%>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getName())%>" required="true">
                         <aui:validator name="required"/> 
                         </aui:input>
                
                         </div>
                         
                          <div class="col-md-4 col-lg-4 col-sm-4">
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.EMAIL %>" name="<%=ManpowerEmployeeFieldName.EMAIL %>" placeholder="" value="<%=manpowerEmployee.getEmail() %>" required="true">
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.EMAIL %>" name="<%=ManpowerEmployeeFieldName.EMAIL %>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getEmail()) %>" required="true">
                         <aui:validator name="email"/>
                         </aui:input> 
                         </div>
@@ -107,7 +108,7 @@ try{
                         </div>
                         <div class="col-md-4 col-lg-4 col-sm-4">
                         
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.DIN%>" name="<%=ManpowerEmployeeFieldName.DIN%>" placeholder="" value="<%=manpowerEmployee.getDin()%>" required="true">
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.DIN%>" name="<%=ManpowerEmployeeFieldName.DIN%>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getDin())%>" required="true">
                        <aui:validator errorMessage="Please enter 8 digits" name="rangeLength">[8,8]</aui:validator>
                        <aui:validator errorMessage="Please enter digit only" name="number"></aui:validator>
                         </aui:input>
@@ -123,7 +124,7 @@ try{
 							? simpleDateFormat.format(manpowerEmployee.getAppointmentDate()) : null%>"/> 
                         </div>
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.QUALIFICATION%>" name="<%=ManpowerEmployeeFieldName.QUALIFICATION%>" placeholder="" value="<%=manpowerEmployee.getQualification()%>" required="true">
+                        <aui:input type="text" label="<%=ManpowerEmployeeFieldLabel.QUALIFICATION%>" name="<%=ManpowerEmployeeFieldName.QUALIFICATION%>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getQualification())%>" required="true">
                         <aui:validator name="required"/>
                         </aui:input>
                         

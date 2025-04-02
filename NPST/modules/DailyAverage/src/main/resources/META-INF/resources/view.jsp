@@ -85,6 +85,7 @@
 	</div>
 </div>
 <script type="text/javascript">
+var url='<%=savedailyaverageURL %>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -160,7 +161,7 @@ $(function(){
         $(".animaion").show();
         $("#error-dailyAverageFile").html("");
         $.ajax({
-            url: '<%=savedailyaverageURL %>',  
+            url: url,  
             type: 'POST',
             data: fd,
             success:function(data){

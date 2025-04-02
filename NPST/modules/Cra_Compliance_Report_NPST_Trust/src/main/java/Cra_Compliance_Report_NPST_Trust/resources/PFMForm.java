@@ -66,6 +66,7 @@ import Cra_Compliance_Report_NPST_Trust.utils.Form3;
 import Cra_Compliance_Report_NPST_Trust.utils.Form4;
 import Cra_Compliance_Report_NPST_Trust.utils.Form5;
 import Cra_Compliance_Report_NPST_Trust.utils.Form6;
+import Cra_Compliance_Report_NPST_Trust.utils.ValidateFileName;
 import Cra_Compliance_Report_NPST_Trust.utils.ValidateSheetName;
 import nps.common.service.util.CommonParser;
 import nps.email.api.api.ExcelValidationAn10Api;
@@ -155,6 +156,9 @@ public class PFMForm implements MVCResourceCommand {
 		List<MnGrievWthdrwlAgingAnalysis> form6List = new ArrayList<MnGrievWthdrwlAgingAnalysis>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		
+		if(ValidateFileName.isValidfile(fileName)) {
+		
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -262,8 +266,11 @@ public class PFMForm implements MVCResourceCommand {
 				resultJsonObject.put("status", false);
 			}
 		}
-		
-		
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 		
 		return resultJsonObject;
 	}

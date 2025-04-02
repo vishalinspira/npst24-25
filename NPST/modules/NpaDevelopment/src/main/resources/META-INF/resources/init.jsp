@@ -31,15 +31,17 @@ String companies = "";
 		companies = "Kotak Mahindra Pension Fund Limited";
 	}
 	else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "ABS", false)){
-		companies = "Aditya Birla Sun Life Pension Management Limited";
+		//companies = "Aditya Birla Sun Life Pension Management Limited";
+		companies = "Aditya Birla Sun Life Pension Fund Management Limited";
 	}
 	else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "HDFC", false)){
-		companies = "HDFC Pension Management Company Limited";
+		companies = "HDFC Pension Fund Management Limited";
 	}
 	else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "ICICI", false)){
 		companies = "ICICI Prudential Pension Funds Management Company Limited";
 	}else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "TATA", false)){
-		companies = "Tata Pension Management Ltd";
+		//companies = "Tata Pension Management Ltd";
+		companies = "Tata Pension Fund Management Private Limited";
 	}else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "MLP", false)){
 		companies = "Max Life Pension Fund Management Ltd";
 	}else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "APF", false)){

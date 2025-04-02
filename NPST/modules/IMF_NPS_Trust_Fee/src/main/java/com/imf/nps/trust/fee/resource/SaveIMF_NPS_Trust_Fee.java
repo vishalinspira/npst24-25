@@ -15,6 +15,7 @@ import com.investment.management.util.ManagementFeeUtil;
 import com.investment.management.util.ManagementSummaryUtilwo;
 import com.investment.management.util.NpsTrustFeePfmSheetOne;
 import com.investment.management.util.NpsTrustFeePfmSheetSummary;
+import com.investment.management.util.ValidateFileName;
 import com.investment.management.util.ValidateSheetName;
 import com.liferay.document.library.kernel.model.DLFileEntry;
 import com.liferay.document.library.kernel.model.DLFolderConstants;
@@ -107,12 +108,19 @@ public class SaveIMF_NPS_Trust_Fee implements MVCResourceCommand{
 		} catch (PortalException e) {
 			 _log.error(e);
 		}
+		List<String> fileNames=new ArrayList<String>();
+		fileNames.add(uploadPortletRequest.getFileName("InvestmentManagementFile"));
+		fileNames.add(uploadPortletRequest.getFileName("nps_trust_fee"));
+		fileNames.add(uploadPortletRequest.getFileName("tax_invoicefor_imf"));
+		fileNames.add(uploadPortletRequest.getFileName("audit_cert_vdaum"));
+		
 		
 		String reportUploadLogIdString = uploadPortletRequest.getParameter("reportUploadLogId");
 		_log.debug("reportUploadLogIdString" + reportUploadLogIdString);
 		Long reportUploadLogId = Long.parseLong(reportUploadLogIdString);
 		_log.debug("reportUploadLogId" + reportUploadLogId);
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.validatefileNames(fileNames)) {
 		resultJsonObject.put("fileList", JSONFactoryUtil.createJSONArray());
 		
 		resultJsonObject = saveIMF(uploadPortletRequest, themeDisplay, userId, resourceRequest, 
@@ -135,6 +143,12 @@ public class SaveIMF_NPS_Trust_Fee implements MVCResourceCommand{
 		long fileEntryId = resultJsonObject.getLong("fileEntryId");
 		String remarks = ParamUtil.getString(uploadPortletRequest, "remarks");
 		updateReportLog(userId, fileEntryId , true, reportUploadLogId, WorkflowConstants.STATUS_PENDING, statusByUserName, serviceContext, remarks, fileList );
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename");
+			return resultJsonObject;
+		}
+		
 		return resultJsonObject;
 	}
 	

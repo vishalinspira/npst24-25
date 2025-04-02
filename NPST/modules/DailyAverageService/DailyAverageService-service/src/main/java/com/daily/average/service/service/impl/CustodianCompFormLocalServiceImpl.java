@@ -59,10 +59,11 @@ public class CustodianCompFormLocalServiceImpl
 	
 	
 
-	public CustodianCompForm addCustodianCompForm(Date formdate,String remarks_i_i, String remarks_i_ii, String remarks_ii,
+	public CustodianCompForm addCustodianCompForm(Date formdate,String remarks_i_i, String remarks_ii,
 			String remarks_iii, String remarks_iv,  String remarks_v, String remarks_vi,
 			String remarks_vii, String remarks_viii, String remarks_ix, String remarks_x,
-			String remarks_xi, String remarks_xii, String remarks_xiii, String month, String signature,
+			String remarks_xi, String remarks_xii, String remarks_xiii, String remarks_xiv, String remarks_xv,String remarks_xvi,String remarks_xvii,
+			String remarks_xviii, String month, String signature,
 			String employeeName, String designation, String date_3, String place, long reportUploadLogId, long qcfile_id) {
 		CustodianCompForm custodianCompForm = CustodianCompFormLocalServiceUtil.fetchCustodianCompForm(reportUploadLogId);
 		_log.info("addCustodianCompForm::" + custodianCompForm);
@@ -72,7 +73,7 @@ public class CustodianCompFormLocalServiceImpl
 		try {
 			custodianCompForm.setFormdate(formdate);
 			custodianCompForm.setRemarks_i_i(remarks_i_i);
-			custodianCompForm.setRemarks_i_ii(remarks_i_ii);
+			//custodianCompForm.setRemarks_i_ii(remarks_i_ii);
 			custodianCompForm.setRemarks_ii(remarks_ii);
 			custodianCompForm.setRemarks_iii(remarks_iii);
 			custodianCompForm.setRemarks_iv(remarks_iv);
@@ -85,6 +86,11 @@ public class CustodianCompFormLocalServiceImpl
 			custodianCompForm.setRemarks_xi(remarks_xi);
 			custodianCompForm.setRemarks_xii(remarks_xii);
 			custodianCompForm.setRemarks_xiii(remarks_xiii);
+			custodianCompForm.setRemarks_xiv(remarks_xiv);
+			custodianCompForm.setRemarks_xv(remarks_xv);
+			custodianCompForm.setRemarks_xvi(remarks_xvi);
+			custodianCompForm.setRemarks_xvii(remarks_xvii);
+			custodianCompForm.setRemarks_xviii(remarks_xviii);
 			custodianCompForm.setMonth(month);
 			custodianCompForm.setSignature(signature);
 			custodianCompForm.setEmployeeName(employeeName);

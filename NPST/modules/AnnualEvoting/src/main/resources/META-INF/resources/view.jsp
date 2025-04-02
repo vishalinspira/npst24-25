@@ -100,7 +100,7 @@
 </style>
 
 <script type="text/javascript">
-  
+var url='<%=eVoteResourceURL %>';
   $(document).ready(function() {
 	  toastr.options = {
 			  "debug": false,
@@ -141,7 +141,7 @@
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${eVoteResourceURL}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

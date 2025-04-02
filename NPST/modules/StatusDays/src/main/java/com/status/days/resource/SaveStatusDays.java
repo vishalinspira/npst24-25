@@ -36,6 +36,7 @@ import com.status.days.constants.StatusDaysPortletKeys;
 import com.status.days.util.ParseSheetOne;
 import com.status.days.util.ParseSheetThree;
 import com.status.days.util.ParseSheetTwo;
+import com.status.days.util.ValidateFileName;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -123,6 +124,7 @@ public class SaveStatusDays implements MVCResourceCommand{
 		List<StatusDaysTwo> statusdaystwos= new ArrayList<StatusDaysTwo>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -230,6 +232,11 @@ public class SaveStatusDays implements MVCResourceCommand{
 			resultJsonObject.put("downloadUrl", downloadUrl);
 			resultJsonObject.put("status", false);
 		}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

@@ -55,6 +55,7 @@ import org.osgi.service.component.annotations.Reference;
 
 import Annexure_IV_PFM.constants.Annexure_IV_PFMPortletKeys;
 import Annexure_IV_PFM.utils.Form1;
+import Annexure_IV_PFM.utils.ValidateFileName;
 import Annexure_IV_PFM.utils.ValidateSheetName;
 import nps.email.api.api.ExcelValidationAn10Api;
 
@@ -124,6 +125,11 @@ public class PFMForm implements MVCResourceCommand {
 		List<QrAnnexureFourCustodian> form1List = new ArrayList<QrAnnexureFourCustodian>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		List<String>fileNames=new ArrayList<String>();
+		fileNames.add(uploadPortletRequest.getFileName("annexureIV"));
+		fileNames.add(uploadPortletRequest.getFileName("CustodianClaimletterPDFFile"));
+		
+		if(ValidateFileName.validatefileNames(fileNames)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -233,6 +239,11 @@ public class PFMForm implements MVCResourceCommand {
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

@@ -49,6 +49,7 @@ import com.quarterlysubmissionofforms.util.ParseForm3RepByKPAndDirector;
 import com.quarterlysubmissionofforms.util.ParseForm3Scheme;
 import com.quarterlysubmissionofforms.util.ParseForm4;
 import com.quarterlysubmissionofforms.util.ParseForm5;
+import com.quarterlysubmissionofforms.util.ValidateFileName;
 import com.quarterlysubmissionofforms.util.ValidateSheetName;
 
 import java.io.File;
@@ -119,8 +120,14 @@ public class QuarterlySubmissionOfForms implements MVCResourceCommand{
 		
 		String reportUploadLogIdString = uploadPortletRequest.getParameter("reportUploadLogId");
 		Long reportUploadLogId = Long.parseLong(reportUploadLogIdString);
+		List<String> fileNames=new ArrayList<String>();
+		fileNames.add(uploadPortletRequest.getFileName("quarterlySubFormXlsx"));
+		fileNames.add(uploadPortletRequest.getFileName("quarterlyCompFormXlsx"));
+		fileNames.add(uploadPortletRequest.getFileName("quarterlySubFormPdf"));
+		fileNames.add(uploadPortletRequest.getFileName("form3ByKpPdf"));
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.validatefileNames(fileNames)) {
 		resultJsonObject.put("fileList", JSONFactoryUtil.createJSONArray());
 		
 	//   comment for enable disable options
@@ -177,6 +184,11 @@ public class QuarterlySubmissionOfForms implements MVCResourceCommand{
 		_log.info("file entry id: " +fileEntryId);
 		String remarks = ParamUtil.getString(uploadPortletRequest, "remarks");
 		updateReportLog(userId, fileEntryId , true, reportUploadLogId, WorkflowConstants.STATUS_PENDING, statusByUserName, serviceContext, remarks, fileList);
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 		return resultJsonObject;
 	}
 	

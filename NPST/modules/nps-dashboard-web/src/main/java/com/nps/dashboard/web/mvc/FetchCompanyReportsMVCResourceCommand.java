@@ -65,6 +65,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.OrderByComparatorFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -230,25 +231,25 @@ public class FetchCompanyReportsMVCResourceCommand extends BaseMVCResourceComman
 				String intermediaryName = reportStatusLog.getIntermediaryname();
 
 				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-				jsonObject.put("fileName", reportStatusLog.getReportName());
+				jsonObject.put("fileName", HtmlUtil.escape(reportStatusLog.getReportName()));
 				jsonObject.put("reportUploadLogId",reportStatusLog.getReportUploadLogId()+"");
 				jsonObject.put("reportMasterId", reportStatusLog.getReportMasterId()+"");
 				jsonObject.put("dueDate", dateFormat.format(reportStatusLog.getReportDate()));
 				jsonObject.put("createDate", dateFormat.format(reportStatusLog.getCreateDate()));
 				jsonObject.put("status", (reportStatusLog.getStatus_() != null && !reportStatusLog.getStatus_().isEmpty() ? reportStatusLog.getStatus_().toUpperCase() : WorkflowConstants.getStatusLabel(reportStatusLog.getStatus()).toUpperCase()));
-				jsonObject.put("remarks", reportStatusLog.getRemarks());
+				jsonObject.put("remarks", HtmlUtil.escape(reportStatusLog.getRemarks()));
 				jsonObject.put("workflowInstanceId", reportStatusLog.getWorkflowInstanceId()+"");
 				jsonObject.put("url", reportStatusLog.getFileUrl());
-				jsonObject.put("userName", reportStatusLog.getUserName());
-				jsonObject.put("submittedBy", reportStatusLog.getUserName());
+				jsonObject.put("userName", HtmlUtil.escape(reportStatusLog.getUserName()));
+				jsonObject.put("submittedBy", HtmlUtil.escape(reportStatusLog.getUserName()));
 				String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 				if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {
 					intermediaryName=intrmedName;
 				}
-				jsonObject.put("intermediaryName",intermediaryName );
+				jsonObject.put("intermediaryName",HtmlUtil.escape(intermediaryName ));
 				jsonObject.put("assignedTo", reportStatusLog.getAssignedTo().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
-				jsonObject.put("moduleName", reportStatusLog.getReportName());
-				jsonObject.put("intermediaryName", intermediaryName);
+				jsonObject.put("moduleName", HtmlUtil.escape(reportStatusLog.getReportName()));
+				jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 				
 				array.put(jsonObject);
 				}catch (Exception e) {
@@ -935,7 +936,7 @@ public class FetchCompanyReportsMVCResourceCommand extends BaseMVCResourceComman
 			LOG.error("Exception on fetching report upload log : "+e.getMessage(),e);
 		}
 		JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-		jsonObject.put("fileName", reportName);
+		jsonObject.put("fileName", HtmlUtil.escape(reportName));
 		jsonObject.put("reportUploadLogId",reportUploadLogId);
 		jsonObject.put("reportMasterId", reportMasterId);
 		if(dlFileEntry!=null) {
@@ -948,13 +949,13 @@ public class FetchCompanyReportsMVCResourceCommand extends BaseMVCResourceComman
 		jsonObject.put("dueDate", dueDate);
 		jsonObject.put("createDate", reportUploadDate);
 		jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(reportStatus).toUpperCase()));
-		jsonObject.put("remarks", comment);
+		jsonObject.put("remarks", HtmlUtil.escape(comment));
 		jsonObject.put("workflowInstanceId", workflowInstanceId);
 		String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 		if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {
 			intermediaryName=intrmedName;
 		}
-		jsonObject.put("intermediaryName", intermediaryName);
+		jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 		jsonObject.put("assignedTo", assignedTo.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		
 		return jsonObject;
@@ -975,7 +976,7 @@ public class FetchCompanyReportsMVCResourceCommand extends BaseMVCResourceComman
 		//LOG.info("assignedTo::" + assignedTo + "npsDashboardUtil.isNonNpsAssignedTo::" + npsDashboardUtil.isNonNpsUser(assignedToId));
 		if(isNonNpsUser && intermediaryName.equalsIgnoreCase(checkIntermediaryName) && Validator.isNotNull(checkIntermediaryName) 
 				&& npsDashboardUtil.isNonNpsUser(assignedToId)) {
-			jsonObject.put("fileName", reportName);
+			jsonObject.put("fileName", HtmlUtil.escape(reportName));
 			jsonObject.put("reportUploadLogId",reportUploadLogId);
 			jsonObject.put("reportMasterId", reportMasterId);
 			if(dlFileEntry!=null) {
@@ -988,16 +989,16 @@ public class FetchCompanyReportsMVCResourceCommand extends BaseMVCResourceComman
 			jsonObject.put("dueDate", dueDate);
 			jsonObject.put("createDate", reportUploadDate);
 			jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(reportStatus).toUpperCase()));
-			jsonObject.put("remarks", comment);
+			jsonObject.put("remarks", HtmlUtil.escape(comment));
 			jsonObject.put("workflowInstanceId", workflowInstanceId);
 			String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 			if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {
 				intermediaryName=intrmedName;
 			}
-			jsonObject.put("intermediaryName", intermediaryName);
+			jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 			jsonObject.put("assignedTo", assignedTo.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		}else if(isNonNpsUser && Validator.isNull(checkIntermediaryName) && npsDashboardUtil.isNonNpsUser(assignedToId)){
-			jsonObject.put("fileName", reportName);
+			jsonObject.put("fileName", HtmlUtil.escape(reportName));
 			jsonObject.put("reportUploadLogId",reportUploadLogId);
 			jsonObject.put("reportMasterId", reportMasterId);
 			if(dlFileEntry!=null) {
@@ -1010,16 +1011,16 @@ public class FetchCompanyReportsMVCResourceCommand extends BaseMVCResourceComman
 			jsonObject.put("dueDate", dueDate);
 			jsonObject.put("createDate", reportUploadDate);
 			jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(reportStatus).toUpperCase()));
-			jsonObject.put("remarks", comment);
+			jsonObject.put("remarks", HtmlUtil.escape(comment));
 			jsonObject.put("workflowInstanceId", workflowInstanceId);
 			String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 			if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {
 				intermediaryName=intrmedName;
 			}
-			jsonObject.put("intermediaryName", intermediaryName);
+			jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 			jsonObject.put("assignedTo", assignedTo.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		}else if(!isNonNpsUser && Validator.isNull(checkIntermediaryName)){
-			jsonObject.put("fileName", reportName);
+			jsonObject.put("fileName", HtmlUtil.escape(reportName));
 			jsonObject.put("reportUploadLogId",reportUploadLogId);
 			jsonObject.put("reportMasterId", reportMasterId);
 			if(dlFileEntry!=null) {
@@ -1032,13 +1033,13 @@ public class FetchCompanyReportsMVCResourceCommand extends BaseMVCResourceComman
 			jsonObject.put("dueDate", dueDate);
 			jsonObject.put("createDate", reportUploadDate);
 			jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(reportStatus).toUpperCase()));
-			jsonObject.put("remarks", comment);
+			jsonObject.put("remarks", HtmlUtil.escape(comment));
 			jsonObject.put("workflowInstanceId", workflowInstanceId);
 			String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 			if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {
 				intermediaryName=intrmedName;
 			}
-			jsonObject.put("intermediaryName", intermediaryName);
+			jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 			jsonObject.put("assignedTo", assignedTo.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		}
 		return jsonObject;

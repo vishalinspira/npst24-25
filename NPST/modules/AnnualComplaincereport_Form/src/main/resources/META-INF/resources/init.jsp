@@ -36,7 +36,7 @@ String companies = CommonRoleService.getCompanyName(user);
 		companies = "Aditya Birla Sun Life Pension Management Limited";
 	}
 	else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "HDFC", false)){
-		companies = "HDFC Pension Management Company Limited";
+		companies = "HDFC Pension Fund Management Limited";
 	}
 	else if(RoleLocalServiceUtil.hasUserRole(user.getUserId(), user.getCompanyId(), "ICICI", false)){
 		companies = "ICICI Prudential Pension Funds Management Company Limited";

@@ -84,6 +84,7 @@
 </style>
 
 <script type="text/javascript">
+var url='<%=halfYearIARResourceURL %>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -117,7 +118,7 @@ $(function(){
         $(".animaion").show();
         $("#error-hyrIARFile").html("");
         $.ajax({
-            url: '${halfYearIARResourceURL}', 
+            url: url, 
             type: 'POST',
             data: fd,
             success:function(data){

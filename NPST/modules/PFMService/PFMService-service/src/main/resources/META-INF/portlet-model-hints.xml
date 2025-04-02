@@ -8,7 +8,7 @@
 		<field name="subscriber_name" type="String" />
 		<field name="payee_name" type="String" />
 		<field name="payee_bank_ifsc" type="String" />
-		<field name="payee_bank_acc_no" type="String" />
+		<field name="payee_bank_acc_no" type="long" />
 		<field name="net_amt" type="BigDecimal" />
 		<field name="pay_in_date" type="Date" />
 		<field name="execution_date" type="Date" />
@@ -90,7 +90,7 @@
 		<field name="id_" type="long" />
 		<field name="section" type="String" />
 		<field name="particulars" type="String" />
-		<field name="value" type="String" />
+		<field name="value" type="BigDecimal" />
 		<field name="entity_name" type="String" />
 		<field name="month_" type="Date" />
 		<field name="createdate" type="Date" />
@@ -1250,7 +1250,7 @@
 		<field name="no_of_accepted_tran" type="Integer" />
 		<field name="no_of_rejected_tran" type="Integer" />
 		<field name="total_transactions" type="Integer" />
-		<field name="rejection_prcnt" type="String" />
+		<field name="rejection_prcnt" type="BigDecimal" />
 		<field name="cra" type="String" />
 		<field name="month" type="Date" />
 		<field name="report_month" type="Date" />

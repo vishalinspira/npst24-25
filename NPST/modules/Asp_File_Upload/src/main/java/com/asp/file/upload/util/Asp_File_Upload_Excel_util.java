@@ -12,7 +12,7 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.util.Validator;
 
 import java.io.File;
-
+import java.math.BigDecimal;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
@@ -90,8 +90,16 @@ public class Asp_File_Upload_Excel_util {
 										asp_report.setParticulars(val);
 									}
 									else if (i == 2) {
+										try {
+											BigDecimal bg = CommonParser.parseBigDecimal(val);
+											asp_report.setValue(bg.stripTrailingZeros());
+										} catch (Exception e) {
+											_log.info("error parsing bigdec"+val);
+											resultJsonObject.put("status", false);
+											resultJsonObject.put("msg", CommonParser.numberExceptionMsg+sheetName);
+											return resultJsonObject;
+										}
 										
-										asp_report.setValue(val);
 									}
 									else if (i == 3) {
 										

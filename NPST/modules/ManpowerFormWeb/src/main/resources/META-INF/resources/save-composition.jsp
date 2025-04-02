@@ -1,5 +1,6 @@
 
-  <%@page import="com.nps.manpower.service.ManpowerEmployeeLocalServiceUtil"%>
+  <%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
+<%@page import="com.nps.manpower.service.ManpowerEmployeeLocalServiceUtil"%>
 <%@page import="com.nps.manpower.model.ManpowerEmployee"%>
 <%@page import="npst.common.constant.NpstCommonConstant"%>
 <%@page import="java.text.SimpleDateFormat"%>
@@ -82,14 +83,14 @@ SimpleDateFormat simpleDateFormat = new SimpleDateFormat(NpstCommonConstant.DATE
                          <div class="row">
                           <div class="col-md-6 col-lg-6 col-sm-6">
                         
-                        <aui:input type="text" label="<%=ManpowerCompositionCommitteeFieldLabel.NAME%>" name="<%=ManpowerCompositionCommitteeFieldName.NAME%>" placeholder="" value="<%=manpowerEmployee.getName() %>" required="true" readOnly="true">
+                        <aui:input type="text" label="<%=ManpowerCompositionCommitteeFieldLabel.NAME%>" name="<%=ManpowerCompositionCommitteeFieldName.NAME%>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getName()) %>" required="true" readOnly="true">
                       
                           <aui:validator name="required"/>
                         </aui:input>
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6">
                         
-                        <aui:input type="text" label="<%=ManpowerCompositionCommitteeFieldLabel.EMAIL%>" name="<%=ManpowerCompositionCommitteeFieldName.EMAIL%>" placeholder="" value="<%=manpowerEmployee.getEmail() %>" required="true" readOnly="true">
+                        <aui:input type="text" label="<%=ManpowerCompositionCommitteeFieldLabel.EMAIL%>" name="<%=ManpowerCompositionCommitteeFieldName.EMAIL%>" placeholder="" value="<%=HtmlUtil.escape(manpowerEmployee.getEmail()) %>" required="true" readOnly="true">
                         <aui:validator name="email"/>
                     
                         </aui:input>

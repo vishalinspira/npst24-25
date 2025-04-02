@@ -12,6 +12,7 @@ import com.annexure.ten.monthly.util.ParseReportSix;
 import com.annexure.ten.monthly.util.ParseReportThree;
 import com.annexure.ten.monthly.util.ParseReportTwo;
 import com.annexure.ten.monthly.util.ParseReportV;
+import com.annexure.ten.monthly.util.ValidateFileName;
 import com.daily.average.service.model.Annexureiva;
 import com.daily.average.service.model.Annexureivb;
 import com.daily.average.service.model.Annexureivc;
@@ -178,6 +179,7 @@ public class SaveAnnexure_Ten_Monthly implements MVCResourceCommand{
 		List<ACSummeryX> acSummeryx= new ArrayList<ACSummeryX>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 			JSONArray errorArray = JSONFactoryUtil.createJSONArray();
@@ -327,6 +329,11 @@ public class SaveAnnexure_Ten_Monthly implements MVCResourceCommand{
 					resultJsonObject.put("status", false);
 				}
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

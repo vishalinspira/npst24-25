@@ -495,7 +495,7 @@ public JSONObject pdfUpload(UploadPortletRequest uploadPortletRequest,ThemeDispl
 	
 	public void updateReportLog( long createdBy, long fileEntryId, boolean uploaded, long reportUploadLogId, int status, String statusByUserName, ServiceContext serviceContext, String remarks, String fileList) {
 		Date createDate = new Date();
-		ReportUploadLogCRAAMLocalServiceUtil.updateReportUploadLog(createDate, createdBy, fileEntryId, uploaded, reportUploadLogId, status, createdBy, statusByUserName, createDate, serviceContext, remarks);
+		ReportUploadLogCRAAMLocalServiceUtil.updateReportUploadLog(createDate, createdBy, fileEntryId, uploaded, reportUploadLogId, status, createdBy, statusByUserName, createDate, serviceContext, remarks,fileList);
 		
 		//(createDate, createdBy, fileEntryId, uploaded, reportUploadLogId);
 	}

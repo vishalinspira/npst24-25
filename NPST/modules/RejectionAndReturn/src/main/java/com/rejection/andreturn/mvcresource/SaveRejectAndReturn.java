@@ -32,6 +32,7 @@ import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
 import com.rejection.andreturn.constants.RejectionAndReturnPortletKeys;
+import com.rejection.andreturn.portlet.ValidateFileName;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -119,6 +120,7 @@ public class SaveRejectAndReturn implements MVCResourceCommand{
 
 		String title = fileName;
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		RejectionandreturnLocalServiceUtil.deleteRejectionandreturnByReportUploadLogId(reportUploadLogId);
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
@@ -509,6 +511,11 @@ public class SaveRejectAndReturn implements MVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

@@ -15,6 +15,7 @@ import com.daily.average.service.model.Pfm_Qr_Internal_Audit_Report;
 import com.daily.average.service.model.QtrStewardshipReport;
 import com.daily.average.service.model.ReportStatusLog;
 import com.daily.average.service.model.ReportUploadLogCRA;
+import com.daily.average.service.model.ReportUploadLogCRAAM;
 import com.daily.average.service.model.ReportUploadLogCustAMPFRDA;
 import com.daily.average.service.model.ReportUploadLogCustodian;
 import com.daily.average.service.model.ReportUploadLogGrievAMPFRDA;
@@ -37,6 +38,7 @@ import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.workflow.WorkflowConstants;
 
@@ -286,7 +288,7 @@ import nps.common.service.constants.NameMappingConstants;
 									for(ReportStatusLog reportStatusLog:reportStatusLogs) {
 										try {
 											//JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-										if(reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRA.class.getName()) ){
+										if(reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRA.class.getName()) ||reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRAAM.class.getName()) ){
 											//jsonObject =getReportSummeryObjectNonNPS(reportStatusLog);	
 											list.add(reportStatusLog);
 										}
@@ -512,7 +514,7 @@ import nps.common.service.constants.NameMappingConstants;
 									for(ReportStatusLog reportStatusLog:reportStatusLogs) {
 										try {
 											JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-										if(reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRA.class.getName()) ){
+										if(reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRA.class.getName()) || reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRAAM.class.getName()) ){
 											//jsonObject =getReportSummeryObjectNonNPS(reportStatusLog);	
 											list.add(reportStatusLog);
 										}
@@ -735,7 +737,7 @@ import nps.common.service.constants.NameMappingConstants;
 									for(ReportStatusLog reportStatusLog:reportStatusLogs) {
 										try {
 											JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-										if(reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRA.class.getName()) ){
+										if(reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRA.class.getName()) || reportStatusLog.getClazzName().equalsIgnoreCase(ReportUploadLogCRAAM.class.getName()) ){
 											//jsonObject =getReportSummeryObjectNonNPS(reportStatusLog);	
 											list.add(reportStatusLog);
 										}
@@ -910,16 +912,16 @@ import nps.common.service.constants.NameMappingConstants;
 			String intermediaryName = reportStatusLog.getIntermediaryname();
 
 			JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-			jsonObject.put("fileName", reportStatusLog.getReportName());
+			jsonObject.put("fileName", HtmlUtil.escape(reportStatusLog.getReportName()));
 			jsonObject.put("reportUploadLogId",reportStatusLog.getReportUploadLogId()+"");
 			jsonObject.put("reportMasterId", reportStatusLog.getReportMasterId()+"");
 			jsonObject.put("dueDate", dateFormat.format(reportStatusLog.getReportDate()));
 			jsonObject.put("createDate", dateFormat.format(reportStatusLog.getCreateDate()));
 			jsonObject.put("status", (reportStatusLog.getStatus_() != null && !reportStatusLog.getStatus_().isEmpty() ? reportStatusLog.getStatus_().toUpperCase() : WorkflowConstants.getStatusLabel(reportStatusLog.getStatus()).toUpperCase()));
-			jsonObject.put("remarks", reportStatusLog.getRemarks());
+			jsonObject.put("remarks", HtmlUtil.escape(reportStatusLog.getRemarks()));
 			jsonObject.put("workflowInstanceId", reportStatusLog.getWorkflowInstanceId()+"");
 			jsonObject.put("url", reportStatusLog.getFileUrl());
-			jsonObject.put("userName", reportStatusLog.getUserName());
+			jsonObject.put("userName", HtmlUtil.escape(reportStatusLog.getUserName()));
 			String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 			if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {
 				intermediaryName=intrmedName;

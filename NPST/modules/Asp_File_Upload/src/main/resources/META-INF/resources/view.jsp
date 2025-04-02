@@ -389,7 +389,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportExcel").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportExcel"]').get(0).files[0].name != "ASP REPORT.xlsx"){
+    	}else if($('input[name="AspReportExcel"]').get(0).files[0].name != "Asp Report Excel.xlsx"){
     		console.log("No files selected.");
     	    $("#error-AspReportExcel").html("Please upload Asp Report Excel.xlsx");
     	    errorBool = false;
@@ -398,7 +398,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_i").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_i"]').get(0).files[0].name != "Bajaj Allianz Life Insurance Co. Ltd.  JAN 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_i"]').get(0).files[0].name != "Bajaj Allianz Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_i").html("Please upload Bajaj Allianz Asp Report.pdf");
     	    errorBool = false;
@@ -407,7 +407,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_ii").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_ii"]').get(0).files[0].name != "Canara HSBCMonthly ASP Report- January 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_ii"]').get(0).files[0].name != "Canara HSBC Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_ii").html("Please upload Canara HSBC Asp Report.pdf");
     	    errorBool = false;
@@ -419,7 +419,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_iii").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_iii"]').get(0).files[0].name != "Edelweiss Tokio Life Insurance Company Limited  ASP REPORT  JAN 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_iii"]').get(0).files[0].name != "Edelweiss Tokio Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_iii").html("Please upload Edelweiss Tokio Asp Report.pdf");
     	    errorBool = false;
@@ -431,7 +431,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_iv").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_iv"]').get(0).files[0].name != "HDFC Life jan 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_iv"]').get(0).files[0].name != "HDFC Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_iv").html("Please upload HDFC Asp Report.pdf");
     	    errorBool = false;
@@ -443,7 +443,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_v").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_v"]').get(0).files[0].name != "ICICI Prudential Life Insurance Company Asp Report of Jan Month 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_v"]').get(0).files[0].name != "ICICI Prudential Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_v").html("Please upload ICICI Prudential Asp Report.pdf");
     	    errorBool = false;
@@ -455,7 +455,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_vi").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_vi"]').get(0).files[0].name != "IndiaFirst Life Insurance Co. Ltd JAN Month 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_vi"]').get(0).files[0].name != "IndiaFirst Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_vi").html("Please upload IndiaFirst Asp Report.pdf");
     	    errorBool = false;
@@ -467,7 +467,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_vii").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_vii"]').get(0).files[0].name != "Kotak Mahindra Life Insurance Company Limited.pdf"){
+    	}else if($('input[name="AspReportPdf_vii"]').get(0).files[0].name != "Kotak Mahindra Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_vii").html("Please upload Kotak Mahindra Asp Report.pdf");
     	    errorBool = false;
@@ -479,7 +479,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_viii").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_viii"]').get(0).files[0].name != "LIC REPORT JAN 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_viii"]').get(0).files[0].name != "LIC Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_viii").html("Please upload LIC Asp Report.pdf");
     	    errorBool = false;
@@ -491,7 +491,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_ix").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_ix"]').get(0).files[0].name != "Max Life Insurance Co. Ltd. JAN 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_ix"]').get(0).files[0].name != "Max Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_ix").html("Please upload Max Asp Report.pdf");
     	    errorBool = false;
@@ -503,7 +503,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_x").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_x"]').get(0).files[0].name != "SBI LIFE JAN 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_x"]').get(0).files[0].name != "SBI Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_x").html("Please upload SBI Asp Report.pdf");
     	    errorBool = false;
@@ -515,7 +515,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_xi").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_xi"]').get(0).files[0].name != "Star Union Dai-ichi Life Insurance Co. Ltd. JAN 2023.pdf"){
+    	}else if($('input[name="AspReportPdf_xi"]').get(0).files[0].name != "Star Union Dai-ichi Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_xi").html("Please upload Star Union Dai-ichi Asp Report.pdf");
     	    errorBool = false;
@@ -527,7 +527,7 @@ $(function(){
     	    console.log("No files selected.");
     	    $("#error-AspReportPdf_xii").html("Please select a file to upload");
     	    errorBool = false;
-    	}else if($('input[name="AspReportPdf_xii"]').get(0).files[0].name != "TATA AIA Life - Report to NPS Trust - Jan'23.pdf"){
+    	}else if($('input[name="AspReportPdf_xii"]').get(0).files[0].name != "TATA AIA Asp Report.pdf"){
     		console.log("No files selected.");
     	    $("#error-AspReportPdf_xii").html("Please upload TATA AIA Asp Report.pdf");
     	    errorBool = false;

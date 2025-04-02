@@ -76,7 +76,7 @@ public class ReportUploadLogCRAAMLocalServiceImpl
 	}
 	
 	public ReportUploadLogCRAAM updateReportUploadLog(Date createDate, long createdBy, long fileEntryId, boolean uploaded, long reportUploadLogId, int status, long statusByUserId, 
-			String statusByUserName, Date statusDate, ServiceContext serviceContext, String remarks) {
+			String statusByUserName, Date statusDate, ServiceContext serviceContext, String remarks,String fileList) {
 		ReportUploadLogCRAAM reportUploadLogCRAAM = null;
 		try {
 			reportUploadLogCRAAM = reportUploadLogCRAAMLocalService.getReportUploadLogCRAAM(reportUploadLogId);
@@ -105,8 +105,10 @@ public class ReportUploadLogCRAAMLocalServiceImpl
 			reportUploadLog.setUploaded_i(1);
 			reportUploadLogLocalService.updateReportUploadLog(reportUploadLog);
 			reportUploadLogLocalService.updateReportUploadLogStatus("Pending", reportUploadLogId);
-			reportUploadFileLogLocalService.addReportUploadFileLog(reportUploadLogId, fileEntryId, createdBy);
-			createAssetForReportUploadLogCRAAM(reportUploadLogCRAAM, serviceContext, createdBy);
+			reportUploadFileLogLocalService.addReportUploadFileLog(reportUploadLogId, fileEntryId, createdBy, fileList);
+			//reportUploadFileLogLocalService.addReportUploadFileLog(reportUploadLogId, fileEntryId, createdBy);
+			//comment because no workflow is configured
+			//createAssetForReportUploadLogCRAAM(reportUploadLogCRAAM, serviceContext, createdBy);
 		}else {
 			reportUploadLogCRAAM.setCreateDate(createDate);
 			reportUploadLogCRAAM.setCreatedBy(createdBy);
@@ -124,12 +126,13 @@ public class ReportUploadLogCRAAMLocalServiceImpl
 			reportUploadLogLocalService.updateReportUploadLog(reportUploadLog);
 			reportUploadLogLocalService.updateReportUploadLogStatus("Pending", reportUploadLogId);
 			reportUploadFileLogLocalService.addReportUploadFileLog(reportUploadLogId, fileEntryId, createdBy);
-			String workflowContext = reportUploadLogCRAAM.getWorkflowContext();
-			try {
-				workflowAssignment(serviceContext.getCompanyId(), createdBy, "", workflowContext, reportUploadLogId, serviceContext);
-			} catch (PortalException e) {
-				 _log.error(e);
-			}
+			//comment because no workflow is configured
+			//			String workflowContext = reportUploadLogCRAAM.getWorkflowContext();
+//			try {
+//				workflowAssignment(serviceContext.getCompanyId(), createdBy, "", workflowContext, reportUploadLogId, serviceContext);
+//			} catch (PortalException e) {
+//				 _log.error(e);
+//			}
 			
 			
 		}

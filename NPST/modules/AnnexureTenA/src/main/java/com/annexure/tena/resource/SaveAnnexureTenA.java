@@ -7,6 +7,7 @@ import com.annexure.tena.util.ParseTenFive;
 import com.annexure.tena.util.ParseTenFour;
 import com.annexure.tena.util.ParseTenThree;
 import com.annexure.tena.util.ParseTenTwo;
+import com.annexure.tena.util.ValidateFileName;
 import com.daily.average.service.service.ReportUploadLogMakerLocalServiceUtil;
 import com.daily.pfm.service.model.AnnexTena;
 import com.daily.pfm.service.model.AnnexTenaI;
@@ -119,6 +120,7 @@ public class SaveAnnexureTenA implements MVCResourceCommand{
 		String title = fileName;
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 			DecimalFormatSymbols symbols = new DecimalFormatSymbols();
@@ -236,6 +238,11 @@ public class SaveAnnexureTenA implements MVCResourceCommand{
 					resultJsonObject.put("status", false);
 				}
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

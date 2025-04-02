@@ -83,7 +83,8 @@ public class FeeLetterPortlet extends MVCPortlet {
 		String month=ParamUtil.getString(resourceRequest,"month");
 
 		String signeturies=ParamUtil.getString(resourceRequest,"signeturies");
-		Date letterDate=ParamUtil.getDate(resourceRequest,"letterDate",dateFormat);
+		String letterDate=ParamUtil.getString(resourceRequest,"letterDate");
+		//Date letterDate=ParamUtil.getDate(resourceRequest,"letterDate",dateFormat);
 		
 		/*
 		 * File file=null; DLFileEntry fileenrty= null; InputStream

@@ -58,6 +58,7 @@ import org.osgi.service.component.annotations.Reference;
 import Monthly_Custodian_TDS_Report.constants.Monthly_Custodian_TDS_ReportPortletKeys;
 import Monthly_Custodian_TDS_Report.util.Form1;
 import Monthly_Custodian_TDS_Report.util.Form2;
+import Monthly_Custodian_TDS_Report.util.ValidateFileName;
 import nps.common.service.util.CommonParser;
 import nps.email.api.api.ExcelValidationAn10Api;
 
@@ -130,6 +131,7 @@ public class PFMForm implements MVCResourceCommand {
 		List<MnCustTdsNonsalary> form2List = new ArrayList<MnCustTdsNonsalary>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -235,6 +237,11 @@ public class PFMForm implements MVCResourceCommand {
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

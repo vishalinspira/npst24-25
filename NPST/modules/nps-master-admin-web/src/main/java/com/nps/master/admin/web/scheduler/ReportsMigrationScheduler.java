@@ -15,6 +15,7 @@ import com.daily.average.service.model.ReportMaster;
 import com.daily.average.service.model.ReportStatusLog;
 import com.daily.average.service.model.ReportUploadLog;
 import com.daily.average.service.model.ReportUploadLogCRA;
+import com.daily.average.service.model.ReportUploadLogCRAAM;
 import com.daily.average.service.model.ReportUploadLogCustAMPFRDA;
 import com.daily.average.service.model.ReportUploadLogCustodian;
 import com.daily.average.service.model.ReportUploadLogGrievAMPFRDA;
@@ -39,13 +40,16 @@ import com.daily.average.service.service.PFM_hy_comp_certLocalService;
 import com.daily.average.service.service.Pfm_Qr_Internal_Audit_ReportLocalService;
 import com.daily.average.service.service.QtrStewardshipReportLocalService;
 import com.daily.average.service.service.ReportMasterLocalService;
+import com.daily.average.service.service.ReportMasterLocalServiceUtil;
 import com.daily.average.service.service.ReportStatusLogLocalServiceUtil;
+import com.daily.average.service.service.ReportUploadLogCRAAMLocalServiceUtil;
 import com.daily.average.service.service.ReportUploadLogCRALocalService;
 import com.daily.average.service.service.ReportUploadLogCustAMPFRDALocalService;
 import com.daily.average.service.service.ReportUploadLogCustodianLocalService;
 import com.daily.average.service.service.ReportUploadLogGrievAMPFRDALocalService;
 import com.daily.average.service.service.ReportUploadLogGrievancesLocalService;
 import com.daily.average.service.service.ReportUploadLogLocalService;
+import com.daily.average.service.service.ReportUploadLogLocalServiceUtil;
 import com.daily.average.service.service.ReportUploadLogMakerLocalService;
 import com.daily.average.service.service.ReportUploadLogNPSTLocalService;
 import com.daily.average.service.service.ReportUploadLogPFMAMLocalService;
@@ -56,6 +60,7 @@ import com.daily.average.service.service.ReportUploadLogPFMLocalService;
 import com.daily.average.service.service.ReportUploadLogSupervisorLocalService;
 import com.liferay.document.library.kernel.model.DLFileEntry;
 import com.liferay.document.library.kernel.service.DLFileEntryLocalService;
+import com.liferay.document.library.kernel.service.DLFileEntryLocalServiceUtil;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.kernel.dao.orm.QueryUtil;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -325,7 +330,8 @@ public class ReportsMigrationScheduler extends BaseMessageListener {
 					if(entryClassName.equalsIgnoreCase(CustodianCompForm.class.getName())) {
 						custodianCompForm  = custodianCompFormLocalService.getCustodianCompForm(applicationId);
 						if(custodianCompForm != null) {
-							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(custodianCompForm.getQcfile_id());
+//							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(custodianCompForm.getQcfile_id());
+							dlFileEntry =  dlFileEntryLocalService.fetchDLFileEntry(custodianCompForm.getFileEntryId());
 							reportUploadDate=itr.getCreateDate();
 							status=custodianCompForm.getStatus();
 							clazzName=CustodianCompForm.class.getName();
@@ -513,7 +519,38 @@ public class ReportsMigrationScheduler extends BaseMessageListener {
 		} catch (WorkflowException e) {
 			LOG.error("workflow exception : "+e.getMessage());
 		}
+		
+		try{
+			addCRAAM();	
+		}catch (Exception e) {
+			LOG.error(e.getMessage());
 		}
+		
+		}
+	
+	/**
+	 * 
+	 */
+	private void addCRAAM() {
+		LOG.info("in add cra am log");
+	List<ReportUploadLogCRAAM> craams=	ReportUploadLogCRAAMLocalServiceUtil.getReportUploadLogCRAAMs(QueryUtil.ALL_POS, QueryUtil.ALL_POS);
+	DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm a");
+	if(Validator.isNotNull(craams)) {
+		for(ReportUploadLogCRAAM craam: craams) {
+			try {
+				ReportUploadLog reportUploadLog=ReportUploadLogLocalServiceUtil.getReportUploadLog(craam.getReportUploadLogId());
+				ReportMaster reportMaster= ReportMasterLocalServiceUtil.getReportMaster(reportUploadLog.getReportMasterId());
+				DLFileEntry dlFileEntry= DLFileEntryLocalServiceUtil.fetchDLFileEntry(craam.getFileEntryId());
+			ReportStatusLog reportStatusLog=	getReportSummeryObject(reportUploadLog, reportMaster, dlFileEntry, dateFormat.format(craam.getCreateDate()), 1, "", 0, "", "Approved", 0, 0, true, 1, ReportUploadLogCRAAM.class.getName());
+			
+			LOG.debug("reportstatuslog:  "+reportStatusLog);
+			}catch (Exception e) {
+				LOG.error(e.getMessage());
+			}
+		}
+	}
+	}
+	
 /**
  * 
  * @param companyId
@@ -645,7 +682,7 @@ public class ReportsMigrationScheduler extends BaseMessageListener {
 		 * @param forwaredToNpst
 		 * @param clazzName
 		 */
-	private void getReportSummeryObject( ReportUploadLog reportUploadLog,ReportMaster reportMaster, DLFileEntry dlFileEntry, 
+	private ReportStatusLog getReportSummeryObject( ReportUploadLog reportUploadLog,ReportMaster reportMaster, DLFileEntry dlFileEntry, 
 			String reportUploadDate, int reportStatus, String comment, long workflowInstanceId, String assignedTo, String statusKey,
 			long assignedToId,long workflowTaskId,boolean isApproved,int forwaredToNpst,String clazzName) {
 		ReportStatusLog reportStatusLog=ReportStatusLogLocalServiceUtil.fetchReportStatusLog(reportUploadLog.getReportUploadLogId());
@@ -689,8 +726,9 @@ public class ReportsMigrationScheduler extends BaseMessageListener {
 		reportStatusLog.setIsApproved(isApproved==true?1:0);
 		reportStatusLog.setSubmitedToNPST(forwaredToNpst);
 		reportStatusLog.setClazzName(clazzName);
-		ReportStatusLogLocalServiceUtil.updateReportStatusLog(reportStatusLog);
+		reportStatusLog=ReportStatusLogLocalServiceUtil.updateReportStatusLog(reportStatusLog);
 		LOG.debug("report status saved for : "+reportUploadLog.getReportUploadLogId());
+		return reportStatusLog;
 	}
 
 	@Reference

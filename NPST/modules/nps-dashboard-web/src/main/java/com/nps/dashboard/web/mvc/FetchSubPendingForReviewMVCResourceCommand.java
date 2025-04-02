@@ -38,6 +38,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCResourceCommand;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.OrderByComparatorFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -289,14 +290,14 @@ public class FetchSubPendingForReviewMVCResourceCommand   extends BaseMVCResourc
 						LOG.error("Exception on fetching report upload log : "+e.getMessage(),e);
 					}
 					
-					jsonObject.put("fileName", dlFileEntry.getFileName());
+					jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
 					jsonObject.put("userName", reportMaster.getUploaderRole().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 					jsonObject.put("createDate", dateFormat.format(dlFileEntry.getCreateDate()));
 					jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 					jsonObject.put("status", WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase());
 					jsonObject.put("moduleName", reportMaster.getReportName());
 					jsonObject.put("workflowTaskId", itr.getWorkflowTaskId());
-					jsonObject.put("remarks", comment);
+					jsonObject.put("remarks", HtmlUtil.escape(comment));
 					jsonObject.put("dueDate", reportDate);
 					jsonObject.put("workflowContext", workflowContext);
 					jsonObject.put("department", department);
@@ -306,7 +307,7 @@ public class FetchSubPendingForReviewMVCResourceCommand   extends BaseMVCResourc
 						intermediaryName=intrmedName;
 					}
 
-					jsonObject.put("intermediaryName", intermediaryName);
+					jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 					
 					jsonArray.put(jsonObject);
 					

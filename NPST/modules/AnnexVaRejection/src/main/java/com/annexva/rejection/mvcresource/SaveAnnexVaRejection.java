@@ -1,6 +1,7 @@
 package com.annexva.rejection.mvcresource;
 
 import com.annexva.rejection.constants.annexvarejectionPortletKeys;
+import com.annexva.rejection.portlet.ValidateFileName;
 import com.daily.average.service.model.Annexvarejection;
 import com.daily.average.service.service.AnnexvarejectionLocalServiceUtil;
 import com.daily.average.service.service.ReportUploadLogMakerLocalServiceUtil;
@@ -109,6 +110,7 @@ public class SaveAnnexVaRejection implements MVCResourceCommand{
 
 		String title = fileName;
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		AnnexvarejectionLocalServiceUtil.deleteAnnexvarejectionByReportUploadLogId(reportUploadLogId);
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
@@ -451,6 +453,11 @@ public class SaveAnnexVaRejection implements MVCResourceCommand{
 					resultJsonObject.put("status", false);
 				}
 			}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 			return resultJsonObject;
 		}
 	

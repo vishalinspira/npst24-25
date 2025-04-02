@@ -6,6 +6,7 @@ import com.daily.average.service.service.QrFinalVoteCountLocalService;
 import com.daily.average.service.service.QrPfVotingRecommCountLocalService;
 import com.daily.average.service.service.ReportUploadLogPFMLocalServiceUtil;
 import com.evoting.count.constants.EVotingCountPortletKeys;
+import com.evoting.count.util.ValidateFileName;
 import com.evoting.count.util.form1;
 import com.evoting.count.util.form2;
 import com.liferay.document.library.kernel.model.DLFileEntry;
@@ -138,7 +139,7 @@ public class SaveEVotingCountMVCResourceCommand extends BaseMVCResourceCommand{
 			//Form 2
 			JSONArray form2JsonArray = JSONFactoryUtil.createJSONArray();
 			List<QrPfVotingRecommCount> form2List = new ArrayList<QrPfVotingRecommCount>();
-			
+			if(ValidateFileName.isValidfile(filename)) {
 			//JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 			resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 			if(resultJsonObject.getBoolean("status")) {
@@ -254,7 +255,11 @@ public class SaveEVotingCountMVCResourceCommand extends BaseMVCResourceCommand{
 				return resultJsonObject;
 			}
 			
-			
+			}else {
+				resultJsonObject.put("status", false);
+				resultJsonObject.put("msg","Please upload files with a valid filename.");
+				return resultJsonObject;
+			}
 		} catch (Exception e) {
 			_log.error(e);
 		}

@@ -97,6 +97,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 	</div>
 </div>
 <script type="text/javascript">
+var url='<%=saveevotingsummaryURL %>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -131,8 +132,9 @@ $(function(){
         $(".animaion").show();
         $("#error-evotingsummaryFile").html("");
         $.ajax({
-            url: '<%=saveevotingsummaryURL %>',  
+            url: url,  
             type: 'POST',
+            enctype: 'multipart/form-data',
             data: fd,
             success:function(data){
             	$(".content").show();

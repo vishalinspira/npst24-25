@@ -99,6 +99,7 @@
 		<div class="loading-animation"></div>
 	</div>
 </div>		<script type="text/javascript">
+var url='<%= savegrowthdataURL%>';
 		$(document).ready(function() {
 			toastr.options = {
 					  "debug": false,
@@ -132,7 +133,7 @@
 		        $(".animaion").show();
 		        $("#error-growthdataFile").html("");
 		        $.ajax({
-		            url: '<%=savegrowthdataURL %>',  
+		            url: url,  
 		            type: 'POST',
 		            data: fd,
 		            success:function(data){

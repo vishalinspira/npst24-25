@@ -1,6 +1,5 @@
 package Annual_Audited_Scheme_Financials.resource;
 
-import com.daily.average.service.model.ReportUploadLogPFM;
 import com.daily.average.service.model.annual_audited_scheme_financials_1;
 import com.daily.average.service.model.annual_audited_scheme_financials_2;
 import com.daily.average.service.model.annual_audited_scheme_financials_3;
@@ -60,6 +59,7 @@ import Annual_Audited_Scheme_Financials.util.ConsolidatedFinancial;
 import Annual_Audited_Scheme_Financials.util.ConsolidatedFinancial2;
 import Annual_Audited_Scheme_Financials.util.ConsolidatedFinancial3;
 import Annual_Audited_Scheme_Financials.util.ConsolidatedFinancial4;
+import Annual_Audited_Scheme_Financials.util.ValidateFileName;
 import Annual_Audited_Scheme_Financials.util.validateSheetname1;
 import nps.email.api.api.ExcelValidationAn10Api;
 
@@ -105,7 +105,11 @@ _log.info("Serve Resource method");
 		String reportUploadLogIdString = uploadPortletRequest.getParameter("reportUploadLogId");
 		Long reportUploadLogId = Long.parseLong(reportUploadLogIdString);
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-		
+		List<String> fileNames=new ArrayList<String>();
+		fileNames.add(uploadPortletRequest.getFileName("auditedSchemeFinancialsPDFFile"));
+		fileNames.add(uploadPortletRequest.getFileName("consolidatedFinancialandkeystatsFile"));
+		fileNames.add(uploadPortletRequest.getFileName("financialReportDocFile"));
+		if(ValidateFileName.validatefileNames(fileNames)) {
 		
 		
 		resultJsonObject = saveVoteFile(uploadPortletRequest, themeDisplay, userId, resourceRequest, reportUploadLogId, statusByUserName, serviceContext, resultJsonObject);
@@ -143,6 +147,11 @@ _log.info("Serve Resource method");
 				e.printStackTrace();
 			}
 		//resultJsonObject.put("status", true);
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 	return resultJsonObject;
 }

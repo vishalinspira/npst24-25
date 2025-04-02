@@ -39,6 +39,7 @@ import com.monthly.pfm.util.Form7;
 import com.monthly.pfm.util.Form8;
 import com.monthly.pfm.util.Form8_ii;
 import com.monthly.pfm.util.Form9;
+import com.monthly.pfm.util.ValidateFileName;
 import com.monthly.pfm.util.ValidateSheetName;
 
 import java.io.File;
@@ -268,7 +269,9 @@ public class PFMForm implements MVCResourceCommand {
 		List<MnForm14> form14List = new ArrayList<MnForm14>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-		List<String> errorlist = ValidateSheetName.ValidateExcelSheetName(file, null);
+	
+		if(ValidateFileName.isValidfile(fileName)){
+			List<String> errorlist = ValidateSheetName.ValidateExcelSheetName(file, null);
 		if (errorlist.size() > 0) {
 			resultJsonObject.put("status", false);
 			resultJsonObject.put("sheeterror",true);
@@ -518,6 +521,11 @@ public class PFMForm implements MVCResourceCommand {
 				}
 			}
 			
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

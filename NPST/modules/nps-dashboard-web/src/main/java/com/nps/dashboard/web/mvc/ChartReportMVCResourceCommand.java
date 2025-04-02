@@ -56,6 +56,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCResourceCommand;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
@@ -308,7 +309,7 @@ public class ChartReportMVCResourceCommand extends BaseMVCResourceCommand {
 		}
 		
 		JSONObject object = JSONFactoryUtil.createJSONObject();
-		object.put("label", reportType);
+		object.put("label", HtmlUtil.escape(reportType));
 		object.put("data", data);
 		object.put("yAxisID", "y");
 		object.put("fill", Boolean.FALSE);
@@ -622,7 +623,7 @@ public class ChartReportMVCResourceCommand extends BaseMVCResourceCommand {
 				for(int i=0; i<reportTypes.size();i++) {
 					JSONObject object = JSONFactoryUtil.createJSONObject();
 					String folderName = reportTypes.get(i);
-					object.put("label", folderName);
+					object.put("label", HtmlUtil.escape(folderName));
 					object.put("data", reportTypeCountMap.get(folderName));
 					object.put("yAxisID", "y");
 					object.put("fill", Boolean.FALSE);

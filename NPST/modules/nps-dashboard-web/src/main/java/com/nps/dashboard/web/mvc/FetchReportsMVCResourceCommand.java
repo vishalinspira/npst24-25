@@ -36,6 +36,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.repository.model.Folder;
 import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.OrderByComparatorFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -339,7 +340,7 @@ public class FetchReportsMVCResourceCommand extends BaseMVCResourceCommand {
 					
 					JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 					if(reportUploadLogMaker != null && reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-						jsonObject.put("fileName", dlFileEntry.getFileName());
+						jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
 						jsonObject.put("userName", reportMaster.getUploaderRole().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 						jsonObject.put("createDate", dateFormat.format(dlFileEntry.getCreateDate()));
 						jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
@@ -347,10 +348,10 @@ public class FetchReportsMVCResourceCommand extends BaseMVCResourceCommand {
 						jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 						jsonObject.put("moduleName", reportMaster.getReportName());
 						jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-						jsonObject.put("remarks", comment.isEmpty() ? reportUploadLogMaker.getRemarks() : comment);
+						jsonObject.put("remarks", HtmlUtil.escape(comment.isEmpty() ? reportUploadLogMaker.getRemarks() : comment));
 						jsonArray.put(jsonObject);
 					} else if(reportUploadLogSupervisor != null && reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-						jsonObject.put("fileName", dlFileEntry.getFileName());
+						jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
 						jsonObject.put("userName", reportMaster.getUploaderRole().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 						jsonObject.put("createDate", dateFormat.format(dlFileEntry.getCreateDate()));
 						jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
@@ -358,7 +359,7 @@ public class FetchReportsMVCResourceCommand extends BaseMVCResourceCommand {
 						jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 						jsonObject.put("moduleName", reportMaster.getReportName());
 						jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-						jsonObject.put("remarks", comment.isEmpty() ? reportUploadLogSupervisor.getRemarks() : comment);
+						jsonObject.put("remarks", HtmlUtil.escape(comment.isEmpty() ? reportUploadLogSupervisor.getRemarks() : comment));
 						jsonArray.put(jsonObject);
 					}
 					
@@ -406,14 +407,14 @@ public class FetchReportsMVCResourceCommand extends BaseMVCResourceCommand {
 				}
 				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 				if(dlFileEntry != null && dlFileEntry.getFolderId() == folderid) {
-					jsonObject.put("fileName", dlFileEntry.getFileName());
-					jsonObject.put("userName", dlFileEntry.getUserName());
+					jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+					jsonObject.put("userName", HtmlUtil.escape(dlFileEntry.getUserName()));
 					jsonObject.put("createDate", dateFormat.format(dlFileEntry.getCreateDate()));
 					jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 					jsonObject.put("status", WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase());
-					jsonObject.put("moduleName", dlFileEntry.getDescription());
+					jsonObject.put("moduleName", HtmlUtil.escape(dlFileEntry.getDescription()));
 					jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-					jsonObject.put("remarks", messageBuffer.toString());
+					jsonObject.put("remarks", HtmlUtil.escape(messageBuffer.toString()));
 					jsonArray.put(jsonObject);
 				}
 			}
@@ -570,39 +571,39 @@ public class FetchReportsMVCResourceCommand extends BaseMVCResourceCommand {
 			long assignedToId, boolean isNonNpsUser) {
 		JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 		if(isNonNpsUser && npsDashboardUtil.isNonNpsUser(assignedToId)) {
-			jsonObject.put("fileName", reportName);
+			jsonObject.put("fileName", HtmlUtil.escape(reportName));
 			jsonObject.put("reportUploadLogId",reportUploadLogId);
 			jsonObject.put("reportMasterId", reportMasterId);
 			jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
-			jsonObject.put("userName", dlFileEntry.getUserName());
+			jsonObject.put("userName", HtmlUtil.escape(dlFileEntry.getUserName()));
 			jsonObject.put("dueDate", dueDate);
 			jsonObject.put("createDate", reportUploadDate);
 			jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(reportStatus).toUpperCase()));
-			jsonObject.put("remarks", comment);
+			jsonObject.put("remarks", HtmlUtil.escape(comment));
 			jsonObject.put("workflowInstanceId", workflowInstanceId);
 			jsonObject.put("assignedTo", assignedTo.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		}else if(isNonNpsUser && npsDashboardUtil.isNonNpsUser(assignedToId)){
-			jsonObject.put("fileName", reportName);
+			jsonObject.put("fileName", HtmlUtil.escape(reportName));
 			jsonObject.put("reportUploadLogId",reportUploadLogId);
 			jsonObject.put("reportMasterId", reportMasterId);
 			jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
-			jsonObject.put("userName", dlFileEntry.getUserName());
+			jsonObject.put("userName", HtmlUtil.escape(dlFileEntry.getUserName()));
 			jsonObject.put("dueDate", dueDate);
 			jsonObject.put("createDate", reportUploadDate);
 			jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(reportStatus).toUpperCase()));
-			jsonObject.put("remarks", comment);
+			jsonObject.put("remarks", HtmlUtil.escape(comment));
 			jsonObject.put("workflowInstanceId", workflowInstanceId);
 			jsonObject.put("assignedTo", assignedTo.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		}else if(!isNonNpsUser) {
-			jsonObject.put("fileName", reportName);
+			jsonObject.put("fileName", HtmlUtil.escape(reportName));
 			jsonObject.put("reportUploadLogId",reportUploadLogId);
 			jsonObject.put("reportMasterId", reportMasterId);
 			jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
-			jsonObject.put("userName", dlFileEntry.getUserName());
+			jsonObject.put("userName", HtmlUtil.escape(dlFileEntry.getUserName()));
 			jsonObject.put("dueDate", dueDate);
 			jsonObject.put("createDate", reportUploadDate);
 			jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(reportStatus).toUpperCase()));
-			jsonObject.put("remarks", comment);
+			jsonObject.put("remarks", HtmlUtil.escape(comment));
 			jsonObject.put("workflowInstanceId", workflowInstanceId);
 			jsonObject.put("assignedTo", assignedTo.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		}
@@ -761,25 +762,25 @@ public class FetchReportsMVCResourceCommand extends BaseMVCResourceCommand {
 				String intermediaryName = reportStatusLog.getIntermediaryname();
 
 				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-				jsonObject.put("fileName", reportStatusLog.getReportName());
+				jsonObject.put("fileName", HtmlUtil.escape(reportStatusLog.getReportName()));
 				jsonObject.put("reportUploadLogId",reportStatusLog.getReportUploadLogId()+"");
 				jsonObject.put("reportMasterId", reportStatusLog.getReportMasterId()+"");
 				jsonObject.put("dueDate", dateFormat.format(reportStatusLog.getReportDate()));
 				jsonObject.put("createDate", dateFormat.format(reportStatusLog.getCreateDate()));
 				jsonObject.put("status", (reportStatusLog.getStatus_() != null && !reportStatusLog.getStatus_().isEmpty() ? reportStatusLog.getStatus_().toUpperCase() : WorkflowConstants.getStatusLabel(reportStatusLog.getStatus()).toUpperCase()));
-				jsonObject.put("remarks", reportStatusLog.getRemarks());
+				jsonObject.put("remarks", HtmlUtil.escape(reportStatusLog.getRemarks()));
 				jsonObject.put("workflowInstanceId", reportStatusLog.getWorkflowInstanceId()+"");
 				jsonObject.put("url", reportStatusLog.getFileUrl());
-				jsonObject.put("userName", reportStatusLog.getUserName());
-				jsonObject.put("submittedBy", reportStatusLog.getUserName());
+				jsonObject.put("userName", HtmlUtil.escape(reportStatusLog.getUserName()));
+				jsonObject.put("submittedBy", HtmlUtil.escape(reportStatusLog.getUserName()));
 				String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 				if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {
 					intermediaryName=intrmedName;
 				}
-				jsonObject.put("intermediaryName",intermediaryName );
+				jsonObject.put("intermediaryName",HtmlUtil.escape(intermediaryName ));
 				jsonObject.put("assignedTo", reportStatusLog.getAssignedTo().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
-				jsonObject.put("moduleName", reportStatusLog.getReportName());
-				jsonObject.put("intermediaryName", intermediaryName);
+				jsonObject.put("moduleName", HtmlUtil.escape(reportStatusLog.getReportName()));
+				jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 				
 				array.put(jsonObject);
 				}catch (Exception e) {

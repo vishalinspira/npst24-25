@@ -32,7 +32,6 @@ import com.daily.average.service.service.ReportUploadLogPFMAMLocalService;
 import com.daily.average.service.service.ReportUploadLogPFMAMPFRDALocalServiceUtil;
 import com.daily.average.service.service.ReportUploadLogPFMCRALocalService;
 import com.daily.average.service.service.ReportUploadLogPFMLocalService;
-import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
 import com.liferay.document.library.kernel.model.DLFileEntry;
 import com.liferay.document.library.kernel.service.DLAppLocalServiceUtil;
 import com.liferay.document.library.kernel.service.DLFileEntryLocalServiceUtil;
@@ -53,6 +52,7 @@ import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.service.UserLocalServiceUtil;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.OrderByComparatorFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -172,12 +172,13 @@ public class ReportSummaryMVCRenderCommand implements MVCRenderCommand {
 			logTypesTwo.add(KaleoLogUtil.convert("TASK_ASSIGNMENT"));
 			logTypesTwo.add(0);
 			
-			LOG.info("logTypesTwo : "+logTypesTwo);
+			LOG.debug("logTypesTwo : "+logTypesTwo);
 			
 			List<KaleoLog> kaleoLogsTwo = KaleoLogLocalServiceUtil.getKaleoInstanceKaleoLogs(companyId,
 					workflowInstanceId, logTypesTwo, QueryUtil.ALL_POS, QueryUtil.ALL_POS, comparator);
+			kaleoLogsTwo = kaleoLogsTwo.stream().sorted(Comparator.comparing(KaleoLog::getCreateDate)).collect(Collectors.toList());
 			LOG.info("================================================");
-			LOG.info("kaleoLogsTwo ::::::::::::: "+kaleoLogsTwo);
+			LOG.debug("kaleoLogsTwo ::::::::::::: "+kaleoLogsTwo);
 			
 			boolean isNonNpsUser = npsDashboardUtil.isNonNpsUser(themeDisplay.getUserId());
 			
@@ -198,8 +199,9 @@ public class ReportSummaryMVCRenderCommand implements MVCRenderCommand {
 			try {
 				 kaleoLogsOne = KaleoLogLocalServiceUtil.getKaleoInstanceKaleoLogs(companyId,
 						workflowInstanceId, logTypesOne, QueryUtil.ALL_POS, QueryUtil.ALL_POS, comparatorOne);
+				 kaleoLogsOne= kaleoLogsOne.stream().sorted(Comparator.comparing(KaleoLog::getCreateDate)).collect(Collectors.toList());
 				 if(Validator.isNotNull(kaleoLogsOne) && kaleoLogsOne.size() >0) {
-					 LOG.info("kaleoLogsOne::::" + kaleoLogsOne);
+					 LOG.debug("kaleoLogsOne::::" + kaleoLogsOne);
 					 long kaleoInstanceId = 0l;
 					 kaleoInstanceId = kaleoLogsOne.get(0).getKaleoInstanceId();
 					 kaleoInstance = KaleoInstanceLocalServiceUtil.fetchKaleoInstance(kaleoInstanceId );
@@ -573,16 +575,28 @@ public class ReportSummaryMVCRenderCommand implements MVCRenderCommand {
 					//}
 				//}
 				LOG.info("maker userID::" + kaleoLogsOne.get(0).getUserId());
-				if(isMaker(kaleoLogsOne.get(kaleoLogsOne.size()-1).getUserId())){
-					JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-					jsonObject.put("id", kaleoLogsOne.get(kaleoLogsOne.size()-1).getKaleoLogId());
-					jsonObject.put("userName", kaleoLogsOne.get(kaleoLogsOne.size()-1).getUserName());
-					jsonObject.put("createDate", DATE_FORMAT.format(kaleoLogsOne.get(kaleoLogsOne.size()-1).getCreateDate()));
-					jsonObject.put("remarks", makerComment);
-					jsonArray.put(jsonObject);
-				}
+				//commented for remark not visible issue
+//				if(isMaker(kaleoLogsOne.get(kaleoLogsOne.size()-1).getUserId())){
+//					JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
+//					jsonObject.put("id", kaleoLogsOne.get(kaleoLogsOne.size()-1).getKaleoLogId());
+//					jsonObject.put("userName", kaleoLogsOne.get(kaleoLogsOne.size()-1).getUserName());
+//					jsonObject.put("createDate", DATE_FORMAT.format(kaleoLogsOne.get(kaleoLogsOne.size()-1).getCreateDate()));
+//					jsonObject.put("remarks", HtmlUtil.escape(makerComment));
+//					jsonArray.put(jsonObject);
+//				}
 			}
-			
+			try {
+				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
+				KaleoLog kaleoLog=kaleoLogsTwo.get(0);
+				jsonObject.put("id", kaleoLog.getKaleoLogId());
+				jsonObject.put("userName", kaleoLog.getUserName());
+				jsonObject.put("createDate", DATE_FORMAT.format(kaleoLog.getCreateDate()));
+				jsonObject.put("remarks", "");
+				LOG.info("Remark:  "+kaleoLog.getComment()+" LOG Type:   "+kaleoLog.getType()+" username  : " +kaleoLog.getUserName());
+				jsonArray.put(jsonObject);
+				}catch (Exception e) {
+					LOG.error(e);
+				}
 			
 			/* Custom code to get Maker comment end */
 			
@@ -595,57 +609,108 @@ public class ReportSummaryMVCRenderCommand implements MVCRenderCommand {
 					jsonObject.put("id", KL.getKaleoLogId());
 					jsonObject.put("userName", KL.getUserName());
 					jsonObject.put("createDate", DATE_FORMAT.format(KL.getCreateDate()));
+					
+					
 					if (KL.getType().equalsIgnoreCase("TASK_COMPLETION")) {
-						jsonObject.put("remarks", KL.getComment());
-					}else {
-						jsonObject.put("remarks","");
+						LOG.info("Remark:  "+KL.getComment()+" LOG Type:   "+KL.getType()+" username  : " +KL.getUserName());
+						jsonObject.put("remarks", HtmlUtil.escape(KL.getComment()));
+						jsonArray.put(jsonObject);
 					}
-					if (!jsonObject.getString("userName").equalsIgnoreCase(jsonObjectHist.getString("userName"))) {
-						if (isChecker || isMaker) {
-							if (jsonObject.getString("userName").equalsIgnoreCase("AM")
-									|| jsonObject.getString("userName").equalsIgnoreCase("DGM")
-									|| jsonObject.getString("userName").equalsIgnoreCase("GM")) {
-
-							}else {
-								jsonArray.put(jsonObject);
-							}
-						} else {
-							jsonArray.put(jsonObject);
-						}
-
-					}
+					
+//					if(!KL.getComment().equalsIgnoreCase("assigned-initial-task")) {
+//						if (KL.getType().equalsIgnoreCase("TASK_COMPLETION")) {
+//							
+//							jsonObject.put("remarks", HtmlUtil.escape(KL.getComment()));
+//						}
+//						else {
+//							jsonObject.put("remarks", "");
+//						}
+//						jsonArray.put(jsonObject);
+//						}
+					
+//					if (!jsonObject.getString("userName").equalsIgnoreCase(jsonObjectHist.getString("userName"))) {
+//						if (isChecker || isMaker) {
+//							if (jsonObject.getString("userName").equalsIgnoreCase("AM")
+//									|| jsonObject.getString("userName").equalsIgnoreCase("DGM")
+//									|| jsonObject.getString("userName").equalsIgnoreCase("GM")) {
+//
+//							}else {
+//								jsonArray.put(jsonObject);
+//							}
+//						} else {
+//							jsonArray.put(jsonObject);
+//						}
+//
+//					}
 					jsonObjectHist = jsonObject;
 				  }
 				}
 			}else {
 				LOG.info("inside else");
+				
 				for (KaleoLog KL : kaleoLogsTwo) {
 					JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 					jsonObject.put("id", KL.getKaleoLogId());
 					jsonObject.put("userName", KL.getUserName());
 					jsonObject.put("createDate", DATE_FORMAT.format(KL.getCreateDate()));
+					
+					
+					
 					if (KL.getType().equalsIgnoreCase("TASK_COMPLETION")) {
-						jsonObject.put("remarks", KL.getComment());
-					}else {
-						jsonObject.put("remarks", "");
+						LOG.info("Remark:  "+KL.getComment()+" LOG Type:   "+KL.getType()+" username  : " +KL.getUserName());
+						jsonObject.put("remarks", HtmlUtil.escape(KL.getComment()));
+						jsonArray.put(jsonObject);
 					}
-					if (!jsonObject.getString("userName").equalsIgnoreCase(jsonObjectHist.getString("userName"))) {
-						if (isChecker || isMaker) {
-							if (jsonObject.getString("userName").equalsIgnoreCase("AM")
-									|| jsonObject.getString("userName").equalsIgnoreCase("DGM")
-									|| jsonObject.getString("userName").equalsIgnoreCase("GM")) {
-
-							}else {
-								jsonArray.put(jsonObject);
-							}
-						} else {
-							jsonArray.put(jsonObject);
-						}
-
-					}
+					
+					
+					
+					
+//					if(!KL.getComment().equalsIgnoreCase("assigned-initial-task")) {
+//					if (KL.getType().equalsIgnoreCase("TASK_COMPLETION")) {
+//						
+//						jsonObject.put("remarks", HtmlUtil.escape(KL.getComment()));
+//					}
+//					else {
+//						jsonObject.put("remarks", "");
+//					}
+//					jsonArray.put(jsonObject);
+//					}
+					
+					
+					
+					
+//					if (!jsonObject.getString("userName").equalsIgnoreCase(jsonObjectHist.getString("userName"))) {
+//						if (isChecker || isMaker) {
+//							if (jsonObject.getString("userName").equalsIgnoreCase("AM")
+//									|| jsonObject.getString("userName").equalsIgnoreCase("DGM")
+//									|| jsonObject.getString("userName").equalsIgnoreCase("GM")) {
+//
+//							}else {
+//								jsonArray.put(jsonObject);
+//							}
+//						} else {
+//							jsonArray.put(jsonObject);
+//						}
+//
+//					}
+					
 					jsonObjectHist = jsonObject;
 				}
+				
+				
 			}
+			
+			
+		}
+		try {
+			boolean iscra_amrole=roleLocalService.hasUserRole(user.getUserId(), companyId, NPSTRoleConstants.CRA_AM, false);
+			
+		if(workflowInstanceId==0 && iscra_amrole && (reportMaster.getReportMasterId()== 158 || reportMaster.getReportMasterId()== 123)) {
+			
+			urlArray = PreviewFileURLUtil.getPreviewMultiFileURL2(themeDisplay, reportUploadFileLogs);	
+		}
+		}catch (Exception e) {
+			LOG.error(e.getMessage());
 		}
 		LOG.info("jsonArray::" + jsonArray);
 		renderRequest.setAttribute("reportUploadFileLogs", reportUploadFileLogs);

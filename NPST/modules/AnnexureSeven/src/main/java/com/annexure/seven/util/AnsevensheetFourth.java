@@ -111,8 +111,8 @@ public static JSONObject saveSheetFourth(File file, XSSFWorkbook workbook, long 
 							} 
 							else if (i == 3) {
 								try {
-									long lValue = Long.parseLong(val);
-									eleRejects.setSource_acc_no_nodal(lValue);
+									//long lValue = Long.parseLong(val);
+									eleRejects.setSource_acc_no_nodal(val);
 								} catch (Exception e) {
 									_log.info("error parsing long"+val);
 									resultJsonObject.put("status", false);

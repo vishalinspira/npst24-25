@@ -55,6 +55,7 @@ import org.osgi.service.component.annotations.Reference;
 
 import FinalIntimation_NPS.Util.PaoGrievances;
 import FinalIntimation_NPS.Util.Reg_lite;
+import FinalIntimation_NPS.Util.ValidateFileName;
 import FinalIntimation_NPS.constants.FinalIntimation_NPSPortletKeys;
 import nps.common.service.util.CommonParser;
 import nps.email.api.api.ExcelValidationAn10Api;
@@ -136,6 +137,7 @@ public class FinalIntimation_NPSMvcResources implements MVCResourceCommand{
 	
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -208,6 +210,11 @@ public class FinalIntimation_NPSMvcResources implements MVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

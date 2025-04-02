@@ -99,7 +99,7 @@
 </style>
 
 <script type="text/javascript">
-  
+var url='<%= saveEvotingcountExcelURL%>';
   $(document).ready(function() {
  	  toastr.options = {
 			  "debug": false,
@@ -140,7 +140,7 @@
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${saveEvotingcountExcelURL}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

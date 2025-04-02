@@ -192,6 +192,7 @@ taglib uri="http://liferay.com/tld/ui" prefix="liferay-ui" %>
 		</div>
 	</div> --%>
 <script type="text/javascript">
+var url='<%= saveannexureviiaURL%>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -266,7 +267,7 @@ $(function(){
         $(".animaion").show();
         $("#error-annexureviiaFile").html("");
         $.ajax({
-            url: '<%=saveannexureviiaURL %>',  
+            url: url,  
             type: 'POST',
             data: fd,
             success:function(data){

@@ -100,6 +100,7 @@
 </div>
 
 <script type="text/javascript">
+var url='<%=SaveCra_Quaterly_data %>';
 $(document).ready(function() {
 	console.log("welcome to :::::::::::::::::::::");
 	toastr.options = {
@@ -142,7 +143,7 @@ $(function(){
             processData: false,
             contentType: false,
             cache: false,
-            url: '${SaveCra_Quaterly_data}',
+            url: url,
             data: fd,
             success:function(data){
             	$(".content").show();

@@ -342,7 +342,7 @@
 
 
 <script type="text/javascript">
-
+var url='<%=performanceRepResourceURL %>';
 function getreportUploadLogId(){
 	var fd = new FormData($("form.form")[0]);
 	$.ajax({
@@ -416,18 +416,26 @@ $('#btn-submit').on('click', function(){
    $("#error-perfromanceRepFile").html("");
 
    $.ajax({
-       url: '${performanceRepResourceURL}', 
+       url: url, 
        type: 'POST',
        data: fd,
-       success: function(data) {
-       	console.log("Inside success");
+       success:function(data){
        	$(".content").show();
-       	$(".animaion").hide();
-       	$('#success_tic').modal('show');
-       	//$('#success-message').show();
-       	//$("#success-message").html("<i class='fa fa-check-circle mr-2'></i>Form has been submitted successfully!");
-       	//toastr.success('Form has been submitted successfully!');
-       	//$("#perfromanceRepForm")[0].reset();
+           $(".animaion").hide();
+           $(".formrow").hide();
+           try {
+           	data = JSON.parse(data);
+           } catch (e) {
+           	console.log("error while parsing the json data");
+           }
+       	if(data.status){
+      		 	$('#success_tic').modal('show');
+      		 	$(".formrow").show();
+       	}else{
+       		console.log(data);
+       		$('#output').html(data.msg);
+       		$('#errorExcel').modal('show');
+       	}
        },
 
        error: function() {

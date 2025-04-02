@@ -88,6 +88,9 @@
 <script src="${javascript_folder}/toastr.min.js"></script>
 <script src="${javascript_folder}/jquery.validate.min.js"></script>
 <script src="${javascript_folder}/custom.js"></script>
+<script src="${javascript_folder}/bootstrap.bundle.min.js"></script>
+
+
 
 <@liferay_util["include"] page=body_bottom_include />
 

@@ -2,6 +2,7 @@ package com.annualevoting.mvcresource;
 
 import com.annualevoting.util.AnnualPFVotingRec;
 import com.annualevoting.util.FinalAnnualVoteCount;
+import com.annualevoting.util.ValidateFileName;
 import com.annualevoting.util.ValidateSheetName;
 import com.daily.average.service.service.ReportUploadLogPFMLocalServiceUtil;
 import com.liferay.document.library.kernel.model.DLFileEntry;
@@ -96,6 +97,7 @@ public class SaveAnnualEvoting implements MVCResourceCommand {
     JSONArray annualPFVotingRecJsonArray = JSONFactoryUtil.createJSONArray();
     List<AnPFVotingRec> annualPFVotingRecList = new ArrayList<>();
     JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+    if(ValidateFileName.isValidfile(fileName)) {
     resultJsonObject = this.excelValidationAn10Api.validateExcelFile(file, (PortletRequest)resourceRequest);
     if (resultJsonObject.getBoolean("status")) {
       JSONArray errorArray = JSONFactoryUtil.createJSONArray();
@@ -168,6 +170,11 @@ public class SaveAnnualEvoting implements MVCResourceCommand {
         resultJsonObject.put("status", false);
       } 
     } 
+    }else {
+		resultJsonObject.put("status", false);
+		resultJsonObject.put("msg","Please upload files with a valid filename.");
+		return resultJsonObject;
+	}
     return resultJsonObject;
   }
   

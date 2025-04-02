@@ -80,6 +80,7 @@
 </style>
 
 <script type="text/javascript">
+var url='<%= letterofnpsURL%>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -113,7 +114,7 @@ $(function(){
         $(".animaion").show();
         $("#error-letterofnpsFile").html("");
         $.ajax({
-            url: '${letterofnpsURL}', 
+            url: url, 
             type: 'POST',
             data: fd,
             success:function(data){

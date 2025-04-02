@@ -9,7 +9,7 @@
     	<column name="no_of_accepted_tran" type="Integer" ></column>
 		<column name="no_of_rejected_tran" type="Integer" ></column>
 		<column name="total_transactions" type="Integer"></column>
-        <column name="rejection_prcnt" type="String"></column>
+        <column name="rejection_prcnt" type="BigDecimal"></column>
         <column name="cra" type="String"></column>
         <column name="month" type="Date"></column>
         <column name="report_month" type="Date" />
@@ -229,7 +229,7 @@
      	<column name="subscriber_name" type="String"></column>
      	<column name="payee_name" type="String" ></column>
         <column name="payee_bank_ifsc" type="String"></column>
-		<column name="payee_bank_acc_no" type="String" ></column>
+		<column name="payee_bank_acc_no" type="long" ></column>
         <column name="net_amt" type="BigDecimal"></column>
      	<column name="pay_in_date" type="Date"></column>
      	<column name="execution_date" type="Date"></column>
@@ -1351,7 +1351,7 @@
     	<column type="long" name="id_" primary="true"></column>
     	<column name="section" type="String" ></column>
     	<column name="particulars" type="String" ></column>
-		<column name="value" type="String" ></column>
+		<column name="value" type="BigDecimal" ></column>
         <column name="entity_name" type="String"></column>
      	<column name="month_" type="Date"></column>
         <column name="createdate" type="Date"></column>

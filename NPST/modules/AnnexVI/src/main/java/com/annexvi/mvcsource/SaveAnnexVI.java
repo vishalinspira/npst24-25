@@ -125,7 +125,7 @@ public class SaveAnnexVI implements MVCResourceCommand{
 		DecimalFormat decimalFormat = new DecimalFormat(pattern, symbols);
 		decimalFormat.setParseBigDecimal(true);
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-		
+		if(ValidateFileName.isValidfile(fileName)) {
 		AnnexVILocalServiceUtil.deleteAnnexVIByReportUploadLogId(reportUploadLogId);
 		
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
@@ -442,6 +442,11 @@ public class SaveAnnexVI implements MVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

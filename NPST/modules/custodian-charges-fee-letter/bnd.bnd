@@ -1,0 +1,15 @@
+Bundle-Name: custodian-charges-fee-letter
+Bundle-SymbolicName: com.nps.cust.fee.letter
+Bundle-Version: 1.0.0
+Export-Package: com.nps.cust.fee.letter.portlet
+Import-Package: *; version="0";resolution:=optional
+
+Include-Resource:\
+    @poi-4.1.2.jar, \
+    @poi-ooxml-4.1.2.jar, \
+    @poi-ooxml-schemas-4.1.2.jar, \
+    @pdfbox-2.0.24.jar, \
+    @aspose-pdf-24.7, \
+    @okhttp-3.2.0
+    
+-sources: true

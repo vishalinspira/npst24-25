@@ -105,6 +105,7 @@
 </style>
 
 <script type="text/javascript">
+var url='<%=annualProxyVotingResourceURL %>';
 $(document).ready(function() {
 	 toastr.options = {
 			  "debug": false,
@@ -179,7 +180,7 @@ $(function(){
             processData: false,
             contentType: false,
             cache: false,
-            url: '${annualProxyVotingResourceURL}',
+            url: url,
             data: fd,
             success:function(data){
             	$(".content").show();

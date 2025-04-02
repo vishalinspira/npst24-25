@@ -5,6 +5,7 @@ import com.annexure.one.pfm.details.util.AnnexureOnePFMDetailsUtil;
 import com.annexure.one.pfm.details.util.CollateralDetailsSheet;
 import com.annexure.one.pfm.details.util.Form1;
 import com.annexure.one.pfm.details.util.Form2;
+import com.annexure.one.pfm.details.util.ValidateFileName;
 import com.annexure.one.pfm.details.util.ValidateSheetName;
 import com.daily.average.service.model.CollateralDetails;
 import com.daily.average.service.model.MnAssetNotUnderCustody;
@@ -141,6 +142,7 @@ public class SaveAnnexureOnePFM_AUC_Details extends BaseMVCResourceCommand{
 		List<CollateralDetails> collDetailsList = new ArrayList<CollateralDetails>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -255,6 +257,11 @@ public class SaveAnnexureOnePFM_AUC_Details extends BaseMVCResourceCommand{
 				resultJsonObject.put("downloadUrl", downloadUrl);
 				resultJsonObject.put("status", false);
 			}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

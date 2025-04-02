@@ -2,6 +2,7 @@ package com.halfyearly.iar.resource;
 
 import com.daily.average.service.service.ReportUploadLogPFMLocalServiceUtil;
 import com.halfyearly.iar.constants.HalfYearlyIARPortletKeys;
+import com.halfyearly.iar.portlet.ValidateFileName;
 import com.liferay.document.library.kernel.model.DLFileEntry;
 import com.liferay.document.library.kernel.model.DLFolderConstants;
 import com.liferay.document.library.kernel.service.DLAppServiceUtil;
@@ -91,6 +92,7 @@ public class HalfYearlyIAR implements MVCResourceCommand {
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 	
 			Long fileEntryId = 0l;
+			if(ValidateFileName.isValidfile(fileName)) {
 			fileEntryId = uploadFILETOFOLDER(themeDisplay, resourceRequest);
 			try {
 				String remarks = ParamUtil.getString(uploadPortletRequest, "remarks");
@@ -100,6 +102,11 @@ public class HalfYearlyIAR implements MVCResourceCommand {
 				 _log.error(e);
 			}
 			resultJsonObject.put("status", true);
+			}else {
+				resultJsonObject.put("status", false);
+				resultJsonObject.put("msg","Please upload files with a valid filename.");
+				return resultJsonObject;
+			}
 		return resultJsonObject;
 	}
 	

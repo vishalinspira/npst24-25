@@ -94,6 +94,7 @@
 		<div class="loading-animation"></div>
 	</div>
 </div>		<script type="text/javascript">
+var url='<%= savewebsitejuneURL%>';
 		$(document).ready(function() {
 			toastr.options = {
 					  "debug": false,
@@ -127,7 +128,7 @@
 		        $(".animaion").show();
 		        $("#error-websitejuneFile").html("");
 		        $.ajax({
-		            url: '<%=savewebsitejuneURL %>',  
+		            url: url,  
 		            type: 'POST',
 		            data: fd,
 		            success:function(data){

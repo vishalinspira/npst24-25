@@ -126,6 +126,8 @@
 
 
 <script type="text/javascript">
+var url='<%= InvestmentManagementFileURl%>';
+
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -271,7 +273,7 @@ $(function(){
             processData: false,
             contentType: false,
             cache: false,
-            url: '${InvestmentManagementFileURl}',
+            url: url,
             data: fd,
             success:function(data){
             	$(".content").show();

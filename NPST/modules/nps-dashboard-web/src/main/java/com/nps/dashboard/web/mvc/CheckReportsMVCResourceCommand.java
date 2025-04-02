@@ -18,6 +18,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.kernel.util.WebKeys;
@@ -291,7 +292,7 @@ public class CheckReportsMVCResourceCommand extends BaseMVCResourceCommand {
 					jsonObject.put("reportMasterId", rm.getReportMasterId());
 					String reportName=rm.getReportName() + (Validator.isNotNull(rm.getCra()) ? " - " + rm.getCra() : "");
 					 reportName=reportName.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.NCRA_OLD1, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW).replace(NameMappingConstants.KCRA_OLD, NameMappingConstants.KCRA_NEW);
-					jsonObject.put("reportName", reportName);
+					jsonObject.put("reportName", HtmlUtil.escape(reportName));
 					jsonObject.put("isUploaded", "Pending");
 					jsonObject.put("toBeUploadedBy", rm.getUploaderRole().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 					jsonObject.put("dueDate", DATE_FORMAT.format(reportUploadLog.getReportDate()));
@@ -301,14 +302,14 @@ public class CheckReportsMVCResourceCommand extends BaseMVCResourceCommand {
 						mediaryName=intrmedName;
 					}
 
-					jsonObject.put("intermediaryName", mediaryName);
+					jsonObject.put("intermediaryName", HtmlUtil.escape(mediaryName));
 					jsonArray.put(jsonObject);
 				}else if(isNonNpsUser && Validator.isNull(checkIntermediaryName)){
 					JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 					jsonObject.put("reportMasterId", rm.getReportMasterId());
 					String reportName=rm.getReportName() + (Validator.isNotNull(rm.getCra()) ? " - " + rm.getCra() : "");
 					 reportName=reportName.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.NCRA_OLD1, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW).replace(NameMappingConstants.KCRA_OLD, NameMappingConstants.KCRA_NEW);
-					jsonObject.put("reportName", reportName);
+					jsonObject.put("reportName", HtmlUtil.escape(reportName));
 					jsonObject.put("isUploaded", "Pending");
 					jsonObject.put("toBeUploadedBy", rm.getUploaderRole().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 					jsonObject.put("dueDate", DATE_FORMAT.format(reportUploadLog.getReportDate()));
@@ -318,7 +319,7 @@ public class CheckReportsMVCResourceCommand extends BaseMVCResourceCommand {
 						mediaryName=intrmedName;
 					}
 
-					jsonObject.put("intermediaryName", mediaryName);
+					jsonObject.put("intermediaryName", HtmlUtil.escape(mediaryName));
 					//jsonObject.put("intermediaryName", reportUploadLog.getIntermediaryname());
 					jsonArray.put(jsonObject);
 				}else if(!isNonNpsUser && Validator.isNull(checkIntermediaryName)){
@@ -326,7 +327,7 @@ public class CheckReportsMVCResourceCommand extends BaseMVCResourceCommand {
 					jsonObject.put("reportMasterId", rm.getReportMasterId());
 					String reportName=rm.getReportName() + (Validator.isNotNull(rm.getCra()) ? " - " + rm.getCra() : "");
 					 reportName=reportName.replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.NCRA_OLD1, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW).replace(NameMappingConstants.KCRA_OLD, NameMappingConstants.KCRA_NEW);
-					jsonObject.put("reportName", reportName);
+					jsonObject.put("reportName", HtmlUtil.escape(reportName));
 					jsonObject.put("isUploaded", "Pending");
 					jsonObject.put("toBeUploadedBy", rm.getUploaderRole().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 					jsonObject.put("dueDate", DATE_FORMAT.format(reportUploadLog.getReportDate()));
@@ -336,7 +337,7 @@ public class CheckReportsMVCResourceCommand extends BaseMVCResourceCommand {
 						mediaryName=intrmedName;
 					}
 
-					jsonObject.put("intermediaryName", mediaryName);
+					jsonObject.put("intermediaryName", HtmlUtil.escape(mediaryName));
 				//	jsonObject.put("intermediaryName", reportUploadLog.getIntermediaryname());
 					jsonArray.put(jsonObject);
 				}

@@ -62,6 +62,7 @@ import com.liferay.portal.kernel.portlet.bridges.mvc.MVCResourceCommand;
 import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.kernel.service.UserLocalService;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.Portal;
 import com.liferay.portal.kernel.util.Validator;
@@ -779,17 +780,17 @@ public class FetchCompanyReportsMVCResourceCommand1 extends BaseMVCResourceComma
 		String intermediaryName = StringPool.BLANK;
 
 		JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
-		jsonObject.put("fileName", reportStatusLog.getReportName());
+		jsonObject.put("fileName", HtmlUtil.escape(reportStatusLog.getReportName()));
 		jsonObject.put("reportUploadLogId",reportStatusLog.getReportUploadLogId());
 		jsonObject.put("reportMasterId", reportStatusLog.getReportMasterId());
 		jsonObject.put("dueDate", dateFormat.format(reportStatusLog.getReportDate()));
 		jsonObject.put("createDate", dateFormat.format(reportStatusLog.getCreateDate()));
 		jsonObject.put("status", (reportStatusLog.getStatus_() != null && !reportStatusLog.getStatus_().isEmpty() ? reportStatusLog.getStatus_().toUpperCase() : WorkflowConstants.getStatusLabel(reportStatusLog.getStatus()).toUpperCase()));
-		jsonObject.put("remarks", reportStatusLog.getRemarks());
+		jsonObject.put("remarks", HtmlUtil.escape(reportStatusLog.getRemarks()));
 		jsonObject.put("workflowInstanceId", reportStatusLog.getWorkflowInstanceId());
 		jsonObject.put("url", reportStatusLog.getFileUrl());
-		jsonObject.put("userName", reportStatusLog.getUserName());
-		jsonObject.put("intermediaryName", reportStatusLog.getIntermediaryname());
+		jsonObject.put("userName", HtmlUtil.escape(reportStatusLog.getUserName()));
+		jsonObject.put("intermediaryName", HtmlUtil.escape(reportStatusLog.getIntermediaryname()));
 		jsonObject.put("assignedTo", reportStatusLog.getAssignedTo().replace(NameMappingConstants.NCRA_OLD, NameMappingConstants.NCRA_NEW).replace(NameMappingConstants.CAMS_OLD, NameMappingConstants.CAMS_NEW));
 		String intrmedName=NameMappingConstants.CRA_NAME_MAP.get(intermediaryName);
 		if(Validator.isNotNull(intrmedName) && intrmedName!="" ) {

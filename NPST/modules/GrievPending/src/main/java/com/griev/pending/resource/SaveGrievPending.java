@@ -12,6 +12,7 @@ import com.griev.pending.constants.GrievPendingPortletKeys;
 import com.griev.pending.util.ParseGrievPendingSheetOne;
 import com.griev.pending.util.ParseGrievPendingSheetSummary;
 import com.griev.pending.util.ParseGrievPendingSheetTwo;
+import com.griev.pending.util.ValidateFileName;
 import com.liferay.document.library.kernel.model.DLFileEntry;
 import com.liferay.document.library.kernel.model.DLFolderConstants;
 import com.liferay.document.library.kernel.service.DLAppServiceUtil;
@@ -126,6 +127,7 @@ public class SaveGrievPending implements MVCResourceCommand{
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
 		//resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		//if(resultJsonObject.getBoolean("status")) {
+		if(ValidateFileName.isValidfile(fileName)) {
 		if(true) {
 		JSONArray errorArray = JSONFactoryUtil.createJSONArray();
 		XSSFWorkbook workbook = null;
@@ -242,6 +244,11 @@ public class SaveGrievPending implements MVCResourceCommand{
 			resultJsonObject.put("downloadUrl", downloadUrl);
 			resultJsonObject.put("status", false);
 		}
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

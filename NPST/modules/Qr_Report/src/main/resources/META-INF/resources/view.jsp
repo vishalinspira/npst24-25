@@ -94,6 +94,7 @@
 	</div>
 </div>		
 <script type="text/javascript">
+var url='<%=saveqrreportURL %>';
 		$(document).ready(function() {
 			toastr.options = {
 					  "debug": false,
@@ -127,7 +128,7 @@
 		        $(".animaion").show();
 		        $("#error-qrreportFile").html("");
 		        $.ajax({
-		            url: '<%=saveqrreportURL %>',  
+		            url: url,  
 		            type: 'POST',
 		            data: fd,
 		            success:function(data){

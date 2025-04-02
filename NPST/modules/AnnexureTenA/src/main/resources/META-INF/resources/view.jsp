@@ -229,6 +229,7 @@
 				</div>
 			</div> --%>
 		<script type="text/javascript">
+		var url='<%=saveannextenaURL %>';
 		$(document).ready(function() {
 			toastr.options = {
 					  "debug": false,
@@ -306,7 +307,7 @@
 		        $(".animaion").show();
 		        $("#error-annextenaFile").html("");
 		        $.ajax({
-		            url: '<%=saveannextenaURL %>',  
+		            url: url,  
 		            type: 'POST',
 		            data: fd,
 		            success:function(data){

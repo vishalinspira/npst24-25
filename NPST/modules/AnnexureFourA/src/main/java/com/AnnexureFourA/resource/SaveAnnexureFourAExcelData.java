@@ -119,7 +119,7 @@ public class SaveAnnexureFourAExcelData implements MVCResourceCommand{
 
 		String title = fileName;
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
-		
+		if(ValidateFileName.isValidfile(fileName)) {
 		AnnexureFourALocalServiceUtil.deleteAnnexureFourAByReportUploadLogId(reportUploadLogId);
 		
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
@@ -401,6 +401,11 @@ public class SaveAnnexureFourAExcelData implements MVCResourceCommand{
 					resultJsonObject.put("status", false);
 				}
 			}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
+		}
 			return resultJsonObject;
 		}
 	

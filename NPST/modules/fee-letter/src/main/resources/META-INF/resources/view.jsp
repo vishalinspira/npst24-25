@@ -69,7 +69,7 @@ Set<String> pfmTypes= NpstCommonUtil.getUserType(user.getCompanyId(), NpstRoleCo
 	                            <option value="<%=PFMConstants.APF_ADDRESS%>" ><%=PFMConstants.APF_ADDRESS%></option>
 	                            <option value="<%=PFMConstants.KOTAK_ADDRESS%>" ><%=PFMConstants.KOTAK_ADDRESS%></option>
 	                            <option value="<%=PFMConstants.ICICI_ADDRESS%>" ><%=PFMConstants.ICICI_ADDRESS%></option>
-	                            <option value="<%=PFMConstants.HDFC_ADDRESS%>" ><%=PFMConstants.HDFC_ADDRESS%>option>
+	                            <option value="<%=PFMConstants.HDFC_ADDRESS%>" ><%=PFMConstants.HDFC_ADDRESS%></option>
 	                            <option value="<%=PFMConstants.UTI_ADDRESS%>" ><%=PFMConstants.UTI_ADDRESS%></option>
 	                            <option value="<%=PFMConstants.LIC_ADDRESS%>" ><%=PFMConstants.LIC_ADDRESS%></option>
 	                            <option value="<%=PFMConstants.SBI_ADDRESS%>" ><%=PFMConstants.SBI_ADDRESS%></option>
@@ -82,7 +82,8 @@ Set<String> pfmTypes= NpstCommonUtil.getUserType(user.getCompanyId(), NpstRoleCo
 	                        <div class="row">
 	                        <div class="nps-input-box col-4 ">
 	                            <label style="color:black;" for="letterDate">Letter Date</label>
-	                             <input style="color:black; background-color: #E9F3FA;" type="date" class="letterDate" id="letterDate" name="<portlet:namespace/>letterDate"  />  
+	                             <input style="color:black; background-color: #E9F3FA;" type="text" class="letterDate" id="letterDate" name="<portlet:namespace/>letterDate"  />  
+	                            <%--    <input style="color:black; background-color: #E9F3FA;" type="date" class="letterDate" id="letterDate" name="<portlet:namespace/>letterDate"  /> --%>  
 	                            <label id="error-letterDate" class="error-message text-danger"></label>
 	                            </div>
 	                            <div class="nps-input-box col-4">
@@ -168,10 +169,10 @@ Set<String> pfmTypes= NpstCommonUtil.getUserType(user.getCompanyId(), NpstRoleCo
 		    	    $("#error-letterDate").html("This field is required.");
 		    	    return false;
 		    	} */
-		    	if ($('#letterDate').val() == "" || $('#letterDate').val()==null || $('#letterDate').val()=="undefined") {
+		    	/* if ($('#letterDate').val() == "" || $('#letterDate').val()==null || $('#letterDate').val()=="undefined") {
 		    	    $("#error-receivedDate").html("This field is required.");
 		    	    return false;
-		    	}
+		    	} */
 		    	
 		        var fd = new FormData($("form.form")[0]);
 		        $(".content").hide();

@@ -89,6 +89,7 @@
 
 
 <script type="text/javascript">
+var url='<%= unaditedfinancialFileURl%>';
 $(document).ready(function() {
 	toastr.options = {
 			  "debug": false,
@@ -126,7 +127,7 @@ $(function(){
             processData: false,
             contentType: false,
             cache: false,
-            url: '${unaditedfinancialFileURl}',
+            url: url,
             data: fd,
             success:function(data){
             	$(".content").show();

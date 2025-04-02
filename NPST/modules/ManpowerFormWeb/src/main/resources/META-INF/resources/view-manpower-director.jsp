@@ -1,4 +1,5 @@
 
+<%@page import="com.liferay.portal.kernel.util.HtmlUtil"%>
 <%@page import="com.nps.manpower.constants.ManpowerHeaderConstant"%>
 <%@page import="com.liferay.portal.kernel.model.User"%>
 <%@page import="java.util.Set"%>
@@ -151,13 +152,13 @@
 						%>
 					<tr>
 						<td><%=count++ %></td>
-						<td class="tbdata"><%=manpowerDirector.getName() %></td>
-						<td class="tbdata"><%=manpowerDirector.getDirectorType() %></td>
-						<td class="tbdata"><%=manpowerDirector.getMembershipType() %></td>
-						<td class="tbdata"><%=manpowerDirector.getDependency() %></td>
-						<td class="tbdata"><%=manpowerDirector.getDin() %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirector.getName()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirector.getDirectorType()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirector.getMembershipType()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirector.getDependency()) %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirector.getDin()) %></td>
 						<td class="tbdata"><%=NpstCommonUtil.getDateString(manpowerDirector.getAppointmentDate()) %></td>
-						<td class="tbdata"><%=manpowerDirector.getQualification() %></td>
+						<td class="tbdata"><%=HtmlUtil.escape(manpowerDirector.getQualification()) %></td>
 						<td class="tbdata"><%=ManpowerUtil.experienceFormat(manpowerDirector.getExperience()) %></td>
 						<%if(!isNpstUser){ %>
 						<td class="tbdata"><button class="btn btn-primary" onClick='addCompositionCommittee("<%=manpowerDirector.getManpowerEmployeeId() %>")'><%=ManpowerEmployeeFieldLabel.TABLE_VIEW_COMMITTEE_MEMBERSHIP_TYPE%></button></td>

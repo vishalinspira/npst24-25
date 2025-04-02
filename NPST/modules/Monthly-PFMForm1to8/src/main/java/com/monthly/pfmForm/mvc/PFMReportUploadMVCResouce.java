@@ -50,6 +50,7 @@ import com.monthly.pfmForm.util.StatusIndividualSubscriber;
 import com.monthly.pfmForm.util.StatusNPSLite;
 import com.monthly.pfmForm.util.StatusOfCenGovt;
 import com.monthly.pfmForm.util.ValiateSheetName;
+import com.monthly.pfmForm.util.ValidateFileName;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -172,6 +173,7 @@ public class PFMReportUploadMVCResouce implements MVCResourceCommand {
 		List<StatusOfNPSLite> form7NPSLiteList = new ArrayList<StatusOfNPSLite>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -370,6 +372,11 @@ public class PFMReportUploadMVCResouce implements MVCResourceCommand {
 				}
 			}
 			
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

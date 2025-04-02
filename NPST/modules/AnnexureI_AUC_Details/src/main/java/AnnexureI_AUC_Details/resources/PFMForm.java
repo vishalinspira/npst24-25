@@ -51,6 +51,7 @@ import org.osgi.service.component.annotations.Reference;
 
 import AnnexureI_AUC_Details.constants.AnnexureI_AUC_DetailsPortletKeys;
 import AnnexureI_AUC_Details.util.Form1;
+import AnnexureI_AUC_Details.util.ValidateFileName;
 import AnnexureI_AUC_Details.util.ValidateSheetName;
 import nps.email.api.api.ExcelValidationAn10Api;
 
@@ -119,6 +120,7 @@ public class PFMForm implements MVCResourceCommand {
 		List<MnNpsFinalSummary> form1List = new ArrayList<MnNpsFinalSummary>();
 		
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -196,6 +198,11 @@ public class PFMForm implements MVCResourceCommand {
 				resultJsonObject.put("status", false);
 			}
 		}
+	}else {
+		resultJsonObject.put("status", false);
+		resultJsonObject.put("msg","Please upload files with a valid filename.");
+		return resultJsonObject;
+	}
 		return resultJsonObject;
 	}
 

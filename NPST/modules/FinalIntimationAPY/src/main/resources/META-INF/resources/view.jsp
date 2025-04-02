@@ -95,7 +95,7 @@
 </style>
 
 <script type="text/javascript">
-  
+var url='<%= apyResourceURL%>';
   $(document).ready(function() {
 	  toastr.options = {
 			  "debug": false,
@@ -136,7 +136,7 @@
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${apyResourceURL}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

@@ -43,10 +43,10 @@ public class ValidateSheetName {
 				while(sheetIterator.hasNext()) {
 					XSSFSheet sheets = (XSSFSheet) sheetIterator.next();
 					_log.info("sheet names: " + sheets.getSheetName());
-					//if(errorList.contains(sheets.getSheetName())) {
-					//	_log.info("sheet names: " + sheets.getSheetName());
+					if(errorList.contains(sheets.getSheetName())) {
+						_log.info("sheet names: " + sheets.getSheetName());
 						errorList.remove(sheets.getSheetName());
-					//}
+					}
 				}
 			}
 		} catch (Exception e) {

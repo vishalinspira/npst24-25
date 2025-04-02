@@ -99,7 +99,7 @@
 </style>
 
 <script type="text/javascript">
-  
+var url='<%=tdsResourceURL %>';
   $(document).ready(function() {
 	  toastr.options = {
 			  "debug": false,
@@ -140,7 +140,7 @@
 	            processData: false,
 	            contentType: false,
 	            cache: false,
-	            url: '${tdsResourceURL}',
+	            url: url,
 	            data: formData,
 	            success:function(data){
 	            	$(".content").show();

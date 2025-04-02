@@ -252,6 +252,7 @@ public class SaveAnnexureSeven implements MVCResourceCommand{
 		List<ElectronicRejSummary> eleRejSummaryList = new ArrayList<ElectronicRejSummary>();
 		 
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 		
@@ -446,6 +447,11 @@ public class SaveAnnexureSeven implements MVCResourceCommand{
 					resultJsonObject.put("status", false);
 				}
 			
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

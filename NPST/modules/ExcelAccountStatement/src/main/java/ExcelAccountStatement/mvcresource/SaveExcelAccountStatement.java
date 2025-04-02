@@ -69,6 +69,7 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 
 import ExcelAccountStatement.constants.ExcelAccountStatementPortletKeys;
+import ExcelAccountStatement.portlet.ValidateFileName;
 import nps.common.service.util.CommonParser;
 /*import be.quodlibet.boxable.BaseTable;
 import be.quodlibet.boxable.Cell;
@@ -119,6 +120,7 @@ public class SaveExcelAccountStatement implements MVCResourceCommand{
 
 		String title = fileName;
 		JSONObject resultJsonObject = JSONFactoryUtil.createJSONObject();
+		if(ValidateFileName.isValidfile(fileName)) {
 		resultJsonObject = excelValidationAn10Api.validateExcelFile(file, resourceRequest);
 		if(resultJsonObject.getBoolean("status")) {
 	
@@ -386,6 +388,11 @@ public class SaveExcelAccountStatement implements MVCResourceCommand{
 				 return resultJsonObject;
 			}
 			_log.info(resultJsonObject);
+		}
+		}else {
+			resultJsonObject.put("status", false);
+			resultJsonObject.put("msg","Please upload files with a valid filename.");
+			return resultJsonObject;
 		}
 		return resultJsonObject;
 	}

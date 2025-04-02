@@ -65,6 +65,7 @@ import com.liferay.portal.kernel.portlet.PortletURLFactoryUtil;
 import com.liferay.portal.kernel.service.RoleLocalService;
 import com.liferay.portal.kernel.service.RoleLocalServiceUtil;
 import com.liferay.portal.kernel.theme.ThemeDisplay;
+import com.liferay.portal.kernel.util.HtmlUtil;
 import com.liferay.portal.kernel.util.OrderByComparator;
 import com.liferay.portal.kernel.util.OrderByComparatorFactoryUtil;
 import com.liferay.portal.kernel.util.ParamUtil;
@@ -266,26 +267,26 @@ public class NPSTUserUtil {
 			
 			JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 			if(reportUploadLogMaker != null && reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-				jsonObject.put("fileName", dlFileEntry.getFileName());
-				jsonObject.put("userName", userName);
+				jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+				jsonObject.put("userName", HtmlUtil.escape(userName));
 				jsonObject.put("createDate", DATE_FORMAT.format(dlFileEntry.getCreateDate()));
 				jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 				jsonObject.put("dueDate", DATE_FORMAT.format(dlFileEntry.getCreateDate()));
 				jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 				jsonObject.put("moduleName", reportMaster.getReportName());
 				jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-				jsonObject.put("remarks", comment);
+				jsonObject.put("remarks", HtmlUtil.escape(comment));
 				jsonArray.put(jsonObject);
 			} else if(reportUploadLogSupervisor != null && reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-				jsonObject.put("fileName", dlFileEntry.getFileName());
-				jsonObject.put("userName", userName);
+				jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+				jsonObject.put("userName", HtmlUtil.escape(userName));
 				jsonObject.put("createDate", DATE_FORMAT.format(dlFileEntry.getCreateDate()));
 				jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 				jsonObject.put("dueDate", DATE_FORMAT.format(dlFileEntry.getCreateDate()));
 				jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 				jsonObject.put("moduleName", reportMaster.getReportName());
 				jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-				jsonObject.put("remarks", comment);
+				jsonObject.put("remarks", HtmlUtil.escape(comment));
 				jsonArray.put(jsonObject);
 			}
 			
@@ -462,16 +463,16 @@ public class NPSTUserUtil {
 			
 			JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 			if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-				jsonObject.put("fileName", dlFileEntry.getFileName());
-				jsonObject.put("userName", userName);
-				jsonObject.put("submittedBy", userName);
+				jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+				jsonObject.put("userName", HtmlUtil.escape(userName));
+				jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 				jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 				jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 				jsonObject.put("dueDate", Validator.isNotNull(dueDate)? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 				jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 				jsonObject.put("moduleName", reportMaster.getReportName());
 				jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-				jsonObject.put("remarks", comment);
+				jsonObject.put("remarks", HtmlUtil.escape(comment));
 				jsonArray.put(jsonObject);
 			}
 		}
@@ -737,7 +738,7 @@ public class NPSTUserUtil {
 						JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 						if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
 							if(dlFileEntry!=null) {
-								jsonObject.put("fileName", dlFileEntry.getFileName());
+								jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
 								jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 								jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 							}else {
@@ -745,21 +746,21 @@ public class NPSTUserUtil {
 								jsonObject.put("url", "");
 								jsonObject.put("status", "");
 							}
-							jsonObject.put("userName", userName);
-							jsonObject.put("submittedBy", userName);
+							jsonObject.put("userName", HtmlUtil.escape(userName));
+							jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 							jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 							jsonObject.put("dueDate", Validator.isNotNull(dueDate) ? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 							jsonObject.put("moduleName", reportMaster.getReportName());
 							jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-							jsonObject.put("remarks", comment);
-							jsonObject.put("intermediaryName", intermediaryName);
+							jsonObject.put("remarks", HtmlUtil.escape(comment));
+							jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 							jsonArray.put(jsonObject);
 						}
 			}else if(isNonNpsUser && Validator.isNull(checkIntermediaryName)) {
 						JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 						if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
 							if(dlFileEntry!=null) {
-								jsonObject.put("fileName", dlFileEntry.getFileName());
+								jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
 								jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 								jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 							}else {
@@ -767,21 +768,21 @@ public class NPSTUserUtil {
 								jsonObject.put("url", "");
 								jsonObject.put("status", "");
 							}
-							jsonObject.put("userName", userName);
-							jsonObject.put("submittedBy", userName);
+							jsonObject.put("userName", HtmlUtil.escape(userName));
+							jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 							jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 							jsonObject.put("dueDate", Validator.isNotNull(dueDate) ? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 							jsonObject.put("moduleName", reportMaster.getReportName());
 							jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-							jsonObject.put("remarks", comment);
-							jsonObject.put("intermediaryName", intermediaryName);
+							jsonObject.put("remarks", HtmlUtil.escape(comment));
+							jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 							jsonArray.put(jsonObject);
 						}
 			}else if(!isNonNpsUser && Validator.isNull(checkIntermediaryName)){
 							JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 							if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
 								if(dlFileEntry!=null) {
-									jsonObject.put("fileName", dlFileEntry.getFileName());
+									jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
 									jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 									jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 								}else {
@@ -789,14 +790,14 @@ public class NPSTUserUtil {
 									jsonObject.put("url", "");
 									jsonObject.put("status", "");
 								}
-								jsonObject.put("userName", userName);
-								jsonObject.put("submittedBy", userName);
+								jsonObject.put("userName", HtmlUtil.escape(userName));
+								jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 								jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 								jsonObject.put("dueDate", Validator.isNotNull(dueDate) ? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 								jsonObject.put("moduleName", reportMaster.getReportName());
 								jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-								jsonObject.put("remarks", comment);
-								jsonObject.put("intermediaryName", intermediaryName);
+								jsonObject.put("remarks", HtmlUtil.escape(comment));
+								jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 								jsonArray.put(jsonObject);
 							}
 			}
@@ -901,49 +902,49 @@ public class NPSTUserUtil {
 			if(isNonNpsUser && intermediaryName.equalsIgnoreCase(checkIntermediaryName)) {
 				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 				if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-					jsonObject.put("fileName", dlFileEntry.getFileName());
-					jsonObject.put("userName", userName);
-					jsonObject.put("submittedBy", userName);
+					jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+					jsonObject.put("userName", HtmlUtil.escape(userName));
+					jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 					jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 					jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 					jsonObject.put("dueDate", Validator.isNotNull(dueDate)? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 					jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 					jsonObject.put("moduleName", reportMaster.getReportName());
 					jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-					jsonObject.put("remarks", comment);
-					jsonObject.put("intermediaryName", intermediaryName);
+					jsonObject.put("remarks", HtmlUtil.escape(comment));
+					jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 					jsonArray.put(jsonObject);
 				}
 			}else if(isNonNpsUser && Validator.isNull(checkIntermediaryName)) {
 				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 				if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-					jsonObject.put("fileName", dlFileEntry.getFileName());
-					jsonObject.put("userName", userName);
-					jsonObject.put("submittedBy", userName);
+					jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+					jsonObject.put("userName", HtmlUtil.escape(userName));
+					jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 					jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 					jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 					jsonObject.put("dueDate", Validator.isNotNull(dueDate)? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 					jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 					jsonObject.put("moduleName", reportMaster.getReportName());
 					jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-					jsonObject.put("remarks", comment);
-					jsonObject.put("intermediaryName", intermediaryName);
+					jsonObject.put("remarks", HtmlUtil.escape(comment));
+					jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 					jsonArray.put(jsonObject);
 				}
 			}else if(!isNonNpsUser && Validator.isNull(checkIntermediaryName)){
 				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 				if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-					jsonObject.put("fileName", dlFileEntry.getFileName());
-					jsonObject.put("userName", userName);
-					jsonObject.put("submittedBy", userName);
+					jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+					jsonObject.put("userName", HtmlUtil.escape(userName));
+					jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 					jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 					jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 					jsonObject.put("dueDate", Validator.isNotNull(dueDate)? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 					jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 					jsonObject.put("moduleName", reportMaster.getReportName());
 					jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-					jsonObject.put("remarks", comment);
-					jsonObject.put("intermediaryName", intermediaryName);
+					jsonObject.put("remarks", HtmlUtil.escape(comment));
+					jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 					jsonArray.put(jsonObject);
 				}
 				
@@ -1108,49 +1109,49 @@ public class NPSTUserUtil {
 				JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 				//if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
 				if(reportMaster != null ) {
-					jsonObject.put("fileName", dlFileEntry.getFileName());
-					jsonObject.put("userName", userName);
-					jsonObject.put("submittedBy", userName);
+					jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+					jsonObject.put("userName", HtmlUtil.escape(userName));
+					jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 					jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 					jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 					jsonObject.put("dueDate", Validator.isNotNull(dueDate)? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 					jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 					jsonObject.put("moduleName", reportMaster.getReportName());
 					jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-					jsonObject.put("remarks", comment);
-					jsonObject.put("intermediaryName", intermediaryName);
+					jsonObject.put("remarks", HtmlUtil.escape(comment));
+					jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 					jsonArray.put(jsonObject);
 					}
 				}else if(isNonNpsUser && Validator.isNull(checkIntermediaryName)) {
 					JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 					if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-						jsonObject.put("fileName", dlFileEntry.getFileName());
-						jsonObject.put("userName", userName);
-						jsonObject.put("submittedBy", userName);
+						jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+						jsonObject.put("userName", HtmlUtil.escape(userName));
+						jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 						jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 						jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 						jsonObject.put("dueDate", Validator.isNotNull(dueDate)? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 						jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 						jsonObject.put("moduleName", reportMaster.getReportName());
 						jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-						jsonObject.put("remarks", comment);
-						jsonObject.put("intermediaryName", intermediaryName);
+						jsonObject.put("remarks", HtmlUtil.escape(comment));
+						jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 						jsonArray.put(jsonObject);
 						}
 				}else if(!isNonNpsUser && Validator.isNull(checkIntermediaryName)){
 					JSONObject jsonObject = JSONFactoryUtil.createJSONObject();
 					if(reportMaster != null && reportMaster.getReportType().equalsIgnoreCase(folderName)) {
-						jsonObject.put("fileName", dlFileEntry.getFileName());
-						jsonObject.put("userName", userName);
-						jsonObject.put("submittedBy", userName);
+						jsonObject.put("fileName", HtmlUtil.escape(dlFileEntry.getFileName()));
+						jsonObject.put("userName", HtmlUtil.escape(userName));
+						jsonObject.put("submittedBy", HtmlUtil.escape(userName));
 						jsonObject.put("createDate", DATE_FORMAT.format(itr.getCreateDate()));
 						jsonObject.put("url", "/documents/" + dlFileEntry.getRepositoryId() + "/" + dlFileEntry.getFolderId() + "/" + dlFileEntry.getTitle());
 						jsonObject.put("dueDate", Validator.isNotNull(dueDate)? DATE_FORMAT.format(dueDate):StringPool.BLANK);
 						jsonObject.put("status", (statusKey != null && !statusKey.isEmpty() ? statusKey.toUpperCase() : WorkflowConstants.getStatusLabel(dlFileEntry.getStatus()).toUpperCase()));
 						jsonObject.put("moduleName", reportMaster.getReportName());
 						jsonObject.put("actionURL", (url + itr.getWorkflowTaskId()));
-						jsonObject.put("remarks", comment);
-						jsonObject.put("intermediaryName", intermediaryName);
+						jsonObject.put("remarks", HtmlUtil.escape(comment));
+						jsonObject.put("intermediaryName", HtmlUtil.escape(intermediaryName));
 						jsonArray.put(jsonObject);
 						}
 				}
