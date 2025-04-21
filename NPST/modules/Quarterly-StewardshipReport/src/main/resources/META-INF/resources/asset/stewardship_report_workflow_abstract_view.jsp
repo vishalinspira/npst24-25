@@ -100,7 +100,7 @@
 <div class="custom-modal-ui hide"  id="success-modal">
 	<div class="modal-head-ui">
 		<h2 class="modal-title-ui">Report Message</h2>
-		<a class="modal-close-ui x-mark" href="#0">&times;</a>
+		<a class="modal-close-ui x-mark" href="#">&times;</a>		
 		<div class="modal-content-ui text-center">
 			<i class="" id="icon"></i>
 			<span id="output"></span>
@@ -168,7 +168,7 @@
                <br> -->
                <div class="row">
                   <div class="col-md-5">
-                     <p>Did any *conflict of interest situation occurred during the quarter? 
+                     <p>1. Did any *conflict of interest situation occurred during the quarter? 
                      </p>
                      <br>
                      <p>*Refer Schedule VI-Code of Conduct of PFRDA (Pension Fund) Regulations, 2015.
@@ -200,7 +200,7 @@
                  </div> 
                    <div class="col-md-2">
                     <div class="form-group">
-                    	<textarea class="form-control" id="conflict_rem" placeholder="Remarks if any" name="conflict_rem" ><%=qrscrutinystewardshipDetails.getConflict_of_interest_rem() == null ? "" : qrscrutinystewardshipDetails.getConflict_of_interest_rem()%></textarea>
+                    	<textarea class="form-control" id="conflict_rem"  placeholder="Remarks if any" name="conflict_rem" ><%=qrscrutinystewardshipDetails.getConflict_of_interest_rem() == null ? "" : qrscrutinystewardshipDetails.getConflict_of_interest_rem()%></textarea>
                     </div>
                  </div> 
                   
@@ -235,7 +235,7 @@
                  </div>
                   <div class="col-md-2">
                     <div class="form-group">
-                    	<textarea class="form-control" id="monitoring_rem" placeholder="Remarks if any" name="monitoring_rem" ><%=qrscrutinystewardshipDetails.getMonitoring_situation_rem() == null ? "" : qrscrutinystewardshipDetails.getMonitoring_situation_rem()%></textarea>
+                    	<textarea class="form-control" id="monitoring_rem"  placeholder="Remarks if any" name="monitoring_rem" ><%=qrscrutinystewardshipDetails.getMonitoring_situation_rem() == null ? "" : qrscrutinystewardshipDetails.getMonitoring_situation_rem()%></textarea>
                     </div>
                  </div> 
                </div>
@@ -269,7 +269,7 @@
                  </div>
                  <div class="col-md-2">
                     <div class="form-group">
-                    	<textarea class="form-control" id="resolutions_rem" placeholder="Remarks if any" name="resolutions_rem" ><%=qrscrutinystewardshipDetails.getResolutions_voted_rem() == null ? "" : qrscrutinystewardshipDetails.getResolutions_voted_rem()%></textarea>
+                    	<textarea class="form-control" id="resolutions_rem"  placeholder="Remarks if any" name="resolutions_rem" ><%=qrscrutinystewardshipDetails.getResolutions_voted_rem() == null ? "" : qrscrutinystewardshipDetails.getResolutions_voted_rem()%></textarea>
                     </div>
                  </div> 
                </div>
@@ -311,11 +311,18 @@
                  </div> 
                   
                   <div class="col-md-2">
-                    <textarea class="form-control" id="insInvestorSituation_rem" readonly="readonly" placeholder="Remarks if any" name="insInvestorSituation_rem"><%=qrscrutinystewardshipDetails.getInsInvestorSituation_rem() == null ? "" : qrscrutinystewardshipDetails.getInsInvestorSituation_rem()%></textarea>
+                    <textarea class="form-control" id="insInvestorSituation_rem" placeholder="Remarks if any" name="insInvestorSituation_rem"><%=qrscrutinystewardshipDetails.getInsInvestorSituation_rem() == null ? "" : qrscrutinystewardshipDetails.getInsInvestorSituation_rem()%></textarea>
                  </div>  
                  
                </div>
                <br>
+               
+                 <%
+
+               	
+            	   if(stewardshipDetails.getAdversealert() != null && !stewardshipDetails.getAdversealert().trim().isEmpty()){
+                	 
+                %>
                               <div class="row">
                   <!-- <div class="col-md-1">
                      <p>5.</p>
@@ -351,22 +358,32 @@
                  </div> 
                   
                   <div class="col-md-2">
-                    <textarea class="form-control" id="adversealert_rem" readonly="readonly" placeholder="Remarks if any" name="adversealert_rem"><%=qrscrutinystewardshipDetails.getAdversealert_rem() == null ? "" : qrscrutinystewardshipDetails.getAdversealert_rem()%></textarea>
+                    <textarea class="form-control" id="adversealert_rem"  placeholder="Remarks if any" name="adversealert_rem"><%=qrscrutinystewardshipDetails.getAdversealert_rem() == null ? "" : qrscrutinystewardshipDetails.getAdversealert_rem()%></textarea>
                  </div>  
                  
                </div>
                <br>
-               
+               <% } %>
                  <div class="row">
                  <!--  <div class="col-md-1">
                      <p>6.</p>
                   </div> -->
                   <div class="col-md-5">
+                   <%
+
+                  if(stewardshipDetails.getAdversealert() != null && !stewardshipDetails.getAdversealert().trim().isEmpty()){
+                %>
                      <p>6. For the resolutions voted during the quarter have you abstained for any of the resolution except for conflict of interest resolutions like common directors, group company etc. If yes, provide details of such resolutions with detailed rationale.
                      </p>
                      <p>(Details to be provided in Annexure F)</p><br>
                     
-
+                  <% } else {%>  
+                  
+                     <p>5. For the resolutions voted during the quarter have you abstained for any of the resolution except for conflict of interest resolutions like common directors, group company etc. If yes, provide details of such resolutions with detailed rationale.
+                     </p>
+                     <p>(Details to be provided in Annexure E)</p><br>
+                     <% } %>
+                     
                   </div>
                   <div class="col-md-3">
                      <div class="form-check form-check-inline">
@@ -391,7 +408,7 @@
                  </div> 
                   
                   <div class="col-md-2">
-                    <textarea class="form-control" id="resolutionsVoted1_rem" readonly="readonly" placeholder="Remarks if any" name="resolutionsVoted1_rem"><%=qrscrutinystewardshipDetails.getResolutionsVoted1_rem() == null ? "" : qrscrutinystewardshipDetails.getResolutionsVoted1_rem()%></textarea>
+                    <textarea class="form-control" id="resolutionsVoted1_rem"  placeholder="Remarks if any" name="resolutionsVoted1_rem"><%=qrscrutinystewardshipDetails.getResolutionsVoted1_rem() == null ? "" : qrscrutinystewardshipDetails.getResolutionsVoted1_rem()%></textarea>
                  </div>  
                  
                </div>
@@ -471,7 +488,7 @@
         		
                <div class="row">
                   <div class="col-md-6">
-                     <label>Stewardship report along with Annexures A to F (Soft Copy) </label>
+                     <label>Stewardship report along with Annexures A to E (Soft Copy) </label>
                   </div>
                   <div class="col-md-3">
                         <div class="form-check form-check-inline">
@@ -543,7 +560,8 @@
                <div class="row text-center">
                   <div class="col-md-12">
                      <!-- <input type="submit" class="common-btn d-inline-block text-light border-0 mt-3" id="btn-submit" value="Submit"> -->
-                     <button type="submit" class="common-btn d-inline-block text-light border-0 mt-3" id="btn-submit" >Submit</button>
+                        <button type="submit" class="common-btn d-inline-block text-light border-0 mt-3" id="btn-submit" <%=isNonNPSUser ? "disabled": "" %>>Submit</button>
+                  <!--  <button type="submit" class="common-btn d-inline-block text-light border-0 mt-3" id="btn-submit" >Submit</button>--> 
 			         <a class="button" id="pop-up-trigger"  href="#success-modal"></a>
                   </div>
                </div>

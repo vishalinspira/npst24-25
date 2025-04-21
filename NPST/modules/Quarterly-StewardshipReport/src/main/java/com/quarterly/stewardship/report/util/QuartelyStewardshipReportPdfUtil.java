@@ -13,8 +13,10 @@ import com.itextpdf.layout.element.Text;
 import com.itextpdf.layout.property.UnitValue;
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
-//import com.liferay.portal.kernel.util.FileUtil;
-//import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.ParseException;
+
 
 import java.io.File;
 
@@ -65,6 +67,15 @@ public class QuartelyStewardshipReportPdfUtil {
 		     para2.add(text8);
 		     doc.add(para2);
 		     int colsize=4;
+		    
+		   //  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		     
+		     try {
+		            // Convert strings to Date objects
+		        /*    Date reportDueDate = sdf.parse(dueDate);
+		            Date cutoffDate = sdf.parse("2025-03-27");
+		            log.info("reportDueDate is"+ reportDueDate);
+		    */
 		    Table table1 = new Table(new float[] {0.5f, 2.5f, 0.5f,1.5f}, true)
 	                .setWidth(UnitValue.createPercentValue(100));
 		    String[] headers1 = {"S.No", "Parameters","Yes/No/NA", "PFM Remarks","NPST Remarks"};
@@ -74,7 +85,8 @@ public class QuartelyStewardshipReportPdfUtil {
 	            
 	        }
 		    doc.add(table1);
-			
+		  //  if (reportDueDate.before(cutoffDate))  {
+		    if (adversealert != null && !adversealert.trim().isEmpty()) {
 		    String[][] cellContent1 =	{
 		    		{"1.","Did any *conflict of interest situation occurred during the quarter? \n \n *Refer Schedule VI-Code of Conduct of PFRDA (Pension Fund) Regulations, 2015. \n \n (As per principle 2, institutional investor should have a policy on how they manage conflicts of interest situation in fulfilling their stewardship responsibilities and publicly disclose it.\r\n" + 
 		    				"\r\n" + 
@@ -97,11 +109,40 @@ public class QuartelyStewardshipReportPdfUtil {
 		        }
 		        }
 		    table1.complete();
+		     }
+		     else {
+		    	log.info("inside else");
+					
+				    String[][] cellContent1 =	{
+				    		{"1.","Did any *conflict of interest situation occurred during the quarter? \n \n *Refer Schedule VI-Code of Conduct of PFRDA (Pension Fund) Regulations, 2015. \n \n (As per principle 2, institutional investor should have a policy on how they manage conflicts of interest situation in fulfilling their stewardship responsibilities and publicly disclose it.\r\n" + 
+				    				"\r\n" + 
+				    				" The policy has to address the identification of possible situations where conflict of interest may arise and procedure in case such a situation arises.)(Details to be provided in Annexure A) ",conflict,conflictRem1},
+				    		{"2.","Did any monitoring situation occur during the quarter in respect of any investee company for Equity or Debt investments? \n (As per principle 3 of common stewardship code issued by PFRDA,\r\n" + 
+				    				"\r\n" + 
+				    				" institutional investor should have a policy on continuous monitoring of their investee companies in respect of all aspects they consider important.) \n (Details to be provided in Annexure B)",monitoring,monitoringRem1},
+				    		{"3.","Did PFM engage with any investee company during the quarter? \n \n (As per principle 4 of common stewardship code issued by PFRDA, institutional investor should have a policy identifying circumstances for active intervention in the investee companies and the manner of such interventions.) \n (Details to be provided in Annexure C)",resolutions,resolutionsRem1},
+				    		{"4.","Did any situation occurred during the quarter requiring collaboration with other institutional investors? \n (As per principle 4 of common stewardship code issued by PFRDA, institutional investor should have a policy for collaboration with other institutional investors, to preserve the interest of the ultimate investors.) \n (Details to be provided in Annexure D)",
+				    			insInvestorSituation,insInvestorSituationRem1},
+				    		//{"5.","Was there any adverse alert during the quarter relating to any of the investee company in Pension funds' portfolio? \n (Details to be provided in Annexure E)",adversealert,adversealertRem1},
+				    		{"5.","For the resolutions voted during the quarter have you abstained for any of the resolution except for conflict of interest resolutions like common directors, group company etc. If yes, provide details of such resolutions with detailed rationale.\n (Details to be provided in Annexure E)",resolutionsVoted1,resolutionsVotedRem1}
+					    		
+				    };
+				    
+				    for (int row = 0; row < 5; row++) {
+				        for (int col = 0; col < colsize; col++) {
+				            table1.addCell(new Cell().add(new Paragraph(cellContent1[row][col])));
+				            
+				        }
+				        }
+				    table1.complete();
+		     
+		     }
 		    doc.add(new Paragraph(""));
 		    
-		    
-		
-		    
+		     }
+		     catch (Exception e) {
+		    	 log.error("error while creating table1 "+ e.getMessage()); 
+		     }
 		    Table table2 = new Table(new float[] {5f, 5f}, true)
 	                .setWidth(UnitValue.createPercentValue(100));
 		    String[] headers2 = {"Date:","Name"};

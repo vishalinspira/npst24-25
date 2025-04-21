@@ -3,11 +3,16 @@
 <%@page import="com.daily.average.service.model.QtrStewardshipReportScrutiny"%>
 <%@page import="com.liferay.portal.kernel.util.Validator"%>
 <%@ include file="/init.jsp" %>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="java.util.Date"%>
+
 
 <% 
 	Pre_Populate_scrutinydata sd = new Pre_Populate_scrutinydata();
 	sd.pre_populate_scrutiny_data(request);
 	QtrStewardshipReportScrutiny qrscrutinystewardshipDetails = Validator.isNotNull(request.getAttribute("qtrstewardshipscrutiny")) ? (QtrStewardshipReportScrutiny) request.getAttribute("qtrstewardshipscrutiny") : QtrStewardshipReportScrutinyLocalServiceUtil.createQtrStewardshipReportScrutiny(0);
+	
+
 %>
 
 <div class="modal fade" id="success_tic" tabindex="-1" aria-labelledby="success_ticLabel" aria-hidden="true">
@@ -241,7 +246,9 @@
                  
                </div>
                <br>
-                              <div class="row">
+                 
+             <%--    
+                    <div class="row">
                   <div class="col-md-1">
                      <p>5.</p>
                   </div>
@@ -280,14 +287,15 @@
                </div>
                <br>
                
+             --%>   
                  <div class="row">
                   <div class="col-md-1">
-                     <p>6.</p>
+                     <p>5.</p>
                   </div>
                   <div class="col-md-5">
                      <p>For the resolutions voted during the quarter have you abstained for any of the resolution except for conflict of interest resolutions like common directors, group company etc. If yes, provide details of such resolutions with detailed rationale.
                      </p>
-                     <p>(Details to be provided in Annexure F)</p><br>
+                     <p>(Details to be provided in Annexure E)</p><br>
                     
 
                   </div>
@@ -379,7 +387,7 @@
                    <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                      <div class="nps-input-box file-upload">
                         <div class="nps-input-box mt-0">
-                           <label>Stewardship report along with Annexures A to F (Soft Copy)  </label>
+                           <label>Stewardship report along with Annexures A to E (Soft Copy)  </label>
                            <div class="file-select">
                               <div class="file-select-name" id="noFile2">File Name</div>
                               <div class="file-select-button common-btn" id="fileName">Choose File</div>
@@ -681,7 +689,7 @@ $(document).ready(function() {
             }
         );
     });
-	$('.adversealert').each(function() {
+/*	$('.adversealert').each(function() {
         $(this).rules("add", 
             {
                 required: true,
@@ -690,7 +698,7 @@ $(document).ready(function() {
                 }
             }
         );
-    });
+    }); */
 	$('.insInvestorSituation').each(function() {
         $(this).rules("add", 
             {
