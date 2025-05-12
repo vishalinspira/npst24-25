@@ -63,15 +63,17 @@ public class MnCompCertificateLocalServiceImpl
 			String all_investments_from_funds, String delivery_of_securities_purch, 
 			String investment_done_in_ipo, long reportUploadLogId,String Purchase_of_sec_rem_1_1_2,String Purchase_of_sec_rem_1_2a_2,String Purchase_of_sec_rem_1_2b_2,String Purchase_of_sec_rem_1_2c_2,
 			String Purchase_of_sec_rem_1_2d_2,String Purchase_of_sec_rem_1_2e_2,String Purchase_of_sec_rem_1_3_2,String Purchase_of_secu_rem_1_4_2,String Securities_held_2_1_2,
-			String Securities_held_2_2a_2,String Securities_held_2_2b_2,String Securities_held_2_2c_2,String Securities_held_2_3_2,String Securities_held_2_4_2,String Securities_held_2_5_2,
+			String Securities_held_2_2a_2,String Securities_held_2_2b_2,String Securities_held_2_2c_2,String Securities_held_2_3_2,String Securities_held_2_4_2,String Securities_held_2_5_2,String Securities_held_2_6_2,
 			String Sale_of_securities_3_1a_2,String Sale_of_securities_3_1b_2,String Sale_of_securities_3_2_2,String Reports_and_Disclosure_4_1a_2,String Reports_and_Disclosure_4_1b_2,
 			String Reports_and_Disclosure_4_1c_2,String Reports_and_Disclosure_4_1d_2,String Reports_and_Disclosure_4_1e_2,String Reports_and_Disclosure_4_2a_2,
-			String Reports_and_Disclosure_4_2b_2,String scheme_investments, 
+			String Reports_and_Disclosure_4_2b_2,String Disclosure_requirements_5_1a_2,String Disclosure_requirements_5_1b_2,String Disclosure_requirements_5_1c_2,String Disclosure_requirements_5_1d_2,
+			String Disclosure_requirements_5_1e_2,String Disclosure_requirements_5_1f_2, String scheme_investments, 
 			String stop_loss_trigger, String decision_approved_by_committee, String decision_properly_documented, String inter_scheme_transfer, 
-			String investment_held_in_equity, String investment_in_equity_shares, String disinvestments_approved, 
+			String investment_held_in_equity, String investment_in_equity_shares, String active_passive_breaches, String disinvestments_approved, 
 			String decision_of_disinvestment, String delivery_of_securities_sale,String all_investment_charges, 
 			String pfm_adhered, String records_of_the_audit_of_nav, String scheme_wise_nav_uploaded, String scheme_wise_nav_submitted, 
-			String monthly_reports_submitted, String scrip_wise_details,String date_2, String company_name, String emplolyee_name, 
+			String monthly_reports_submitted, String scrip_wise_details, String scheme_wise, String scheme_wise_daily, String periodic_reports_monthly, String scrip_wise_details_portfolio,
+			String pension_fund_published, String pension_fund_disclosed, String date_2, String company_name, String emplolyee_name, 
 			String roles, Date date_3, String place,long annexure_a_i, long annexure_a_ii, long annexure_b, 
 			long annexure_c, long annexure_d, long annexure_e, long annexure_f,long annexure_g, long annexure_h, 
 			Date createDate, long createdBy,long fileEntryId,int isAmRejected) {
@@ -108,6 +110,7 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 		mnCompCertificate.setSecurities_held_2_3_2(Securities_held_2_3_2);
 		mnCompCertificate.setSecurities_held_2_4_2(Securities_held_2_4_2);
 		mnCompCertificate.setSecurities_held_2_5_2(Securities_held_2_5_2);
+		mnCompCertificate.setSecurities_held_2_6_2(Securities_held_2_6_2);
 		mnCompCertificate.setSale_of_securities_3_1a_2(Sale_of_securities_3_1a_2);
 		mnCompCertificate.setSale_of_securities_3_1b_2(Sale_of_securities_3_1b_2);
 		mnCompCertificate.setSale_of_securities_3_2_2(Sale_of_securities_3_2_2);
@@ -118,8 +121,13 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 		mnCompCertificate.setReports_and_Disclosure_4_1e_2(Reports_and_Disclosure_4_1e_2);
 		mnCompCertificate.setReports_and_Disclosure_4_2a_2(Reports_and_Disclosure_4_2a_2);
 		mnCompCertificate.setReports_and_Disclosure_4_2b_2(Reports_and_Disclosure_4_2b_2);
-		
-		mnCompCertificate.setScheme_investments(scheme_investments);
+		mnCompCertificate.setDisclosure_requirements_5_1a_2(Disclosure_requirements_5_1a_2);
+		mnCompCertificate.setDisclosure_requirements_5_1b_2(Disclosure_requirements_5_1b_2);
+		mnCompCertificate.setDisclosure_requirements_5_1c_2(Disclosure_requirements_5_1c_2);
+		mnCompCertificate.setDisclosure_requirements_5_1d_2(Disclosure_requirements_5_1d_2);
+		mnCompCertificate.setDisclosure_requirements_5_1e_2(Disclosure_requirements_5_1e_2);
+		mnCompCertificate.setDisclosure_requirements_5_1f_2(Disclosure_requirements_5_1f_2);
+    	mnCompCertificate.setScheme_investments(scheme_investments);
 		mnCompCertificate.setStop_loss_trigger(stop_loss_trigger);
 		mnCompCertificate.setDecision_approved_by_committee(decision_approved_by_committee);
 		mnCompCertificate.setDecision_properly_documented(decision_properly_documented);
@@ -168,10 +176,11 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 			String all_investments_from_funds, String delivery_of_securities_purch, 
 			String investment_done_in_ipo, long reportUploadLogId,String Purchase_of_sec_rem_1_1_2,String Purchase_of_sec_rem_1_2a_2,String Purchase_of_sec_rem_1_2b_2,String Purchase_of_sec_rem_1_2c_2,
 			String Purchase_of_sec_rem_1_2d_2,String Purchase_of_sec_rem_1_2e_2,String Purchase_of_sec_rem_1_3_2,String Purchase_of_secu_rem_1_4_2,String Securities_held_2_1_2,
-			String Securities_held_2_2a_2,String Securities_held_2_2b_2,String Securities_held_2_2c_2,String Securities_held_2_3_2,String Securities_held_2_4_2,String Securities_held_2_5_2,
+			String Securities_held_2_2a_2,String Securities_held_2_2b_2,String Securities_held_2_2c_2,String Securities_held_2_3_2,String Securities_held_2_4_2,String Securities_held_2_5_2, String Securities_held_2_6_2,
 			String Sale_of_securities_3_1a_2,String Sale_of_securities_3_1b_2,String Sale_of_securities_3_2_2,String Reports_and_Disclosure_4_1a_2,String Reports_and_Disclosure_4_1b_2,
 			String Reports_and_Disclosure_4_1c_2,String Reports_and_Disclosure_4_1d_2,String Reports_and_Disclosure_4_1e_2,String Reports_and_Disclosure_4_2a_2,
-			String Reports_and_Disclosure_4_2b_2    ) {
+			String Reports_and_Disclosure_4_2b_2, String Disclosure_requirements_5_1a_2, String Disclosure_requirements_5_1b_2, String Disclosure_requirements_5_1c_2,
+			String Disclosure_requirements_5_1d_2, String Disclosure_requirements_5_1e_2, String Disclosure_requirements_5_1f_2) {
 		
 		MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompCertificate(reportUploadLogId);
 		
@@ -204,6 +213,7 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 		mnCompCertificate.setSecurities_held_2_3_2(Securities_held_2_3_2);
 		mnCompCertificate.setSecurities_held_2_4_2(Securities_held_2_4_2);
 		mnCompCertificate.setSecurities_held_2_5_2(Securities_held_2_5_2);
+		mnCompCertificate.setSecurities_held_2_6_2(Securities_held_2_6_2);
 		mnCompCertificate.setSale_of_securities_3_1a_2(Sale_of_securities_3_1a_2);
 		mnCompCertificate.setSale_of_securities_3_1b_2(Sale_of_securities_3_1b_2);
 		mnCompCertificate.setSale_of_securities_3_2_2(Sale_of_securities_3_2_2);
@@ -214,6 +224,13 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 		mnCompCertificate.setReports_and_Disclosure_4_1e_2(Reports_and_Disclosure_4_1e_2);
 		mnCompCertificate.setReports_and_Disclosure_4_2a_2(Reports_and_Disclosure_4_2a_2);
 		mnCompCertificate.setReports_and_Disclosure_4_2b_2(Reports_and_Disclosure_4_2b_2);
+		mnCompCertificate.setDisclosure_requirements_5_1a_2(Disclosure_requirements_5_1a_2);
+		mnCompCertificate.setDisclosure_requirements_5_1b_2(Disclosure_requirements_5_1b_2);
+		mnCompCertificate.setDisclosure_requirements_5_1c_2(Disclosure_requirements_5_1c_2);
+		mnCompCertificate.setDisclosure_requirements_5_1d_2(Disclosure_requirements_5_1d_2);
+		mnCompCertificate.setDisclosure_requirements_5_1e_2(Disclosure_requirements_5_1e_2);
+		mnCompCertificate.setDisclosure_requirements_5_1f_2(Disclosure_requirements_5_1f_2);
+		
 		
 		
 		
@@ -224,7 +241,7 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 	public MnCompCertificate addSection2(MnCompCertificate sectionTwoInfo, String scheme_investments, 
 			String stop_loss_trigger, String decision_approved_by_committee, 
 			String decision_properly_documented, String inter_scheme_transfer, 
-			String investment_held_in_equity, String investment_in_equity_shares) {
+			String investment_held_in_equity, String investment_in_equity_shares, String active_passive_breaches) {
 		
 		sectionTwoInfo.setScheme_investments(scheme_investments);
 		sectionTwoInfo.setStop_loss_trigger(stop_loss_trigger);
@@ -233,6 +250,7 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 		sectionTwoInfo.setInter_scheme_transfer(inter_scheme_transfer);
 		sectionTwoInfo.setInvestment_held_in_equity(investment_held_in_equity);
 		sectionTwoInfo.setInvestment_in_equity_shares(investment_in_equity_shares);
+		sectionTwoInfo.setActive_passive_breaches(active_passive_breaches);
 				
 		return mnCompCertificatePersistence.update(sectionTwoInfo);
 		
@@ -252,7 +270,9 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 	public MnCompCertificate addSection4(MnCompCertificate sectionFourInfo, String all_investment_charges, 
 			String pfm_adhered, String records_of_the_audit_of_nav, 
 			String scheme_wise_nav_uploaded, String scheme_wise_nav_submitted, 
-			String monthly_reports_submitted, String scrip_wise_details) {
+			String monthly_reports_submitted, String scrip_wise_details,
+			String scheme_wise,String scheme_wise_daily,String periodic_reports_monthly,
+			String scrip_wise_details_portfolio, String pension_fund_published, String pension_fund_disclosed) {
 		
 		sectionFourInfo.setAll_investment_charges(all_investment_charges);
 		sectionFourInfo.setPfm_adhered(pfm_adhered);
@@ -261,6 +281,12 @@ MnCompCertificate mnCompCertificate = mnCompCertificateLocalService.fetchMnCompC
 		sectionFourInfo.setScheme_wise_nav_submitted(scheme_wise_nav_submitted);
 		sectionFourInfo.setMonthly_reports_submitted(monthly_reports_submitted);
 		sectionFourInfo.setScrip_wise_details(scrip_wise_details);
+		sectionFourInfo.setScheme_wise(scheme_wise);
+		sectionFourInfo.setScheme_wise_daily(scheme_wise_daily);
+		sectionFourInfo.setPeriodic_reports_monthly(periodic_reports_monthly);
+		sectionFourInfo.setScrip_wise_details_portfolio(scrip_wise_details_portfolio);
+		sectionFourInfo.setPension_fund_published(pension_fund_published);
+		sectionFourInfo.setPension_fund_disclosed(pension_fund_disclosed);
 				
 		return mnCompCertificatePersistence.update(sectionFourInfo);
 		

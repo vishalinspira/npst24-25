@@ -2781,6 +2781,22 @@
 		<column name="Reports_and_Disclosure_4_2a_2" type="String" />
 		<column name="scrip_wise_details" type="String" />
 		<column name="Reports_and_Disclosure_4_2b_2" type="String" />
+		
+	 	<column name="active_passive_breaches" type="String" />
+		<column name="Securities_held_2_6_2" type="String" />
+		<column name="scheme_wise" type="String" />
+		<column name="Disclosure_requirements_5_1a_2" type="String" />
+		<column name="scheme_wise_daily" type="String" />
+		<column name="Disclosure_requirements_5_1b_2" type="String" />
+		<column name="periodic_reports_monthly" type="String" />
+		<column name="Disclosure_requirements_5_1c_2" type="String" />
+		<column name="scrip_wise_details_portfolio" type="String" />
+		<column name="Disclosure_requirements_5_1d_2" type="String" />
+		<column name="pension_fund_published" type="String" />
+		<column name="Disclosure_requirements_5_1e_2" type="String" />
+		<column name="pension_fund_disclosed" type="String" />
+		<column name="Disclosure_requirements_5_1f_2" type="String" />
+	 	
 		<column name="date_2" type="String" />
 		<column name="company_name" type="String" />
 		<column name="emplolyee_name" type="String" />
@@ -2856,6 +2872,15 @@
 		<column name="scheme_wise_nav_submitted_rem" type="String" />
 		<column name="monthly_reports_submitted_rem" type="String" />
 		<column name="scrip_wise_details_rem" type="String" />
+		
+	  	<column name="active_passive_breaches_rem" type="String" />
+		<column name="scheme_wise_rem" type="String" />
+		<column name="scheme_wise_daily_rem" type="String" />
+		<column name="periodic_reports_monthly_rem" type="String" />
+		<column name="scrip_wise_details_pf_rem" type="String" />
+		<column name="pension_fund_published_rem" type="String" />
+		<column name="pension_fund_disclosed_rem" type="String" />
+	  	
 		<column name="npsRemark" type="String" />
 		<column name="annexure_a_i_rem" type="String" />
 		<column name="annexure_a_ii_rem" type="String" />
