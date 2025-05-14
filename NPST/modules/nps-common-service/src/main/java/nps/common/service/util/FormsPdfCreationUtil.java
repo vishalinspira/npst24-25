@@ -1015,7 +1015,7 @@ public class FormsPdfCreationUtil {
 //				Cell cell1 = new Cell(1, 5)
 //			            .add(new Paragraph("1 . Purchase of securities")).setBorder(null).setBold();
 //			    table1.addCell(cell1);
-			    String[] cellContent11 =	{"1.1","Whether purchase of securities adhere to the Investment guidelines issued by PFRDA. (prescribed securities/ percentage/ limit/ prudential & exposure norms) Details of deviations provided in annexure A (i).",
+			    String[] cellContent11 =	{"1.1","Whether purchase of securities adhere to the Investment guidelines issued by PFRDA. (prescribed securities/ percentage/ limit/ prudential & exposure norms) \n Details of deviations provided in annexure A.",
 			    			mnCompCertificate.getPurchase_of_securities(),mnCompCertificate.getPurchase_of_sec_rem_1_1_2(),mnCompCertificateScrutiny.getPurchase_of_securities_rem()};
 			    if(checkboxvalues.contains("1.1a")) {
 			    	table1=addRow(table1, 5, cellContent11);
@@ -1035,7 +1035,7 @@ public class FormsPdfCreationUtil {
 			    if(checkboxvalues.contains("1.2c")) {
 			    	table1=addRow(table1, 5, cellContent14);
 			    }
-			    String[] cellContent15 =	{" ","(d) Whether investments for non-dematerialized securities are supported by physical certificates",
+			    String[] cellContent15 =	{" ","(d) Whether investments for non-dematerialized securities are supported by certificates/ statements.",
 			    							mnCompCertificate.getInvestments_non_dematerialized(),mnCompCertificate.getPurchase_of_sec_rem_1_2d_2(),mnCompCertificateScrutiny.getInvest_non_dematerialized_rem()};
 			    if(checkboxvalues.contains("1.2d")) {
 			    	table1=addRow(table1, 5, cellContent15);
@@ -1045,13 +1045,13 @@ public class FormsPdfCreationUtil {
 			    if(checkboxvalues.contains("1.2e")) {
 			    	table1=addRow(table1, 5, cellContent16);
 			    }
-			    String[] cellContent17 =	{"1.3","Whether delivery of securities is taken immediately on purchase as per settlement cycle/ terms for each transaction.",
+			    String[] cellContent17 =	{"1.3","Whether delivery of securities is taken immediately on purchase as per settlement cycle/ terms for each transaction. \n Details of exceptions to normal settlement procedure such as hand delivery, short delivery, trade reversal etc. provided in Annexure B.",
 			    									mnCompCertificate.getDelivery_of_securities_purch(),mnCompCertificate.getPurchase_of_sec_rem_1_3_2(),mnCompCertificateScrutiny.getDelivery_of_security_purch_rem()};
 			    if(checkboxvalues.contains("1.3a")) {
 			    	table1=addRow(table1, 5, cellContent17);
 			    }	
-			    String[] cellContent18 =	{"1.4","Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period? (As per PFRDA circular no. PFRDA/2021/32/REG-PF/4 dated 27.07.2021, such investments to be reported to NPS Trust within 30 days of making such investments)\r\n" + 
-			    			"Details of Investments provided in Annexure B.",mnCompCertificate.getInvestment_done_in_ipo(),mnCompCertificate.getPurchase_of_secu_rem_1_4_2(),mnCompCertificateScrutiny.getInvestment_done_in_ipo_rem()};
+			    String[] cellContent18 =	{"1.4","Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period? \n  Details of Investments provided in Annexure C.",
+			    			mnCompCertificate.getInvestment_done_in_ipo(),mnCompCertificate.getPurchase_of_secu_rem_1_4_2(),mnCompCertificateScrutiny.getInvestment_done_in_ipo_rem()};
 			    if(checkboxvalues.contains("1.4a")) {
 			    	table1=addRow(table1, 5, cellContent18);
 			    }		
@@ -1075,40 +1075,45 @@ public class FormsPdfCreationUtil {
 //			    table2.addCell(cell2);
 			    
 			    String[] cellContent21 =	{"2.1","Whether scheme investments adhere to the Investment guidelines issued by PFRDA. (prescribed securities/ percentage/ limit/ prudential & exposure norms)\r\n" + 
-			    				"Details of deviations provided in annexure A (ii).",mnCompCertificate.getScheme_investments(),mnCompCertificate.getSecurities_held_2_1_2(),mnCompCertificateScrutiny.getScheme_investments_rem()};
+			    				"Details of deviations provided in annexure A .",mnCompCertificate.getScheme_investments(),mnCompCertificate.getSecurities_held_2_1_2(),mnCompCertificateScrutiny.getScheme_investments_rem()};
 			    if(checkboxvalues.contains("2.1a")) {
 			    	table2=addRow(table2, 5, cellContent21);
 			    }
-			    String[] cellContent22 =	{"2.2","a) Whether stop loss trigger has occurred for any security during the month as per Investment policy of the PFM.",
-			    					mnCompCertificate.getStop_loss_trigger(),mnCompCertificate.getSecurities_held_2_2a_2(),mnCompCertificateScrutiny.getStop_loss_trigger_rem()};
+			    String[] cellContent22 =	{"2.2","a) Whether stop loss/ any other review trigger has occurred for any security (equity/debt/alternate) during the month as per Investment policy of the Pension Fund.",
+	    				mnCompCertificate.getStop_loss_trigger(),mnCompCertificate.getSecurities_held_2_2a_2(),mnCompCertificateScrutiny.getStop_loss_trigger_rem()};
 			    if(checkboxvalues.contains("2.2a")) {
 			    	table2=addRow(table2, 5, cellContent22);
 			    }
-			    String[] cellContent23 =	{" ","b) Whether decision in such scenario is approved by the committee/competent authority as per Approval delegation matrix",
+			    String[] cellContent23 =	{" ","b) Whether decision in such a scenario is approved by the committee/competent authority as per Approval delegation matrix",
 			    						mnCompCertificate.getDecision_approved_by_committee(),mnCompCertificate.getSecurities_held_2_2b_2(),mnCompCertificateScrutiny.getDecision_appr_by_committee_rem()};
 			    if(checkboxvalues.contains("2.2b")) {
 			    	table2=addRow(table2, 5, cellContent23);
 			    }
 			    String[] cellContent24 =	 {" ","c) Whether each decision along with rationale is properly documented and record is maintained at individual scrip level. (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)\r\n" +  
-			    				"Details of stop loss occurred during the month and its decision provided in Annexure C.",mnCompCertificate.getDecision_properly_documented(),mnCompCertificate.getSecurities_held_2_2c_2(),mnCompCertificateScrutiny.getDecision_prop_documented_rem()};
+			    				"Details of stop loss/review triggered during the month and its decision provided in Annexure D.",mnCompCertificate.getDecision_properly_documented(),mnCompCertificate.getSecurities_held_2_2c_2(),mnCompCertificateScrutiny.getDecision_prop_documented_rem()};
 			    if(checkboxvalues.contains("2.2c")) {
 			    	table2=addRow(table2, 5, cellContent24);
 			    }
-			    String[] cellContent25 =	{"2.3","Whether inter-scheme transfer of securities complies with point 14 of the Investment Guideline circular number PFRDA/2021/29/REG-PF/3 dated 20.07.2021.\r\n" + 
-			    				"Details of inter scheme transfer provided in Annexure D.",mnCompCertificate.getInter_scheme_transfer(),mnCompCertificate.getSecurities_held_2_3_2(),mnCompCertificateScrutiny.getInter_scheme_transfer_rem()};
+			    String[] cellContent25 =	{"2.3","Whether inter-scheme transfer of securities complies with Investment Guidelines issued by PFRDA.\r\n" + 
+	    				"Details of inter scheme transfer provided in Annexure E.",mnCompCertificate.getInter_scheme_transfer(),mnCompCertificate.getSecurities_held_2_3_2(),mnCompCertificateScrutiny.getInter_scheme_transfer_rem()};
 			    if(checkboxvalues.contains("2.3a")) {
 			    	table2=addRow(table2, 5, cellContent25);
 			    }
-			    String[] cellContent26 =	{"2.4","Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing.\r\n" +  
-			    				"Details provided in Annexure E",mnCompCertificate.getInvestment_held_in_equity(),mnCompCertificate.getSecurities_held_2_4_2(),mnCompCertificateScrutiny.getInvestment_held_in_equity_rem()};
+			    String[] cellContent26 =	{"2.4","Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing. If yes, whether the decision to hold such stocks has been approved by the investment committee and informed to the Board of Pension Fund\r\n" +  
+	    				"Details provided in Annexure F",mnCompCertificate.getInvestment_held_in_equity(),mnCompCertificate.getSecurities_held_2_4_2(),mnCompCertificateScrutiny.getInvestment_held_in_equity_rem()};
 			    if(checkboxvalues.contains("2.4a")) {
 			    	table2=addRow(table2, 5, cellContent26);
 			    }
 			    String[] cellContent27 =	{"2.5","Whether investment in any equity shares through IPO/FPO/OFS does not fulfil the market capitalization condition prescribed under investment guidelines post listing.\r\n" + 
-			    				"Details provided in Annexure F.",mnCompCertificate.getInvestment_in_equity_shares(),mnCompCertificate.getSecurities_held_2_5_2(),mnCompCertificateScrutiny.getInvest_in_equity_shares_rem()};
+	    				"Details provided in Annexure G.",mnCompCertificate.getInvestment_in_equity_shares(),mnCompCertificate.getSecurities_held_2_5_2(),mnCompCertificateScrutiny.getInvest_in_equity_shares_rem()};
 			    if(checkboxvalues.contains("2.5a")) {
 			    	table2=addRow(table2, 5, cellContent27);
-			    }		
+			    }	
+			    String[] cellContent28 =	{"2.6","Whether the Pension Fund has segregated the deviations/breaches into active and passive as per PFRDA Circular No. PFRDA/2022/04/SUP-PF/01 dated 04.02.2022 and regularized the active breaches/deviations immediately within 3 business days from the date of active deviation happened.\r\n" + 
+	    				"Details provided in Annexure H.",mnCompCertificate.getActive_passive_breaches(),mnCompCertificate.getSecurities_held_2_6_2(),mnCompCertificateScrutiny.getActive_passive_breaches_rem()};
+			    if(checkboxvalues.contains("2.6a")) {
+			    	table2=addRow(table2, 5, cellContent28);
+			    }	
 			   
 //			    for (int row = 0; row < 7; row++) {
 //			        for (int col = 0; col < 5; col++) {
@@ -1135,8 +1140,8 @@ public class FormsPdfCreationUtil {
 			    if(checkboxvalues.contains("3.1b")) {
 			    	table3=addRow(table3, 5, cellContent32);
 			    }
-			    String[] cellContent33 =	{"3.2","Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction.",
-			    					mnCompCertificate.getDelivery_of_securities_sale(),mnCompCertificate.getSale_of_securities_3_2_2(),mnCompCertificateScrutiny.getDelivery_of_security_sale_rem()};
+			    String[] cellContent33 =	{"3.2","Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction. Please provide details of exceptions, if any, to normal settlement procedure such as hand delivery, short delivery, trade reversal etc.",
+	    				mnCompCertificate.getDelivery_of_securities_sale(),mnCompCertificate.getSale_of_securities_3_2_2(),mnCompCertificateScrutiny.getDelivery_of_security_sale_rem()};
 			    if(checkboxvalues.contains("3.2a")) {
 			    	table3=addRow(table3, 5, cellContent33);
 			    }
@@ -1155,32 +1160,32 @@ public class FormsPdfCreationUtil {
 //				Cell cell4 = new Cell(1, 5)
 //			            .add(new Paragraph("4 . Reports and Disclosures as per Schedule V of PFRDA (PF) Regulations")).setBorder(null).setBold();
 //			    table4.addCell(cell4);
-			    String[] cellContent41 =	{"4.1","(a) Whether all investment charges (Investment management fees, Custodian charges, SEBI charges, NPS Trust fees etc.) are loaded onto the NAV on a daily basis",
+			    String[] cellContent41 =	{"4.1","(a)Whether scheme-wise number of units are tallied with CRA records on daily basis.",
 			    			mnCompCertificate.getAll_investment_charges(),mnCompCertificate.getReports_and_Disclosure_4_1a_2(),mnCompCertificateScrutiny.getAll_investment_charges_rem()};
 			    if(checkboxvalues.contains("4.1a")) {
 			    	table4=addRow(table4, 5, cellContent41);
 			    }
-			    String[] cellContent42 =	{" ","(b) Whether PFM has adhered to instructions of PFRDA to get the NAV verified by the auditors on a daily basis.",
+			    String[] cellContent42 =	{" ","(b) Whether the securities held in the schemes are tallied with the Custodian records on a daily basis.",
 			    				mnCompCertificate.getPfm_adhered(),mnCompCertificate.getReports_and_Disclosure_4_1b_2(),mnCompCertificateScrutiny.getPfm_adhered_rem()};
 			    if(checkboxvalues.contains("4.1b")) {
 			    	table4=addRow(table4, 5, cellContent42);
 			    }
-			    String[] cellContent43 =	{" ","(c) Whether the records of the audit of NAV have been maintained by the pension fund for future inspection.",
-			    					mnCompCertificate.getRecords_of_the_audit_of_nav(),mnCompCertificate.getReports_and_Disclosure_4_1c_2(),mnCompCertificateScrutiny.getRecords_of_audit_of_nav_rem()};
+			    String[] cellContent43 =	{" ","(c) Whether all investment charges (Investment management fees, Custody and related charges, SEBI charges, NPS Trust fees etc.) are loaded onto the scheme-wise NAV on a daily basis",
+	    					mnCompCertificate.getRecords_of_the_audit_of_nav(),mnCompCertificate.getReports_and_Disclosure_4_1c_2(),mnCompCertificateScrutiny.getRecords_of_audit_of_nav_rem()};
 			    if(checkboxvalues.contains("4.1c")) {
 			    	table4=addRow(table4, 5, cellContent43);
 			    }
-			    String[] cellContent44 =		{" ","(d) Whether scheme-wise NAV (latest & historical) is uploaded daily on the PFM's website within the prescribed time limit.",
-			    						mnCompCertificate.getScheme_wise_nav_uploaded(),mnCompCertificate.getReports_and_Disclosure_4_1d_2(),mnCompCertificateScrutiny.getScheme_wise_nav_uploaded_rem()};
+			    String[] cellContent44 =		{" ","(d) Whether the Pension Fund has adhered to instructions of PFRDA to get the scheme-wise NAV verified by the auditors on a daily basis.",
+	    				mnCompCertificate.getScheme_wise_nav_uploaded(),mnCompCertificate.getReports_and_Disclosure_4_1d_2(),mnCompCertificateScrutiny.getScheme_wise_nav_uploaded_rem()};
 			    if(checkboxvalues.contains("4.1d")) {
 			    	table4=addRow(table4, 5, cellContent44);
 			    }
-			    String[] cellContent45 =		{" ","(e) Whether scheme-wise NAV is submitted daily to all the CRA's within the prescribed time limit.Instances of delays during the month in uploading NAV on PFM's website and submission to CRA with the reasons provided in Annexure G.",
-			    							mnCompCertificate.getScheme_wise_nav_submitted(),mnCompCertificate.getReports_and_Disclosure_4_1e_2(),mnCompCertificateScrutiny.getScheme_wise_nav_submitted_rem()};
+			    String[] cellContent45 =		{" ","(e) Whether the records of the audit of scheme-wise NAV have been maintained by the pension fund for future inspection. ",
+	    					mnCompCertificate.getScheme_wise_nav_submitted(),mnCompCertificate.getReports_and_Disclosure_4_1e_2(),mnCompCertificateScrutiny.getScheme_wise_nav_submitted_rem()};
 			    if(checkboxvalues.contains("4.1e")) {
 			    	table4=addRow(table4, 5, cellContent45);
 			    }
-			    String[] cellContent46 =		{"4.2","(a) Whether monthly periodic reports as per schedule V are submitted to NPS Trust within 10 days from the end of the month.",
+			/*    String[] cellContent46 =		{"4.2","(a) Whether monthly periodic reports as per schedule V are submitted to NPS Trust within 10 days from the end of the month.",
 			    								mnCompCertificate.getMonthly_reports_submitted(),mnCompCertificate.getReports_and_Disclosure_4_2a_2(),mnCompCertificateScrutiny.getMonthly_reports_submitted_rem()};
 			    if(checkboxvalues.contains("4.2a")) {
 			    	table4=addRow(table4, 5, cellContent46);
@@ -1190,7 +1195,7 @@ public class FormsPdfCreationUtil {
 			    if(checkboxvalues.contains("4.2b")) {
 			    	table4=addRow(table4, 5, cellContent47);
 			    }
-			    
+			 */   
 //			    for (int row = 0; row < 7; row++) {
 //			        for (int col = 0; col < 5; col++) {
 //			            table4.addCell(new Cell().setBorder(null).add(new Paragraph(cellContent4[row][col])));
@@ -1198,8 +1203,48 @@ public class FormsPdfCreationUtil {
 //			        }
 //			        }
 			    table4.complete();
-
 			    
+                doc.add(new Paragraph(""));
+			    
+			    Table table5 = new Table(new float[] {0.5f, 2.5f, 0.5f,1.5f,1.5f}, true)
+		                .setWidth(UnitValue.createPercentValue(100));
+			    doc.add(table5);
+//				Cell cell4 = new Cell(1, 5)
+//			            .add(new Paragraph("4 . Reports and Disclosures as per Schedule V of PFRDA (PF) Regulations")).setBorder(null).setBold();
+//			    table5.addCell(cell4);
+			    String[] cellContent51 =	{"5.1","(a)Whether scheme-wise NAV (latest & historical) is uploaded daily on the Pension Fund's website within the prescribed time limit.",
+			    		mnCompCertificate.getScheme_wise(),mnCompCertificate.getDisclosure_requirements_5_1a_2(),mnCompCertificateScrutiny.getScheme_wise_rem()};
+			    if(checkboxvalues.contains("5.1a")) {
+			    	table5=addRow(table5, 5, cellContent51);
+			    }
+			    String[] cellContent52 =	{" ","(b) Whether scheme-wise NAV is submitted daily to all the CRA's within the prescribed time limit.\r\n"
+	    				+ "Instances of delays during the month in uploading NAV on Pension Fund's website and submission to CRA with the reasons provided in Annexure I.",
+		    			mnCompCertificate.getScheme_wise_daily(),mnCompCertificate.getDisclosure_requirements_5_1b_2(),mnCompCertificateScrutiny.getScheme_wise_daily_rem()};
+			    if(checkboxvalues.contains("5.1b")) {
+			    	table5=addRow(table5, 5, cellContent52);
+			    }
+			    String[] cellContent53 =	{" ","(c) Whether monthly periodic reports as per schedule V of PFRDA (PF) Regulations, 2015 and subsequent amendments are submitted to NPS Trust within 10 days from the end of the month.",
+	    				mnCompCertificate.getPeriodic_reports_monthly(),mnCompCertificate.getDisclosure_requirements_5_1c_2(),mnCompCertificateScrutiny.getPeriodic_reports_monthly_rem()};
+			    if(checkboxvalues.contains("5.1c")) {
+			    	table5=addRow(table5, 5, cellContent53);
+			    }
+			    String[] cellContent54 =		{" ","(d)Whether scrip wise details of portfolio of each scheme (excel file) is uploaded on the website, in the prescribed format, within 10 days from the end of the month.",
+	    					mnCompCertificate.getScrip_wise_details_portfolio(),mnCompCertificate.getDisclosure_requirements_5_1d_2(),mnCompCertificateScrutiny.getScrip_wise_details_pf_rem()};
+			    if(checkboxvalues.contains("5.1d")) {
+			    	table5=addRow(table5, 5, cellContent54);
+			    }
+			    String[] cellContent55 =		{" ","(e) Whether the pension fund has published on its website a list of its group companies and those of its sponsor.",
+	    				mnCompCertificate.getPension_fund_published(),mnCompCertificate.getDisclosure_requirements_5_1e_2(),mnCompCertificateScrutiny.getPension_fund_published_rem()};
+			    if(checkboxvalues.contains("5.1e")) {
+			    	table5=addRow(table5, 5, cellContent55);
+			    }
+			    String[] cellContent56 =		{" ","(f) Whether the pension fund has disclosed the scheme returns in the manner and in the format as available in public domain hosted by National Pension System Trust",
+    					mnCompCertificate.getPension_fund_disclosed(),mnCompCertificate.getDisclosure_requirements_5_1f_2(),mnCompCertificateScrutiny.getPension_fund_disclosed_rem()};
+		         if(checkboxvalues.contains("5.1f")) {
+		    	table5=addRow(table5, 5, cellContent56);
+		    }
+
+		         table5.complete();
 			        doc.close();
 			        pdfDoc.close();
 			        writer.close();
