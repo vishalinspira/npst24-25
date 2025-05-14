@@ -34,6 +34,8 @@ public class MonthlyCompFormConstants {
 	public static final String SECURITIES_HELD_2_4_2 ="Securities_held_2_4_2";
 	public static final String INVESTMENT_IN_EQUITY_SHARES ="investment_in_equity_shares";
 	public static final String SECURITIES_HELD_2_5_2 ="Securities_held_2_5_2";
+	public static final String ACTIVE_PASSIVE_BREACHES ="active_passive_breaches";
+	public static final String SECURITIES_HELD_2_6_2 ="Securities_held_2_6_2";
 	public static final String DISINVESTMENTS_APPROVED ="disinvestments_approved";
 	public static final String SALE_OF_SECURITIES_3_1A_2 ="Sale_of_securities_3_1a_2";
 	public static final String DECISION_OF_DISINVESTMENT ="decision_of_disinvestment";
@@ -54,6 +56,19 @@ public class MonthlyCompFormConstants {
 	public static final String REPORTS_AND_DISCLOSURE_4_2A_2 ="Reports_and_Disclosure_4_2a_2";
 	public static final String SCRIP_WISE_DETAILS ="scrip_wise_details";
 	public static final String REPORTS_AND_DISCLOSURE_4_2B_2 ="Reports_and_Disclosure_4_2b_2";
+	public static final String SCHEME_WISE ="scheme_wise";
+	public static final String DISCLOSURE_REQUIREMENTS_5_1A_2 ="Disclosure_requirements_5_1a_2";
+	public static final String SCHEME_WISE_DAILY ="scheme_wise_daily";
+	public static final String DISCLOSURE_REQUIREMENTS_5_1B_2 ="Disclosure_requirements_5_1b_2";
+	public static final String PERIODIC_REPORTS_MONTHLY ="periodic_reports_monthly";
+	public static final String DISCLOSURE_REQUIREMENTS_5_1C_2 ="Disclosure_requirements_5_1c_2";
+	public static final String SCRIP_WISE_DETAILS_PORTFOLIO ="scrip_wise_details_portfolio";
+	public static final String DISCLOSURE_REQUIREMENTS_5_1D_2 ="Disclosure_requirements_5_1d_2";
+	public static final String PENSION_FUND_PUBLISHED ="pension_fund_published";
+	public static final String DISCLOSURE_REQUIREMENTS_5_1E_2 ="Disclosure_requirements_5_1e_2";
+	public static final String PENSION_FUND_DISCLOSED ="pension_fund_disclosed";
+	public static final String DISCLOSURE_REQUIREMENTS_5_1F_2 ="Disclosure_requirements_5_1f_2";
+
 	public static final String DATE_2 ="date_2";
 	public static final String COMPANY_NAME ="company_name";
 	public static final String EMPLOYEE_NAME ="emplolyee_name";
