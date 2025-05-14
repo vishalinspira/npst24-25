@@ -95,6 +95,7 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		String securitiesHeld232 = ParamUtil.getString(resourceRequest, "Securities_held_2_3_2");
 		String securitiesHeld242 = ParamUtil.getString(resourceRequest, "Securities_held_2_4_2");
 		String securitiesHeld252 = ParamUtil.getString(resourceRequest, "Securities_held_2_5_2");
+		String securitiesHeld262 = ParamUtil.getString(resourceRequest, "Securities_held_2_6_2");
 		String saleOfSecurities31a2 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1a_2");
 		String saleOfSecurities31b2 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1b_2");
 		String saleOfecurities322 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_2_2");
@@ -105,6 +106,14 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		String reportsAndDisclosures41e2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_1e_2");
 		String reportsAndDisclosures42a2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2a_2");
 		String reportsAndDisclosures42b2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2b_2");
+		String disclosureRequirement51a2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1a_2");
+		String disclosureRequirement51b2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1b_2");
+		String disclosureRequirement51c2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1c_2");
+		String disclosureRequirement51d2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1d_2");
+		String disclosureRequirement51e2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1e_2");
+		String disclosureRequirement51f2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1f_2");
+		
+		
 		
 		String securities1 = ParamUtil.getString(resourceRequest, "purchase2-1");
 		String securities2_1 = ParamUtil.getString(resourceRequest, "purchase2-2a");
@@ -113,6 +122,7 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		String securities3 = ParamUtil.getString(resourceRequest, "purchase2-3");
 		String securities4 = ParamUtil.getString(resourceRequest, "purchase2-4");
 		String securities5 = ParamUtil.getString(resourceRequest, "purchase2-5");
+		String securities6 = ParamUtil.getString(resourceRequest, "purchase2-6");
 
 		String sale1_1 = ParamUtil.getString(resourceRequest, "purchase3-1a");
 		String sale1_2 = ParamUtil.getString(resourceRequest, "purchase3-1b");
@@ -125,6 +135,13 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		String reports1_5 = ParamUtil.getString(resourceRequest, "purchase4-1e");
 		String reports2_1 = ParamUtil.getString(resourceRequest, "purchase4-2a");
 		String reports2_2 = ParamUtil.getString(resourceRequest, "purchase4-2b");
+		
+		String disclosure_1_1 = ParamUtil.getString(resourceRequest, "purchase5-1a");
+		String disclosure_1_2 = ParamUtil.getString(resourceRequest, "purchase5-1b");
+		String disclosure_1_3 = ParamUtil.getString(resourceRequest, "purchase5-1c");
+		String disclosure_1_4 = ParamUtil.getString(resourceRequest, "purchase5-1d");
+		String disclosure_1_5 = ParamUtil.getString(resourceRequest, "purchase5-1e");
+		String disclosure_1_6 = ParamUtil.getString(resourceRequest, "purchase5-1f");
 		
 //		String date_2 = ParamUtil.getString(resourceRequest, "date_2");
 //		String companies = ParamUtil.getString(resourceRequest, "companies");
@@ -184,6 +201,7 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		String inter_scheme_transfer_rem=ParamUtil.getString(resourceRequest, "Securities_held_2_3");
 		String investment_held_in_equity_rem=ParamUtil.getString(resourceRequest, "Securities_held_2_4");
 		String invest_in_equity_shares_rem=ParamUtil.getString(resourceRequest, "Securities_held_2_5");
+		String active_passive_breaches_rem=ParamUtil.getString(resourceRequest, "Securities_held_2_6");
 		String disinvestments_approved_rem=ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1a");
 		String decision_of_disinvestment_rem=ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1b");
 		String delivery_of_security_sale_rem=ParamUtil.getString(resourceRequest, "Sale_of_securities_3_2");
@@ -194,6 +212,14 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		String scheme_wise_nav_submitted_rem=ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_1e");
 		String monthly_reports_submitted_rem=ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2a");
 		String scrip_wise_details_rem=ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2b");
+		
+		String scheme_wise_rem=ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1a");
+		String scheme_wise_daily_rem=ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1b");
+		String periodic_reports_monthly_rem=ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1c");
+		String scrip_wise_details_pf_rem=ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1d");
+		String pension_fund_published_rem=ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1e");
+		String pension_fund_disclosed_rem=ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1f");
+		
 		
 		long annexure_a_i = certificate.getAnnexure_a_i();
 	    
@@ -218,15 +244,18 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 						purchase2_1, purchase2_2, purchase2_3, purchase2_4, purchase2_5, purchase3, purchase4,certificate.getReportUploadLogId(),purchaseOfSecuritiesRemarks112,
 						purchaseOfSecuritiesRemarks12a2,purchaseOfSecuritiesRemarks12b2,purchaseOfSecuritiesRemarks12c2,purchaseOfSecuritiesRemarks12d2,purchaseOfSecuritiesRemarks12e2,
 						purchaseOfSecuritiesRemarks132,purchaseOfSecuritiesRemarks142,securitiesHeld212,securitiesHeld22a2,securitiesHeld22b2,securitiesHeld22c2,securitiesHeld232,
-						securitiesHeld242,securitiesHeld252,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
-						reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,securities1, 
-						securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,sale1_1, sale1_2, sale2,reports1_1, 
-						reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2,date_2, companies, employeeName, roles, date_3, place, purchase_of_securities_rem,
+						securitiesHeld242,securitiesHeld252,securitiesHeld262,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
+						reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,disclosureRequirement51a2,
+						disclosureRequirement51b2,disclosureRequirement51c2,disclosureRequirement51d2,disclosureRequirement51e2,disclosureRequirement51f2,securities1, 
+						securities2_1, securities2_2, securities2_3, securities3, securities4, securities5, securities6, sale1_1, sale1_2, sale2,reports1_1, 
+						reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2,disclosure_1_1, disclosure_1_2,disclosure_1_3, disclosure_1_4,disclosure_1_5,disclosure_1_6,
+						date_2, companies, employeeName, roles, date_3, place, purchase_of_securities_rem,
 						detailed_investment_rem, investments_approved_rem, decision_of_investment_rem, invest_non_dematerialized_rem,
 						all_investments_from_funds_rem, delivery_of_security_purch_rem, investment_done_in_ipo_rem, scheme_investments_rem, stop_loss_trigger_rem,
-						decision_appr_by_committee_rem, decision_prop_documented_rem, inter_scheme_transfer_rem, investment_held_in_equity_rem, invest_in_equity_shares_rem, disinvestments_approved_rem, 
-						decision_of_disinvestment_rem, delivery_of_security_sale_rem, all_investment_charges_rem, pfm_adhered_rem, records_of_audit_of_nav_rem, 
-						scheme_wise_nav_uploaded_rem, scheme_wise_nav_submitted_rem, monthly_reports_submitted_rem, scrip_wise_details_rem);
+						decision_appr_by_committee_rem, decision_prop_documented_rem, inter_scheme_transfer_rem, investment_held_in_equity_rem, invest_in_equity_shares_rem, active_passive_breaches_rem,
+						disinvestments_approved_rem, decision_of_disinvestment_rem, delivery_of_security_sale_rem, all_investment_charges_rem, pfm_adhered_rem, records_of_audit_of_nav_rem, 
+						scheme_wise_nav_uploaded_rem, scheme_wise_nav_submitted_rem, monthly_reports_submitted_rem, scrip_wise_details_rem, 
+						scheme_wise_rem, scheme_wise_daily_rem, periodic_reports_monthly_rem, scrip_wise_details_pf_rem, pension_fund_published_rem, pension_fund_disclosed_rem);
 				ServiceContext serviceContext = ServiceContextThreadLocal.getServiceContext();
 				long fileEntryId=certificate.getFileEntryId();
 				int isAmRejected=0;
@@ -257,10 +286,12 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 							purchase2_1, purchase2_2, purchase2_3, purchase2_4, purchase2_5, purchase3, purchase4,certificate.getReportUploadLogId(),purchaseOfSecuritiesRemarks112,
 							purchaseOfSecuritiesRemarks12a2,purchaseOfSecuritiesRemarks12b2,purchaseOfSecuritiesRemarks12c2,purchaseOfSecuritiesRemarks12d2,purchaseOfSecuritiesRemarks12e2,
 							purchaseOfSecuritiesRemarks132,purchaseOfSecuritiesRemarks142,securitiesHeld212,securitiesHeld22a2,securitiesHeld22b2,securitiesHeld22c2,securitiesHeld232,
-							securitiesHeld242,securitiesHeld252,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
-							reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,securities1, 
-							securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,sale1_1, sale1_2, sale2,reports1_1, 
-							reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2,date_2, companies, employeeName, roles, date_3, place,annexure_a_i, 0, 
+							securitiesHeld242,securitiesHeld252,securitiesHeld262,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
+							reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,disclosureRequirement51a2,
+							disclosureRequirement51b2,disclosureRequirement51c2,disclosureRequirement51d2,disclosureRequirement51e2,disclosureRequirement51f2, securities1, 
+							securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,securities6,sale1_1, sale1_2, sale2,reports1_1, 
+							reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2, disclosure_1_1,disclosure_1_2,disclosure_1_3,disclosure_1_4,disclosure_1_5,disclosure_1_6,
+							date_2, companies, employeeName, roles, date_3, place,annexure_a_i, 0, 
 							0, 0, 0, 0, 0, 0, 0, new Date(), themeDisplay.getUserId(),fileEntryId,isAmRejected);	
 				}
 				
@@ -286,9 +317,10 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 				mnCompCertificateScrutinyLocalService.saveMnCompCertificateScrutiny(themeDisplay.getUser().getScreenName(),0, themeDisplay.getUserId(), purchase_of_securities_rem, detailed_investment_rem, 
 						investments_approved_rem, decision_of_investment_rem, invest_non_dematerialized_rem, all_investments_from_funds_rem, delivery_of_security_purch_rem, 
 						investment_done_in_ipo_rem, scheme_investments_rem, stop_loss_trigger_rem, decision_appr_by_committee_rem, decision_prop_documented_rem, inter_scheme_transfer_rem, 
-						investment_held_in_equity_rem, invest_in_equity_shares_rem, disinvestments_approved_rem, decision_of_disinvestment_rem, delivery_of_security_sale_rem, 
+						investment_held_in_equity_rem, invest_in_equity_shares_rem, active_passive_breaches_rem, disinvestments_approved_rem, decision_of_disinvestment_rem, delivery_of_security_sale_rem, 
 						all_investment_charges_rem, pfm_adhered_rem, records_of_audit_of_nav_rem, scheme_wise_nav_uploaded_rem, scheme_wise_nav_submitted_rem, monthly_reports_submitted_rem,
-						scrip_wise_details_rem, annexure_a_i_rem, annexure_a_ii_rem, annexure_b_rem, annexure_c_rem, annexure_d_rem, annexure_e_rem, annexure_f_rem, annexure_g_rem, annexure_h_rem, 
+						scrip_wise_details_rem, scheme_wise_rem,scheme_wise_daily_rem, periodic_reports_monthly_rem, scrip_wise_details_pf_rem, pension_fund_published_rem, pension_fund_disclosed_rem,
+						annexure_a_i_rem, annexure_a_ii_rem, annexure_b_rem, annexure_c_rem, annexure_d_rem, annexure_e_rem, annexure_f_rem, annexure_g_rem, annexure_h_rem, 
 						new Date(), themeDisplay.getUserId(), reportUploadLogId,npsRemark);
 			} catch (Exception e) {
 				isError = true;
@@ -361,7 +393,7 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		_log.info(purchase2_4 + " " + purchase2_5 + " " + purchase3 + " " + purchase4);
 		_log.info(purchaseOfSecuritiesRemarks112+" "+purchaseOfSecuritiesRemarks12a2+" "+securitiesHeld212);
 		
-		MnCompCertificate firstDetails = mnCompCertificateLocalService.addSection1(date_1, purchase1, 
+/*		MnCompCertificate firstDetails = mnCompCertificateLocalService.addSection1(date_1, purchase1, 
 				purchase2_1, purchase2_2, purchase2_3, purchase2_4, purchase2_5, purchase3, purchase4,reportUploadLogId,purchaseOfSecuritiesRemarks112,
 				purchaseOfSecuritiesRemarks12a2,purchaseOfSecuritiesRemarks12b2,purchaseOfSecuritiesRemarks12c2,purchaseOfSecuritiesRemarks12d2,purchaseOfSecuritiesRemarks12e2,
 				purchaseOfSecuritiesRemarks132,purchaseOfSecuritiesRemarks142,securitiesHeld212,securitiesHeld22a2,securitiesHeld22b2,securitiesHeld22c2,securitiesHeld232,
@@ -370,7 +402,9 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		
 		
 		return firstDetails;
-		
+		*/
+		MnCompCertificate mnCompCertificate = null;
+		return mnCompCertificate;
 	}
 
 	public MnCompCertificate section2(ResourceRequest resourceRequest, MnCompCertificate sectionTwoDetails) {
@@ -386,11 +420,13 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		_log.info(securities1 + " " + securities2_1 + " " + securities2_2 + " " + securities2_3);
 		_log.info(securities3 + " " + securities4 + " " + securities5);
 		
-		MnCompCertificate section2 = mnCompCertificateLocalService.addSection2(sectionTwoDetails, securities1, 
+	/*	MnCompCertificate section2 = mnCompCertificateLocalService.addSection2(sectionTwoDetails, securities1, 
 				securities2_1, securities2_2, securities2_3, securities3, securities4, securities5);
 		
 		return section2;
-			
+	*/
+		MnCompCertificate mnCompCertificate = null;
+		return mnCompCertificate;
 	}
 	
 	public MnCompCertificate section3(ResourceRequest resourceRequest, MnCompCertificate sectionThreeDetails) {
@@ -421,11 +457,13 @@ public class Save_Comp_Certificate_scrutiny implements MVCResourceCommand{
 		_log.info(reports1_1 + " " + reports1_2 + " " + reports1_3 + " " + reports1_4);
 		_log.info(reports1_5 + " " + reports2_1 + " " + reports2_2);
 		
-		MnCompCertificate section4 = mnCompCertificateLocalService.addSection4(sectionFourDetails, reports1_1, 
+		/*	MnCompCertificate section4 = mnCompCertificateLocalService.addSection4(sectionFourDetails, reports1_1, 
 				reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2);
 		
 		return section4;
-			
+	*/
+				MnCompCertificate mnCompCertificate = null;
+		return mnCompCertificate;
 	}
 	
 	public MnCompCertificate section5(ResourceRequest resourceRequest, MnCompCertificate sectionFiveDetails) throws ParseException {

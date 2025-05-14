@@ -155,11 +155,11 @@
                   <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                      <div class="col-md-9">
 <p class="font-weight-bold mb-0">To,</p>
+<p class=" font-weight-bold mb-0">The Chief Executive Officer</p>
 <p class=" font-weight-bold mb-0">National Pension System Trust,</p>
-<p class=" font-weight-bold mb-0">Tower B, B-302, Third Floor,</p>
-<p class="font-weight-bold mb-0">World Trade Center,</p>
-<p class="font-weight-bold mb-0">Nauroji Nagar,</p>
-<p class="font-weight-bold mb-0">New Delhi-110029</p>
+<p class=" font-weight-bold mb-0">B-302, Third Floor,</p>
+<p class="font-weight-bold mb-0">Tower B, World Trade Center,</p>
+<p class="font-weight-bold mb-0">Nauroji Nagar, New Delhi-110029</p>
                      </div>
                   </div>
                </div>
@@ -202,7 +202,7 @@
         			<div class="col-md-5">
                         <div class="form-group">
                             <p><strong>1.1</strong>  Whether purchase of securities adhere to the Investment guidelines issued by PFRDA. 
-							(prescribed securities/ percentage/ limit/ prudential & exposure norms) Details of deviations provided in annexure A (i).</p>
+							(prescribed securities/ percentage/ limit/ prudential & exposure norms) Details of deviations provided in annexure A.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -366,7 +366,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>(d)</strong> Whether investments for non-dematerialized securities are supported by physical certificates</p>
+                            <p><strong>(d)</strong> Whether investments for non-dematerialized securities are supported by certificates/ statements.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -449,7 +449,10 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>1.3</strong> Whether delivery of securities is taken immediately on purchase as per settlement cycle/ terms for each transaction.</p>
+                            <p><strong>1.3</strong> Whether delivery of securities is taken immediately on purchase as per settlement cycle/ terms for each transaction.
+                            <br>
+                            Details of exceptions to normal settlement procedure such as hand delivery, short delivery, trade reversal etc. provided in Annexure B.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -489,8 +492,8 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>1.4</strong> Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period? (As per PFRDA circular no. PFRDA/2021/32/REG-PF/4 dated 27.07.2021, such investments to be reported to NPS Trust within 30 days of making such investments)
-							Details of Investments provided in Annexure B.</p>
+                            <p><strong>1.4</strong> Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period?
+							<br>Details of Investments provided in Annexure C.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -540,7 +543,7 @@
                         <div class="form-group">
                             <p><strong>2.1</strong>  Whether scheme investments adhere to the Investment guidelines issued by PFRDA. 
 							(prescribed securities/ percentage/ limit/ prudential & exposure norms)
-							Details of deviations provided in annexure A (ii).</p>
+							Details of deviations provided in annexure A.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -581,7 +584,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group"> 
-                            <p><strong>2.2 (a)</strong> Whether stop loss trigger has occurred for any security during the month as per Investment policy of the PFM. </p>
+                            <p><strong>2.2 (a)</strong> Whether stop loss/ any other review trigger has occurred for any security (equity/debt/alternate) during the month as per Investment policy of the Pension Fund. </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -621,7 +624,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>(b)</strong> Whether decision in such scenario is approved by the committee/competent authority as per Approval delegation matrix.</p>
+                            <p><strong>(b)</strong> Whether decision in such a scenario is approved by the committee/competent authority as per Approval delegation matrix.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -661,8 +664,8 @@
         			<div class="col-md-5">
                         <div class="form-group">
                             <p><strong>(c)</strong> Whether each decision along with rationale is properly documented and record is maintained at individual scrip level.
-							(Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
-							Details of stop loss occurred during the month and its decision provided in Annexure C.</p>
+							<br>(Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
+							<br>Details of stop loss/review triggered during the month and its decision provided in Annexure D.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -703,8 +706,8 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>2.3</strong>  Whether inter-scheme transfer of securities complies with point 14 of the Investment Guideline circular number PFRDA/2021/29/REG-PF/3 dated 20.07.2021.
-							Details of inter scheme transfer provided in Annexure D.</p>
+                            <p><strong>2.3</strong>  Whether inter-scheme transfer of securities complies with Investment Guidelines issued by PFRDA. 
+							<br>Details of inter scheme transfer provided in Annexure E.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -743,8 +746,8 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>2.4</strong>  Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing. 
-							Details provided in Annexure E</p>
+                            <p><strong>2.4</strong>  Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing. If yes, whether the decision to hold such stocks has been approved by the investment committee and informed to the Board of Pension Fund 
+							Details provided in Annexure F</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -784,7 +787,7 @@
         			<div class="col-md-5">
                         <div class="form-group">
                             <p><strong>2.5</strong>  Whether investment in any equity shares through IPO/FPO/OFS does not fulfil the market capitalization condition prescribed under investment guidelines post listing. 
-							Details provided in Annexure F.</p>
+							<br>Details provided in Annexure G.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -817,6 +820,47 @@
                         <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Securities_held_2_5_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getSecurities_held_2_5_2() ==null ?"":mnCompCertificatedetails.getSecurities_held_2_5_2() %></textarea>
                         
                         	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Securities_held_2_5" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getInvest_in_equity_shares_rem() == null ? "" :  mnCompCertificateScrutiny.getInvest_in_equity_shares_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                            <p><strong>2.6</strong>  Whether the Pension Fund has segregated the deviations/breaches into active and passive as per PFRDA Circular No. PFRDA/2022/04/SUP-PF/01 dated 04.02.2022 and regularized the active breaches/deviations immediately within 3 business days from the date of active deviation happened.
+							<br>Details provided in Annexure H.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                     <% if (isNonNPSUser) { %>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase2-6' type="radio" id="section-1-1" value="Yes" 
+                            <%=mnCompCertificatedetails.getActive_passive_breaches() != null && mnCompCertificatedetails.getActive_passive_breaches().equalsIgnoreCase("Yes") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase2-6' type="radio" id="section-1-2" value="No" 
+                            <%=mnCompCertificatedetails.getActive_passive_breaches() != null && mnCompCertificatedetails.getActive_passive_breaches().equalsIgnoreCase("No") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase2-6' type="radio" id="section-1-3" value="NA" 
+                            <%=mnCompCertificatedetails.getActive_passive_breaches() != null && mnCompCertificatedetails.getActive_passive_breaches().equalsIgnoreCase("NA") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; NA</label>
+                        </div>
+                        <% } else {%>
+                              <div class="form-check form-check-inline">
+                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getActive_passive_breaches()%></label> 
+                              </div>
+                              <% } %>
+                        
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class=" form-check-inline form-group">
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Securities_held_2_6_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getSecurities_held_2_6_2() ==null ?"":mnCompCertificatedetails.getSecurities_held_2_6_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Securities_held_2_6" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getActive_passive_breaches_rem() == null ? "" :  mnCompCertificateScrutiny.getActive_passive_breaches_rem()%></textarea>
                         </div>
                     </div>
         		</div><!-- row one end -->
@@ -873,7 +917,7 @@
         			<div class="col-md-5">
                         <div class="form-check-inline form-group">
                             <p><strong>(b)</strong> Whether each decision of disinvestment is properly documented and record is maintained at individual transaction level.
-							(Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision).</p>
+							<br>(Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision).</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -914,7 +958,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>3.2</strong>  Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction.</p>
+                            <p><strong>3.2</strong>  Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction. Please provide details of exceptions, if any, to normal settlement procedure such as hand delivery, short delivery, trade reversal etc.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -954,14 +998,14 @@
         		
         		<div class="row">
         			<div class="col-md-12 form-group">
-        				<p><strong>4. Reports and Disclosures as per Schedule V of PFRDA (PF) Regulations</strong></p>
+        				<p><strong>4. NAV calculations and daily reconciliations </strong></p>
         			</div>
         		</div>
         		
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>4.1 (a)</strong> Whether all investment charges (Investment management fees, Custodian charges, SEBI charges, NPS Trust fees etc.) are loaded onto the NAV on a daily basis.</p>
+                            <p><strong>4.1 (a)</strong> Whether scheme-wise number of units are tallied with CRA records on daily basis.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -1001,7 +1045,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>(b)</strong> Whether PFM has adhered to instructions of PFRDA to get the NAV verified by the auditors on a daily basis.</p>
+                            <p><strong>(b)</strong>Whether the securities held in the schemes are tallied with the Custodian records on a daily basis.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -1041,7 +1085,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>(c)</strong> Whether the records of the audit of NAV have been maintained by the pension fund for future inspection. </p>
+                            <p><strong>(c)</strong> Whether all investment charges (Investment management fees, Custody and related charges, SEBI charges, NPS Trust fees etc.) are loaded onto the scheme-wise NAV on a daily basis. </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -1082,7 +1126,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>(d)</strong> Whether scheme-wise NAV (latest & historical) is uploaded daily on the PFM’s website within the prescribed time limit.</p>
+                            <p><strong>(d)</strong> Whether the Pension Fund has adhered to instructions of PFRDA to get the scheme-wise NAV verified by the auditors on a daily basis.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -1121,7 +1165,7 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>(e)</strong> Whether scheme-wise NAV is submitted daily to all the CRA’s within the prescribed time limit.</p>
+                            <p><strong>(e)</strong> Whether the records of the audit of scheme-wise NAV have been maintained by the pension fund for future inspection. </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -1160,41 +1204,47 @@
         		<!--4.1 over abc  -->
         		
         		<div class="row">
+        			<div class="col-md-12 form-group">
+        				<p><strong>5. Reports and Disclosure requirements</strong></p>
+        			</div>
+        		</div>
+        		
+        		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>4.2 (a)</strong> Whether monthly periodic reports as per schedule V are submitted to NPS Trust within 10 days from the end of the month.</p>
+                            <p><strong>5.1 (a)</strong> Whether scheme-wise NAV (latest & historical) is uploaded daily on the Pension Fund's website within the prescribed time limit.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
                     
                      <% if (isNonNPSUser) { %>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" name='purchase4-2a' type="radio" id="section-1-1" value="Yes" 
-                            <%=mnCompCertificatedetails.getMonthly_reports_submitted() != null && mnCompCertificatedetails.getMonthly_reports_submitted().equalsIgnoreCase("Yes") ? "checked" : "" %>>
+                            <input class="form-check-input" name='purchase5-1a' type="radio" id="section-1-1" value="Yes" 
+                            <%=mnCompCertificatedetails.getScheme_wise() != null && mnCompCertificatedetails.getScheme_wise().equalsIgnoreCase("Yes") ? "checked" : "" %>>
                             <label class="form-check-label">&nbsp; Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" name='purchase4-2a' type="radio" id="section-1-2" value="No" 
-                             <%=mnCompCertificatedetails.getMonthly_reports_submitted() != null && mnCompCertificatedetails.getMonthly_reports_submitted().equalsIgnoreCase("No") ? "checked" : "" %>>
+                            <input class="form-check-input" name='purchase5-1a' type="radio" id="section-1-2" value="No" 
+                             <%=mnCompCertificatedetails.getScheme_wise() != null && mnCompCertificatedetails.getScheme_wise().equalsIgnoreCase("No") ? "checked" : "" %>>
                             <label class="form-check-label">&nbsp; No</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" name='purchase4-2a' type="radio" id="section-1-3" value="NA" 
-                             <%=mnCompCertificatedetails.getMonthly_reports_submitted() != null && mnCompCertificatedetails.getMonthly_reports_submitted().equalsIgnoreCase("NA") ? "checked" : "" %>>
+                            <input class="form-check-input" name='purchase5-1a' type="radio" id="section-1-3" value="NA" 
+                             <%=mnCompCertificatedetails.getScheme_wise() != null && mnCompCertificatedetails.getScheme_wise().equalsIgnoreCase("NA") ? "checked" : "" %>>
                             <label class="form-check-label">&nbsp; NA</label>
                         </div>
                         <% } else {%>
                               <div class="form-check form-check-inline">
-                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getMonthly_reports_submitted()%></label> 
+                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getScheme_wise()%></label> 
                               </div>
                               <% } %>
                     </div>
 
                     <div class="col-md-4">
                         <div class="form-check-inline form-group">
-                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Reports_and_Disclosures_4_2a_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getReports_and_Disclosure_4_2a_2() ==null ?"":mnCompCertificatedetails.getReports_and_Disclosure_4_2a_2() %></textarea>
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1a_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getDisclosure_requirements_5_1a_2() ==null ?"":mnCompCertificatedetails.getDisclosure_requirements_5_1a_2() %></textarea>
                         
-                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Reports_and_Disclosures_4_2a" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getMonthly_reports_submitted_rem() == null ? "" :  mnCompCertificateScrutiny.getMonthly_reports_submitted_rem()%></textarea>
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Disclosure_requirement_5_1a" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getScheme_wise_rem() == null ? "" :  mnCompCertificateScrutiny.getScheme_wise_rem()%></textarea>
                         </div>
                     </div>
         		</div><!-- row one end -->
@@ -1202,41 +1252,205 @@
         		<div class="row">
         			<div class="col-md-5">
                         <div class="form-group">
-                            <p><strong>(b)</strong> Whether script wise details of portfolio of each scheme (excel file) is uploaded on the website, in the prescribed format, within 10 days from the end of the month.</p>
+                            <p><strong>(b)</strong> Whether scheme-wise NAV is submitted daily to all the CRA's within the prescribed time limit.
+                            <br> Instances of delays during the month in uploading NAV on Pension Fund's website and submission to CRA with the reasons provided in Annexure I.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-3">
                      <% if (isNonNPSUser) { %>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" name='purchase4-2b' type="radio" id="section-1-1" name="randd" value="Yes" 
-                             <%=mnCompCertificatedetails.getScrip_wise_details() != null && mnCompCertificatedetails.getScrip_wise_details().equalsIgnoreCase("Yes") ? "checked" : "" %>>
+                            <input class="form-check-input" name='purchase5-1b' type="radio" id="section-1-1" name="randd" value="Yes" 
+                             <%=mnCompCertificatedetails.getScheme_wise_daily() != null && mnCompCertificatedetails.getScheme_wise_daily().equalsIgnoreCase("Yes") ? "checked" : "" %>>
                             <label class="form-check-label">&nbsp; Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" name='purchase4-2b' type="radio" id="section-1-2" name="randd" value="No" 
-                             <%=mnCompCertificatedetails.getScrip_wise_details() != null && mnCompCertificatedetails.getScrip_wise_details().equalsIgnoreCase("No") ? "checked" : "" %>>
+                            <input class="form-check-input" name='purchase5-1b' type="radio" id="section-1-2" name="randd" value="No" 
+                             <%=mnCompCertificatedetails.getScheme_wise_daily() != null && mnCompCertificatedetails.getScheme_wise_daily().equalsIgnoreCase("No") ? "checked" : "" %>>
                             <label class="form-check-label">&nbsp; No</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" name='purchase4-2b' type="radio" id="section-1-3" name="randd" value="NA" 
-                             <%=mnCompCertificatedetails.getScrip_wise_details() != null && mnCompCertificatedetails.getScrip_wise_details().equalsIgnoreCase("NA") ? "checked" : "" %>>
+                            <input class="form-check-input" name='purchase5-1b' type="radio" id="section-1-3" name="randd" value="NA" 
+                             <%=mnCompCertificatedetails.getScheme_wise_daily() != null && mnCompCertificatedetails.getScheme_wise_daily().equalsIgnoreCase("NA") ? "checked" : "" %>>
                             <label class="form-check-label">&nbsp; NA</label>
                         </div>
                         <% } else {%>
                               <div class="form-check form-check-inline">
-                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getScrip_wise_details()%></label> 
+                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getScheme_wise_daily()%></label> 
                               </div>
                               <% } %>
                     </div>
 
                     <div class="col-md-4">
                         <div class="form-check-inline  form-group">
-                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Reports_and_Disclosures_4_2b_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getReports_and_Disclosure_4_2b_2() ==null ?"":mnCompCertificatedetails.getReports_and_Disclosure_4_2b_2() %></textarea>
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1b_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getDisclosure_requirements_5_1b_2() ==null ?"":mnCompCertificatedetails.getDisclosure_requirements_5_1b_2() %></textarea>
                         
-                        	<textarea class="form-control" name='Reports_and_Disclosures_4_2b' id="remarks_1_1" placeholder="Remarks if any" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getScrip_wise_details_rem() == null ? "" :  mnCompCertificateScrutiny.getScrip_wise_details_rem()%></textarea>
+                        	<textarea class="form-control" name='Disclosure_requirement_5_1b' id="remarks_1_1" placeholder="Remarks if any" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getScheme_wise_daily_rem() == null ? "" :  mnCompCertificateScrutiny.getScheme_wise_daily_rem()%></textarea>
                         </div>
                     </div>
         		</div><!-- row one end -->
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                            <p><strong>(c)</strong> Whether monthly periodic reports as per schedule V of PFRDA (PF) Regulations, 2015 and subsequent amendments are submitted to NPS Trust within 10 days from the end of the month.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                     <% if (isNonNPSUser) { %>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1c' type="radio" id="section-1-1" name="randd" value="Yes" 
+                             <%=mnCompCertificatedetails.getPeriodic_reports_monthly() != null && mnCompCertificatedetails.getPeriodic_reports_monthly().equalsIgnoreCase("Yes") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1c' type="radio" id="section-1-2" name="randd" value="No" 
+                             <%=mnCompCertificatedetails.getPeriodic_reports_monthly() != null && mnCompCertificatedetails.getPeriodic_reports_monthly().equalsIgnoreCase("No") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1c' type="radio" id="section-1-3" name="randd" value="NA" 
+                             <%=mnCompCertificatedetails.getPeriodic_reports_monthly() != null && mnCompCertificatedetails.getPeriodic_reports_monthly().equalsIgnoreCase("NA") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; NA</label>
+                        </div>
+                        <% } else {%>
+                              <div class="form-check form-check-inline">
+                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getPeriodic_reports_monthly()%></label> 
+                              </div>
+                              <% } %>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline  form-group">
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1c_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getDisclosure_requirements_5_1c_2() ==null ?"":mnCompCertificatedetails.getDisclosure_requirements_5_1c_2() %></textarea>
+                        
+                        	<textarea class="form-control" name='Disclosure_requirement_5_1c' id="remarks_1_1" placeholder="Remarks if any" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getPeriodic_reports_monthly_rem() == null ? "" :  mnCompCertificateScrutiny.getPeriodic_reports_monthly_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                            <p><strong>(d)</strong> Whether scrip wise details of portfolio of each scheme (excel file) is uploaded on the website, in the prescribed format, within 10 days from the end of the month.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                     <% if (isNonNPSUser) { %>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1d' type="radio" id="section-1-1" name="randd" value="Yes" 
+                             <%=mnCompCertificatedetails.getScrip_wise_details_portfolio() != null && mnCompCertificatedetails.getScrip_wise_details_portfolio().equalsIgnoreCase("Yes") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1d' type="radio" id="section-1-2" name="randd" value="No" 
+                             <%=mnCompCertificatedetails.getScrip_wise_details_portfolio() != null && mnCompCertificatedetails.getScrip_wise_details_portfolio().equalsIgnoreCase("No") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1d' type="radio" id="section-1-3" name="randd" value="NA" 
+                             <%=mnCompCertificatedetails.getScrip_wise_details_portfolio() != null && mnCompCertificatedetails.getScrip_wise_details_portfolio().equalsIgnoreCase("NA") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; NA</label>
+                        </div>
+                        <% } else {%>
+                              <div class="form-check form-check-inline">
+                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getScrip_wise_details_portfolio()%></label> 
+                              </div>
+                              <% } %>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline  form-group">
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1d_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getDisclosure_requirements_5_1d_2() ==null ?"":mnCompCertificatedetails.getDisclosure_requirements_5_1d_2() %></textarea>
+                        
+                        	<textarea class="form-control" name='Disclosure_requirement_5_1d' id="remarks_1_1" placeholder="Remarks if any" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getScrip_wise_details_pf_rem() == null ? "" :  mnCompCertificateScrutiny.getScrip_wise_details_pf_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                            <p><strong>(e)</strong> Whether the pension fund has published on its website a list of its group companies and those of its sponsor.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                     <% if (isNonNPSUser) { %>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1e' type="radio" id="section-1-1" name="randd" value="Yes" 
+                             <%=mnCompCertificatedetails.getPension_fund_published() != null && mnCompCertificatedetails.getPension_fund_published().equalsIgnoreCase("Yes") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1e' type="radio" id="section-1-2" name="randd" value="No" 
+                             <%=mnCompCertificatedetails.getPension_fund_published() != null && mnCompCertificatedetails.getPension_fund_published().equalsIgnoreCase("No") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1e' type="radio" id="section-1-3" name="randd" value="NA" 
+                             <%=mnCompCertificatedetails.getPension_fund_published() != null && mnCompCertificatedetails.getPension_fund_published().equalsIgnoreCase("NA") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; NA</label>
+                        </div>
+                        <% } else {%>
+                              <div class="form-check form-check-inline">
+                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getPension_fund_published()%></label> 
+                              </div>
+                              <% } %>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline  form-group">
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1e_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getDisclosure_requirements_5_1e_2() ==null ?"":mnCompCertificatedetails.getDisclosure_requirements_5_1e_2() %></textarea>
+                        
+                        	<textarea class="form-control" name='Disclosure_requirement_5_1e' id="remarks_1_1" placeholder="Remarks if any" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getPension_fund_published_rem() == null ? "" :  mnCompCertificateScrutiny.getPension_fund_published_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                            <p><strong>(f)</strong> Whether the pension fund has disclosed the scheme returns in the manner and in the format as available in public domain hosted by National Pension System Trust
+                             </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                     <% if (isNonNPSUser) { %>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1f' type="radio" id="section-1-1" name="randd" value="Yes" 
+                             <%=mnCompCertificatedetails.getPension_fund_disclosed() != null && mnCompCertificatedetails.getPension_fund_disclosed().equalsIgnoreCase("Yes") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1f' type="radio" id="section-1-2" name="randd" value="No" 
+                             <%=mnCompCertificatedetails.getPension_fund_disclosed() != null && mnCompCertificatedetails.getPension_fund_disclosed().equalsIgnoreCase("No") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; No</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" name='purchase5-1f' type="radio" id="section-1-3" name="randd" value="NA" 
+                             <%=mnCompCertificatedetails.getPension_fund_disclosed() != null && mnCompCertificatedetails.getPension_fund_disclosed().equalsIgnoreCase("NA") ? "checked" : "" %>>
+                            <label class="form-check-label">&nbsp; NA</label>
+                        </div>
+                        <% } else {%>
+                              <div class="form-check form-check-inline">
+                                 <label class="form-check-label" >&nbsp; <%= mnCompCertificatedetails.getPension_fund_disclosed()%></label> 
+                              </div>
+                              <% } %>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline  form-group">
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1f_2"  <%=isNonNPSUser ? "": "disabled" %> ><%=mnCompCertificatedetails.getDisclosure_requirements_5_1f_2() ==null ?"":mnCompCertificatedetails.getDisclosure_requirements_5_1f_2() %></textarea>
+                        
+                        	<textarea class="form-control" name='Disclosure_requirement_5_1f' id="remarks_1_1" placeholder="Remarks if any" <%=isNonNPSUser ? "disabled": "" %>><%=mnCompCertificateScrutiny.getPension_fund_disclosed_rem() == null ? "" :  mnCompCertificateScrutiny.getPension_fund_disclosed_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		
+        		
         		
         		<!-- document row -->
         		
@@ -1543,7 +1757,7 @@ button[disabled], button[disabled]:hover, input[type=button]:disabled {
 </style>
 
 <script type="text/javascript">
-
+<%--
 var SDWebServerUrl = "<%=GetterUtil.getString(PropsUtil.get("com.nps.dsc.api.domain"), "https://dsc.npstrust.net")%>";
 var SDWebServerAuthTokenByUserPortalUrl = "/o/dsc/getAuthToken";
 var sdWebServerUrl = "<%=GetterUtil.getString(PropsUtil.get("com.nps.dsc.api.domain"), "https://dsc.npstrust.net")%>";
@@ -1603,7 +1817,7 @@ $(function(){
 			//$("#submit").click();
 		})
 	})
-})
+}) --%>
 $( ".x-mark" ).click(function() {
 		$("#success-modal").addClass("hide");
 		

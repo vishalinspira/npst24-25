@@ -106,6 +106,7 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String securitiesHeld232 = ParamUtil.getString(resourceRequest, "Securities_held_2_3_2");
 		String securitiesHeld242 = ParamUtil.getString(resourceRequest, "Securities_held_2_4_2");
 		String securitiesHeld252 = ParamUtil.getString(resourceRequest, "Securities_held_2_5_2");
+		String securitiesHeld262 = ParamUtil.getString(resourceRequest, "Securities_held_2_6_2");
 		String saleOfSecurities31a2 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1a_2");
 		String saleOfSecurities31b2 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1b_2");
 		String saleOfecurities322 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_2_2");
@@ -117,6 +118,13 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String reportsAndDisclosures42a2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2a_2");
 		String reportsAndDisclosures42b2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2b_2");
 		
+		String disclosureRequirement51a2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1a_2");
+		String disclosureRequirement51b2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1b_2");
+		String disclosureRequirement51c2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1c_2");
+		String disclosureRequirement51d2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1d_2");
+		String disclosureRequirement51e2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1e_2");
+		String disclosureRequirement51f2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1f_2");
+		
 		Long reportUploadLogId = ParamUtil.getLong(resourceRequest, "reportUploadLogId");
 		
 		String securities1 = ParamUtil.getString(resourceRequest, "securities1");
@@ -126,6 +134,7 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String securities3 = ParamUtil.getString(resourceRequest, "securities3");
 		String securities4 = ParamUtil.getString(resourceRequest, "securities4");
 		String securities5 = ParamUtil.getString(resourceRequest, "securities5");
+		String securities6 = ParamUtil.getString(resourceRequest, "securities6");
 		
 		String sale1_1 = ParamUtil.getString(resourceRequest, "sale1_1");
 		String sale1_2 = ParamUtil.getString(resourceRequest, "sale1_2");
@@ -138,6 +147,13 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String reports1_5 = ParamUtil.getString(resourceRequest, "reports1_5");
 		String reports2_1 = ParamUtil.getString(resourceRequest, "reports2_1");
 		String reports2_2 = ParamUtil.getString(resourceRequest, "reports2_2");
+		
+		String disclosure_1_1 = ParamUtil.getString(resourceRequest, "disclosure_1_1");
+		String disclosure_1_2 = ParamUtil.getString(resourceRequest, "disclosure_1_2");
+		String disclosure_1_3 = ParamUtil.getString(resourceRequest, "disclosure_1_3");
+		String disclosure_1_4 = ParamUtil.getString(resourceRequest, "disclosure_1_4");
+		String disclosure_1_5 = ParamUtil.getString(resourceRequest, "disclosure_1_5");
+		String disclosure_1_6 = ParamUtil.getString(resourceRequest, "disclosure_1_6");
 		
 		String date_2 = ParamUtil.getString(resourceRequest, "date_2");
 		String companies = ParamUtil.getString(resourceRequest, "companies");
@@ -166,6 +182,8 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String securitiesHeld232_NPST = ParamUtil.getString(resourceRequest, "Securities_held_2_3");
 		String securitiesHeld242_NPST = ParamUtil.getString(resourceRequest, "Securities_held_2_4");
 		String securitiesHeld252_NPST = ParamUtil.getString(resourceRequest, "Securities_held_2_5");
+		String securitiesHeld262_NPST = ParamUtil.getString(resourceRequest, "Securities_held_2_6");
+	
 		String saleOfSecurities31a2_NPST = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1a");
 		String saleOfSecurities31b2_NPST = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1b");
 		String saleOfecurities322_NPST = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_2");
@@ -176,6 +194,16 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String reportsAndDisclosures41e2_NPST = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_1e");
 		String reportsAndDisclosures42a2_NPST = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2a");
 		String reportsAndDisclosures42b2_NPST = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2b");
+		
+		String disclosureRequirement51a2_NPST = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1a");
+		String disclosureRequirement51b2_NPST = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1b");
+		String disclosureRequirement51c2_NPST = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1c");
+		String disclosureRequirement51d2_NPST = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1d");
+		String disclosureRequirement51e2_NPST = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1e");
+		String disclosureRequirement51f2_NPST = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1f");
+		
+		
+		
 		MnCompCertificate certificate=null;
 		try {
 		 certificate = mnCompCertificateLocalService.getByReportUploadlogIdAndIssubmitted(reportUploadLogId, true).get(0);
@@ -225,15 +253,19 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 					purchase2_1, purchase2_2, purchase2_3, purchase2_4, purchase2_5, purchase3, purchase4,reportUploadLogId,purchaseOfSecuritiesRemarks112,
 					purchaseOfSecuritiesRemarks12a2,purchaseOfSecuritiesRemarks12b2,purchaseOfSecuritiesRemarks12c2,purchaseOfSecuritiesRemarks12d2,purchaseOfSecuritiesRemarks12e2,
 					purchaseOfSecuritiesRemarks132,purchaseOfSecuritiesRemarks142,securitiesHeld212,securitiesHeld22a2,securitiesHeld22b2,securitiesHeld22c2,securitiesHeld232,
-					securitiesHeld242,securitiesHeld252,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
-					reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,securities1, 
-					securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,sale1_1, sale1_2, sale2,reports1_1, 
-					reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2,date_2, companies, employeeName, roles, date_3, place, purchaseOfSecuritiesRemarks112_NPST,
+					securitiesHeld242,securitiesHeld252,securitiesHeld262,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
+					reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,disclosureRequirement51a2,
+					disclosureRequirement51b2,disclosureRequirement51c2,disclosureRequirement51d2,disclosureRequirement51e2,disclosureRequirement51f2,securities1, 
+					securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,securities6,sale1_1, sale1_2, sale2,reports1_1, 
+					reports1_2, reports1_3, reports1_4, reports1_5,reports2_1, reports2_2, disclosure_1_1,disclosure_1_2,disclosure_1_3,disclosure_1_4,disclosure_1_5,disclosure_1_6,
+					date_2, companies, employeeName, roles, date_3, place, purchaseOfSecuritiesRemarks112_NPST,
 					purchaseOfSecuritiesRemarks12a2_NPST, purchaseOfSecuritiesRemarks12b2_NPST, purchaseOfSecuritiesRemarks12c2_NPST, purchaseOfSecuritiesRemarks12d2_NPST,
 					purchaseOfSecuritiesRemarks12e2_NPST, purchaseOfSecuritiesRemarks132_NPST, purchaseOfSecuritiesRemarks142_NPST, securitiesHeld212_NPST, securitiesHeld22a2_NPST,
-					securitiesHeld22b2_NPST, securitiesHeld22c2_NPST, securitiesHeld232_NPST, securitiesHeld242_NPST, securitiesHeld252_NPST, saleOfSecurities31a2_NPST, 
+					securitiesHeld22b2_NPST, securitiesHeld22c2_NPST, securitiesHeld232_NPST, securitiesHeld242_NPST, securitiesHeld252_NPST,securitiesHeld262_NPST, saleOfSecurities31a2_NPST, 
 					saleOfSecurities31b2_NPST, saleOfecurities322_NPST, reports_andDisclosures41a2_NPST, reportsAndDisclosures41b2_NPST, reportsAndDisclosures41c2_NPST, 
-					reportsAndDisclosures41d2_NPST, reportsAndDisclosures41e2_NPST, reportsAndDisclosures42a2_NPST, reportsAndDisclosures42b2_NPST);
+					reportsAndDisclosures41d2_NPST, reportsAndDisclosures41e2_NPST, reportsAndDisclosures42a2_NPST, reportsAndDisclosures42b2_NPST,
+					disclosureRequirement51a2_NPST,disclosureRequirement51b2_NPST,disclosureRequirement51c2_NPST,disclosureRequirement51d2_NPST,disclosureRequirement51e2_NPST,
+					disclosureRequirement51f2_NPST);
 		long pdf_file_fileEntryId=uploadFile(file, themeDisplay, resourceRequest);
 		//long pdf_file_fileEntryId=0;
 		
@@ -249,10 +281,12 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 					purchase2_1, purchase2_2, purchase2_3, purchase2_4, purchase2_5, purchase3, purchase4,reportUploadLogId,purchaseOfSecuritiesRemarks112,
 					purchaseOfSecuritiesRemarks12a2,purchaseOfSecuritiesRemarks12b2,purchaseOfSecuritiesRemarks12c2,purchaseOfSecuritiesRemarks12d2,purchaseOfSecuritiesRemarks12e2,
 					purchaseOfSecuritiesRemarks132,purchaseOfSecuritiesRemarks142,securitiesHeld212,securitiesHeld22a2,securitiesHeld22b2,securitiesHeld22c2,securitiesHeld232,
-					securitiesHeld242,securitiesHeld252,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
-					reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,securities1, 
-					securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,sale1_1, sale1_2, sale2,reports1_1, 
-					reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2,date_2, companies, employeeName, roles, date_3, place,annexure_a_i, 0, 
+					securitiesHeld242,securitiesHeld252,securitiesHeld262,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
+					reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,disclosureRequirement51a2,
+					disclosureRequirement51b2,disclosureRequirement51c2,disclosureRequirement51d2,disclosureRequirement51e2,disclosureRequirement51f2,securities1, 
+					securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,securities6,sale1_1, sale1_2, sale2,reports1_1, 
+					reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2,disclosure_1_1,disclosure_1_2,disclosure_1_3,disclosure_1_4,disclosure_1_5,disclosure_1_6,
+					date_2, companies, employeeName, roles, date_3, place,annexure_a_i, 0, 
 					0, 0, 0, 0, 0, 0, 0, new Date(), themeDisplay.getUserId(),pdf_file_fileEntryId,0);
 		
 			mnComp.setIsSubmitted(true);
@@ -340,6 +374,7 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String securitiesHeld232 = ParamUtil.getString(resourceRequest, "Securities_held_2_3_2");
 		String securitiesHeld242 = ParamUtil.getString(resourceRequest, "Securities_held_2_4_2");
 		String securitiesHeld252 = ParamUtil.getString(resourceRequest, "Securities_held_2_5_2");
+		String securitiesHeld262 = ParamUtil.getString(resourceRequest, "Securities_held_2_6_2");
 		String saleOfSecurities31a2 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1a_2");
 		String saleOfSecurities31b2 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_1b_2");
 		String saleOfecurities322 = ParamUtil.getString(resourceRequest, "Sale_of_securities_3_2_2");
@@ -350,6 +385,12 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String reportsAndDisclosures41e2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_1e_2");
 		String reportsAndDisclosures42a2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2a_2");
 		String reportsAndDisclosures42b2 = ParamUtil.getString(resourceRequest, "Reports_and_Disclosures_4_2b_2");
+		String disclosureRequirement51a2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1a_2");
+		String disclosureRequirement51b2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1b_2");
+		String disclosureRequirement51c2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1c_2");
+		String disclosureRequirement51d2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1d_2");
+		String disclosureRequirement51e2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1e_2");
+		String disclosureRequirement51f2 = ParamUtil.getString(resourceRequest, "Disclosure_requirement_5_1f_2");
 		
 		
 		Long reportUploadLogId = ParamUtil.getLong(resourceRequest, "reportUploadLogId");
@@ -363,8 +404,9 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 				purchase2_1, purchase2_2, purchase2_3, purchase2_4, purchase2_5, purchase3, purchase4,reportUploadLogId,purchaseOfSecuritiesRemarks112,
 				purchaseOfSecuritiesRemarks12a2,purchaseOfSecuritiesRemarks12b2,purchaseOfSecuritiesRemarks12c2,purchaseOfSecuritiesRemarks12d2,purchaseOfSecuritiesRemarks12e2,
 				purchaseOfSecuritiesRemarks132,purchaseOfSecuritiesRemarks142,securitiesHeld212,securitiesHeld22a2,securitiesHeld22b2,securitiesHeld22c2,securitiesHeld232,
-				securitiesHeld242,securitiesHeld252,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
-				reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2);
+				securitiesHeld242,securitiesHeld252,securitiesHeld262,saleOfSecurities31a2,saleOfSecurities31b2,saleOfecurities322,reports_andDisclosures41a2,reportsAndDisclosures41b2,
+				reportsAndDisclosures41c2,reportsAndDisclosures41d2,reportsAndDisclosures41e2,reportsAndDisclosures42a2,reportsAndDisclosures42b2,disclosureRequirement51a2,
+				disclosureRequirement51b2,disclosureRequirement51c2,disclosureRequirement51d2,disclosureRequirement51e2,disclosureRequirement51f2);
 		
 		
 		return firstDetails;
@@ -380,12 +422,13 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String securities3 = ParamUtil.getString(resourceRequest, "securities3");
 		String securities4 = ParamUtil.getString(resourceRequest, "securities4");
 		String securities5 = ParamUtil.getString(resourceRequest, "securities5");
+		String securities6 = ParamUtil.getString(resourceRequest, "securities6");
 		
 		_log.info(securities1 + " " + securities2_1 + " " + securities2_2 + " " + securities2_3);
-		_log.info(securities3 + " " + securities4 + " " + securities5);
+		_log.info(securities3 + " " + securities4 + " " + securities5+" "+securities6);
 		
 		MnCompCertificate section2 = mnCompCertificateLocalService.addSection2(sectionTwoDetails, securities1, 
-				securities2_1, securities2_2, securities2_3, securities3, securities4, securities5);
+				securities2_1, securities2_2, securities2_3, securities3, securities4, securities5,securities6);
 		
 		return section2;
 			
@@ -416,11 +459,23 @@ DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 		String reports2_1 = ParamUtil.getString(resourceRequest, "reports2_1");
 		String reports2_2 = ParamUtil.getString(resourceRequest, "reports2_2");
 		
+		//Adding Section 5 here
+		
+		String disclosure_1_1 = ParamUtil.getString(resourceRequest, "disclosure_1_1");
+		String disclosure_1_2 = ParamUtil.getString(resourceRequest, "disclosure_1_2");
+		String disclosure_1_3 = ParamUtil.getString(resourceRequest, "disclosure_1_3");
+		String disclosure_1_4 = ParamUtil.getString(resourceRequest, "disclosure_1_4");
+		String disclosure_1_5 = ParamUtil.getString(resourceRequest, "disclosure_1_5");
+		String disclosure_1_6 = ParamUtil.getString(resourceRequest, "disclosure_1_6");
+		
 		_log.info(reports1_1 + " " + reports1_2 + " " + reports1_3 + " " + reports1_4);
 		_log.info(reports1_5 + " " + reports2_1 + " " + reports2_2);
+		_log.info("Section 5 ");
+		_log.info(disclosure_1_1 + " " + disclosure_1_2 + " " + disclosure_1_3 + " " + disclosure_1_4 +" " + disclosure_1_5 + " " + disclosure_1_6);
 		
 		MnCompCertificate section4 = mnCompCertificateLocalService.addSection4(sectionFourDetails, reports1_1, 
-				reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2);
+				reports1_2, reports1_3, reports1_4, reports1_5, reports2_1, reports2_2,disclosure_1_1,disclosure_1_2,
+				disclosure_1_3,disclosure_1_4,disclosure_1_5,disclosure_1_6);
 		
 		return section4;
 			

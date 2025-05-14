@@ -142,11 +142,12 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                      <div class="col-md-9">
 <p class="font-weight-bold mb-0">To,</p>
+<p class=" font-weight-bold mb-0">The Chief Executive Officer</p>
 <p class=" font-weight-bold mb-0">National Pension System Trust,</p>
-<p class=" font-weight-bold mb-0">Tower B, B-302, Third Floor,</p>
-<p class="font-weight-bold mb-0">World Trade Center,</p>
-<p class="font-weight-bold mb-0">Nauroji Nagar,</p>
-<p class="font-weight-bold mb-0">New Delhi-110029</p>
+<p class=" font-weight-bold mb-0">B-302, Third Floor,</p>
+<p class="font-weight-bold mb-0">Tower B, World Trade Center,</p>
+<p class="font-weight-bold mb-0">Nauroji Nagar, New Delhi-110029</p>
+
                      </div>
                   </div>
                </div>
@@ -189,7 +190,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   <div class="col-md-5">
                      <p>Whether purchase of securities adhere to the Investment guidelines issued by PFRDA. 
                         (prescribed securities/ percentage/ limit/ prudential & exposure norms)
-                        Details of deviations provided in annexure A (i).
+                        Details of deviations provided in annexure A.
                      </p>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -312,7 +313,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <p>
-                        (d) Whether investments for non-dematerialized securities are supported by physical certificates
+                        (d) Whether investments for non-dematerialized securities are supported by certificates/ statements.
                      </p>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -375,6 +376,8 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   <div class="col-md-5">
                      <p>
                         Whether delivery of securities is taken immediately on purchase as per settlement cycle/ terms for each transaction.
+                        <br>
+                        Details of exceptions to normal settlement procedure such as hand delivery, short delivery, trade reversal etc. provided in Annexure B.
                      </p>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -405,9 +408,9 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <p>
-                        Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period? (As per PFRDA circular no. PFRDA/2021/32/REG-PF/4 dated 27.07.2021, such investments to be reported to NPS Trust within 30 days of making such investments)
+                        Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period?
                      </p>
-                     <p>Details of Investments provided in Annexure B.</p>
+                     <p>Details of Investments provided in Annexure C.</p>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
@@ -442,7 +445,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                         Whether scheme investments adhere to the Investment guidelines issued by PFRDA. 
                         (prescribed securities/ percentage/ limit/ prudential & exposure norms)
                      </p>
-                     <p>Details of deviations provided in annexure A (ii).</p>
+                     <p>Details of deviations provided in annexure A.</p>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
@@ -472,7 +475,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <p>
-                        a) Whether stop loss trigger has occurred for any security during the month as per Investment policy of the PFM. 
+                        a) Whether stop loss/ any other review trigger has occurred for any security (equity/debt/alternate) during the month as per Investment policy of the Pension Fund. 
                      </p>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -503,7 +506,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <p>
-                        b) Whether decision in such scenario is approved by the committee/competent authority as per Approval delegation matrix 
+                        b) Whether decision in such a scenario is approved by the committee/competent authority as per Approval delegation matrix 
                      </p>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -535,9 +538,9 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   <div class="col-md-5">
                      <p>
                         c) Whether each decision along with rationale is properly documented and record is maintained at individual scrip level.
-                        (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
+                       <br> (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
                      </p>
-                     <p>Details of stop loss occurred during the month and its decision provided in Annexure C.</p>
+                     <p>Details of stop loss/review triggered during the month and its decision provided in Annexure D.</p>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
@@ -567,9 +570,9 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <p>
-                        Whether inter-scheme transfer of securities complies with point 14 of the Investment Guideline circular number PFRDA/2021/29/REG-PF/3 dated 20.07.2021.
+                        Whether inter-scheme transfer of securities complies with Investment Guidelines issued by PFRDA. 
                      </p>
-                     <p>Details of inter scheme transfer provided in Annexure D.</p>
+                     <p>Details of inter scheme transfer provided in Annexure E.</p>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
@@ -599,9 +602,9 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <p>
-                        Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing.
+                        Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing. If yes, whether the decision to hold such stocks has been approved by the investment committee and informed to the Board of Pension Fund
                      </p>
-                     <p>Details provided in Annexure E</p>
+                     <p>Details provided in Annexure F</p>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
@@ -633,7 +636,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                      <p>
                         Whether investment in any equity shares through IPO/FPO/OFS does not fulfil the market capitalization condition prescribed under investment guidelines post listing.
                      </p>
-                     <p>Details provided in Annexure F.</p>
+                     <p>Details provided in Annexure G.</p>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
@@ -657,6 +660,39 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                </div>
                <br>
+                <div class="row">
+                  <div class="col-md-1">
+                     <p>2.6</p>
+                  </div>
+                  <div class="col-md-5">
+                     <p>
+                       Whether the Pension Fund has segregated the deviations/breaches into active and passive as per PFRDA Circular No. PFRDA/2022/04/SUP-PF/01 dated 04.02.2022 and regularized the active breaches/deviations immediately within 3 business days from the date of active deviation happened.
+                     </p>
+                     <p>Details provided in Annexure H.</p>
+                  </div>
+                  <div class="col-md-2 pr-0">
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="securities6" id="securities_16" name='<portlet:namespace/>securities6' value="Yes" <%=(mnCompCertificate.getActive_passive_breaches()).equals("Yes")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; Yes</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="securities6" id="securities_17" name='<portlet:namespace/>securities6' value="No" <%=(mnCompCertificate.getActive_passive_breaches()).equals("No")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; No</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="securities6" id="securities_18" name='<portlet:namespace/>securities6' value="NA" <%=(mnCompCertificate.getActive_passive_breaches()).equals("NA")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; NA</label>
+                     </div>
+                  </div>
+                     <div class="col-md-4">
+                  	  <div class="form-check form-check-inline">
+                  	  <textarea class="form-control mr-3"  placeholder="Remarks if any" name='<portlet:namespace/>Securities_held_2_6_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getSecurities_held_2_6_2():"" %></textarea>
+                      <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Securities_held_2_6"><%=mnCompCertificateScrutiny.getActive_passive_breaches_rem() == null ? "" :  mnCompCertificateScrutiny.getActive_passive_breaches_rem()%></textarea>
+                     </div>
+                  </div>
+               </div>
+               <br>
+               
                <h5>3 . Sale of securities</h5>
                <hr>
                <div class="row">
@@ -697,7 +733,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   <div class="col-md-5">
                      <p>
                         (b) Whether each decision of disinvestment is properly documented and record is maintained at individual transaction level.
-                        (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
+                        <br>(Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
                      </p>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -728,7 +764,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <p>
-                        Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction.
+                        Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction. Please provide details of exceptions, if any, to normal settlement procedure such as hand delivery, short delivery, trade reversal etc.
                      </p>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -753,7 +789,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                </div>
                <br>
-               <h5>4 . Reports and Disclosures as per Schedule V of PFRDA (PF) Regulations</h5>
+               <h5>4. NAV calculations and daily reconciliations </h5>
                <hr>
                <div class="row">
                   <div class="col-md-1">
@@ -763,7 +799,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <div class="form-group">
-                        <p>(a) Whether all investment charges (Investment management fees, Custodian charges, SEBI charges, NPS Trust fees etc.) are loaded onto the NAV on a daily basis
+                        <p>(a) Whether scheme-wise number of units are tallied with CRA records on daily basis.
                         </p>
                      </div>
                   </div>
@@ -797,7 +833,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <div class="form-group">
-                        <p>(b) Whether PFM has adhered to instructions of PFRDA to get the NAV verified by the auditors on a daily basis.
+                        <p>(b) Whether the securities held in the schemes are tallied with the Custodian records on a daily basis.
                         </p>
                      </div>
                   </div>
@@ -831,7 +867,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <div class="form-group">
-                        <p>(c) Whether the records of the audit of NAV have been maintained by the pension fund for future inspection.
+                        <p>(c) Whether all investment charges (Investment management fees, Custody and related charges, SEBI charges, NPS Trust fees etc.) are loaded onto the scheme-wise NAV on a daily basis.
                         </p>
                      </div>
                   </div>
@@ -865,7 +901,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <div class="form-group">
-                        <p>(d) Whether scheme-wise NAV (latest & historical) is uploaded daily on the PFM's website within the prescribed time limit.
+                        <p>(d) Whether the Pension Fund has adhered to instructions of PFRDA to get the scheme-wise NAV verified by the auditors on a daily basis.
                         </p>
                      </div>
                   </div>
@@ -899,9 +935,9 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <div class="form-group">
-                        <p>(e) Whether scheme-wise NAV is submitted daily to all the CRA's within the prescribed time limit.
+                        <p>(e) Whether the records of the audit of scheme-wise NAV have been maintained by the pension fund for future inspection. 
                         </p>
-                        <p>Instances of delays during the month in uploading NAV on PFM's website and submission to CRA with the reasons provided in Annexure G.</p>
+                        
                      </div>
                   </div>
                   <div class="col-md-2 pr-0">
@@ -926,36 +962,40 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                </div>
                <br>
+               
+               <h5>5. Reports and Disclosure requirements </h5>
+               <hr>
+               
                <div class="row">
                   <div class="col-md-1">
                      <div class="form-group">
-                        <p>4.2</p>
+                        <p>5.1</p>
                      </div>
                   </div>
                   <div class="col-md-5">
                      <div class="form-group">
-                        <p>(a) Whether monthly periodic reports as per schedule V are submitted to NPS Trust within 10 days from the end of the month.
+                        <p>(a) Whether scheme-wise NAV (latest & historical) is uploaded daily on the Pension Fund's website within the prescribed time limit.
                         </p>
                      </div>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
-                        <input type="radio" class="reports2" id="reports_16" name='<portlet:namespace/>reports2_1' value="Yes" <%=(mnCompCertificate.getMonthly_reports_submitted()).equals("Yes")?"checked":"" %>>
+                        <input type="radio" class="disclosure1" id="disclosure_1" name='<portlet:namespace/>disclosure_1_1' value="Yes" <%=(mnCompCertificate.getScheme_wise()).equals("Yes")?"checked":"" %>>
                         <label class="form-check-label">&nbsp; Yes</label>
                      </div>
                      <div class="form-check form-check-inline">
-                        <input type="radio" class="reports2" id="reports_17" name='<portlet:namespace/>reports2_1' value="No" <%=(mnCompCertificate.getMonthly_reports_submitted()).equals("No")?"checked":"" %>>
+                        <input type="radio" class="disclosure1" id="disclosure_2" name='<portlet:namespace/>disclosure_1_1' value="No" <%=(mnCompCertificate.getScheme_wise()).equals("No")?"checked":"" %>>
                         <label class="form-check-label">&nbsp; No</label>
                      </div>
                      <div class="form-check form-check-inline">
-                        <input type="radio" class="reports2" id="reports_18" name='<portlet:namespace/>reports2_1' value="NA" <%=(mnCompCertificate.getMonthly_reports_submitted()).equals("NA")?"checked":"" %>>
+                        <input type="radio" class="disclosure1" id="disclosure_3" name='<portlet:namespace/>disclosure_1_1' value="NA" <%=(mnCompCertificate.getScheme_wise()).equals("NA")?"checked":"" %>>
                         <label class="form-check-label">&nbsp; NA</label>
                      </div>
                   </div>
                     <div class="col-md-4">
                   	  <div class="form-check form-check-inline">
-                  	   <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Reports_and_Disclosures_4_2a_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getReports_and_Disclosure_4_2a_2():"" %></textarea>
-                       <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Reports_and_Disclosures_4_2a"><%=mnCompCertificateScrutiny.getMonthly_reports_submitted_rem() == null ? "" :  mnCompCertificateScrutiny.getMonthly_reports_submitted_rem()%></textarea>
+                  	   <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Disclosure_requirement_5_1a_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getDisclosure_requirements_5_1a_2():"" %></textarea>
+                       <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Disclosure_requirement_5_1a"><%=mnCompCertificateScrutiny.getScheme_wise_rem() == null ? "" :  mnCompCertificateScrutiny.getScheme_wise_rem()%></textarea>
                      </div>
                   </div>
                </div>
@@ -968,32 +1008,179 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                   </div>
                   <div class="col-md-5">
                      <div class="form-group">
-                        <p>(b) Whether scrip wise details of portfolio of each scheme (excel file) is uploaded on the website, in the prescribed format, within 10 days from the end of the month.
+                        <p>(b)Whether scheme-wise NAV is submitted daily to all the CRA's within the prescribed time limit.
+                        <br>Instances of delays during the month in uploading NAV on Pension Fund's website and submission to CRA with the reasons provided in Annexure I.
                         </p>
                      </div>
                   </div>
                   <div class="col-md-2 pr-0">
                      <div class="form-check form-check-inline">
-                        <input type="radio" class="reports2" id="reports_19" name='<portlet:namespace/>reports2_2' value="Yes" <%=(mnCompCertificate.getScrip_wise_details()).equals("Yes")?"checked":"" %>>
+                        <input type="radio" class="disclosure1" id="disclosure_4" name='<portlet:namespace/>disclosure_1_2' value="Yes" <%=(mnCompCertificate.getScheme_wise_daily()).equals("Yes")?"checked":"" %>>
                         <label class="form-check-label">&nbsp; Yes</label>
                      </div>
                      <div class="form-check form-check-inline">
-                        <input type="radio" class="reports2" id="reports_20" name='<portlet:namespace/>reports2_2' value="No" <%=(mnCompCertificate.getScrip_wise_details()).equals("No")?"checked":"" %>>
+                        <input type="radio" class="disclosure1" id="disclosure_5" name='<portlet:namespace/>disclosure_1_2' value="No" <%=(mnCompCertificate.getScheme_wise_daily()).equals("No")?"checked":"" %>>
                         <label class="form-check-label">&nbsp; No</label>
                      </div>
                      <div class="form-check form-check-inline">
-                        <input type="radio" class="reports2" id="reports_21" name='<portlet:namespace/>reports2_2' value="NA" <%=(mnCompCertificate.getScrip_wise_details()).equals("NA")?"checked":"" %>>
+                        <input type="radio" class="disclosure1" id="disclosure_6" name='<portlet:namespace/>disclosure_1_2' value="NA" <%=(mnCompCertificate.getScheme_wise_daily()).equals("NA")?"checked":"" %>>
                         <label class="form-check-label">&nbsp; NA</label>
                      </div>
                   </div>
                     <div class="col-md-4">
                   	  <div class="form-check form-check-inline">
-                  	  <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Reports_and_Disclosures_4_2b_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getReports_and_Disclosure_4_2b_2():"" %></textarea>
-                      <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Reports_and_Disclosures_4_2b"><%=mnCompCertificateScrutiny.getScrip_wise_details_rem() == null ? "" :  mnCompCertificateScrutiny.getScrip_wise_details_rem()%></textarea>
+                  	  <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Disclosure_requirement_5_1b_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getDisclosure_requirements_5_1b_2():"" %></textarea>
+                      <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Disclosure_requirement_5_1b"><%=mnCompCertificateScrutiny.getScheme_wise_daily_rem() == null ? "" :  mnCompCertificateScrutiny.getScheme_wise_daily_rem()%></textarea>
                      </div>
                   </div>
                </div>
                <br>
+               
+                <div class="row">
+                  <div class="col-md-1">
+                     <div class="form-group">
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="form-group">
+                        <p>(c) Whether monthly periodic reports as per schedule V of PFRDA (PF) Regulations, 2015 and subsequent amendments are submitted to NPS Trust within 10 days from the end of the month.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col-md-2 pr-0">
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_7" name='<portlet:namespace/>disclosure_1_3' value="Yes" <%=(mnCompCertificate.getPeriodic_reports_monthly()).equals("Yes")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; Yes</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_8" name='<portlet:namespace/>disclosure_1_3' value="No" <%=(mnCompCertificate.getPeriodic_reports_monthly()).equals("No")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; No</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_9" name='<portlet:namespace/>disclosure_1_3' value="NA" <%=(mnCompCertificate.getPeriodic_reports_monthly()).equals("NA")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; NA</label>
+                     </div>
+                  </div>
+                    <div class="col-md-4">
+                  	  <div class="form-check form-check-inline">
+                  	  <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Disclosure_requirement_5_1c_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getDisclosure_requirements_5_1c_2():"" %></textarea>
+                      <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Disclosure_requirement_5_1c"><%=mnCompCertificateScrutiny.getPeriodic_reports_monthly_rem() == null ? "" :  mnCompCertificateScrutiny.getPeriodic_reports_monthly_rem()%></textarea>
+                     </div>
+                  </div>
+               </div>
+               <br>
+               
+                 <div class="row">
+                  <div class="col-md-1">
+                     <div class="form-group">
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="form-group">
+                        <p>(d) Whether scrip wise details of portfolio of each scheme (excel file) is uploaded on the website, in the prescribed format, within 10 days from the end of the month.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col-md-2 pr-0">
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_10" name='<portlet:namespace/>disclosure_1_4' value="Yes" <%=(mnCompCertificate.getScrip_wise_details_portfolio()).equals("Yes")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; Yes</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_11" name='<portlet:namespace/>disclosure_1_4' value="No" <%=(mnCompCertificate.getScrip_wise_details_portfolio()).equals("No")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; No</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_12" name='<portlet:namespace/>disclosure_1_4' value="NA" <%=(mnCompCertificate.getScrip_wise_details_portfolio()).equals("NA")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; NA</label>
+                     </div>
+                  </div>
+                    <div class="col-md-4">
+                  	  <div class="form-check form-check-inline">
+                  	  <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Disclosure_requirement_5_1d_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getDisclosure_requirements_5_1d_2():"" %></textarea>
+                      <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Disclosure_requirement_5_1d"><%=mnCompCertificateScrutiny.getScrip_wise_details_pf_rem() == null ? "" :  mnCompCertificateScrutiny.getScrip_wise_details_pf_rem()%></textarea>
+                     </div>
+                  </div>
+               </div>
+               <br>
+               
+               <div class="row">
+                  <div class="col-md-1">
+                     <div class="form-group">
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="form-group">
+                        <p>(e) Whether the pension fund has published on its website a list of its group companies and those of its sponsor.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col-md-2 pr-0">
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_13" name='<portlet:namespace/>disclosure_1_5' value="Yes" <%=(mnCompCertificate.getPension_fund_published()).equals("Yes")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; Yes</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_14" name='<portlet:namespace/>disclosure_1_5' value="No" <%=(mnCompCertificate.getPension_fund_published()).equals("No")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; No</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_15" name='<portlet:namespace/>disclosure_1_5' value="NA" <%=(mnCompCertificate.getPension_fund_published()).equals("NA")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; NA</label>
+                     </div>
+                  </div>
+                    <div class="col-md-4">
+                  	  <div class="form-check form-check-inline">
+                  	  <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Disclosure_requirement_5_1e_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getDisclosure_requirements_5_1e_2():"" %></textarea>
+                      <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Disclosure_requirement_5_1e"><%=mnCompCertificateScrutiny.getPension_fund_published_rem() == null ? "" :  mnCompCertificateScrutiny.getPension_fund_published_rem()%></textarea>
+                     </div>
+                  </div>
+               </div>
+               <br>
+               
+                <div class="row">
+                  <div class="col-md-1">
+                     <div class="form-group">
+                        <p></p>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="form-group">
+                        <p>(f) Whether the pension fund has disclosed the scheme returns in the manner and in the format as available in public domain hosted by National Pension System Trust
+                        </p>
+                     </div>
+                  </div>
+                  <div class="col-md-2 pr-0">
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_16" name='<portlet:namespace/>disclosure_1_6' value="Yes" <%=(mnCompCertificate.getPension_fund_disclosed()).equals("Yes")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; Yes</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_17" name='<portlet:namespace/>disclosure_1_6' value="No" <%=(mnCompCertificate.getPension_fund_disclosed()).equals("No")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; No</label>
+                     </div>
+                     <div class="form-check form-check-inline">
+                        <input type="radio" class="disclosure1" id="disclosure_18" name='<portlet:namespace/>disclosure_1_6' value="NA" <%=(mnCompCertificate.getPension_fund_disclosed()).equals("NA")?"checked":"" %>>
+                        <label class="form-check-label">&nbsp; NA</label>
+                     </div>
+                  </div>
+                    <div class="col-md-4">
+                  	  <div class="form-check form-check-inline">
+                  	  <textarea class="form-control mr-3"   placeholder="Remarks if any" name='<portlet:namespace/>Disclosure_requirement_5_1f_2' required> <%= (Validator.isNotNull(mnCompCertificate))? mnCompCertificate.getDisclosure_requirements_5_1f_2():"" %></textarea>
+                      <textarea class="form-control" readonly="readonly"  placeholder="Remarks if any" name="Disclosure_requirement_5_1f"><%=mnCompCertificateScrutiny.getPension_fund_disclosed_rem() == null ? "" :  mnCompCertificateScrutiny.getPension_fund_disclosed_rem()%></textarea>
+                     </div>
+                  </div>
+               </div>
+               <br>
+               
+               
+               
+               
+               
+               
                <strong>
                   <p>Note:</p>
                </strong>
@@ -1001,10 +1188,10 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                <p>1) Wherever there is non-compliance due to any reason, the remark/reason thereof has been separately appended there to.</p>
                <div class="form-inline row">
                  <%--  <p class="ml-1">2) This Compliance Certificate(s) shall be put up to the Board at its meeting to be held on <input type="date" class="date_2 border-0" id="date_2" name="<portlet:namespace />date_2"> and the remarks related thereto, if any, would be forwarded to NPS Trust subsequently.</p> --%>
-             	<p class="ml-1">2) This Compliance Certificate(s)n shall be put up to the Board at its ensuing Board Meeting and the remarks related thereto, if any, would be forwarded to NPS Trust subsequently.  </p>
+             	<p class="ml-1">2) This Compliance Certificate(s)n shall be put up to the Board on / has been put up to the Board on <input type="date" class="date_2 border-0" id="date_2" name="<portlet:namespace />date_2"></p>
                </div>
-              <!--  <p>3) The details of latest development in the NPA are mentioned in 'Annexure H'.</p> -->
-               <p>3)Certified that the information given, herein are correct and complete to the best of my knowledge and belief.</p>
+           
+               <p>Certified that the information given, herein are correct and complete to the best of my knowledge and belief.</p>
                <div class="row">
                   <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                      <label for="companies">For</label><br>
@@ -1495,9 +1682,9 @@ $(document).ready(function() {
 		<portlet:namespace/>date_1: {
 	      	required: true
 	    },
-	    /* <portlet:namespace/>date_2: {
+	     <portlet:namespace/>date_2: {
 		    required: true
-		}, */
+		}, 
 		<portlet:namespace/>companies:{
 			required: true
 		},
@@ -1676,6 +1863,17 @@ $(document).ready(function() {
         );
     });
 	
+	$('.securities6').each(function() {
+        $(this).rules("add", 
+            {
+                required: true,
+                messages: {
+                    required: "This field is required.",
+                }
+            }
+        );
+    });
+	
 	$('.sale1').each(function() {
         $(this).rules("add", 
             {
@@ -1709,7 +1907,18 @@ $(document).ready(function() {
         );
     });
 	
-	$('.reports2').each(function() {
+/*	$('.reports2').each(function() {
+        $(this).rules("add", 
+            {
+                required: true,
+                messages: {
+                    required: "This field is required.",
+                }
+            }
+        );
+    }); 
+*/	
+	$('.disclosure1').each(function() {
         $(this).rules("add", 
             {
                 required: true,
@@ -1913,6 +2122,11 @@ $(document).ready(function() {
                 	    console.log("name"+name)
                 	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.INVESTMENT_IN_EQUITY_SHARES%>",name);
                 	  });
+            	  $("input[name=<portlet:namespace/>securities6]").change(function(){
+              	    var name=$("input[name=<portlet:namespace/>securities6]:checked").val();
+              	    console.log("name"+name)
+              	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.ACTIVE_PASSIVE_BREACHES%>",name);
+              	  }); 
             	  $("input[name=<portlet:namespace/>sale1_1]").change(function(){
                 	    var name=$("input[name=<portlet:namespace/>sale1_1]:checked").val();
                 	    console.log("name"+name)
@@ -1964,8 +2178,37 @@ $(document).ready(function() {
                 	    console.log("name"+name)
                 	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.SCRIP_WISE_DETAILS%>",name);
                 	  });
-            	              	  
-            	  
+            	  $("input[name=<portlet:namespace/>disclosure_1_1]").change(function(){
+              	    var name=$("input[name=<portlet:namespace/>disclosure_1_1]:checked").val();
+              	    console.log("name"+name)
+              	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.SCHEME_WISE%>",name);
+              	  });
+            	  $("input[name=<portlet:namespace/>disclosure_1_2]").change(function(){
+                	    var name=$("input[name=<portlet:namespace/>disclosure_1_2]:checked").val();
+                	    console.log("name"+name)
+                	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.SCHEME_WISE_DAILY%>",name);
+                	  });
+            	  $("input[name=<portlet:namespace/>disclosure_1_3]").change(function(){
+                	    var name=$("input[name=<portlet:namespace/>disclosure_1_3]:checked").val();
+                	    console.log("name"+name)
+                	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.PERIODIC_REPORTS_MONTHLY%>",name);
+                	  });
+            	  $("input[name=<portlet:namespace/>disclosure_1_4]").change(function(){
+              	    var name=$("input[name=<portlet:namespace/>disclosure_1_4]:checked").val();
+              	    console.log("name"+name)
+              	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.SCRIP_WISE_DETAILS_PORTFOLIO%>",name);
+              	  });
+            	  $("input[name=<portlet:namespace/>disclosure_1_5]").change(function(){
+                	    var name=$("input[name=<portlet:namespace/>disclosure_1_5]:checked").val();
+                	    console.log("name"+name)
+                	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.PENSION_FUND_PUBLISHED%>",name);
+                	  });
+            	  $("input[name=<portlet:namespace/>disclosure_1_6]").change(function(){
+              	    var name=$("input[name=<portlet:namespace/>disclosure_1_6]:checked").val();
+              	    console.log("name"+name)
+              	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.PENSION_FUND_DISCLOSED%>",name);
+              	  });
+	  
             	  $("textarea[name=<portlet:namespace/>Purchase_of_securitiesremarks_1_1_2]").change(function(){
                 	    var name=$("textarea[name=<portlet:namespace/>Purchase_of_securitiesremarks_1_1_2]").val();
                 	    console.log("name"+name)
@@ -2043,6 +2286,11 @@ $(document).ready(function() {
               	    console.log("name"+name)
               	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.SECURITIES_HELD_2_5_2%>",name);
               	  });
+            	  $("textarea[name=<portlet:namespace/>Securities_held_2_6_2]").change(function(){
+                	    var name=$("textarea[name=<portlet:namespace/>Securities_held_2_6_2]").val();
+                	    console.log("name"+name)
+                	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.SECURITIES_HELD_2_6_2%>",name);
+                	  });
             	  $("textarea[name=<portlet:namespace/>Sale_of_securities_3_1a_2]").change(function(){
               	    var name=$("textarea[name=<portlet:namespace/>Sale_of_securities_3_1a_2]").val();
               	    console.log("name"+name)
@@ -2083,7 +2331,7 @@ $(document).ready(function() {
               	    console.log("name"+name)
               	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.REPORTS_AND_DISCLOSURE_4_1E_2%>",name);
               	  });
-            	  $("textarea[name=<portlet:namespace/>Reports_and_Disclosures_4_2a_2]").change(function(){
+            <%--	  $("textarea[name=<portlet:namespace/>Reports_and_Disclosures_4_2a_2]").change(function(){
               	    var name=$("textarea[name=<portlet:namespace/>Reports_and_Disclosures_4_2a_2]").val();
               	    console.log("name"+name)
               	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.REPORTS_AND_DISCLOSURE_4_2A_2%>",name);
@@ -2093,7 +2341,40 @@ $(document).ready(function() {
               	    console.log("name"+name)
               	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.REPORTS_AND_DISCLOSURE_4_2B_2%>",name);
               	  });
-            	  
+            	--%>
+            	 $("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1a_2]").change(function(){
+               	    var name=$("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1a_2]").val();
+               	    console.log("name"+name)
+               	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.DISCLOSURE_REQUIREMENTS_5_1A_2%>",name);
+               	  });
+            	 $("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1b_2]").change(function(){
+                	    var name=$("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1b_2]").val();
+                	    console.log("name"+name)
+                	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.DISCLOSURE_REQUIREMENTS_5_1B_2%>",name);
+                	  });
+            	 $("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1c_2]").change(function(){
+                	    var name=$("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1c_2]").val();
+                	    console.log("name"+name)
+                	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.DISCLOSURE_REQUIREMENTS_5_1C_2%>",name);
+                	  });
+             	 $("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1d_2]").change(function(){
+                 	    var name=$("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1d_2]").val();
+                 	    console.log("name"+name)
+                 	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.DISCLOSURE_REQUIREMENTS_5_1D_2%>",name);
+                 	  });
+             	 $("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1e_2]").change(function(){
+                	    var name=$("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1e_2]").val();
+                	    console.log("name"+name)
+                	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.DISCLOSURE_REQUIREMENTS_5_1E_2%>",name);
+                	  });
+             	 $("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1f_2]").change(function(){
+                 	    var name=$("textarea[name=<portlet:namespace/>Disclosure_requirement_5_1f_2]").val();
+                 	    console.log("name"+name)
+                 	    autoSave("<%=AutoSaveConstants.FIELD_TYPE_STRING%>","<%=MonthlyCompFormConstants.DISCLOSURE_REQUIREMENTS_5_1F_2%>",name);
+                 	  });
+             	  
+             	  
+             	  
 
             });
 
