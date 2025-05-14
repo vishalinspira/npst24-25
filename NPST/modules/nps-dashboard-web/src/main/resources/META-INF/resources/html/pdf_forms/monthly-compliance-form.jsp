@@ -119,8 +119,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="1.1a">
-                            <p><strong>1.1</strong>  Whether purchase of securities adhere to the Investment guidelines issued by PFRDA. 
-							(prescribed securities/ percentage/ limit/ prudential & exposure norms) Details of deviations provided in annexure A (i).</p>
+                            <p><strong>1.1</strong>  Whether purchase of securities adhere to the Investment guidelines issued by PFRDA. (prescribed securities/ percentage/ limit/ prudential & exposure norms) Details of deviations provided in annexure A.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -142,6 +141,7 @@ String formDate1="0";
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="1.2a">
                             <p><strong>1.2 (a)</strong> Whether a detailed Investment process manual is prepared and approved by Board / board delegated authority and whether actual process is established as per approved manual.</p>
+
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -183,8 +183,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="1.2c">
-                            <p><strong>(c)</strong> Whether each decision of investment is properly documented and record is maintained at individual transaction level.
-                            (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)</p>
+                            <p><strong>(c)</strong> Whether each decision of investment is properly documented and record is maintained at individual transaction level. (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -205,7 +204,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="1.2d">
-                            <p><strong>(d)</strong> Whether investments for non-dematerialized securities are supported by physical certificates</p>
+                            <p><strong>(d)</strong> Whether investments for non-dematerialized securities are supported by certificates/ statements.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -226,7 +225,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="1.2e">
-                            <p><strong>(e)</strong> Whether all investments from funds received under NPS schemes are held in the name of NPS Trust.</p>
+                            <p><strong>(e)</strong> Whether all investments from funds received under NPS schemes are held in the name of NPS Trust</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -250,7 +249,10 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="1.3a">
-                            <p><strong>1.3</strong> Whether delivery of securities is taken immediately on purchase as per settlement cycle/ terms for each transaction.</p>
+                            <p><strong>1.3</strong>  Whether delivery of securities is taken immediately on purchase as per settlement cycle/ terms for each transaction.
+                        <br>
+                        Details of exceptions to normal settlement procedure such as hand delivery, short delivery, trade reversal etc. provided in Annexure B.
+                     </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -271,8 +273,9 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="1.4a">
-                            <p><strong>1.4</strong> Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period? (As per PFRDA circular no. PFRDA/2021/32/REG-PF/4 dated 27.07.2021, such investments to be reported to NPS Trust within 30 days of making such investments)
-							Details of Investments provided in Annexure B.</p>
+                            <p><strong>1.4</strong> Whether any application/investment is done in Initial Public Offer (IPO), Follow on Public Offer (FPO) and/or Offer for sale (OFS) during the period?
+                     </p>
+                     <p>Details of Investments provided in Annexure C.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -302,9 +305,10 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.1a">
-                            <p><strong>2.1</strong>  Whether scheme investments adhere to the Investment guidelines issued by PFRDA. 
-							(prescribed securities/ percentage/ limit/ prudential & exposure norms)
-							Details of deviations provided in annexure A (ii).</p>
+                            <p><strong>2.1</strong> Whether scheme investments adhere to the Investment guidelines issued by PFRDA. 
+                        (prescribed securities/ percentage/ limit/ prudential & exposure norms)
+                     </p>
+                     <p>Details of deviations provided in annexure A.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -326,7 +330,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.2a"> 
-                            <p><strong>2.2 (a)</strong> Whether stop loss trigger has occurred for any security during the month as per Investment policy of the PFM. </p>
+                            <p><strong>2.2 (a)</strong> Whether stop loss/ any other review trigger has occurred for any security (equity/debt/alternate) during the month as per Investment policy of the Pension Fund. </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -347,7 +351,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.2b"> 
-                            <p><strong>(b)</strong> Whether decision in such scenario is approved by the committee/competent authority as per Approval delegation matrix.</p>
+                            <p><strong>(b)</strong> Whether decision in such a scenario is approved by the committee/competent authority as per Approval delegation matrix </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -369,8 +373,9 @@ String formDate1="0";
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.2c"> 
                             <p><strong>(c)</strong> Whether each decision along with rationale is properly documented and record is maintained at individual scrip level.
-							(Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
-							Details of stop loss occurred during the month and its decision provided in Annexure C.</p>
+                       <br> (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
+                     </p>
+                     <p>Details of stop loss/review triggered during the month and its decision provided in Annexure D.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -393,8 +398,9 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.3a"> 
-                            <p><strong>2.3</strong>  Whether inter-scheme transfer of securities complies with point 14 of the Investment Guideline circular number PFRDA/2021/29/REG-PF/3 dated 20.07.2021.
-							Details of inter scheme transfer provided in Annexure D.</p>
+                            <p><strong>2.3</strong> Whether inter-scheme transfer of securities complies with Investment Guidelines issued by PFRDA. 
+                     </p>
+                     <p>Details of inter scheme transfer provided in Annexure E.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -415,8 +421,9 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.4a"> 
-                            <p><strong>2.4</strong>  Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing. 
-							Details provided in Annexure E</p>
+                            <p><strong>2.4</strong>  Whether investment is held in any equity shares of a body corporate which is not listed in top 200 list of stocks prepared by NPS Trust and is pending for rebalancing. If yes, whether the decision to hold such stocks has been approved by the investment committee and informed to the Board of Pension Fund
+                     </p>
+                     <p>Details provided in Annexure F</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -437,8 +444,9 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                           <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.5a"> 
-                            <p><strong>2.5</strong>  Whether investment in any equity shares through IPO/FPO/OFS does not fulfil the market capitalization condition prescribed under investment guidelines post listing. 
-							Details provided in Annexure F.</p>
+                            <p><strong>2.5</strong>  Whether investment in any equity shares through IPO/FPO/OFS does not fulfil the market capitalization condition prescribed under investment guidelines post listing.
+                     </p>
+                     <p>Details provided in Annexure G.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -453,6 +461,38 @@ String formDate1="0";
                         </div>
                     </div>
         		</div><!-- row one end -->
+        		
+        		
+        		
+        		
+        		
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="2.5b"> 
+                            <p><strong>2.6</strong>  Whether the Pension Fund has segregated the deviations/breaches into active and passive as per PFRDA Circular No. PFRDA/2022/04/SUP-PF/01 dated 04.02.2022 and regularized the active breaches/deviations immediately within 3 business days from the date of active deviation happened.
+                     </p>
+                     <p>Details provided in Annexure H.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <span><%=mnCompCertificate.getActive_passive_breaches()%></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class=" form-check-inline form-group">
+                        <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Securities_held_2_6_2"   ><%=mnCompCertificate.getSecurities_held_2_6_2() ==null ?"":mnCompCertificate.getSecurities_held_2_6_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Securities_held_2_6" ><%=mnCompCertificateScrutiny.getActive_passive_breaches_rem() == null ? "" :  mnCompCertificateScrutiny.getActive_passive_breaches_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		
+        		
+        		
+        		
+        		
         		<hr style="margin-top:0px"/>
         		
         		
@@ -467,7 +507,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="3.1a"> 
-                            <p><strong>3.1 (a)</strong> Whether disinvestments made are approved by the committee/competent authority as per delegation matrix.</p>
+                            <p><strong>3.1 (a)</strong> Whether disinvestments made are approved by the committee/competent authority as per delegation matrix</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -489,7 +529,8 @@ String formDate1="0";
                         <div class="form-check-inline form-group">
                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="3.1b"> 
                             <p><strong>(b)</strong> Whether each decision of disinvestment is properly documented and record is maintained at individual transaction level.
-							(Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision).</p>
+                        (Supporting documents evidencing due diligence including analysis of Investee company, Industry, Group etc. should be maintained along with justification of investment decision)
+                     </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -515,7 +556,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="3.2a"> 
-                            <p><strong>3.2</strong>  Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction.</p>
+                            <p><strong>3.2</strong> Whether delivery of securities is given immediately on sale as per settlement cycle/ terms for each transaction. Please provide details of exceptions, if any, to normal settlement procedure such as hand delivery, short delivery, trade reversal etc.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -534,7 +575,7 @@ String formDate1="0";
         		
         		<div class="row">
         			<div class="col-md-12 form-group">
-        				<p><strong>4. Reports and Disclosures as per Schedule V of PFRDA (PF) Regulations</strong></p>
+        				<p><strong>4. NAV calculations and daily reconciliations</strong></p>
         			</div>
         		</div>
         		<hr style="margin-top:0px"/>
@@ -543,7 +584,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="4.1a"> 
-                            <p><strong>4.1 (a)</strong> Whether all investment charges (Investment management fees, Custodian charges, SEBI charges, NPS Trust fees etc.) are loaded onto the NAV on a daily basis.</p>
+                            <p><strong>4.1 (a)</strong> Whether scheme-wise number of units are tallied with CRA records on daily basis.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -565,7 +606,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="4.1b"> 
-                            <p><strong>(b)</strong> Whether PFM has adhered to instructions of PFRDA to get the NAV verified by the auditors on a daily basis.</p>
+                            <p><strong>(b)</strong> Whether the securities held in the schemes are tallied with the Custodian records on a daily basis.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -587,7 +628,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="4.1c"> 
-                            <p><strong>(c)</strong> Whether the records of the audit of NAV have been maintained by the pension fund for future inspection. </p>
+                            <p><strong>(c)</strong> Whether all investment charges (Investment management fees, Custody and related charges, SEBI charges, NPS Trust fees etc.) are loaded onto the scheme-wise NAV on a daily basis.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -609,7 +650,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="4.1d"> 
-                            <p><strong>(d)</strong> Whether scheme-wise NAV (latest & historical) is uploaded daily on the PFM's website within the prescribed time limit.</p>
+                            <p><strong>(d)</strong> Whether the Pension Fund has adhered to instructions of PFRDA to get the scheme-wise NAV verified by the auditors on a daily basis.</p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -630,7 +671,7 @@ String formDate1="0";
         			<div class="col-md-5">
                         <div class="form-group">
                          <input type="checkbox" class="pdfbox"  name="pdfbox"  value="4.1e"> 
-                            <p><strong>(e)</strong> Whether scheme-wise NAV is submitted daily to all the CRA's within the prescribed time limit.</p>
+                            <p><strong>(e)</strong> Whether the records of the audit of scheme-wise NAV have been maintained by the pension fund for future inspection. </p>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -648,6 +689,177 @@ String formDate1="0";
         		<hr style="margin-top:0px"/>
         		
         		<!--4.1 over abc  -->
+        		
+        		<div class="row">
+        			<div class="col-md-12 form-group">
+        				<p><strong>5. Reports and Disclosure requirements</strong></p>
+        			</div>
+        		</div>
+        		<hr style="margin-top:0px"/>
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="5.1a"> 
+                            <p><strong>5.1 (a)</strong> Whether scheme-wise NAV (latest & historical) is uploaded daily on the Pension Fund's website within the prescribed time limit.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                         <span><%=mnCompCertificate.getScheme_wise()%></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline form-group">
+                       <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1a_2"   ><%=mnCompCertificate.getDisclosure_requirements_5_1a_2() ==null ?"":mnCompCertificate.getDisclosure_requirements_5_1a_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Disclosure_requirement_5_1a" ><%=mnCompCertificateScrutiny.getScheme_wise_rem() == null ? "" :  mnCompCertificateScrutiny.getScheme_wise_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		<hr style="margin-top:0px"/>
+        		
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="5.1b"> 
+                            <p><strong>(b)</strong> Whether scheme-wise NAV is submitted daily to all the CRA's within the prescribed time limit.
+                        <br>Instances of delays during the month in uploading NAV on Pension Fund's website and submission to CRA with the reasons provided in Annexure I.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                         <span><%=mnCompCertificate.getScheme_wise_daily()%></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline form-group">
+                       <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1b_2"   ><%=mnCompCertificate.getDisclosure_requirements_5_1b_2() ==null ?"":mnCompCertificate.getDisclosure_requirements_5_1b_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Disclosure_requirement_5_1b" ><%=mnCompCertificateScrutiny.getScheme_wise_daily_rem() == null ? "" :  mnCompCertificateScrutiny.getScheme_wise_daily_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		<hr style="margin-top:0px"/>
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="5.1c"> 
+                            <p><strong>(c)</strong> Whether monthly periodic reports as per schedule V of PFRDA (PF) Regulations, 2015 and subsequent amendments are submitted to NPS Trust within 10 days from the end of the month.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                         <span><%=mnCompCertificate.getPeriodic_reports_monthly()%></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline form-group">
+                       <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1c_2"   ><%=mnCompCertificate.getDisclosure_requirements_5_1c_2() ==null ?"":mnCompCertificate.getDisclosure_requirements_5_1c_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Disclosure_requirement_5_1c" ><%=mnCompCertificateScrutiny.getPeriodic_reports_monthly_rem() == null ? "" :  mnCompCertificateScrutiny.getPeriodic_reports_monthly_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		<hr style="margin-top:0px"/>
+        		
+        		
+        		
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="5.1d"> 
+                            <p><strong>(d)</strong> Whether scrip wise details of portfolio of each scheme (excel file) is uploaded on the website, in the prescribed format, within 10 days from the end of the month.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                         <span><%=mnCompCertificate.getScrip_wise_details_portfolio()%></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline form-group">
+                       <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1d_2"   ><%=mnCompCertificate.getDisclosure_requirements_5_1d_2() ==null ?"":mnCompCertificate.getDisclosure_requirements_5_1d_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Disclosure_requirement_5_1d" ><%=mnCompCertificateScrutiny.getScrip_wise_details_pf_rem() == null ? "" :  mnCompCertificateScrutiny.getScrip_wise_details_pf_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		<hr style="margin-top:0px"/>
+        		
+        		
+        		
+        		      		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="5.1e"> 
+                            <p><strong>(e)</strong> Whether the pension fund has published on its website a list of its group companies and those of its sponsor.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                         <span><%=mnCompCertificate.getPension_fund_published()%></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline form-group">
+                       <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1e_2"   ><%=mnCompCertificate.getDisclosure_requirements_5_1e_2() ==null ?"":mnCompCertificate.getDisclosure_requirements_5_1e_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Disclosure_requirement_5_1e" ><%=mnCompCertificateScrutiny.getPension_fund_published_rem() == null ? "" :  mnCompCertificateScrutiny.getPension_fund_published_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		<hr style="margin-top:0px"/>
+        		
+        		
+        		<div class="row">
+        			<div class="col-md-5">
+                        <div class="form-group">
+                         <input type="checkbox" class="pdfbox"  name="pdfbox"  value="5.1f"> 
+                            <p><strong>(f)</strong> Whether the pension fund has disclosed the scheme returns in the manner and in the format as available in public domain hosted by National Pension System Trust
+                        </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                         <span><%=mnCompCertificate.getPension_fund_disclosed()%></span>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-check-inline form-group">
+                       <textarea class="mr-3 form-control"  placeholder="Remarks if any" name="Disclosure_requirement_5_1f_2"   ><%=mnCompCertificate.getDisclosure_requirements_5_1f_2() ==null ?"":mnCompCertificate.getDisclosure_requirements_5_1e_2() %></textarea>
+                        
+                        	<textarea class="form-control" id="remarks_1_1" placeholder="Remarks if any" name="Disclosure_requirement_5_1f" ><%=mnCompCertificateScrutiny.getPension_fund_disclosed_rem() == null ? "" :  mnCompCertificateScrutiny.getPension_fund_published_rem()%></textarea>
+                        </div>
+                    </div>
+        		</div><!-- row one end -->
+        		<hr style="margin-top:0px"/>
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		
+        		<%-- 
         		
         		<div class="row">
         			<div class="col-md-5">
@@ -688,7 +900,7 @@ String formDate1="0";
                         	<textarea class="form-control" name='Reports_and_Disclosures_4_2b' id="remarks_1_1" placeholder="Remarks if any" ><%=mnCompCertificateScrutiny.getScrip_wise_details_rem() == null ? "" :  mnCompCertificateScrutiny.getScrip_wise_details_rem()%></textarea>
                         </div>
                     </div>
-        		</div>                             
+        		</div>    --%>                          
                               
                                 <br>	
                         
