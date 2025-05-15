@@ -1188,7 +1188,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                <p>1) Wherever there is non-compliance due to any reason, the remark/reason thereof has been separately appended there to.</p>
                <div class="form-inline row">
                  <%--  <p class="ml-1">2) This Compliance Certificate(s) shall be put up to the Board at its meeting to be held on <input type="date" class="date_2 border-0" id="date_2" name="<portlet:namespace />date_2"> and the remarks related thereto, if any, would be forwarded to NPS Trust subsequently.</p> --%>
-             	<p class="ml-1">2) This Compliance Certificate(s)n shall be put up to the Board on / has been put up to the Board on <input type="date" class="date_2 border-0" id="date_2" name="<portlet:namespace />date_2"></p>
+             	<p class="ml-1">2. This Compliance Certificate shall be put up to the Board at its ensuing Board Meeting and the remarks related thereto, if any, would be forwarded to NPS Trust subsequently.</p>
                </div>
            
                <p>Certified that the information given, herein are correct and complete to the best of my knowledge and belief.</p>
@@ -1198,7 +1198,7 @@ if(Validator.isNull(mnCompCertificateScrutiny)){
                      <!--<select class="w-100" name='<portlet:namespace/>companies' id="companies">
                      	<option value="">Select</option>
                         <option value="Aditya Birla Sun Life Pension Management Limited">Aditya Birla Sun Life Pension Management Limited </option>
-                        <option value="HDFC Pension Management Company Limited">HDFC Pension Management Company Limited </option>
+                        <option value="HDFC Pension Fund Management Limited">HDFC Pension Management Company Limited </option>
                         <option value="ICICI Prudential Pension Funds Management Company Limited">ICICI Prudential Pension Funds Management Company Limited </option>
                         <option value="Kotak Mahindra Pension Fund Limited">Kotak Mahindra Pension Fund Limited </option>
                         <option value="LIC Pension Fund Limited">LIC Pension Fund Limited </option>
@@ -1682,9 +1682,10 @@ $(document).ready(function() {
 		<portlet:namespace/>date_1: {
 	      	required: true
 	    },
-	     <portlet:namespace/>date_2: {
+	 /*    <portlet:namespace/>date_2: {
 		    required: true
 		}, 
+		*/
 		<portlet:namespace/>companies:{
 			required: true
 		},

@@ -263,7 +263,7 @@ public class MonthlyCompCertificateCreatePdfUtil {
 			    
 			    Paragraph para4 = new Paragraph(new Text("\n Note: \n \n").setBold());
 			    Text text9 = new Text("1) Wherever there is non-compliance due to any reason, the remark/reason thereof has been separately appended there to.\r\n" + 
-			    		"2) This Compliance Certificate(s) shall be put up to the Board on "+ date_2+" / has been put up to the Board on "+ date_2+".\r\n" + 
+			    		"2. This Compliance Certificate shall be put up to the Board at its ensuing Board Meeting and the remarks related thereto, if any, would be forwarded to NPS Trust subsequently.\r\n" + 
 			    		"Certified that the information given, herein are correct and complete to the best of my knowledge and belief.");
 			    para4.add(text9);
 			    Text text_comp = new Text("\n  For: "+company_name);
